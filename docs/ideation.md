@@ -7,9 +7,9 @@ An AI agent that suggests credit cards from your category-wise spends, tells you
 | Decision | Choice |
 |---|---|
 | Market | India |
-| Audience | Personal tool first |
-| Surface | Android app (Flutter), sole surface — Telegram dropped once the companion app became part of the plan |
-| Spend input (v1) | Manual entry |
+| Audience | Public product (started as a personal-tool idea; see "Building it as a product") |
+| Surface | Flutter app, iOS + Android, sole surface — Telegram dropped once the companion app became part of the plan |
+| Spend input (v1) | Manual entry, then statement upload |
 
 ## Core thesis
 
@@ -78,7 +78,7 @@ The app doesn't need to move money to deliver the same loop. A thin **Android co
 
 1. **Owns the scan** — scan the merchant QR in our app → decode merchant name and category → engine picks the card → hand off to the UPI app with payee details prefilled via the UPI deep link. One extra tap versus scanning in GPay directly.
    - To verify: major UPI apps have restricted third-party deep-link flows at times; test on real merchant QRs before committing.
-2. **Reads transaction SMS** with the SMS permission — the ledger fills itself with amount, merchant and card.
+2. **Captures transaction alerts** — on Android via a notification listener on the bank's alert notifications (direct SMS reading is restricted by Play policy for non-default-SMS apps; see "Building it as a product"). The ledger fills itself with amount, merchant and card.
 3. **Registers as the `upi://` handler** so any payment link on the phone passes through the recommendation first.
 
 ### The app is the only surface
@@ -88,8 +88,58 @@ Telegram was originally chosen for speed to v1, but once the companion app is in
 - Ranked cards with per-line-item breakdowns, valuation adjustments, the routing playbook and the action centre are lists, tables and controls — not chat-shaped.
 - Chat with the agent is a screen inside the app, calling the same backend agent.
 - Scan → recommend → hand off, SMS capture, and notifications all live in one place.
-- Flutter, Android-only, sideloaded — fine for a personal tool. Plugins cover QR scanning, SMS reading and launching the UPI intent.
+- Flutter for iOS and Android. Android gets the scanner, UPI hand-off and notification capture; iOS gets manual entry, statement upload and email, since it allows no SMS or notification access.
 - The backend stays: agent, engine, knowledge base, and the news / replan jobs run server-side behind an API; the app is a thin client. A future web or browser-extension surface reuses the same API.
+
+## Building it as a product
+
+Decision: this is a public product, not a personal tool. The core architecture (knowledge base + engine + agent + ledger), preference-driven rankings, the companion-app scanner, the action centre and replan all carry over. What changes:
+
+### Data capture under platform rules
+
+- **SMS**: direct `READ_SMS` is restricted by Google Play policy to default SMS handlers and a short list of exceptions. The common approach is a notification listener reading the bank's transaction-alert notifications, with explicit disclosure and consent. iOS allows neither.
+- **Email**: Gmail parsing needs Google's restricted-scope review and a security assessment.
+- **Account Aggregator**: the clean route for transaction data, but it appears to require being (or partnering with) a regulated entity. Verify before planning around it.
+- **Input ladder**: manual entry → statement upload (PDF parsing is universal and policy-free) → notification capture on Android → email → AA later.
+
+### Compliance and trust
+
+- DPDP Act: consent, purpose limitation, deletion on request.
+- Never store card numbers — card product and last four digits only. Encryption at rest.
+- Every card fact shows its source and "as of" date. Recommendations carry disclaimers.
+- A published privacy posture — what is captured, where it goes, how to delete it.
+
+### Knowledge base at scale
+
+The knowledge base is the moat and the liability. Versioned rules with review before publish, user-reported corrections through a reviewer queue, and a public changelog. Card-enthusiast communities (TechnoFino, r/CreditCardsIndia) are both the best source and the first users who will test it.
+
+### Monetisation
+
+Issuer affiliate payouts per approved card are the obvious revenue and the exact thing that makes existing comparison sites untrustworthy. Proposed stance: take affiliate revenue with verifiable ranking independence —
+
+- the engine never sees payouts;
+- the per-line-item breakdown is shown for every rank;
+- payouts are disclosed on the card.
+
+A premium tier for ledger features (backtests, replan, action centre) is the second line.
+
+### Competition
+
+CRED, SaveSage, Kiwi and the comparison sites overlap. Defensible differences: backtested rupee maths on the user's own transactions, replan-before-recommend, and explainable rankings. Static comparison is not a product.
+
+### Multi-tenant basics
+
+Auth, per-user data isolation, rate limits on the agent, LLM cost control (deterministic engine for all computation; the LLM only for chat and extraction).
+
+### Web recommender
+
+A web flow — paste your spends, get a ranked stack — is worth considering for discovery and SEO, since that result is shareable. Same backend API.
+
+### Open decisions
+
+1. Team and stack — solo or team? Default proposal: Python backend (strongest LLM, PDF-parsing and scraping ecosystem), Flutter client.
+2. Monetisation stance — affiliate with verifiable independence (proposed), subscription-only, or decide later.
+3. Launch scope — closed beta with card enthusiasts first, or public from day one.
 
 ## Per-card action centre and replan-before-recommend
 
@@ -181,11 +231,12 @@ Rankings show the per-line-item breakdown so the user can see why card B beat ca
 ## Roadmap
 
 1. Card knowledge base (~30 hand-verified cards), engine, backend API. Flutter app with three screens: onboarding (preferences + manual spends), rankings with breakdowns, chat with the agent (including "which card?").
-2. App v2: QR scan → recommend → hand off to UPI app; SMS capture into the ledger. Cap and milestone tracking, missed-rewards report, per-card action centre.
-3. Backtested suggestions, news digest with impact in rupees, replan flow.
-4. Browser extension for online checkouts.
+2. Statement upload; multi-tenant auth and data isolation; knowledge-base review pipeline with user-reported corrections. Closed beta.
+3. App v2: QR scan → recommend → hand off to UPI app (Android); notification capture into the ledger (Android). Cap and milestone tracking, missed-rewards report, per-card action centre.
+4. Backtested suggestions, news digest with impact in rupees, replan flow.
+5. Web recommender, browser extension for online checkouts, email capture, Account Aggregator if viable.
 
 ## Open questions
 
-1. Android or iPhone? Android allows reliable SMS forwarding to the bot; iPhone leans on email alerts or Shortcuts automations, which are more limited.
-2. Which cards are held today? They become the first knowledge-base entries and the engine's test cases.
+1. Team and stack, monetisation stance, launch scope — see "Building it as a product".
+2. Which ~30 cards seed the knowledge base? Start with the cards the team holds (real test cases), then the most-discussed cards in the enthusiast communities.
