@@ -20,7 +20,7 @@ Build a deterministic rewards engine over a versioned card knowledge base, with 
 1. **Card knowledge base** — each card is structured data; every fact carries a source URL and an effective date.
    - Earn rates by merchant / MCC, monthly caps, exclusions (rent, fuel, wallets, utilities, insurance).
    - Milestones, fees and waiver thresholds, point redemption values, eligibility rules.
-2. **Deterministic engine** — takes a spend profile and a set of cards, returns net annual value: rewards at realistic redemption value, plus milestones, minus fees. Optimises over combinations of 1–3 cards, because the best portfolio is rarely the top single cards.
+2. **Deterministic engine** — takes a spend profile, a preference profile and a set of cards, returns a user-specific score: rewards at the user's realistic redemption value, plus milestones and perks valued at the user's own usage, minus fees (see "Preference-driven rankings"). Optimises over combinations of 1–3 cards, because the best portfolio is rarely the top single cards.
 3. **Agent** — Claude with tools such as `simulate_rewards`, `optimize_portfolio`, `check_eligibility`, `news_for_cards`. Gathers the spend profile, calls the engine, explains the result with the working shown.
 4. **Transaction ledger** — the core data model from day one (see "Payment-time advice and the data loop"). Manually entered category spends are estimated ledger entries; real captured transactions replace them over time, so the engine never needs rewriting.
 
@@ -67,6 +67,66 @@ Cap and milestone awareness only works if the bot knows past transactions — wh
 - **Backtested suggestions** — replay the real last six months against any candidate card: "adding card Z would have earned ₹9,800 more". Far stronger than estimates from category totals.
 - **Replacement calls** — "card A earned ₹1,100 net of its fee over 12 months; downgrade or close before the renewal month."
 - **Personal merchant map** — the same merchant can post under different categories; your own history is the best source for how each one actually codes.
+
+## Preference-driven rankings
+
+Card suggestions and rankings are based on the user's preference of perks and rewards, not a single generic "net value" number.
+
+### Engine objective
+
+Each card is scored as the sum of benefit line items, each valued at the user's own usage and weights:
+
+```
+score(card) = Σ value_user(line_item) − fees
+```
+
+Line items: earn rewards by category, milestones, fee waivers, and every perk below.
+
+### Perks are first-class in the knowledge base
+
+Each perk is typed, with a default cash-equivalent and a flag for whether its value depends on usage:
+
+- Lounge access (domestic / international count, guest allowance)
+- Forex markup
+- Fuel surcharge waiver
+- Memberships bundled (streaming, food delivery, e-commerce)
+- Movie / dining offers
+- Milestone vouchers
+- Insurance covers
+- Golf, concierge, airport services
+- Welcome benefits — valued in year one only, so steady-state rankings aren't inflated
+
+### Preference profile
+
+Two parts:
+
+1. **Hard constraints** — filter cards out: max annual fee, lifetime-free only, must have zero forex markup, maximum number of cards, issuers to avoid.
+2. **Valuations** — weight what remains. The engine values each perk at the user's number, not the brochure's:
+   - Lounge: `visits the user would actually make × value per visit`, capped by what the card offers.
+   - Points / miles: the user's realistic redemption rate — lower if they won't use transfer partners.
+   - Forex waiver: `user's international spend × markup`.
+   - Memberships: full value only if the user would otherwise pay for them.
+
+### Elicitation
+
+Behaviour questions, not abstract sliders — each answer maps to a valuation. Roughly eight questions at onboarding over Telegram:
+
+- Flights per year (domestic / international)?
+- Redeem points via airline / hotel transfers, or statement credit only?
+- International spend per year?
+- Which memberships do you already pay for?
+- Fee tolerance? Lifetime-free only?
+- How many cards are you willing to manage?
+
+Presets (cashback-first, travel-first, simplicity-first) give a starting point without the questionnaire.
+
+### Learned from the ledger
+
+Valuations are corrected by observed behaviour: a lounge card never used at lounges drops the lounge valuation to zero; unredeemed points discount the redemption value. This keeps replacement calls honest.
+
+### Explainable output
+
+Rankings show the per-line-item breakdown so the user can see why card B beat card A, and adjust a valuation if it's wrong. Changing a valuation re-ranks instantly.
 
 ## Where the difficulty is
 
