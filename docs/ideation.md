@@ -68,6 +68,42 @@ Cap and milestone awareness only works if the bot knows past transactions — wh
 - **Replacement calls** — "card A earned ₹1,100 net of its fee over 12 months; downgrade or close before the renewal month."
 - **Personal merchant map** — the same merchant can post under different categories; your own history is the best source for how each one actually codes.
 
+## Companion app instead of a payment app
+
+Idea raised: build our own payment app with multiple payment integrations, so it suggests the card at pay-time and captures merchant and category data for better suggestions and replacements.
+
+Moving money ourselves is a regulated business: a consumer app that pays merchants needs to be a UPI TPAP (NPCI approval + sponsor bank) for UPI, and a licensed payment aggregator to route card payments. Cards can't be pushed to arbitrary merchants anyway — the merchant's gateway pulls them.
+
+The app doesn't need to move money to deliver the same loop. A thin **Android companion app**:
+
+1. **Owns the scan** — scan the merchant QR in our app → decode merchant name and category → engine picks the card → hand off to the UPI app with payee details prefilled via the UPI deep link. One extra tap versus scanning in GPay directly.
+   - To verify: major UPI apps have restricted third-party deep-link flows at times; test on real merchant QRs before committing.
+2. **Reads transaction SMS** with the SMS permission — the ledger fills itself with amount, merchant and card.
+3. **Registers as the `upi://` handler** so any payment link on the phone passes through the recommendation first.
+
+Telegram stays the brain and the conversation surface; the app is a scanner plus a capture agent. This is the main argument for Android as the v2 platform.
+
+## Per-card action centre and replan-before-recommend
+
+Principle: **when the world changes, first re-route within the stack already held; recommend a new card only for the gap that remains.** Acquisition is the last resort.
+
+### Action centre, per card
+
+- Bill due — date, amount, autopay status
+- Milestone nudge — "₹12k to go, 9 days left"
+- Cap reset / cap exhausted
+- Fee renewal decision — waiver reached? if not, downgrade or close before the renewal month
+- Points expiring, offer registrations, welcome-benefit claim deadlines
+- **Replan** — triggered by news: devaluation, new category, new exclusion
+
+### Replan flow
+
+1. A rule change lands in the knowledge base (devaluation, new category, exclusion).
+2. Engine re-runs the routing playbook against the user's actual ledger.
+3. Diff old vs new playbook.
+4. Deliver a recap first: "move dining from A to B, stop using C for utilities; net impact ₹X/year".
+5. Only if value is still lost after re-routing, suggest a new or replacement card.
+
 ## Preference-driven rankings
 
 Card suggestions and rankings are based on the user's preference of perks and rewards, not a single generic "net value" number.
@@ -137,8 +173,8 @@ Rankings show the per-line-item breakdown so the user can see why card B beat ca
 ## Roadmap
 
 1. Card knowledge base (~30 hand-verified cards), engine, Telegram bot with portfolio suggestions and a "which card?" command. Manual spend entry.
-2. Transaction capture (SMS / email), cap and milestone tracking, missed-rewards report.
-3. Backtested suggestions and the news digest with impact in rupees.
+2. Android companion app: QR scan → recommend → hand off to UPI app; SMS capture into the ledger. Cap and milestone tracking, missed-rewards report, per-card action centre.
+3. Backtested suggestions, news digest with impact in rupees, replan flow.
 4. Browser extension for online checkouts.
 
 ## Open questions
