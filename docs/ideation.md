@@ -8,7 +8,7 @@ An AI agent that suggests credit cards from your category-wise spends, tells you
 |---|---|
 | Market | India |
 | Audience | Personal tool first |
-| Surface | Telegram bot |
+| Surface | Android app (Flutter), sole surface — Telegram dropped once the companion app became part of the plan |
 | Spend input (v1) | Manual entry |
 
 ## Core thesis
@@ -81,7 +81,15 @@ The app doesn't need to move money to deliver the same loop. A thin **Android co
 2. **Reads transaction SMS** with the SMS permission — the ledger fills itself with amount, merchant and card.
 3. **Registers as the `upi://` handler** so any payment link on the phone passes through the recommendation first.
 
-Telegram stays the brain and the conversation surface; the app is a scanner plus a capture agent. This is the main argument for Android as the v2 platform.
+### The app is the only surface
+
+Telegram was originally chosen for speed to v1, but once the companion app is in the plan it would be a second surface with a worse UI for the core screens. Decision: the app is the sole surface.
+
+- Ranked cards with per-line-item breakdowns, valuation adjustments, the routing playbook and the action centre are lists, tables and controls — not chat-shaped.
+- Chat with the agent is a screen inside the app, calling the same backend agent.
+- Scan → recommend → hand off, SMS capture, and notifications all live in one place.
+- Flutter, Android-only, sideloaded — fine for a personal tool. Plugins cover QR scanning, SMS reading and launching the UPI intent.
+- The backend stays: agent, engine, knowledge base, and the news / replan jobs run server-side behind an API; the app is a thin client. A future web or browser-extension surface reuses the same API.
 
 ## Per-card action centre and replan-before-recommend
 
@@ -145,7 +153,7 @@ Two parts:
 
 ### Elicitation
 
-Behaviour questions, not abstract sliders — each answer maps to a valuation. Roughly eight questions at onboarding over Telegram:
+Behaviour questions, not abstract sliders — each answer maps to a valuation. Roughly eight questions in the app's onboarding:
 
 - Flights per year (domestic / international)?
 - Redeem points via airline / hotel transfers, or statement credit only?
@@ -172,8 +180,8 @@ Rankings show the per-line-item breakdown so the user can see why card B beat ca
 
 ## Roadmap
 
-1. Card knowledge base (~30 hand-verified cards), engine, Telegram bot with portfolio suggestions and a "which card?" command. Manual spend entry.
-2. Android companion app: QR scan → recommend → hand off to UPI app; SMS capture into the ledger. Cap and milestone tracking, missed-rewards report, per-card action centre.
+1. Card knowledge base (~30 hand-verified cards), engine, backend API. Flutter app with three screens: onboarding (preferences + manual spends), rankings with breakdowns, chat with the agent (including "which card?").
+2. App v2: QR scan → recommend → hand off to UPI app; SMS capture into the ledger. Cap and milestone tracking, missed-rewards report, per-card action centre.
 3. Backtested suggestions, news digest with impact in rupees, replan flow.
 4. Browser extension for online checkouts.
 
