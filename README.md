@@ -5,4 +5,4 @@ AI agent that recommends credit cards from your category-wise spends, tells you 
 - Market: India
 - Audience: public product
 - Surface: Flutter app (iOS + Android) over a backend API
-- Status: ideation — see [docs/ideation.md](docs/ideation.md)
+- Status: ideation — see [docs/ideation.md](docs/ideation.md), [docs/features.md](docs/features.md) (consolidated feature list), [docs/research/](docs/research/) (community pain-point sweeps)
