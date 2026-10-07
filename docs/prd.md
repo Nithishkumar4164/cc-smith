@@ -26,8 +26,8 @@ From the community research (TechnoFino, r/CreditCardsIndia; ~57k posts and ~75 
 - G1. A user with a spend profile and preferences gets a ranked, explained, rupee-quantified card portfolio.
 - G2. A user with multiple cards gets a one-second, cap-aware, milestone-aware answer at payment time.
 - G3. No user misses a fee waiver, milestone, or point expiry that the product knew about.
-- G4. Every fact shown carries a source and an as-of date; rankings are provably independent of affiliate payouts.
-- G5. The knowledge base covers the Indian market and absorbs new cards and devaluations through a reviewed pipeline.
+- G4. Every fact shown carries a source and an as-of date; rankings are never paid for: cc-smith takes no affiliate, referral or issuer money.
+- G5. The knowledge base covers the Indian market and absorbs new cards and devaluations through an automated pipeline: official-source facts publish after a quote check; everything else is labelled speculation.
 
 ### 1.3 Non-goals
 
@@ -58,7 +58,7 @@ From the community research (TechnoFino, r/CreditCardsIndia; ~57k posts and ~75 
 | **Points player** | Premium cards; transfers to Marriott/Accor/airlines | Redemption optimiser, partner tracking, devaluation alerts |
 | **Cashback-first** | Wants simple, no-fee, no-games cards | Honest effective rates, LTF reliability, exclusions |
 | **Hard profile** | Student, self-employed, no salary account, thin file | Eligibility paths (FD-backed, card-to-card), likelihood |
-| **Admin / reviewer** | Internal; maintains the knowledge base | Review queue, new-card intake, source allowlists, changelog |
+| **Owner / operator** | Internal; owns the official-source allow-list and receives change alerts | Change alerts, read-only change feed, speculation list, allow-list, rollback |
 
 ---
 
@@ -66,9 +66,9 @@ From the community research (TechnoFino, r/CreditCardsIndia; ~57k posts and ~75 
 
 - **P1. Deterministic maths.** All reward, fee, milestone, eligibility and redemption numbers come from the engine over structured rules. The LLM extracts documents into the schema and explains engine output; it is never a source of card facts.
 - **P2. Provenance or nothing.** A field with no source and as-of date stays empty and is excluded from calculations ("can't assess yet"). [A1, H1]
-- **P3. Reviewed change.** No knowledge-base change goes live without reviewer approval. Differing values never overwrite; they queue. [A6]
+- **P3. Facts or speculation, no review queue.** A value becomes a fact only from a verbatim quote on an allow-listed official source that owns the field (issuer, or co-brand partner for partner-controlled fields); it then publishes automatically as a new version. Anything else is speculation: shown labelled "reported, not confirmed by the bank" with its refs, never used in the maths. Differing values never overwrite a fact without an official quote. The owner is alerted on every change; nothing waits for a human. [A6; plan DR-12]
 - **P4. Replan before recommend.** When rules change, first re-route within the user's existing stack; recommend a new card only for the remaining gap. [F4]
-- **P5. Independence.** The ranking engine never sees affiliate payouts; payouts are disclosed on the card; every rank shows its breakdown. [B7]
+- **P5. Independence.** cc-smith takes no affiliate, referral or issuer money; every rank shows its breakdown. [B7]
 - **P6. Privacy by construction.** No card numbers stored; DPDP consent and deletion; no personal data in extraction prompts or third-party search queries. [H3]
 - **P7. User preference decides value.** Cashback vs points, lounges vs fees, simplicity vs maximisation — valuations are the user's, not the brochure's.
 
@@ -109,17 +109,17 @@ The KB is the single source of truth for all card facts, the glossary, the engin
 
 **Sources and intake**
 
-- FR-KB-7. An allow-list of trusted sources is maintained by admins: RBI-regulated issuer domains, co-brand partner domains (e.g. airline, e-commerce, telecom partners that publish card terms), and allow-listed communities (initially TechnoFino and r/CreditCardsIndia). Only allow-listed sources may create or change KB facts; everything else is treated as a lead for review.
-- FR-KB-8. New-card discovery runs on a schedule against allow-listed sources and news; a discovered card creates an **intake request** in the admin queue with the captured sources. Admins approve, merge into an existing variant, or reject. Approved cards enter the master list with their rule document. [A6, A7, F6]
-- FR-KB-9. Change pipeline: fetch issuer documents → LLM extraction into the schema with structured output → diff against current version → review queue → reviewer confirms → new version becomes effective → affected users' trackers, notices and picker precomputations re-run. [A6]
-- FR-KB-10. Community-sourced claims (from allow-listed communities) enter the review queue tagged as community evidence; they can trigger re-verification of an issuer source but cannot become facts without reviewer approval.
-- FR-KB-11. User-reported corrections (with optional evidence: statement line, bank email, screenshot) enter the review queue. Resolution is visible to the reporter. [A8]
-- FR-KB-12. A public changelog per card lists every confirmed change with date, field, old/new values and source. [H1]
+- FR-KB-7. An allow-list of official sources is maintained by the owner, with every edit versioned and alerted: RBI-regulated issuer domains and co-brand partner domains (e.g. airline, e-commerce, telecom partners that publish card terms), each tagged with the fields it owns. Only these sources can create or change facts. Communities (initially TechnoFino and r/CreditCardsIndia), news, AI Mode and every other source produce speculation.
+- FR-KB-8. New-card discovery runs on a schedule against official sources, ads and news (Launch Radar). A discovered card with an official page is profiled and published automatically; variants are merged by issuer + name matching. A card without an official page is listed as a **speculative launch**: not scored and no user notification until an official page promotes it. [A6, A7, F6]
+- FR-KB-9. Change pipeline: fetch official documents → LLM extraction into the schema with structured output → quote check (the value's verbatim quote must appear in the stored page) and range checks → pass: new version published with effective dates; fail: stored as speculation → owner alert → affected users' trackers, notices and picker precomputations re-run. A weekly automated re-check re-extracts published facts and rolls back any that do not reproduce. [A6; plan DR-12]
+- FR-KB-10. Community-sourced claims become speculation with their refs and trigger an immediate re-fetch of the official source. Speculation is promoted to a fact automatically when an official quote confirms it, closed when an official source contradicts it, and expires after 60 days unconfirmed.
+- FR-KB-11. User-reported corrections (with optional evidence: statement line, bank email, screenshot) become speculation with the report as the ref and trigger an immediate re-fetch of the official page. The reporter sees the outcome (promoted, contradicted or expired). [A8]
+- FR-KB-12. A public changelog per card lists every published change with date, field, old/new values and source. [H1]
 
 **Unlisted cards**
 
 - FR-KB-13. A user may add a card that is not in the master list by issuer + name (with fuzzy matching against existing variants to prevent duplicates). The card is created as a **custom card** on the user's account: due dates, fees and limits are user-entered; rewards are "can't assess yet" in the engine; the picker excludes it from reward ranking but includes it for due-date and milestone tracking the user enters manually.
-- FR-KB-14. Each custom card automatically raises a KB intake request. Intake requests are prioritised by the number of users holding the unlisted card. When the card is approved into the master list, the custom card is linked to the master variant and the user is notified that full assessment is available.
+- FR-KB-14. Each custom card automatically raises a catalogue request (plan DR-4 user-request route). Requests are prioritised by the number of users holding the unlisted card. When the card's official page is found and the card is published into the master list, the custom card is linked to the master variant and the user is notified that full assessment is available.
 
 ### 5.2 Reward valuation model (common knowledge)
 
@@ -159,14 +159,14 @@ Tells the user which cards to acquire and which to close, given their credit pro
 - FR-RE-3. **Acquire** recommendations consider: eligibility (income, age, geography, relationship), compatibility restrictions, issuer max-cards-per-customer policy, pending devaluations, enquiry hygiene (recent hard enquiries, recent rejections), and the user's hard constraints. Ineligible cards remain visible, marked, with an action plan. [C1, C2]
 - FR-RE-4. **Close / keep / convert** recommendations: for each held card, rewards earned over the last 12 months net of fees, what the rest of the stack would earn instead, waiver on track or not, LTF/downgrade conversion options, and credit-profile side effects (utilisation, oldest card). Convert is preferred over close. [B3, F2]
 - FR-RE-5. **Likelihood of approval** shown per recommended card as a band (High / Medium / Low) with the contributing factors: credit score band vs issuer norms, income vs minimum, existing relationship, existing cards with the issuer, compatibility rules, recent enquiries, and community-reported approval patterns for that card. Presented as an estimate, never a guarantee.
-- FR-RE-6. **Community acquisition intelligence:** for each card, a curated summary (from allow-listed communities, reviewed) of how people actually got it — pre-approved routes, card-to-card, FD-backed, relationship requirements, common rejection reasons, typical turnaround — with source links. [C3]
+- FR-RE-6. **Community acquisition intelligence:** for each card, a curated summary (from allow-listed communities, shown as speculation with refs) of how people actually got it — pre-approved routes, card-to-card, FD-backed, relationship requirements, common rejection reasons, typical turnaround — with source links. [C3]
 - FR-RE-7. **Named-card assessment:** "Should I get X?" runs the same engine for one card and returns value, eligibility, likelihood and compatibility impact. [B2]
 - FR-RE-8. **Hard categories:** for rent, utilities, insurance, fuel, jewellery, wallet loads, tax and education the engine states whether anything earns, the lowest-surcharge option, and whether the spend counts toward milestones/waivers. [B6]
 - FR-RE-9. **Hard profiles:** student, self-employed, no salary account → FD-backed, card-to-card and relationship-first paths presented as first-class options. [B4]
 - FR-RE-10. **Action plan** for an ineligible card: the failing rule and the steps (open relationship account, FD-backed first, reduce utilisation, wait N months after last enquiry), with re-check when steps are done. [C1]
 - FR-RE-11. Enquiry hygiene: hard-enquiry log; warnings before applying; flagging of "pre-approved" channels known to hard-pull and reject. [C2]
 - FR-RE-12. LTF proof: at card add, prompt for and store the written LTF/waiver confirmation. [C5]
-- FR-RE-13. Independence: no affiliate data reaches the ranking; payouts disclosed on the card page. [B7]
+- FR-RE-13. Independence: cc-smith takes no affiliate, referral or issuer payments, so no payout data exists to reach the ranking. [B7]
 
 ### 5.6 Payment Method Picker
 
@@ -176,7 +176,7 @@ Given a payment the user is about to make, choose the card and channel that is b
 
 - FR-PK-1. Amount; merchant (resolved to a merchant record and expected MCC); channel options available to the user for this payment (card present, online card, RuPay credit on UPI, payment app); optional product/category hint.
 - FR-PK-2. **Offline merchant resolution:** (a) scan the merchant's UPI/Bharat QR — payee name and, where present, MCC are read directly; (b) current location → nearby merchants (places lookup) → user selects → category → expected MCC; (c) merchant memory: previously resolved merchants ranked first; (d) manual search by name or category. QR takes precedence over location when both are available. [D2, D3]
-- FR-PK-3. **Online merchant resolution:** (a) share-sheet target — share the product or checkout URL from any app to cc-smith; (b) paste a URL; (c) pick from recent/favourite online merchants; (d) type the merchant name. The domain resolves to the merchant record (for marketplaces, the marketplace MCC applies; product hints are used only for offer eligibility). A browser extension is a later surface. [D4]
+- FR-PK-3. **Online merchant resolution:** (a) Android Autofill service — cc-smith registers as an autofill provider; when a checkout form asks for a card number, the picker's recommendation appears in the autofill dropdown. The service never stores or fills real card numbers; the user selects the card in the merchant's own form. (b) share-sheet target — share the product or checkout URL from any app to cc-smith; (c) paste a URL; (d) pick from recent/favourite online merchants; (e) type the merchant name. The domain or app package resolves to the merchant record (for marketplaces, the marketplace MCC applies; product hints are used only for offer eligibility). iOS uses (b)–(e); a Safari extension and a desktop browser extension are later surfaces. [D4]
 - FR-PK-4. Merchant → MCC map seeded from known merchants, learned from users' statements and reward evidence, with community MCC reports and "known to mis-tag on issuer X" warnings. [D2, H2]
 
 **Decision**
@@ -204,7 +204,7 @@ A per-user list of time-bound action items derived from the KB and the ledger; t
 - FR-NB-7. Closure workflow checklist and reminders until the closure is confirmed on the credit report. [F3]
 - FR-NB-8. Escalation helper: per-issuer ladder (customer care → nodal/PNO → RBI Ombudsman), drafts the complaint from ledger evidence, tracks the case. [F5]
 - FR-NB-9. Evidence vault: stores LTF/waiver confirmations, offer T&C snapshots, chat screenshots for disputes. [C5, F7]
-- FR-NB-10. The KB carries, per card, the structured rules that make these notices possible (periods, lags, locks); the review pipeline keeps them current.
+- FR-NB-10. The KB carries, per card, the structured rules that make these notices possible (periods, lags, locks); the automated change pipeline keeps them current.
 
 ### 5.8 Redemption Optimizer
 
@@ -219,15 +219,15 @@ A per-user list of time-bound action items derived from the KB and the ledger; t
 - FR-TR-1. Provenance everywhere: source and as-of date on every displayed fact; changelog per card; corrections and their resolution visible. [H1]
 - FR-TR-2. Community signals: users report RuPay-credit-on-UPI acceptance at a merchant, lounge denials (lounge, card, date), MCC observations; aggregated and shown at the decision point (picker, card page, lounge perk). [H2]
 - FR-TR-3. Privacy posture: DPDP-compliant consent per data source; deletion on request within 30 days; no card numbers stored (product + last four only); encryption at rest; no personal data in extraction prompts or third-party search queries; local-first capture on device where possible; a published data map. [H3]
-- FR-TR-4. Ranking independence statement on the recommendation screen; affiliate payouts disclosed per card. [B7]
+- FR-TR-4. Ranking independence statement on the recommendation screen: no affiliate, referral or issuer money; every rank shows its breakdown. [B7]
 
-### 5.10 Admin console
+### 5.10 Owner console (read-only; no review queue)
 
-- FR-AD-1. Review queue: pending extractions, community claims, user corrections, each with diff view, sources, and approve/merge/reject with reviewer identity and timestamp.
-- FR-AD-2. New-card intake queue: discovered cards and custom-card requests, prioritised by user count, with source capture and approve-into-master-list flow.
-- FR-AD-3. Source allow-list management: issuer domains, co-brand partner domains, community sources; each with trust level.
-- FR-AD-4. Card editor with versioning (effective dates, pending versions), field-level history, and changelog generation.
-- FR-AD-5. Fan-out monitoring: after a confirmed change, visibility into recomputation of trackers/notices for affected users.
+- FR-AD-1. Change alerts and feed: every `knowledge.changed` event with card, field, old → new value, tier (fact or speculation), event type (published, speculation added, promoted, contradicted, expired, demoted by re-check, rolled back), every reference (URL, quoted text, fetch time, evidence id, search id), a large-change flag (rate, cap or fee moving more than 50%) and holder count. Immediate alert per change plus a daily digest; channel decided at implementation. Alerts are informational: nothing waits for the owner.
+- FR-AD-2. Speculation list: open speculation and speculative launches by card, age, refs and expiry; catalogue requests from custom cards by holder count. The only action is trigger re-fetch; the console cannot write facts or speculation.
+- FR-AD-3. Official-source allow-list management: issuer and co-brand partner domains with the fields each owns; every edit versioned and alerted.
+- FR-AD-4. Version history and rollback: field-level history, effective dates and changelog per card; automatic rollback when the weekly re-check fails, plus manual rollback to a previous published version.
+- FR-AD-5. Fan-out monitoring: after a published change or rollback, visibility into recomputation of trackers/notices for affected users.
 
 ---
 
@@ -245,7 +245,7 @@ A per-user list of time-bound action items derived from the KB and the ledger; t
 | LedgerEntry | user, held card, date, amount, merchant, MCC (expected/actual), channel, provenance, reward lines |
 | TrackerState | user, held card, period, cap position, milestone position, waiver position, lock position |
 | Notice | user, type, card, deadline, ₹ at stake, action, status |
-| ReviewItem | type (extraction/claim/correction/intake), payload, sources, status, reviewer, decision |
+| Speculation | card, field, value, refs (URL, quote, fetch time, evidence id), origin (news/forum/user report/AI Mode/range-check failure), status (open/promoted/contradicted/expired), opened, expires |
 | CommunitySignal | type (acceptance/lounge denial/MCC), merchant or lounge, card, date, user (pseudonymous), aggregation |
 
 ---
@@ -257,24 +257,26 @@ A per-user list of time-bound action items derived from the KB and the ledger; t
 - NFR-3. **Freshness:** every rule document re-verified at least every 30 days; devaluation news polled daily.
 - NFR-4. **Privacy/security:** data residency in India; encryption at rest and in transit; no PAN/CVV storage; per-user data isolation; DPDP consent records; deletion SLA 30 days.
 - NFR-5. **Availability:** 99.5% monthly for the API; picker works offline for held cards' static rules with last-synced tracker state.
-- NFR-6. **Auditability:** every KB change, review decision and recommendation output is logged with inputs and rule versions used.
+- NFR-6. **Auditability:** every KB change (publish, speculation, promotion, rollback) and recommendation output is logged with inputs and rule versions used.
 - NFR-7. **Platforms:** Flutter app on Android and iOS; Android-only capabilities (notification capture, QR hand-off) degrade gracefully on iOS.
 
 ---
 
-## 8. Open questions and proposed answers
+## 8. Open questions and answers
 
-| # | Question (from requirements) | Proposed answer |
+Rows 1–9 were accepted as decisions on 2026-10-07; the running log, research items and experiments are in `docs/decisions.md`.
+
+| # | Question (from requirements) | Answer (decided 2026-10-07) |
 |---|---|---|
-| 1 | How do we handle a user's card that is not in the master list? | Custom card on the user's account with manual due/fee data; rewards "can't assess yet"; auto intake request prioritised by holder count; link to master variant on approval (FR-KB-13/14). |
+| 1 | How do we handle a user's card that is not in the master list? | Custom card on the user's account with manual due/fee data; rewards "can't assess yet"; auto intake request prioritised by holder count; linked to the master variant when its official page is found and published (FR-KB-13/14). |
 | 2 | How do we track spending habits? | Input ladder: budget by category (v1) → statement upload → Android notification capture → email → Account Aggregator if viable. Estimates are replaced by actuals (5.4). |
 | 3 | How do we get MCC for offline payments? | QR scan first (payee + MCC when present), then location → nearby merchants → select, then merchant memory and manual search; expected MCC from the merchant map, actual MCC learned from statements (FR-PK-2/4). |
-| 4 | Online payments — pasting a link, or better? | Share-sheet target from any app is the primary path (one tap, no copy/paste); paste URL, recent merchants and name search as fallbacks; browser extension later (FR-PK-3). |
+| 4 | Online payments — pasting a link, or better? | Android Autofill service is the primary path (recommendation appears in the card-number field at the moment of choice); share-sheet target, paste URL, recent merchants and name search as fallbacks; iOS share-sheet first; browser extensions later (FR-PK-3). |
 | 5 | Max cards per bank | Stored as an issuer policy with source; applied in acquire recommendations (FR-KB-2, FR-RE-3). |
 | 6 | Bank relationship effect on eligibility | Relationship captured in profile; eligibility and likelihood use it; action plans can recommend opening a relationship (FR-RE-1/5/10). |
 | 7 | Likelihood of approval | Banded estimate from score band, income, relationship, existing issuer cards, compatibility, enquiries and community patterns; always labelled as an estimate (FR-RE-5). |
-| 8 | Credit score source | v1 user-entered band; evaluate bureau partner integration after launch. |
-| 9 | Live bank offers | Reviewed offer records in the KB with end dates; discovery via allow-listed sources; no unreviewed offer reaches the picker. |
+| 8 | Credit score source | v1 user-entered band plus "don't know"; bureau partner integration evaluated after launch from the findings in `docs/research/eligibility-and-likelihood-inputs.md`. |
+| 9 | Live bank offers | Offer records in the KB with end dates. Offers quoted from an issuer's own offer page are facts; aggregator and forum offers are speculation. Offers appear in the picker as hints with source and end date, not in the ₹ ranking, because offer terms are free text (`docs/research/live-offers-sources.md`). |
 
 ---
 
@@ -283,7 +285,7 @@ A per-user list of time-bound action items derived from the KB and the ledger; t
 | Release | Scope | Feature IDs |
 |---|---|---|
 | **v1 — Decide** | Master list (~30 hand-verified cards → growing), glossary with provenance, budget-based spend profile, preference profile, recommendation engine (acquire/keep/close, likelihood band, compatibility, hard categories), named-card assessment, picker (typed merchant, manual channel), basic notice board (fee renewal, milestones, due dates from user-entered data), chat agent, privacy posture | A1–A4, B1–B7, C1, C5, D1 (typed), E1 (budget), F1, F2, H1, H3 |
-| **v2 — Track** | Statement upload, Android notification capture, trackers with cycle-correct resets, full notice board (locks, expiring points, pending benefits, replan), reconciliation, QR scan and location-based merchant resolution, share-sheet online resolution, UPI hand-off, admin review queue and intake, change pipeline, news ingestion | A5–A8, C2, D2, D3, D5, D6, D8, E2–E7, F3–F5, F7 |
+| **v2 — Track** | Statement upload, Android notification capture, trackers with cycle-correct resets, full notice board (locks, expiring points, pending benefits, replan), reconciliation, QR scan and location-based merchant resolution, Autofill and share-sheet online resolution, UPI hand-off, owner change feed and speculation list, automated change pipeline, news ingestion | A5–A8, C2, D2, D3, D5, D6, D8, E2–E7, F3–F5, F7 |
 | **v3 — Optimise** | Redemption optimiser, partner tracking, community signals, community acquisition intelligence, application tracker, upgrade/downgrade paths, browser extension, new-launch heads-up, email capture | C3, C4, D4, F6, G1, G2, H2 |
 
 ---
@@ -294,7 +296,7 @@ A per-user list of time-bound action items derived from the KB and the ledger; t
 |---|---|---|
 | Master list as source of truth; add new cards as released | 5.1 FR-KB-1/2/8 | A1, A6, F6 |
 | User holds a card not in the master list | FR-KB-13/14 | — (new) |
-| Allow-listed sites; admin approval for new cards; issuer or co-brand partner sources | FR-KB-7/8, 5.10 | A6 |
+| Allow-listed sites; admin approval for new cards (approval superseded by plan DR-12: automatic publish from official sources); issuer or co-brand partner sources | FR-KB-7/8, 5.10 | A6 |
 | Compatibility restrictions between cards | FR-KB-5, FR-RE-3 | — (new) |
 | Pull MITC / issuer master documents | FR-KB-6/9 | A6 |
 | Rewards, perks, milestones, exclusions, accelerated categories, unique perks | FR-KB-2 | A2, A3, A4 |

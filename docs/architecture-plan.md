@@ -210,10 +210,10 @@ Hackathon: the 20 seed cards are profiled by the pipeline from official pages (n
 | Launch Radar | `google_news` (`so=1`) / `google_news_light`; `google_ads_transparency_center` (India `region=2356`: **verify**, since the cookbook marks it unverified) — never cut in the Commerce track | 45 | 7 d |
 | Cap Watch / Replan | `google_news_light` "devaluation" `when:7d`; `google_light site:technofino.in` | 25 | 24 h |
 | Checkout merchant seed | `google_maps` on cache and rules miss only (official Places API in the product) | 15 | 180 d |
-| Commerce: Shopping effective price, bank offers | `google_shopping` (`location`, `google_domain=google.co.in`); `amazon_product` on amazon.in (spike first) | 25 | 6 h |
+| Commerce: bank offers at the merchant | `amazon_product` on amazon.in (spike first); issuer offer pages go through the fetcher, not SerpApi | 10 | 6 h |
 | Fixture recording / dev | mixed | 35 | — |
-| Demo reserve | — | 35 | — |
-| Finder, Checkout card choice, Renewal | **none live** (Shopping prices are fetched when the user asks for a product comparison, cached 6 h) | 0 | — |
+| Demo reserve | — | 50 | — |
+| Finder, Checkout card choice, Renewal | **none live** | 0 | — |
 
 **Product.** The Developer plan ($75 for 5k) is enough for news, weekly per-card checks and discovery (`serpapi-compatibility.md`). Merchant classification is the only workload that scales with users. It goes to the official Places API, with normalised keys cached by `place_id`.
 
@@ -418,7 +418,7 @@ Delivery: an immediate alert per change plus a daily digest. The channel (email,
 Submit by **Oct 10, 18:00 IST**. The hard deadline is 23:59, and drafts are never judged. Android build only. **Track: Commerce & Market Intelligence** (owner decision, 2026-10-06). **Hackathon first**, then the product. **Team of 2–5**, so the work runs in parallel workstreams.
 
 **Demo story for the Commerce track:** "cc-smith tells you the cheapest way to pay and what's changing in the card market." The judges see three things:
-1. **Checkout Advisor with effective price:** a product's price at each store (Google Shopping), minus each held card's reward and any bank offer, gives the cheapest store-and-card pair in rupees.
+1. **Checkout Advisor in rupees:** for the merchant the user is paying, the best held card and channel, the reward in rupees, and any live bank offer at that merchant (from issuer offer pages). No cross-store price comparison: effective price across stores (D7) was dropped by the owner on 2026-10-07.
 2. **Launch Radar as market intelligence:** new bank card ads detected each night (Ads Transparency) and launch news, each new card profiled from the bank's own page and scored against the user's spends.
 3. **Card Finder in rupees:** the best 1–3 card set for the user's spends, with the gain per card and the official source behind every number.
 
@@ -427,14 +427,14 @@ Submit by **Oct 10, 18:00 IST**. The hard deadline is 23:59, and drafts are neve
 | Workstream | Owns | Depends on |
 |---|---|---|
 | A. Engine and data | schemas, `rewards` engine and tests, seed cards, Card Finder, `/pay` | Seed card list (`docs/research/seed-cards.md`) |
-| B. Market intelligence | SerpApi gateway, fetcher, Card Profile pipeline (facts, speculation, owner alerts), Launch Radar, Shopping effective price | Official-domain allow-list (`docs/research/official-domains.yaml`) |
-| C. App | Flutter: onboarding, holdings, spends, rankings, typed Checkout with effective price, launch feed, QR decode | API contracts agreed on Oct 6 |
+| B. Market intelligence | SerpApi gateway, fetcher, Card Profile pipeline (facts, speculation, owner alerts), Launch Radar, merchant bank offers | Official-domain allow-list (`docs/research/official-domains.yaml`) |
+| C. App | Flutter: onboarding, holdings, spends, rankings, typed Checkout with reward and bank offer, launch feed, QR decode | API contracts agreed on Oct 6 |
 
 | Day | A. Engine and data | B. Market intelligence | C. App | Exit check |
 |---|---|---|---|---|
 | **Oct 6 (tonight)** | Repo skeleton, `.env` git-ignored, pre-commit secret scan | Account API credit check. Spikes: fetch the 20 seed issuer pages (DR-4 test), Ads Transparency India region, one `amazon_product` page for bank offers | Flutter skeleton; agree API contracts | Fetch-success % recorded; API contracts written |
 | **Oct 7** | Schemas (SQLite, integer paise). Engine with property and golden tests. `/pay` | Gateway with cache, budget guard, fixture replay. Record fixtures. Fetcher + extraction for the 20 seed cards | Onboarding, holdings, manual spends | Golden tests green; seed cards profiled from official pages |
-| **Oct 8** | Card Finder with breakdowns | Card Profile pipeline: auto-publish, speculation, owner alerts, read-only change feed. Shopping effective price | Rankings screen; typed Checkout with effective price | One refresh auto-publishes from a bank page; one forum report lands as speculation; effective price shown for one product |
+| **Oct 8** | Card Finder with breakdowns | Card Profile pipeline: auto-publish, speculation, owner alerts, read-only change feed. Merchant bank offers from issuer pages | Rankings screen; typed Checkout with reward and bank offer | One refresh auto-publishes from a bank page; one forum report lands as speculation; one Checkout shows a live bank offer |
 | **Oct 9** | Cap Watch on a fake clock (if time) | Launch Radar end to end: Ads Transparency + news → profile → score | Launch feed; QR decode → `/pay` | Every demo flow runs from a warm cache |
 | **Oct 10** | Evals on fixtures | README naming the SerpApi engines and why | Video under 3 minutes, checked in incognito | **Submitted by 18:00**, not left as a draft |
 
@@ -446,9 +446,9 @@ Submit by **Oct 10, 18:00 IST**. The hard deadline is 23:59, and drafts are neve
 5. Renewal Review
 6. UPI intent hand-off (keep the QR decode)
 7. Cap Watch
-8. `amazon_product` bank offers (keep Google Shopping prices)
+8. `amazon_product` bank offers (keep issuer-page offers)
 
-**Never cut:** the engine, P0 Finder, typed Checkout with Shopping effective price, the Card Profile pipeline (facts, speculation, owner alerts), Launch Radar **including the Ads Transparency worker**, which together carry the "meaningful SerpApi usage" criterion.
+**Never cut:** the engine, P0 Finder, typed Checkout (reward and bank offer), the Card Profile pipeline (facts, speculation, owner alerts), Launch Radar **including the Ads Transparency worker**, which together carry the "meaningful SerpApi usage" criterion.
 
 ### Three-month product
 
@@ -497,7 +497,7 @@ Submit by **Oct 10, 18:00 IST**. The hard deadline is 23:59, and drafts are neve
 |---|---|---|---|
 | 1 | Is the reduced iOS client in the 3-month plan? | **After M3** | Android only through M3 |
 | 2 | Hackathon first or product first? | **Hackathon first** | §5 day plan takes priority until Oct 10 |
-| 3 | Which track? | **Commerce & Market Intelligence** | Demo leads with Checkout effective price, Launch Radar and Finder; chat agent moves up the cut order; Shopping budget added; Ads Transparency never cut |
+| 3 | Which track? | **Commerce & Market Intelligence** | Demo leads with Checkout Advisor, Launch Radar and Finder; chat agent moves up the cut order; effective price (D7) dropped 2026-10-07 and its Shopping budget moved to the demo reserve; Ads Transparency never cut |
 | 4 | Solo or team? | **Team of 2–5** | Three parallel workstreams (§5) |
 | 5 | Monetisation | **No affiliate money** | `commerce` module and DSA question removed |
 | 6 | Ledger default until the M2 test? | **Server ledger until the A/B** | DR-2 stands as written |

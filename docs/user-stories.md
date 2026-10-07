@@ -22,7 +22,7 @@ As a user, I want to enter my credit score band, income band, age, employment ty
 As a user, I want to add my existing cards by searching the master list, so that the app knows my stack.
 - Given the add-card search, when I type an issuer or card name, then variants are suggested with issuer, network and fee; I pick one and enter open date, statement date, due date, fee date, credit limit, and whether it is LTF (with a prompt to upload the written confirmation).
 - Given my card is not in the list, when I choose "card not listed", then I enter issuer and name, the app warns about similar existing variants, creates a custom card marked "rewards can't be assessed yet", and tells me an intake request has been raised.
-- Given a custom card is later approved into the master list, then I am notified and the card is linked with full assessment available.
+- Given the card's official page is later found and the card is published into the master list, then I am notified and the card is linked with full assessment available.
 
 **US-04 · Set my spend budget** (P0 · FR-LD-1)
 As a user without statements connected, I want to enter my typical monthly spend by category with top merchants, so that recommendations and the picker have a baseline.
@@ -95,7 +95,7 @@ As a hard-profile user, I want an action plan when a card is out of reach, so th
 - Given a failed eligibility rule, when I open the card, then I see the failing rule and steps (relationship account, FD-backed first, utilisation under threshold, wait N months after last enquiry), each with a "done" toggle; eligibility re-checks when steps are done.
 
 **US-17 · Learn how others got the card** (P2 · FR-RE-6)
-As a user, I want a reviewed summary of community acquisition experiences per card, so that I apply the way that works.
+As a user, I want a summary of community acquisition experiences per card, labelled as community reports with source links, so that I apply the way that works.
 - Given a card page, when I open "How people get it", then I see routes (pre-approved, card-to-card, FD-backed, relationship), common rejection reasons, typical turnaround, with source links to allow-listed community threads and a last-reviewed date.
 
 **US-18 · Avoid harmful enquiries** (P1 · FR-RE-11)
@@ -108,8 +108,8 @@ As a user paying rent, utilities, insurance, fuel, tax or education, I want to k
 - Given a hard category in my budget, when I view recommendations, then the category shows the best option, its net after surcharge, and whether the spend counts toward milestones and waivers.
 
 **US-20 · Trust the ranking** (P0 · FR-RE-13)
-As a user, I want to know rankings are independent of affiliate payouts, so that I can trust them.
-- Given the recommendations screen, then an independence statement is shown; given a card with an affiliate relationship, then the payout is disclosed on the card page.
+As a user, I want to know rankings are never paid for, so that I can trust them.
+- Given the recommendations screen, then a statement says cc-smith takes no affiliate, referral or issuer money, and every rank shows its breakdown.
 
 ---
 
@@ -150,10 +150,12 @@ As an offline payer, I want to scan the merchant's UPI QR, so that the merchant 
 As an offline payer without a QR, I want to see nearby shops and pick the one I am paying, so that the right MCC is used.
 - Given location permission, when I open the picker, then nearby merchants are listed, previously used ones first; selecting one resolves the expected MCC; results are cached per place.
 
-**US-28 · Share a checkout link** (P1 · FR-PK-3)
-As an online shopper, I want to share the product or checkout URL from any app to cc-smith, so that I get the card pick in one tap.
+**US-28 · Get the pick at checkout (Autofill) or by sharing a link** (P1 · FR-PK-3)
+As an online shopper, I want the card pick to appear when a checkout asks for my card, or in one tap by sharing the URL, so that I never leave the merchant's flow.
+- Given cc-smith is enabled as the Android autofill service, when a form field is detected as a card-number field, then the autofill dropdown shows the recommended card with its reason, the app package or domain resolves to the merchant, and no card number is stored or filled.
 - Given a shared URL, when the app receives it, then the domain resolves to the merchant and the picker opens with amount entry; for marketplaces the marketplace MCC applies.
 - Given no match, then I can pick from recent merchants or type the name.
+- Given iOS, then share-sheet is the primary path and the Autofill path is not offered.
 
 **US-29 · See the plan-aware ranking** (P0 · FR-PK-6/7)
 As a user working toward a milestone or lounge spend lock, I want the picker to weigh my plan against raw reward, so that I can choose deliberately.
@@ -259,27 +261,38 @@ As a user, I want to delete my account and data, so that I control my informatio
 
 ---
 
-## Epic 9 — Admin and knowledge base operations
+## Epic 9 — Owner and knowledge base operations
 
-**US-55 · Review an extracted change** (P1 · FR-AD-1, FR-KB-9)
-As a reviewer, I want to see a diff between the current rule document and an extracted one with sources, so that I can approve, edit or reject.
-- Given a review item, when I approve, then a new version is created with effective dates, the changelog entry is generated, and fan-out recomputation is triggered and visible.
+No human approves anything (plan DR-12). Official-source facts publish automatically; everything else is speculation; the owner is alerted.
 
-**US-56 · Approve a new card** (P1 · FR-AD-2, FR-KB-8/14)
-As a reviewer, I want an intake queue of discovered and user-requested cards prioritised by holder count, so that the master list grows where it matters.
-- Given an intake item, when I approve, then the card enters the master list; linked custom cards are converted and their users notified.
+**US-55 · Get alerted on every knowledge change** (P1 · FR-AD-1, FR-KB-9)
+As the owner, I want an alert for every change to the knowledge base with the references used, so that I can see what changed without being a bottleneck.
+- Given an official page changes and the quote check passes, then the new version publishes without waiting and I receive an alert with card, field, old → new value, tier, event type and every reference (URL, quoted text, fetch time, evidence id).
+- Given a rate, cap or fee moves more than 50%, then the alert is flagged as a large change with the number of users holding the card.
+- Given a day of changes, then I receive a daily digest; affected users' trackers and notices have already been recomputed.
 
-**US-57 · Manage trusted sources** (P1 · FR-AD-3, FR-KB-7)
-As an admin, I want to maintain allow-lists of issuer domains, co-brand partner domains and community sources with trust levels, so that only trusted data enters the pipeline.
+**US-56 · New cards join the catalogue automatically** (P1 · FR-KB-8/14, FR-AD-2)
+As the owner, I want discovered and user-requested cards added without my approval, so that the master list grows where it matters.
+- Given Launch Radar or a custom-card request finds a card with an official page, then it is profiled, published and alerted; linked custom cards are converted and their users notified.
+- Given a card has no official page, then it is listed as a speculative launch: not scored, no user notification, until an official page promotes it.
 
-**US-58 · Edit a card with history** (P1 · FR-AD-4)
-As a reviewer, I want to edit any field with a source and effective date and see field-level history, so that corrections are auditable.
+**US-57 · Manage the official-source allow-list** (P1 · FR-AD-3, FR-KB-7)
+As the owner, I want to maintain the issuer and co-brand partner domains, with the fields each owns, so that only official text becomes facts.
+- Given I edit the allow-list, then the edit is versioned and alerted.
 
-**US-59 · Handle community claims** (P1 · FR-KB-10)
-As a reviewer, I want community claims (e.g. a devaluation thread) queued as evidence that triggers re-verification against the issuer source, so that forum knowledge reaches the KB without being trusted blindly.
+**US-58 · History and rollback** (P1 · FR-AD-4)
+As the owner, I want field-level history with automatic and manual rollback, so that a misread official page is undone quickly.
+- Given the weekly re-check cannot reproduce a published fact, then it is rolled back automatically and I am alerted.
+- Given I choose a previous version, then it is restored, the changelog records the rollback, and affected users are recomputed.
 
-**US-60 · Handle user corrections** (P1 · FR-KB-11)
-As a reviewer, I want user corrections with evidence in the same queue, with the reporter notified on resolution.
+**US-59 · See community-reported changes as speculation** (P1 · FR-KB-10)
+As a user, I want forum-reported changes (e.g. a devaluation thread) shown on the card, clearly labelled, so that I hear early without bad data changing my numbers.
+- Given a community claim, then the card page shows it labelled "reported, not confirmed by the bank" with its refs, an official re-fetch is triggered, and no ranking or tracker changes.
+- Given an official quote later confirms it, then it is promoted to a fact; given an official source contradicts it, it is closed; otherwise it expires after 60 days.
+
+**US-60 · Report a wrong answer** (P1 · FR-KB-11)
+As a user, I want to report a wrong rate or rule with evidence, so that it gets checked against the bank's page.
+- Given I report a correction, then it becomes speculation with my report as the ref, the official page is re-fetched immediately, and I see the outcome (promoted, contradicted or expired).
 
 ---
 

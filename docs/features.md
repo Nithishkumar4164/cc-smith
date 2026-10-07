@@ -42,9 +42,9 @@ Priority: **P0** = must exist for the product to be worth opening; **P1** = firs
 | A3 | **Perks as typed line items.** Lounge: count, domestic/international, guest, spend criteria and its period, which lounge network / POS it works on, add-on card coverage. Forex markup. Fuel surcharge waiver. Memberships. Insurance. Welcome benefits (year-one only). | P0 | 1 |
 | A4 | **Fee and waiver rules in full.** Fee, waiver threshold, what counts toward it (refunds, excluded categories, statement vs posted spend), whether the bank charges-then-reverses, first-year-free vs lifetime-free variants, add-on card fees, surcharges (rent, utilities, fuel, government, wallet). | P0 | 1 |
 | A5 | **Redemption catalogue per card.** Routes (portal, vouchers, transfer partners, statement credit), ₹ per point by route, redemption fees and GST, per-month redemption caps, minimum thresholds, point expiry rules. | P1 | 3 |
-| A6 | **Change pipeline.** Scrape issuer pages and MITC/T&C documents; LLM extracts into the schema; diff against current; reviewer queue; a differing value never overwrites until confirmed; once confirmed, every holder's trackers and playbook re-run. Public changelog per card. | P1 | 2 |
+| A6 | **Change pipeline.** Scrape issuer pages and MITC/T&C documents; LLM extracts into the schema; quote check against the stored page; a value with an official quote publishes automatically as a new version, anything else is speculation and never overwrites a fact; weekly re-check rolls back facts that don't reproduce; owner alerted on every change (plan DR-12, no human review). Once published, every holder's trackers and playbook re-run. Public changelog per card. | P1 | 2 |
 | A7 | **News and devaluation ingestion.** Issuer notices, community devaluation threads, partner-programme changes (airline/hotel ratios). Each item is tied to card IDs and an effective date so impact can be computed per user. | P1 | 3 |
-| A8 | **User-reported corrections** with evidence (statement line, bank email) feeding the reviewer queue. | P1 | 2 |
+| A8 | **User-reported corrections** with evidence (statement line, bank email) become speculation and trigger an immediate re-fetch of the official page; the reporter sees the outcome. | P1 | 2 |
 
 ## B. Recommend
 
@@ -56,7 +56,7 @@ Priority: **P0** = must exist for the product to be worth opening; **P1** = firs
 | B4 | **Beginner and hard-profile paths.** First card, student, self-employed, no salary account: FD-backed, card-to-card and relationship-based routes shown as first-class options rather than rejections. | P1 | 2 |
 | B5 | **Reality check on headline rates.** For every recommended card, show effective rate after caps, exclusions, minimums and rounding on the user's actual spend pattern — the number the brochure doesn't print. | P0 | 1 |
 | B6 | **Hard categories answered honestly.** Rent, utilities, insurance, fuel, jewellery, wallet loads, tax, education: if nothing earns, say so and show the lowest-surcharge option and whether it counts toward milestones. | P0 | 1 |
-| B7 | **Ranking independence.** Engine never sees affiliate payouts; payouts disclosed on the card; breakdown shown for every rank. | P0 | 1 |
+| B7 | **Ranking independence.** No affiliate, referral or issuer money is taken (owner, 2026-10-06/07); breakdown shown for every rank. | P0 | 1 |
 
 ## C. Acquire
 

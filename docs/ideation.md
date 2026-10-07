@@ -117,6 +117,8 @@ The knowledge base is the moat and the liability. Versioned rules with review be
 
 Issuer affiliate payouts per approved card are the obvious revenue and the exact thing that makes existing comparison sites untrustworthy. Proposed stance: take affiliate revenue with verifiable ranking independence —
 
+**Decided (owner, 2026-10-06, confirmed 2026-10-07): no affiliate money.** See `docs/decisions.md` A4.
+
 - the engine never sees payouts;
 - the per-line-item breakdown is shown for every rank;
 - payouts are disclosed on the card.
