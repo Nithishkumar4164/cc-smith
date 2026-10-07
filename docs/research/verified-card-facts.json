@@ -1,0 +1,928 @@
+{
+  "as_of": "2026-10-07",
+  "source_policy": "Official issuer pages/PDFs only (hdfc.bank.in, icici.bank.in, axis.bank.in, campaign.axis.bank.in). Quotes are copied from extracted text with whitespace/line breaks collapsed; ' | ' joins separate lines and '...' marks omitted text.",
+  "cards": [
+    {
+      "id": "hdfc_regalia_gold",
+      "name": "HDFC Bank Regalia Gold Credit Card",
+      "issuer": "HDFC Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 2500,
+        "annual": 2500,
+        "waiver_spend": 400000,
+        "quote": "Joining Fee: ₹2500 plus Applicable Taxes | Renewal Fee: ₹2500 plus Applicable Taxes | Fee Waiver : Retail spends of ₹4 lakh within 12 billing cycles of your anniversary year to enjoy a waiver on the renewal fee for the following year.",
+        "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card/fees-and-charges"
+      },
+      "earn": [
+        {
+          "category": "other",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 5,
+            "per_inr": 200
+          },
+          "cap": {
+            "amount": 50000,
+            "unit": "points",
+            "period": "statement_cycle"
+          },
+          "quote": "Earn 5 Reward Points for every ₹200 spent on eligible categories. (Effective 15th May, 2026)",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/common/Credit-Cards/Regalia-Gold-Product-feature-change.pdf",
+          "cap_quote": "The maximum reward points that can be earned in a statement cycle for Regalia Gold is 50,000.",
+          "cap_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf"
+        },
+        {
+          "category": "grocery",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 5,
+            "per_inr": 200
+          },
+          "cap": {
+            "amount": 2000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Reward points earned on grocery transaction will be capped at 2000 RP per calendar month",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf"
+        },
+        {
+          "category": "insurance",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 5,
+            "per_inr": 200
+          },
+          "cap": {
+            "amount": 2000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Reward points accrued for Insurance transactions will have a maximum cap of 2,000 per month",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf"
+        },
+        {
+          "category": "myntra|nykaa|reliance_digital|marks_and_spencer (5X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 25,
+            "per_inr": 200
+          },
+          "cap": {
+            "amount": 5000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "5X Reward Points is applicable on spends at select merchants – Myntra, Nykaa, Reliance Digital, Marks & Spencer. ... 5X Reward points will be capped at 5000 RP per month across all brands combined. Base reward points accrued on these will continue as is with no capping.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "note": "25/₹200 inferred as 5X of the 5 RP/₹200 base; the 5000 RP cap applies to the incremental 5X points only. PDF does not state 5X is a time-limited offer, but says 'The offer cannot be clubbed'."
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "fuel",
+          "quote": "Reward points will not be accrued for fuel transactions",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf"
+        },
+        {
+          "what": "EasyEMI, e-wallet loading",
+          "quote": "EasyEMI and e-wallet loading transactions will not accrue Reward points.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf"
+        },
+        {
+          "what": "SmartEMI conversion (reversal)",
+          "quote": "Reward points accrued will be reversed if a retail transaction is converted into SmartEMI.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf"
+        },
+        {
+          "what": "rent, property management, government",
+          "quote": "Reward points will not be accrued for rental pay transactions, property management services like rent, maintenance, packers &movers, etc and government transactions",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf"
+        },
+        {
+          "what": "minimum transaction",
+          "quote": "Minimum transaction value to be eligible for offer or reward points is Rs. 150",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        }
+      ],
+      "point_value_inr": null,
+      "point_value_quote": "Reward Points Redemption against each category can be redeemed at 1 Reward point Equivalent to | Exclusive Gold Catalogue ₹0.65 | Flights and hotel bookings ₹0.5 | Airmiles conversion up to 0.5 airmiles | Products and Voucher up to Rs 0.35 | Statement balance up to Rs 0.20",
+      "point_values": {
+        "gold_catalogue": 0.65,
+        "flights_hotels": 0.5,
+        "airmiles": "up to 0.5 airmiles",
+        "products_vouchers": 0.35,
+        "statement_balance": 0.2,
+        "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card"
+      },
+      "eligibility": {
+        "min_income_annual": null,
+        "quote": "Salaried ... Age: Min 21 years & Max 60 Years | Net Monthly Income> Rs 1,00,000 (For Govt.) | Net Monthly Income> Rs 1,50,000 (For Non Govt.) | Self Employed ... Age: Min 21 years & Max 65 Years | Income: ITR > Rs 18 Lakhs per annum",
+        "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card",
+        "min_income_monthly_salaried": 150000,
+        "min_income_monthly_salaried_govt": 100000,
+        "min_itr_annual_self_employed": 1800000,
+        "age": "21-60 salaried, 21-65 self-employed"
+      },
+      "lounge": "3 domestic lounge visits per calendar quarter on ₹60,000+ spend in the preceding calendar quarter (from Jul 2026); 6 international/year via Priority Pass. Quote: 'Enjoy 3 domestic lounge visits per calendar quarter on spends of ₹60,000 or more in the preceding calendar quarter.' / '6 international lounge visits per year via Priority Pass continue unchanged.' (Regalia-Gold-Product-feature-change.pdf)",
+      "milestones": [
+        {
+          "quote": "Rs. 5,000 worth flight vouchers on spends of Rs. 5 lakh and Rs. 7.5 lakh",
+          "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card"
+        },
+        {
+          "quote": "Rs 1500 worth Myntra/Nykaa vouchers on quarterly spends of Rs 1.5 lakhs.",
+          "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card"
+        }
+      ],
+      "notes": [
+        "Network not stated on the product page (no Visa/Mastercard/RuPay mention for this card). UPI/RuPay not stated.",
+        "Conflict: minimum transaction for RP is 'Rs. 150' in rewards-points-program-terms-and-conditions.pdf and terms-and-conditions.pdf, but 'Rs. 200' in pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf (5X offer section). Caller-supplied value ₹150 kept.",
+        "Base earn devalued effective 15 May 2026 per feature-change PDF.",
+        "rate_pct left null for points cards whose point value depends on redemption route; see point_values."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card/fees-and-charges",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/common/Credit-Cards/Regalia-Gold-Product-feature-change.pdf",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/rewards-points-program-terms-and-conditions.pdf",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/terms-and-conditions.pdf",
+          "status": "200"
+        }
+      ]
+    },
+    {
+      "id": "hdfc_millennia",
+      "name": "HDFC Bank Millennia Credit Card",
+      "issuer": "HDFC Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 1000,
+        "annual": 1000,
+        "waiver_spend": 100000,
+        "quote": "Joining/renewal membership fee: ₹1,000 plus applicable taxes. Renewal fee waived on spending ₹1 lakh or more in a year before renewal date.",
+        "url": "https://www.hdfc.bank.in/credit-cards/millennia-credit-card/fees-and-charges"
+      },
+      "earn": [
+        {
+          "category": "amazon|bookmyshow|cultfit|flipkart|myntra|sonyliv|swiggy|tatacliq|uber|zomato",
+          "rate_pct": 5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1000,
+            "unit": "inr",
+            "period": "calendar_month"
+          },
+          "quote": "10 online merchants qualifying for 5% CashBack are Amazon, BookMyShow, Cult.fit, Flipkart, Myntra, Sony LIV, Swiggy, Tata CLiQ, Uber & Zomato ... The Cardholder can earn up to 1,000 CashPoints under the 5% CashBack on 10 online merchants in a calendar month.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf",
+          "merchants": [
+            "Amazon",
+            "BookMyShow",
+            "Cult.fit",
+            "Flipkart",
+            "Myntra",
+            "Sony LIV",
+            "Swiggy",
+            "Tata CLiQ",
+            "Uber",
+            "Zomato"
+          ],
+          "note": "Non-EMI only ('CashBack valid only for non-emi spends in the 10 online merchants'). Uber only on MCC 4121. Via SmartBuy/PayZapp these merchants earn only 1%. MCC 6540 never earns 5%. Cap is 1,000 CashPoints (=₹1,000)."
+        },
+        {
+          "category": "other",
+          "rate_pct": 1,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1000,
+            "unit": "inr",
+            "period": "calendar_month"
+          },
+          "quote": "1% cashback on all other spends excluding Fuel, Wallet, EMI, govt, rental transactions. ... The Cardholder can earn up to 1,000 CashPoints under the 1% CashBack on other spends in a calendar month.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf"
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "fuel, rent, government, cash advance, balance payment, fees, all EMI",
+          "quote": "CashPoints shall not be eligible for the following spends/transactions on the card, o Fuel Spends o Rent payments and Govt Related transactions o Cash Advances o Payment of Outstanding Balances o Payment of card fees and other charges o All EMI transactions(even if preclosed) including Smart EMI / Dial an EMI transaction",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf"
+        },
+        {
+          "what": "wallet loading, EMI",
+          "quote": "Effective 1st September 2024, Wallet loading and EMI transactions will NOT earn Reward Points. Wallet MCC: 6540",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf"
+        },
+        {
+          "what": "education via third-party apps",
+          "quote": "Effective 1st September 2024, Education payments made through third -party apps will NOT earn Reward Points.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf"
+        },
+        {
+          "what": "prepaid/gift card/voucher (1% category)",
+          "quote": "A cardholder will not be eligible for 1% CashPoints on prepaid card/gift Card/ wallet load and / or voucher purchases.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf"
+        }
+      ],
+      "point_value_inr": 1,
+      "point_value_quote": "CashPoints can be utilized towards CashBack redemption against the statement at the rate of 1 CashPoint = ₹1 for Millennia Credit Card Holders. (Also: 'CashPoints can also be used for redemption against travel benefits like Flight & Hotel bookings and Rewards Catalogue at the SmartBuy Rewards Portal, at a value of 1 CashPoint = ₹0. 30'; '₹50 redemption fee'; min 500 CashPoints; cashback redemption capped at 3,000 points per calendar month)",
+      "eligibility": {
+        "min_income_annual": 420000,
+        "quote": "Salaried ... Age: Minimum 21 years & Maximum 40 years | Income: Net Monthly Income > ₹35,000 | Self Employed ... Age: Minimum 21 years & Maximum 40 years | Income: ITR > ₹6 Lakh per annum",
+        "url": "https://www.hdfc.bank.in/credit-cards/millennia-credit-card",
+        "note": "min_income_annual = 12 x ₹35,000 net monthly (salaried); self-employed ITR > ₹6 lakh"
+      },
+      "lounge": "No standalone lounge ('Effective 1st December 2023, complimentary lounge access on domestic airports will no longer be available'); quarterly milestone lets you pick 1 domestic lounge access instead of the ₹1,000 voucher.",
+      "milestones": [
+        {
+          "quote": "Get either ₹1,000 worth gift voucher or 1 domestic lounge access on spends of ₹1,00,000 and above in each calendar quarter",
+          "url": "https://www.hdfc.bank.in/credit-cards/millennia-credit-card"
+        }
+      ],
+      "notes": [
+        "Inconsistency inside the T&C: summary table header says 'Maximum CashBack / CashPoints per Cycle' = 1000, while detailed T&Cs say 'in a calendar month' (CashPoints posted on calendar-month basis). Recorded as calendar_month.",
+        "Welcome: 'Welcome Benefit of 1000 CashPoints will be given to the cardholder if the joining membership fee is paid.'",
+        "Network not stated on product page; UPI/RuPay not stated.",
+        "Fees on rent (1%, cap ₹3,000), fuel >₹15,000, utilities >₹50,000, 3rd-party education apply (T&C 'Important Changes in Charges')."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/millennia-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/millennia-credit-card/fees-and-charges",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/quarterly-spends-milestone-program.pdf",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/fees-and-charges/pdf/part-i-key-fact-statement-cum-most-important-terms-and-conditions-for-credit-cards.pdf",
+          "status": "200"
+        }
+      ]
+    },
+    {
+      "id": "hdfc_swiggy_blck",
+      "name": "Swiggy BLCK HDFC Bank Credit Card",
+      "issuer": "HDFC Bank",
+      "network": "Mastercard",
+      "network_quote": "Swiggy HDFC Bank Credit Card is offered only under Mastercard World platform currently.",
+      "network_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/tncs-swiggy-blck-hdfc-bank-credit-card-22092026.pdf",
+      "upi_rupay": null,
+      "fees": {
+        "joining": 1000,
+        "annual": 1000,
+        "waiver_spend": 200000,
+        "quote": "Joining Fee / Renewal Membership Fee: ₹1,000 + Applicable Charges | Joining Fee of ₹1,000 will be waived on spending ₹75,000 in the first 90 days. (Applicable for first Year only). | Spend ₹2,00,000 or more in a year, before your Credit Card renewal date and get your renewal fee waived off",
+        "url": "https://www.hdfc.bank.in/credit-cards/swiggy-blck-hdfc-bank-credit-card",
+        "joining_waiver_spend": 75000,
+        "joining_waiver_window_days": 90
+      },
+      "earn": [
+        {
+          "category": "swiggy",
+          "rate_pct": 10,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1500,
+            "unit": "inr",
+            "period": "statement_cycle"
+          },
+          "quote": "Spends on Swiggy App* (Food Delivery, Instamart and Dineout) 10% cashback Rs.1500 per billing cycle",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/tncs-swiggy-blck-hdfc-bank-credit-card-22092026.pdf",
+          "min_txn_inr": 249
+        },
+        {
+          "category": "online (select merchants/MCCs incl. amazon, flipkart, myntra, travel OTAs, cabs)",
+          "rate_pct": 5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1500,
+            "unit": "inr",
+            "period": "statement_cycle"
+          },
+          "quote": "Spends on online shopping across Famous Merchants and categories like Apparels, Pharmacies, Pet stores, Personal Care, Electronics, Entertainment, Travel, Discount Stores & Local cabs basis eligible list of MCCs** 5% cashback Rs.1500 per billing cycle",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/tncs-swiggy-blck-hdfc-bank-credit-card-22092026.pdf",
+          "merchants": [
+            "Amazon",
+            "Flipkart",
+            "Myntra",
+            "Nykaa",
+            "ClearTrip",
+            "Ajio",
+            "Netflix",
+            "Hotstar",
+            "BookMyShow",
+            "Meesho",
+            "Ola",
+            "Uber",
+            "Zoom",
+            "Reliance Retail",
+            "Vijay Sales",
+            "Croma",
+            "Paytm Travel",
+            "EaseMyTrip",
+            "Ixigo",
+            "Yatra",
+            "Ibibo",
+            "+ MCC lists for apparels, pharmacies, pet stores, personal care"
+          ],
+          "min_txn_inr": 100,
+          "note": "Table 2.1: 'Amazon, Flipkart, Myntra, Nykaa, ClearTrip, Ajio, Netflix,Hotstar, BookMyShow, Meesho — All online transactions except standard excluded MCCs'. Only online transactions qualify.",
+          "quote_note": "Quote reassembled from a PDF table/page break (cells interleaved or bullet/page header removed); wording unchanged."
+        },
+        {
+          "category": "other",
+          "rate_pct": 1,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1000,
+            "unit": "inr",
+            "period": "statement_cycle"
+          },
+          "quote": "Spends on other categories * 1% cashback Rs.1000 per billing cycle Exclusions - Fuel, Rent, Jewellery, Govt. spends, Gaming and Education, EMI & Wallet",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/tncs-swiggy-blck-hdfc-bank-credit-card-22092026.pdf",
+          "min_txn_inr": 100
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "wallet/gift/prepaid, rent, government, gaming, education, fuel, jewellery, Smartpay, SmartBuy, all EMI, cash advance, forex",
+          "quote": "Cashback will not be accrued for the following transactions using Swiggy BLCK HDFC Bank Credit Card ❖ Prepaid Card/Gift Card/Wallet ❖ Rent ❖ Government related transactions ❖ Gaming ❖ Education ❖ Fuel ❖ Jewellery ❖ Smartpay ❖ Smartbuy portal ❖ EMI (all type) ❖ Cash advances, Purchase of travelers’ cheques ❖ Purchase of foreign currency and fees",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/tncs-swiggy-blck-hdfc-bank-credit-card-22092026.pdf"
+        },
+        {
+          "what": "Swiggy Money wallet, Swiggy Liquor (10% category)",
+          "quote": "Exclusions - Transactions made using Swiggy Money Wallet, Swiggy Liquor, and any other categories (if any) decided later",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/tncs-swiggy-blck-hdfc-bank-credit-card-22092026.pdf"
+        },
+        {
+          "what": "minimum transaction",
+          "quote": "In order to earn 10% Cashback on eligible transactions using Swiggy BLCK HDFC Bank Credit Card, the cardholder should make a minimum transaction of Rs. 249 using the card. In order to earn 5% and 1% Cashback on eligible transactions using Swiggy BLCK HDFC Bank Credit Card, the cardholder should make a minimum transaction of Rs. 100 using the card.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/tncs-swiggy-blck-hdfc-bank-credit-card-22092026.pdf",
+          "quote_note": "Quote reassembled from a PDF table/page break (cells interleaved or bullet/page header removed); wording unchanged."
+        }
+      ],
+      "point_value_inr": 1,
+      "point_value_quote": "Cashback earned for current billing cycle will be auto redeemed against outstanding amount. (cashback is rupee statement credit; no points)",
+      "eligibility": {
+        "min_income_annual": 1200000,
+        "quote": "Salaried ... Age: Min 21 years & Max 60 Years | Net Monthly Income: > ₹1,00,000 | Self-Employed ... Age :Min 21 years & Max 65 Years | Annual ITR > ₹12 lakh per annum",
+        "url": "https://www.hdfc.bank.in/credit-cards/swiggy-blck-hdfc-bank-credit-card"
+      },
+      "lounge": "None stated on product page or T&C.",
+      "milestones": [],
+      "notes": [
+        "Welcome: 3-month Swiggy BLCK membership on activation within 37 days.",
+        "Annual fee 'will be levied within 120 days'.",
+        "Renewal waiver excludes Cash on Call, Balance Transfer, Cash Withdrawal.",
+        "/fees-and-charges sub-page returns 404; fees taken from product page.",
+        "Cleartrip/Nykaa extra instant discounts are limited-period offers (not modelled)."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/swiggy-blck-hdfc-bank-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/tncs-swiggy-blck-hdfc-bank-credit-card-22092026.pdf",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/combined-tncs-ornge-and-blck.pdf",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/swiggy-blck-hdfc-bank-credit-card/fees-and-charges",
+          "status": "404"
+        }
+      ]
+    },
+    {
+      "id": "hdfc_swiggy_ornge",
+      "name": "Swiggy ORNGE HDFC Bank Credit Card",
+      "issuer": "HDFC Bank",
+      "network": "Mastercard",
+      "network_quote": "Swiggy HDFC Bank Credit Card is offered only under Mastercard World platform currently.",
+      "network_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+      "upi_rupay": null,
+      "fees": {
+        "joining": 500,
+        "annual": 500,
+        "waiver_spend": 150000,
+        "quote": "Joining Fee / Renewal Membership Fee: ₹500 + Applicable Charges | Spend ₹1,50,000 or more in a year, before your Credit Card renewal date and get your renewal fee waived off",
+        "url": "https://www.hdfc.bank.in/credit-cards/swiggy-ornge-hdfc-bank-credit-card"
+      },
+      "earn": [
+        {
+          "category": "swiggy",
+          "rate_pct": 5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1500,
+            "unit": "inr",
+            "period": "statement_cycle"
+          },
+          "quote": "Spends on Swiggy App* (Food Delivery, Instamart and Dineout) 5% cashback Rs.1500 per billing cycle",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "min_txn_inr": 249
+        },
+        {
+          "category": "online (select merchants/MCCs incl. amazon, flipkart, myntra, travel OTAs, cabs)",
+          "rate_pct": 5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1500,
+            "unit": "inr",
+            "period": "statement_cycle"
+          },
+          "quote": "Spends on select Online Merchants and categories like Apparels, Pharmacies, Pet stores, Personal Care, Electronics, Entertainment, Travel, Discount Stores & Local cabs basis eligible list of MCCs** 5% cashback",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "cap_quote": "Online Transactions on Apparels 30000 1375 Capping for the 5% Cashback accrual 1500",
+          "merchants": [
+            "Amazon",
+            "Flipkart",
+            "Myntra",
+            "Nykaa",
+            "ClearTrip",
+            "Ajio",
+            "Netflix",
+            "Hotstar",
+            "BookMyShow",
+            "Meesho",
+            "Ola",
+            "Uber",
+            "Zoom",
+            "Reliance Retail",
+            "Vijay Sales",
+            "Croma",
+            "Paytm Travel",
+            "EaseMyTrip",
+            "Ixigo",
+            "Yatra",
+            "Ibibo",
+            "+ MCC lists for apparels, pharmacies, pet stores, personal care"
+          ],
+          "note": "The ORNGE table's capping cell for this row is blank; the ₹1,500/billing-cycle cap comes from the T&C worked example (separate from the Swiggy 5% cap in that example). Treat as inferred.",
+          "quote_note": "Quote reassembled from a PDF table/page break (cells interleaved or bullet/page header removed); wording unchanged."
+        },
+        {
+          "category": "other",
+          "rate_pct": 1,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1000,
+            "unit": "inr",
+            "period": "statement_cycle"
+          },
+          "quote": "Spends on other categories * 1% cashback Rs.1000 per billing cycle Exclusions - Fuel, Rent, Jewellery, Govt. spends, Gaming and Education, EMI & Wallet",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "min_txn_inr": 100
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "wallet/gift/prepaid, rent, government, gaming, education, fuel, jewellery, Smartpay, SmartBuy, all EMI, cash advance, forex",
+          "quote": "Cashback will not be accrued for the following transactions using Swiggy Ornge HDFC Bank Credit Card ❖ Prepaid Card/Gift Card/Wallet ❖ Rent ❖ Government related transactions ❖ Gaming ❖ Education ❖ Fuel ❖ Jewellery ❖ Smartpay ❖ Smartbuy portal ❖ EMI (all type) ❖ Cash advances, Purchase of travelers’ cheques ❖ Purchase of foreign currency and fees",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "quote_note": "Quote reassembled from a PDF table/page break (cells interleaved or bullet/page header removed); wording unchanged."
+        },
+        {
+          "what": "Swiggy Money wallet, Swiggy Liquor",
+          "quote": "Exclusions - Transactions made using Swiggy Money Wallet, Swiggy Liquor, and any other categories (if any) decided later",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf"
+        },
+        {
+          "what": "minimum transaction",
+          "quote": "To earn 5% CashBack using Swiggy Ornge HDFC Bank Credit Card, the cardholder should make a minimum transaction of ₹249 using the card.",
+          "url": "https://www.hdfc.bank.in/credit-cards/swiggy-ornge-hdfc-bank-credit-card"
+        }
+      ],
+      "point_value_inr": 1,
+      "point_value_quote": "Cashback earned for current billing cycle will be auto redeemed against outstanding amount.",
+      "eligibility": {
+        "min_income_annual": 240000,
+        "quote": "Salaried ... Age: Min 21 years & Max 60 Years | Net Monthly Income: > ₹20,000 | Self-Employed ... Age :Min 21 years & Max 65 Years | Annual ITR > ₹6 lakh per annum",
+        "url": "https://www.hdfc.bank.in/credit-cards/swiggy-ornge-hdfc-bank-credit-card"
+      },
+      "lounge": "None stated.",
+      "milestones": [],
+      "notes": [
+        "Welcome: 'Complimentary Swiggy One Membership for 12 months as a welcome benefit.'",
+        "T&C: 'Renewal Year Fee waiver is applicable on spends of Rs. 1,50,000 and above in the preceding Year'.",
+        "/fees-and-charges sub-page returns 404."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/swiggy-ornge-hdfc-bank-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/swiggy-ornge-hdfc-bank-credit-card/fees-and-charges",
+          "status": "404"
+        }
+      ]
+    },
+    {
+      "id": "icici_amazon_pay",
+      "name": "Amazon Pay ICICI Bank Credit Card",
+      "issuer": "ICICI Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 0,
+        "annual": 0,
+        "waiver_spend": null,
+        "quote": "No Joining Fee | No Annual Fee | Low Forex Markup - 1.99%",
+        "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/amazon-pay-credit-card"
+      },
+      "earn": [
+        {
+          "category": "amazon (Prime)",
+          "rate_pct": 5,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "For Card Members having Prime Membership, earn rate of the Reward Points will be 5% of the transaction amount for all the transactions done at www.amazon.in (Excluding Gold Coins and travel bookings for flights & hotels via Amazon Pay)",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf",
+          "condition": "prime_member"
+        },
+        {
+          "category": "amazon (non-Prime)",
+          "rate_pct": 3,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "For Card Members not having Prime Membership, earn rate of the reward points will be 3% of the transaction amount for all transactions done at www.amazon.in (Excluding Gold Coins and travel bookings for flights & hotels via Amazon Pay",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf",
+          "condition": "non_prime"
+        },
+        {
+          "category": "amazon_digital / Amazon Pay partner merchants",
+          "rate_pct": 2,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "The Earn rate will be 2% of the transaction amount for all transactions made in digitally fulfilled categories. Login and pay with Amazon Pay and physical gift cards",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf",
+          "note": "Product page: '2 — 100+partner Merchants'; FAQ: 'You need to use the payment method ‘Login and Pay with Amazon’'."
+        },
+        {
+          "category": "other",
+          "rate_pct": 1,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "1% Reward Points will be offered for all purchases other than transactions mentioned above at www.amazon.in",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf"
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "education, international",
+          "quote": "With effect from Oct 11, 2025, education and international transactions will not be eligible for any Reward Points",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf"
+        },
+        {
+          "what": "utilities outside Amazon",
+          "quote": "With effect from Oct 11, 2025, utility transactions outside the Amazon platform will not be eligible for any Reward Points",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf"
+        },
+        {
+          "what": "fuel, gold, silver, precious metals, tax",
+          "quote": "Transactions for the purchase of fuel, gold, silver, any precious metal, any Tax-related payments will not be eligible for Reward Points.",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf"
+        },
+        {
+          "what": "rent",
+          "quote": "With effect from Jun 18, 2024, rent transactions will not earn you any Reward Points",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf"
+        },
+        {
+          "what": "EMI, cash",
+          "quote": "EMI transactions, including EMI on call and cash transactions will not be eligible for Reward Points.",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf"
+        },
+        {
+          "what": "gold coins, flights & hotels on Amazon (at 5%/3%)",
+          "quote": "(Excluding Gold Coins and travel bookings for flights & hotels via Amazon Pay)",
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf"
+        }
+      ],
+      "point_value_inr": null,
+      "point_value_quote": "Not stated as a ratio. T&C: 'Reward Points earned will be credited to Amazon Pay balance of the account used to apply for the Amazon Pay ICICI Bank Credit Card' and earn is expressed as '% of the transaction amount', i.e. effectively rupee-denominated Amazon Pay balance.",
+      "eligibility": {
+        "min_income_annual": 360000,
+        "quote": "Indian citizen with minimum age of 21 | Salaried employee with a monthly income of at least ₹ 30,000 | Self-employed individual with a monthly income of at least ₹ 30,000",
+        "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/amazon-pay-credit-card"
+      },
+      "lounge": "None stated.",
+      "milestones": [],
+      "notes": [
+        "Uncapped: product page 'Unlimited reward points upto 5% on Amazon purchases*'.",
+        "Insurance, wallet load, skill gaming, transportation and grocery MCCs are listed in the T&C classification table 'with reference to restricted categories' but the T&C text does not explicitly say they earn nothing; not recorded as exclusions.",
+        "Rewards credited as Amazon Pay balance within 2 working days after the billing cycle.",
+        "Network not stated on page (T&C is generic Visa/Mastercard/Amex wording). UPI/RuPay not stated.",
+        "Seed note of Jan 2026 fees on wallet/gaming/transport not verified here (would be in MITC)."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/amazon-pay-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf",
+          "status": "200 (10 MB PDF)"
+        },
+        {
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/mitc-cc-gk-t.pdf",
+          "status": "200 (not mined)"
+        }
+      ]
+    },
+    {
+      "id": "axis_flipkart",
+      "name": "Flipkart Axis Bank Credit Card",
+      "issuer": "Axis Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 0,
+        "annual": 500,
+        "waiver_spend": 350000,
+        "quote": "Joining fee ₹NIL (Limited period offer) | Annual Fee 2nd year Onwards: ₹500 | Annual fee waived off on annual spends greater than ₹3,50,000. | Rent transactions ( MCC 6513 ) and wallet load transactions ( MCC 6540 ) will not be eligible for spends counted in availing annual fee waiver.",
+        "url": "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card"
+      },
+      "earn": [
+        {
+          "category": "myntra",
+          "rate_pct": 7.5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 4000,
+            "unit": "inr",
+            "period": "statement_quarter"
+          },
+          "quote": "Myntra 7.5% INR 4000 per statement quarter",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5"
+        },
+        {
+          "category": "flipkart",
+          "rate_pct": 5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 4000,
+            "unit": "inr",
+            "period": "statement_quarter"
+          },
+          "quote": "Flipkart* 5% INR 4000 per statement quarter ... * Valid on the website as well as mobile application of Flipkart excluding Flipkart Health",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5"
+        },
+        {
+          "category": "travel (Cleartrip)",
+          "rate_pct": 5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 4000,
+            "unit": "inr",
+            "period": "statement_quarter"
+          },
+          "quote": "Cleartrip 5% INR 4000 per statement quarter",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5"
+        },
+        {
+          "category": "preferred_merchants",
+          "rate_pct": 4,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": null,
+          "quote": "Preferred Merchants** 4% Unlimited",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "note": "Preferred-merchant list PDF is image-only (no extractable text); T&C mentions Swiggy food delivery ('only transactions made towards Food Delivery on Swiggy App shall be eligible for accelerated cashback')."
+        },
+        {
+          "category": "other",
+          "rate_pct": 1,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": null,
+          "quote": "Other eligible merchants 1% Unlimited",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5"
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "utility & telecom, education, rent, wallet, government, insurance, gold & jewellery, fuel, financial institutions, cash advances, repayments",
+          "quote": "For cashback: Transactions made on Utility & Telecom, Education, Rent, Wallet load, Government services, Insurance, Gold & Jewellery, Fuel, Financial Institutions, Cash advances and Repayments.",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/terms-and-conditions-flipkart-axis-bank-credit-card.pdf?sfvrsn=5a68a36d_1"
+        },
+        {
+          "what": "gift cards on Flipkart/Myntra, gold, EMI, fees",
+          "quote": "Cashback shall not be eligible for following spends/transactions on the card - purchase of gift cards on Flipkart & Myntra, purchase of gold (in any form – gold bar, gold coin, jewelry, artifact etc.), EMI transactions, purchases converted to EMI post -facto, cash advances, payment of outstanding balances, payment of card fees and other card charges",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5"
+        },
+        {
+          "what": "tolls, bridge & road fees; gift cards (from 28-08-2026)",
+          "quote": "Gift card purchases will continue to be excluded from rewards category and will not earn rewards/cashback ... Additionally, please note that no rewards/cashback shall be earned on spends made on Bridge Fees, Road Fees, and Tolls.",
+          "url": "https://campaign.axis.bank.in/generic/terms-and-conditions-generic-all.pdf"
+        },
+        {
+          "what": "minimum transaction",
+          "quote": "Cashback is not applicable on transactions less than Rs. 100.",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5"
+        },
+        {
+          "what": "Swiggy Instamart/Genie (accelerated)",
+          "quote": "Transactions made on ‘Instamart’,’ genie’ etc. shall not be eligible for accelerated cashback.",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5"
+        }
+      ],
+      "point_value_inr": 1,
+      "point_value_quote": "Cashback shall mean money awarded in the customer’s credit card account under the cashback scheme. / Cashback will be directly credited in your credit card statement",
+      "eligibility": {
+        "min_income_annual": null,
+        "quote": "Primary cardholder should be between the age of 18 and 70 years | The individual should be a Resident of India",
+        "url": "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card",
+        "note": "No income threshold stated on the official page."
+      },
+      "lounge": "Discontinued: '4 Complimentary domestic airport lounge access will be discontinued.' (effective 20 Jun 2025)",
+      "milestones": [],
+      "notes": [
+        "Caps are per merchant per statement quarter (period 'statement_quarter', not in the enum).",
+        "Welcome: '₹350 worth of activation benefits' (₹250 Flipkart voucher for paid cards only + Swiggy 50% off up to ₹100).",
+        "Network not stated on product page; UPI/RuPay not stated.",
+        "Fuel: 'No cashback is earned on fuel transactions'."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "status": "200"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/terms-and-conditions-flipkart-axis-bank-credit-card.pdf?sfvrsn=5a68a36d_1",
+          "status": "200"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/flipkart-axis-bank-credit-card-preferred-merchants.pdf?sfvrsn=6f1c974f_3",
+          "status": "200 (image-only PDF, no text)"
+        },
+        {
+          "url": "https://campaign.axis.bank.in/generic/terms-and-conditions-generic-all.pdf",
+          "status": "200"
+        }
+      ]
+    },
+    {
+      "id": "axis_atlas",
+      "name": "Axis Bank Atlas Credit Card",
+      "issuer": "Axis Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 5000,
+        "annual": 5000,
+        "waiver_spend": null,
+        "quote": "Standard joining fee ₹5,000 | Standard annual fee (2nd year onwards) ₹5,000",
+        "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-atlas-credit-card",
+        "note": "No spend-based fee waiver stated on the official page."
+      },
+      "earn": [
+        {
+          "category": "travel (Travel EDGE portal, direct airline, direct hotel)",
+          "rate_pct": 5,
+          "unit": "points",
+          "points_per": {
+            "points": 5,
+            "per_inr": 100
+          },
+          "cap": {
+            "amount": 200000,
+            "unit": "inr_spend",
+            "period": "calendar_month"
+          },
+          "quote": "Earn 5 EDGE Miles for every Rs. 100 spent on Travel EDGE, airline and hotel merchants up to cumulative transactions of Rs. 2,00,000 per month",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "cap_note": "Cap is on spend (₹2L/month at 5x; above that 2 miles/₹100). 'per month' not defined as calendar vs statement.",
+          "note": "OTAs/travel agents earn base only: 'bookings made through any travel agents ... online travel agencies ... shall be eligible for only 2 Miles for every INR 100 spent'. rate_pct assumes 1 EDGE Mile = ₹1."
+        },
+        {
+          "category": "other",
+          "rate_pct": 2,
+          "unit": "points",
+          "points_per": {
+            "points": 2,
+            "per_inr": 100
+          },
+          "cap": null,
+          "quote": "2 EDGE Miles per INR 100 spent",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7"
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "gold/jewellery, rent, wallet, government, insurance, fuel, utilities & telecom, gift cards, tolls",
+          "quote": "spends done on gold/ jewellery, rent, wallet, government institution, insurance, fuel, Utilities, Telecom, Gift cards and fee related to tolls, bridges & road will be excluded from EDGE Miles earn.",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7"
+        }
+      ],
+      "point_value_inr": 1,
+      "point_value_quote": "1 EDGE Mile is equal to INR 1",
+      "point_value_url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+      "eligibility": {
+        "min_income_annual": 1200000,
+        "quote": "Primary cardholder should be between the age of 18-70 years | Income criteria: Salaried : Net annual income of ₹12 lakh and above | Self employed : Net annual income of ₹15 lakh and above",
+        "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-atlas-credit-card"
+      },
+      "lounge": "Domestic visits by tier Silver 8 / Gold 12 / Platinum 18; international Silver 4 / Gold 6 / Platinum 12 (incl. guests). T&C: 'The international lounge program on your Axis Bank Atlas Credit Card is under maintenance.'",
+      "milestones": [
+        {
+          "quote": "Spends Milestone (in INR) No. of EDGE Miles 3,00,000 2500 7,50,000 Additional 2500 15,00,000 Additional 5000",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7"
+        },
+        {
+          "quote": "Cardholder will be upgraded to Gold tier, upon achieving card spends of 7.5 lacs in an anniversary year ... Platinum tier, upon achieving card spends of 15 lacs",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7"
+        }
+      ],
+      "notes": [
+        "Transfer: '1 EDGE Mile = 2 Partner Points*' (Marriott 2:1); annual transfer cap 1,50,000 miles (Group A 30,000 / Group B 1,20,000). The features PDF still lists Accor, Marriott and Qatar in Group A, which conflicts with the seed note that they were removed 2 Apr 2026 — the PDF may be stale.",
+        "Annual benefit on fee payment: Gold 2,500 / Platinum 5,000 EDGE Miles. Welcome 2,500 miles on first txn within 37 days (paid cards).",
+        "Redemption fees: ₹99 per EDGE portal redemption; ₹199 per partner transfer.",
+        "Network: features T&C says airline/hotel identification uses 'MCC allotted by Visa', implying Visa, but not stated explicitly; left null. UPI/RuPay not stated.",
+        "Seed claim that new sourcing stopped is not confirmed: product page still has 'apply now'."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-atlas-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-atlas-credit-card/rewards-benefits",
+          "status": "200"
+        },
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-atlas-credit-card/tiered-benefits",
+          "status": "200"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "status": "200"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-atlas-credit-card.pdf?sfvrsn=59a8dacd_2",
+          "status": "200"
+        }
+      ]
+    }
+  ]
+}

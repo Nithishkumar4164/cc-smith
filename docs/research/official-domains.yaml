@@ -1,0 +1,284 @@
+# cc-smith — official-source allow-list (DRAFT, 2026-10-06)
+#
+# Purpose: the A6 change pipeline and the H1 provenance check accept a card fact
+# only when its source URL matches an entry here (DR-4, DR-12). Everything else
+# (aggregators, forums, news, AI Mode) is stored as speculation: shown to users
+# with its refs, never used in the rewards maths. There is no human review step.
+# This file is configurable; every edit is versioned and triggers an owner alert.
+#
+# Conventions
+#   canonical      : the domain the issuer serves from today (RBI .bank.in migration, deadline 31 Oct 2025)
+#   legacy         : old domains; they 301 to canonical. Accept them, but normalise the stored URL to canonical.
+#   asset_hosts    : extra hosts the issuer itself uses for PDFs/CDN
+#   paths          : glob patterns (relative to canonical) by document type
+#   verified       : true = HTTP-checked 2026-10-06 (200 or 301 to canonical). false = from search or inference only.
+#   notes          : scraping quirks
+#
+# Matching rule (suggested): scheme https; host must equal canonical, legacy,
+# or asset_hosts (exact or "www." variant). Path globs are hints for
+# classification (product / mitc / kfs / tnc / notice / press), not hard
+# requirements. A URL on an allowed host but outside these globs is accepted as
+# "issuer-other" and noted in the owner alert.
+
+version: 1
+as_of: 2026-10-06
+
+issuers:
+
+  hdfc_bank:
+    name: HDFC Bank
+    canonical: www.hdfc.bank.in
+    legacy: [www.hdfcbank.com, hdfcbank.com]
+    asset_hosts: []
+    verified: true                      # hdfcbank.com -> 301 -> hdfc.bank.in
+    paths:
+      product: ["/credit-cards/*"]      # e.g. /credit-cards/infinia-credit-card , /fees-and-charges , /eligibility
+      docs:    ["/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/**/*.pdf"]
+      mitc:    ["/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf"]
+      kfs:     ["/content/dam/hdfcbankpws/**/part-i-key-fact-statement-cum-most-important-terms-and-conditions-for-credit-cards.pdf"]
+      notice:  ["/content/dam/hdfcbankpws/in/en/pdf/common/Credit-Cards/*.pdf"]   # e.g. Regalia-Gold-Product-feature-change.pdf
+      press:   ["/press-release", "/press-release/*/*/*"]                         # /press-release/<yyyy>/<qN>/<slug>
+    sitemap: https://www.hdfc.bank.in/sitemap.xml   # verified; lists every card page
+    notes: >
+      Product pages are server-rendered (fees are in the HTML). Card T&C PDF
+      filenames carry dates (e.g. millennia-tnc-20th-jul26.pdf,
+      tncs-swiggy-blck-hdfc-bank-credit-card-22092026.pdf); new filenames are
+      the best change signal. The old /personal/about-us/news-room/press-release path is 404.
+
+  sbi_card:
+    name: SBI Cards and Payment Services (SBI Card)
+    canonical: www.sbicard.com          # NBFC, not a bank, so no .bank.in
+    legacy: [sbicard.com]
+    asset_hosts: [pics.sbicard.com]     # seen on product pages; role unconfirmed  (verified: false)
+    verified: true
+    paths:
+      product: ["/en/personal/credit-cards/*.html"]
+      docs:    ["/sbi-card-en/assets/docs/pdf/**/*.pdf"]
+      mitc:    ["/en/most-important-terms-and-conditions.page",
+                "/sbi-card-en/assets/docs/pdf/most-important-terms-and-conditions/*.pdf"]
+      kfs:     ["/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf"]   # one KFS with a fee table for all cards
+      notice:  ["/en/customer-notices.page", "/sbi-card-en/assets/docs/pdf/who-we-are/notices/*.pdf"]
+      press:   ["/en/who-we-are/media.page", "/sbi-card-en/assets/docs/pdf/who-we-are/news/**/*.pdf"]  # media.page timed out on check (verified: false)
+    sitemap: https://www.sbicard.com/sitemap.xml
+    notes: >
+      Product pages are JS-rendered: fees and features are NOT in the HTML, so a
+      headless browser is needed. The data JSON referenced by the page
+      (/templatedata/product/card/data/en/personal/<card>.json) returns 404 when
+      fetched directly. The fee source of record is the KFS PDF. Note
+      /sbi-card-en/assets/docs/pdf/who-we-are/news/ holds press CLIPPINGS
+      (third-party articles re-hosted). Classify those as news, not issuer statements.
+
+  icici_bank:
+    name: ICICI Bank
+    canonical: www.icici.bank.in
+    legacy: [www.icicibank.com, icicibank.com]
+    asset_hosts: []
+    verified: true
+    paths:
+      product: ["/personal-banking/cards/credit-card/*"]
+      docs:    ["/content/dam/icicibank/india/managed-assets/**/*.pdf"]
+      mitc:    ["/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/mitc*.pdf"]  # mitc_cc.pdf, mitc-cc-gk-t.pdf (Amazon Pay)
+      press:   ["/about-us/news-room", "/about-us/news-room/*/*"]
+      notice:  []                       # TODO: card-change notice location not found (verified: false)
+    sitemap: null                       # /sitemap.xml returns an HTML 404 page
+    notes: >
+      Some old slugs redirect to the generic listing (sapphiro-credit-card -> /card/credit-cards/credit-card.html).
+      Treat a redirect to a listing as "page gone", not as a valid source.
+
+  axis_bank:
+    name: Axis Bank
+    canonical: www.axis.bank.in
+    legacy: [www.axisbank.com, axisbank.com]
+    asset_hosts: [campaign.axis.bank.in]          # generic T&C PDFs (verified: seen linked from product pages)
+    legacy_asset_hosts: [campaign.axisbank.com]   # (verified: false)
+    verified: true
+    paths:
+      product: ["/cards/credit-card/*", "/cards/credit-card/*/*"]
+      docs:    ["/docs/default-source/**/*.pdf"]
+      mitc:    ["/docs/default-source/default-document-library/mitc-credit-cards.pdf",
+                "/docs/default-source/magnus-card/mitc-credit-cards.pdf"]
+      kfs:     ["/docs/default-source/default-document-library/credit-card/sosc-credit-cards.pdf"]  # schedule of charges
+      press:   ["/about-us/press-releases", "/about-us/press-releases/*"]
+      notice:  []      # Axis announces changes as "T&C updated w.e.f." banners on product pages plus updated PDFs. Diff the page.
+    sitemap: https://www.axis.bank.in/sitemap-english.xml
+    notes: Product pages are server-rendered and include fee tables.
+
+  kotak_mahindra_bank:
+    name: Kotak Mahindra Bank
+    canonical: www.kotak.bank.in
+    legacy: [www.kotak.com, kotak.com]            # kotak.com still serves pages (301 to /en.html, not to .bank.in)
+    asset_hosts: [images.kotak.com]               # offer T&C PDFs (verified: false, seen linked)
+    verified: true
+    paths:
+      product: ["/en/personal-banking/cards/credit-cards/*.html", "/en/personal-banking/cards/credit-cards/*/*.html"]
+      docs:    ["/content/dam/Kotak/**/*.pdf"]
+      mitc:    ["/en/personal-banking/cards/credit-cards/mitc-and-ca.html"]
+      kfs:     ["/content/dam/Kotak/files/key-fact-statement/*.pdf", "/content/dam/Kotak/Customer-Service/others/kfs*.pdf",
+                "/en/personal-banking/cards/credit-cards/kfs.html"]
+      notice:  ["/en/customer-service/public-notices.html",
+                "/en/customer-service/important-customer-information/*.html"]   # (verified: false)
+      press:   ["/en/about-us/media.html"]                                      # (verified: false)
+
+  idfc_first_bank:
+    name: IDFC FIRST Bank
+    canonical: www.idfcfirst.bank.in
+    legacy: [www.idfcfirstbank.com, idfcfirstbank.com]
+    asset_hosts: []
+    verified: true
+    paths:
+      product: ["/credit-card/*", "/credit-card/*/*"]
+      docs:    ["/content/dam/idfcfirstbank/pdf/**/*.pdf", "/content/dam/IDFCFirstBank/**/*.pdf"]   # case differs; match case-insensitively
+      mitc:    ["/content/dam/idfcfirstbank/pdf/credit-card/MITC-Document-Customer.pdf"]
+      notice:  ["/notice-board", "/content/dam/idfcfirstbank/pdf/credit-card/*Communication*.pdf"]
+      press:   ["/about-us/news-and-media", "/about-us/news-and-media/*"]
+    sitemap: https://www.idfcfirst.bank.in/sitemap.xml
+    notes: >
+      Product pages embed promos for OTHER cards (₹199/₹499 snippets on lifetime-free card pages).
+      Extract fees only from the card's own "Fees and charges" block.
+
+  au_small_finance_bank:
+    name: AU Small Finance Bank
+    canonical: www.au.bank.in
+    legacy: [www.aubank.in, aubank.in]
+    asset_hosts: []
+    verified: partial       # aubank.in -> 301 -> au.bank.in verified. HTML pages return 403 (Cloudflare) to curl/WebFetch. PDFs return 200.
+    paths:
+      product: ["/personal-banking/credit-cards/*"]
+      docs:    ["/content/dam/aubank/**/*.pdf", "/pdf/**/*.pdf", "/campaign/*.pdf", "/*/pdf/**/*.pdf"]   # language-prefixed copies exist (/hi/, /gu/, /or/)
+      mitc:    ["/content/dam/aubank/in/en/pdf/credit-card/MITC(with-Schedule-of-Charges).pdf"]
+      kfs:     ["/content/dam/aubank/in/en/pdf/credit-card/Schedule-of-Charges-CC.pdf"]
+      notice:  ["/notice-board/**", "/*/*/notice-board/**"]   # (verified: false; seen in search results)
+      press:   []                                              # TODO (verified: false)
+    notes: >
+      Needs a real browser for HTML. /blogs/* is issuer marketing: allowed but low-trust
+      (classify as "issuer-marketing", never as rules). Prefer English (/content/dam/aubank/in/en/) copies.
+
+  hsbc_india:
+    name: HSBC India
+    canonical: www.hsbc.bank.in
+    legacy: [www.hsbc.co.in, hsbc.co.in]
+    asset_hosts: []
+    verified: true
+    paths:
+      product: ["/credit-cards/products/*/"]
+      docs:    ["/content/dam/hsbc/in/documents/**/*.pdf"]
+      kfs:     ["/content/dam/hsbc/in/documents/credit-card-key-fact-statement.pdf"]
+      mitc:    ["/content/dam/hsbc/in/documents/*mostimp*.pdf"]    # platinum_mostimp_tnc.pdf (scope to confirm)
+      notice:  ["/important-notices/", "/important-notices/*"]     # (verified: false; link seen on page)
+      press:   []                                                  # TODO; HSBC India press may sit on about.hsbc.co.in (verified: false)
+
+  yes_bank:
+    name: YES BANK
+    canonical: www.yes.bank.in
+    legacy: [www.yesbank.in, yesbank.in]
+    asset_hosts: []
+    verified: true
+    paths:
+      product: ["/personal-banking/yes-individual/cards/credit-cards/*"]
+      docs:    ["/sites/web/content/published/api/v1.1/assets/*/native/*.pdf"]   # Oracle CMS asset URLs; filename says little, so read the PDF title
+      mitc:    ["/sites/web/content/published/api/v1.1/assets/*/native/*mitc*.pdf"]
+    notes: >
+      Pages are JS-rendered. Change notices are published as PDFs under the same
+      /assets/ pattern (e.g. communication_group_1_final_sms.pdf) and are found via search, not navigation.
+
+  federal_bank:
+    name: Federal Bank
+    canonical: www.federal.bank.in
+    legacy: [www.federalbank.co.in, federalbank.co.in]
+    asset_hosts: []
+    verified: true
+    paths:
+      docs: ["/documents/d/guest/*"]     # Liferay document URLs, e.g. mitc_v11-30_04_26 , kfs_v11-30_04_26 (served as text/html wrapper)
+    notes: Issuer of Scapia Federal. The version and date are in the slug (v11, 30-04-26).
+
+  bobcard:
+    name: BOBCARD Ltd (Bank of Baroda card subsidiary)
+    canonical: www.bobcard.co.in          # (verified: false; inferred)
+    legacy: []
+    asset_hosts: [media.bobcard.co.in]     # Scapia BOBCARD MITC/KFS/T&C hosted here (verified: false, not HTTP-checked)
+    verified: false
+    notes: Subsidiary, not a bank, so .bank.in may not apply. Confirm the canonical domain.
+
+  indusind_bank:          # bench issuer
+    name: IndusInd Bank
+    canonical: www.indusind.bank.in
+    legacy: [www.indusind.com, indusind.com]
+    verified: true        # 301 verified
+    paths: {}
+
+  rbl_bank:               # bench issuer
+    name: RBL Bank
+    canonical: www.rbl.bank.in
+    legacy: [www.rblbank.com, rblbank.com]
+    verified: true        # 301 verified (redirect target carries :443)
+    paths: {}
+
+# Fintech / merchant partners. Allowed as SECONDARY sources only: they can
+# describe a programme but cannot override an issuer MITC/KFS value. Always store
+# the issuer link alongside them.
+# Partner sources are official ONLY for the fields they control (owner decision,
+# 2026-10-07; architecture-plan.md DR-4 §6). Issuer-owned fields (fees, charges,
+# waivers, eligibility, network, base earn, caps, exclusions, milestones) are
+# official only from the issuing bank. A partner value for an issuer-owned field
+# is stored as speculation; on a bank/partner conflict the field owner wins and
+# the owner alert flags it.
+partner_field_scope_default:
+  authoritative_for: [partner_reward_currency, partner_redemption, partner_platform_offers, partner_app_features]
+  never_for: [fees, charges, waivers, eligibility, network, base_earn_rate, caps, exclusions, milestones]
+
+partner_sources:
+  scapia:
+    hosts: [www.scapia.cards, res.cloudinary.com]   # restrict cloudinary to path prefix below
+    path_prefix: {res.cloudinary.com: "/scapiacards/"}
+    verified: true                                  # www.scapia.cards 200 with a browser UA (403 without)
+    issuers: [federal_bank, bobcard, axis_bank]
+    operator: fintech                               # runs the product: also authoritative for the reward programme
+    authoritative_for_extra: [reward_programme, reward_earn_rates, reward_redemption]
+  kiwi:
+    hosts: [gokiwi.in]
+    verified: true
+    issuers: [yes_bank]                             # AU SFB also reported (verified: false)
+    operator: fintech
+    authoritative_for_extra: [reward_programme, reward_earn_rates, reward_redemption]
+    exclude_paths: ["/blog/*"]                     # SEO marketing, never official
+    notes: gokiwi.in/blog is SEO marketing. Exclude /blog/* from fact sources.
+  tata_digital:
+    hosts: [www.tatadigital.in, www.tataneu.com]    # (verified: false)
+    issuers: [hdfc_bank, sbi_card]
+  swiggy:
+    hosts: [www.swiggy.com]                         # /swiggy-hdfc-bank-credit-card (seen in search; verified: false)
+    issuers: [hdfc_bank]
+  amazon:
+    hosts: [www.amazon.in, www.aboutamazon.in]      # aboutamazon.in = Amazon press (verified: false)
+    issuers: [icici_bank]
+  flipkart:
+    hosts: [www.flipkart.com, stories.flipkart.com] # (verified: false)
+    issuers: [axis_bank, sbi_card]
+  airtel:
+    hosts: [www.airtel.in]                          # (verified: false)
+    issuers: [axis_bank]
+
+# Regulators / networks: authoritative for rules that apply to all cards
+# (RuPay-on-UPI, MDR, card statistics), never for card-level features.
+regulators:
+  rbi:
+    hosts: [www.rbi.org.in, rbi.org.in, website.rbi.org.in]   # website.rbi.org.in (verified: false)
+    useful:
+      - https://www.rbi.org.in/Scripts/ATMView.aspx              # bank-wise ATM/POS/card statistics (monthly), verified 200
+      - https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx
+  npci:
+    hosts: [www.npci.org.in]          # RuPay credit card on UPI circulars (verified: false)
+
+# Explicitly NOT allowed as fact sources (stored as speculation only):
+denylist_examples:
+  - technofino.in
+  - reddit.com
+  - cardinsider.com
+  - cardadvisor.in
+  - cardtrail.in
+  - paisabazaar.com
+  - bankbazaar.com
+  - livefromalounge.com
+  - cardexpert.in
+  - pickmycard.in
+  - desidime.com
