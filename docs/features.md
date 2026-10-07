@@ -78,7 +78,7 @@ Priority: **P0** = must exist for the product to be worth opening; **P1** = firs
 | D4 | **Online checkout assist.** Browser extension recognises the domain; applies co-brand exclusions to sale offers; nets out "offer processing" and convenience fees so the discount shown is the real one. | P2 | 5 |
 | D5 | **Forex and DCC guidance.** Which card for international and INR-billed foreign merchants; always-pay-in-local-currency reminder; expected markup shown before paying. | P1 | 3 |
 | D6 | **Surcharge awareness.** Fuel, rent, tax, government and wallet surcharges shown up front, including when the charged amount will exceed the OTP amount. | P1 | 3 |
-| D7 | **Effective price across stores** — product price minus each card's reward at each store. | P2 | 5 |
+| D7 | ~~Effective price across stores~~ — **dropped** (owner decision, 2026-10-07). | — | — |
 | D8 | **UPI hand-off.** From the scan, open the UPI app with payee prefilled (Android). | P1 | 3 |
 
 ## E. Track (ledger)
