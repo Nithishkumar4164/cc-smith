@@ -290,7 +290,7 @@ For local development behind the corporate proxy, set `NO_PROXY=localhost,127.0.
   - no `READ_SMS`
   - a NotificationListener with prominent disclosure (M2)
   - the Data Safety form and the Financial features declaration
-  - Gmail capture deferred, because it needs a restricted-scope assessment
+  - Gmail capture (`gmail.readonly`, a restricted scope) ships in M2; Google OAuth verification and the CASA security assessment start in M1 because they take about 6 weeks (owner decision, 2026-10-08)
 - **RBI.** cc-smith moves no money and only hands off to UPI apps. **No affiliate money will be taken** (owner decision, 2026-10-06), so the issuer-agent/DSA question for affiliate links no longer applies.
 - **B7, ranking independence.** No affiliate payouts exist, so there is no commercial input to rankings at all. A breakdown is shown on every rank.
 - **SerpApi.** Queries never contain user data.
@@ -459,8 +459,10 @@ Submit by **Oct 10, 18:00 IST**. The hard deadline is 23:59, and drafts are neve
   - statement upload (E1 P1), redacted before parsing
   - Places API for D2
   - Play Data Safety draft
+  - start Gmail OAuth verification and the CASA assessment (`gmail.readonly`): privacy policy, verified domain, demo video and assessor booked; until verified, testing is capped at 100 users
 - **M2 (Nov 11 – Dec 10):**
   - notification capture with on-device parsing for the top 5 issuers
+  - Gmail capture of bank transaction alerts, once OAuth verification and CASA have passed
   - pay pack (if DR-6's test fails), trackers (E2), Replan (F4)
   - public changelog, user corrections (A8)
   - **closed beta** with TechnoFino and Reddit users, running the DR-2 consent A/B
