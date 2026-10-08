@@ -1,0 +1,319 @@
+{
+  "id": "hdfc_tata_neu_infinity",
+  "name": "Tata Neu Infinity HDFC Bank Credit Card",
+  "issuer": "HDFC Bank",
+  "identity": {
+    "src": [
+      {
+        "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+        "quote": "A. Domestic Lounge Access – VISA / RuPay Card"
+      }
+    ],
+    "network": "Visa, RuPay",
+    "upi_rupay": true
+  },
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card/fees-and-charges",
+        "quote": "Joining Fee: ₹1,499 plus Applicable Taxes | Renewal Fee: ₹1,499 plus Applicable Taxes | Fee Waiver: Spend ₹3 lakh or more in a year before the renewal date to get the renewal fee waived."
+      }
+    ],
+    "joining_paise": 149900,
+    "annual_paise": 149900,
+    "waiver_spend_paise": 30000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/tata-neu-infinity-credit-card/pdf/tata_neu_infinity_card_tnc.pdf",
+        "quote": "Unless otherwise notified by Tata Neu, each NeuCoin may be utilized to avail a Benefit equivalent to ₹1"
+      }
+    ],
+    "kind": "points",
+    "name": "NeuCoins",
+    "value_paise": 100
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "5% back as NeuCoins on Non-EMI Spends on Tata Neu and partner Tata Brands."
+        }
+      ],
+      "id": "tata_neu",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "tata_neu"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 500
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "Earn additional 5% back as NeuCoins on selected categories on Tata Neu App/Website, post downloading Tata Neu App and registering for NeuPass."
+        }
+      ],
+      "id": "neupass_bonus",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "tata_neu"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 500
+      },
+      "cap_ids": [],
+      "stacks": true,
+      "priority": 0,
+      "requires": [
+        "neupass"
+      ]
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "1.5% back as NeuCoins on Non-Tata Brand Spends and any Merchant EMI Spends"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "NeuCoins earned on Grocery transactions will be capped to 2,000 per month for Tata Neu Infinity HDFC Bank Credit card."
+        }
+      ],
+      "id": "grocery",
+      "match": {
+        "categories": [
+          "grocery"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 150
+      },
+      "cap_ids": [
+        "grocery"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "1.5% back as NeuCoins on Non-Tata Brand Spends and any Merchant EMI Spends"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "NeuCoins earned on Utility transactions will be capped at 2,000 NeuCoins per calendar month."
+        }
+      ],
+      "id": "utilities",
+      "match": {
+        "categories": [
+          "utilities"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 150
+      },
+      "cap_ids": [
+        "utilities"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "1.5% back as NeuCoins on Non-Tata Brand Spends and any Merchant EMI Spends"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "NeuCoins accrued for insurance transactions will have a maximum capping 2,000 per month instead of 2,000 per day."
+        }
+      ],
+      "id": "insurance",
+      "match": {
+        "categories": [
+          "insurance"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 150
+      },
+      "cap_ids": [
+        "insurance"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "Earn 0.50% back as NeuCoins on eligible UPI spends (including spends on partner Tata Brands), this will be posted to your card account by the Bank"
+        }
+      ],
+      "id": "upi",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": [
+          "upi"
+        ]
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 50
+      },
+      "cap_ids": [
+        "upi"
+      ],
+      "stacks": false,
+      "priority": 1,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "1.5% back as NeuCoins on Non-Tata Brand Spends and any Merchant EMI Spends"
+        }
+      ],
+      "id": "other",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 150
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "NeuCoins earned on Grocery transactions will be capped to 2,000 per month for Tata Neu Infinity HDFC Bank Credit card."
+        }
+      ],
+      "id": "grocery",
+      "amount": 200000,
+      "unit": "paise",
+      "period": "calendar_month",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "NeuCoins earned on Utility transactions will be capped at 2,000 NeuCoins per calendar month."
+        }
+      ],
+      "id": "utilities",
+      "amount": 200000,
+      "unit": "paise",
+      "period": "calendar_month",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "NeuCoins accrued for insurance transactions will have a maximum capping 2,000 per month instead of 2,000 per day."
+        }
+      ],
+      "id": "insurance",
+      "amount": 200000,
+      "unit": "paise",
+      "period": "calendar_month",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "Total NeuCoins earned on all UPI payments will be capped to 500 NeuCoins per calendar month"
+        }
+      ],
+      "id": "upi",
+      "amount": 50000,
+      "unit": "paise",
+      "period": "calendar_month",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "NeuCoins will not be accrued for Fuel, Wallet, Rental, Government and Online Gaming related transactions."
+        }
+      ],
+      "categories": [
+        "fuel",
+        "wallet",
+        "rent",
+        "government",
+        "gaming"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "quote": "Education payments made through third-party apps like (but not limited to) CRED, Cheq, MobiKwik, and others will NOT earn NeuCoins."
+        }
+      ],
+      "categories": [
+        "education"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "milestones": [],
+  "min_txn_src": []
+}

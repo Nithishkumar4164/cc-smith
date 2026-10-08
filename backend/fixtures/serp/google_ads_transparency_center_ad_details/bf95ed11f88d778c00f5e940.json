@@ -1,0 +1,33 @@
+{
+  "_fixture": "reconstructed from research_notes/cc-smith orchestrator/live-runs-2026-10-07.md R19: titles, sources, dates and counts follow the notes; full payload was not saved, ids/links abbreviated in the notes are padded",
+  "search_metadata": {
+    "id": "r19-ad-details-sbi",
+    "status": "Success"
+  },
+  "search_parameters": {
+    "engine": "google_ads_transparency_center_ad_details",
+    "advertiser_id": "AR11279600000000000000",
+    "creative_id": "CR16957600000000000000",
+    "region": "2356"
+  },
+  "search_information": {
+    "format": "text",
+    "region_name": "India",
+    "last_shown": 1791342000,
+    "variations": 2
+  },
+  "ad_creatives": [
+    {
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/1695760000",
+      "width": 380,
+      "height": 202
+    },
+    {
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/1695760001",
+      "width": 380,
+      "height": 202
+    }
+  ]
+}

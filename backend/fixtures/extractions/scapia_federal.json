@@ -1,0 +1,20 @@
+{
+  "id": "scapia_federal",
+  "name": "Scapia Federal Bank Credit Card",
+  "issuer": "Federal Bank (fintech partner: Scapia)",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.federal.bank.in/documents/d/guest/kfs_v11-30_04_26",
+        "quote": "Card Name Scapia Federal Credit Card | Issued by Federal Bank | Joining Fees Nil | Annual Membership Fees Nil"
+      }
+    ],
+    "joining_paise": 0,
+    "annual_paise": 0
+  },
+  "earn_rules": [],
+  "caps": [],
+  "exclusions": [],
+  "milestones": [],
+  "min_txn_src": []
+}

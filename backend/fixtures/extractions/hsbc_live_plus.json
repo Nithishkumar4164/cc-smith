@@ -1,0 +1,183 @@
+{
+  "id": "hsbc_live_plus",
+  "name": "HSBC Live+ Credit Card",
+  "issuer": "HSBC India",
+  "identity": {
+    "src": [
+      {
+        "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+        "quote": "Unlock exclusive hotel offers, travel assistance and bespoke lifestyle experiences with Visa Infinite"
+      }
+    ],
+    "network": "Visa",
+    "upi_rupay": false
+  },
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+        "quote": "Joining fee | INR999 | Annual fee (waived if you spend more than INR200,000 per year) | INR999"
+      }
+    ],
+    "joining_paise": 99900,
+    "annual_paise": 99900,
+    "waiver_spend_paise": 20000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+        "quote": "1.5% unlimited cashback on most other spends"
+      }
+    ],
+    "kind": "cashback",
+    "name": "Cashback",
+    "value_paise": 100
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+          "quote": "10% accelerated cashback, up to INR1,200 a month, on all dining, food delivery, grocery, shopping[@live-plus-cashback-category-clarification] and utility spends"
+        }
+      ],
+      "id": "accelerated",
+      "match": {
+        "categories": [
+          "dining",
+          "grocery",
+          "online",
+          "utilities"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 1000
+      },
+      "cap_ids": [
+        "accelerated"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hsbc.bank.in/content/hsbc/in/en_in.dpws-footnotes.json",
+          "quote": "From 26 July 2026, shopping spends on Amazon and Flipkart will continue to earn 1.5% cashback."
+        }
+      ],
+      "id": "amazon_flipkart",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "amazon",
+          "flipkart"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 150
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hsbc.bank.in/content/hsbc/in/en_in.dpws-footnotes.json",
+          "quote": "Limited time launch offer: Myntra purchases will earn 10% cashback until 31 October 2026. After the offer period, Myntra purchases will earn 1.5% cashback."
+        }
+      ],
+      "id": "myntra_offer",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "myntra"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 1000
+      },
+      "cap_ids": [
+        "accelerated"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Launch offer until 31 Oct 2026; assumed to share the ₹1,200 cap."
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+          "quote": "1.5% unlimited cashback on most other spends"
+        }
+      ],
+      "id": "other",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 150
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+          "quote": "10% accelerated cashback, up to INR1,200 a month, on all dining, food delivery, grocery, shopping[@live-plus-cashback-category-clarification] and utility spends"
+        }
+      ],
+      "id": "accelerated",
+      "amount": 120000,
+      "unit": "paise",
+      "period": "calendar_month",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.hsbc.bank.in/content/hsbc/in/en_in.dpws-footnotes.json",
+          "quote": "No cashback on following categories: Fuel related (MCCs 5541, 5983, 5172, 5542, 5552); e-wallets (MCC 6540); payment of property management fees, rental commissions, rental payments or any such payments made through MCCs 6513, 7012, 7349; ... education and government related transactions carried out through MCCs 9399, 8299, 8220, 8211, 8241, 9311, 8244, 8249, 9222, 9402, 9211, 9405, 9950, 9223, 8351; insurance (MCCs 6300, 5960); jewelry and antique items (MCCs 5944, 5094, 5932, 5937); gambling (MCC 7995); tolls and bridge fees (MCC 4784); ... money transfers (MCC 4829); wholesale clubs (MCC 5300); hospitals (MCC 8062) and local transportation - bus/subway transit (MCC 4111)."
+        }
+      ],
+      "categories": [
+        "fuel",
+        "wallet",
+        "rent",
+        "education",
+        "government",
+        "insurance",
+        "jewellery",
+        "gaming"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "milestones": [],
+  "min_txn_src": []
+}

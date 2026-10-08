@@ -1,0 +1,124 @@
+{
+  "id": "idfc_first_millennia",
+  "name": "IDFC FIRST Millennia Credit Card",
+  "issuer": "IDFC FIRST Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+        "quote": "Fees and charges | Joining and Annual Fees | NIL"
+      }
+    ],
+    "joining_paise": 0,
+    "annual_paise": 0
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+        "quote": "1X = 1 Reward Point per ₹200 spent | 1 Reward point = ₹0.25"
+      }
+    ],
+    "kind": "points",
+    "name": "IDFC FIRST Reward Points",
+    "value_paise": 25
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+          "quote": "10X Reward Points | on Dining, Travel and International purchases and spends done on your birthday. ... 1X = 1 Reward Point per ₹200 spent | 1 Reward point = ₹0.25"
+        }
+      ],
+      "id": "x10",
+      "match": {
+        "categories": [
+          "dining",
+          "travel"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 10,
+        "per_paise": 20000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+          "quote": "1X Reward Points | on Utility bill payments, Insurance premium payments, Railway spends and FASTag recharges"
+        }
+      ],
+      "id": "x1",
+      "match": {
+        "categories": [
+          "utilities",
+          "insurance",
+          "tolls"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 1,
+        "per_paise": 20000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+          "quote": "*All spend categories earn 3X Reward Points; except insurance, utilities, railways, FASTag recharges, dining, travel, international purchases, fuel, EMI transactions & cash withdrawals."
+        }
+      ],
+      "id": "x3",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 3,
+        "per_paise": 20000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
+  "caps": [],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+          "quote": "Reward Points will not be given on spends converted to EMI, Cash Withdrawal, Fuel, Fee and Charges."
+        }
+      ],
+      "categories": [
+        "fuel"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "milestones": [],
+  "min_txn_src": []
+}

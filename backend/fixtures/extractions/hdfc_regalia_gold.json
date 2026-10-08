@@ -1,0 +1,297 @@
+{
+  "id": "hdfc_regalia_gold",
+  "name": "HDFC Bank Regalia Gold Credit Card",
+  "issuer": "HDFC Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card/fees-and-charges",
+        "quote": "Joining Fee: ₹2500 plus Applicable Taxes | Renewal Fee: ₹2500 plus Applicable Taxes | Fee Waiver : Retail spends of ₹4 lakh within 12 billing cycles of your anniversary year to enjoy a waiver on the renewal fee for the following year."
+      }
+    ],
+    "joining_paise": 250000,
+    "annual_paise": 250000,
+    "waiver_spend_paise": 40000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card",
+        "quote": "Reward Points Redemption against each category can be redeemed at 1 Reward point Equivalent to | Exclusive Gold Catalogue ₹0.65 | Flights and hotel bookings ₹0.5 | Airmiles conversion up to 0.5 airmiles | Products and Voucher up to Rs 0.35 | Statement balance up to Rs 0.20"
+      }
+    ],
+    "kind": "points",
+    "name": "HDFC Reward Points",
+    "value_paise": 50,
+    "floor_paise": 20
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/common/Credit-Cards/Regalia-Gold-Product-feature-change.pdf",
+          "quote": "Earn 5 Reward Points for every ₹200 spent on eligible categories. (Effective 15th May, 2026)"
+        }
+      ],
+      "id": "base",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 5,
+        "per_paise": 20000
+      },
+      "cap_ids": [
+        "cycle"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/common/Credit-Cards/Regalia-Gold-Product-feature-change.pdf",
+          "quote": "Earn 5 Reward Points for every ₹200 spent on eligible categories. (Effective 15th May, 2026)"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "Reward points earned on grocery transaction will be capped at 2000 RP per calendar month"
+        }
+      ],
+      "id": "grocery",
+      "match": {
+        "categories": [
+          "grocery"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 5,
+        "per_paise": 20000
+      },
+      "cap_ids": [
+        "grocery",
+        "cycle"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/common/Credit-Cards/Regalia-Gold-Product-feature-change.pdf",
+          "quote": "Earn 5 Reward Points for every ₹200 spent on eligible categories. (Effective 15th May, 2026)"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "Reward points accrued for Insurance transactions will have a maximum cap of 2,000 per month"
+        }
+      ],
+      "id": "insurance",
+      "match": {
+        "categories": [
+          "insurance"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 5,
+        "per_paise": 20000
+      },
+      "cap_ids": [
+        "insurance",
+        "cycle"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "5X Reward Points is applicable on spends at select merchants – Myntra, Nykaa, Reliance Digital, Marks & Spencer. ... 5X Reward points will be capped at 5000 RP per month across all brands combined. Base reward points accrued on these will continue as is with no capping."
+        }
+      ],
+      "id": "x5_bonus",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "myntra",
+          "nykaa",
+          "reliance_digital",
+          "marks_and_spencer"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 20,
+        "per_paise": 20000
+      },
+      "cap_ids": [
+        "x5"
+      ],
+      "stacks": true,
+      "priority": 0,
+      "requires": [],
+      "note": "5X = 25 RP per ₹200; the bonus over the 5 RP base is 20 RP and only the bonus is capped."
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "The maximum reward points that can be earned in a statement cycle for Regalia Gold is 50,000."
+        }
+      ],
+      "id": "cycle",
+      "amount": 50000,
+      "unit": "points",
+      "period": "statement_cycle",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "Reward points earned on grocery transaction will be capped at 2000 RP per calendar month"
+        }
+      ],
+      "id": "grocery",
+      "amount": 2000,
+      "unit": "points",
+      "period": "calendar_month",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "Reward points accrued for Insurance transactions will have a maximum cap of 2,000 per month"
+        }
+      ],
+      "id": "insurance",
+      "amount": 2000,
+      "unit": "points",
+      "period": "calendar_month",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "5X Reward Points is applicable on spends at select merchants – Myntra, Nykaa, Reliance Digital, Marks & Spencer. ... 5X Reward points will be capped at 5000 RP per month across all brands combined. Base reward points accrued on these will continue as is with no capping."
+        }
+      ],
+      "id": "x5",
+      "amount": 5000,
+      "unit": "points",
+      "period": "calendar_month",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "Reward points will not be accrued for fuel transactions"
+        }
+      ],
+      "categories": [
+        "fuel"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "EasyEMI and e-wallet loading transactions will not accrue Reward points."
+        }
+      ],
+      "categories": [
+        "wallet"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/pdfs/regalia-gold-credit-card-reward-points-t-and-cs.pdf",
+          "quote": "Reward points will not be accrued for rental pay transactions, property management services like rent, maintenance, packers &movers, etc and government transactions"
+        }
+      ],
+      "categories": [
+        "rent",
+        "government"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "min_txn_paise": 15000,
+  "milestones": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card",
+          "quote": "Rs. 5,000 worth flight vouchers on spends of Rs. 5 lakh and Rs. 7.5 lakh"
+        }
+      ],
+      "spend_paise": 50000000,
+      "period": "anniversary_year",
+      "value_paise": 500000,
+      "description": "₹5,000 flight voucher at ₹5 lakh"
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card",
+          "quote": "Rs. 5,000 worth flight vouchers on spends of Rs. 5 lakh and Rs. 7.5 lakh"
+        }
+      ],
+      "spend_paise": 75000000,
+      "period": "anniversary_year",
+      "value_paise": 500000,
+      "description": "₹5,000 flight voucher at ₹7.5 lakh"
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card",
+          "quote": "Rs 1500 worth Myntra/Nykaa vouchers on quarterly spends of Rs 1.5 lakhs."
+        }
+      ],
+      "spend_paise": 15000000,
+      "period": "calendar_quarter",
+      "value_paise": 150000,
+      "description": "₹1,500 Myntra/Nykaa voucher at ₹1.5 lakh a quarter"
+    }
+  ],
+  "min_txn_src": [
+    {
+      "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-gold-credit-card/rewards-points-program-terms-and-conditions.pdf",
+      "quote": "Minimum transaction value to be eligible for offer or reward points is Rs. 150"
+    }
+  ]
+}

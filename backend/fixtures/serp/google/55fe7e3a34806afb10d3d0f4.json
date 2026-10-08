@@ -1,0 +1,58 @@
+{
+  "_fixture": "reconstructed from research_notes/cc-smith orchestrator/live-runs-2026-10-07.md R20: titles, sources, dates and counts follow the notes; full payload was not saved, ids/links abbreviated in the notes are padded; site: was ignored and no sbicard.com result came back",
+  "search_metadata": {
+    "id": "r20-google-gpay-flex",
+    "status": "Success"
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "site:sbicard.com \"Google Pay Flex\"",
+    "google_domain": "google.co.in",
+    "gl": "in",
+    "hl": "en"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Google Pay Flex Axis Bank credit card launched",
+      "link": "https://www.equitybulls.com/category.php?id=google-pay-flex-axis-bank",
+      "snippet": "Google Pay and Axis Bank launch Flex, a RuPay credit card ... 23 Dec 2025",
+      "source": "Equitybulls"
+    },
+    {
+      "position": 2,
+      "title": "Google Pay Flex SBI card - worth it? : r/IndiaTech",
+      "link": "https://www.reddit.com/r/IndiaTech/comments/gpay_flex_sbi/",
+      "snippet": "Got the Google Pay Flex SBI card invite ...",
+      "source": "Reddit"
+    },
+    {
+      "position": 3,
+      "title": "Google Pay Flex SBI Card Review (2026)",
+      "link": "https://cardrecommend.com/google-pay-flex-sbi-card-review",
+      "snippet": "Google Pay Flex SBI Card review: rewards, fees ...",
+      "source": "cardrecommend.com"
+    },
+    {
+      "position": 4,
+      "title": "Google Pay Flex is a new credit card in India",
+      "link": "https://techloy.com/google-pay-flex-credit-card-india/",
+      "snippet": "18 Dec 2025 ...",
+      "source": "Techloy"
+    },
+    {
+      "position": 5,
+      "title": "Google Pay on Instagram: Flex by Google Pay",
+      "link": "https://www.instagram.com/p/googlepayflex/",
+      "snippet": "Flex ...",
+      "source": "Instagram"
+    },
+    {
+      "position": 6,
+      "title": "Google Pay Flex SBI - first impressions",
+      "link": "https://www.reddit.com/r/CreditCardsIndia/comments/gpay_flex_sbi_first/",
+      "snippet": "...",
+      "source": "Reddit"
+    }
+  ]
+}

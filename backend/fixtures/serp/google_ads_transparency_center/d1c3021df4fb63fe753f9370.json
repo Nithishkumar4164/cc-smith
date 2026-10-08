@@ -1,0 +1,59 @@
+{
+  "_fixture": "SYNTHETIC demo signal (not a recorded SerpApi response). The linked official URLs are real and were fetched on 2026-10-08 (fixtures/evidence).",
+  "search_metadata": {
+    "id": "synthetic-ads-axis",
+    "status": "Success"
+  },
+  "search_parameters": {
+    "engine": "google_ads_transparency_center",
+    "text": "axis.bank.in",
+    "region": "2356",
+    "start_date": "20260907",
+    "end_date": "20261007"
+  },
+  "search_information": {
+    "total_results": 3,
+    "region": "India"
+  },
+  "ad_creatives": [
+    {
+      "advertiser_id": "AR33000000000000000000",
+      "advertiser": "AXIS BANK LIMITED",
+      "ad_creative_id": "CR33000000000000001002",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/3300000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1790917200,
+      "last_shown": 1791342000,
+      "total_days_shown": 5,
+      "details_link": "https://adstransparency.google.com/advertiser/AR33000000000000000000/creative/CR33000000000000001002?region=2356"
+    },
+    {
+      "advertiser_id": "AR33000000000000000000",
+      "advertiser": "AXIS BANK LIMITED",
+      "ad_creative_id": "CR33000000000000000801",
+      "format": "image",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/3300000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1785560400,
+      "last_shown": 1791255600,
+      "total_days_shown": 66,
+      "details_link": "https://adstransparency.google.com/advertiser/AR33000000000000000000/creative/CR33000000000000000801?region=2356"
+    },
+    {
+      "advertiser_id": "AR90000000000000000033",
+      "advertiser": "CARD COMPARE MEDIA",
+      "ad_creative_id": "CR90000000000000000033",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/9000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1790571600,
+      "last_shown": 1791255600,
+      "total_days_shown": 8,
+      "details_link": "https://adstransparency.google.com/advertiser/AR90000000000000000033/creative/CR90000000000000000033?region=2356"
+    }
+  ]
+}

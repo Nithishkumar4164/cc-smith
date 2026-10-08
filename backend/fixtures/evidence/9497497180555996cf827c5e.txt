@@ -1,0 +1,516 @@
+Cashback and Value back Terms & Conditions – Airtel Axis Bank Credit Card
+(effective from 12-April 2026)
+Definitions: For the Airtel Axis Bank Credit Card, the following terms shall, unless the context
+otherwise admits, shall have the following meanings:
+• Cashback shall mean money awarded in the customer’s credit card account under the cashback
+scheme.
+• Preferred Merchants shall include certain merchants on which the value back earnings shall be
+10%. These merchants can change at the bank’s discretion.
+• Earn 1% base cashback on your regular spends to become eligible for higher cashback on Airtel
+and utility payments via Airtel Thanks App.
+Here’s how cashback works:
+• 1% Base Cashback (No Cap) earned on all other spends (excluding specific categories).
+o There is no cap on base cashback — you can continue to earn 1% cashback on all eligible
+spends. This base cashback also determines your eligibility and capping for spends made
+on Airtel Thanks app under 25% and 10% category
+• 25% Cashback – Airtel bill payments via Airtel Thanks app
+o Applicable on Airtel Mobile, Broadband, WiFi, and DTH via the Airtel Thanks App.
+o Limit: Up to 2 times (2X) the base cashback (1% cashback) earned in the same statement
+cycle.
+• 10% Cashback – Other Utility Payments via Airtel Thanks app
+o Applicable on utility bills such as electricity, gas, etc., via the Airtel Thanks App.
+o Limit: Up to 1 time (1X) the base cashback (1% cashback) earned in the same statement
+cycle
+• The cashbacks will be processed according to the following table (Elaborated):
+Category of spends Benefit *T&C
+Airtel Mobile, Broadband, WiFi and DTH 25% Cashback Capped at twice the base
+bill payments via Airtel Thanks App* cashback earned during the
+statement month
+Utility bill payments such as gas, 10% Cashback Capped at the base cashback
+electricity, etc., via Airtel Thanks App* earned during the statement
+month
+All other merchants/ other spends / base 1% Cashback Cashback not applicable on
+cashback* specific Merchant / transaction
+categories
+Please note: The Cashback earned credit will continue to follow the existing 60-day credit
+cycle. Accordingly, the Cashback to be credited as per the revised capping logic will be
+reflected in the Statements generated on or after 12 June 2026.
+Cashback Terms and Conditions:
+• Spends made on Airtel Thanks platform
+o 25% cashback on Airtel Mobile, Broadband, WiFi and DTH bill payments via Airtel
+Thanks App is capped at twice the base cashback earned during the statement month
+o 10% cashback on Utility bill payments such as gas, electricity, etc., via Airtel Thanks
+App is capped at the base cashback earned during the statement month
+Below is an illustration of the benefits that can be earned in a month
+Transactions in a Statement cycle
+Cashback with
+capping basis
+Txn Spend Cashback
+Benefit transaction under
+Details/Merchant amount without capping
+base / 1% cashback
+category
+1% Category
+Electronics 25,000 INR 250 INR 250
+[Base cashback]
+Airtel Mobile bill 25% Category
+2,500 INR 625 INR 500
+payment [Airtel]
+Airtel Utility 10% Category
+4,000 INR 400 INR 250
+Payment [Airtel]
+Total Cashback INR 1,275 INR 1,000
+In the above illustration, customer is eligible for overall benefit of INR 1,000-
+break up of which is as follows:
+▪ Base Cashback Category: Customer has earned INR 250 cashback (INR 25000 *
+1%). This base cashback earned will work as multiplier for earning cashback for
+Telecom and Utility Bill payments spends made on Airtel Thanks platform.
+▪ Airtel Telecom Category: Customer has earned INR 500 cashback for spending on
+Airtel Telecom bill payment via Airtel Thanks platform. This has been calculated at
+the rate of 25% of the transaction amount (INR 2500), capped at INR 500 (2x of
+INR 250 - Base cashback earned which is INR 500).
+▪ Airtel Utility Category: The customer has earned a total of INR 250 cashback for
+spends made on Airtel Utility payment via Airtel Thanks platform. This has been
+calculated at the rate of 10% of the transaction amount (INR 4000), capped at INR
+250 (1x of INR 250 - Base cashback earned)
+▪ In the above illustration, if customer converts any of the transactions into EMI,
+cashback against any such transaction shall not be applicable
+o Since capping pertaining to spends made via Airtel Thanks platform is derived basis
+spends made under Base spend category, if customer does not spend any amount under
+Base category, the customer would not be eligible to earn cashback towards Airtel Bill
+payments made via Airtel Thanks platform under 25% and 10% cashback category
+o Cashback of 25% and 10% categories on Airtel Thanks platform will be calculated basis
+the Merchant IDs (MIDs)/ Virtual Payment Address (VPA IDs on UPI spends) shared
+by the respective merchants. In case there is a dispute with regards to non-receipt of
+cashback owing to transaction falling in MID /VPA ID(for UPI transactions) outside such
+list maintained at bank’s end, bank shall reconcile the same with the merchant and
+cashback shall be posted/processed post confirmation from merchant. In such
+scenarios, subject to merchant confirmation of the MID/ VPA ID(for UPI transactions),
+bank may take up to 90 days from transaction date to process cashback for such
+disputed transactions.
+o Cashback on 25% category is applicable only for recharge or bill payment of active
+Airtel connections. Payments (be it hardware cost, installation charges, advance
+recharge or bill payment amount or any other amount) made for new or inactive
+connection will not be eligible for the cashback
+o All utility billers that are enabled by BBPS are supported on Airtel Thanks App platform.
+o Cashback summary at a Category level can be viewed in the monthly statements.
+Additionally, the summary of cashback earned and credited for the month can be
+viewed in the Cashback Details section at the bottom of the statement
+• Other Cashback Terms and Conditions
+o Cashback shall not be eligible on EMI transactions, Purchase converted to EMI post
+facto, Payment of outstanding balance, fees and other charges along with following
+MCC spends/transaction categories on the card:
+Sr No Description
+1 Cash advances / Financial Institutions
+2 Fuel spends
+3 Rent payments
+4 Wallet recharge
+5 Jewelry
+6 Insurance services
+7 Education services
+8 Government services
+9 Utility and Telecom Spends not done on Airtel Thanks App*
+10 Gift Cards
+11 Bridge Fees, Road Fees & Tolls
+*Utility transactions done on Airtel Thanks App will continue to earn cashback,
+however, utility transactions done outside the Airtel Thanks App will not earn
+cashback.
+o Non-customer initiated credit such as cashback/charge reversals etc. received into the
+credit card account will not be considered as a payment towards the outstanding of the
+card. However, such credits will be considered to compute the subsequent month’s
+dues.
+o Cashback earned for the purchases reflecting in the current billing cycle will be credited
+in the next billing cycle 3 days prior to the statement generation date i.e. if the
+statement date is 12th March, cashback earned in the Feb month cycle (13th Jan-12th
+Feb) will be credited on 9th March.
+o Cashback earned will be computed based on spends during the statement period minus
+any returns or refunds during the same period.
+o In case customer opts for change in statement cycle, then cashback will be calculated
+and credited basis the new statement cycle only. Cashback will be calculated for
+transaction made between last cycle date and new cycle date. Accordingly, cashback
+capping shall be applicable basis the new statement cycle. For example, customer wants
+to change cycle date from 12th of every month to 1st of every month and customer
+makes this request on 8th June. Then the cashback will be calculated for transactions
+made from 13 May to 1 July.
+o In case the purchase/ transaction is returned/ cancelled/ reversed post statement
+generation date, cashback toward such transactions will be debited on the date of such
+purchase/ transaction reversal.
+o Since there is no cashback on EMI transactions, once a transaction is converted in to
+EMI, the customer will not earn any cashback on the transaction even if the customer
+opts for foreclosure or cancellation of the EMI and pays the full amount on the same.
+o In case of conversion of a transaction to EMI at a later date, cashback earned on such
+transaction will be reversed during the same billing cycle as EMI conversion. The
+cashbacks earned/reversed during a billing cycle will be visible in the monthly credit
+card billing statement.
+o In case the customer reverses a transaction, the corresponding cashback earned on the
+transaction will also be reversed and in case the customer has an outstanding balance
+on credit card in the form of reversed cashback, the same will be treated as an ordinary
+outstanding balance and the customer will be liable to pay for such outstanding amount,
+failing which the said amount will attract the fees & charges as per the schedule of
+charges defined in the Most Important Terms and Conditions.
+o If a Cardholder's Airtel Axis Bank credit card is terminated at any time for any reason,
+whether by the primary Cardholder or the Bank, the primary Cardholder will forthwith
+be disqualified from earning the Cash backs and all unused Cash backs then accrued
+shall automatically be forfeited immediately after voluntary or involuntary cancellation
+of the Airtel Axis Bank Credit Card.
+o Any remaining Cash back including Cashbacks pending credit into the account of the
+Cardholder shall immediately cease to be valid upon the occurrence of the following
+and no refund, extension or compensation shall be given by Axis Bank even if the card
+member’s membership is reinstated:
+▪ The cancellation of the Airtel Axis Bank credit card; or
+▪ The conversion of the Airtel Axis Bank Credit Card to any other Axis Bank credit
+card
+▪ In the event of a default i.e. if the Minimum Amount Due is not paid by the Payment
+Due Date or
+▪ Breach of any clause of the Card Member Agreement
+o The cashback will be rounded down for each individual transaction. For eg: if for a
+transaction of Rs. 1560, the customer is eligible for a cashback of 1% i.e., 1560 * 1% =
+Rs. 15.6 then for that individual transaction Rs. 15 will be credited to the customer.
+Terms and Conditions for 10% Value Back on Preferred merchants [Zomato, Blinkit and District
+Movies]:
+o Customer is eligible to get 10% instant value back at Zomato, Blinkit and District Movies
+applicable via Ecom as the mode of payment
+o Maximum monthly value back of INR 200 per partner, per primary card
+o Minimum Order Value applicable of INR 499 for transaction made on Zomato & Blinkit
+o The value back against Zomato, Blinkit and District Movies shall be credited as part of
+the respective partner wallet and will have no validity period. The value back can be
+utilised for any subsequent purchase made at respective partner platform
+o Value back offer shall be eligible on spends made on Preferred merchants App/Website
+only [not applicable on Wallet load / Gift card purchase]
+o In case of any challenges faced while applying the promo code, customers should try
+reaching out to the support team under the respective partner platform. Customer can
+alternatively reach out to Axis Bank in case the resolution provided by the partner
+platform is not satisfactory
+o Axis Bank cashback shall not be applicable for this category
+o Step to avail of the offer on Zomato, Blinkit and District Movies
+▪ Customer need to add required product / ticket booking in the cart
+▪ While initiating the payment, customer need to check for coupon with the
+description such as “Get 10% back using Airtel Axis Credit Card”
+▪ Customer needs to apply Coupon code and proceed with payment using Airtel
+Axis Bank Credit Card via Ecom/Online payment [UPI payment is not eligible
+for the offer]
+▪ Value back shall be instantly added to the respective partner wallet upon
+delivery of the product
+▪ In order to use the value back available in the respective partner wallet,
+customer needs to add required product / ticket booking in the cart. While
+initiating the payment, customer needs to click on the wallet balance appearing
+on the payment page, make balance payment if any and proceed with the
+transaction
+Other Terms and Conditions:
+o The Credit Card is issued for personal expenses and purposes only. The Cardholder
+must not use the Credit Card to purchase anything for resale, for commercial or
+business purposes. The Credit Card should be used only for lawful, bona fide personal
+purposes and must not be used for any money laundering, anti-social or speculative
+activities or must not be exploited commercially in business (e.g. for working capital
+purposes).
+o If the Credit Card is found to be used for prohibited, restricted, commercial purposes
+or any purposes as mentioned above, Axis Bank may, at its sole discretion, exercise its
+right to cancel the concerned Credit Card and additional/add-on cards thereof and
+withhold/cancel the Cashback earned, without any notice to the Cardholder. Axis Bank
+may enquire with you over phone or through any other means of formal communication
+and seek details, information, proofs, etc., about the Credit Card transactions, pattern
+of usage, etc. Non- satisfactory responses or no responses from the Cardholder may
+lead to blocking/closure of the Credit Card by Axis Bank.
+o Use of the Card at Merchant Establishment will be limited by the credit limit assigned
+to each Card Account by the Bank.
+o The Bank may, at any time without prior notice, or stating any reason whatsoever,
+refuse authorization for a Charge at a Merchant Establishment, and / or restrict or defer
+the Card member’s ability to use the Card and / or suspend or cancel the Card. The
+Bank through the ATM, Merchant Establishment, by itself may repossess / retain the
+Credit Card, if it reasonably believes that it is necessary to do so for proper management
+of credit or business risk, or if the Card or Card Account is being misused or likely to be
+misused.
+o Nothing contained in the cashback proposition shall be construed as a binding
+obligation on Axis Bank or any participating Merchant Partner to continue the
+Cashback/Discount Scheme after the Scheme Termination Date or to substitute the
+Cashback/Discount Scheme by a new or similar scheme.
+o The bank may temporarily prohibit any customer from earning cashback/discount or
+using any features of the program.
+o For Airtel Axis Bank customers who want to cancel their EMI transactions, customers
+need to call up Axis Bank customer care at 18604195555/18605005555 for the same.
+o For EMI transactions that are cancelled by the customer/bank, the cashback in the
+customer’s statement for that respective cycle might get debited twice, the customer
+would need to raise a service request by calling the Axis Bank customer care mentioning
+that cashback has been debited twice with the date and amount of transaction for
+correction of the same.
+o For customers who wish to foreclose their EMI transactions, customers would need to
+call up Axis Bank customer care and place a request for the same.
+o The terms and conditions mentioned in the document can be revised or terminated at
+any time with 30 days prior notice.
+o The cashback shall not be applicable if the Card has been withdrawn or cancelled or is
+liable to be cancelled or the account of the Card member is a delinquent Account.
+o Axis Bank’s computation of the Cashback shall be final, conclusive and binding on a
+Card member and will not be liable to be disputed or questioned.
+o The terms contained in this document shall be in addition to and not in derogation of
+the Most Important Terms and Conditions document.
+o The cashback proposition is made available at the pleasure of Axis Bank and Axis Bank
+expressly reserves the right at any time and with notice to Card members, to add to
+and/or alter, modify, change or vary all or any of these Terms and Conditions or to
+replace wholly or in part, the Cashback Scheme by another scheme, or to withdraw it
+altogether.
+o Without prejudice to anything contained in the Terms and Conditions, all disputes, if
+any, arising out of or in connection with or as a result of the Rewards Scheme or
+otherwise relating hereto shall be subject to the exclusive jurisdiction of the competent
+courts / tribunals at Mumbai.
+Cashback and Value back Terms & Conditions – Airtel Axis Bank Credit Card
+(effective from 12-April 2026)
+Definitions: For the Airtel Axis Bank Credit Card, the following terms shall, unless the context 
+otherwise admits, shall have the following meanings: 
+• Cashback shall mean money awarded in the customer’s credit card account under the cashback 
+scheme. 
+• Preferred Merchants shall include certain merchants on which the value back earnings shall be 
+10%. These merchants can change at the bank’s discretion. 
+• Earn 1% base cashback on your regular spends to become eligible for higher cashback on Airtel 
+and utility payments via Airtel Thanks App. 
+Here’s how cashback works:
+• 1% Base Cashback (No Cap) earned on all other spends (excluding specific categories).
+o There is no cap on base cashback — you can continue to earn 1% cashback on all eligible 
+spends. This base cashback also determines your eligibility and capping for spends made 
+on Airtel Thanks app under 25% and 10% category
+• 25% Cashback – Airtel bill payments via Airtel Thanks app
+o Applicable on Airtel Mobile, Broadband, WiFi, and DTH via the Airtel Thanks App.
+o Limit: Up to 2 times (2X) the base cashback (1% cashback) earned in the same statement 
+cycle.
+• 10% Cashback – Other Utility Payments via Airtel Thanks app
+o Applicable on utility bills such as electricity, gas, etc., via the Airtel Thanks App.
+o Limit: Up to 1 time (1X) the base cashback (1% cashback) earned in the same statement 
+cycle
+• The cashbacks will be processed according to the following table (Elaborated): 
+Category of spends Benefit *T&C
+Airtel Mobile, Broadband, WiFi and DTH 
+bill payments via Airtel Thanks App*
+25% Cashback Capped at twice the base 
+cashback earned during the 
+statement month
+Utility bill payments such as gas, 
+electricity, etc., via Airtel Thanks App*
+10% Cashback Capped at the base cashback 
+earned during the statement 
+month
+All other merchants/ other spends / base 
+cashback*
+1% Cashback Cashback not applicable on 
+specific Merchant / transaction 
+categories
+Please note: The Cashback earned credit will continue to follow the existing 60-day credit 
+cycle. Accordingly, the Cashback to be credited as per the revised capping logic will be 
+reflected in the Statements generated on or after 12 June 2026.
+Cashback Terms and Conditions:
+• Spends made on Airtel Thanks platform
+o 25% cashback on Airtel Mobile, Broadband, WiFi and DTH bill payments via Airtel 
+Thanks App is capped at twice the base cashback earned during the statement month
+o 10% cashback on Utility bill payments such as gas, electricity, etc., via Airtel Thanks 
+App is capped at the base cashback earned during the statement month
+Below is an illustration of the benefits that can be earned in a month
+Transactions in a Statement cycle
+Txn 
+Details/Merchant
+Spend 
+amount Benefit Cashback 
+without capping
+Cashback with 
+capping basis 
+transaction under 
+base / 1% cashback 
+category
+Electronics 25,000 1% Category
+[Base cashback] INR 250 INR 250
+Airtel Mobile bill 
+payment 2,500 25% Category 
+[Airtel] INR 625 INR 500
+Airtel Utility 
+Payment 4,000 10% Category 
+[Airtel] INR 400 INR 250
+Total Cashback INR 1,275 INR 1,000
+In the above illustration, customer is eligible for overall benefit of INR 1,000-
+break up of which is as follows:
+▪ Base Cashback Category: Customer has earned INR 250 cashback (INR 25000 * 
+1%). This base cashback earned will work as multiplier for earning cashback for
+Telecom and Utility Bill payments spends made on Airtel Thanks platform. 
+▪ Airtel Telecom Category: Customer has earned INR 500 cashback for spending on 
+Airtel Telecom bill payment via Airtel Thanks platform. This has been calculated at 
+the rate of 25% of the transaction amount (INR 2500), capped at INR 500 (2x of 
+INR 250 - Base cashback earned which is INR 500).
+▪ Airtel Utility Category: The customer has earned a total of INR 250 cashback for 
+spends made on Airtel Utility payment via Airtel Thanks platform. This has been 
+calculated at the rate of 10% of the transaction amount (INR 4000), capped at INR 
+250 (1x of INR 250 - Base cashback earned)
+▪ In the above illustration, if customer converts any of the transactions into EMI, 
+cashback against any such transaction shall not be applicable
+o Since capping pertaining to spends made via Airtel Thanks platform is derived basis 
+spends made under Base spend category, if customer does not spend any amount under 
+Base category, the customer would not be eligible to earn cashback towards Airtel Bill 
+payments made via Airtel Thanks platform under 25% and 10% cashback category
+o Cashback of 25% and 10% categories on Airtel Thanks platform will be calculated basis 
+the Merchant IDs (MIDs)/ Virtual Payment Address (VPA IDs on UPI spends) shared 
+by the respective merchants. In case there is a dispute with regards to non-receipt of 
+cashback owing to transaction falling in MID /VPA ID(for UPI transactions) outside such 
+list maintained at bank’s end, bank shall reconcile the same with the merchant and 
+cashback shall be posted/processed post confirmation from merchant. In such 
+scenarios, subject to merchant confirmation of the MID/ VPA ID(for UPI transactions), 
+bank may take up to 90 days from transaction date to process cashback for such 
+disputed transactions.
+o Cashback on 25% category is applicable only for recharge or bill payment of active 
+Airtel connections. Payments (be it hardware cost, installation charges, advance 
+recharge or bill payment amount or any other amount) made for new or inactive 
+connection will not be eligible for the cashback
+o All utility billers that are enabled by BBPS are supported on Airtel Thanks App platform.
+o Cashback summary at a Category level can be viewed in the monthly statements. 
+Additionally, the summary of cashback earned and credited for the month can be 
+viewed in the Cashback Details section at the bottom of the statement
+• Other Cashback Terms and Conditions
+o Cashback shall not be eligible on EMI transactions, Purchase converted to EMI post 
+facto, Payment of outstanding balance, fees and other charges along with following 
+MCC spends/transaction categories on the card:
+Sr No Description
+1 Cash advances / Financial Institutions
+2 Fuel spends
+3 Rent payments
+4 Wallet recharge 
+5 Jewelry
+6 Insurance services
+7 Education services
+8 Government services
+9 Utility and Telecom Spends not done on Airtel Thanks App*
+10 Gift Cards
+11 Bridge Fees, Road Fees & Tolls
+*Utility transactions done on Airtel Thanks App will continue to earn cashback, 
+however, utility transactions done outside the Airtel Thanks App will not earn 
+cashback.
+o Non-customer initiated credit such as cashback/charge reversals etc. received into the 
+credit card account will not be considered as a payment towards the outstanding of the 
+card. However, such credits will be considered to compute the subsequent month’s 
+dues. 
+o Cashback earned for the purchases reflecting in the current billing cycle will be credited 
+in the next billing cycle 3 days prior to the statement generation date i.e. if the 
+statement date is 12th March, cashback earned in the Feb month cycle (13th Jan-12th 
+Feb) will be credited on 9th March.
+o Cashback earned will be computed based on spends during the statement period minus 
+any returns or refunds during the same period. 
+o In case customer opts for change in statement cycle, then cashback will be calculated 
+and credited basis the new statement cycle only. Cashback will be calculated for 
+transaction made between last cycle date and new cycle date. Accordingly, cashback 
+capping shall be applicable basis the new statement cycle. For example, customer wants 
+to change cycle date from 12th of every month to 1st of every month and customer 
+makes this request on 8th June. Then the cashback will be calculated for transactions 
+made from 13 May to 1 July.
+o In case the purchase/ transaction is returned/ cancelled/ reversed post statement 
+generation date, cashback toward such transactions will be debited on the date of such 
+purchase/ transaction reversal. 
+o Since there is no cashback on EMI transactions, once a transaction is converted in to 
+EMI, the customer will not earn any cashback on the transaction even if the customer 
+opts for foreclosure or cancellation of the EMI and pays the full amount on the same.
+o In case of conversion of a transaction to EMI at a later date, cashback earned on such 
+transaction will be reversed during the same billing cycle as EMI conversion. The 
+cashbacks earned/reversed during a billing cycle will be visible in the monthly credit 
+card billing statement. 
+o In case the customer reverses a transaction, the corresponding cashback earned on the 
+transaction will also be reversed and in case the customer has an outstanding balance 
+on credit card in the form of reversed cashback, the same will be treated as an ordinary 
+outstanding balance and the customer will be liable to pay for such outstanding amount, 
+failing which the said amount will attract the fees & charges as per the schedule of 
+charges defined in the Most Important Terms and Conditions.
+o If a Cardholder's Airtel Axis Bank credit card is terminated at any time for any reason, 
+whether by the primary Cardholder or the Bank, the primary Cardholder will forthwith 
+be disqualified from earning the Cash backs and all unused Cash backs then accrued
+shall automatically be forfeited immediately after voluntary or involuntary cancellation 
+of the Airtel Axis Bank Credit Card. 
+o Any remaining Cash back including Cashbacks pending credit into the account of the 
+Cardholder shall immediately cease to be valid upon the occurrence of the following
+and no refund, extension or compensation shall be given by Axis Bank even if the card 
+member’s membership is reinstated:
+▪ The cancellation of the Airtel Axis Bank credit card; or
+▪ The conversion of the Airtel Axis Bank Credit Card to any other Axis Bank credit 
+card 
+▪ In the event of a default i.e. if the Minimum Amount Due is not paid by the Payment 
+Due Date or 
+▪ Breach of any clause of the Card Member Agreement 
+o The cashback will be rounded down for each individual transaction. For eg: if for a 
+transaction of Rs. 1560, the customer is eligible for a cashback of 1% i.e., 1560 * 1% = 
+Rs. 15.6 then for that individual transaction Rs. 15 will be credited to the customer.
+Terms and Conditions for 10% Value Back on Preferred merchants [Zomato, Blinkit and District 
+Movies]:
+o Customer is eligible to get 10% instant value back at Zomato, Blinkit and District Movies
+applicable via Ecom as the mode of payment
+o Maximum monthly value back of INR 200 per partner, per primary card
+o Minimum Order Value applicable of INR 499 for transaction made on Zomato & Blinkit
+o The value back against Zomato, Blinkit and District Movies shall be credited as part of 
+the respective partner wallet and will have no validity period. The value back can be 
+utilised for any subsequent purchase made at respective partner platform
+o Value back offer shall be eligible on spends made on Preferred merchants App/Website 
+only [not applicable on Wallet load / Gift card purchase]
+o In case of any challenges faced while applying the promo code, customers should try 
+reaching out to the support team under the respective partner platform. Customer can 
+alternatively reach out to Axis Bank in case the resolution provided by the partner 
+platform is not satisfactory
+o Axis Bank cashback shall not be applicable for this category
+o Step to avail of the offer on Zomato, Blinkit and District Movies
+▪ Customer need to add required product / ticket booking in the cart
+▪ While initiating the payment, customer need to check for coupon with the 
+description such as “Get 10% back using Airtel Axis Credit Card” 
+▪ Customer needs to apply Coupon code and proceed with payment using Airtel 
+Axis Bank Credit Card via Ecom/Online payment [UPI payment is not eligible 
+for the offer]
+▪ Value back shall be instantly added to the respective partner wallet upon 
+delivery of the product
+▪ In order to use the value back available in the respective partner wallet, 
+customer needs to add required product / ticket booking in the cart. While 
+initiating the payment, customer needs to click on the wallet balance appearing 
+on the payment page, make balance payment if any and proceed with the 
+transaction
+Other Terms and Conditions:
+o The Credit Card is issued for personal expenses and purposes only. The Cardholder 
+must not use the Credit Card to purchase anything for resale, for commercial or 
+business purposes. The Credit Card should be used only for lawful, bona fide personal 
+purposes and must not be used for any money laundering, anti-social or speculative 
+activities or must not be exploited commercially in business (e.g. for working capital 
+purposes). 
+o If the Credit Card is found to be used for prohibited, restricted, commercial purposes 
+or any purposes as mentioned above, Axis Bank may, at its sole discretion, exercise its 
+right to cancel the concerned Credit Card and additional/add-on cards thereof and
+withhold/cancel the Cashback earned, without any notice to the Cardholder. Axis Bank 
+may enquire with you over phone or through any other means of formal communication 
+and seek details, information, proofs, etc., about the Credit Card transactions, pattern 
+of usage, etc. Non- satisfactory responses or no responses from the Cardholder may 
+lead to blocking/closure of the Credit Card by Axis Bank.
+o Use of the Card at Merchant Establishment will be limited by the credit limit assigned 
+to each Card Account by the Bank. 
+o The Bank may, at any time without prior notice, or stating any reason whatsoever, 
+refuse authorization for a Charge at a Merchant Establishment, and / or restrict or defer 
+the Card member’s ability to use the Card and / or suspend or cancel the Card. The 
+Bank through the ATM, Merchant Establishment, by itself may repossess / retain the 
+Credit Card, if it reasonably believes that it is necessary to do so for proper management 
+of credit or business risk, or if the Card or Card Account is being misused or likely to be 
+misused. 
+o Nothing contained in the cashback proposition shall be construed as a binding 
+obligation on Axis Bank or any participating Merchant Partner to continue the 
+Cashback/Discount Scheme after the Scheme Termination Date or to substitute the 
+Cashback/Discount Scheme by a new or similar scheme.
+o The bank may temporarily prohibit any customer from earning cashback/discount or 
+using any features of the program. 
+o For Airtel Axis Bank customers who want to cancel their EMI transactions, customers 
+need to call up Axis Bank customer care at 18604195555/18605005555 for the same. 
+o For EMI transactions that are cancelled by the customer/bank, the cashback in the 
+customer’s statement for that respective cycle might get debited twice, the customer 
+would need to raise a service request by calling the Axis Bank customer care mentioning 
+that cashback has been debited twice with the date and amount of transaction for 
+correction of the same. 
+o For customers who wish to foreclose their EMI transactions, customers would need to 
+call up Axis Bank customer care and place a request for the same. 
+o The terms and conditions mentioned in the document can be revised or terminated at 
+any time with 30 days prior notice. 
+o The cashback shall not be applicable if the Card has been withdrawn or cancelled or is 
+liable to be cancelled or the account of the Card member is a delinquent Account.
+o Axis Bank’s computation of the Cashback shall be final, conclusive and binding on a 
+Card member and will not be liable to be disputed or questioned. 
+o The terms contained in this document shall be in addition to and not in derogation of 
+the Most Important Terms and Conditions document.
+o The cashback proposition is made available at the pleasure of Axis Bank and Axis Bank 
+expressly reserves the right at any time and with notice to Card members, to add to 
+and/or alter, modify, change or vary all or any of these Terms and Conditions or to 
+replace wholly or in part, the Cashback Scheme by another scheme, or to withdraw it 
+altogether. 
+o Without prejudice to anything contained in the Terms and Conditions, all disputes, if 
+any, arising out of or in connection with or as a result of the Rewards Scheme or 
+otherwise relating hereto shall be subject to the exclusive jurisdiction of the competent 
+courts / tribunals at Mumbai.

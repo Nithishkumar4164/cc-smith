@@ -1,0 +1,23 @@
+{
+  "_fixture": "SYNTHETIC demo signal (not a recorded SerpApi response). The linked official URLs are real and were fetched on 2026-10-08 (fixtures/evidence).",
+  "search_metadata": {
+    "id": "synthetic-google-axis-ace-pdf",
+    "status": "Success"
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "site:axis.bank.in \"ACE\" terms filetype:pdf",
+    "google_domain": "google.co.in",
+    "gl": "in",
+    "hl": "en"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Terms & Conditions – Axis Bank ACE Credit Card Cashback Proposition",
+      "link": "https://www.axis.bank.in/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf?sfvrsn=a3effc42_6",
+      "snippet": "Cashback shall mean money awarded in the customer's Credit Card account ...",
+      "source": "Axis Bank"
+    }
+  ]
+}

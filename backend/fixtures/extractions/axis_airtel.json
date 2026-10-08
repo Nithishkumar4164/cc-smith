@@ -1,0 +1,159 @@
+{
+  "id": "axis_airtel",
+  "name": "Airtel Axis Bank Credit Card",
+  "issuer": "Axis Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card",
+        "quote": "Joining fee - primary card | ₹500 ... Annual fee – Primary Card | Annual Fee: ₹500 2nd year onward | annual fee waived off on annual spends greater than ₹ | 2,00,000/- {rent transactions ( MCC 6513 ) and wallet load | transactions ( MCC 6540 ) will not be eligible for spends | counted in availing annual fee waiver}"
+      }
+    ],
+    "joining_paise": 50000,
+    "annual_paise": 50000,
+    "waiver_spend_paise": 20000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+        "quote": "1% Base Cashback (No Cap) earned on all other spends (excluding specific categories)."
+      }
+    ],
+    "kind": "cashback",
+    "name": "Cashback",
+    "value_paise": 100
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card",
+          "quote": "10% value back* on Zomato, Blinkit and District Movies. (Max value back of ₹200 per partner per month, Mov of ₹499 applicable for Zomato and Blinkit)"
+        }
+      ],
+      "id": "zomato",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "zomato"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 1000
+      },
+      "cap_ids": [
+        "zomato"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "min_txn_paise": 49900
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card",
+          "quote": "10% value back* on Zomato, Blinkit and District Movies. (Max value back of ₹200 per partner per month, Mov of ₹499 applicable for Zomato and Blinkit)"
+        }
+      ],
+      "id": "blinkit",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "blinkit"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 1000
+      },
+      "cap_ids": [
+        "blinkit"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "min_txn_paise": 49900
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+          "quote": "1% Base Cashback (No Cap) earned on all other spends (excluding specific categories)."
+        }
+      ],
+      "id": "other",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 100
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Airtel 25% and utilities 10% are capped at multiples of the month's base cashback; not modelled yet, so they earn the base 1%."
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card",
+          "quote": "10% value back* on Zomato, Blinkit and District Movies. (Max value back of ₹200 per partner per month, Mov of ₹499 applicable for Zomato and Blinkit)"
+        }
+      ],
+      "id": "zomato",
+      "amount": 20000,
+      "unit": "paise",
+      "period": "calendar_month",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card",
+          "quote": "10% value back* on Zomato, Blinkit and District Movies. (Max value back of ₹200 per partner per month, Mov of ₹499 applicable for Zomato and Blinkit)"
+        }
+      ],
+      "id": "blinkit",
+      "amount": 20000,
+      "unit": "paise",
+      "period": "calendar_month",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+          "quote": "Cashback shall not be eligible on EMI transactions, Purchase converted to EMI post | facto, Payment of outstanding balance, fees and other charges along with following | MCC spends/transaction categories on the card: ... Cash advances / Financial Institutions | 2 | Fuel spends | 3 | Rent payments | 4 | Wallet recharge | 5 | Jewelry | 6 | Insurance services | 7 | Education services | 8 | Government services | 9 | Utility and Telecom Spends not done on Airtel Thanks App* | 10 | Gift Cards | 11 | Bridge Fees, Road Fees & Tolls"
+        }
+      ],
+      "categories": [
+        "fuel",
+        "rent",
+        "wallet",
+        "jewellery",
+        "insurance",
+        "education",
+        "government"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "milestones": [],
+  "min_txn_src": []
+}

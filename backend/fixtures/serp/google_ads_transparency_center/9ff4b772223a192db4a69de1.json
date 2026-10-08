@@ -1,0 +1,189 @@
+{
+  "_fixture": "reconstructed from research_notes/cc-smith orchestrator/live-runs-2026-10-07.md R18: titles, sources, dates and counts follow the notes; full payload was not saved, ids/links abbreviated in the notes are padded; 13 of 40 creatives kept: the 6 SBI creatives the notes date plus one per affiliate advertiser",
+  "search_metadata": {
+    "id": "r18-ads-sbicard",
+    "status": "Success"
+  },
+  "search_parameters": {
+    "engine": "google_ads_transparency_center",
+    "text": "sbicard.com",
+    "region": "2356",
+    "start_date": "20260907",
+    "end_date": "20261007"
+  },
+  "search_information": {
+    "total_results": 300,
+    "region": "India"
+  },
+  "ad_creatives": [
+    {
+      "advertiser_id": "AR11279600000000000000",
+      "advertiser": "SBI CARDS AND PAYMENT SERVICES LIMITED",
+      "ad_creative_id": "CR10000000000000000814",
+      "format": "image",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/1000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1786683600,
+      "last_shown": 1791309600,
+      "total_days_shown": 54,
+      "details_link": "https://adstransparency.google.com/advertiser/AR11279600000000000000/creative/CR10000000000000000814?region=2356"
+    },
+    {
+      "advertiser_id": "AR11279600000000000000",
+      "advertiser": "SBI CARDS AND PAYMENT SERVICES LIMITED",
+      "ad_creative_id": "CR10000000000000000815",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/1000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1786770000,
+      "last_shown": 1791309600,
+      "total_days_shown": 53,
+      "details_link": "https://adstransparency.google.com/advertiser/AR11279600000000000000/creative/CR10000000000000000815?region=2356"
+    },
+    {
+      "advertiser_id": "AR11279600000000000000",
+      "advertiser": "SBI CARDS AND PAYMENT SERVICES LIMITED",
+      "ad_creative_id": "CR10000000000000000923",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/1000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1790136000,
+      "last_shown": 1791309600,
+      "total_days_shown": 14,
+      "details_link": "https://adstransparency.google.com/advertiser/AR11279600000000000000/creative/CR10000000000000000923?region=2356"
+    },
+    {
+      "advertiser_id": "AR11279600000000000000",
+      "advertiser": "SBI CARDS AND PAYMENT SERVICES LIMITED",
+      "ad_creative_id": "CR10000000000000000924",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/1000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1790136600,
+      "last_shown": 1791309600,
+      "total_days_shown": 14,
+      "details_link": "https://adstransparency.google.com/advertiser/AR11279600000000000000/creative/CR10000000000000000924?region=2356"
+    },
+    {
+      "advertiser_id": "AR11279600000000000000",
+      "advertiser": "SBI CARDS AND PAYMENT SERVICES LIMITED",
+      "ad_creative_id": "CR16957600000000000000",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/1695760000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1790137200,
+      "last_shown": 1791342000,
+      "total_days_shown": 14,
+      "details_link": "https://adstransparency.google.com/advertiser/AR11279600000000000000/creative/CR16957600000000000000?region=2356"
+    },
+    {
+      "advertiser_id": "AR11279600000000000000",
+      "advertiser": "SBI CARDS AND PAYMENT SERVICES LIMITED",
+      "ad_creative_id": "CR10000000000000001003",
+      "format": "image",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/1000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1791003600,
+      "last_shown": 1791342000,
+      "total_days_shown": 4,
+      "details_link": "https://adstransparency.google.com/advertiser/AR11279600000000000000/creative/CR10000000000000001003?region=2356"
+    },
+    {
+      "advertiser_id": "AR900000000000000000000",
+      "advertiser": "MANISHA GUPTA",
+      "ad_creative_id": "CR900000000000000000000",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/9000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1789880400,
+      "last_shown": 1791176400,
+      "total_days_shown": 16,
+      "details_link": "https://adstransparency.google.com/advertiser/AR900000000000000000000/creative/CR900000000000000000000?region=2356"
+    },
+    {
+      "advertiser_id": "AR900000000000000000001",
+      "advertiser": "Stardom Media",
+      "ad_creative_id": "CR900000000000000000001",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/9000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1789880400,
+      "last_shown": 1791176400,
+      "total_days_shown": 16,
+      "details_link": "https://adstransparency.google.com/advertiser/AR900000000000000000001/creative/CR900000000000000000001?region=2356"
+    },
+    {
+      "advertiser_id": "AR900000000000000000002",
+      "advertiser": "BLINK DIGITAL",
+      "ad_creative_id": "CR900000000000000000002",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/9000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1789880400,
+      "last_shown": 1791176400,
+      "total_days_shown": 16,
+      "details_link": "https://adstransparency.google.com/advertiser/AR900000000000000000002/creative/CR900000000000000000002?region=2356"
+    },
+    {
+      "advertiser_id": "AR900000000000000000003",
+      "advertiser": "CRATUS SERVICES",
+      "ad_creative_id": "CR900000000000000000003",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/9000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1789880400,
+      "last_shown": 1791176400,
+      "total_days_shown": 16,
+      "details_link": "https://adstransparency.google.com/advertiser/AR900000000000000000003/creative/CR900000000000000000003?region=2356"
+    },
+    {
+      "advertiser_id": "AR900000000000000000004",
+      "advertiser": "RAAJ KHOSLA & CO",
+      "ad_creative_id": "CR900000000000000000004",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/9000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1789880400,
+      "last_shown": 1791176400,
+      "total_days_shown": 16,
+      "details_link": "https://adstransparency.google.com/advertiser/AR900000000000000000004/creative/CR900000000000000000004?region=2356"
+    },
+    {
+      "advertiser_id": "AR900000000000000000005",
+      "advertiser": "Smartify Software Solutions",
+      "ad_creative_id": "CR900000000000000000005",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/9000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1789880400,
+      "last_shown": 1791176400,
+      "total_days_shown": 16,
+      "details_link": "https://adstransparency.google.com/advertiser/AR900000000000000000005/creative/CR900000000000000000005?region=2356"
+    },
+    {
+      "advertiser_id": "AR900000000000000000006",
+      "advertiser": "Digital King India",
+      "ad_creative_id": "CR900000000000000000006",
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/9000000000",
+      "width": 380,
+      "height": 300,
+      "first_shown": 1789880400,
+      "last_shown": 1791176400,
+      "total_days_shown": 16,
+      "details_link": "https://adstransparency.google.com/advertiser/AR900000000000000000006/creative/CR900000000000000000006?region=2356"
+    }
+  ]
+}

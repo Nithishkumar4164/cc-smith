@@ -1,0 +1,21 @@
+{
+  "id": "icici_coral",
+  "name": "ICICI Bank Coral Credit Card (incl. Coral RuPay)",
+  "issuer": "ICICI Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card",
+        "quote": "Joining fee- ₹500 + Goods and Services Tax (GST) | Annual fee- ₹500 + GST (Spend over ₹1.5 lakh and get annual fee waived off for the next year)"
+      }
+    ],
+    "joining_paise": 50000,
+    "annual_paise": 50000,
+    "waiver_spend_paise": 15000000
+  },
+  "earn_rules": [],
+  "caps": [],
+  "exclusions": [],
+  "milestones": [],
+  "min_txn_src": []
+}

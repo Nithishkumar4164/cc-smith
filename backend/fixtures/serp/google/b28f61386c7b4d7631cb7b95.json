@@ -1,0 +1,30 @@
+{
+  "_fixture": "SYNTHETIC demo signal (not a recorded SerpApi response). The linked official URLs are real and were fetched on 2026-10-08 (fixtures/evidence).",
+  "search_metadata": {
+    "id": "synthetic-google-axis-ace",
+    "status": "Success"
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "site:axis.bank.in \"ACE\"",
+    "google_domain": "google.co.in",
+    "gl": "in",
+    "hl": "en"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "ACE Credit Card: 5% Cashback on Bills, Lounge Access & Dining Offers | Axis Bank",
+      "link": "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
+      "snippet": "5% cashback on Utility bill payments ... 4% cashback on swiggy, zomato & ola ...",
+      "source": "Axis Bank"
+    },
+    {
+      "position": 2,
+      "title": "Axis Bank ACE Credit Card review",
+      "link": "https://www.cardinsider.com/axis-bank/axis-bank-ace-credit-card/",
+      "snippet": "...",
+      "source": "CardInsider"
+    }
+  ]
+}

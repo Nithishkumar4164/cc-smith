@@ -1,0 +1,180 @@
+{
+  "id": "axis_atlas",
+  "name": "Axis Bank Atlas Credit Card",
+  "issuer": "Axis Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-atlas-credit-card",
+        "quote": "Standard joining fee ₹5,000 | Standard annual fee (2nd year onwards) ₹5,000"
+      }
+    ],
+    "joining_paise": 500000,
+    "annual_paise": 500000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+        "quote": "1 EDGE Mile is equal to INR 1"
+      }
+    ],
+    "kind": "points",
+    "name": "EDGE Miles",
+    "value_paise": 100
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "quote": "Earn 5 EDGE Miles for every Rs. 100 spent on Travel EDGE, airline and hotel merchants up to cumulative transactions of Rs. 2,00,000 per month"
+        }
+      ],
+      "id": "travel",
+      "match": {
+        "categories": [
+          "travel"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 5,
+        "per_paise": 10000
+      },
+      "cap_ids": [
+        "travel_spend"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Travel EDGE, airlines and hotels; OTAs and travel agents earn the base rate."
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "quote": "2 EDGE Miles per INR 100 spent"
+        }
+      ],
+      "id": "base",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 2,
+        "per_paise": 10000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "quote": "Earn 5 EDGE Miles for every Rs. 100 spent on Travel EDGE, airline and hotel merchants up to cumulative transactions of Rs. 2,00,000 per month"
+        }
+      ],
+      "id": "travel_spend",
+      "amount": 20000000,
+      "unit": "spend_paise",
+      "period": "calendar_month",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "quote": "spends done on gold/ jewellery, rent, wallet, government institution, insurance, fuel, Utilities, Telecom, Gift cards and fee related to tolls, bridges & road will be excluded from EDGE Miles earn."
+        }
+      ],
+      "categories": [
+        "jewellery",
+        "rent",
+        "wallet",
+        "government",
+        "insurance",
+        "fuel",
+        "utilities",
+        "gift_card",
+        "tolls"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "quote": "Earn 5 EDGE Miles for every Rs. 100 spent on Travel EDGE, airline and hotel merchants up to cumulative transactions of Rs. 2,00,000 per month"
+        }
+      ],
+      "categories": [],
+      "merchants": [
+        "makemytrip",
+        "cleartrip",
+        "goibibo",
+        "easemytrip",
+        "ixigo",
+        "yatra"
+      ],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": [
+        "travel"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "quote": "Spends Milestone (in INR) No. of EDGE Miles 3,00,000 2500 7,50,000 Additional 2500 15,00,000 Additional 5000"
+        }
+      ],
+      "spend_paise": 30000000,
+      "period": "anniversary_year",
+      "value_paise": 250000,
+      "description": "2,500 EDGE Miles at ₹3 lakh"
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "quote": "Spends Milestone (in INR) No. of EDGE Miles 3,00,000 2500 7,50,000 Additional 2500 15,00,000 Additional 5000"
+        }
+      ],
+      "spend_paise": 75000000,
+      "period": "anniversary_year",
+      "value_paise": 250000,
+      "description": "2,500 more at ₹7.5 lakh"
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf?sfvrsn=8bde9bb5_7",
+          "quote": "Spends Milestone (in INR) No. of EDGE Miles 3,00,000 2500 7,50,000 Additional 2500 15,00,000 Additional 5000"
+        }
+      ],
+      "spend_paise": 150000000,
+      "period": "anniversary_year",
+      "value_paise": 500000,
+      "description": "5,000 more at ₹15 lakh"
+    }
+  ],
+  "min_txn_src": []
+}

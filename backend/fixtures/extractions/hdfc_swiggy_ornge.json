@@ -1,0 +1,190 @@
+{
+  "id": "hdfc_swiggy_ornge",
+  "name": "Swiggy ORNGE HDFC Bank Credit Card",
+  "issuer": "HDFC Bank",
+  "identity": {
+    "src": [
+      {
+        "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+        "quote": "Swiggy HDFC Bank Credit Card is offered only under Mastercard World platform currently."
+      }
+    ],
+    "network": "Mastercard"
+  },
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.hdfc.bank.in/credit-cards/swiggy-ornge-hdfc-bank-credit-card",
+        "quote": "Joining Fee / Renewal Membership Fee: ₹500 + Applicable Charges | Spend ₹1,50,000 or more in a year, before your Credit Card renewal date and get your renewal fee waived off"
+      }
+    ],
+    "joining_paise": 50000,
+    "annual_paise": 50000,
+    "waiver_spend_paise": 15000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+        "quote": "Cashback earned for current billing cycle will be auto redeemed against outstanding amount."
+      }
+    ],
+    "kind": "cashback",
+    "name": "Cashback",
+    "value_paise": 100
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "quote": "Spends on Swiggy App* (Food Delivery, Instamart and Dineout) 5% cashback Rs.1500 per billing cycle"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/swiggy-ornge-hdfc-bank-credit-card",
+          "quote": "To earn 5% CashBack using Swiggy Ornge HDFC Bank Credit Card, the cardholder should make a minimum transaction of ₹249 using the card."
+        }
+      ],
+      "id": "swiggy",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "swiggy"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 500
+      },
+      "cap_ids": [
+        "swiggy"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "min_txn_paise": 24900
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "quote": "Spends on select Online Merchants and categories like Apparels, Pharmacies, Pet stores, Personal Care, Electronics, Entertainment, Travel, Discount Stores & Local cabs basis eligible list of MCCs** 5% cashback"
+        }
+      ],
+      "id": "online",
+      "match": {
+        "categories": [
+          "online",
+          "travel",
+          "entertainment"
+        ],
+        "merchants": [],
+        "channels": [
+          "online"
+        ]
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 500
+      },
+      "cap_ids": [
+        "online"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "quote": "Spends on other categories * 1% cashback Rs.1000 per billing cycle Exclusions - Fuel, Rent, Jewellery, Govt. spends, Gaming and Education, EMI & Wallet"
+        }
+      ],
+      "id": "other",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 100
+      },
+      "cap_ids": [
+        "other"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "quote": "Spends on Swiggy App* (Food Delivery, Instamart and Dineout) 5% cashback Rs.1500 per billing cycle"
+        }
+      ],
+      "id": "swiggy",
+      "amount": 150000,
+      "unit": "paise",
+      "period": "statement_cycle",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "quote": "Online Transactions on Apparels 30000 1375 Capping for the 5% Cashback accrual 1500"
+        }
+      ],
+      "id": "online",
+      "amount": 150000,
+      "unit": "paise",
+      "period": "statement_cycle",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "quote": "Spends on other categories * 1% cashback Rs.1000 per billing cycle Exclusions - Fuel, Rent, Jewellery, Govt. spends, Gaming and Education, EMI & Wallet"
+        }
+      ],
+      "id": "other",
+      "amount": 100000,
+      "unit": "paise",
+      "period": "statement_cycle",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/tncs-swiggy-ornge-hdfc-bank-credit-card-22092026.pdf",
+          "quote": "Cashback will not be accrued for the following transactions using Swiggy Ornge HDFC Bank Credit Card ❖ Prepaid Card/Gift Card/Wallet ❖ Rent ❖ Government related transactions ❖ Gaming ❖ Education ❖ Fuel ❖ Jewellery ❖ Smartpay ❖ Smartbuy portal ❖ EMI (all type) ❖ Cash advances, Purchase of travelers’ cheques"
+        }
+      ],
+      "categories": [
+        "wallet",
+        "gift_card",
+        "rent",
+        "government",
+        "gaming",
+        "education",
+        "fuel",
+        "jewellery"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "milestones": [],
+  "min_txn_src": []
+}

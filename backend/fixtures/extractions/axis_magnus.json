@@ -1,0 +1,134 @@
+{
+  "id": "axis_magnus",
+  "name": "Axis Bank Magnus Credit Card",
+  "issuer": "Axis Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card",
+        "quote": "Annual fee of ₹12,500 + Taxes waived off* on spend of ₹25 Lakhs in preceding year."
+      }
+    ],
+    "joining_paise": 1250000,
+    "annual_paise": 1250000,
+    "waiver_spend_paise": 250000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card",
+        "quote": "Earn 2 partner# miles for every 5 EDGE Reward points across 20 travel partners."
+      }
+    ],
+    "kind": "points",
+    "name": "EDGE Reward Points",
+    "value_paise": 40
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-card-tnc/terms-and-conditions-for-magnus-credit-card.pdf",
+          "quote": "You will continue to earn 12 EDGE REWARD Points per INR 200 on spends^ up to INR 1.5 | lakhs per calendar month."
+        }
+      ],
+      "id": "first_1_5l",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 12,
+        "per_paise": 20000
+      },
+      "cap_ids": [
+        "tier1"
+      ],
+      "stacks": false,
+      "priority": 1,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-card-tnc/terms-and-conditions-for-magnus-credit-card.pdf",
+          "quote": "You will earn 35 EDGE REWARD Points per INR 200 on spends^ | above INR 1.5 lakhs, up to spends^ equivalent to your credit limit + additional INR 1.5 | Lakhs per calendar month. Thereafter, you will earn 12 EDGE REWARD Points per Rs. 200 | spent."
+        }
+      ],
+      "id": "above_1_5l",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 35,
+        "per_paise": 20000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Ceiling of credit limit + ₹1.5 lakh a month is not modelled."
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-card-tnc/terms-and-conditions-for-magnus-credit-card.pdf",
+          "quote": "You will continue to earn 12 EDGE REWARD Points per INR 200 on spends^ up to INR 1.5 | lakhs per calendar month."
+        }
+      ],
+      "id": "tier1",
+      "amount": 15000000,
+      "unit": "spend_paise",
+      "period": "calendar_month",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-card-tnc/terms-and-conditions-for-magnus-credit-card.pdf",
+          "quote": "Excluded spend categories for reward earn / spend based fee waiver: Transactions made | on Utility & Telecom, Rent (capped at INR 50,000 per month), Wallet, Government | spends, Insurance, Gold & Jewellery, Fuel, Cash advances and Repayments."
+        }
+      ],
+      "categories": [
+        "utilities",
+        "rent",
+        "wallet",
+        "government",
+        "insurance",
+        "jewellery",
+        "fuel"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://campaign.axis.bank.in/generic/terms-and-conditions-magnus.pdf",
+          "quote": "Gift card purchases will continue to be excluded from rewards category and will not | earn rewards ... no rewards shall be earned on spends made on Bridge Fees, Road Fees & Tolls."
+        }
+      ],
+      "categories": [
+        "gift_card",
+        "tolls"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "milestones": [],
+  "min_txn_src": []
+}

@@ -1,0 +1,25 @@
+{
+  "_fixture": "SYNTHETIC demo signal (not a recorded SerpApi response). The linked official URLs are real and were fetched on 2026-10-08 (fixtures/evidence).",
+  "search_metadata": {
+    "id": "synthetic-ad-details-axis",
+    "status": "Success"
+  },
+  "search_parameters": {
+    "engine": "google_ads_transparency_center_ad_details",
+    "advertiser_id": "AR33000000000000000000",
+    "creative_id": "CR33000000000000001002",
+    "region": "2356"
+  },
+  "search_information": {
+    "format": "text",
+    "region_name": "India"
+  },
+  "ad_creatives": [
+    {
+      "format": "text",
+      "image": "https://tpc.googlesyndication.com/archive/simgad/3300000001",
+      "width": 380,
+      "height": 202
+    }
+  ]
+}

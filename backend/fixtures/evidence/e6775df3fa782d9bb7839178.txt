@@ -1,0 +1,566 @@
+Updated on 03-Jan-2026
+Terms & Conditions – Tata Neu Infinity HDFC Bank Credit Card
+NeuCoins Proposition
+• NeuCoins will be awarded in the customer’s credit card account under the reward points scheme
+• The NeuCoins will be processed as per the following table:
+Type of Spends NeuCoins
+Non-EMI Retail Spends on partner Tata Brands 5% back as NeuCoins
+Non-EMI Retail Spends on Non-Tata Brands 1.5% back as NeuCoins
+Merchant EMI Spends (Any Brand) 1.5% back as NeuCoins
+Any UPI Spends on Rupay Credit Card 1.5% back as NeuCoins (max of 500 NeuCoins per calendar month)
+(Including partner Tata Brands) With effect from 01-Aug-24: -
+- 0.50% back as NeuCoins for transactions done using any UPI ID
+(Google Pay, PhonePe, Cred, etc.)
+- Additional 1% back as NeuCoins if the transaction is done using
+the Tata Neu UPI ID.
+- The total NeuCoins earned on eligible UPI transactions are
+capped to 500 NeuCoins per month
+Exclusion Categories for Any type of NeuCoins
+NeuCoins will not be accrued for the following spends/transactions on the card
+• Fuel Spends | Wallet loads / Gift or Prepaid Card load/ Voucher purchase
+• Cash Advances | Payment of Outstanding Balances
+• Payment of card fees and other charges | Smart EMI / Dial an EMI transaction
+• Rental and Government related transactions
+• With effect from 1st Sep 2024, NeuCoins will not be accrued for Education payments made through third-party apps
+like (but not limited to) CRED, Cheq, MobiKwik, and others. However, education payments made directly through
+college/school websites, or their POS machines will earn NeuCoins.
+• With effect from 1st July 2025, NeuCoins will not be earned on Online Skill-Based Gaming transactions (MCC-5816)
+For Example,
+No Transaction Merchant Purchase NeuCoins Type Base Additional
+Posting Date Amount NeuCoins NeuCoins
+in Rs Accrued Accrued
+1 10-Mar Purchase on partner Tata Brand 21,100 5% NeuCoins 317 739
+2 12-Mar Merchant EMI on Tata Brand - Principal 1.5% NeuCoins
+4,900 74 0
+Amount
+3 12-Mar Merchant EMI on Tata Brand - Interest -
+115 0 0
+Amount
+4 15-Mar Normal Purchase on Electronics Store 499 1.5% NeuCoins 7 0
+5 18-Mar Normal Purchase on Apparel Store 2,949 1.5% NeuCoins 44 0
+6 20-Mar Fuel Transaction 1,000 - 0 0
+7 21-Mar Reversal of partner Tata Brand Purchase -3,000 5% NeuCoins -45 -105
+8 21-Mar Reversal of Purchase on Electronics Store -500 1.5% NeuCoins -8 0
+9 23-Mar Restaurant Bill Payment 7,500 1.5% NeuCoins 113 0
+Total 34,563 502 634 1.5% back as NeuCoins on Other Non-UPI Spends (1.5% Base NeuCoins) – Terms & Conditions
+• The transaction settled from the merchant will be eligible for NeuCoins and settlement/Posting date of the
+transaction will be considered for points calculation
+• NeuCoins earned will be computed based on transactions settled during the statement period minus any returns
+or refunds during the same period.
+• Only EMI principal amount will be rewarded with NeuCoins. Interest, processing fees & GST amounts will not be
+eligible for NeuCoins. In case of any cancellation, refund or reversal of EMI/loan amount, the NeuCoins provided
+for the transaction will be reversed/adjusted.
+• In case the purchase/transaction is returned/cancelled/reversed post statement cycle completion, then the
+equivalent NeuCoins will be reversed/adjusted in the next statement cycle
+• NeuCoins will be calculated and posted on nearest round down integer, for example Rs 220 transaction will be
+calculated as (220*1.5% = 3.3 NeuCoins = 3 NeuCoins (round to nearest integer). Fractional NeuCoins will not be
+accrued.
+• NeuCoins will not be accrued for exclusion categories.
+•
+5% back as NeuCoins on Spend (Non-EMI) on partner Tata Brands – Terms & Conditions
+• 5% back as NeuCoins (Non-EMI) on partner Tata Brands as defined in Annex 1 will be awarded
+• 5% back as NeuCoins (Non-EMI) will be calculated as 1.5% base NeuCoins + 3.5% additional NeuCoins on partner
+Tata Brands transactions
+• 3.5% Additional NeuCoins will be calculated and posted on nearest round integer, for example Rs 240
+transaction will be calculated as (240*3.5% = 8.4 NeuCoins = 8 NeuCoins (round to nearest integer). Fractional
+NeuCoins will not be accrued.
+• The transaction settled from the merchant will be eligible for NeuCoins and settlement/Posting date of the
+transaction will be considered for points calculation.
+• 3.5% Additional NeuCoins on Tata Brand Merchants are calculated basis the Merchant IDs (MIDs), Terminal IDs
+(TIDs) shared by the respective merchant partners. If in case the TID is not available in the set-up, such
+transactions will not qualify for the benefit.
+• Also, if the variant of your Tata Neu HDFC Bank Card has been recently changed (which includes Infinity variant
+to Plus variant or vice versa, and/or RuPay to VISA franchise conversion or vice versa), then accelerated
+NeuCoins on the unbilled transactions done on the previous card will not be posted.
+• In case the purchase/transaction is returned/cancelled/reversed post cycle completion, then the equivalent
+NeuCoins will be reversed/adjusted in the next cycle
+• The accrual of the 5% back as NeuCoins on spends on partner Tata Brands will be governed by the fair usage
+policy as mentioned in Annexure 1
+• Also, if you have completed your transaction using UPI (applicable for RuPay Variant only), then such transaction
+will not qualify for this benefit.
+• NeuCoins will not be accrued for exclusion categories. Details on Accrual of NeuCoins
+Type of Transactions Process of NeuCoins Credit in the Credit Card Account
+NeuCoins on Up to 1.5% NeuCoins (max of 500 NeuCoins per calendar month)
+UPI Transactions
+- 0.50% NeuCoins for transactions done using any UPI ID (Google Pay, PhonePe, Cred, etc.)
+0.5% NeuCoins on eligible UPI transactions (on Tata Neu Infinity CC), are posted in the credit
+card account on the next day of the settlement of the transaction, however it may take up to
+5 working days for the NeuCoins to reflect in your credit card account. For example, for the
+transactions settled on 15-Jan, NeuCoins will reflect in your credit card account latest by 21-
+Jan.
+- Additional 1% NeuCoins if the transaction is done using the Tata Neu UPI ID, this is
+directly posted in your Tata NeuPass Account.
+The total NeuCoins earned on eligible UPI transactions are capped to 500 NeuCoins per
+month, NeuCoins will not be accrued for exclusion categories.
+What is the Tata Neu UPI ID and how can I get it?
+The Tata Neu UPI ID is a unique UPI identifier provided by Tata Neu. You can create your
+Tata Neu UPI ID through the Tata Neu app. Simply follow the instructions in the app to set it
+up and link it to your Tata Neu HDFC Credit Card.
+NeuCoins on 1.5% NeuCoins on the eligible Grocery/Insurance/Utility/Telecom&Cable transactions (on
+Grocery/Insurance/ Tata Neu Infinity CC), are posted in the credit card account on the next day of the
+Utility/ settlement, however it may take up to 5 working days for the points to reflect in your credit
+Telecom&Cable card account. For example, for the transactions settled on 15-Jan, NeuCoins will reflect in
+your credit card account latest by 21-Jan.
+(Non-UPI
+Transactions) Capping of NeuCoins Accrued as per the Transaction Settlement date:-
+Grocery Transactions: - 2,000 NeuCoins per month
+Insurance Transactions: - 2,000 NeuCoins per month
+Utility Transactions: - 2,000 NeuCoins per month
+Telecom&Cable Transactions: - 2,000 NeuCoins per month
+NeuCoins on other 1.5% NeuCoins on the other eligible transactions (on Tata Neu Infinity CC), are posted in the
+Eligible (Non-UPI credit card account on settlement of the transactions. NeuCoins will not be accrued for
+Transactions) exclusion categories. Additional NeuCoins on • Till 25-Dec-25, 3.5% Additional NeuCoins (on Tata Neu Infinity CC) on eligible partner
+Partner Tata brand transactions, were posted once in the month for the transactions settled in
+Brands (Non-UPI previous calendar month.
+Transactions)
+o For example, for eligible transactions settled (as per posting date) between 1-Nov to
+30-Nov, NeuCoins were posted in the credit card account by 3-Dec.
+• From 26-Dec-25, 3.5% Additional NeuCoins (on Tata Neu Infinity CC) on eligible partner
+brand transactions will be posted in the credit card account on the next day of the
+settlement, however it may take up to 5 working days for the points to reflect in your
+credit card account.
+o For example, for the transactions settled on 15-Jan, NeuCoins will reflect in your
+credit card account latest by 21-Jan.
+• Fair Usage Policy is applicable, refer Annex 1 – Tata Brand Merchants and Fair Usage
+Policy, NeuCoins will not be accrued for exclusion categories.
+• W.e.f from 17-Nov-25, following is applicable for NeuCoins of EMI
+Type of Loan Loan Open Date Accrual of NeuCoins
+Smart EMI / Dial an EMI On or before Till 17-Nov-25, Eligible NeuCoins have been credited on monthly
+transaction billing of Principal Amount.
+16-Sep-25
+Cardholder converts For Loan Outstanding as on 17-Nov-25, residual NeuCoins will be
+Purchases (post posted in your Credit Card Account by 31-Dec-25.
+settlement) into Loan
+Post 17-Nov-25, NeuCoins will not be given on monthly billing of
+Account
+EMI Principal Amount.
+From 17-Sep-25 For Eligible Merchant Category Codes NeuCoins will be credited
+on settlement of Purchase transaction to the Credit Card
+Account.
+Post 17-Nov-25, NeuCoins will not be given on monthly billing of
+EMI Principal Amount
+Off-Us Merchant EMI On or before Till 17-Nov-25, Eligible NeuCoins have been credited on monthly
+billing of Principal Amount.
+The Purchase Transaction 15-Oct-25
+is 1st billed to the Credit For Loan Outstanding as on 17-Nov-25, residual NeuCoins will be
+Card Account and then posted in your Credit Card Account by 31-Dec-25.
+converted to Loan
+Post 17-Nov-25, NeuCoins will not be given on monthly billing of
+Account
+EMI Principal Amount. From 16-Oct-25 For Eligible Merchant Category Codes NeuCoins will be credited
+on settlement of Purchase transaction to the Credit Card
+Account.
+Post 17-Nov-25, NeuCoins will not be given on monthly billing of
+EMI Principal Amount
+On-Us Merchant EMI Any On ongoing basis, eligible NeuCoins will be credited on monthly
+billing of EMI Principal Amount
+The Purchase Transaction
+is directly converted to
+Loan Account
+NeuCoins Redemption –Terms & Conditions
+• On Periodic basis (within 7 working days of the statement generation) the NeuCoins will be transferred to Tata
+Neu by the Bank
+• Your monthly statement will give breakup of NeuCoins as following:
+o NeuCoins accrued and available with the Bank
+o NeuCoins transferred to Tata Neu during the Statement Cycle
+• Unless otherwise notified by Tata Neu, each NeuCoin may be utilized to avail a Benefit equivalent to ₹1
+on Tata Neu Rewards Program-Eligible Purchases.
+• NeuCoins can only be used on eligible transactions as defined by the individual brands
+REDEMPTION ON MOBILE APP / WEBSITE
+How to redeem? Applicable Brands
+1. Tata Neu
+via Tata Pay
+2. Air India Express
+3. bigbasket
+1. Select ‘Tata Pay’ as payment option on payments page
+4. Croma
+2. Redeem desired amount of ‘NeuCoins’ on Tata Pay
+5. IHCL hotels
+via ‘NeuCoins’ / ‘Use my NeuCoins’/ ‘Loyalty Points’
+1. Tata Cliq
+1. Select ‘NeuCoins’ / ‘Use my NeuCoins’ / ’Loyalty Redemption’ 2. Tata 1mg
+option on order page / payments page 3. Only via Tata Neu for Titan/Tanishq
+2. Redeem the desired amount of NeuCoins
+REDEMPTION AT STORES
+How to redeem? Applicable Brands
+At Point of Sale / Cashier Desk
+1. Croma
+1. Voice out your Tata Neu Registered Mobile number to the
+2. IHCL hotels
+cashier
+3. Westside
+2. The cashier will confirm the NeuCoins balance on your Tata Neu
+account
+3. Confirm the amount of NeuCoins to be redeemed 4. Cashier will trigger an OTP to your registered mobile number to
+initiate redemption
+5. Voice out the OTP to the cashier to complete your purchase
+using NeuCoins
+*Currently, NeuCoins redemption option is not available on Air India, Tata Play, and Bill Payment on Tata Neu
+• NeuCoins may not be exchanged or utilized by a Tata Neu Member, either with a Participating Venture or with
+any individual, for cash, prizes, or credit.
+• Starting 01-Aug-25, NeuCoins earned on your Tata Neu HDFC Bank Credit Card will have a validity of 12 months
+(including lock period) from the end of the month in which they're credited to your Tata Neu Account. Example:
+o If NeuCoins are credited on 05-Aug-25, they will be valid until 31-Aug-26.
+o If NeuCoins are credited on 31-Aug-25, they will be valid until 31-Aug-26.
+Validity of Existing NeuCoins balance
+o Non-Promotional NeuCoins: The validity of your existing balance of Non-Promotional NeuCoins (earned
+before 01-Aug-25) will be set as 31-Jul-26 in your Tata Neu Account, this activity will start from Jul’25
+and will be completed by Aug’25 in a phased manner.
+o Promotional NeuCoins/Welcome Benefit: NeuCoins earned during special promotions or as Welcome
+Benefit will continue to follow the expiry terms communicated at the time of issuance. For details on
+Redemption and Validity on NeuCoins, please click here
+Other Benefits –Terms & Conditions
+• 1% Fuel Surcharge waiver on fuel transactions (Minimum transaction of ₹400, Maximum transaction of ₹5,000 &
+Maximum waiver of ₹500 per statement cycle). Fuel surcharge varies from 1% of fuel transaction amount, the rate
+of surcharge may vary depending on the fuel station and their acquiring bank. Taxes as applicable shall apply further.
+In any case, Bank shall be giving a maximum waiver of 1% in case of any dispute, subject to applicable limits as
+mentioned above.
+• Welcome Benefit of 1,499 NeuCoins (as reversal of 1st Year Membership Fees) will be given to the cardholder by
+Tata Digital Private Limited inside Tata Neu App. Welcome Benefit is applicable on 1st Transaction done within 30
+days of card issuance and will be available to claim inside Tata Neu App within 60 days of such transaction.
+Note: For eligible customers, option to claim the Welcome Benefit will be available inside Tata Neu App for 180 days
+from statement date of the eligible transaction. The validity of the NeuCoins given against Welcome Benefit will be
+365 days from the claim date. Lifetime Free or First Year Free Cards will not be eligible for the Welcome Benefit.
+• For Details on Insurance Feature of the card click here
+• For Details on Airport Lounge Access Feature of the card click here
+• For quick access to Most Important Terms & Conditions and Fees and Charges, please click here Annex 1 – Tata Brand Merchants and Fair Usage Policy
+Tata Neu Infinity HDFC Bank Credit Card
+Category Brand Maximum Monthly Spends Maximum Annual Spends
+Eligible for 5% back as Eligible for 5% back as
+NeuCoins (in Rs) NeuCoins (in Rs)
+Electronics Croma 6,00,000 18,00,000
+Fashion Tata CliQ 3,00,000 18,00,000
+Westside
+Travel IHCL 8,00,000 30,00,000
+Air India
+Express
+Air India*
+Others 1Mg 2,00,000 15,00,000
+Cult
+Tata Play
+Bill payments (and Gift card Tata Pay 50,000 6,00,000
+purchases on Tata Neu) w.e.f 1-Aug-24: - 1,00,000
+As per the Terms and Conditions
+Following transactions will not
+accrue NeuCoins
+• Education Fees - (3rd Party
+Education MCC Transaction)
+• Municipal Taxes/eChallan/NPS
+- (Government MCC
+Transaction)
+• Housing Society and Rental –
+(Rental MCC Transaction)
+Grocery Big Basket 1,00,000 12,00,000
+With effect from 1-Jan-2023, following brands/merchants are included
+Fashion Accessories & Jewellery Titan 6,00,000 18,00,000
+Tanishq
+With effect from 1-Mar-2024, following brands/merchants are included
+Food Delivery Qmin 50,000 6,00,000
+Food Delivery
+via Tata Neu
+*Air India is eligible for additional NeuCoins w.e.f from 3-Oct-23 Terms & Conditions – Tata Neu Infinity HDFC Bank Credit Card
+NeuCoins Proposition
+• NeuCoins will be awarded in the customer’s credit card account under the reward points scheme
+• The NeuCoins will be processed as per the following table:
+Type of Spends NeuCoins
+Non-EMI Retail Spends on partner Tata Brands 5% back as NeuCoins
+Non-EMI Retail Spends on Non-Tata Brands 1.5% back as NeuCoins
+Merchant EMI Spends (Any Brand) 1.5% back as NeuCoins
+Any UPI Spends on Rupay Credit Card
+(Including partner Tata Brands)
+1.5% back as NeuCoins (max of 500 NeuCoins per calendar month)
+With effect from 01-Aug-24: -
+- 0.50% back as NeuCoins for transactions done using any UPI ID 
+(Google Pay, PhonePe, Cred, etc.)
+- Additional 1% back as NeuCoins if the transaction is done using 
+the Tata Neu UPI ID.
+- The total NeuCoins earned on eligible UPI transactions are 
+capped to 500 NeuCoins per month
+Exclusion Categories for Any type of NeuCoins
+NeuCoins will not be accrued for the following spends/transactions on the card 
+• Fuel Spends | Wallet loads / Gift or Prepaid Card load/ Voucher purchase 
+• Cash Advances | Payment of Outstanding Balances 
+• Payment of card fees and other charges | Smart EMI / Dial an EMI transaction
+• Rental and Government related transactions
+• With effect from 1st Sep 2024, NeuCoins will not be accrued for Education payments made through third-party apps 
+like (but not limited to) CRED, Cheq, MobiKwik, and others. However, education payments made directly through 
+college/school websites, or their POS machines will earn NeuCoins.
+• With effect from 1st July 2025, NeuCoins will not be earned on Online Skill-Based Gaming transactions (MCC-5816)
+For Example,
+No Transaction
+Posting Date
+Merchant Purchase 
+Amount
+in Rs
+NeuCoins Type Base 
+NeuCoins
+Accrued
+Additional 
+NeuCoins
+Accrued
+1 10-Mar Purchase on partner Tata Brand 21,100 5% NeuCoins 317 739
+2 12-Mar Merchant EMI on Tata Brand - Principal 
+Amount 4,900 1.5% NeuCoins 74 0
+3 12-Mar Merchant EMI on Tata Brand - Interest 
+Amount 115 -
+0 0
+4 15-Mar Normal Purchase on Electronics Store 499 1.5% NeuCoins 7 0
+5 18-Mar Normal Purchase on Apparel Store 2,949 1.5% NeuCoins 44 0
+6 20-Mar Fuel Transaction 1,000 - 0 0
+7 21-Mar Reversal of partner Tata Brand Purchase -3,000 5% NeuCoins -45 -105
+8 21-Mar Reversal of Purchase on Electronics Store -500 1.5% NeuCoins -8 0
+9 23-Mar Restaurant Bill Payment 7,500 1.5% NeuCoins 113 0
+Total 34,563 502 634
+Updated on 03-Jan-2026 1.5% back as NeuCoins on Other Non-UPI Spends (1.5% Base NeuCoins) – Terms & Conditions
+• The transaction settled from the merchant will be eligible for NeuCoins and settlement/Posting date of the 
+transaction will be considered for points calculation
+• NeuCoins earned will be computed based on transactions settled during the statement period minus any returns 
+or refunds during the same period.
+• Only EMI principal amount will be rewarded with NeuCoins. Interest, processing fees & GST amounts will not be 
+eligible for NeuCoins. In case of any cancellation, refund or reversal of EMI/loan amount, the NeuCoins provided 
+for the transaction will be reversed/adjusted.
+• In case the purchase/transaction is returned/cancelled/reversed post statement cycle completion, then the 
+equivalent NeuCoins will be reversed/adjusted in the next statement cycle
+• NeuCoins will be calculated and posted on nearest round down integer, for example Rs 220 transaction will be 
+calculated as (220*1.5% = 3.3 NeuCoins = 3 NeuCoins (round to nearest integer). Fractional NeuCoins will not be 
+accrued.
+• NeuCoins will not be accrued for exclusion categories.
+•
+5% back as NeuCoins on Spend (Non-EMI) on partner Tata Brands – Terms & Conditions
+• 5% back as NeuCoins (Non-EMI) on partner Tata Brands as defined in Annex 1 will be awarded
+• 5% back as NeuCoins (Non-EMI) will be calculated as 1.5% base NeuCoins + 3.5% additional NeuCoins on partner 
+Tata Brands transactions
+• 3.5% Additional NeuCoins will be calculated and posted on nearest round integer, for example Rs 240 
+transaction will be calculated as (240*3.5% = 8.4 NeuCoins = 8 NeuCoins (round to nearest integer). Fractional 
+NeuCoins will not be accrued.
+• The transaction settled from the merchant will be eligible for NeuCoins and settlement/Posting date of the 
+transaction will be considered for points calculation.
+• 3.5% Additional NeuCoins on Tata Brand Merchants are calculated basis the Merchant IDs (MIDs), Terminal IDs 
+(TIDs) shared by the respective merchant partners. If in case the TID is not available in the set-up, such 
+transactions will not qualify for the benefit. 
+• Also, if the variant of your Tata Neu HDFC Bank Card has been recently changed (which includes Infinity variant 
+to Plus variant or vice versa, and/or RuPay to VISA franchise conversion or vice versa), then accelerated 
+NeuCoins on the unbilled transactions done on the previous card will not be posted.
+• In case the purchase/transaction is returned/cancelled/reversed post cycle completion, then the equivalent 
+NeuCoins will be reversed/adjusted in the next cycle
+• The accrual of the 5% back as NeuCoins on spends on partner Tata Brands will be governed by the fair usage 
+policy as mentioned in Annexure 1
+• Also, if you have completed your transaction using UPI (applicable for RuPay Variant only), then such transaction 
+will not qualify for this benefit.
+• NeuCoins will not be accrued for exclusion categories. Details on Accrual of NeuCoins
+Type of Transactions Process of NeuCoins Credit in the Credit Card Account
+NeuCoins on 
+UPI Transactions
+Up to 1.5% NeuCoins (max of 500 NeuCoins per calendar month)
+- 0.50% NeuCoins for transactions done using any UPI ID (Google Pay, PhonePe, Cred, etc.)
+0.5% NeuCoins on eligible UPI transactions (on Tata Neu Infinity CC), are posted in the credit 
+card account on the next day of the settlement of the transaction, however it may take up to 
+5 working days for the NeuCoins to reflect in your credit card account. For example, for the 
+transactions settled on 15-Jan, NeuCoins will reflect in your credit card account latest by 21-
+Jan.
+- Additional 1% NeuCoins if the transaction is done using the Tata Neu UPI ID, this is 
+directly posted in your Tata NeuPass Account.
+The total NeuCoins earned on eligible UPI transactions are capped to 500 NeuCoins per 
+month, NeuCoins will not be accrued for exclusion categories.
+What is the Tata Neu UPI ID and how can I get it?
+The Tata Neu UPI ID is a unique UPI identifier provided by Tata Neu. You can create your 
+Tata Neu UPI ID through the Tata Neu app. Simply follow the instructions in the app to set it 
+up and link it to your Tata Neu HDFC Credit Card.
+NeuCoins on 
+Grocery/Insurance/ 
+Utility/ 
+Telecom&Cable
+(Non-UPI
+Transactions)
+1.5% NeuCoins on the eligible Grocery/Insurance/Utility/Telecom&Cable transactions (on 
+Tata Neu Infinity CC), are posted in the credit card account on the next day of the 
+settlement, however it may take up to 5 working days for the points to reflect in your credit 
+card account. For example, for the transactions settled on 15-Jan, NeuCoins will reflect in 
+your credit card account latest by 21-Jan.
+Capping of NeuCoins Accrued as per the Transaction Settlement date:-
+Grocery Transactions: - 2,000 NeuCoins per month
+Insurance Transactions: - 2,000 NeuCoins per month
+Utility Transactions: - 2,000 NeuCoins per month
+Telecom&Cable Transactions: - 2,000 NeuCoins per month
+NeuCoins on other 
+Eligible (Non-UPI
+Transactions)
+1.5% NeuCoins on the other eligible transactions (on Tata Neu Infinity CC), are posted in the 
+credit card account on settlement of the transactions. NeuCoins will not be accrued for 
+exclusion categories. Additional NeuCoins on 
+Partner Tata 
+Brands (Non-UPI 
+Transactions)
+• Till 25-Dec-25, 3.5% Additional NeuCoins (on Tata Neu Infinity CC) on eligible partner 
+brand transactions, were posted once in the month for the transactions settled in 
+previous calendar month. 
+o For example, for eligible transactions settled (as per posting date) between 1-Nov to 
+30-Nov, NeuCoins were posted in the credit card account by 3-Dec.
+• From 26-Dec-25, 3.5% Additional NeuCoins (on Tata Neu Infinity CC) on eligible partner 
+brand transactions will be posted in the credit card account on the next day of the 
+settlement, however it may take up to 5 working days for the points to reflect in your 
+credit card account. 
+o For example, for the transactions settled on 15-Jan, NeuCoins will reflect in your 
+credit card account latest by 21-Jan. 
+• Fair Usage Policy is applicable, refer Annex 1 – Tata Brand Merchants and Fair Usage 
+Policy, NeuCoins will not be accrued for exclusion categories.
+• W.e.f from 17-Nov-25, following is applicable for NeuCoins of EMI
+Type of Loan Loan Open Date Accrual of NeuCoins
+Smart EMI / Dial an EMI 
+transaction
+Cardholder converts 
+Purchases (post 
+settlement) into Loan 
+Account 
+On or before
+16-Sep-25
+Till 17-Nov-25, Eligible NeuCoins have been credited on monthly 
+billing of Principal Amount.
+For Loan Outstanding as on 17-Nov-25, residual NeuCoins will be 
+posted in your Credit Card Account by 31-Dec-25.
+Post 17-Nov-25, NeuCoins will not be given on monthly billing of 
+EMI Principal Amount.
+From 17-Sep-25 For Eligible Merchant Category Codes NeuCoins will be credited 
+on settlement of Purchase transaction to the Credit Card 
+Account.
+Post 17-Nov-25, NeuCoins will not be given on monthly billing of 
+EMI Principal Amount
+Off-Us Merchant EMI 
+The Purchase Transaction 
+is 1st billed to the Credit 
+Card Account and then 
+converted to Loan 
+Account
+On or before
+15-Oct-25
+Till 17-Nov-25, Eligible NeuCoins have been credited on monthly 
+billing of Principal Amount.
+For Loan Outstanding as on 17-Nov-25, residual NeuCoins will be 
+posted in your Credit Card Account by 31-Dec-25.
+Post 17-Nov-25, NeuCoins will not be given on monthly billing of 
+EMI Principal Amount. From 16-Oct-25 For Eligible Merchant Category Codes NeuCoins will be credited 
+on settlement of Purchase transaction to the Credit Card 
+Account.
+Post 17-Nov-25, NeuCoins will not be given on monthly billing of 
+EMI Principal Amount
+On-Us Merchant EMI 
+The Purchase Transaction 
+is directly converted to 
+Loan Account
+Any On ongoing basis, eligible NeuCoins will be credited on monthly 
+billing of EMI Principal Amount 
+NeuCoins Redemption –Terms & Conditions
+• On Periodic basis (within 7 working days of the statement generation) the NeuCoins will be transferred to Tata 
+Neu by the Bank
+• Your monthly statement will give breakup of NeuCoins as following:
+o NeuCoins accrued and available with the Bank
+o NeuCoins transferred to Tata Neu during the Statement Cycle
+• Unless otherwise notified by Tata Neu, each NeuCoin may be utilized to avail a Benefit equivalent to ₹1 
+on Tata Neu Rewards Program-Eligible Purchases.
+• NeuCoins can only be used on eligible transactions as defined by the individual brands
+REDEMPTION ON MOBILE APP / WEBSITE
+How to redeem? Applicable Brands
+via Tata Pay
+1. Select ‘Tata Pay’ as payment option on payments page
+2. Redeem desired amount of ‘NeuCoins’ on Tata Pay
+1. Tata Neu
+2. Air India Express
+3. bigbasket
+4. Croma
+5. IHCL hotels
+via ‘NeuCoins’ / ‘Use my NeuCoins’/ ‘Loyalty Points’
+1. Select ‘NeuCoins’ / ‘Use my NeuCoins’ / ’Loyalty Redemption’ 
+option on order page / payments page
+2. Redeem the desired amount of NeuCoins
+1. Tata Cliq
+2. Tata 1mg
+3. Only via Tata Neu for Titan/Tanishq 
+REDEMPTION AT STORES
+How to redeem? Applicable Brands
+At Point of Sale / Cashier Desk
+1. Voice out your Tata Neu Registered Mobile number to the 
+cashier
+2. The cashier will confirm the NeuCoins balance on your Tata Neu 
+account
+3. Confirm the amount of NeuCoins to be redeemed
+1. Croma
+2. IHCL hotels
+3. Westside 4. Cashier will trigger an OTP to your registered mobile number to 
+initiate redemption
+5. Voice out the OTP to the cashier to complete your purchase 
+using NeuCoins
+*Currently, NeuCoins redemption option is not available on Air India, Tata Play, and Bill Payment on Tata Neu
+• NeuCoins may not be exchanged or utilized by a Tata Neu Member, either with a Participating Venture or with 
+any individual, for cash, prizes, or credit.
+• Starting 01-Aug-25, NeuCoins earned on your Tata Neu HDFC Bank Credit Card will have a validity of 12 months 
+(including lock period) from the end of the month in which they're credited to your Tata Neu Account. Example: 
+o If NeuCoins are credited on 05-Aug-25, they will be valid until 31-Aug-26.
+o If NeuCoins are credited on 31-Aug-25, they will be valid until 31-Aug-26.
+Validity of Existing NeuCoins balance
+o Non-Promotional NeuCoins: The validity of your existing balance of Non-Promotional NeuCoins (earned 
+before 01-Aug-25) will be set as 31-Jul-26 in your Tata Neu Account, this activity will start from Jul’25 
+and will be completed by Aug’25 in a phased manner.
+o Promotional NeuCoins/Welcome Benefit: NeuCoins earned during special promotions or as Welcome 
+Benefit will continue to follow the expiry terms communicated at the time of issuance. For details on 
+Redemption and Validity on NeuCoins, please click here
+Other Benefits –Terms & Conditions
+• 1% Fuel Surcharge waiver on fuel transactions (Minimum transaction of ₹400, Maximum transaction of ₹5,000 & 
+Maximum waiver of ₹500 per statement cycle). Fuel surcharge varies from 1% of fuel transaction amount, the rate 
+of surcharge may vary depending on the fuel station and their acquiring bank. Taxes as applicable shall apply further. 
+In any case, Bank shall be giving a maximum waiver of 1% in case of any dispute, subject to applicable limits as 
+mentioned above.
+• Welcome Benefit of 1,499 NeuCoins (as reversal of 1st Year Membership Fees) will be given to the cardholder by 
+Tata Digital Private Limited inside Tata Neu App. Welcome Benefit is applicable on 1st Transaction done within 30 
+days of card issuance and will be available to claim inside Tata Neu App within 60 days of such transaction.
+Note: For eligible customers, option to claim the Welcome Benefit will be available inside Tata Neu App for 180 days 
+from statement date of the eligible transaction. The validity of the NeuCoins given against Welcome Benefit will be 
+365 days from the claim date. Lifetime Free or First Year Free Cards will not be eligible for the Welcome Benefit.
+• For Details on Insurance Feature of the card click here
+• For Details on Airport Lounge Access Feature of the card click here
+• For quick access to Most Important Terms & Conditions and Fees and Charges, please click here Annex 1 – Tata Brand Merchants and Fair Usage Policy
+Tata Neu Infinity HDFC Bank Credit Card
+Category Brand Maximum Monthly Spends 
+Eligible for 5% back as 
+NeuCoins (in Rs)
+Maximum Annual Spends 
+Eligible for 5% back as 
+NeuCoins (in Rs)
+Electronics Croma 6,00,000 18,00,000
+Fashion Tata CliQ
+Westside
+3,00,000 18,00,000
+Travel IHCL
+Air India 
+Express
+Air India*
+8,00,000 30,00,000
+Others 1Mg
+Cult
+Tata Play
+2,00,000 15,00,000
+Bill payments (and Gift card 
+purchases on Tata Neu)
+As per the Terms and Conditions
+Following transactions will not 
+accrue NeuCoins
+• Education Fees - (3rd Party 
+Education MCC Transaction)
+• Municipal Taxes/eChallan/NPS 
+- (Government MCC 
+Transaction)
+• Housing Society and Rental –
+(Rental MCC Transaction)
+Tata Pay 50,000
+w.e.f 1-Aug-24: - 1,00,000
+6,00,000
+Grocery Big Basket 1,00,000 12,00,000
+With effect from 1-Jan-2023, following brands/merchants are included
+Fashion Accessories & Jewellery Titan
+Tanishq
+6,00,000 18,00,000
+With effect from 1-Mar-2024, following brands/merchants are included
+Food Delivery Qmin
+Food Delivery 
+via Tata Neu
+50,000 6,00,000
+*Air India is eligible for additional NeuCoins w.e.f from 3-Oct-23

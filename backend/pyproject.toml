@@ -1,0 +1,45 @@
+[project]
+name = "cc-smith"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Nithish Kumar G", email = "Nithishkumar4164@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.12.1",
+    "apscheduler>=3.11.3",
+    "fastapi>=0.142.4",
+    "httpx>=0.28.1",
+    "pdfplumber>=0.11.10",
+    "pydantic>=2.13.5",
+    "pydantic-settings>=2.15.0",
+    "pyyaml>=6.0.3",
+    "rapidfuzz>=3.14.6",
+    "sqlalchemy>=2.1.4",
+    "trafilatura>=2.3.1",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+cc-smith = "cc_smith.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "hypothesis>=6.168.5",
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
+
+[tool.ruff]
+line-length = 140
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Header", "fastapi.Query"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

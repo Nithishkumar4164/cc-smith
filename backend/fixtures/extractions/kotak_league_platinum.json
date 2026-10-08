@@ -1,0 +1,214 @@
+{
+  "id": "kotak_league_platinum",
+  "name": "Kotak League Platinum Credit Card",
+  "issuer": "Kotak Mahindra Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+        "quote": "Joining fee | ₹ 499/Nil | Annual fees | ₹ 499/ Nil | Condition for waiver of Joining Fees | Not Available | Condition for waiver of Annual Fees | Minimum retail spends of ₹ 50,000 in a year"
+      }
+    ],
+    "joining_paise": 49900,
+    "annual_paise": 49900,
+    "waiver_spend_paise": 5000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+        "quote": "For redemption against other categories like Mobile Recharge, Shopping, etc., 1 Reward Point = ₹0.10"
+      }
+    ],
+    "kind": "points",
+    "name": "Kotak Reward Points",
+    "value_paise": 10
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Annual Spends | Special Categories* | Other Categories | Up to 2 Lacs | 8 | 4 | 2 lacs & above | 8 | 8 | *Special Categories are Travel Agencies & Tour Operators | Package Tour Operators | Airlines and Air Carriers | Electric Sales | Durable Goods | Departmental Stores"
+        }
+      ],
+      "id": "special",
+      "match": {
+        "categories": [
+          "travel"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 8,
+        "per_paise": 15000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Utility Spends | Reward points can be only earned on utility spends up to ₹35,000 per statement cycle"
+        },
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Remaining eligible spends | 1,75,000 | 4 Reward points per ₹150"
+        }
+      ],
+      "id": "utilities",
+      "match": {
+        "categories": [
+          "utilities"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 4,
+        "per_paise": 15000
+      },
+      "cap_ids": [
+        "utilities"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Remaining eligible spends | 1,75,000 | 4 Reward points per ₹150"
+        }
+      ],
+      "id": "first_2l",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 4,
+        "per_paise": 15000
+      },
+      "cap_ids": [
+        "tier1"
+      ],
+      "stacks": false,
+      "priority": 1,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Anniversary spends greater than 2 Lakhs | 50,000 | 8 Reward points per ₹150"
+        }
+      ],
+      "id": "above_2l",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 8,
+        "per_paise": 15000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Utility Spends | Reward points can be only earned on utility spends up to ₹35,000 per statement cycle"
+        }
+      ],
+      "id": "utilities",
+      "amount": 3500000,
+      "unit": "spend_paise",
+      "period": "statement_cycle",
+      "spill": false
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Annual Spends | Special Categories* | Other Categories | Up to 2 Lacs | 8 | 4 | 2 lacs & above | 8 | 8 | *Special Categories are Travel Agencies & Tour Operators | Package Tour Operators | Airlines and Air Carriers | Electric Sales | Durable Goods | Departmental Stores"
+        }
+      ],
+      "id": "tier1",
+      "amount": 20000000,
+      "unit": "spend_paise",
+      "period": "anniversary_year",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Wallet Load, Online skill-based gaming, Insurance, Government, Rent, Education Spends, and Fuel | Reward point earnings against these spend categories will be discontinued"
+        }
+      ],
+      "categories": [
+        "wallet",
+        "gaming",
+        "insurance",
+        "government",
+        "rent",
+        "education",
+        "fuel"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Customers will not earn reward points on railway transactions"
+        }
+      ],
+      "categories": [],
+      "merchants": [
+        "irctc"
+      ],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "milestones": [
+    {
+      "src": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "quote": "Spend Rs. 1, 25,000 every 6 months and get 4 free PVR tickets or 10000 reward points:"
+        }
+      ],
+      "spend_paise": 12500000,
+      "period": "half_year",
+      "value_paise": 100000,
+      "description": "10,000 reward points (or 4 PVR tickets) at ₹1.25 lakh every 6 months"
+    }
+  ],
+  "min_txn_src": []
+}

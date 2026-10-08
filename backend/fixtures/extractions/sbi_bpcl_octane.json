@@ -1,0 +1,198 @@
+{
+  "id": "sbi_bpcl_octane",
+  "name": "BPCL SBI Card OCTANE",
+  "issuer": "SBI Card",
+  "identity": {
+    "src": [
+      {
+        "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+        "quote": "D. The Visa/RuPay logo: The hologram and the logo | ensure that all establishments throughout the world | displaying the Visa/RuPay will accept your card."
+      }
+    ],
+    "network": "Visa, RuPay",
+    "upi_rupay": true
+  },
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf",
+        "quote": "BPCL SBI Card Octane 1,499 1,499 (Waived off on annual spends of Rs. 2 Lakh or more in the | preceding year)"
+      }
+    ],
+    "joining_paise": 149900,
+    "annual_paise": 149900,
+    "waiver_spend_paise": 20000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+        "quote": "4 Reward Point gives you `1 of free fuel."
+      }
+    ],
+    "kind": "points",
+    "name": "SBI Card Reward Points",
+    "value_paise": 25
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "quote": "1.1 7.25% Value back - 25X Reward Points on fuel purchases. 25 Reward Points per `100 on BPCL Fuel | spends (Max. of 2500 Reward Points per statement cycle)"
+        }
+      ],
+      "id": "bpcl",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "bpcl"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 25,
+        "per_paise": 10000
+      },
+      "cap_ids": [
+        "bpcl"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "quote": "10X Reward Points on every `100 spent on Groceries, Departmental stores, Movies & Dining."
+        }
+      ],
+      "id": "accelerated",
+      "match": {
+        "categories": [
+          "grocery",
+          "dining",
+          "entertainment"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 10,
+        "per_paise": 10000
+      },
+      "cap_ids": [
+        "accelerated"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "quote": "1 Reward Point on all other retail spends, except fuel ( 1 RP = `0.25)"
+        }
+      ],
+      "id": "other",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 1,
+        "per_paise": 10000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Spend unit for 1 RP inferred as ₹100 from the 25X/10X wording."
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "quote": "1.1 7.25% Value back - 25X Reward Points on fuel purchases. 25 Reward Points per `100 on BPCL Fuel | spends (Max. of 2500 Reward Points per statement cycle)"
+        }
+      ],
+      "id": "bpcl",
+      "amount": 2500,
+      "unit": "points",
+      "period": "statement_cycle",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "quote": "Cumulative 10X Reward Points accrued per `100 spent on Groceries, Departmental Stores, Movies | & Dining with your BPCL SBI Card OCTANE will have a maximum cap of 7,500 Reward Points per | month."
+        }
+      ],
+      "id": "accelerated",
+      "amount": 7500,
+      "unit": "points",
+      "period": "calendar_month",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "quote": "- Any purchases at petrol pumps/ service stations"
+        }
+      ],
+      "categories": [
+        "fuel"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [
+        "bpcl"
+      ],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "quote": "e-Wallet loading/recharge transactions identified under MCCs 6540 and 6541"
+        }
+      ],
+      "categories": [
+        "wallet"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "quote": "W.e.f. 15 Apr 2024, accrual of Reward Points on Rent Payment transactions with BPCL SBI Card"
+        }
+      ],
+      "categories": [
+        "rent"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "milestones": [],
+  "min_txn_src": []
+}

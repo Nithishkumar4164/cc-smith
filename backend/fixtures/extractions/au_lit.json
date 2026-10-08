@@ -1,0 +1,20 @@
+{
+  "id": "au_lit",
+  "name": "AU Bank LIT Credit Card",
+  "issuer": "AU Small Finance Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.au.bank.in/content/dam/aubank/in/en/pdf/credit-card/MITC(with-Schedule-of-Charges).pdf",
+        "quote": "LIT, InstaPay, AU KOSMO, ixigo AU, AU CA, AU CS, Paytm AU | AU Zaggle | Lifetime Free"
+      }
+    ],
+    "joining_paise": 0,
+    "annual_paise": 0
+  },
+  "earn_rules": [],
+  "caps": [],
+  "exclusions": [],
+  "milestones": [],
+  "min_txn_src": []
+}

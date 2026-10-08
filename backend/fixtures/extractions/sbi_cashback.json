@@ -1,0 +1,155 @@
+{
+  "id": "sbi_cashback",
+  "name": "Cashback SBI Card",
+  "issuer": "SBI Card",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf",
+        "quote": "CASHBACK SBI Card 999 999 (Waived off on annual spends of Rs.2 Lakh or more in the | preceding year)"
+      }
+    ],
+    "joining_paise": 99900,
+    "annual_paise": 99900,
+    "waiver_spend_paise": 20000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+        "quote": "Online 5% `2,000"
+      }
+    ],
+    "kind": "cashback",
+    "name": "Cashback",
+    "value_paise": 100
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "quote": "Online 5% `2,000"
+        }
+      ],
+      "id": "online",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": [
+          "online"
+        ]
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 500
+      },
+      "cap_ids": [
+        "online"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "quote": "Offline | 1% `2,000 | (POS at Merchant Outlets)"
+        }
+      ],
+      "id": "offline",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": [
+          "offline"
+        ]
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 100
+      },
+      "cap_ids": [
+        "offline"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "quote": "Online 5% `2,000"
+        },
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "quote": "The maximum Cashback* that can be earned in a statement | cycle will be capped at `4,000, as follows:"
+        }
+      ],
+      "id": "online",
+      "amount": 200000,
+      "unit": "paise",
+      "period": "statement_cycle",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "quote": "Offline | 1% `2,000 | (POS at Merchant Outlets)"
+        }
+      ],
+      "id": "offline",
+      "amount": 200000,
+      "unit": "paise",
+      "period": "statement_cycle",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "quote": "Cashback will not be applicable on spends at Digital | Gaming Platforms/Merchants, Tolls and Government- | related Transactions, in addition to existing exclusions."
+        }
+      ],
+      "categories": [
+        "gaming",
+        "tolls",
+        "government"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "quote": "*Cashback not applicable on Merchant EMI & Flexipay EMI transactions and on following categories: Utility, | insurance, Fuel, Rent, Wallet, School & Educational Services, Jewelry, Railways etc."
+        }
+      ],
+      "categories": [
+        "utilities",
+        "insurance",
+        "fuel",
+        "rent",
+        "wallet",
+        "education",
+        "jewellery"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "milestones": [],
+  "min_txn_src": []
+}

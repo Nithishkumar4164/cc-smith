@@ -1,0 +1,20 @@
+{
+  "id": "kiwi_yes_klick",
+  "name": "Kiwi RuPay Credit Card (YES BANK Klick)",
+  "issuer": "YES Bank (fintech partner: Kiwi / Gokiwi Technologies)",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.yes.bank.in/sites/web/content/published/api/v1.1/assets/CONTAA57595B2EF245259C4C623B1F7D33B3/native/ybl_mitc_pdf.pdf",
+        "quote": "RuPay Virtual NIL NIL NA NA | Card/ Klick /"
+      }
+    ],
+    "joining_paise": 0,
+    "annual_paise": 0
+  },
+  "earn_rules": [],
+  "caps": [],
+  "exclusions": [],
+  "milestones": [],
+  "min_txn_src": []
+}

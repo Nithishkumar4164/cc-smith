@@ -1,0 +1,21 @@
+{
+  "id": "sbi_simplyclick",
+  "name": "SimplyCLICK SBI Card",
+  "issuer": "SBI Card",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf",
+        "quote": "SimplyCLICK SBI Card 499 499 (Waived off on annual spends of Rs.1 Lakh or more in the | preceding year)"
+      }
+    ],
+    "joining_paise": 49900,
+    "annual_paise": 49900,
+    "waiver_spend_paise": 10000000
+  },
+  "earn_rules": [],
+  "caps": [],
+  "exclusions": [],
+  "milestones": [],
+  "min_txn_src": []
+}

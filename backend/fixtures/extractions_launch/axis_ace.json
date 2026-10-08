@@ -1,0 +1,114 @@
+{
+  "id": "axis_ace",
+  "name": "Axis Bank ACE Credit Card",
+  "issuer": "Axis Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
+        "quote": "Joining Fee ₹499 Annual Fee; Annual Fee: ₹499 2nd year onward | Annual fee waived off on annual spends greater than ₹2,00,000/-"
+      }
+    ],
+    "joining_paise": 49900,
+    "annual_paise": 49900,
+    "waiver_spend_paise": 20000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf?sfvrsn=a3effc42_6",
+        "quote": "Cashback shall mean money awarded in the customer’s Credit Card account under the cashback scheme."
+      }
+    ],
+    "kind": "cashback",
+    "name": "Cashback",
+    "value_paise": 100
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
+          "quote": "5% cashback* on Utility bill payments (electricity, internet, gas, and more) &DTH and mobile recharges on google pay"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf?sfvrsn=a3effc42_6",
+          "quote": "*Valid only if the payment is done by Axis ACE credit card on Google Pay for Android users."
+        }
+      ],
+      "id": "gpay_bills",
+      "match": {"categories": ["utilities"], "merchants": [], "channels": []},
+      "rate": {"kind": "pct", "bp": 500},
+      "cap_ids": ["accelerated"],
+      "requires": ["google_pay_android"],
+      "note": "Only bills and recharges paid with the card inside Google Pay on Android."
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
+          "quote": "4% cashback* on swiggy, zomato & ola"
+        }
+      ],
+      "id": "food_ride",
+      "match": {"categories": [], "merchants": ["swiggy", "zomato", "ola"], "channels": []},
+      "rate": {"kind": "pct", "bp": 400},
+      "cap_ids": ["accelerated"]
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
+          "quote": "1.5% cashback* on all other spends"
+        }
+      ],
+      "id": "other",
+      "match": {"categories": [], "merchants": [], "channels": []},
+      "rate": {"kind": "pct", "bp": 150},
+      "cap_ids": []
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf?sfvrsn=a3effc42_6",
+          "quote": "the earnings of cashback on the Credit Card has been capped at Rs. 500 for the transactions done on Swiggy, Zomato, Ola and bill payments (electricity, water, gas, LPG and broadband), DTH and mobile recharges through Google Pay (5% and 4% cashback categories combined)."
+        }
+      ],
+      "id": "accelerated",
+      "amount": 50000,
+      "unit": "paise",
+      "period": "statement_cycle"
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf?sfvrsn=a3effc42_6",
+          "quote": "The following MCCs have been excluded from cashback eligibility – Description Utility spends done on platforms other than Google Pay Telecom Fuel Clock, Jewelry, Watch & Silverware Stores Insurance Services Financial Institutions / Cash Withdrawal Rental payments Wallet Load Transactions Educational Services Government Services Gift Cards Bridge Fees, Road Fees & Tolls"
+        }
+      ],
+      "categories": ["fuel", "jewellery", "insurance", "rent", "wallet", "education", "government", "gift_card", "tolls"],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf?sfvrsn=a3effc42_6",
+          "quote": "All utility spends on any other platform except Google Pay will not be eligible for cashback."
+        }
+      ],
+      "categories": ["utilities"],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": ["food_ride", "other"]
+    }
+  ],
+  "milestones": []
+}

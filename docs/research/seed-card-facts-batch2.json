@@ -1,0 +1,1715 @@
+{
+  "as_of": "2026-10-08",
+  "source_policy": "Official issuer pages/PDFs only (issuer allow-listed .bank.in / sbicard.com domains), plus the co-brand partner or fintech operator's own domain for partner-owned fields. Quotes are copied from extracted text with whitespace/line breaks collapsed; ' | ' joins separate lines and '...' marks omitted text.",
+  "cards": [
+    {
+      "id": "axis_airtel",
+      "name": "Airtel Axis Bank Credit Card",
+      "issuer": "Axis Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 500,
+        "annual": 500,
+        "waiver_spend": 200000,
+        "quote": "Joining fee - primary card | ₹500 ... Annual fee – Primary Card | Annual Fee: ₹500 2nd year onward | annual fee waived off on annual spends greater than ₹ | 2,00,000/- {rent transactions ( MCC 6513 ) and wallet load | transactions ( MCC 6540 ) will not be eligible for spends | counted in availing annual fee waiver}",
+        "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card"
+      },
+      "earn": [
+        {
+          "category": "airtel (mobile, broadband, WiFi, DTH via Airtel Thanks app)",
+          "rate_pct": 25.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": null,
+            "unit": "inr",
+            "period": "statement_cycle",
+            "rule": "2 x base (1%) cashback earned in the same statement month"
+          },
+          "quote": "25% cashback on Airtel Mobile, Broadband, WiFi and DTH bill payments via Airtel Thanks App is capped at twice the base cashback earned during the statement month",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+          "note": "Effective 12 Apr 2026 (replaced a fixed ₹250 cap). Only for active Airtel connections. Zero if no base-category spend."
+        },
+        {
+          "category": "utilities (via Airtel Thanks app)",
+          "rate_pct": 10.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": null,
+            "unit": "inr",
+            "period": "statement_cycle",
+            "rule": "1 x base (1%) cashback earned in the same statement month"
+          },
+          "quote": "10% cashback on Utility bill payments such as gas, electricity, etc., via Airtel Thanks | App is capped at the base cashback earned during the statement month",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+          "note": "Utility payments outside the Airtel Thanks app earn nothing."
+        },
+        {
+          "category": "zomato|blinkit|district (value back to partner wallet)",
+          "rate_pct": 10.0,
+          "unit": "partner_wallet",
+          "points_per": null,
+          "cap": {
+            "amount": 200,
+            "unit": "inr",
+            "period": "calendar_month",
+            "per": "partner"
+          },
+          "quote": "10% value back* on Zomato, Blinkit and District Movies. (Max value back of ₹200 per partner per month, Mov of ₹499 applicable for Zomato and Blinkit)",
+          "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card",
+          "min_txn_inr": 499,
+          "note": "Credited by the partner as wallet value, not Axis cashback ('Axis Bank cashback shall not be applicable for this category'). Ecom payments only. 'per month' taken as calendar month; T&C says 'Maximum monthly value back of INR 200 per partner, per primary card.' MOV applies to Zomato and Blinkit only."
+        },
+        {
+          "category": "other",
+          "rate_pct": 1.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": null,
+          "quote": "1% Base Cashback (No Cap) earned on all other spends (excluding specific categories).",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf"
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "EMI, cash, fuel, rent, wallet, jewellery, insurance, education, government, utilities/telecom outside Airtel Thanks, gift cards, tolls",
+          "quote": "Cashback shall not be eligible on EMI transactions, Purchase converted to EMI post | facto, Payment of outstanding balance, fees and other charges along with following | MCC spends/transaction categories on the card: ... Cash advances / Financial Institutions | 2 | Fuel spends | 3 | Rent payments | 4 | Wallet recharge | 5 | Jewelry | 6 | Insurance services | 7 | Education services | 8 | Government services | 9 | Utility and Telecom Spends not done on Airtel Thanks App* | 10 | Gift Cards | 11 | Bridge Fees, Road Fees & Tolls",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf"
+        }
+      ],
+      "point_value_inr": null,
+      "point_value_quote": "Not applicable: cashback card; 'Cashback will directly be credited in your credit card statement' (product page).",
+      "eligibility": {
+        "min_income_annual": null,
+        "age": "18-70",
+        "quote": "Primary cardholder should be between the age of 18 and 70 years | The individual should be a resident of India",
+        "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card"
+      },
+      "lounge": "None from 12 Apr 2026. Quote: '4 complimentary domestic lounge access will be discontinued' (12 Apr 2026 revision notice).",
+      "milestones": [],
+      "notes": [
+        "Cap periods: T&C uses both 'statement cycle' and 'statement month'; recorded as statement_cycle.",
+        "Cashback is rounded down per transaction and credited in the next billing cycle, 3 days before statement date; Airtel-category caps follow a 60-day credit cycle.",
+        "Welcome: Amazon eVoucher ₹250 on first transaction within 30 days (not for cards issued without joining fee).",
+        "Fuel surcharge waiver 1% on ₹400-₹4,000, max ₹500 per statement; no cashback on fuel.",
+        "Page says T&C will be updated w.e.f. 28 Aug 2026; that PDF was not fetched (budget). Gift cards and tolls exclusion already appears in the 12 Apr 2026 cashback T&C fetched.",
+        "Network not stated in fetched text. T&C mentions 'VPA IDs on UPI spends' for Airtel Thanks UPI payments, but no RuPay variant is stated, so upi_rupay is null."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+          "status": "200 (PDF, effective 12 Apr 2026)"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/terms-and-conditions-for-airtel-cbcc-cvp.pdf",
+          "status": "200 (PDF, 12 Apr 2026 revision notice)"
+        }
+      ]
+    },
+    {
+      "id": "au_lit",
+      "name": "AU Bank LIT Credit Card",
+      "issuer": "AU Small Finance Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 0,
+        "annual": 0,
+        "waiver_spend": null,
+        "quote": "LIT, InstaPay, AU KOSMO, ixigo AU, AU CA, AU CS, Paytm AU | AU Zaggle | Lifetime Free",
+        "url": "https://www.au.bank.in/content/dam/aubank/in/en/pdf/credit-card/MITC(with-Schedule-of-Charges).pdf",
+        "note": "MITC 'Last updated on 30th Sep'2026'. Card is free, but every benefit is a paid 90-day feature (see earn rules)."
+      },
+      "earn": [
+        {
+          "category": "online (paid feature, 5X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 10000,
+            "unit": "points",
+            "period": "statement_cycle"
+          },
+          "quote": "5X Reward Points on Online Spends | 199",
+          "url": "https://www.au.bank.in/campaign/lit-product-guide.pdf",
+          "cap_quote": "Maximum of 10,000 Reward Points can be accrued in a statement cycle.",
+          "cap_url": "https://www.au.bank.in/campaign/lit-product-guide.pdf",
+          "condition": "feature_active (₹199 + GST per 90 days)",
+          "multiplier": "5X",
+          "note": "Base (1X) earn rate is not in the guide or MITC; product page is blocked (403). 10X online costs ₹299 per 90 days ('10X Reward Points on Online Spends | 299'). Guide is undated (examples use 2022)."
+        },
+        {
+          "category": "other (offline, paid feature, 5X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 10000,
+            "unit": "points",
+            "period": "statement_cycle"
+          },
+          "quote": "5X Reward Points on Offline Spends | 199",
+          "url": "https://www.au.bank.in/campaign/lit-product-guide.pdf",
+          "condition": "feature_active (₹199 + GST per 90 days)",
+          "multiplier": "5X",
+          "note": "10X offline costs ₹299 per 90 days ('10X Reward Points on Offline Spends | 299')."
+        },
+        {
+          "category": "grocery (paid feature)",
+          "rate_pct": 5.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1000,
+            "unit": "inr",
+            "period": null,
+            "period_note": "30-day feature cycle"
+          },
+          "quote": "5% Cashback on Grocery Spends | 299 ... Max. Cashback of `1,000 on each of the categories in a 30-day period.",
+          "url": "https://www.au.bank.in/campaign/lit-product-guide.pdf",
+          "condition": "feature_active (₹299 + GST per 90 days)",
+          "note": "Rupee sign extracts as a backtick. Cap is per 30-day feature cycle, not a calendar month or statement cycle."
+        },
+        {
+          "category": "apparel (paid feature)",
+          "rate_pct": 5.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1000,
+            "unit": "inr",
+            "period": null,
+            "period_note": "30-day feature cycle"
+          },
+          "quote": "5% Cashback on Apparel Spends | 199",
+          "url": "https://www.au.bank.in/campaign/lit-product-guide.pdf",
+          "condition": "feature_active (₹199 + GST per 90 days)"
+        },
+        {
+          "category": "other (milestone cashback feature, 5%)",
+          "rate_pct": 5.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 500,
+            "unit": "inr",
+            "period": null,
+            "period_note": "30-day feature cycle; needs ₹7,500 spend in the cycle"
+          },
+          "quote": "Max. 5% Cashback earned is capped at ` 500 by spending minimum of ` 7,500 in a 30-day period.",
+          "url": "https://www.au.bank.in/campaign/lit-product-guide.pdf",
+          "condition": "feature_active (₹299 + GST per 90 days)",
+          "note": "A 2% variant (₹199 per 90 days) is capped at ₹1,000 with ₹10,000 minimum spend per 30 days."
+        }
+      ],
+      "exclusions": [],
+      "point_value_inr": null,
+      "point_value_quote": "Not stated in fetched official text. MITC: 'Reward Points | Redemption Fee | ₹ 99 + GST'.",
+      "eligibility": null,
+      "lounge": "Paid feature: '1 complimentary visit to | Airport Lounge | 399' per 90 days; 'Maximum 2 visits can be selected for a 90-day period.' (LIT product guide). Seed note of a ₹50k/quarter lounge spend gate (Apr 2026) not verified.",
+      "milestones": [],
+      "notes": [
+        "Product page au.bank.in/personal-banking/credit-cards/lit-credit-card and the LIT T&C (aubank.in/lit-terms-and-conditions -> au.bank.in) return 403 (Cloudflare 'Just a moment...'). Network, base earn rate, exclusions, eligibility and point value come from those pages and are left null.",
+        "Feature prices are '` for 90 days' per the guide and auto-renew unless disabled; GST extra per guide example.",
+        "MITC fair-usage fees: transport MCC 4111/4112/4784 spends above the lower of 50% of limit or ₹25,000 in a calendar month attract 1% (w.e.f. 14 Jun 2026). Seed claim 'no points on transport MCCs from 10 Apr 2026' was not found in the MITC.",
+        "Forex markup 3.49% (MITC row listing LIT)."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
+          "status": "403 (Cloudflare challenge)"
+        },
+        {
+          "url": "https://www.aubank.in/lit-terms-and-conditions",
+          "status": "403 after redirect to au.bank.in"
+        },
+        {
+          "url": "https://www.au.bank.in/content/dam/aubank/in/en/pdf/credit-card/MITC(with-Schedule-of-Charges).pdf",
+          "status": "200 (PDF, last updated 30 Sep 2026; served from au.bank.in/pdf/... after redirect)"
+        },
+        {
+          "url": "https://www.au.bank.in/campaign/lit-product-guide.pdf",
+          "status": "200 (PDF, undated product guide)"
+        }
+      ]
+    },
+    {
+      "id": "icici_coral",
+      "name": "ICICI Bank Coral Credit Card (incl. Coral RuPay)",
+      "issuer": "ICICI Bank",
+      "network": "RuPay (variant); other networks not stated",
+      "network_quote": "The ICICI Bank Coral Credit Card offers lounge access, reward points on spends and concierge services (RuPay variant).",
+      "network_url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card",
+      "upi_rupay": true,
+      "upi_rupay_quote": "Yes, UPI spends using Credit Card will earn reward points as per the reward point structure of the respective Credit Card.",
+      "upi_rupay_url": "https://www.icici.bank.in/personal-banking/cards/credit-card/rupay-credit-card",
+      "fees": {
+        "joining": 500,
+        "annual": 500,
+        "waiver_spend": 150000,
+        "quote": "Joining fee- ₹500 + Goods and Services Tax (GST) | Annual fee- ₹500 + GST (Spend over ₹1.5 lakh and get annual fee waived off for the next year)",
+        "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card"
+      },
+      "earn": [
+        {
+          "category": "other (retail)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 2,
+            "per_inr": 100
+          },
+          "cap": null,
+          "quote": "Earn Points on every ₹100 spend | 2 | On Retail | Spend",
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card"
+        },
+        {
+          "category": "utilities|insurance",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 1,
+            "per_inr": 100
+          },
+          "cap": null,
+          "quote": "1 | On Utility and Insurance | Spend",
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card"
+        },
+        {
+          "category": "upi (RuPay variant)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 2,
+            "per_inr": 100
+          },
+          "cap": null,
+          "quote": "Yes, UPI spends using Credit Card will earn reward points as per the reward point structure of the respective Credit Card.",
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/rupay-credit-card",
+          "note": "Same structure as card spends per the RuPay hub FAQ; 2/₹100 assumes UPI merchant spend is 'retail'."
+        }
+      ],
+      "exclusions": [],
+      "point_value_inr": null,
+      "point_value_quote": "Not stated on the Coral page or RuPay hub; page lists redemption categories only ('Redeem reward points for: | Health and Beauty | Travel and Luggage | Shopping Voucher ...').",
+      "eligibility": {
+        "min_income_annual": 240000,
+        "min_income_monthly_salaried": 20000,
+        "age": "21-65",
+        "quote": "An Indian citizen over 21 years of age | A salaried individual with a monthly income of ₹20,000 | Self-employed individual with an annual income of ₹2,40,000",
+        "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card"
+      },
+      "lounge": "1 domestic airport lounge visit per quarter on ₹75,000+ eligible spend in the preceding quarter (primary only); railway lounges 4 per year (FAQ says 1 per quarter). Quote: 'Get 1 Domestic Airport Lounge access for primary cardholders on eligible spends of ₹75,000 or more in the preceding spends quarter.' (product page)",
+      "milestones": [
+        {
+          "quote": "Get 2,000 reward points on ₹2 lakh spend and 1,000 for every additional ₹1 lakh spend (max 10,000 points per Anniversary year)",
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card"
+        }
+      ],
+      "notes": [
+        "Exclusions (fuel, rent, wallet, government etc.) are not listed on the Coral page and were not found in the generic ICICI card T&C (tnc_english.pdf); left empty rather than guessed. Card-specific reward T&C not located in budget.",
+        "Point value is null: no official ratio found on fetched pages.",
+        "Fuel surcharge waiver 1% on ₹400-₹4,000 at HPCL pumps on ICICI Merchant Services terminals.",
+        "Forex markup 3.5% per seed notes (not re-verified here).",
+        "RuPay hub page lists 'Earn Points on every ₹100 spend | 4 | On International Spend | 2 | On Domestic' for a different RuPay card block; not applied to Coral."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/rupay-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tnc_english.pdf",
+          "status": "200 (generic cardmember T&C; no reward exclusions)"
+        }
+      ]
+    },
+    {
+      "id": "hsbc_live_plus",
+      "name": "HSBC Live+ Credit Card",
+      "issuer": "HSBC India",
+      "network": "Visa",
+      "network_quote": "Unlock exclusive hotel offers, travel assistance and bespoke lifestyle experiences with Visa Infinite",
+      "network_url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+      "upi_rupay": false,
+      "fees": {
+        "joining": 999,
+        "annual": 999,
+        "waiver_spend": 200000,
+        "quote": "Joining fee | INR999 | Annual fee (waived if you spend more than INR200,000 per year) | INR999",
+        "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+        "note": "MITC: 'The annual fee including applicable GST will be fully reversed if total eligible spend across the primary and add-on cards during the relevant anniversary year exceeds ₹200,000' (terms-and-condition.pdf)."
+      },
+      "earn": [
+        {
+          "category": "dining|grocery|online (shopping)|utilities|food_delivery",
+          "rate_pct": 10.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1200,
+            "unit": "inr",
+            "period": "calendar_month"
+          },
+          "quote": "10% accelerated cashback, up to INR1,200 a month, on all dining, food delivery, grocery, shopping[@live-plus-cashback-category-clarification] and utility spends",
+          "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+          "note": "Revamp effective 26 Jul 2026. 'Shopping' excludes Amazon and Flipkart (1.5%). Myntra at 10% only until 31 Oct 2026 (launch offer), then 1.5%. 'a month' taken as calendar month; may be statement month (not specified). Cashback is by MCC per the Service Guide (not mined)."
+        },
+        {
+          "category": "amazon|flipkart",
+          "rate_pct": 1.5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": null,
+          "quote": "From 26 July 2026, shopping spends on Amazon and Flipkart will continue to earn 1.5% cashback.",
+          "url": "https://www.hsbc.bank.in/content/hsbc/in/en_in.dpws-footnotes.json"
+        },
+        {
+          "category": "myntra (launch offer to 31 Oct 2026)",
+          "rate_pct": 10.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 1200,
+            "unit": "inr",
+            "period": "calendar_month"
+          },
+          "quote": "Limited time launch offer: Myntra purchases will earn 10% cashback until 31 October 2026. After the offer period, Myntra purchases will earn 1.5% cashback.",
+          "url": "https://www.hsbc.bank.in/content/hsbc/in/en_in.dpws-footnotes.json",
+          "valid_until": "2026-10-31",
+          "note": "Assumed to share the ₹1,200 10% cap; not explicitly stated."
+        },
+        {
+          "category": "other",
+          "rate_pct": 1.5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": null,
+          "quote": "1.5% unlimited cashback on most other spends",
+          "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/"
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "international spends (1.5% no longer earned from 26 Jul 2026)",
+          "quote": "From 26 July 2026, 1.5% cashback will no longer be earned on international spends.",
+          "url": "https://www.hsbc.bank.in/content/hsbc/in/en_in.dpws-footnotes.json"
+        },
+        {
+          "what": "fuel, wallet, rent, B2B, education, government, insurance, jewellery, gambling, tolls, cash/crypto, brokers, collections, charity, money transfer, wholesale clubs, hospitals, local transit",
+          "quote": "No cashback on following categories: Fuel related (MCCs 5541, 5983, 5172, 5542, 5552); e-wallets (MCC 6540); payment of property management fees, rental commissions, rental payments or any such payments made through MCCs 6513, 7012, 7349; ... education and government related transactions carried out through MCCs 9399, 8299, 8220, 8211, 8241, 9311, 8244, 8249, 9222, 9402, 9211, 9405, 9950, 9223, 8351; insurance (MCCs 6300, 5960); jewelry and antique items (MCCs 5944, 5094, 5932, 5937); gambling (MCC 7995); tolls and bridge fees (MCC 4784); ... money transfers (MCC 4829); wholesale clubs (MCC 5300); hospitals (MCC 8062) and local transportation - bus/subway transit (MCC 4111).",
+          "url": "https://www.hsbc.bank.in/content/hsbc/in/en_in.dpws-footnotes.json",
+          "note": "Footnote 'liveplus-unlimited-cashback-exclusions', served from the HSBC site's footnotes JSON referenced by the product page. Full B2B MCC list omitted with '...'."
+        }
+      ],
+      "point_value_inr": null,
+      "point_value_quote": "Not applicable: cashback card (unit cashback).",
+      "eligibility": {
+        "min_income_annual": 600000,
+        "min_income_annual_self_employed": 1200000,
+        "age": "18-65 salaried, 25-65 self-employed",
+        "quote": "Be aged between 18 to 65 years old for salaried individuals, or 25 to 65 years old for self-employed individuals | Have a minimum income of INR600,000 per year for salaried individuals or INR12,00,000 per year for self-employed individuals",
+        "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+        "cities": "Restricted to listed cities (Chennai, Gurgaon, Delhi NCR, Pune, Noida, Hyderabad, Mumbai, Bengaluru, Kochi, Coimbatore, Jaipur, Chandigarh, Ahmedabad, Kolkata, Amritsar, Baroda, Indore, Lucknow, Nagpur, Surat, Trivandrum)."
+      },
+      "lounge": "2 domestic visits a year (max 1 per 6 calendar months) and 1 international visit per calendar year (via Thriwe). Quote: 'The complimentary domestic airport lounge offer includes 2 domestic visits a year, limited to 1 visit every 6 calendar months.' / 'The complimentary international airport lounge offer includes 1 international visit per calendar year.' (footnotes JSON, anchor airport-lounge-live-plus)",
+      "milestones": [],
+      "notes": [
+        "Forex markup 1.99% (page).",
+        "Welcome: INR1,000 cashback on spending INR25,000 within 30 days after logging on to the HSBC India Mobile Banking app (page).",
+        "Fuel: 'Get INR250 cashback on contactless fuel purchases when you spend INR10,000 per quarter.' (page offer, not modelled as earn).",
+        "HSBC RuPay Cashback is a separate card; Live+ is Visa, so upi_rupay false.",
+        "The PDF at /visa-cashback/terms-and-condition.pdf is the Platinum + Live+ MITC (fees confirmed: 'Joining fee for Live+ Primary Cardholder is `999'); it does not contain Live+ cashback rules."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hsbc.bank.in/content/hsbc/in/en_in.dpws-footnotes.json",
+          "status": "200 (JSON footnotes referenced by product page)"
+        },
+        {
+          "url": "https://www.hsbc.bank.in/content/dam/hsbc/in/documents/credit-cards/visa-cashback/terms-and-condition.pdf",
+          "status": "200 (PDF; Platinum + Live+ MITC)"
+        }
+      ]
+    },
+    {
+      "id": "idfc_first_millennia",
+      "name": "IDFC FIRST Millennia Credit Card",
+      "issuer": "IDFC FIRST Bank",
+      "network": null,
+      "upi_rupay": true,
+      "upi_rupay_quote": "Get an add-on FIRST Digital RuPay Credit Card linked to you IDFC FIRST Credit Card and enjoy the convenience of UPI.",
+      "fees": {
+        "joining": 0,
+        "annual": 0,
+        "waiver_spend": null,
+        "quote": "Fees and charges | Joining and Annual Fees | NIL",
+        "url": "https://www.idfcfirst.bank.in/credit-card/millennia"
+      },
+      "earn": [
+        {
+          "category": "dining|travel|international|birthday (10X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 10,
+            "per_inr": 200
+          },
+          "cap": {
+            "amount": null,
+            "unit": "inr_spend",
+            "period": "statement_cycle",
+            "rule": "points earned only on spends up to the credit limit per billing cycle"
+          },
+          "quote": "10X Reward Points | on Dining, Travel and International purchases and spends done on your birthday. ... 1X = 1 Reward Point per ₹200 spent | 1 Reward point = ₹0.25",
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia"
+        },
+        {
+          "category": "other (3X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 3,
+            "per_inr": 200
+          },
+          "cap": {
+            "amount": null,
+            "unit": "inr_spend",
+            "period": "statement_cycle",
+            "rule": "points earned only on spends up to the credit limit per billing cycle"
+          },
+          "quote": "*All spend categories earn 3X Reward Points; except insurance, utilities, railways, FASTag recharges, dining, travel, international purchases, fuel, EMI transactions & cash withdrawals.",
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia"
+        },
+        {
+          "category": "utilities|insurance|railways|fastag (1X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 1,
+            "per_inr": 200
+          },
+          "cap": {
+            "amount": null,
+            "unit": "inr_spend",
+            "period": "statement_cycle",
+            "rule": "points earned only on spends up to the credit limit per billing cycle"
+          },
+          "quote": "1X Reward Points | on Utility bill payments, Insurance premium payments, Railway spends and FASTag recharges",
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia"
+        },
+        {
+          "category": "upi (via FIRST Digital RuPay add-on)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 3,
+            "per_inr": 200
+          },
+          "cap": {
+            "amount": null,
+            "unit": "inr_spend",
+            "period": "statement_cycle",
+            "rule": "points earned only on spends up to the credit limit per billing cycle"
+          },
+          "quote": "Activate UPI on FIRST Millennia Credit Card at just ₹199 | Joining and Annual fee (2nd year onwards) of just ₹199 + GST ... Earn up to 3X reward points* on your UPI spends",
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+          "note": "'Up to' 3X; the UPI add-on carries its own ₹199 + GST joining and annual fee. Category-level UPI rates not stated."
+        },
+        {
+          "category": "travel (FIRST Rewards Gallery hotel bonus)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "Earn 20% Bonus Reward Points on your hotel booking done through 'FIRST Rewards Gallery' section on IDFC FIRST Bank Mobile App",
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+          "note": "Bonus = 20% of base points earned (flights: 10%). Not a per-₹ rate."
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "fuel, EMI, cash withdrawals, fees and charges",
+          "quote": "Reward Points will not be given on spends converted to EMI, Cash Withdrawal, Fuel, Fee and Charges.",
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia"
+        },
+        {
+          "what": "spend beyond the credit limit in a billing cycle",
+          "quote": "Reward Points are earned only on spends up to your credit limit per billing cycle. Additional spends beyond this will not be eligible for Reward Points.",
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia"
+        },
+        {
+          "what": "whole cycle if Minimum Amount Due unpaid",
+          "quote": "If the Cardmember fails to pay at least the Minimum Amount Due by the Payment Due Date, Reward Points will not be applicable for that billing cycle.",
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia"
+        }
+      ],
+      "point_value_inr": 0.25,
+      "point_value_quote": "1X = 1 Reward Point per ₹200 spent | 1 Reward point = ₹0.25",
+      "point_value_url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+      "eligibility": {
+        "min_income_annual": 300000,
+        "quote": "Eligibility: Annual income of ₹3 lakhs or more",
+        "url": "https://www.idfcfirst.bank.in/credit-card/millennia"
+      },
+      "lounge": "No airport lounge stated. Railway lounge: 4 visits per quarter, gated on ₹20,000 spend in the previous calendar month. Quote: 'Enjoy 4 complimentary railway lounge visits across India every quarter' / 'Disclaimer: Spend ₹20,000 within the current calendar month to access railway lounge benefits in the following month.' (product page)",
+      "milestones": [],
+      "notes": [
+        "Reward points valid 24 months; redemption fee ₹99 + GST per redemption (page).",
+        "Zero forex markup (page).",
+        "Welcome: '₹500 welcome voucher when you spend ₹5,000 or more within 30 days of card activation' and 5% cashback up to ₹1,000 on first EMI within 30 days (page FAQ).",
+        "Card network not stated in the fetched page text (page links a Visa Payment Passkey product but not specifically for this card).",
+        "Seed note on Jan 2026 FASTag/rail move to 1X and 18 Jun 2026 credit-limit earn cap: both reflected on the live page; no dated change notice for Millennia was fetched."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.idfcfirst.bank.in/credit-card/millennia",
+          "status": "200 (all facts from server-rendered HTML)"
+        }
+      ]
+    },
+    {
+      "id": "hdfc_infinia_metal",
+      "name": "HDFC Bank INFINIA Credit Card (Metal Edition)",
+      "issuer": "HDFC Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 12500,
+        "annual": 12500,
+        "waiver_spend": 1000000,
+        "quote": "For INFINIA Cards sourced after October 18, 2021: | Joining/Renewal Membership Fee | Joining Fee: ₹12,500 plus Applicable Taxes | Renewal Fee: ₹12,500 plus Applicable Taxes | Fee Waiver: Spend ₹10 lakh or more in a year before the renewal date to get the renewal fee waived.",
+        "url": "https://www.hdfc.bank.in/credit-cards/infinia-credit-card"
+      },
+      "earn": [
+        {
+          "category": "other",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 5,
+            "per_inr": 150
+          },
+          "cap": {
+            "amount": 200000,
+            "unit": "points",
+            "period": "statement_cycle"
+          },
+          "quote": "Earn 5 Reward Points on every Rs.150 retail* spends including Insurance, Utilities and Education",
+          "url": "https://www.hdfc.bank.in/credit-cards/infinia-credit-card",
+          "cap_quote": "The maximum reward points that can be earned in a statement cycle for Infinia/Infinia Metal | is 2,00,000.",
+          "cap_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        },
+        {
+          "category": "grocery",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 5,
+            "per_inr": 150
+          },
+          "cap": {
+            "amount": 2000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Reward points earned on grocery transaction will be capped at 2000 RP per calendar month",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        },
+        {
+          "category": "insurance",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 5,
+            "per_inr": 150
+          },
+          "cap": {
+            "amount": 10000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "With effect from 1st July 2025, Reward points accrued for Insurance transactions will have | a maximum cap of 10,000 reward points per month.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        },
+        {
+          "category": "utilities",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 5,
+            "per_inr": 150
+          },
+          "cap": {
+            "amount": 2000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Reward points on utility transactions will be capped at 2000 RPs per month",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        },
+        {
+          "category": "telecom",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 5,
+            "per_inr": 150
+          },
+          "cap": {
+            "amount": 2000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Reward points on telecom transactions will be capped at 2000 RPs per month",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        },
+        {
+          "category": "smartbuy (travel and shopping, up to 10X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 50,
+            "per_inr": 150
+          },
+          "cap": {
+            "amount": 15000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Earn up to 10 times Reward Points* on your travel and shopping spends on Smartbuy",
+          "url": "https://www.hdfc.bank.in/credit-cards/infinia-credit-card",
+          "cap_quote": "The 3,000-RP limit is part of, not additional to, Infinia's unchanged 15,000 maximum | accelerated-RP monthly SmartBuy cap.",
+          "cap_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf",
+          "note": "'Up to' 10X: actual multiplier varies by SmartBuy merchant (SmartBuy T&C not fetched); 50/₹150 is the 10X ceiling, not a guaranteed rate. Cap is on accelerated RP. From 1 Jul 2026 SmartBuy brand vouchers (GyFTR/Woohoo) capped at 3,000 accelerated RP per calendar month within the 15,000. T&C: 'Smartbuy accelerated reward points program is a limited period offer.'"
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "fuel",
+          "quote": "Reward points will not be accrued for fuel transactions",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        },
+        {
+          "what": "EasyEMI, wallet loads",
+          "quote": "EasyEMI and e-wallet loading transactions will not accrue reward points",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        },
+        {
+          "what": "rent, property management, government",
+          "quote": "Reward points will not be accrued for rental pay transactions, property management services | like rent, maintenance, packers &movers, etc and government transactions",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        },
+        {
+          "what": "education via third-party apps",
+          "quote": "Education payments made through third-party apps like (but not limited to) CRED, Cheq, | MobiKwik, and others will NOT earn Reward Points.",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        },
+        {
+          "what": "SmartEMI conversion reverses points",
+          "quote": "Reward points accrued will be reversed if a retail transaction is converted into SmartEMI",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf"
+        }
+      ],
+      "point_value_inr": null,
+      "point_value_quote": "Varies by redemption: 'Apple products and Tanishq vouchers purchased via SmartBuy | ₹1 | Flights and hotel bookings | ₹1 | Airmiles conversion | Upto 1 Airmile | Products and Voucher | up to ₹0.50 | Cashback against statement Balance | up to ₹ 0.30' (product page).",
+      "point_values": {
+        "apple_tanishq_smartbuy": 1.0,
+        "flights_hotels": 1.0,
+        "airmiles": "up to 1 airmile",
+        "products_vouchers": 0.5,
+        "statement_balance": 0.3,
+        "url": "https://www.hdfc.bank.in/credit-cards/infinia-credit-card"
+      },
+      "eligibility": {
+        "min_income_annual": null,
+        "quote": "HDFC Bank Infinia Metal Credit Card is offered to select customers by invitation only.",
+        "url": "https://www.hdfc.bank.in/credit-cards/infinia-credit-card"
+      },
+      "lounge": "Unlimited domestic (primary and add-on) and unlimited international via Priority Pass. Quote: 'Unlimited complimentary Domestic airport lounge access in India with your HDFC Bank Infinia Credit Card (Primary & Add-on).' / 'Unlimited complimentary International airport lounge access outside India via Priority Pass for Primary and Add-on cardholders (1,000+ lounges worldwide).' (product page)",
+      "milestones": [],
+      "notes": [
+        "Welcome and renewal benefit: 12,500 reward points ('Renewal benefit 12,500 Reward Points* upon fee realization and card activation.').",
+        "Legacy fee row on the same page: cards sourced before 18 Oct 2021 pay ₹10,000 joining/renewal, waived at ₹8 lakh. Not this profile.",
+        "Seed note 'retention needs ₹18L spend or ₹50L relationship value' (Feb 2026) is NOT on the product page or the reward T&C fetched; no official HDFC source found in budget, so not recorded.",
+        "Redemption caps: max 2 lakh RP per statement cycle; 1.5 lakh RP/month for flights, hotels, airmiles; 50,000 RP/month against statement balance; up to 70% of bill on travel and Apple/Tanishq.",
+        "Points valid 3 years; nullified if card unused 365 days (reward T&C).",
+        "Forex markup 2% (page: 'Lowest markup fee of 2% on all foreign currency transactions.'). Fuel surcharge waiver on ₹400-₹1,00,000.",
+        "Network not stated on the product page; UPI/RuPay not stated."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/infinia-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/infinia-credit-card/fees-and-charges",
+          "status": "200 (not needed; product page carries the fee block)"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/rewards-points-program-terms-and-conditions.pdf",
+          "status": "200 (PDF)"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/infinia-credit-card/fees-and-charges/infinia-credit-card-fees-and-charges.pdf",
+          "status": "200 (generic fees PDF, not mined)"
+        }
+      ]
+    },
+    {
+      "id": "kiwi_yes_klick",
+      "name": "Kiwi RuPay Credit Card (YES BANK Klick)",
+      "issuer": "YES Bank (fintech partner: Kiwi / Gokiwi Technologies)",
+      "network": "RuPay",
+      "network_quote": "First-of-its-kind | credit card | for UPI payments",
+      "network_url": "https://gokiwi.in/cards/yesbank/",
+      "upi_rupay": true,
+      "fees": {
+        "joining": 0,
+        "annual": 0,
+        "waiver_spend": null,
+        "quote": "RuPay Virtual NIL NIL NA NA | Card/ Klick /",
+        "url": "https://www.yes.bank.in/sites/web/content/published/api/v1.1/assets/CONTAA57595B2EF245259C4C623B1F7D33B3/native/ybl_mitc_pdf.pdf",
+        "note": "YES MITC CMITC_V18_05102026 fee table (columns: joining fee, annual fee, spend for joining-fee waiver, spend for annual-fee waiver); Klick shares the NIL/NIL row with RuPay Virtual Card. Partner page: 'Lifetime free Credit Card | No annual fee. No hidden charge. Just yours, forever.' (gokiwi.in)."
+      },
+      "earn": [
+        {
+          "category": "upi (scan & pay)",
+          "rate_pct": 1.5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": null,
+          "quote": "1.5% Cashback | on UPI scan & pay",
+          "url": "https://gokiwi.in/cards/yesbank/",
+          "paid_by": "Kiwi (partner), per partner page",
+          "note": "Partner claim (gokiwi.in). Home page: 'Flat 1.5% cashback always.' No cap stated on fetched text."
+        },
+        {
+          "category": "online (UPI online payments)",
+          "rate_pct": 0.5,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": null,
+          "quote": "0.5% Cashback | on online spends",
+          "url": "https://gokiwi.in/cards/yesbank/",
+          "note": "Partner claim."
+        },
+        {
+          "category": "upi (scan & pay, Kiwi Neon members)",
+          "rate_pct": 2.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": null,
+          "quote": "WithMembership | 5% Cashback | on spends over ₹1.5L | 2% Cashback | on UPI scan & pay",
+          "url": "https://gokiwi.in/cards/yesbank/",
+          "condition": "kiwi_neon_membership",
+          "note": "Paid tier. The home page says '5% with Kiwi Neon membership' while the YES card page says '5% Cashback on spends over ₹1.5L'; the 5% rule's scope is unclear, so only the 2% scan & pay rate is recorded. Neon fee not stated in fetched text."
+        },
+        {
+          "category": "other (non-UPI card spends)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "Reward points on | every non-UPI | spend of Rs 200",
+          "url": "https://gokiwi.in/cards/yesbank/",
+          "note": "Points count per ₹200 is drawn as a graphic and not in the text; issuer page (yes.bank.in Klick) is JS-rendered. points_per left null."
+        }
+      ],
+      "exclusions": [],
+      "point_value_inr": null,
+      "point_value_quote": "Not stated in fetched text.",
+      "eligibility": null,
+      "lounge": "Only with Kiwi Neon membership per partner page ('Kiwi Neon | Free Lounge access'; 'Airport Lounge | Complimentary'); count and conditions not stated.",
+      "milestones": [],
+      "notes": [
+        "Issuer product page https://www.yes.bank.in/personal-banking/yes-individual/cards/credit-cards/klick-credit-card (linked from gokiwi.in as 'View details on Bank website') is JS-rendered; its page meta reads 'Get Klick Credit Card from YES BANK with UPI payments, cashback on spends and zero annual fee.' Card content not in HTML.",
+        "Network RuPay is inferred: the card is sold as a credit card for UPI payments and RBI allows only RuPay credit cards on UPI; YES page component IDs are named 'klick_rupay_credit_card_banner'. No explicit 'RuPay' text on the Kiwi card page.",
+        "YES MITC: Klick forex markup listed with Select/ACE/Virtual RuPay row (2.75% / 3.50% columns, not mined further).",
+        "Kiwi also lists PNB, AU KOSMO and YES credit-line products; only the YES Bank card is profiled here.",
+        "Cashback is a fintech (Kiwi) benefit per partner pages; who funds it is not stated by YES Bank in fetched text."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://gokiwi.in/",
+          "status": "200"
+        },
+        {
+          "url": "https://gokiwi.in/cards/yesbank/",
+          "status": "200 (some figures drawn as graphics)"
+        },
+        {
+          "url": "https://www.yes.bank.in/personal-banking/yes-individual/cards/credit-cards/klick-credit-card",
+          "status": "200 but JS-rendered; no card content"
+        },
+        {
+          "url": "https://www.yes.bank.in/sites/web/content/published/api/v1.1/assets/CONTAA57595B2EF245259C4C623B1F7D33B3/native/ybl_mitc_pdf.pdf",
+          "status": "200 (PDF, CMITC_V18_05102026)"
+        }
+      ]
+    },
+    {
+      "id": "kotak_league_platinum",
+      "name": "Kotak League Platinum Credit Card",
+      "issuer": "Kotak Mahindra Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 499,
+        "annual": 499,
+        "waiver_spend": 50000,
+        "quote": "Joining fee | ₹ 499/Nil | Annual fees | ₹ 499/ Nil | Condition for waiver of Joining Fees | Not Available | Condition for waiver of Annual Fees | Minimum retail spends of ₹ 50,000 in a year",
+        "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+        "note": "Two variants: ₹499 paid and Nil (lifetime free). Profiled values are the paid variant; store LTF per user."
+      },
+      "earn": [
+        {
+          "category": "travel|electronics|durables|department_stores (special categories)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 8,
+            "per_inr": 150
+          },
+          "cap": null,
+          "quote": "Annual Spends | Special Categories* | Other Categories | Up to 2 Lacs | 8 | 4 | 2 lacs & above | 8 | 8 | *Special Categories are Travel Agencies & Tour Operators | Package Tour Operators | Airlines and Air Carriers | Electric Sales | Durable Goods | Departmental Stores",
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html"
+        },
+        {
+          "category": "other (annual spend up to ₹2L)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 4,
+            "per_inr": 150
+          },
+          "cap": null,
+          "quote": "Remaining eligible spends | 1,75,000 | 4 Reward points per ₹150",
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "note": "Rises to 8/₹150 on anniversary-year spends above ₹2 lakh ('Anniversary spends greater than 2 Lakhs | 50,000 | 8 Reward points per ₹150')."
+        },
+        {
+          "category": "other (anniversary-year spend above ₹2L)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 8,
+            "per_inr": 150
+          },
+          "cap": null,
+          "quote": "Anniversary spends greater than 2 Lakhs | 50,000 | 8 Reward points per ₹150",
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "note": "Spend-tier rule: annual spends calculated on card anniversary year."
+        },
+        {
+          "category": "utilities",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 4,
+            "per_inr": 150
+          },
+          "cap": {
+            "amount": 35000,
+            "unit": "inr_spend",
+            "period": "statement_cycle"
+          },
+          "quote": "Utility Spends | Reward points can be only earned on utility spends up to ₹35,000 per statement cycle",
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "note": "Cap is on eligible spend, not points. Rate assumed to follow the 'other' tier (4 or 8 per ₹150)."
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "wallet, online skill gaming, insurance, government, rent, education, fuel (from 1 Jun 2025)",
+          "quote": "Wallet Load, Online skill-based gaming, Insurance, Government, Rent, Education Spends, and Fuel | Reward point earnings against these spend categories will be discontinued",
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html"
+        },
+        {
+          "what": "railway",
+          "quote": "Customers will not earn reward points on railway transactions",
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html"
+        }
+      ],
+      "point_value_inr": 0.1,
+      "point_value_quote": "For redemption against other categories like Mobile Recharge, Shopping, etc., 1 Reward Point = ₹0.10",
+      "point_value_url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+      "point_values": {
+        "catalogue": 0.1,
+        "cash_value": 0.07,
+        "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html"
+      },
+      "eligibility": {
+        "min_income_annual": 500000,
+        "age": "21-60",
+        "quote": "Primary Cardholder should be in the age bracket of 21 years to 60 years. Add-On Cardholder should be 18 years & above ... Income - Rs.5 Lakhs and above per annum",
+        "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html"
+      },
+      "lounge": "None stated.",
+      "milestones": [
+        {
+          "quote": "Spend Rs. 1, 25,000 every 6 months and get 4 free PVR tickets or 10000 reward points:",
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html"
+        }
+      ],
+      "notes": [
+        "Cash value redemption: 'w.e.f. 01st June 2025, Cash Value for redemption will be revised from ₹0.10 to ₹0.07 per Reward Point; a minimum of 2,000 Reward Points will be required for cash value redemption.'",
+        "Joining gift on paid variant: 'Reward points worth Rs. 500, post realization of joining fee.'",
+        "Fuel surcharge waiver 1% on ₹500-₹4,000, max ₹3,500 per anniversary year; railway surcharge waiver max ₹500/year.",
+        "Network not stated on page (MCC note mentions VISA, MasterCard and RuPay generically). UPI/RuPay not stated on the page, so upi_rupay is null (seed list says Kotak UPI RuPay is a separate card).",
+        "MCC list PDF (list-of-mccs-with-respect-to-revised-fees-and-rewards_june_01_2025.pdf) not fetched."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html",
+          "status": "200"
+        }
+      ]
+    },
+    {
+      "id": "axis_magnus",
+      "name": "Axis Bank Magnus Credit Card",
+      "issuer": "Axis Bank",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 12500,
+        "annual": 12500,
+        "waiver_spend": 2500000,
+        "quote": "Annual fee of ₹12,500 + Taxes waived off* on spend of ₹25 Lakhs in preceding year.",
+        "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card",
+        "note": "Joining fee amount assumed equal to the annual fee from this line only; the page does not state a separate joining fee row in the fetched text."
+      },
+      "earn": [
+        {
+          "category": "other (first ₹1.5L per calendar month)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 12,
+            "per_inr": 200
+          },
+          "cap": null,
+          "quote": "You will continue to earn 12 EDGE REWARD Points per INR 200 on spends^ up to INR 1.5 | lakhs per calendar month.",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-card-tnc/terms-and-conditions-for-magnus-credit-card.pdf"
+        },
+        {
+          "category": "other (spend above ₹1.5L in calendar month, up to credit limit + ₹1.5L)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 35,
+            "per_inr": 200
+          },
+          "cap": {
+            "amount": null,
+            "unit": "inr_spend",
+            "period": "calendar_month",
+            "rule": "credit_limit + 150000 total monthly spend; 12/₹200 thereafter"
+          },
+          "quote": "You will earn 35 EDGE REWARD Points per INR 200 on spends^ | above INR 1.5 lakhs, up to spends^ equivalent to your credit limit + additional INR 1.5 | Lakhs per calendar month. Thereafter, you will earn 12 EDGE REWARD Points per Rs. 200 | spent.",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-card-tnc/terms-and-conditions-for-magnus-credit-card.pdf",
+          "note": "Tiered by monthly spend, not by category. Cap is a dynamic spend ceiling tied to the assigned credit limit (temporary limits excluded)."
+        },
+        {
+          "category": "travel (Travel EDGE portal, 5X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 60,
+            "per_inr": 200
+          },
+          "cap": null,
+          "quote": "5X Reward points on spends via Travel EDGE.",
+          "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card",
+          "note": "60/₹200 inferred as 5X of the 12/₹200 base; how 5X interacts with the 35-point tier is not stated. Any cap would be in Travel EDGE T&C (not fetched)."
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "utilities/telecom, rent, wallet, government, insurance, gold/jewellery, fuel, cash, repayments",
+          "quote": "Excluded spend categories for reward earn / spend based fee waiver: Transactions made | on Utility & Telecom, Rent (capped at INR 50,000 per month), Wallet, Government | spends, Insurance, Gold & Jewellery, Fuel, Cash advances and Repayments.",
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-card-tnc/terms-and-conditions-for-magnus-credit-card.pdf"
+        },
+        {
+          "what": "gift cards, tolls/bridge/road fees (from 28 Aug 2026)",
+          "quote": "Gift card purchases will continue to be excluded from rewards category and will not | earn rewards ... no rewards shall be earned on spends made on Bridge Fees, Road Fees & Tolls.",
+          "url": "https://campaign.axis.bank.in/generic/terms-and-conditions-magnus.pdf"
+        }
+      ],
+      "point_value_inr": null,
+      "point_value_quote": "Earn 2 partner# miles for every 5 EDGE Reward points across 20 travel partners.",
+      "point_value_url": "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card",
+      "point_values": {
+        "miles_per_point": 0.4,
+        "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card"
+      },
+      "eligibility": {
+        "min_income_annual": 2400000,
+        "age": "18-70",
+        "quote": "Primary cardholder should be between the age of 18-70 years | Add-on cardholder should be over 18 years | Net Salary of ₹24 lakhs per annum or Net Annual Income Tax Return filed for ₹24 Lakhs.",
+        "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card"
+      },
+      "lounge": "International: unlimited via Priority Pass plus 4 guest visits/year; domestic: unlimited at select lounges (page). From 1 May 2024 domestic access needs ₹50,000 spend in the previous 3 calendar months (Apr 2024 T&C); from 28 Aug 2026 Priority Pass not valid at domestic lounges, use the card. Quotes: 'Avail unlimited complimentary international lounge visits and 4 additional guest visits per year with the priority pass card' / 'Enjoy unlimited visits to select airport lounges in India.' (product page).",
+      "milestones": [],
+      "notes": [
+        "point_value_inr is null: the INR value of an EDGE point is not stated on the fetched pages; only the miles transfer ratio (5 points : 2 partner miles) is.",
+        "Welcome: 'Choose any one voucher worth ₹12,500* from below options: | Luxe gift card or The Postcard Hotels gift voucher or Yatra gift voucher' (product page).",
+        "Seed note 'transfer ratio devalued 2 Apr 2026 to 5:1' conflicts with the live product page (still 5:2 on 8 Oct 2026). No official 2026 devaluation notice found in the PDFs linked from the page. Page value recorded.",
+        "Miles transfer caps (Apr 2024 T&C): max 1 lakh EDGE points/year to Group A and 4 lakh to Group B partners.",
+        "Forex markup 2%; DCC markup revised to 2% from 1.5% effective 28-08-2026 (T&C).",
+        "Magnus for Burgundy is a separate variant (₹30,000 fee waived at ₹30L; up to 4 miles per 5 points); not profiled here. LTF for Burgundy Salary accounts opened on/after 1 Jul 2026 with ≥₹2L net monthly salary (page).",
+        "Network not stated in the fetched page text."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/magnus-credit-card-terms-and-conditions.pdf",
+          "status": "200 (PDF, 20 Apr 2024 revision)"
+        },
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-card-tnc/terms-and-conditions-for-magnus-credit-card.pdf",
+          "status": "200 (PDF, 20 Jun 2025 revision)"
+        },
+        {
+          "url": "https://campaign.axis.bank.in/generic/terms-and-conditions-magnus.pdf",
+          "status": "200 (PDF, 28 Aug 2026 revision)"
+        }
+      ]
+    },
+    {
+      "id": "sbi_bpcl_octane",
+      "name": "BPCL SBI Card OCTANE",
+      "issuer": "SBI Card",
+      "network": "Visa, RuPay",
+      "network_quote": "D. The Visa/RuPay logo: The hologram and the logo | ensure that all establishments throughout the world | displaying the Visa/RuPay will accept your card.",
+      "network_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+      "upi_rupay": true,
+      "fees": {
+        "joining": 1499,
+        "annual": 1499,
+        "waiver_spend": 200000,
+        "quote": "BPCL SBI Card Octane 1,499 1,499 (Waived off on annual spends of Rs. 2 Lakh or more in the | preceding year)",
+        "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf"
+      },
+      "earn": [
+        {
+          "category": "bpcl (fuel at BPCL pumps)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 25,
+            "per_inr": 100
+          },
+          "cap": {
+            "amount": 2500,
+            "unit": "points",
+            "period": "statement_cycle"
+          },
+          "quote": "1.1 7.25% Value back - 25X Reward Points on fuel purchases. 25 Reward Points per `100 on BPCL Fuel | spends (Max. of 2500 Reward Points per statement cycle)",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "note": "Rupee sign extracts as a backtick in the PDF text. 7.25% value back is the issuer's figure (6.25% points at ₹0.25 + 1% surcharge waiver). Not earned on fuel paid by UPI on the RuPay variant."
+        },
+        {
+          "category": "bpcl (Bharat Gas website/app LPG)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 25,
+            "per_inr": 100
+          },
+          "cap": {
+            "amount": 500,
+            "unit": "points",
+            "period": "statement_cycle"
+          },
+          "quote": "25 | Reward Points on every `100 spent on Bharat Gas (Website and App only) is capped at 500 Reward | Points per billing cycle.",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf"
+        },
+        {
+          "category": "grocery|dining|entertainment (MCC 5411, 5311, 7832, 7922, 5812-5814)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 10,
+            "per_inr": 100
+          },
+          "cap": {
+            "amount": 7500,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "10X Reward Points on every `100 spent on Groceries, Departmental stores, Movies & Dining.",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "cap_quote": "Cumulative 10X Reward Points accrued per `100 spent on Groceries, Departmental Stores, Movies | & Dining with your BPCL SBI Card OCTANE will have a maximum cap of 7,500 Reward Points per | month.",
+          "cap_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "note": "Departmental stores (MCC 5311) included. The exclusion list says accelerated points under these MCCs do not apply for 'merchants - Metro Cash & Carry and Walmart'; the sentence is ambiguous about whether dining/movies are wholly excluded."
+        },
+        {
+          "category": "other",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": {
+            "points": 1,
+            "per_inr": 100
+          },
+          "cap": null,
+          "quote": "1 Reward Point on all other retail spends, except fuel ( 1 RP = `0.25)",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "note": "Text does not state the spend unit for 1 RP; per ₹100 is inferred from the '25X = 25 RP per ₹100' and '10X per ₹100' wording. T&C also says 'Reward Points can be earned for a maximum spend of `10000/- per month' without saying which bucket it applies to; not modelled as a cap."
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "fuel at non-BPCL pumps / any petrol pump purchase outside the BPCL accelerated rule; BPCL fuel via UPI on RuPay",
+          "quote": "- Any purchases at petrol pumps/ service stations",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf"
+        },
+        {
+          "what": "wallet loads (MCC 6540, 6541)",
+          "quote": "e-Wallet loading/recharge transactions identified under MCCs 6540 and 6541",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf"
+        },
+        {
+          "what": "Flexipay, merchant EMI",
+          "quote": "- Flexipay w.e.f 20th November 2020",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf"
+        },
+        {
+          "what": "rent (MCC 6513)",
+          "quote": "W.e.f. 15 Apr 2024, accrual of Reward Points on Rent Payment transactions with BPCL SBI Card",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf"
+        },
+        {
+          "what": "cash advance, balance transfer, fees, disputed",
+          "quote": "- Balance transfers ... - Cash advances",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf"
+        }
+      ],
+      "point_value_inr": 0.25,
+      "point_value_quote": "4 Reward Point gives you `1 of free fuel.",
+      "point_value_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+      "eligibility": null,
+      "lounge": null,
+      "milestones": [],
+      "notes": [
+        "Product page sbicard.com/en/personal/credit-cards/bpcl-sbi-card-octane.html is JS-rendered (200, no card content). Earn rules from the card's e-kit T&C PDF (ekit-tncs/BPCLOctanetnc.pdf, undated; found via search on sbicard.com). Lounge, milestones and eligibility likely live on the JS page; not sourced, set null.",
+        "Fuel surcharge waiver: 'Fuel Surcharge Waiver applicable only on BPCL Fuel transactions upto | `4000/- for a max of `100/- per month.' (T&C wording as extracted).",
+        "Customer notice (29 Mar 2026) about the BPCL SBI Card fee waiver at ₹1 lakh concerns the base BPCL SBI Card (₹499), not OCTANE."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.sbicard.com/en/personal/credit-cards/bpcl-sbi-card-octane.html",
+          "status": "200 but JS-rendered; no card content"
+        },
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf",
+          "status": "200 (PDF)"
+        },
+        {
+          "url": "https://www.sbicard.com/en/customer-notices.page",
+          "status": "200"
+        },
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/bpcl-sbi-card-octane-tnc.pdf",
+          "status": "404 (guess)"
+        },
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+          "status": "200 (PDF, undated e-kit)"
+        }
+      ]
+    },
+    {
+      "id": "sbi_cashback",
+      "name": "Cashback SBI Card",
+      "issuer": "SBI Card",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 999,
+        "annual": 999,
+        "waiver_spend": 200000,
+        "quote": "CASHBACK SBI Card 999 999 (Waived off on annual spends of Rs.2 Lakh or more in the | preceding year)",
+        "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf"
+      },
+      "earn": [
+        {
+          "category": "online",
+          "rate_pct": 5.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 2000,
+            "unit": "inr",
+            "period": "statement_cycle"
+          },
+          "quote": "Online 5% `2,000",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "cap_quote": "The maximum Cashback* that can be earned in a statement | cycle will be capped at `4,000, as follows:",
+          "cap_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "note": "Effective 1 Apr 2026. In the PDF text the rupee sign extracts as a backtick (`). Online and offline sub-caps of ₹2,000 each sit inside a combined ₹4,000 per statement cycle cap."
+        },
+        {
+          "category": "other (offline POS)",
+          "rate_pct": 1.0,
+          "unit": "cashback",
+          "points_per": null,
+          "cap": {
+            "amount": 2000,
+            "unit": "inr",
+            "period": "statement_cycle"
+          },
+          "quote": "Offline | 1% `2,000 | (POS at Merchant Outlets)",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "note": "Effective 1 Apr 2026; shares the ₹4,000 per statement cycle total cap."
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "digital gaming (MCC 7993, 7994, 5816), tolls (4784), government (9222, 9311, 9402)",
+          "quote": "Cashback will not be applicable on spends at Digital | Gaming Platforms/Merchants, Tolls and Government- | related Transactions, in addition to existing exclusions.",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf"
+        },
+        {
+          "what": "merchant EMI, Flexipay EMI, utilities, insurance, fuel, rent, wallet, education, jewellery, railways",
+          "quote": "*Cashback not applicable on Merchant EMI & Flexipay EMI transactions and on following categories: Utility, | insurance, Fuel, Rent, Wallet, School & Educational Services, Jewelry, Railways etc.",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf"
+        }
+      ],
+      "point_value_inr": null,
+      "point_value_quote": "Not applicable: cashback card (unit cashback).",
+      "eligibility": null,
+      "lounge": null,
+      "milestones": [],
+      "notes": [
+        "Product page sbicard.com/en/personal/credit-cards/cashback-sbi-card.html is JS-rendered; its data JSON (/templatedata/product/card/data/en/personal/cashback-sbi-card.json) returns 404 to curl, so network, eligibility, lounge, cashback posting rules and the full exclusion list linked from the notice ('For complete list of exclusions, click here', no URL in PDF text) are not sourced. Set to null.",
+        "Earn rules come from the 1 Apr 2026 revision notice linked from the SBI Card customer-notices page: 'W.e.f. 1 Apr 2026, there is a revision in the benefits of CASHBACK SBI Credit Card.'",
+        "SBI-wide notice: 'Reward Points forfeiture on Cashback Offers will be processed within 90 days of cashback posting date.' (customer notices; concerns reward-point cards, likely not this card)."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.sbicard.com/en/personal/credit-cards/cashback-sbi-card.html",
+          "status": "200 but JS-rendered; no card content in HTML"
+        },
+        {
+          "url": "https://www.sbicard.com/templatedata/product/card/data/en/personal/cashback-sbi-card.json",
+          "status": "404"
+        },
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf",
+          "status": "200 (PDF; table text read with pdftotext -raw)"
+        },
+        {
+          "url": "https://www.sbicard.com/en/customer-notices.page",
+          "status": "200"
+        },
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+          "status": "200 (PDF)"
+        }
+      ]
+    },
+    {
+      "id": "sbi_simplyclick",
+      "name": "SimplyCLICK SBI Card",
+      "issuer": "SBI Card",
+      "network": null,
+      "upi_rupay": null,
+      "fees": {
+        "joining": 499,
+        "annual": 499,
+        "waiver_spend": 100000,
+        "quote": "SimplyCLICK SBI Card 499 499 (Waived off on annual spends of Rs.1 Lakh or more in the | preceding year)",
+        "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf"
+      },
+      "earn": [
+        {
+          "category": "apollo_24x7|bookmyshow|cleartrip|dominos|igp|myntra|netmeds|yatra (online, 10X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 10000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Your card will continue to accrue 10X Reward Points on online spends at Apollo 24X7, BookMyShow, Cleartrip, Dominos, IGP, Myntra, Netmeds and Yatra",
+          "url": "https://www.sbicard.com/en/customer-notices.page",
+          "cap_quote": "Cumulative 10X Reward Points accrued on Online spends with | exclusive partners and cumulative 5X Reward Points accrued on other Online Spends on | SimplyCLICK SBI Card, each will have a capping of 10,000 Reward Points per | calendar month.",
+          "cap_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/simply-click-tnc-MITC-booklet.pdf",
+          "multiplier": "10X",
+          "note": "Base earn rate (points per ₹) is not stated in any fetched official text (product page is JS-only), so points_per is null; only the multiplier is sourced. Partner list is from the notice that moved Swiggy to 5X w.e.f. 1 Apr 2025. Amazon moved to 5X w.e.f. 1 Jan 2023; Lenskart and EazyDiner also moved to 5X."
+        },
+        {
+          "category": "online (other, 5X)",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 10000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Cumulative 5X Reward Points accrued on other online spends on your SimplyCLICK SBI Card will have a capping of 10,000 Reward Points per month.",
+          "url": "https://www.sbicard.com/en/customer-notices.page",
+          "multiplier": "5X",
+          "note": "Includes Amazon, Swiggy, Lenskart, EazyDiner (moved from 10X to 5X per notices). Base rate not sourced."
+        },
+        {
+          "category": "other",
+          "rate_pct": null,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "Post the capping, standard Reward Points as per the card policy will continue to accrue",
+          "url": "https://www.sbicard.com/en/customer-notices.page",
+          "multiplier": "1X",
+          "note": "Standard (1X) rate exists but its value is not on any fetched official page; product page is JS-only."
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "cash advance, balance transfer, encash, Flexipay, fuel",
+          "quote": "Cash Advance, Balance Transfer, Encash, Flexipay and Fuel transactions are | not included in Reward Points program.",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/simply-click-tnc-MITC-booklet.pdf"
+        },
+        {
+          "what": "wallet loads on partner sites (MCC 6540, 6541)",
+          "quote": "e-Wallet loading transactions done using SimplyCLICK SBI Card on any partner | brand website/app identified under MCCs 6540 and 6541 (on best effort | basis) will not accrue Reward Points.",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/simply-click-tnc-MITC-booklet.pdf"
+        },
+        {
+          "what": "utility bills on SBI Card site/app (no 5X); Amazon utility/recharge (no 10X); Amazon gift cards (no 10X); Cleartrip via affiliates (no 10X)",
+          "quote": "Utility Bill Payments done using SimplyCLICK SBI Card on SBI Card website/ | mobile app will not accrue 5X Reward Points.",
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/simply-click-tnc-MITC-booklet.pdf"
+        },
+        {
+          "what": "online rent at 1X only",
+          "quote": "Accrual of 5X Reward Points on online Rent Payment transactions with SimplyCLICK SBI Card and SimplyCLICK Advantage SBI Card will be revised to 1X Reward Points w.e.f 01 MAY'23",
+          "url": "https://www.sbicard.com/en/customer-notices.page"
+        }
+      ],
+      "point_value_inr": null,
+      "point_value_quote": "Not stated for redemption. The MITC closure example uses 'Rs 0.25 per | Reward Point (this conversion value may vary for different | card variants)' for negative balances only, so it is not recorded as the redemption value.",
+      "eligibility": null,
+      "lounge": null,
+      "milestones": [
+        {
+          "quote": "W.e.f 15th September, 2023, SimplyCLICK / SimplyCLICK Advantage SBI Cardholders will get Cleartrip / Yatra e-Vouchers worth Rs.2,000 each on reaching annual online spends of Rs.1 Lakh and Rs.2 Lakh respectively",
+          "url": "https://www.sbicard.com/en/customer-notices.page"
+        }
+      ],
+      "notes": [
+        "Product page (sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html) is JS-rendered; base earn rate, network, eligibility and lounge are not in the HTML. Set to null.",
+        "Booklet is undated (examples use 2022 dates); partner table in it is images. Current 10X partner list taken from the 1 Apr 2025 customer notice.",
+        "Welcome gift: 'All eligible SimplyCLICK SBI Cardholders will be issued an Amazon | (Redeemable on Amazon.in or its mobile application) voucher worth Rs.500.' after paying the Rs.499 fee (booklet).",
+        "10X needs INR payment: '10X Reward Points are applicable only when payment is done in INR' (booklet)."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+          "status": "not fetched separately; same JS-only template as other sbicard.com product pages (Cashback, Octane both 200 with no card content)"
+        },
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/simply-click-tnc-MITC-booklet.pdf",
+          "status": "200 (PDF, undated)"
+        },
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf",
+          "status": "200 (PDF)"
+        },
+        {
+          "url": "https://www.sbicard.com/en/customer-notices.page",
+          "status": "200"
+        }
+      ]
+    },
+    {
+      "id": "scapia_federal",
+      "name": "Scapia Federal Bank Credit Card",
+      "issuer": "Federal Bank (fintech partner: Scapia)",
+      "network": "Visa (primary card) + complimentary RuPay card",
+      "network_quote": "A complimentary RuPay credit card to sweeten the deal ... *Smartforex feature available only with the Visa card",
+      "network_url": "https://www.scapia.cards/",
+      "upi_rupay": true,
+      "fees": {
+        "joining": 0,
+        "annual": 0,
+        "waiver_spend": null,
+        "quote": "Card Name Scapia Federal Credit Card | Issued by Federal Bank | Joining Fees Nil | Annual Membership Fees Nil",
+        "url": "https://www.federal.bank.in/documents/d/guest/kfs_v11-30_04_26",
+        "note": "Partner page also says 'Zero joining fees | Zero annual fees | Zero forex fees'."
+      },
+      "earn": [
+        {
+          "category": "other (headline, all card spends)",
+          "rate_pct": 10.0,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "Issued in partnership with Federal bank, the most rewarding credit card for the traveller in you. Get 10% rewards, zero forex, unlimited domestic lounge access and more at zero fees.",
+          "url": "https://www.scapia.cards/",
+          "note": "From the scapia.cards meta description (partner claim). The on-page rate figures for 'rewards on your card spends' and 'rewards on all travel bookings via Scapia app' are drawn as SVG graphics, not text, so the per-category percentages are not machine-readable. The 10% is assumed to be the value of Scapia coins earned (5 coins = ₹1); the page does not say which spends the 10% covers. Issuer MITC/KFS contain no reward terms."
+        },
+        {
+          "category": "upi (RuPay card)",
+          "rate_pct": 5.0,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "Give your UPI spends the credit advantage | 5% | rewards on all your UPI and | spends of ₹500 or more",
+          "url": "https://www.scapia.cards/",
+          "min_txn_inr": 500,
+          "note": "Text as extracted is garbled (a word between 'UPI and' and 'spends' is missing, likely rendered as graphics). Whether ₹500 minimum applies to UPI or to the other spend type is unclear."
+        }
+      ],
+      "exclusions": [],
+      "point_value_inr": 0.2,
+      "point_value_quote": "5 Scapia coins = ₹1",
+      "point_value_url": "https://www.scapia.cards/",
+      "eligibility": null,
+      "lounge": "Unlimited domestic lounge access, unlocked on ₹20,000 combined monthly spend across the Visa/Mastercard and RuPay cards. Quote: 'Unlimited domestic lounge access | Unlocks on a combined monthly spend of ₹20,000 across Mastercard/Visa and RuPay cards' (scapia.cards).",
+      "milestones": [],
+      "notes": [
+        "Coins redeemable only for travel on the Scapia app: 'Use Scapia coins to book travel on the Scapia app' and 'Pay 100% of your booking value with your Scapia coins'.",
+        "Exclusions: page links 'See the list of ineligible transactions' but the list is rendered client-side; not sourced. Federal KFS says rent and wallet load attract a 1% + GST convenience fee and fuel spends over ₹50,000 a month attract 1% + GST (fees, not reward exclusions).",
+        "Federal MITC/KFS (v11, 30-04-26) fetched; neither contains reward terms. Federal domain is behind a Radware bot wall; it worked only with full browser Accept/Sec-Fetch headers.",
+        "Scapia BOBCARD and Scapia Axis variants exist; not profiled here.",
+        "Eligibility not stated on fetched pages."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.scapia.cards/",
+          "status": "200 (rates partly drawn as SVG)"
+        },
+        {
+          "url": "https://www.scapia.cards/disclosures",
+          "status": "200 (links only)"
+        },
+        {
+          "url": "https://www.scapia.cards/sitemap.xml",
+          "status": "403"
+        },
+        {
+          "url": "https://www.federal.bank.in/documents/d/guest/kfs_v11-30_04_26",
+          "status": "200 (PDF; first attempt redirected to validate.perfdrive.com bot wall)"
+        },
+        {
+          "url": "https://www.federal.bank.in/documents/d/guest/mitc_v11-30_04_26",
+          "status": "200 (PDF; no reward terms)"
+        }
+      ]
+    },
+    {
+      "id": "hdfc_tata_neu_infinity",
+      "name": "Tata Neu Infinity HDFC Bank Credit Card",
+      "issuer": "HDFC Bank",
+      "network": "Visa, RuPay",
+      "network_quote": "A. Domestic Lounge Access – VISA / RuPay Card",
+      "network_url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+      "upi_rupay": true,
+      "fees": {
+        "joining": 1499,
+        "annual": 1499,
+        "waiver_spend": 300000,
+        "quote": "Joining Fee: ₹1,499 plus Applicable Taxes | Renewal Fee: ₹1,499 plus Applicable Taxes | Fee Waiver: Spend ₹3 lakh or more in a year before the renewal date to get the renewal fee waived.",
+        "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card/fees-and-charges"
+      },
+      "earn": [
+        {
+          "category": "tata_neu",
+          "rate_pct": 5.0,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "5% back as NeuCoins on Non-EMI Spends on Tata Neu and partner Tata Brands.",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "note": "Points are NeuCoins (1 NeuCoin = ₹1 benefit on Tata Neu), so rate_pct is the NeuCoin %. Partner Tata brand list is linked from the page, not captured."
+        },
+        {
+          "category": "tata_neu (NeuPass, selected categories, additional)",
+          "rate_pct": 5.0,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "Earn additional 5% back as NeuCoins on selected categories on Tata Neu App/Website, post downloading Tata Neu App and registering for NeuPass.",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "condition": "neupass_registered",
+          "note": "Additive to the 5% base. Page: 'Currently, Bill Payment (Tata Pay), Tanishq, Cult.fit, Air India, Tata Play spends are not eligible for additional 5% NeuCoins via NeuPass Membership'. Only for transactions via the primary cardholder's Tata Neu account (w.e.f. 15-Jan-25)."
+        },
+        {
+          "category": "other",
+          "rate_pct": 1.5,
+          "unit": "points",
+          "points_per": null,
+          "cap": null,
+          "quote": "1.5% back as NeuCoins on Non-Tata Brand Spends and any Merchant EMI Spends",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card"
+        },
+        {
+          "category": "grocery",
+          "rate_pct": 1.5,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 2000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "NeuCoins earned on Grocery transactions will be capped to 2,000 per month for Tata Neu Infinity HDFC Bank Credit card.",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "note": "Rate is the non-Tata 1.5%; the page says 'per month' (taken as calendar month)."
+        },
+        {
+          "category": "utilities",
+          "rate_pct": 1.5,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 2000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "NeuCoins earned on Utility transactions will be capped at 2,000 NeuCoins per calendar month.",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card"
+        },
+        {
+          "category": "telecom_cable",
+          "rate_pct": 1.5,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 2000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "NeuCoins earned on Telecom & Cable transactions will be capped at 2,000 NeuCoins per calendar month.",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card"
+        },
+        {
+          "category": "insurance",
+          "rate_pct": 1.5,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 2000,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "NeuCoins accrued for insurance transactions will have a maximum capping 2,000 per month instead of 2,000 per day.",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card"
+        },
+        {
+          "category": "upi (any UPI ID, RuPay variant)",
+          "rate_pct": 0.5,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 500,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Earn 0.50% back as NeuCoins on eligible UPI spends (including spends on partner Tata Brands), this will be posted to your card account by the Bank",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "cap_quote": "Total NeuCoins earned on all UPI payments will be capped to 500 NeuCoins per calendar month",
+          "cap_url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "note": "500 NeuCoin cap is shared with the Tata Neu UPI ID bonus below."
+        },
+        {
+          "category": "upi (Tata Neu UPI ID, additional)",
+          "rate_pct": 1.0,
+          "unit": "points",
+          "points_per": null,
+          "cap": {
+            "amount": 500,
+            "unit": "points",
+            "period": "calendar_month"
+          },
+          "quote": "Earn additional 1% back as NeuCoins on any eligible UPI payments by using Tata Neu UPI ID.",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "note": "Additive to 0.5%; posted by Tata Neu to the Tata Neu account, not by the bank. Shares the 500/month UPI cap."
+        }
+      ],
+      "exclusions": [
+        {
+          "what": "fuel, wallet, rent, government, online gaming",
+          "quote": "NeuCoins will not be accrued for Fuel, Wallet, Rental, Government and Online Gaming related transactions.",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card"
+        },
+        {
+          "what": "fuel, wallet/gift/prepaid card load, vouchers, cash, fees, Smart EMI/Dial an EMI, rent, government",
+          "quote": "Fuel Spends | Wallet loads / Gift or Prepaid Card load/ Voucher purchase | Cash Advances | Payment of Outstanding Balances | Payment of card fees and other charges | Smart EMI / Dial an EMI transaction | Rental and Government related transactions",
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/tata-neu-infinity-credit-card/pdf/tata_neu_infinity_card_tnc.pdf"
+        },
+        {
+          "what": "education via third-party apps",
+          "quote": "Education payments made through third-party apps like (but not limited to) CRED, Cheq, MobiKwik, and others will NOT earn NeuCoins.",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card"
+        },
+        {
+          "what": "online skill-based gaming (MCC 5816)",
+          "quote": "No NeuCoins will be earned on Online Skill-Based Gaming transactions (MCC-5816)",
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card"
+        }
+      ],
+      "point_value_inr": 1.0,
+      "point_value_quote": "Unless otherwise notified by Tata Neu, each NeuCoin may be utilized to avail a Benefit equivalent to ₹1",
+      "point_value_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/tata-neu-infinity-credit-card/pdf/tata_neu_infinity_card_tnc.pdf",
+      "eligibility": {
+        "min_income_annual": null,
+        "min_income_monthly_salaried": 100000,
+        "min_itr_annual_self_employed": 1200000,
+        "age": "21-60 salaried, 21-65 self-employed",
+        "quote": "Salaried | Nationality: Indian | Age: 21 – 60 years | Income (Monthly) - ₹1,00,000 | Self-Employed | Nationality: Indian | Age: 21 – 65 years | Annual ITR > ₹12,00,000",
+        "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card"
+      },
+      "lounge": "Domestic: 2 vouchers per calendar quarter (up to 8/year) on ₹50,000+ spend in a calendar quarter (w.e.f. 10-Jun-2025). International: 4 per calendar year (1 per quarter) via Priority Pass (Visa) or RuPay lounges. Quote: '2 Complimentary Domestic Lounge Voucher per calendar quarter (up to 8 per calendar year) can be availed on spends of Rs 50,000 or more in a calendar quarter.' / '4 Complimentary Lounge Access per calendar year (1 per Quarter), outside India.' (product page)",
+      "milestones": [],
+      "notes": [
+        "Welcome: 'Get 1,499 NeuCoins on Tata Neu App (as reversal of 1st Year Membership Fees), applicable on 1st Transaction done within 30 days of card issuance' (product page); 'Welcome Benefit is not applicable on Lifetime Free and First Year Free Cards'.",
+        "Fees FAQ: 'HDFC Bank may levy the joining fee on the 120th day after card issuance.'",
+        "T&C PDF is dated 'Updated on 03-Jan-2026'. Its earn table states UPI is 'Any UPI Spends on Rupay Credit Card', so UPI earn applies to the RuPay variant only.",
+        "Fuel surcharge waiver 1% on ₹400-₹5,000, max ₹500 per statement cycle (product page).",
+        "Grocery/utility/telecom/insurance rows use the 1.5% non-Tata rate; if bought on Tata Neu the 5% Tata rate likely applies but the cap wording is per category, not per merchant.",
+        "Tata Neu Plus variant is not profiled here."
+      ],
+      "fetch_log": [
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card/fees-and-charges",
+          "status": "200"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/tata-neu-infinity-credit-card/pdf/tata_neu_infinity_card_tnc.pdf",
+          "status": "200 (PDF, 'Updated on 03-Jan-2026')"
+        },
+        {
+          "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/tata-neu-infinity-credit-card/pdf/additional-upi-neucoins-infinity.pdf",
+          "status": "200 (PDF, not mined)"
+        }
+      ]
+    }
+  ]
+}

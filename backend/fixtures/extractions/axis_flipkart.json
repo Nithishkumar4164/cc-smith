@@ -1,0 +1,261 @@
+{
+  "id": "axis_flipkart",
+  "name": "Flipkart Axis Bank Credit Card",
+  "issuer": "Axis Bank",
+  "fees": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card",
+        "quote": "Joining fee ₹NIL (Limited period offer) | Annual Fee 2nd year Onwards: ₹500 | Annual fee waived off on annual spends greater than ₹3,50,000. | Rent transactions ( MCC 6513 ) and wallet load transactions ( MCC 6540 ) will not be eligible for spends counted in availing annual fee waiver."
+      }
+    ],
+    "joining_paise": 0,
+    "annual_paise": 50000,
+    "waiver_spend_paise": 35000000
+  },
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+        "quote": "Cashback shall mean money awarded in the customer’s credit card account under the cashback scheme."
+      },
+      {
+        "url": "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card",
+        "quote": "Cashback will be directly credited in your credit card statement"
+      }
+    ],
+    "kind": "cashback",
+    "name": "Cashback",
+    "value_paise": 100
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "quote": "Myntra 7.5% INR 4000 per statement quarter"
+        }
+      ],
+      "id": "myntra",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "myntra"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 750
+      },
+      "cap_ids": [
+        "myntra"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "quote": "Flipkart* 5% INR 4000 per statement quarter ... * Valid on the website as well as mobile application of Flipkart excluding Flipkart Health"
+        }
+      ],
+      "id": "flipkart",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "flipkart"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 500
+      },
+      "cap_ids": [
+        "flipkart"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "quote": "Cleartrip 5% INR 4000 per statement quarter"
+        }
+      ],
+      "id": "cleartrip",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "cleartrip"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 500
+      },
+      "cap_ids": [
+        "cleartrip"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "quote": "Preferred Merchants** 4% Unlimited"
+        }
+      ],
+      "id": "preferred",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "swiggy"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 400
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Preferred-merchant list is image-only; Swiggy food delivery is named in the T&C."
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "quote": "Other eligible merchants 1% Unlimited"
+        }
+      ],
+      "id": "other",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 100
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "quote": "Myntra 7.5% INR 4000 per statement quarter"
+        }
+      ],
+      "id": "myntra",
+      "amount": 400000,
+      "unit": "paise",
+      "period": "statement_quarter",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "quote": "Flipkart* 5% INR 4000 per statement quarter ... * Valid on the website as well as mobile application of Flipkart excluding Flipkart Health"
+        }
+      ],
+      "id": "flipkart",
+      "amount": 400000,
+      "unit": "paise",
+      "period": "statement_quarter",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "quote": "Cleartrip 5% INR 4000 per statement quarter"
+        }
+      ],
+      "id": "cleartrip",
+      "amount": 400000,
+      "unit": "paise",
+      "period": "statement_quarter",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/terms-and-conditions-flipkart-axis-bank-credit-card.pdf?sfvrsn=5a68a36d_1",
+          "quote": "For cashback: Transactions made on Utility & Telecom, Education, Rent, Wallet load, Government services, Insurance, Gold & Jewellery, Fuel, Financial Institutions, Cash advances and Repayments."
+        }
+      ],
+      "categories": [
+        "utilities",
+        "education",
+        "rent",
+        "wallet",
+        "government",
+        "insurance",
+        "jewellery",
+        "fuel"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+          "quote": "Cashback shall not be eligible for following spends/transactions on the card - purchase of gift cards on Flipkart & Myntra, purchase of gold (in any form – gold bar, gold coin, jewelry, artifact etc.), EMI transactions, purchases converted to EMI post -facto, cash advances, payment of outstanding balances, payment of card fees and other card charges"
+        }
+      ],
+      "categories": [
+        "gift_card"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://campaign.axis.bank.in/generic/terms-and-conditions-generic-all.pdf",
+          "quote": "Gift card purchases will continue to be excluded from rewards category and will not earn rewards/cashback ... Additionally, please note that no rewards/cashback shall be earned on spends made on Bridge Fees, Road Fees, and Tolls."
+        }
+      ],
+      "categories": [
+        "tolls"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
+  "min_txn_paise": 10000,
+  "milestones": [],
+  "min_txn_src": [
+    {
+      "url": "https://www.axis.bank.in/docs/default-source/default-document-library/cashback-tncs---final.pdf?sfvrsn=b55a0e1a_5",
+      "quote": "Cashback is not applicable on transactions less than Rs. 100."
+    }
+  ]
+}

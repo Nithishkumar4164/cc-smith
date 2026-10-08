@@ -1,0 +1,98 @@
+{
+  "_fixture": "reconstructed from research_notes/cc-smith orchestrator/live-runs-2026-10-07.md R17: titles, sources, dates and counts follow the notes; full payload was not saved, ids/links abbreviated in the notes are padded; 8 of 71 results kept: every card launch plus 4 of ~9 Apple Pay noise stories",
+  "search_metadata": {
+    "id": "r17-google-news-launch",
+    "status": "Success"
+  },
+  "search_parameters": {
+    "engine": "google_news",
+    "q": "launches new credit card India when:30d",
+    "gl": "in",
+    "hl": "en"
+  },
+  "search_information": {
+    "total_results": 71
+  },
+  "news_results": [
+    {
+      "position": 1,
+      "title": "Bandhan Bank enters credit card business, launches four cards with Mastercard",
+      "source": {
+        "name": "Moneycontrol"
+      },
+      "link": "https://www.moneycontrol.com/news/business/banks/bandhan-bank-credit-cards-mastercard.html",
+      "iso_date": "2026-09-08T06:30:00+00:00",
+      "date": "09/08/2026, 06:30 AM, +0000 UTC"
+    },
+    {
+      "position": 2,
+      "title": "Bandhan Bank forays into credit cards with four Mastercard variants",
+      "source": {
+        "name": "Fortune India"
+      },
+      "link": "https://www.fortuneindia.com/enterprise/bandhan-bank-forays-into-credit-cards",
+      "iso_date": "2026-09-08T09:10:00+00:00",
+      "date": "09/08/2026, 09:10 AM, +0000 UTC"
+    },
+    {
+      "position": 3,
+      "title": "Apple Pay launches in India with Axis Bank as first partner",
+      "source": {
+        "name": "The Economic Times"
+      },
+      "link": "https://economictimes.indiatimes.com/tech/apple-pay-india-launch-axis-bank",
+      "iso_date": "2026-09-30T04:00:00+00:00",
+      "date": "09/30/2026, 04:00 AM, +0000 UTC"
+    },
+    {
+      "position": 4,
+      "title": "Apple Pay goes live in India: how to add your Axis Bank credit card",
+      "source": {
+        "name": "Moneycontrol"
+      },
+      "link": "https://www.moneycontrol.com/technology/apple-pay-india-how-to-add-card.html",
+      "iso_date": "2026-10-01T05:00:00+00:00",
+      "date": "10/01/2026, 05:00 AM, +0000 UTC"
+    },
+    {
+      "position": 5,
+      "title": "Apple Pay launch in India: Axis Bank cards first, more banks to follow",
+      "source": {
+        "name": "Convergence Now"
+      },
+      "link": "https://convergencenow.com/apple-pay-launch-india-axis",
+      "iso_date": "2026-10-02T07:00:00+00:00",
+      "date": "10/02/2026, 07:00 AM, +0000 UTC"
+    },
+    {
+      "position": 6,
+      "title": "Apple Pay launched in India; what card users should know",
+      "source": {
+        "name": "Open"
+      },
+      "link": "https://openthemagazine.com/apple-pay-launched-india",
+      "iso_date": "2026-09-30T11:00:00+00:00",
+      "date": "09/30/2026, 11:00 AM, +0000 UTC"
+    },
+    {
+      "position": 7,
+      "title": "Scapia and Axis Bank launch co-branded travel credit card",
+      "source": {
+        "name": "The Covai Mail"
+      },
+      "link": "https://www.covaimail.com/scapia-axis-bank-travel-credit-card",
+      "iso_date": "2026-09-22T08:00:00+00:00",
+      "date": "09/22/2026, 08:00 AM, +0000 UTC"
+    },
+    {
+      "position": 8,
+      "title": "Google Pay Flex SBI Card Launched",
+      "source": {
+        "name": "fintechbiznews"
+      },
+      "link": "https://www.fintechbiznews.com/google-pay-flex-sbi-card-launched",
+      "iso_date": "2026-10-01T06:00:00+00:00",
+      "date": "10/01/2026, 06:00 AM, +0000 UTC"
+    }
+  ]
+}

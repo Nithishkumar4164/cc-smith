@@ -1,0 +1,75 @@
+# Merchant registry for Checkout Advisor (D1) and the Finder spend form.
+# category: the engine's category token. channel: the usual way people pay there.
+# mcc: the code issuers typically see; "expected" only (actual MCC is learned from statements in M2).
+categories:
+  dining: Dining and food delivery
+  grocery: Groceries
+  online: Online shopping
+  travel: Travel (flights, hotels, cabs)
+  fuel: Fuel
+  utilities: Utilities and telecom
+  rent: Rent
+  insurance: Insurance
+  government: Government and tax
+  wallet: Wallet loads
+  education: Education
+  entertainment: Movies and streaming
+  jewellery: Gold and jewellery
+  gift_card: Gift cards and vouchers
+  tolls: Tolls and FASTag
+  other: Everything else (offline retail)
+merchants:
+  - {key: amazon, name: Amazon, category: online, channel: online, aliases: [amazon.in, amzn, amazon pay], mcc: "5311"}
+  - {key: flipkart, name: Flipkart, category: online, channel: online, aliases: [flipkart.com, fkrt], mcc: "5399"}
+  - {key: myntra, name: Myntra, category: online, channel: online, aliases: [myntra.com], mcc: "5651"}
+  - {key: nykaa, name: Nykaa, category: online, channel: online, aliases: [nykaa.com], mcc: "5977"}
+  - {key: ajio, name: AJIO, category: online, channel: online, aliases: [ajio.com], mcc: "5651"}
+  - {key: tatacliq, name: Tata CLiQ, category: online, channel: online, aliases: [tata cliq, tatacliq.com], mcc: "5732"}
+  - {key: meesho, name: Meesho, category: online, channel: online, aliases: [], mcc: "5399"}
+  - {key: reliance_digital, name: Reliance Digital, category: online, channel: offline, aliases: [reliancedigital], mcc: "5732"}
+  - {key: croma, name: Croma, category: other, channel: offline, aliases: [], mcc: "5732"}
+  - {key: marks_and_spencer, name: Marks & Spencer, category: other, channel: offline, aliases: [m&s, marks and spencer], mcc: "5651"}
+  - {key: swiggy, name: Swiggy, category: dining, channel: online, aliases: [swiggy instamart, instamart, swiggy dineout], mcc: "5812"}
+  - {key: zomato, name: Zomato, category: dining, channel: online, aliases: [], mcc: "5812"}
+  - {key: blinkit, name: Blinkit, category: grocery, channel: online, aliases: [grofers], mcc: "5411"}
+  - {key: zepto, name: Zepto, category: grocery, channel: online, aliases: [], mcc: "5411"}
+  - {key: bigbasket, name: BigBasket, category: grocery, channel: online, aliases: [bb now, big basket], mcc: "5411"}
+  - {key: dmart, name: DMart, category: grocery, channel: offline, aliases: [avenue supermarts, d mart], mcc: "5411"}
+  - {key: tata_neu, name: Tata Neu, category: online, channel: online, aliases: [tataneu, neu], mcc: "5399"}
+  - {key: croma_online, name: Croma online, category: online, channel: online, aliases: [croma.com], mcc: "5732"}
+  - {key: uber, name: Uber, category: travel, channel: online, aliases: [uber india], mcc: "4121"}
+  - {key: ola, name: Ola, category: travel, channel: online, aliases: [olacabs], mcc: "4121"}
+  - {key: rapido, name: Rapido, category: travel, channel: online, aliases: [], mcc: "4121"}
+  - {key: makemytrip, name: MakeMyTrip, category: travel, channel: online, aliases: [mmt], mcc: "4722"}
+  - {key: cleartrip, name: Cleartrip, category: travel, channel: online, aliases: [], mcc: "4722"}
+  - {key: goibibo, name: Goibibo, category: travel, channel: online, aliases: [], mcc: "4722"}
+  - {key: easemytrip, name: EaseMyTrip, category: travel, channel: online, aliases: [], mcc: "4722"}
+  - {key: ixigo, name: ixigo, category: travel, channel: online, aliases: [], mcc: "4722"}
+  - {key: yatra, name: Yatra, category: travel, channel: online, aliases: [], mcc: "4722"}
+  - {key: indigo, name: IndiGo, category: travel, channel: online, aliases: [goindigo, 6e], mcc: "3000"}
+  - {key: air_india, name: Air India, category: travel, channel: online, aliases: [airindia], mcc: "3000"}
+  - {key: irctc, name: IRCTC, category: travel, channel: online, aliases: [indian railways], mcc: "4112"}
+  - {key: marriott, name: Marriott hotels, category: travel, channel: offline, aliases: [jw marriott, westin, sheraton], mcc: "3500"}
+  - {key: taj, name: Taj Hotels, category: travel, channel: offline, aliases: [ihcl, taj hotel], mcc: "7011"}
+  - {key: bookmyshow, name: BookMyShow, category: entertainment, channel: online, aliases: [bms], mcc: "7832"}
+  - {key: pvr, name: PVR INOX, category: entertainment, channel: offline, aliases: [inox, pvr cinemas], mcc: "7832"}
+  - {key: netflix, name: Netflix, category: entertainment, channel: online, aliases: [], mcc: "4899"}
+  - {key: hotstar, name: JioHotstar, category: entertainment, channel: online, aliases: [disney hotstar, jiohotstar], mcc: "4899"}
+  - {key: sonyliv, name: Sony LIV, category: entertainment, channel: online, aliases: [], mcc: "4899"}
+  - {key: cultfit, name: cult.fit, category: other, channel: online, aliases: [cult fit, curefit], mcc: "7997"}
+  - {key: airtel, name: Airtel, category: utilities, channel: online, aliases: [airtel thanks, airtel recharge, airtel postpaid], mcc: "4814"}
+  - {key: jio, name: Jio, category: utilities, channel: online, aliases: [reliance jio, myjio], mcc: "4814"}
+  - {key: bescom, name: BESCOM electricity, category: utilities, channel: online, aliases: [electricity bill], mcc: "4900"}
+  - {key: bpcl, name: BPCL petrol pump, category: fuel, channel: offline, aliases: [bharat petroleum], mcc: "5541"}
+  - {key: indianoil, name: IndianOil petrol pump, category: fuel, channel: offline, aliases: [iocl, indian oil], mcc: "5541"}
+  - {key: hpcl, name: HP petrol pump, category: fuel, channel: offline, aliases: [hindustan petroleum], mcc: "5541"}
+  - {key: shell, name: Shell petrol pump, category: fuel, channel: offline, aliases: [], mcc: "5541"}
+  - {key: lic, name: LIC premium, category: insurance, channel: online, aliases: [life insurance corporation], mcc: "6300"}
+  - {key: tanishq, name: Tanishq, category: jewellery, channel: offline, aliases: [], mcc: "5944"}
+  - {key: cred_rent, name: Rent via CRED/NoBroker, category: rent, channel: online, aliases: [rent payment, nobroker rent, cred rent], mcc: "6513"}
+  - {key: income_tax, name: Income tax, category: government, channel: online, aliases: [tax payment, gst payment], mcc: "9311"}
+  - {key: paytm_wallet, name: Paytm wallet load, category: wallet, channel: online, aliases: [wallet load], mcc: "6540"}
+  - {key: fastag, name: FASTag recharge, category: tolls, channel: online, aliases: [toll], mcc: "4784"}
+  - {key: starbucks, name: Starbucks, category: dining, channel: offline, aliases: [tata starbucks], mcc: "5814"}
+  - {key: meghana_foods, name: Meghana Foods, category: dining, channel: offline, aliases: [meghana], mcc: "5812"}
+  - {key: restaurant, name: Restaurant (dine-in), category: dining, channel: offline, aliases: [cafe, dine in], mcc: "5812"}
