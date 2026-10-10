@@ -122,7 +122,7 @@ class _PayScreenState extends State<PayScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Checkout Advisor'),
-        actions: [IconButton(tooltip: 'Scan UPI QR', onPressed: _scan, icon: const Icon(Icons.qr_code_scanner))],
+        actions: [IconButton(tooltip: 'Scan UPI QR', onPressed: _scan, icon: const Icon(Icons.qr_code_scanner)), const ProfileAction()],
       ),
       body: ListView(padding: const EdgeInsets.fromLTRB(16, 4, 16, 32), children: [
         Text('Which card should I pay with?', style: t.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
@@ -294,7 +294,14 @@ class _ResultView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 8),
                   child: Pill(
-                    result.runnerUp != null ? '${rupees(result.marginPaise)} more than ${result.runnerUp!.name}' : '${rupees(result.marginPaise)} more than any other card',
+                    // With a spend profile the margin is over the rest of the month, not this payment alone.
+                    result.best?.monthPaise != null
+                        ? (result.runnerUp != null
+                            ? '${rupees(result.marginPaise)} more this month than ${result.runnerUp!.name}'
+                            : '${rupees(result.marginPaise)} more this month than any other card')
+                        : (result.runnerUp != null
+                            ? '${rupees(result.marginPaise)} more than ${result.runnerUp!.name}'
+                            : '${rupees(result.marginPaise)} more than any other card'),
                     icon: Icons.trending_up,
                     color: s.surface,
                     onColor: moneyColor(context),

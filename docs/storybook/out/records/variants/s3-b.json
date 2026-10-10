@@ -1,0 +1,129 @@
+{
+ "scene": "s3",
+ "order": 2,
+ "name": "Same 5%: spend the narrower cap",
+ "wires": [
+  {
+   "cap": "Checkout Advisor",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  Swiggy",
+     "filled": true
+    },
+    {
+     "t": "input",
+     "text": "Amount  ₹1,200",
+     "filled": true
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Pay with",
+       "value": "HDFC Millennia · ₹60",
+       "sub": "same ₹60 as SBI Cashback",
+       "tone": "lav"
+      }
+     ],
+     "hl": "best",
+     "label": "Best card"
+    },
+    {
+     "t": "text",
+     "text": "Cashback SBI Card earns the same now; its 5% on online payments covers more of your spending, so keep it free for later."
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "HDFC Millennia",
+       "meta": "5% on Amazon, Swiggy, Zomato and 7 more",
+       "amt": "₹60",
+       "due": "",
+       "st": "ok",
+       "stl": "best",
+       "cb": "none"
+      },
+      {
+       "no": "Cashback SBI",
+       "meta": "5% on online payments",
+       "amt": "₹60",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      }
+     ],
+     "hl": "ranked",
+     "label": "All your cards"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "eng",
+  "led"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay Swiggy ₹1,200 online",
+   "what": "This user holds HDFC Millennia and SBI Cashback. Both pay 5% here.",
+   "code": "{\"merchant\":\"Swiggy\",\"amount_paise\":120000,\"channel\":\"online\"}",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "eng",
+   "l": "now: both ₹60",
+   "what": "Millennia's 5% covers 10 named merchants; SBI Cashback's 5% covers every online payment, capped at ₹2,000 a statement cycle.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "eng",
+   "l": "rest of month after each choice",
+   "what": "Monthly spends prorated to the days left, routed under the caps and credit left after paying with Millennia, then with SBI Cashback.",
+   "code": "Millennia: later ₹2,706.86\nSBI Cashback: later ₹2,646.86  (heavy online month)",
+   "t": "NEW"
+  },
+  {
+   "id": "m4",
+   "f": "eng",
+   "to": "api",
+   "l": "SBI here costs ₹60 later",
+   "what": "When your other online spends fill SBI's cap, ₹60 used on Swiggy is ₹60 they can't earn. If the cap never fills, both futures are equal…",
+   "t": "NEW"
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "api",
+   "l": "tie → narrower rule first",
+   "what": "…and the tie goes to the card whose rule is narrower (named merchants beat 'all online'), keeping the broad cap free. Same answer whatever order the cards were added in.",
+   "t": "NEW"
+  },
+  {
+   "id": "m6",
+   "f": "api",
+   "to": "app",
+   "l": "best Millennia, says why",
+   "what": "Checked by test_swiggy_uses_millennia_and_keeps_sbi_broad_cap_whatever_the_card_order.",
+   "code": "{\"best\":{\"card_id\":\"hdfc_millennia\",\"reward_paise\":6000,\"later_paise\":270686,\"month_paise\":276686}}",
+   "t": "MOD",
+   "res": true,
+   "hl": "best"
+  }
+ ]
+}

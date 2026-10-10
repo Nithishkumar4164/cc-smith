@@ -1,0 +1,10 @@
+{
+ "order": 5,
+ "call": "GET /meta",
+ "owner": "API",
+ "gives": "categories grouped with merchants; memberships",
+ "tag": "MOD",
+ "steps": [
+  2
+ ]
+}

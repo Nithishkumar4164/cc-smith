@@ -234,3 +234,55 @@ class Money extends StatelessWidget {
 
 Color moneyColor(BuildContext context) =>
     Theme.of(context).brightness == Brightness.dark ? const Color(0xFF7FD6A8) : const Color(0xFF1B7A4B);
+
+/// App-bar avatar that opens Profile (cards, spends, credit, settings).
+class ProfileAction extends StatelessWidget {
+  const ProfileAction({super.key});
+  @override
+  Widget build(BuildContext context) {
+    final s = Theme.of(context).colorScheme;
+    return Padding(
+      padding: const EdgeInsets.only(right: 8),
+      child: IconButton(
+        tooltip: 'Profile',
+        onPressed: () => Navigator.of(context).pushNamed('/profile'),
+        icon: CircleAvatar(radius: 15, backgroundColor: s.primaryContainer, child: Icon(Icons.person, size: 18, color: s.onPrimaryContainer)),
+      ),
+    );
+  }
+}
+
+/// "First year free · bank page" or the speculation label for a fee offer.
+class FeeOfferPill extends StatelessWidget {
+  final FeeOffer o;
+  const FeeOfferPill(this.o, {super.key});
+  @override
+  Widget build(BuildContext context) {
+    final s = Theme.of(context).colorScheme;
+    return o.isFact
+        ? Pill('${o.kindLabel} · bank page', icon: Icons.card_giftcard, color: s.primaryContainer, onColor: s.onPrimaryContainer)
+        : Pill('${o.kindLabel} · reported, not confirmed', icon: Icons.help_outline, color: s.tertiaryContainer, onColor: s.onTertiaryContainer);
+  }
+}
+
+/// Full fee offer: title, conditions, validity and source.
+class FeeOfferView extends StatelessWidget {
+  final FeeOffer o;
+  const FeeOfferView(this.o, {super.key});
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final cond = [
+      if (o.spendConditionPaise != null)
+        'Spend ${rupees(o.spendConditionPaise!)}${o.spendWindowDays != null ? ' in ${o.spendWindowDays} days' : ''}',
+      if (o.validTo != null) 'till ${shortDate(o.validTo)}',
+    ];
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      FeeOfferPill(o),
+      const SizedBox(height: 6),
+      Text(o.title, style: t.textTheme.bodyLarge),
+      if (cond.isNotEmpty) Text(cond.join(' · '), style: t.textTheme.bodySmall?.copyWith(color: t.colorScheme.onSurfaceVariant)),
+      if (o.source != null) SourceList(refs: [o.source!], label: o.isFact ? 'Source' : 'Reference'),
+    ]);
+  }
+}

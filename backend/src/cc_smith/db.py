@@ -107,11 +107,14 @@ offer = Table(
     Column("merchant_key", String, index=True),
     Column("merchant_name", String),
     Column("title", String, nullable=False),
+    # instant_discount | cashback | bonus_points | emi | ltf | fyf | joining_waiver | annual_waiver | other
     Column("kind", String, nullable=False),
     Column("pct_bp", Integer),
     Column("max_paise", Integer),
     Column("min_txn_paise", Integer),
     Column("flat_paise", Integer),
+    Column("spend_condition_paise", Integer),
+    Column("spend_window_days", Integer),
     Column("channel", String, nullable=False, default="any"),
     Column("valid_from", String),
     Column("valid_to", String),
@@ -138,7 +141,30 @@ holding = Table(
     Column("last4", String),
     Column("statement_day", Integer),
     Column("renewal_month", Integer),
+    # standard | ltf | fyf — the user's own card may be fee-free even when the product is not.
+    Column("fee_status", String, nullable=False, default="standard"),
+    Column("fyf_until", String),  # ISO date the free first year ends
+    Column("credit_limit_paise", Integer),
+    # Cards in one pool share a single limit (most banks share across your cards with them).
+    Column("pool_id", String),
+    Column("balance_paise", Integer),  # outstanding the user entered, as of balance_as_of
+    Column("balance_as_of", DateTime(timezone=True)),
     UniqueConstraint("user_id", "card_id"),
+)
+credit_pool = Table(
+    "credit_pool", metadata,
+    Column("user_id", ForeignKey("app_user.id"), primary_key=True),
+    Column("id", String, primary_key=True),
+    Column("name", String, nullable=False),
+    Column("limit_paise", Integer, nullable=False),
+)
+card_payment = Table(
+    "card_payment", metadata,
+    Column("id", Integer, primary_key=True, autoincrement=True),
+    Column("user_id", ForeignKey("app_user.id"), nullable=False, index=True),
+    Column("card_id", String, nullable=False),
+    Column("amount_paise", Integer, nullable=False),
+    Column("ts", DateTime(timezone=True), nullable=False, default=now),
 )
 spend = Table(
     "spend", metadata,

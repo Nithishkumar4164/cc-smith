@@ -1,0 +1,118 @@
+{
+ "scene": "s3",
+ "order": 9,
+ "name": "Earns less now, more this month",
+ "wires": [
+  {
+   "cap": "Checkout Advisor",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  BigBasket",
+     "filled": true
+    },
+    {
+     "t": "input",
+     "text": "Amount  ₹1,000",
+     "filled": true
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Pay with",
+       "value": "Cashback SBI · ₹50",
+       "sub": "₹20.68 more this month",
+       "tone": "lav"
+      }
+     ],
+     "hl": "best",
+     "label": "Best card"
+    },
+    {
+     "t": "text",
+     "text": "₹50 less than HSBC Live+ now, but Live+ would use up its capped rewards and cost about ₹70.68 later this month, so this pays about ₹20.68 more over the month."
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Cashback SBI",
+       "meta": "5% on online payments",
+       "amt": "₹50",
+       "due": "",
+       "st": "ok",
+       "stl": "best",
+       "cb": "none"
+      },
+      {
+       "no": "HSBC Live+",
+       "meta": "10% on dining, grocery, online, utilities",
+       "amt": "₹100",
+       "due": "",
+       "st": "up",
+       "stl": "uses cap",
+       "cb": "none"
+      }
+     ],
+     "hl": "ranked",
+     "label": "All your cards"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay BigBasket ₹1,000",
+   "what": "This user holds HSBC Live+ and SBI Cashback and spends ₹20,000 a month on offline dining.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "eng",
+   "l": "now: Live+ ₹100, SBI ₹50",
+   "what": "Live+ pays 10% on groceries, up to ₹1,200 a month across dining, grocery, online and utilities.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "eng",
+   "to": "eng",
+   "l": "dining alone fills Live+'s cap",
+   "what": "₹20,000 of dining at 10% is ₹2,000 a month, well over the ₹1,200 cap; offline dining earns only 1% on SBI.",
+   "t": "NEW"
+  },
+  {
+   "id": "m4",
+   "f": "eng",
+   "to": "api",
+   "l": "Live+ now costs ₹70.68 later",
+   "what": "Every rupee of Live+ cap spent on BigBasket is a rupee dining can't earn later this month.",
+   "t": "NEW"
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "app",
+   "l": "best SBI Cashback: month +₹20.68",
+   "what": "Owner decision: recommend the best card for the month, and say plainly that it earns less now. Checked by test_month_best_card_can_earn_less_on_this_payment.",
+   "code": "{\"best\":{\"card_id\":\"sbi_cashback\",\"reward_paise\":5000,\"month_paise\":138929}, \"ranked\":[…,{\"card_id\":\"hsbc_live_plus\",\"reward_paise\":10000,\"month_paise\":136861}]}",
+   "t": "NEW",
+   "res": true,
+   "hl": "best"
+  }
+ ]
+}

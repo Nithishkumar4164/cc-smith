@@ -1,0 +1,130 @@
+{
+ "scene": "s6",
+ "order": 1,
+ "name": "Best move: add Swiggy BLCK",
+ "wires": [
+  {
+   "cap": "Card Finder",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Card Finder"
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Your cards today",
+       "value": "₹32,800/yr net",
+       "sub": "rewards + milestones − fees",
+       "tone": "lav"
+      },
+      {
+       "label": "Best move",
+       "value": "+₹5,912/yr",
+       "sub": "add Swiggy BLCK",
+       "tone": "lime",
+       "vt": "good"
+      }
+     ],
+     "hl": "summary"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Add Swiggy BLCK",
+       "meta": "joining fee ₹1,000 · fee waiver chip",
+       "amt": "+₹5,912",
+       "due": "",
+       "st": "ok",
+       "stl": "bank page",
+       "cb": "none"
+      },
+      {
+       "no": "Add Swiggy ORNGE",
+       "meta": "joining fee ₹500",
+       "amt": "+₹5,712",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      },
+      {
+       "no": "Add Cashback SBI",
+       "meta": "joining fee ₹999",
+       "amt": "+₹4,533",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      }
+     ],
+     "hl": "sets",
+     "label": "Top card sets"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "eng",
+  "off"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "opens Finder",
+   "what": "Finder needs your cards and monthly spends; it uses the preferences for which new cards to consider."
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "POST /finder",
+   "what": "Up to 3 new cards.",
+   "code": "{\"max_new\":3}",
+   "t": "MOD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "eng",
+   "l": "simulate held stack, refine",
+   "what": "Month-by-month routing, then hill-climbing whole spend lines between cards to keep fee waivers and milestones. Held cards use their LTF/FYF fee overrides.",
+   "t": "MOD"
+  },
+  {
+   "id": "m4",
+   "f": "api",
+   "to": "eng",
+   "l": "prune pool, try 1–3 card sets",
+   "what": "Keeps cards in the top 4 for some spend line (max 10), tries every set, refines the best 5 distinct ones.",
+   "t": "MOD",
+   "hl": "sets"
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "off",
+   "l": "fee offers for the new cards",
+   "what": "Swiggy BLCK: joining fee waived on ₹75,000 in 90 days (bank page).",
+   "t": "NEW"
+  },
+  {
+   "id": "m6",
+   "f": "api",
+   "to": "app",
+   "l": "base ₹32,800, sets with ₹ lines",
+   "what": "Each set lists every card's rupee lines per spend, fee or waiver, and the one-time joining fee.",
+   "code": "{\"base_net_paise\":3280000,\"portfolios\":[{\"new_cards\":[\"hdfc_swiggy_blck\"],\"gain_paise\":591200,\"joining_fee_paise\":100000}]}",
+   "t": "MOD",
+   "res": true,
+   "hl": "summary"
+  }
+ ]
+}

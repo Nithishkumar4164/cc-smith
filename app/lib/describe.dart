@@ -231,6 +231,7 @@ String reasonLabel(String code, {Meta? meta}) {
     'rounds_to_zero' => 'Rounds to ₹0',
     'no_matching_rule' => 'No reward rule matches',
     'below_min_txn' => 'Below minimum spend',
+    'insufficient_credit' => arg == null ? 'Not enough credit' : 'Only ${rupees(int.tryParse(arg) ?? 0)} credit left',
     'no_upi' => 'Not usable on UPI',
     'not_assessable' => 'Not enough official data',
     'requires' => argLabel == null ? 'Needs membership' : 'Needs ${flagLabel(arg!)}',

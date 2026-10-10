@@ -1,0 +1,126 @@
+{
+  "as_of": "2026-10-09",
+  "note": "From docs/research/fee-offers-batch1.json: LTF, FYF and joining-fee offers only. Standing annual-fee waivers are already part of each card's fee facts.",
+  "offers": [
+    {
+      "id": "hdfc_swiggy_blck_joining_waiver_75k",
+      "issuer": "HDFC Bank",
+      "card_ids": [
+        "hdfc_swiggy_blck"
+      ],
+      "merchant_key": null,
+      "merchant_name": null,
+      "title": "Joining fee of ₹1,000 waived on ₹75,000 spend in first 90 days",
+      "kind": "joining_waiver",
+      "pct_bp": null,
+      "max_paise": null,
+      "min_txn_paise": null,
+      "flat_paise": null,
+      "spend_condition_paise": 7500000,
+      "spend_window_days": 90,
+      "valid_from": null,
+      "valid_to": null,
+      "channel": "any",
+      "source_kind": "issuer",
+      "url": "https://www.hdfc.bank.in/credit-cards/swiggy-blck-hdfc-bank-credit-card",
+      "quote": "Joining fee waived on spends of ₹75,000 in 90 days of card issuance* | ... | Joining Fee / Renewal Membership Fee: ₹1,000 + Applicable Charges | Joining Fee of ₹1,000 will be waived on spending ₹75,000 in the first 90 days. (Applicable for first Year only).",
+      "fetched_at": "2026-10-09"
+    },
+    {
+      "id": "hdfc_swiggy_ornge_ltf_corporate",
+      "issuer": "HDFC Bank",
+      "card_ids": [
+        "hdfc_swiggy_ornge"
+      ],
+      "merchant_key": null,
+      "merchant_name": null,
+      "title": "Lifetime free for select corporates (HDFC Bank direct channels only)",
+      "kind": "ltf",
+      "pct_bp": null,
+      "max_paise": null,
+      "min_txn_paise": null,
+      "flat_paise": null,
+      "spend_condition_paise": null,
+      "spend_window_days": null,
+      "valid_from": "2026-04-01",
+      "valid_to": null,
+      "channel": "any",
+      "source_kind": "issuer",
+      "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/fyf-offer-tncs.pdf",
+      "quote": "Terms and Conditions for Lifetime Free (LTF) Offer Swiggy Ornge HDFC Bank Credit Card • Lifetime Free offer on Swiggy Ornge HDFC Bank Credit Card is applicable for card applications starting 1st April’26. • This is a limited period offer applicable on card applications received through Bank’s portal (digital as well as physical applications) for select corporates. ... The Offer is only applicable to customers applying for the Credit Card through HDFC Bank's direct channels",
+      "fetched_at": "2026-10-09"
+    },
+    {
+      "id": "axis_flipkart_fyf_limited",
+      "issuer": "Axis Bank",
+      "card_ids": [
+        "axis_flipkart"
+      ],
+      "merchant_key": null,
+      "merchant_name": null,
+      "title": "First year free (joining fee nil, limited period offer)",
+      "kind": "fyf",
+      "pct_bp": null,
+      "max_paise": null,
+      "min_txn_paise": null,
+      "flat_paise": null,
+      "spend_condition_paise": null,
+      "spend_window_days": null,
+      "valid_from": null,
+      "valid_to": null,
+      "channel": "any",
+      "source_kind": "issuer",
+      "url": "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card",
+      "quote": "Description Charges | Joining fee | ₹NIL (Limited period offer) | Annual Fee | 2nd year Onwards: ₹500",
+      "fetched_at": "2026-10-09"
+    },
+    {
+      "id": "axis_magnus_ltf_burgundy_salary",
+      "issuer": "Axis Bank",
+      "card_ids": [
+        "axis_magnus"
+      ],
+      "merchant_key": null,
+      "merchant_name": null,
+      "title": "Lifetime free for Burgundy Salary account holders with net monthly salary of ₹2 lakh or more",
+      "kind": "ltf",
+      "pct_bp": null,
+      "max_paise": null,
+      "min_txn_paise": null,
+      "flat_paise": null,
+      "spend_condition_paise": null,
+      "spend_window_days": null,
+      "valid_from": null,
+      "valid_to": null,
+      "channel": "any",
+      "source_kind": "issuer",
+      "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card",
+      "quote": "Customers holding a Burgundy Salary Account with Axis Bank shall be eligible for the Axis Bank Magnus Lifetime Free Credit Card upon receipt of the first salary credit, provided the net monthly salary credited is INR 2 Lakhs or above. | Applicable only for Burgundy Salary Accounts opened on or after 1 July 2026.",
+      "fetched_at": "2026-10-09"
+    },
+    {
+      "id": "cardinsider_axis_flipkart_fyf",
+      "issuer": "Axis Bank",
+      "card_ids": [
+        "axis_flipkart"
+      ],
+      "merchant_key": null,
+      "merchant_name": null,
+      "title": "First year free (limited time offer), reported by CardInsider",
+      "kind": "fyf",
+      "pct_bp": null,
+      "max_paise": null,
+      "min_txn_paise": null,
+      "flat_paise": null,
+      "spend_condition_paise": null,
+      "spend_window_days": null,
+      "valid_from": null,
+      "valid_to": null,
+      "channel": "any",
+      "source_kind": "distributor",
+      "url": "https://cardinsider.com/",
+      "quote": "Flipkart Axis Bank Credit Card | 4.6/5 | Joining Fee First Year Free (Limited Time Offer) | Annual Fee ₹500 + GST",
+      "fetched_at": "2026-10-09"
+    }
+  ]
+}

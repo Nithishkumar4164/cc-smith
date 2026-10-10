@@ -1,0 +1,81 @@
+{
+ "scene": "s8",
+ "order": 4,
+ "name": "Bank changes its page, then a rollback",
+ "wires": [
+  {
+   "cap": "What changed",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "What changed"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Millennia · fees published",
+       "meta": "₹1,000 → ₹2,500 · large change",
+       "amt": "",
+       "due": "",
+       "st": "up",
+       "stl": "v2",
+       "cb": "none"
+      },
+      {
+       "no": "Millennia · rolled back",
+       "meta": "re-check mismatch",
+       "amt": "",
+       "due": "",
+       "st": "grey",
+       "stl": "v1",
+       "cb": "none"
+      }
+     ],
+     "hl": "feed"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "fet",
+  "kb",
+  "own"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "fet",
+   "to": "kb",
+   "l": "page now says ₹2,500",
+   "what": "The new quote and value pass every check.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "kb",
+   "to": "kb",
+   "l": "version 2 published, v1 superseded",
+   "what": "Changes over 50% are flagged large.",
+   "t": "OLD",
+   "hl": "feed"
+  },
+  {
+   "id": "m3",
+   "f": "kb",
+   "to": "own",
+   "l": "alert: large change, holders count",
+   "what": "Tells the owner how many users hold the card; affected users' numbers already use the new terms.",
+   "t": "OLD"
+  },
+  {
+   "id": "m4",
+   "f": "kb",
+   "to": "kb",
+   "l": "rollback(fees)",
+   "what": "Manual today; the weekly automatic re-check that triggers it is planned (DR-12), not built.",
+   "t": "OLD",
+   "hl": "feed"
+  }
+ ]
+}

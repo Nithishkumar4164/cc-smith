@@ -1,0 +1,79 @@
+{
+ "scene": "s5",
+ "order": 1,
+ "name": "I paid with this",
+ "wires": [
+  {
+   "cap": "Logged",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Checkout Advisor"
+    },
+    {
+     "t": "btn",
+     "text": "Logged",
+     "kind": "off"
+    },
+    {
+     "t": "msg",
+     "kind": "note",
+     "text": "Logged ₹1,200 on HSBC Live+ Credit Card: ₹120 reward. Caps updated.",
+     "hl": "log"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "led",
+  "own"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "taps I paid with this",
+   "what": "Manual for now. Automatic capture comes from statements (M1) and bank notifications and Gmail alerts (M2)."
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay/confirm",
+   "what": "With an idempotency key, so a double tap or retry logs once.",
+   "code": "{\"card_id\":\"hsbc_live_plus\",\"merchant\":\"Swiggy\",\"amount_paise\":120000,\"idempotency_key\":\"…\"}",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "led",
+   "l": "txn + cap_use",
+   "what": "Stores amount, category, channel, reward and how much of each cap it used.",
+   "code": "{\"cap_use\":{\"accelerated\":12000}}",
+   "t": "OLD"
+  },
+  {
+   "id": "m4",
+   "f": "led",
+   "to": "own",
+   "l": "outbox txn.recorded",
+   "what": "For cap counters and future cap-watch nudges.",
+   "t": "OLD"
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "app",
+   "l": "reward ₹120",
+   "what": "The button turns into Logged; a second tap with the same key returns the same payment instead of logging twice.",
+   "t": "OLD",
+   "res": true,
+   "hl": "log"
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "order": 13,
+ "call": "POST /finder/assess",
+ "owner": "Rewards engine",
+ "gives": "value of one named card",
+ "tag": "MOD",
+ "steps": [
+  6
+ ]
+}

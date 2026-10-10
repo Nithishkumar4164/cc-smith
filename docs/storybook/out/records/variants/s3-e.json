@@ -1,0 +1,71 @@
+{
+ "scene": "s3",
+ "order": 5,
+ "name": "UPI without a RuPay card",
+ "wires": [
+  {
+   "cap": "Checkout Advisor",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  chai stall",
+     "filled": true
+    },
+    {
+     "t": "chips",
+     "items": [
+      "Auto",
+      "Online",
+      "In-store",
+      "UPI"
+     ],
+     "on": 3
+    },
+    {
+     "t": "msg",
+     "kind": "warn",
+     "text": "None of your cards can be used on UPI (that needs a RuPay credit card). Pay another way.",
+     "hl": "upi"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay channel=upi",
+   "what": "Only RuPay credit cards work on UPI in India.",
+   "code": "{\"merchant\":\"chai stall\",\"amount_paise\":5000,\"channel\":\"upi\"}",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "eng",
+   "l": "no_upi on Millennia",
+   "what": "The card's network facts don't say RuPay, so it isn't usable here.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "app",
+   "l": "best null, UPI text",
+   "what": "Says why, instead of a generic 'add a card'.",
+   "t": "MOD",
+   "res": true,
+   "hl": "upi"
+  }
+ ]
+}

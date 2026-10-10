@@ -1,0 +1,11 @@
+{
+ "order": 8,
+ "call": "POST /pay",
+ "owner": "Rewards engine",
+ "gives": "best card, ranked, notes, offers",
+ "tag": "MOD",
+ "steps": [
+  3,
+  4
+ ]
+}

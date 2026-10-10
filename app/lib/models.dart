@@ -22,15 +22,55 @@ class MerchantMeta {
   );
 }
 
+/// A paid membership that changes what a card earns (e.g. Amazon Prime).
+class Membership {
+  final String key, name;
+  final String? by, why;
+  const Membership({required this.key, required this.name, this.by, this.why});
+  factory Membership.fromJson(Json j) =>
+      Membership(key: '${j['key']}', name: '${j['name'] ?? j['key']}', by: _strN(j['by']), why: _strN(j['why']));
+}
+
+/// A spend category and the merchants that are part of it.
+class SpendGroup {
+  final String category, label;
+  final List<MerchantMeta> merchants;
+  const SpendGroup({required this.category, required this.label, required this.merchants});
+  factory SpendGroup.fromJson(Json j) => SpendGroup(
+      category: '${j['category']}', label: '${j['label']}', merchants: _list(j['merchants'], MerchantMeta.fromJson));
+}
+
 class Meta {
   /// category key -> human label, in server order.
   final Map<String, String> categories;
   final List<MerchantMeta> merchants;
-  const Meta({required this.categories, required this.merchants});
-  factory Meta.fromJson(Json j) => Meta(
-    categories: Map<String, dynamic>.from(j['categories'] as Map).map((k, v) => MapEntry(k, '$v')),
-    merchants: _list(j['merchants'], MerchantMeta.fromJson),
-  );
+  final List<SpendGroup> groups;
+  final List<Membership> memberships;
+  const Meta({required this.categories, required this.merchants, this.groups = const [], this.memberships = const []});
+  factory Meta.fromJson(Json j) {
+    final categories = Map<String, dynamic>.from(j['categories'] as Map).map((k, v) => MapEntry(k, '$v'));
+    final merchants = _list(j['merchants'], MerchantMeta.fromJson);
+    var groups = _list(j['groups'], SpendGroup.fromJson);
+    if (groups.isEmpty) {
+      groups = [
+        for (final e in categories.entries)
+          SpendGroup(category: e.key, label: e.value, merchants: merchants.where((m) => m.category == e.key).toList()),
+      ];
+    }
+    return Meta(
+      categories: categories,
+      merchants: merchants,
+      groups: groups,
+      memberships: _list(j['memberships'], Membership.fromJson),
+    );
+  }
+
+  Membership? membership(String key) {
+    for (final m in memberships) {
+      if (m.key == key) return m;
+    }
+    return null;
+  }
 
   MerchantMeta? merchant(String key) {
     for (final m in merchants) {
@@ -79,6 +119,8 @@ class CardSummary {
   final int? annualFeePaise;
   final String? currencyKind, currencyName, asOf;
   final int speculationCount;
+  final List<Membership> memberships;
+  final List<FeeOffer> feeOffers;
   const CardSummary({
     required this.id,
     required this.name,
@@ -90,6 +132,8 @@ class CardSummary {
     this.currencyName,
     this.asOf,
     this.speculationCount = 0,
+    this.memberships = const [],
+    this.feeOffers = const [],
   });
   factory CardSummary.fromJson(Json j) => CardSummary(
     id: j['id'] as String,
@@ -102,7 +146,46 @@ class CardSummary {
     currencyName: _strN(j['currency_name']),
     asOf: _strN(j['as_of']),
     speculationCount: _int(j['speculation_count']),
+    memberships: _list(j['memberships'], Membership.fromJson),
+    feeOffers: _list(j['fee_offers'], FeeOffer.fromJson),
   );
+}
+
+/// Lifetime-free / first-year-free / joining-fee waiver offers on a card.
+class FeeOffer {
+  final String id, kind, title, tier;
+  final String? validTo, url, quote;
+  final int? spendConditionPaise, spendWindowDays;
+  const FeeOffer({
+    required this.id,
+    required this.kind,
+    required this.title,
+    required this.tier,
+    this.validTo,
+    this.url,
+    this.quote,
+    this.spendConditionPaise,
+    this.spendWindowDays,
+  });
+  factory FeeOffer.fromJson(Json j) => FeeOffer(
+    id: '${j['id']}',
+    kind: '${j['kind']}',
+    title: '${j['title']}',
+    tier: '${j['tier'] ?? 'speculation'}',
+    validTo: _strN(j['valid_to']),
+    url: _strN(j['url']),
+    quote: _strN(j['quote']),
+    spendConditionPaise: _intN(j['spend_condition_paise']),
+    spendWindowDays: _intN(j['spend_window_days']),
+  );
+  bool get isFact => tier == 'fact';
+  String get kindLabel => switch (kind) {
+    'ltf' => 'Lifetime free',
+    'fyf' => 'First year free',
+    'joining_waiver' => 'Joining fee waiver',
+    _ => kind.replaceAll('_', ' '),
+  };
+  Ref? get source => url == null ? null : Ref(url: url!, quote: quote, official: isFact);
 }
 
 class FieldView {
@@ -200,25 +283,136 @@ class Holding {
   final String? last4;
   final int? statementDay;
   final int? renewalMonth;
-  const Holding({required this.cardId, this.last4, this.statementDay, this.renewalMonth});
+  final String feeStatus; // standard | ltf | fyf
+  final String? fyfUntil; // YYYY-MM-DD
+  final int? creditLimitPaise;
+  final String? poolId; // shares a limit with other cards
+  final int? balancePaise; // outstanding when the user typed it
+  const Holding({
+    required this.cardId,
+    this.last4,
+    this.statementDay,
+    this.renewalMonth,
+    this.feeStatus = 'standard',
+    this.fyfUntil,
+    this.creditLimitPaise,
+    this.poolId,
+    this.balancePaise,
+  });
   factory Holding.fromJson(Json j) => Holding(
     cardId: '${j['card_id']}',
     last4: _strN(j['last4']),
     statementDay: _intN(j['statement_day']),
     renewalMonth: _intN(j['renewal_month']),
+    feeStatus: _strN(j['fee_status']) ?? 'standard',
+    fyfUntil: _strN(j['fyf_until']),
+    creditLimitPaise: _intN(j['credit_limit_paise']),
+    poolId: _strN(j['pool_id']),
+    balancePaise: _intN(j['balance_paise']),
   );
   Json toJson() => {
     'card_id': cardId,
-    if (last4 != null) 'last4': last4,
-    if (statementDay != null) 'statement_day': statementDay,
-    if (renewalMonth != null) 'renewal_month': renewalMonth,
+    'last4': ?last4,
+    'statement_day': ?statementDay,
+    'renewal_month': ?renewalMonth,
+    'fee_status': feeStatus,
+    if (feeStatus == 'fyf') 'fyf_until': ?fyfUntil,
+    if (poolId == null) 'credit_limit_paise': ?creditLimitPaise,
+    'pool_id': ?poolId,
+    'balance_paise': ?balancePaise,
   };
-  Holding copyWith({int? statementDay, bool clearStatementDay = false}) => Holding(
+  Holding copyWith({
+    int? statementDay,
+    bool clearStatementDay = false,
+    String? feeStatus,
+    String? fyfUntil,
+    int? creditLimitPaise,
+    bool clearLimit = false,
+    String? poolId,
+    bool clearPool = false,
+    int? balancePaise,
+    bool clearBalance = false,
+  }) => Holding(
     cardId: cardId,
     last4: last4,
     statementDay: clearStatementDay ? null : (statementDay ?? this.statementDay),
     renewalMonth: renewalMonth,
+    feeStatus: feeStatus ?? this.feeStatus,
+    fyfUntil: fyfUntil ?? this.fyfUntil,
+    creditLimitPaise: clearLimit ? null : (creditLimitPaise ?? this.creditLimitPaise),
+    poolId: clearPool ? null : (poolId ?? this.poolId),
+    balancePaise: clearBalance ? null : (balancePaise ?? this.balancePaise),
   );
+}
+
+/// A credit limit shared by several cards of one bank.
+class Pool {
+  final String id, name;
+  final int limitPaise;
+  const Pool({required this.id, required this.name, required this.limitPaise});
+  factory Pool.fromJson(Json j) => Pool(id: '${j['id']}', name: '${j['name']}', limitPaise: _int(j['limit_paise']));
+  Json toJson() => {'id': id, 'name': name, 'limit_paise': limitPaise};
+}
+
+/// GET /me/credit: what is left to spend on a card (its own or its pool's limit).
+class Credit {
+  final String cardId;
+  final int? limitPaise, availablePaise, utilisationBp;
+  final String? poolId, poolName;
+  final int outstandingPaise;
+  const Credit({
+    required this.cardId,
+    this.limitPaise,
+    this.availablePaise,
+    this.utilisationBp,
+    this.poolId,
+    this.poolName,
+    required this.outstandingPaise,
+  });
+  factory Credit.fromJson(Json j) => Credit(
+    cardId: '${j['card_id']}',
+    limitPaise: _intN(j['limit_paise']),
+    availablePaise: _intN(j['available_paise']),
+    utilisationBp: _intN(j['utilisation_bp']),
+    poolId: _strN(j['pool_id']),
+    poolName: _strN(j['pool_name']),
+    outstandingPaise: _int(j['outstanding_paise']),
+  );
+}
+
+/// One item on the notice board (GET /me/notices), already sorted act -> watch -> info.
+class Notice {
+  final String id, kind, severity, title, reason, action, tier;
+  final String? cardId, due;
+  final int? rupeesPaise;
+  final List<Ref> refs;
+  const Notice({
+    required this.id,
+    required this.kind,
+    required this.severity,
+    required this.title,
+    required this.reason,
+    required this.action,
+    required this.tier,
+    this.cardId,
+    this.due,
+    this.rupeesPaise,
+    this.refs = const [],
+  });
+  factory Notice.fromJson(Json j) => Notice(
+    id: '${j['id']}',
+    kind: '${j['kind']}',
+    severity: '${j['severity']}',
+    title: '${j['title']}',
+    reason: '${j['reason'] ?? ''}',
+    action: '${j['action'] ?? ''}',
+    tier: '${j['tier'] ?? 'fact'}',
+    cardId: _strN(j['card_id']),
+    due: _strN(j['due']),
+    rupeesPaise: _intN(j['rupees_paise']),
+    refs: _list(j['refs'], Ref.fromJson),
+  );
+  bool get needsAttention => severity == 'act' || severity == 'watch';
 }
 
 class Profile {
@@ -254,12 +448,23 @@ class Me {
   final Profile profile;
   final List<Holding> holdings;
   final Map<String, int> spends; // monthly paise
-  const Me({required this.userId, required this.profile, required this.holdings, required this.spends});
+  final List<Pool> pools;
+  final Map<String, int> categoryTotals; // monthly paise per category, merchants included
+  const Me({
+    required this.userId,
+    required this.profile,
+    required this.holdings,
+    required this.spends,
+    this.pools = const [],
+    this.categoryTotals = const {},
+  });
   factory Me.fromJson(Json j) => Me(
     userId: '${j['user_id']}',
     profile: Profile.fromJson(Map<String, dynamic>.from(j['profile'] as Map? ?? {})),
     holdings: _list(j['holdings'], Holding.fromJson),
     spends: (j['spends'] as Map? ?? {}).map((k, v) => MapEntry('$k', _int(v))),
+    pools: _list(j['pools'], Pool.fromJson),
+    categoryTotals: (j['category_totals'] as Map? ?? {}).map((k, v) => MapEntry('$k', _int(v))),
   );
 }
 
@@ -316,11 +521,21 @@ class Portfolio {
   final List<String> newCards;
   final int gainPaise;
   final List<CardResult> cards;
-  const Portfolio({required this.newCards, required this.gainPaise, required this.cards});
+  final int joiningFeePaise;
+  final Map<String, List<FeeOffer>> feeOffers;
+  const Portfolio({
+    required this.newCards,
+    required this.gainPaise,
+    required this.cards,
+    this.joiningFeePaise = 0,
+    this.feeOffers = const {},
+  });
   factory Portfolio.fromJson(Json j) => Portfolio(
     newCards: _strs(j['new_cards']),
     gainPaise: _int(j['gain_paise']),
     cards: _list(j['cards'], CardResult.fromJson),
+    joiningFeePaise: _int(j['joining_fee_paise']),
+    feeOffers: (j['fee_offers'] as Map? ?? {}).map((k, v) => MapEntry('$k', _list(v, FeeOffer.fromJson))),
   );
 }
 
@@ -376,6 +591,10 @@ class PayOption {
 
   /// Plain-language lines from the server ("5% on Amazon", "Fuel is excluded").
   final List<String> notes;
+
+  /// Rest-of-month rewards if this card is used now, and now + later. The server ranks
+  /// usable cards by [monthPaise]; both are null when it has no spends to project from.
+  final int? laterPaise, monthPaise;
   const PayOption({
     required this.cardId,
     required this.name,
@@ -383,6 +602,8 @@ class PayOption {
     required this.reasonCodes,
     required this.rules,
     this.notes = const [],
+    this.laterPaise,
+    this.monthPaise,
   });
   factory PayOption.fromJson(Json j) => PayOption(
     cardId: '${j['card_id']}',
@@ -391,6 +612,8 @@ class PayOption {
     reasonCodes: _strs(j['reason_codes']),
     rules: _strs(j['rules']),
     notes: _strs(j['notes']),
+    laterPaise: j['later_paise'] == null ? null : _int(j['later_paise']),
+    monthPaise: j['month_paise'] == null ? null : _int(j['month_paise']),
   );
 }
 

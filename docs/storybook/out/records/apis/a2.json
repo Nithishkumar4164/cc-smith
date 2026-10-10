@@ -1,0 +1,11 @@
+{
+ "order": 2,
+ "call": "GET /cards",
+ "owner": "Card facts",
+ "gives": "catalogue with memberships and fee offers",
+ "tag": "MOD",
+ "steps": [
+  1,
+  3
+ ]
+}

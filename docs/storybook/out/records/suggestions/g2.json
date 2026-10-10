@@ -1,0 +1,10 @@
+{
+ "order": 2,
+ "n": 2,
+ "where": "Steps 7, 8",
+ "title": "Reporting wrong info doesn't re-fetch the page",
+ "paras": [
+  "The report response says “the official page is re-fetched”, but no code triggers a fetch. The report only becomes speculation.",
+  "Either trigger a re-fetch of the card's official sources on report (cheap: the fetcher and pipeline exist) or change the message."
+ ]
+}

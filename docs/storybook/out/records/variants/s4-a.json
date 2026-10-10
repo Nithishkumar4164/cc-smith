@@ -1,0 +1,155 @@
+{
+ "scene": "s4",
+ "order": 1,
+ "name": "Myntra ₹8,000 with an HDFC offer",
+ "wires": [
+  {
+   "cap": "Checkout Advisor",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  myntra.com",
+     "filled": true
+    },
+    {
+     "t": "input",
+     "text": "Amount  ₹8,000",
+     "filled": true
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Pay with",
+       "value": "HSBC Live+ · ₹800",
+       "sub": "₹400 more than Millennia",
+       "tone": "lav"
+      }
+     ],
+     "hl": "best",
+     "label": "Best card"
+    },
+    {
+     "t": "text",
+     "text": "But Millennia has a bank offer here worth about ₹800, ₹1,200 in all; check the offer terms."
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "HSBC Live+",
+       "meta": "10% on Myntra",
+       "amt": "₹800",
+       "due": "",
+       "st": "ok",
+       "stl": "best",
+       "cb": "none"
+      },
+      {
+       "no": "HDFC Millennia",
+       "meta": "5% on Myntra",
+       "amt": "₹400",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      }
+     ],
+     "hl": "ranked",
+     "label": "All your cards"
+    }
+   ]
+  },
+  {
+   "cap": "Bank offers here",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Bank offers here"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "10% up to ₹1,000, min ₹5,000",
+       "meta": "With your Millennia · till 25 Oct 2026",
+       "amt": "≈₹800",
+       "due": "",
+       "st": "ok",
+       "stl": "bank page",
+       "cb": "none"
+      },
+      {
+       "no": "10% up to ₹1,200 on EasyEMI",
+       "meta": "With your Millennia · till 25 Oct 2026",
+       "amt": "≈₹800",
+       "due": "",
+       "st": "ok",
+       "stl": "bank page",
+       "cb": "none"
+      }
+     ],
+     "hl": "offers",
+     "label": "Offers"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "eng",
+  "off"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay myntra.com ₹8,000",
+   "what": "A shared link resolves to the merchant from its host name.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "eng",
+   "l": "Live+ ₹800, Millennia ₹400",
+   "what": "Rewards first, exactly as without offers.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "off",
+   "l": "offers at myntra for your banks' cards",
+   "what": "Matched by merchant, issuer, card list on the offer, channel and today's date (India time).",
+   "t": "OLD",
+   "hl": "offers"
+  },
+  {
+   "id": "m4",
+   "f": "off",
+   "to": "api",
+   "l": "2 HDFC offers, about ₹800 each",
+   "what": "10% of ₹8,000 = ₹800, under the ₹1,000 cap and above the ₹5,000 minimum.",
+   "code": "[{\"id\":\"hdfc_myntra_10_1000\",\"tier\":\"fact\",\"est_saving_paise\":80000,\"valid_to\":\"2026-10-25\"}]",
+   "t": "OLD",
+   "res": true
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "app",
+   "l": "pick unchanged + offer hint",
+   "what": "Offer terms are free text, so offers are hints; the text adds the combined figure.",
+   "t": "OLD",
+   "res": true,
+   "hl": "best"
+  }
+ ]
+}

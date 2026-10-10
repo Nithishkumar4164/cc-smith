@@ -1,0 +1,90 @@
+{
+ "scene": "s5",
+ "order": 3,
+ "name": "Bill paid",
+ "wires": [
+  {
+   "cap": "Bill paid",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Your cards"
+    },
+    {
+     "t": "modal",
+     "blocks": [
+      {
+       "t": "text",
+       "text": "**Bill paid** · HDFC Millennia owes ₹32,000"
+      },
+      {
+       "t": "input",
+       "text": "Amount paid (empty = full)",
+       "filled": false
+      },
+      {
+       "t": "btn",
+       "text": "Record payment",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Swiggy BLCK",
+       "value": "₹35,000 available",
+       "sub": "after Millennia paid in full",
+       "tone": "lime",
+       "vt": "good"
+      }
+     ],
+     "hl": "avail"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "led"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "Bill paid, amount empty",
+   "what": "Empty means the whole outstanding was paid."
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "POST /me/cards/hdfc_millennia/bill-paid",
+   "what": "Records a repayment to the bank.",
+   "code": "{}",
+   "t": "NEW"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "led",
+   "l": "card_payment ₹32,000",
+   "what": "Millennia's outstanding drops to ₹0; the pool frees up for Swiggy BLCK too.",
+   "t": "NEW"
+  },
+  {
+   "id": "m4",
+   "f": "api",
+   "to": "app",
+   "l": "credit: Swiggy BLCK ₹35,000 available",
+   "what": "₹50,000 − ₹15,000. Checked by test_shared_limit_available_credit_and_checkout_skip.",
+   "t": "NEW",
+   "res": true,
+   "hl": "avail"
+  }
+ ]
+}

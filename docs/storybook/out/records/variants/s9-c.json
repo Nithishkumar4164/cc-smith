@@ -1,0 +1,63 @@
+{
+ "scene": "s9",
+ "order": 3,
+ "name": "Ad from SBI, affiliates filtered",
+ "wires": [
+  {
+   "cap": "Market",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Market"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Flipkart SBI Credit Card",
+       "meta": "SBI ad: 1st year free, valid till 31 Oct 2026",
+       "amt": "",
+       "due": "",
+       "st": "grey",
+       "stl": "reported",
+       "cb": "none"
+      }
+     ],
+     "hl": "launch"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "gw",
+  "web",
+  "kb"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "gw",
+   "to": "web",
+   "l": "ads_transparency text=sbicard.com region=2356",
+   "what": "India region verified. 7 of 40 advertisers were affiliates bidding on SBI's name.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "gw",
+   "to": "gw",
+   "l": "keep SBI's own advertiser only",
+   "what": "Ads from affiliates bidding on the bank's name are not the bank speaking.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "gw",
+   "to": "kb",
+   "l": "speculative (ad text isn't an official page)",
+   "what": "Promoted when sbicard.com confirms it.",
+   "t": "OLD",
+   "hl": "launch"
+  }
+ ]
+}

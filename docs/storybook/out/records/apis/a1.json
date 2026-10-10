@@ -1,0 +1,10 @@
+{
+ "order": 1,
+ "call": "POST /users",
+ "owner": "API",
+ "gives": "anonymous account",
+ "tag": "OLD",
+ "steps": [
+  1
+ ]
+}

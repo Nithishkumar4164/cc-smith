@@ -1,0 +1,55 @@
+{
+ "scene": "s4",
+ "order": 3,
+ "name": "An 'up to' offer counted at face value",
+ "wires": [
+  {
+   "cap": "Bank offers here",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Bank offers here"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Up to 25% instant discount on EasyEMI",
+       "meta": "With your Millennia · max ₹11,300 · min ₹5,000",
+       "amt": "≈₹11,300",
+       "due": "",
+       "st": "up",
+       "stl": "up to",
+       "cb": "none"
+      }
+     ],
+     "hl": "upto"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "api",
+  "off"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "api",
+   "to": "off",
+   "l": "MakeMyTrip ₹1,40,000",
+   "what": "HDFC's MakeMyTrip EasyEMI offer says 'up to 25%', max ₹11,300.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "off",
+   "to": "api",
+   "l": "estimate = 25% capped at ₹11,300",
+   "what": "The estimate assumes the full 25%. Real discounts on 'up to' offers are often lower, so this overstates (see suggestion 4).",
+   "t": "OLD",
+   "res": true,
+   "hl": "upto"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "scene": "s9",
+ "order": 2,
+ "name": "Reported launch with no bank page",
+ "wires": [
+  {
+   "cap": "Market",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Market"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Google Pay Flex SBI Card",
+       "meta": "No official page found on sbicard.com",
+       "amt": "",
+       "due": "",
+       "st": "grey",
+       "stl": "reported",
+       "cb": "none"
+      }
+     ],
+     "hl": "launch"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "gw",
+  "web",
+  "kb"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "gw",
+   "to": "web",
+   "l": "google site:sbicard.com 'Google Pay Flex'",
+   "what": "Returns only news, Reddit and review sites.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "gw",
+   "to": "kb",
+   "l": "speculative launch",
+   "what": "Listed, not scored, no user notification until the bank's page appears.",
+   "t": "OLD",
+   "hl": "launch"
+  }
+ ]
+}

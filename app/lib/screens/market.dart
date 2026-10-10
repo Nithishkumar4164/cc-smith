@@ -44,6 +44,7 @@ class _MarketScreenState extends State<MarketScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Market'),
+          actions: const [ProfileAction()],
           bottom: const TabBar(
             tabs: [
               Tab(text: 'Launch Radar'),
@@ -246,7 +247,7 @@ class _ChangeList extends StatelessWidget {
                 child: ListTile(
                   title: Text(app.cardName(e.cardId)),
                   subtitle: Text(
-                    '${fieldTitle(e.field ?? 'card')} ${e.eventType.replaceAll('_', ' ')} · ${shortDate(e.at)}',
+                    '${e.eventType == 'card_added' ? 'Added to catalogue' : '${fieldTitle(e.field ?? 'card')} ${e.eventType.replaceAll('_', ' ')}'} · ${shortDate(e.at)}',
                   ),
                   trailing: e.largeChange
                       ? Pill('Big change', color: s.errorContainer, onColor: s.onErrorContainer)

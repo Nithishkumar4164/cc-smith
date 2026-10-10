@@ -1,0 +1,7 @@
+{
+ "eyebrow": "cc-smith · Android app + backend",
+ "title": "cc-smith storybook: every case",
+ "intro": "Nine steps an Indian credit-card holder takes in cc-smith, each with its normal path, edge cases and failures. Every screen sits next to the calls made behind it, from the app to the backend, the rewards engine, the card-facts store, the ledger and SerpApi. Figures come from the backend's tests and one recorded user: HDFC Millennia on a shared HDFC limit and HSBC Live+ in its free first year, spending ₹59,000 a month.",
+ "rolloutTitle": "What ships in what order",
+ "rolloutLede": "Hackathon submission first (10 Oct, 18:00 IST), then the three-month plan."
+}

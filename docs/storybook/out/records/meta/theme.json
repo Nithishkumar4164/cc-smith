@@ -1,0 +1,23 @@
+{
+ "brand": "cc-smith",
+ "font": "\"Roboto\", system-ui, sans-serif",
+ "colors": {
+  "primary": "#0E5E6F",
+  "on-primary": "#FFFFFF",
+  "ink": "#151D1F",
+  "sub": "#55666A",
+  "line": "#D5E2E4",
+  "bg": "#F4F9F9",
+  "grey": "#EEF2F3",
+  "lav": "#D4F1F6",
+  "lime": "#E6F4E9",
+  "mint": "#E2F1F3",
+  "good": "#1E7A3F",
+  "bad": "#B3261E",
+  "bad-bg": "#FCE8E6",
+  "warn": "#8A5100",
+  "warn-bg": "#FFF1DE",
+  "amber": "#8A5100",
+  "amber-bg": "#FFF1DE"
+ }
+}

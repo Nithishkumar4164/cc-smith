@@ -12,10 +12,13 @@ void main() {
       expect(rupees(1234567800), '₹1,23,45,678');
       expect(rupees(100000000000), '₹1,00,00,00,000');
     });
-    test('fractional rupees keep two decimals', () {
+    test('paise only below ₹100; larger amounts round to whole rupees', () {
       expect(rupees(48), '₹0.48');
-      expect(rupees(12345), '₹123.45');
-      expect(rupees(1000005), '₹10,000.05');
+      expect(rupees(9999), '₹99.99');
+      expect(rupees(12345), '₹123');
+      expect(rupees(117882), '₹1,179');
+      expect(rupees(-34882), '−₹349');
+      expect(rupees(1000005), '₹10,000');
       expect(rupees(100, forceDecimals: true), '₹1.00');
     });
     test('negative and signed', () {

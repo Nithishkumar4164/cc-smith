@@ -1,0 +1,10 @@
+{
+ "n": 1,
+ "short": "Set up",
+ "title": "Tell it which cards you hold",
+ "lede": "An anonymous account, your cards, their limits and their fee status. Nothing else is needed to start.",
+ "also": [
+  3
+ ],
+ "stack": false
+}

@@ -1,0 +1,45 @@
+{
+ "scene": "s6",
+ "order": 5,
+ "name": "No spends yet",
+ "wires": [
+  {
+   "cap": "Card Finder",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Card Finder"
+    },
+    {
+     "t": "empty",
+     "title": "Add your monthly spends",
+     "text": "Finder needs at least one spend to compare cards."
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "POST /finder",
+   "what": "Sent before any spends were entered.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "app",
+   "l": "422 add monthly spends first",
+   "what": "The app shows an empty state with a link to the spends screen.",
+   "code": "{\"detail\":\"add monthly spends first (PUT /me/spends)\"}",
+   "t": "OLD",
+   "res": true
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "scene": "s9",
+ "order": 1,
+ "name": "New card profiled from the bank's page",
+ "wires": [
+  {
+   "cap": "Market",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Market"
+    },
+    {
+     "t": "tabs",
+     "items": [
+      "Launch Radar",
+      "What changed"
+     ],
+     "on": 0
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Axis Bank ACE",
+       "meta": "Profiled from the bank's own pages: 5 fields",
+       "amt": "−₹349/yr",
+       "due": "",
+       "st": "ok",
+       "stl": "confirmed",
+       "cb": "none"
+      }
+     ],
+     "hl": "launch"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "gw",
+  "web",
+  "kb",
+  "own",
+  "api"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "gw",
+   "to": "web",
+   "l": "google_news launch query",
+   "what": "'launches new credit card India when:30d', without so= (SerpApi rejects q with so).",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "gw",
+   "to": "gw",
+   "l": "cache, budget, credit ledger",
+   "what": "Hourly 45, monthly 250, per-flow envelopes; every call logged with its search id.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "gw",
+   "to": "web",
+   "l": "google site:axis.bank.in ACE",
+   "what": "Results filtered to allow-listed hosts in code (site: is unreliable).",
+   "t": "OLD"
+  },
+  {
+   "id": "m4",
+   "f": "gw",
+   "to": "kb",
+   "l": "fetch + extract + checks",
+   "what": "Same pipeline as the seed cards.",
+   "t": "OLD"
+  },
+  {
+   "id": "m5",
+   "f": "kb",
+   "to": "own",
+   "l": "card added, launch.published",
+   "what": "The owner is alerted; the card joins the catalogue with origin launch_radar.",
+   "t": "OLD"
+  },
+  {
+   "id": "m6",
+   "f": "api",
+   "to": "api",
+   "l": "GET /launches → gain for you",
+   "what": "Refined against your stack: ACE is −₹349/yr for this user after fees.",
+   "t": "MOD",
+   "hl": "launch"
+  }
+ ]
+}

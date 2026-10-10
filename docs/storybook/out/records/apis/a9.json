@@ -1,0 +1,10 @@
+{
+ "order": 9,
+ "call": "POST /pay/confirm",
+ "owner": "Ledger",
+ "gives": "log a payment (idempotent)",
+ "tag": "OLD",
+ "steps": [
+  5
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "order": 1,
+ "n": 1,
+ "where": "Steps 3, 5",
+ "title": "Payments are logged by hand",
+ "paras": [
+  "Available credit, cap use and the cap notices are only as current as what the user logs. Most people will not log every payment.",
+  "Statement upload (M1) resets balances to the bank's figures each cycle; notification and Gmail capture (M2) log payments automatically. Until then, label available credit 'as of your last update'."
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "scene": "s3",
+ "order": 6,
+ "name": "Kiwi on UPI, with and without Kiwi Neon",
+ "wires": [
+  {
+   "cap": "Checkout Advisor",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  chai stall (UPI)",
+     "filled": true
+    },
+    {
+     "t": "input",
+     "text": "Amount  ₹1,000",
+     "filled": true
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Pay with",
+       "value": "Kiwi · ₹15",
+       "sub": "1.5% on UPI scan & pay",
+       "tone": "lav"
+      }
+     ],
+     "hl": "best",
+     "label": "Best card"
+    },
+    {
+     "t": "text",
+     "text": "With Kiwi Neon: ₹20."
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Kiwi (YES Bank)",
+       "meta": "1.5%, or 2% for Kiwi Neon members",
+       "amt": "₹15",
+       "due": "",
+       "st": "ok",
+       "stl": "best",
+       "cb": "none"
+      }
+     ],
+     "hl": "ranked",
+     "label": "All your cards"
+    }
+   ]
+  },
+  {
+   "cap": "Preferences",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Your preferences"
+    },
+    {
+     "t": "radio",
+     "items": [
+      {
+       "label": "Kiwi Neon",
+       "side": "Kiwi Neon members earn 2% instead of 1.5% on UPI scan & pay."
+      }
+     ],
+     "on": 0,
+     "hl": "neon",
+     "label": "Membership"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "GET /cards → kiwi memberships",
+   "what": "Each card lists the memberships its rules depend on, so the app asks only about those.",
+   "code": "\"memberships\":[{\"key\":\"kiwi_neon\",\"name\":\"Kiwi Neon\",\"why\":\"…\"}]",
+   "t": "NEW",
+   "hl": "neon"
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay UPI ₹1,000",
+   "what": "Without Neon the 1.5% rule applies.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "app",
+   "l": "₹15",
+   "what": "1.5% of ₹1,000 on UPI scan & pay, from Kiwi's own page (Kiwi runs the programme, so its page is official for earn rates).",
+   "t": "OLD",
+   "res": true,
+   "hl": "best"
+  },
+  {
+   "id": "m4",
+   "f": "u",
+   "to": "app",
+   "l": "turns on Kiwi Neon",
+   "what": "Stored as a profile flag; any rule that requires it now matches.",
+   "hl": "neon"
+  },
+  {
+   "id": "m5",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/profile flags=[kiwi_neon]",
+   "what": "The same profile call as before, with the membership key.",
+   "code": "{\"flags\":[\"kiwi_neon\"]}",
+   "t": "OLD"
+  },
+  {
+   "id": "m6",
+   "f": "api",
+   "to": "app",
+   "l": "₹20 on the same payment",
+   "what": "The Neon rule (2%) has higher priority and now matches. Checked by test_cards_list_their_memberships_and_kiwi_neon_changes_the_pick.",
+   "t": "MOD",
+   "res": true,
+   "hl": "best"
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "order": 2,
+ "q": "Ask for a credit score band in onboarding for the demo?",
+ "options": [
+  "Yes, with “don't know”",
+  "No, after the hackathon"
+ ],
+ "affects": "Step 1"
+}

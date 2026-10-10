@@ -1,0 +1,10 @@
+{
+ "n": 5,
+ "short": "Credit",
+ "title": "Log a payment and watch available credit",
+ "lede": "Logged payments use caps and credit; a paid bill frees the shared limit.",
+ "also": [
+  1
+ ],
+ "stack": false
+}

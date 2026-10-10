@@ -1,0 +1,10 @@
+{
+ "n": 4,
+ "short": "Offers",
+ "title": "See bank offers at the merchant",
+ "lede": "Live offers from the banks' own offer pages, shown next to the pick. They never change the ranking.",
+ "also": [
+  4
+ ],
+ "stack": false
+}

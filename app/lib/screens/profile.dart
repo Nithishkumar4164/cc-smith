@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../api.dart';
 import '../format.dart';
 import '../models.dart';
 import '../state.dart';
 import '../widgets.dart';
+import 'editors.dart';
 
-/// Spend keys offered up front (category or merchant keys from /meta).
-const commonSpendKeys = ['amazon', 'flipkart', 'swiggy', 'zomato', 'grocery', 'dining', 'travel', 'fuel', 'utilities', 'rent', 'other'];
+export 'editors.dart';
 
-const feeOptions = <int?>[null, 0, 50000, 100000, 250000, 500000, 1000000];
-String feeOptionLabel(int? p) => p == null ? 'No limit' : (p == 0 ? 'Free only' : 'Up to ${rupees(p)}');
 
 // ---------------------------------------------------------------- onboarding
 
@@ -128,7 +125,10 @@ class ProfileScreen extends StatelessWidget {
     final me = app.me;
     final meta = app.meta;
     final t = Theme.of(context);
-    final totalSpend = me?.spends.values.fold<int>(0, (a, b) => a + b) ?? 0;
+    // Category totals already include their merchants (a category amount is its total).
+    final totalSpend = (me?.categoryTotals.isNotEmpty ?? false)
+        ? me!.categoryTotals.values.fold<int>(0, (a, b) => a + b)
+        : (me?.spends.values.fold<int>(0, (a, b) => a + b) ?? 0);
     return Scaffold(
       appBar: AppBar(title: const Text('Profile')),
       body: ListView(padding: const EdgeInsets.symmetric(horizontal: 16), children: [
@@ -136,11 +136,7 @@ class ProfileScreen extends StatelessWidget {
         Card(
           child: Column(children: [
             for (final h in me?.holdings ?? const <Holding>[])
-              ListTile(
-                leading: const Icon(Icons.credit_card),
-                title: Text(app.cardName(h.cardId)),
-                subtitle: h.statementDay != null ? Text('Statement day ${h.statementDay}') : null,
-              ),
+              CreditTile(holding: h, credit: app.creditByCard[h.cardId], pools: me?.pools ?? const []),
             ListTile(
               leading: const Icon(Icons.edit_outlined),
               title: const Text('Edit cards you hold'),
@@ -155,7 +151,7 @@ class ProfileScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
                 child: Wrap(spacing: 8, runSpacing: 8, children: [
-                  for (final e in me.spends.entries)
+                  for (final e in (me.categoryTotals.isNotEmpty ? me.categoryTotals : me.spends).entries)
                     Chip(label: Text('${meta?.shortLabel(e.key) ?? e.key} ${rupees(e.value)}')),
                 ]),
               ),
@@ -171,7 +167,7 @@ class ProfileScreen extends StatelessWidget {
           child: ListTile(
             leading: const Icon(Icons.tune),
             title: Text([
-              if (me?.profile.flags.contains('amazon_prime') ?? false) 'Amazon Prime',
+              for (final f in me?.profile.flags ?? const <String>[]) meta?.membership(f)?.name ?? f,
               'Rewards: ${me?.profile.rewardPreference ?? 'any'}',
               'Max fee: ${feeOptionLabel(me?.profile.maxAnnualFeePaise)}',
             ].join(' · ')),
@@ -260,398 +256,6 @@ class _TransactionsCardState extends State<_TransactionsCard> {
         },
       ),
     );
-  }
-}
-
-// ---------------------------------------------------------------- editors
-
-class _SaveBar extends StatelessWidget {
-  final String label;
-  final bool busy;
-  final VoidCallback? onPressed;
-  const _SaveBar({required this.label, required this.busy, this.onPressed});
-  @override
-  Widget build(BuildContext context) => SafeArea(
-        top: false,
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-          child: SizedBox(
-            width: double.infinity,
-            child: FilledButton(
-              style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 14)),
-              onPressed: busy ? null : onPressed,
-              child: busy ? const SizedBox.square(dimension: 20, child: CircularProgressIndicator(strokeWidth: 2)) : Text(label),
-            ),
-          ),
-        ),
-      );
-}
-
-class HoldingsEditor extends StatefulWidget {
-  final String actionLabel;
-  final VoidCallback onSaved;
-  final bool requireOne;
-  const HoldingsEditor({super.key, required this.actionLabel, required this.onSaved, this.requireOne = false});
-  @override
-  State<HoldingsEditor> createState() => _HoldingsEditorState();
-}
-
-class _HoldingsEditorState extends State<HoldingsEditor> {
-  late Map<String, Holding> _selected;
-  String _query = '';
-  bool _busy = false;
-
-  @override
-  void initState() {
-    super.initState();
-    final me = AppScope.read(context).me;
-    _selected = {for (final h in me?.holdings ?? const <Holding>[]) h.cardId: h};
-  }
-
-  Future<void> _save() async {
-    if (widget.requireOne && _selected.isEmpty) {
-      showError(context, const ApiException('Pick at least one card you hold.'));
-      return;
-    }
-    setState(() => _busy = true);
-    try {
-      await AppScope.read(context).saveHoldings(_selected.values.toList());
-      widget.onSaved();
-    } catch (e) {
-      if (mounted) showError(context, e);
-    } finally {
-      if (mounted) setState(() => _busy = false);
-    }
-  }
-
-  Future<void> _pickStatementDay(String cardId) async {
-    final current = _selected[cardId]?.statementDay;
-    final day = await showDialog<int>(
-      context: context,
-      builder: (ctx) => SimpleDialog(
-        title: const Text('Statement day'),
-        children: [
-          SimpleDialogOption(onPressed: () => Navigator.pop(ctx, 0), child: const Text("Don't know")),
-          SizedBox(
-            width: 300,
-            child: Wrap(alignment: WrapAlignment.center, children: [
-              for (var d = 1; d <= 31; d++)
-                Padding(
-                  padding: const EdgeInsets.all(2),
-                  child: ChoiceChip(label: Text('$d'), selected: d == current, onSelected: (_) => Navigator.pop(ctx, d)),
-                ),
-            ]),
-          ),
-        ],
-      ),
-    );
-    if (day == null) return;
-    setState(() {
-      final h = _selected[cardId]!;
-      _selected[cardId] = day == 0 ? h.copyWith(clearStatementDay: true) : h.copyWith(statementDay: day);
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final app = AppScope.of(context);
-    final q = _query.toLowerCase();
-    final cards = (app.cards ?? const <CardSummary>[])
-        .where((c) => q.isEmpty || c.name.toLowerCase().contains(q) || c.issuer.toLowerCase().contains(q))
-        .toList()
-      ..sort((a, b) => a.name.compareTo(b.name));
-    final t = Theme.of(context);
-    return Column(children: [
-      Padding(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
-        child: TextField(
-          decoration: const InputDecoration(prefixIcon: Icon(Icons.search), hintText: 'Search cards or banks'),
-          onChanged: (v) => setState(() => _query = v),
-        ),
-      ),
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
-        child: Row(children: [
-          Expanded(child: Text('${_selected.length} selected', style: t.textTheme.labelMedium)),
-          Flexible(child: Text('${app.cards?.length ?? 0} cards in catalogue', style: t.textTheme.labelSmall, textAlign: TextAlign.end)),
-        ]),
-      ),
-      Expanded(
-        child: ListView.builder(
-          itemCount: cards.length,
-          itemBuilder: (context, i) {
-            final c = cards[i];
-            final h = _selected[c.id];
-            return CheckboxListTile(
-              value: h != null,
-              onChanged: (v) => setState(() => v == true ? _selected[c.id] = Holding(cardId: c.id) : _selected.remove(c.id)),
-              title: Text(c.name),
-              subtitle: h == null
-                  ? Text(c.issuer)
-                  : Align(
-                      alignment: Alignment.centerLeft,
-                      child: TextButton.icon(
-                        style: TextButton.styleFrom(padding: EdgeInsets.zero, visualDensity: VisualDensity.compact),
-                        onPressed: () => _pickStatementDay(c.id),
-                        icon: const Icon(Icons.event, size: 16),
-                        label: Text(h.statementDay == null ? 'Statement day (optional)' : 'Statement day ${h.statementDay}'),
-                      ),
-                    ),
-              secondary: CircleAvatar(
-                backgroundColor: t.colorScheme.primaryContainer,
-                child: Text(c.issuer.isEmpty ? '?' : c.issuer[0], style: TextStyle(color: t.colorScheme.onPrimaryContainer)),
-              ),
-            );
-          },
-        ),
-      ),
-      _SaveBar(label: widget.actionLabel, busy: _busy, onPressed: _save),
-    ]);
-  }
-}
-
-class SpendsEditor extends StatefulWidget {
-  final String actionLabel;
-  final VoidCallback onSaved;
-  const SpendsEditor({super.key, required this.actionLabel, required this.onSaved});
-  @override
-  State<SpendsEditor> createState() => _SpendsEditorState();
-}
-
-class _SpendsEditorState extends State<SpendsEditor> {
-  final _ctrls = <String, TextEditingController>{};
-  bool _busy = false;
-
-  @override
-  void initState() {
-    super.initState();
-    final app = AppScope.read(context);
-    final meta = app.meta!;
-    final existing = app.me?.spends ?? const <String, int>{};
-    final valid = {...meta.categories.keys, ...meta.merchants.map((m) => m.key)};
-    for (final k in [...commonSpendKeys.where(valid.contains), ...existing.keys]) {
-      _ctrls.putIfAbsent(k, () => TextEditingController(text: existing[k] == null ? '' : '${existing[k]! ~/ 100}'));
-    }
-  }
-
-  @override
-  void dispose() {
-    for (final c in _ctrls.values) {
-      c.dispose();
-    }
-    super.dispose();
-  }
-
-  int get _total => _ctrls.values.map((c) => parseRupeesToPaise(c.text) ?? 0).fold(0, (a, b) => a + b);
-
-  Future<void> _add() async {
-    final meta = AppScope.read(context).meta!;
-    final options = [
-      ...meta.categories.entries.map((e) => (e.key, e.value, 'Category')),
-      ...meta.merchants.map((m) => (m.key, m.name, 'Merchant · ${meta.shortLabel(m.category)}')),
-    ].where((o) => !_ctrls.containsKey(o.$1)).toList();
-    final key = await showModalBottomSheet<String>(
-      context: context,
-      isScrollControlled: true,
-      showDragHandle: true,
-      builder: (ctx) => _KeyPicker(options: options),
-    );
-    if (key != null) setState(() => _ctrls[key] = TextEditingController());
-  }
-
-  Future<void> _save() async {
-    final out = <String, int>{};
-    for (final e in _ctrls.entries) {
-      final p = parseRupeesToPaise(e.value.text);
-      if (p != null && p > 0) out[e.key] = p;
-    }
-    if (out.isEmpty) {
-      showError(context, const ApiException('Enter at least one monthly spend.'));
-      return;
-    }
-    setState(() => _busy = true);
-    try {
-      await AppScope.read(context).saveSpends(out);
-      widget.onSaved();
-    } catch (e) {
-      if (mounted) showError(context, e);
-    } finally {
-      if (mounted) setState(() => _busy = false);
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final meta = AppScope.of(context).meta!;
-    final t = Theme.of(context);
-    return Column(children: [
-      Expanded(
-        child: ListView(padding: const EdgeInsets.fromLTRB(16, 8, 16, 16), children: [
-          Text('Rough monthly amounts are fine. Merchants (Amazon, Swiggy…) are scored with their own offers; '
-              'categories cover everything else.', style: t.textTheme.bodySmall),
-          const SizedBox(height: 8),
-          for (final e in _ctrls.entries)
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5),
-              child: Row(children: [
-                Expanded(
-                  flex: 5,
-                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(meta.label(e.key), style: t.textTheme.bodyLarge, maxLines: 2, overflow: TextOverflow.ellipsis),
-                    if (meta.merchant(e.key) != null)
-                      Text('Merchant', style: t.textTheme.labelSmall?.copyWith(color: t.colorScheme.onSurfaceVariant)),
-                  ]),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  flex: 4,
-                  child: TextField(
-                    controller: e.value,
-                    keyboardType: const TextInputType.numberWithOptions(decimal: false),
-                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                    textAlign: TextAlign.end,
-                    onChanged: (_) => setState(() {}),
-                    decoration: const InputDecoration(prefixText: '₹ ', hintText: '0', suffixText: '/mo', isDense: true),
-                  ),
-                ),
-              ]),
-            ),
-          const SizedBox(height: 8),
-          OutlinedButton.icon(onPressed: _add, icon: const Icon(Icons.add), label: const Text('Add a category or merchant')),
-        ]),
-      ),
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Row(children: [
-          Text('Total', style: t.textTheme.titleSmall),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Text('${rupees(_total)}/month · ${rupees(_total * 12)}/year',
-                style: t.textTheme.titleSmall, textAlign: TextAlign.end),
-          ),
-        ]),
-      ),
-      _SaveBar(label: widget.actionLabel, busy: _busy, onPressed: _save),
-    ]);
-  }
-}
-
-class _KeyPicker extends StatefulWidget {
-  final List<(String, String, String)> options;
-  const _KeyPicker({required this.options});
-  @override
-  State<_KeyPicker> createState() => _KeyPickerState();
-}
-
-class _KeyPickerState extends State<_KeyPicker> {
-  String _q = '';
-  @override
-  Widget build(BuildContext context) {
-    final q = _q.toLowerCase();
-    final list = widget.options.where((o) => q.isEmpty || o.$2.toLowerCase().contains(q) || o.$1.contains(q)).toList();
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.75,
-      child: Column(children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: TextField(
-            autofocus: true,
-            decoration: const InputDecoration(prefixIcon: Icon(Icons.search), hintText: 'Search'),
-            onChanged: (v) => setState(() => _q = v),
-          ),
-        ),
-        Expanded(
-          child: ListView(children: [
-            for (final o in list)
-              ListTile(title: Text(o.$2), subtitle: Text(o.$3), onTap: () => Navigator.pop(context, o.$1)),
-          ]),
-        ),
-      ]),
-    );
-  }
-}
-
-class PreferencesEditor extends StatefulWidget {
-  final String actionLabel;
-  final VoidCallback onSaved;
-  const PreferencesEditor({super.key, required this.actionLabel, required this.onSaved});
-  @override
-  State<PreferencesEditor> createState() => _PreferencesEditorState();
-}
-
-class _PreferencesEditorState extends State<PreferencesEditor> {
-  late Profile _p;
-  bool _busy = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _p = AppScope.read(context).me?.profile ?? const Profile();
-  }
-
-  bool get _prime => _p.flags.contains('amazon_prime');
-
-  Profile _with({List<String>? flags, String? pref, int? maxFee, bool setFee = false}) => Profile(
-        flags: flags ?? _p.flags,
-        scoreBand: _p.scoreBand,
-        incomeBand: _p.incomeBand,
-        rewardPreference: pref ?? _p.rewardPreference,
-        maxAnnualFeePaise: setFee ? maxFee : _p.maxAnnualFeePaise,
-      );
-
-  Future<void> _save() async {
-    setState(() => _busy = true);
-    try {
-      await AppScope.read(context).saveProfile(_p);
-      widget.onSaved();
-    } catch (e) {
-      if (mounted) showError(context, e);
-    } finally {
-      if (mounted) setState(() => _busy = false);
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final t = Theme.of(context);
-    return Column(children: [
-      Expanded(
-        child: ListView(padding: const EdgeInsets.all(16), children: [
-          Card(
-            child: SwitchListTile(
-              value: _prime,
-              onChanged: (v) => setState(() => _p = _with(
-                  flags: v ? {..._p.flags, 'amazon_prime'}.toList() : _p.flags.where((f) => f != 'amazon_prime').toList())),
-              title: const Text('Amazon Prime member'),
-              subtitle: const Text('Some cards pay more on Amazon for Prime members'),
-            ),
-          ),
-          const SectionHeader('Reward type you prefer'),
-          SegmentedButton<String>(
-            segments: const [
-              ButtonSegment(value: 'any', label: Text('Any')),
-              ButtonSegment(value: 'cashback', label: Text('Cashback')),
-              ButtonSegment(value: 'points', label: Text('Points')),
-            ],
-            selected: {_p.rewardPreference},
-            onSelectionChanged: (s) => setState(() => _p = _with(pref: s.first)),
-          ),
-          const SectionHeader('Highest annual fee you\'d pay'),
-          Wrap(spacing: 8, runSpacing: 8, children: [
-            for (final f in feeOptions)
-              ChoiceChip(
-                label: Text(feeOptionLabel(f)),
-                selected: _p.maxAnnualFeePaise == f,
-                onSelected: (_) => setState(() => _p = _with(maxFee: f, setFee: true)),
-              ),
-          ]),
-          const SizedBox(height: 12),
-          Text('Card Finder only suggests new cards that match these. Cards you already hold are always scored.',
-              style: t.textTheme.bodySmall),
-        ]),
-      ),
-      _SaveBar(label: widget.actionLabel, busy: _busy, onPressed: _save),
-    ]);
   }
 }
 
@@ -769,6 +373,106 @@ class _SettingsScreenState extends State<SettingsScreen> {
             onTap: _resetUser,
           ),
         ],
+      ]),
+    );
+  }
+}
+
+
+/// A held card with its available credit, utilisation bar and a "Bill paid" action.
+class CreditTile extends StatelessWidget {
+  final Holding holding;
+  final Credit? credit;
+  final List<Pool> pools;
+  const CreditTile({super.key, required this.holding, required this.credit, required this.pools});
+
+  Future<void> _billPaid(BuildContext context) async {
+    final app = AppScope.read(context);
+    final ctrl = TextEditingController();
+    final owed = credit?.outstandingPaise ?? 0;
+    final choice = await showDialog<int?>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Bill paid'),
+        content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text('${app.cardName(holding.cardId)} · owes ${rupees(owed)}'),
+          const SizedBox(height: 12),
+          TextField(
+            controller: ctrl,
+            keyboardType: TextInputType.number,
+            decoration: const InputDecoration(labelText: 'Amount paid (leave empty if paid in full)', prefixText: '₹ '),
+          ),
+        ]),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          FilledButton(
+            onPressed: () {
+              final p = parseRupeesToPaise(ctrl.text);
+              Navigator.pop(ctx, p == null || p <= 0 ? -1 : p);
+            },
+            child: const Text('Record payment'),
+          ),
+        ],
+      ),
+    );
+    if (choice == null || !context.mounted) return;
+    try {
+      await app.billPaid(holding.cardId, amountPaise: choice == -1 ? null : choice);
+      if (context.mounted) showInfo(context, choice == -1 ? 'Recorded: paid in full' : 'Recorded ${rupees(choice)} paid');
+    } catch (e) {
+      if (context.mounted) showError(context, e);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final app = AppScope.of(context);
+    final t = Theme.of(context);
+    final s = t.colorScheme;
+    final c = credit;
+    final util = c?.utilisationBp;
+    final barColor = util == null ? s.outline : (util >= 7000 ? s.error : (util >= 3000 ? s.tertiary : moneyColor(context)));
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 12, 8, 4),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(children: [
+          const Icon(Icons.credit_card, size: 20),
+          const SizedBox(width: 10),
+          Expanded(child: Text(app.cardName(holding.cardId), style: t.textTheme.titleSmall)),
+          TextButton(onPressed: () => _billPaid(context), child: const Text('Bill paid')),
+        ]),
+        Padding(
+          padding: const EdgeInsets.only(left: 30, right: 8),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            if (c?.availablePaise != null) ...[
+              Row(children: [
+                Expanded(child: Text('${rupees(c!.availablePaise!)} available', style: t.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600))),
+                Text('${(util ?? 0) ~/ 100}% used', style: t.textTheme.labelMedium?.copyWith(color: barColor)),
+              ]),
+              const SizedBox(height: 4),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: LinearProgressIndicator(
+                  value: ((util ?? 0) / 10000).clamp(0.0, 1.0),
+                  minHeight: 6,
+                  color: barColor,
+                  backgroundColor: s.surfaceContainerHighest,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                [
+                  'Owes ${rupees(c.outstandingPaise)} of ${rupees(c.limitPaise ?? 0)}',
+                  if (c.poolName != null) 'shared limit: ${c.poolName}',
+                ].join(' · '),
+                style: t.textTheme.labelSmall?.copyWith(color: s.onSurfaceVariant),
+              ),
+            ] else
+              Text(c == null ? holdingSummary(holding, pools) : 'Owes ${rupees(c.outstandingPaise)} · add a credit limit to track what is left',
+                  style: t.textTheme.bodySmall),
+            Text(feeStatusLabel(holding), style: t.textTheme.labelSmall?.copyWith(color: s.onSurfaceVariant)),
+          ]),
+        ),
       ]),
     );
   }

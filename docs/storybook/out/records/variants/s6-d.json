@@ -1,0 +1,64 @@
+{
+ "scene": "s6",
+ "order": 4,
+ "name": "LTF card you hold",
+ "wires": [
+  {
+   "cap": "Card Finder",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Your cards today"
+    },
+    {
+     "t": "kv",
+     "rows": [
+      {
+       "k": "Regalia Gold fee (standard)",
+       "v": "₹2,950"
+      },
+      {
+       "k": "Regalia Gold fee (lifetime free)",
+       "v": "₹0",
+       "total": true
+      }
+     ],
+     "hl": "fee"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/holdings fee_status=ltf",
+   "what": "Regalia Gold normally costs ₹2,500 + 18% GST; this user's is lifetime free.",
+   "t": "MOD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "eng",
+   "l": "fees override ₹0",
+   "what": "Net value rises by exactly ₹2,950. Checked by test_ltf_held_card_pays_no_fee_in_finder.",
+   "t": "NEW"
+  },
+  {
+   "id": "m3",
+   "f": "eng",
+   "to": "app",
+   "l": "fee ₹0, net +₹2,950",
+   "what": "The card shows ‘Annual fee ₹0’ in Finder and keep-or-close values rise by the same amount.",
+   "t": "NEW",
+   "res": true,
+   "hl": "fee"
+  }
+ ]
+}

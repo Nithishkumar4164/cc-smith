@@ -1,0 +1,10 @@
+{
+ "order": 17,
+ "call": "GET /launches",
+ "owner": "Launch Radar",
+ "gives": "launch feed with your gain",
+ "tag": "MOD",
+ "steps": [
+  9
+ ]
+}

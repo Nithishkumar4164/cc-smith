@@ -1,0 +1,10 @@
+{
+ "order": 18,
+ "call": "GET /ops/changes, /ops/alerts",
+ "owner": "Owner",
+ "gives": "read-only change feed and alerts",
+ "tag": "OLD",
+ "steps": [
+  8
+ ]
+}

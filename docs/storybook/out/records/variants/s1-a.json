@@ -1,0 +1,194 @@
+{
+ "scene": "s1",
+ "order": 1,
+ "name": "Two cards on a shared HDFC limit",
+ "wires": [
+  {
+   "cap": "Cards you hold",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Cards you hold"
+    },
+    {
+     "t": "input",
+     "text": "Search cards or banks",
+     "filled": false
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "HDFC Bank Millennia",
+       "meta": "Shares HDFC shared (₹2,00,000) · owes ₹70,000",
+       "amt": "",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "on"
+      },
+      {
+       "no": "HSBC Live+",
+       "meta": "Limit ₹1,50,000 · owes ₹20,000 · free until 15 Nov 2026",
+       "amt": "",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "on"
+      },
+      {
+       "no": "Axis Bank ACE",
+       "meta": "Axis Bank",
+       "amt": "",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": ""
+      },
+      {
+       "no": "Axis Bank Atlas",
+       "meta": "Axis Bank",
+       "amt": "",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": ""
+      }
+     ],
+     "hl": "held",
+     "label": "Card list"
+    },
+    {
+     "t": "btn",
+     "text": "Next",
+     "kind": "primary"
+    }
+   ]
+  },
+  {
+   "cap": "Limit, balance and fee",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "HDFC Bank Millennia"
+    },
+    {
+     "t": "radio",
+     "items": [
+      {
+       "label": "Own limit",
+       "side": ""
+      },
+      {
+       "label": "Shares a limit",
+       "side": "HDFC shared · ₹2,00,000"
+      }
+     ],
+     "on": 1,
+     "hl": "pool",
+     "label": "Credit limit"
+    },
+    {
+     "t": "input",
+     "text": "Outstanding today  ₹70,000",
+     "filled": true,
+     "hl": "bal"
+    },
+    {
+     "t": "chips",
+     "items": [
+      "Standard",
+      "Lifetime free",
+      "First year free"
+     ],
+     "on": 0,
+     "hl": "fee"
+    },
+    {
+     "t": "btn",
+     "text": "Done",
+     "kind": "primary"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "led"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "taps Get started",
+   "what": "First run. There is no login: the app asks the backend for an anonymous id and keeps it on the phone."
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "POST /users",
+   "what": "Creates the account. No phone number, email or card number is ever asked for.",
+   "code": "{\"user_id\": \"820f05f0…\"}",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "app",
+   "to": "api",
+   "l": "GET /cards",
+   "what": "The catalogue: 22 cards with fee, reward type and as-of date.",
+   "t": "OLD",
+   "hl": "held"
+  },
+  {
+   "id": "m4",
+   "f": "u",
+   "to": "app",
+   "l": "ticks Millennia, sets shared limit",
+   "what": "Most banks give one limit across all your cards with them, so the sheet offers **Shares a limit** next to **Own limit**.",
+   "hl": "pool"
+  },
+  {
+   "id": "m5",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/pools",
+   "what": "The pool is saved first, so the cards can point at it.",
+   "code": "[{\"id\":\"hdfc\",\"name\":\"HDFC shared\",\"limit_paise\":20000000}]",
+   "t": "NEW",
+   "hl": "pool"
+  },
+  {
+   "id": "m6",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/holdings",
+   "what": "Each card with its pool or own limit, today's outstanding and fee status.",
+   "code": "[{\"card_id\":\"hdfc_millennia\",\"pool_id\":\"hdfc\",\"balance_paise\":7000000},\n {\"card_id\":\"hsbc_live_plus\",\"credit_limit_paise\":15000000,\"balance_paise\":2000000,\"fee_status\":\"fyf\",\"fyf_until\":\"2026-11-15\"}]",
+   "t": "MOD",
+   "hl": "bal"
+  },
+  {
+   "id": "m7",
+   "f": "api",
+   "to": "led",
+   "l": "store holdings, balance as of now",
+   "what": "The outstanding is stamped with the time it was entered; later logged payments and bills paid count from then.",
+   "t": "MOD"
+  },
+  {
+   "id": "m8",
+   "f": "api",
+   "to": "app",
+   "l": "your cards, pools, totals",
+   "what": "The app shows each card's one-line summary from this answer.",
+   "t": "MOD",
+   "res": true,
+   "hl": "held"
+  }
+ ]
+}

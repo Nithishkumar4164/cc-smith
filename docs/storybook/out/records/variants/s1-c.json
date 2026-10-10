@@ -1,0 +1,53 @@
+{
+ "scene": "s1",
+ "order": 3,
+ "name": "Card points at a pool that doesn't exist",
+ "wires": [
+  {
+   "cap": "Error",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Cards you hold"
+    },
+    {
+     "t": "msg",
+     "kind": "crit",
+     "text": "unknown credit pools: ['hdfc']; create them with PUT /me/pools",
+     "hl": "err"
+    },
+    {
+     "t": "btn",
+     "text": "Retry",
+     "kind": "ghost"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/holdings pool_id=hdfc",
+   "what": "Happens if the app saves cards before their pool, or the pool was deleted.",
+   "code": "{\"card_id\":\"hdfc_millennia\",\"pool_id\":\"hdfc\"}",
+   "t": "MOD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "app",
+   "l": "422 unknown credit pools",
+   "what": "Nothing is saved. The app saves pools before holdings, so this only shows on an out-of-order save.",
+   "code": "{\"detail\":\"unknown credit pools: ['hdfc']; create them with PUT /me/pools\"}",
+   "t": "NEW",
+   "res": true,
+   "hl": "err"
+  }
+ ]
+}

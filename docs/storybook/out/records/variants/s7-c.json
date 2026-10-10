@@ -1,0 +1,65 @@
+{
+ "scene": "s7",
+ "order": 3,
+ "name": "Cap nearly used this month",
+ "wires": [
+  {
+   "cap": "Notices",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Notices"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "HSBC Live+: 91% of the ₹1,200 cap used this month",
+       "meta": "Check Pay before your next payment in this category",
+       "amt": "",
+       "due": "",
+       "st": "up",
+       "stl": "watch",
+       "cb": "none"
+      }
+     ],
+     "hl": "notices",
+     "label": "Notices"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "api",
+  "led",
+  "kb"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "api",
+   "to": "led",
+   "l": "cap_used this period",
+   "what": "An ₹11,000 BigBasket payment logged on Live+ used ₹1,100 of the ₹1,200 accelerated cap.",
+   "code": "{\"accelerated\":110000}",
+   "t": "NEW"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "kb",
+   "l": "cap: ₹1,200 a calendar month",
+   "what": "With the HSBC quote as the source.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "api",
+   "l": "≥70% → watch, ≥100% → act",
+   "what": "Pay already accounts for what's left; the notice says which card to use next.",
+   "t": "NEW",
+   "hl": "notices"
+  }
+ ]
+}

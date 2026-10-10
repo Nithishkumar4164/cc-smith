@@ -1,0 +1,10 @@
+{
+ "order": 3,
+ "call": "PUT /me/pools",
+ "owner": "Ledger",
+ "gives": "shared credit limits",
+ "tag": "NEW",
+ "steps": [
+  1
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "scene": "s1",
+ "order": 2,
+ "name": "A card that is first year free",
+ "wires": [
+  {
+   "cap": "Fee status",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "HSBC Live+"
+    },
+    {
+     "t": "chips",
+     "items": [
+      "Standard",
+      "Lifetime free",
+      "First year free"
+     ],
+     "on": 2,
+     "hl": "fee"
+    },
+    {
+     "t": "input",
+     "text": "Free until  15 Nov 2026",
+     "filled": true,
+     "hl": "until"
+    },
+    {
+     "t": "msg",
+     "kind": "note",
+     "text": "Finder and keep-or-close use ₹0 fee for this card until 15 Nov 2026, then ₹999 + GST."
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "chooses First year free",
+   "what": "Your own card can be fee-free even when the product charges a fee (a bank waived it, or it came through a campaign).",
+   "hl": "fee"
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/holdings fee_status=fyf",
+   "what": "The free year's end date is stored with the card.",
+   "code": "{\"card_id\":\"hsbc_live_plus\",\"fee_status\":\"fyf\",\"fyf_until\":\"2026-11-15\"}",
+   "t": "MOD",
+   "hl": "until"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "eng",
+   "l": "fees override: hsbc_live_plus = ₹0",
+   "what": "Finder, keep-or-close and Launch Radar pass this override into the year simulation, so the card is scored without its fee.",
+   "t": "NEW"
+  },
+  {
+   "id": "m4",
+   "f": "eng",
+   "to": "api",
+   "l": "net value without the fee",
+   "what": "After 15 Nov 2026 the override stops applying and the notice board warns 60 days ahead.",
+   "t": "NEW",
+   "res": true
+  }
+ ]
+}

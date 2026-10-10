@@ -1,0 +1,11 @@
+{
+ "n": 7,
+ "short": "Notices",
+ "title": "Read the notice board",
+ "lede": "The few things you must know now: why, what to do, rupees at stake, a date and the source.",
+ "also": [
+  5,
+  7
+ ],
+ "stack": true
+}

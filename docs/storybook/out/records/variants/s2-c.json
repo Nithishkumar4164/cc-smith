@@ -1,0 +1,48 @@
+{
+ "scene": "s2",
+ "order": 3,
+ "name": "A key the backend doesn't know",
+ "wires": [
+  {
+   "cap": "Error",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "What you spend each month"
+    },
+    {
+     "t": "msg",
+     "kind": "crit",
+     "text": "unknown spend key netflixx",
+     "hl": "err"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/spends {netflixx}",
+   "what": "Only category keys and registry merchant keys are accepted.",
+   "code": "{\"netflixx\":50000}",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "app",
+   "l": "422 unknown spend key",
+   "what": "Nothing is saved; the app only offers keys from /meta, so this needs a stale app.",
+   "code": "{\"detail\":\"unknown spend key netflixx\"}",
+   "t": "OLD",
+   "res": true,
+   "hl": "err"
+  }
+ ]
+}

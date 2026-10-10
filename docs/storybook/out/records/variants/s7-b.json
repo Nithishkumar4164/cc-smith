@@ -1,0 +1,90 @@
+{
+ "scene": "s7",
+ "order": 2,
+ "name": "Fee offers on cards that suit you",
+ "wires": [
+  {
+   "cap": "Notices",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Notices"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Swiggy BLCK: joining fee of ₹1,000 waived on ₹75,000 spend in first 90 days",
+       "meta": "Adds about ₹7,092 in year one on your spends",
+       "amt": "₹7,092",
+       "due": "",
+       "st": "up",
+       "stl": "bank page",
+       "cb": "none"
+      },
+      {
+       "no": "Swiggy ORNGE: lifetime free for select corporates",
+       "meta": "HDFC direct channels only",
+       "amt": "₹6,302",
+       "due": "",
+       "st": "up",
+       "stl": "bank page",
+       "cb": "none"
+      },
+      {
+       "no": "Axis Magnus: lifetime free for Burgundy Salary, ₹2 lakh/month",
+       "meta": "",
+       "amt": "₹1,656",
+       "due": "",
+       "st": "up",
+       "stl": "bank page",
+       "cb": "none"
+      }
+     ],
+     "hl": "notices",
+     "label": "Notices"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "api",
+  "off",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "api",
+   "to": "off",
+   "l": "live fee offers (LTF, FYF, joining waiver)",
+   "what": "4 from bank pages are facts; CardInsider's copy of the Flipkart FYF is speculation.",
+   "t": "NEW"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "eng",
+   "l": "refine with the card added",
+   "what": "Year one adds back the annual fee; an LTF keeps it off every year.",
+   "t": "NEW"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "api",
+   "l": "keep if year one > 0",
+   "what": "The offer's own title carries its conditions (select corporates, Burgundy Salary).",
+   "t": "NEW",
+   "hl": "notices"
+  },
+  {
+   "id": "m4",
+   "f": "api",
+   "to": "api",
+   "l": "eligibility not checked",
+   "what": "cc-smith can't tell whether you work at a listed corporate or hold a Burgundy Salary account (see suggestion 7).",
+   "t": "NEW"
+  }
+ ]
+}

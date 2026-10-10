@@ -1,0 +1,112 @@
+{
+ "scene": "s3",
+ "order": 3,
+ "name": "Cap already used up this month",
+ "wires": [
+  {
+   "cap": "Checkout Advisor",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  Amazon",
+     "filled": true
+    },
+    {
+     "t": "input",
+     "text": "Amount  ₹10,000",
+     "filled": true
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Pay with",
+       "value": "HDFC Regalia Gold",
+       "sub": "after two logged ₹10,000 payments",
+       "tone": "lav"
+      }
+     ],
+     "hl": "best",
+     "label": "Best card"
+    },
+    {
+     "t": "text",
+     "text": "Millennia: 5% cap reached this month."
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "HDFC Regalia Gold",
+       "meta": "5 points per ₹200",
+       "amt": "₹125",
+       "due": "",
+       "st": "ok",
+       "stl": "best",
+       "cb": "none"
+      },
+      {
+       "no": "HDFC Millennia",
+       "meta": "cap reached",
+       "amt": "₹0",
+       "due": "",
+       "st": "over",
+       "stl": "capped",
+       "cb": "none"
+      }
+     ],
+     "hl": "ranked",
+     "label": "All your cards"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "led",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay Amazon ₹10,000",
+   "what": "Two ₹10,000 Amazon payments on Millennia were logged earlier this month.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "led",
+   "l": "cap_used: online_10 = ₹1,000",
+   "what": "₹500 + ₹500 cashback already used the ₹1,000 monthly cap.",
+   "code": "{\"online_10\": 100000}",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "eng",
+   "l": "Millennia earns ₹0 (cap exhausted)",
+   "what": "The engine never earns past a cap; the reason code says so.",
+   "code": "\"reason_codes\":[\"capped:online_10\",\"cap_exhausted\"]",
+   "t": "OLD"
+  },
+  {
+   "id": "m4",
+   "f": "api",
+   "to": "app",
+   "l": "best Regalia Gold",
+   "what": "The pick moves to the next card; Millennia shows 'cap reached'.",
+   "t": "OLD",
+   "res": true,
+   "hl": "ranked"
+  }
+ ]
+}

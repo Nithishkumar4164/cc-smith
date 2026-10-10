@@ -1,0 +1,69 @@
+{
+ "scene": "s3",
+ "order": 8,
+ "name": "Scanned QR from an unknown shop",
+ "wires": [
+  {
+   "cap": "Scan QR",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  SRI KRISHNA SWEETS",
+     "filled": true
+    },
+    {
+     "t": "chips",
+     "items": [
+      "Dining",
+      "medium confidence"
+     ],
+     "on": -1,
+     "hl": "conf"
+    },
+    {
+     "t": "msg",
+     "kind": "note",
+     "text": "Category comes from the shop's merchant code (5812, restaurants)."
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "scans the shop's UPI QR",
+   "what": "The QR is a upi://pay link carrying payee name, merchant code and sometimes the amount.",
+   "code": "upi://pay?pa=…&pn=SRI%20KRISHNA%20SWEETS&mc=5812"
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay with mcc 5812",
+   "what": "The payee name isn't in the merchant registry, so the merchant code decides the category.",
+   "code": "{\"merchant\":\"SRI KRISHNA SWEETS\",\"mcc\":\"5812\",\"amount_paise\":45000}",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "app",
+   "l": "dining, confidence medium",
+   "what": "With no code and no match the category is 'other', confidence low, and the text says the category is a guess.",
+   "t": "OLD",
+   "res": true,
+   "hl": "conf"
+  }
+ ]
+}

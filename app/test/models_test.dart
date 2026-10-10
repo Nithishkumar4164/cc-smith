@@ -117,8 +117,8 @@ void main() {
 
   test('pay with bank offers (facts) does not reorder the ranking', () {
     final p = PayResult.fromJson(fixture('pay_offer'));
-    expect(p.best!.cardId, 'hsbc_live_plus');
-    expect(p.ranked.map((o) => o.cardId), ['hsbc_live_plus', 'hdfc_millennia']);
+    final byReward = [...p.ranked]..sort((a, b) => b.rewardPaise.compareTo(a.rewardPaise));
+    expect(p.ranked.map((o) => o.cardId), byReward.map((o) => o.cardId));
     expect(p.offers, hasLength(2));
     final o = p.offers.first;
     expect(o.isFact, isTrue);
@@ -128,8 +128,67 @@ void main() {
     expect(o.validTo, '2026-10-25');
     expect(o.source!.official, isTrue);
     expect(o.source!.quote, contains('Minimum Spend'));
-    expect(p.text, contains('has a bank offer here'));
+    expect(p.text, contains('Bank offer'));
     expect(PayResult.fromJson(fixture('pay')).offers, isEmpty);
+  });
+
+  test('notice board: sorted act > watch > info, refs, due, rupees', () {
+    final ns = (fixture('notices') as List).map((e) => Notice.fromJson(e)).toList();
+    expect(ns, isNotEmpty);
+    const rank = {'act': 0, 'watch': 1, 'info': 2};
+    for (var i = 1; i < ns.length; i++) {
+      expect(rank[ns[i - 1].severity]! <= rank[ns[i].severity]!, isTrue);
+    }
+    final fyf = ns.firstWhere((n) => n.id == 'fyf:hsbc_live_plus');
+    expect(fyf.kind, 'fee');
+    expect(fyf.due, '2026-11-15');
+    expect(fyf.rupeesPaise, 117882);
+    expect(fyf.refs.single.official, isTrue);
+    expect(ns.firstWhere((n) => n.kind == 'cap').title, contains('91%'));
+    expect(ns.firstWhere((n) => n.kind == 'credit').refs, isEmpty);
+    expect(ns.where((n) => n.needsAttention).length, ns.where((n) => n.severity != 'info').length);
+  });
+
+  test('credit, pools and category totals', () {
+    final cr = (fixture('credit') as List).map((e) => Credit.fromJson(e)).toList();
+    final hdfc = cr.firstWhere((c) => c.cardId == 'hdfc_millennia');
+    expect(hdfc.poolName, 'HDFC shared');
+    expect(hdfc.availablePaise, 13000000);
+    expect(hdfc.utilisationBp, 3500);
+    final me = Me.fromJson(fixture('me_credit'));
+    expect(me.pools.single.limitPaise, 20000000);
+    final live = me.holdings.firstWhere((h) => h.cardId == 'hsbc_live_plus');
+    expect(live.feeStatus, 'fyf');
+    expect(live.fyfUntil, '2026-11-15');
+    expect(live.creditLimitPaise, 15000000);
+    expect(live.toJson()['fyf_until'], '2026-11-15');
+    final pooled = me.holdings.firstWhere((h) => h.cardId == 'hdfc_millennia');
+    expect(pooled.toJson()['pool_id'], 'hdfc');
+    expect(pooled.toJson().containsKey('credit_limit_paise'), isFalse);
+    expect(me.categoryTotals['dining'], 900000);
+  });
+
+  test('meta groups and memberships; card memberships and fee offers', () {
+    expect(meta.groups.firstWhere((g) => g.category == 'dining').merchants.map((m) => m.key), contains('swiggy'));
+    expect(meta.membership('amazon_prime')!.why, contains('Prime'));
+    final cards = (fixture('cards') as List).map((e) => CardSummary.fromJson(e)).toList();
+    expect(cards.firstWhere((c) => c.id == 'icici_amazon_pay').memberships.single.key, 'amazon_prime');
+    final blck = cards.firstWhere((c) => c.id == 'hdfc_swiggy_blck').feeOffers.single;
+    expect(blck.kind, 'joining_waiver');
+    expect(blck.kindLabel, 'Joining fee waiver');
+    expect(blck.spendConditionPaise, 7500000);
+    expect(blck.source!.official, isTrue);
+    final flip = cards.firstWhere((c) => c.id == 'axis_flipkart').feeOffers;
+    expect(flip.map((o) => o.tier), containsAll(['fact', 'speculation']));
+  });
+
+  test('pay skips cards without enough credit', () {
+    final p = PayResult.fromJson(fixture('pay_credit'));
+    expect(p.best, isNull);
+    final live = p.ranked.firstWhere((o) => o.cardId == 'hsbc_live_plus');
+    expect(live.reasonCodes, contains('insufficient_credit:11900000'));
+    expect(live.notes, contains('Only ₹1,19,000 of credit available'));
+    expect(reasonLabel('insufficient_credit:11900000'), 'Only ₹1,19,000 credit left');
   });
 
   test('transactions', () {

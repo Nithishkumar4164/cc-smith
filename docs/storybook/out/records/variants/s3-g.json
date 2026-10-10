@@ -1,0 +1,100 @@
+{
+ "scene": "s3",
+ "order": 7,
+ "name": "Not enough credit on any card",
+ "wires": [
+  {
+   "cap": "Checkout Advisor",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  MakeMyTrip",
+     "filled": true
+    },
+    {
+     "t": "input",
+     "text": "Amount  ₹1,40,000",
+     "filled": true
+    },
+    {
+     "t": "msg",
+     "kind": "crit",
+     "text": "None of your cards has ₹1,40,000 of credit available. Pay part now, or pay a bill first.",
+     "hl": "credit"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "HSBC Live+",
+       "meta": "Only ₹1,30,000 of credit available",
+       "amt": "₹2,100",
+       "due": "",
+       "st": "fail",
+       "stl": "no credit",
+       "cb": "none"
+      },
+      {
+       "no": "HDFC Millennia",
+       "meta": "Only ₹1,30,000 of credit available",
+       "amt": "₹1,000",
+       "due": "",
+       "st": "fail",
+       "stl": "no credit",
+       "cb": "none"
+      }
+     ],
+     "hl": "ranked"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "led",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay MakeMyTrip ₹1,40,000",
+   "what": "A large travel booking.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "led",
+   "l": "available: both ₹1,30,000",
+   "what": "Millennia: ₹2,00,000 pool − ₹70,000. Live+: ₹1,50,000 − ₹20,000.",
+   "code": "{\"hdfc_millennia\":13000000,\"hsbc_live_plus\":13000000}",
+   "t": "NEW"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "api",
+   "l": "insufficient_credit on both",
+   "what": "A card without enough available credit is skipped, with the amount it has.",
+   "code": "\"reason_codes\":[\"insufficient_credit:13000000\"]",
+   "t": "NEW"
+  },
+  {
+   "id": "m4",
+   "f": "api",
+   "to": "app",
+   "l": "best null, credit text",
+   "what": "Names credit as the reason (it used to blame UPI).",
+   "t": "MOD",
+   "res": true,
+   "hl": "credit"
+  }
+ ]
+}

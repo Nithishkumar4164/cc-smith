@@ -69,6 +69,8 @@ class _DetailBody extends StatelessWidget {
     final s = t.colorScheme;
     final c = d.summary;
     final desc = Describer(d.fields, meta: app.meta);
+    // /cards/{id} may not carry fee offers; fall back to the catalogue summary.
+    final feeOffers = c.feeOffers.isNotEmpty ? c.feeOffers : (app.cardsById[c.id]?.feeOffers ?? const <FeeOffer>[]);
     final names = [...fieldOrder.where(d.fields.containsKey), ...(d.fields.keys.where((k) => !fieldOrder.contains(k)).toList()..sort())];
     return ListView(padding: const EdgeInsets.fromLTRB(16, 0, 16, 40), children: [
       Container(
@@ -114,6 +116,17 @@ class _DetailBody extends StatelessWidget {
             subtitle: const Text("We don't yet have enough facts from the bank's own pages to put this card in the rupee maths."),
           ),
         ),
+      if (feeOffers.isNotEmpty) ...[
+        const SectionHeader('Fee offers'),
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              for (final (i, o) in feeOffers.indexed) ...[if (i > 0) const Divider(height: 20), FeeOfferView(o)],
+            ]),
+          ),
+        ),
+      ],
       for (final f in names) _FieldSection(field: f, view: d.fields[f]!, desc: desc),
       if (d.speculation.isNotEmpty) ...[
         const SectionHeader('Reported, not confirmed by the bank'),
@@ -308,6 +321,7 @@ class _ReportSheetState extends State<_ReportSheet> {
         Text(widget.card.summary.name, style: Theme.of(context).textTheme.bodySmall),
         const SizedBox(height: 16),
         DropdownButtonFormField<String>(
+          isExpanded: true,
           initialValue: _field,
           decoration: const InputDecoration(labelText: 'What is wrong'),
           items: [for (final f in fields) DropdownMenuItem(value: f, child: Text(f == 'other' ? 'Something else' : fieldTitle(f)))],

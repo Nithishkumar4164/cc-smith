@@ -1,0 +1,6 @@
+# Paid or free memberships that change what a card earns. A card's rules name them in
+# `requires`; the app asks about a membership only for cards you hold or are shown.
+amazon_prime: {name: Amazon Prime, by: Amazon, why: "Amazon Pay ICICI pays 5% on Amazon to Prime members, 3% otherwise."}
+neupass: {name: Tata NeuPass, by: Tata Digital, why: "Tata Neu Infinity pays an extra 5% NeuCoins on selected Tata Neu categories once you register for NeuPass."}
+kiwi_neon: {name: Kiwi Neon, by: Kiwi, why: "Kiwi Neon members earn 2% instead of 1.5% on UPI scan & pay."}
+google_pay_android: {name: Pays bills through Google Pay, by: Google, why: "Axis ACE's 5% on utility bills and recharges applies only when you pay them through Google Pay."}

@@ -150,6 +150,14 @@ def _ordered_rules(card: CardProfile, p: Purchase) -> tuple[list[EarnRule], list
     return hit
 
 
+def narrowness(card: CardProfile, r: "Reward") -> int:
+    """How specific the rules that paid are: 2 for named merchants, 1 for a category, 0 for
+    a catch-all or channel rule. On equal rewards, spend the narrower rule and keep the
+    broader one free for spends only it covers."""
+    rules = {x.id: x for x in card.earn_rules}
+    return max((rules[line.rule_id].match.specificity() for line in r.lines if line.rule_id in rules), default=0)
+
+
 def reward(card: CardProfile, p: Purchase, cap_used: dict[str, int] | None = None) -> Reward:
     """Reward for one purchase given cap usage so far in the current periods.
 

@@ -1,0 +1,68 @@
+{
+ "scene": "s6",
+ "order": 3,
+ "name": "Greedy shows no gain, refined does",
+ "wires": [
+  {
+   "cap": "Card Finder",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Card Finder"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Add Swiggy BLCK",
+       "meta": "",
+       "amt": "+₹5,912",
+       "due": "",
+       "st": "ok",
+       "stl": "found",
+       "cb": "none"
+      }
+     ],
+     "hl": "sets"
+    },
+    {
+     "t": "msg",
+     "kind": "note",
+     "text": "This list used to be empty for this user."
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "api",
+   "to": "eng",
+   "l": "greedy gain ≤ 0 for every set",
+   "what": "With Millennia + Live+, chunk routing breaks a waiver or milestone in every set.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "eng",
+   "to": "eng",
+   "l": "keep non-positive greedy sets",
+   "what": "They used to be dropped before the fee-aware step ran; now the best 5 are refined anyway.",
+   "t": "MOD"
+  },
+  {
+   "id": "m3",
+   "f": "eng",
+   "to": "api",
+   "l": "Swiggy BLCK +₹5,912",
+   "what": "Matches /finder/assess and the notice board. Checked by test_finder_finds_card_sets_when_greedy_routing_alone_shows_no_gain.",
+   "t": "MOD",
+   "res": true,
+   "hl": "sets"
+  }
+ ]
+}

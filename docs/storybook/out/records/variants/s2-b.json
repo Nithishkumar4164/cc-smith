@@ -1,0 +1,79 @@
+{
+ "scene": "s2",
+ "order": 2,
+ "name": "Merchants add up to more than the category",
+ "wires": [
+  {
+   "cap": "What you spend",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "What you spend each month"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Dining and food delivery",
+       "meta": "merchants add up to ₹3,000",
+       "amt": "₹2,000",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      },
+      {
+       "no": "  Swiggy",
+       "meta": "Merchant",
+       "amt": "₹3,000",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      }
+     ],
+     "hl": "over"
+    },
+    {
+     "t": "msg",
+     "kind": "note",
+     "text": "Dining counts as ₹3,000, the sum of its merchants."
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/spends",
+   "what": "Dining ₹2,000 but Swiggy alone ₹3,000.",
+   "code": "{\"dining\":200000,\"swiggy\":300000}",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "eng",
+   "l": "dining = max(₹2,000, ₹3,000)",
+   "what": "The category becomes the merchants' sum and has no remainder line, so nothing is double-counted or lost.",
+   "t": "NEW",
+   "hl": "over"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "app",
+   "l": "category_totals dining ₹3,000",
+   "what": "The app shows 'merchants add up to ₹3,000' rather than an error.",
+   "t": "NEW",
+   "res": true
+  }
+ ]
+}

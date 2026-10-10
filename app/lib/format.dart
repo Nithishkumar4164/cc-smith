@@ -20,12 +20,13 @@ String groupIndian(int n) {
   return neg ? '-$s' : s;
 }
 
-/// Paise -> rupee string with Indian grouping. Whole rupees drop the decimals
-/// ("₹1,00,000"); otherwise two decimals ("₹0.48"). Negative values use a
-/// proper minus sign before the rupee symbol ("−₹5,180").
+/// Paise -> rupee string with Indian grouping. Amounts of ₹100 or more are
+/// rounded to whole rupees ("₹1,179"); smaller ones keep paise when present
+/// ("₹0.48"). Negative values use a proper minus sign ("−₹5,180").
 String rupees(int paise, {bool forceDecimals = false, bool signed = false}) {
   final neg = paise < 0;
-  final abs = paise.abs();
+  var abs = paise.abs();
+  if (abs >= 10000 && !forceDecimals) abs = ((abs + 50) ~/ 100) * 100;
   final whole = abs ~/ 100;
   final frac = abs % 100;
   var body = '₹${groupIndian(whole)}';

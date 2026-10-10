@@ -1,0 +1,10 @@
+{
+ "order": 3,
+ "n": 3,
+ "where": "Step 1",
+ "title": "Credit score is never asked",
+ "paras": [
+  "The backend stores a score band, but onboarding doesn't ask for it, so approval likelihood isn't shown anywhere.",
+  "Add a score-band question with “don't know” to preferences (decision A3)."
+ ]
+}

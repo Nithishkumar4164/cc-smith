@@ -1,0 +1,4040 @@
+{
+ "meta": {
+  "page": {
+   "eyebrow": "cc-smith · Android app + backend",
+   "title": "cc-smith storybook: every case",
+   "intro": "Nine steps an Indian credit-card holder takes in cc-smith, each with its normal path, edge cases and failures. Every screen sits next to the calls made behind it, from the app to the backend, the rewards engine, the card-facts store, the ledger and SerpApi. Figures come from the backend's tests and one recorded user: HDFC Millennia on a shared HDFC limit and HSBC Live+ in its free first year, spending ₹59,000 a month.",
+   "rolloutTitle": "What ships in what order",
+   "rolloutLede": "Hackathon submission first (10 Oct, 18:00 IST), then the three-month plan."
+  },
+  "lanes": {
+   "lanes": {
+    "u": {
+     "name": "Card holder",
+     "role": "the user"
+    },
+    "app": {
+     "name": "App",
+     "role": "Flutter, Android"
+    },
+    "api": {
+     "name": "API",
+     "role": "FastAPI backend"
+    },
+    "eng": {
+     "name": "Rewards engine",
+     "role": "pure Python maths"
+    },
+    "kb": {
+     "name": "Card facts",
+     "role": "versioned facts store"
+    },
+    "led": {
+     "name": "Ledger",
+     "role": "payments and credit"
+    },
+    "off": {
+     "name": "Offers",
+     "role": "bank and fee offers"
+    },
+    "fet": {
+     "name": "Fetcher",
+     "role": "bank pages and PDFs"
+    },
+    "gw": {
+     "name": "SerpApi gateway",
+     "role": "cache and budget"
+    },
+    "web": {
+     "name": "Outside world",
+     "role": "SerpApi, bank sites"
+    },
+    "own": {
+     "name": "Owner alerts",
+     "role": "outbox and log"
+    },
+    "llm": {
+     "name": "Quick model",
+     "role": "Haiku 4.5, chooses"
+    }
+   }
+  },
+  "theme": {
+   "brand": "cc-smith",
+   "font": "\"Roboto\", system-ui, sans-serif",
+   "colors": {
+    "primary": "#0E5E6F",
+    "on-primary": "#FFFFFF",
+    "ink": "#151D1F",
+    "sub": "#55666A",
+    "line": "#D5E2E4",
+    "bg": "#F4F9F9",
+    "grey": "#EEF2F3",
+    "lav": "#D4F1F6",
+    "lime": "#E6F4E9",
+    "mint": "#E2F1F3",
+    "good": "#1E7A3F",
+    "bad": "#B3261E",
+    "bad-bg": "#FCE8E6",
+    "warn": "#8A5100",
+    "warn-bg": "#FFF1DE",
+    "amber": "#8A5100",
+    "amber-bg": "#FFF1DE"
+   }
+  },
+  "nodes": {
+   "nodes": [
+    {
+     "name": "Card holder",
+     "role": "on an Android phone",
+     "note": "no login, no card numbers"
+    },
+    {
+     "name": "App",
+     "role": "Flutter",
+     "note": "draws screens, decodes UPI QR codes"
+    },
+    {
+     "name": "API",
+     "role": "FastAPI",
+     "note": "one backend; integer paise everywhere"
+    },
+    {
+     "name": "Rewards engine",
+     "role": "pure Python",
+     "note": "does every calculation",
+     "plus": true
+    },
+    {
+     "name": "Quick model",
+     "role": "Haiku 4.5, 2 s limit",
+     "note": "chooses the card from the engine's figures; never calculates"
+    },
+    {
+     "name": "Card facts",
+     "role": "SQLite now, Postgres in M1",
+     "note": "facts quoted from bank pages; the rest is speculation"
+    },
+    {
+     "name": "Ledger",
+     "role": "payments and limits",
+     "note": "manual capture until M2",
+     "plus": true
+    },
+    {
+     "name": "Fetcher + SerpApi gateway",
+     "role": "bank pages, News, Ads Transparency",
+     "note": "replay fixtures when there are no keys"
+    }
+   ]
+  },
+  "context": {
+   "digest": "Product: cc-smith, for credit-card holders in India. Hackathon build for the SerpApi India Hackathon 2026 (Commerce & Market Intelligence), submission 10 Oct 2026 18:00 IST.\n\nFacts: 22 cards in the catalogue, profiled from official bank pages (allow-list in docs/research/official-domains.yaml). A card fact is published only if (1) its URL is official for that field (bank for fees/earn/caps; co-brand partner for its reward currency; fintech operators like Kiwi and Scapia also for earn rules), (2) the verbatim quote is found in the fetched page or PDF, (3) every rupee amount, cap and percentage appears in its own quote, (4) range checks pass (earn ≤25%, fee ≤₹1 lakh). Otherwise it is speculation: shown as 'reported, not confirmed by the bank', never used in maths. No human review; every change alerts the owner. 21 merchant offers and 4 fee offers (LTF/FYF/joining waiver) from bank pages; one distributor copy is speculation. Money is integer paise. Fees include 18% GST.\n\nA quick model (Haiku 4.5, 2 s limit) chooses the card at checkout from engine-computed figures and never calculates; rupee amounts in its reason must be supplied figures; timeout, error or invalid answer falls back to the engine's pick (decision D10). Checkout's engine pick is the best card for the month: this payment plus what the rest of the month still earns after it (spends prorated to the days left, under remaining caps and credit); ties go to the narrower rule, keeping broad caps like SBI Cashback's 5% on all online free. Engine: per purchase, rules matched by merchant > category > catch-all, then rule priority; exclusions; minimum amount; caps per period from the ledger; stacked bonus rules; UPI only for RuPay cards; memberships (Amazon Prime, Tata NeuPass, Kiwi Neon, paying bills through Google Pay) gate some rules. Finder simulates a year month by month, routing each spend to the best card, then hill-climbs whole-line moves so fee waivers and milestones are kept; adding a card can never score below the current stack minus its fee.\n\nDecisions (owner): no affiliate money; no human in the loop (DR-12); hackathon first; Android only through M3; category spend amount is the total and merchants are part of it; per-card memberships; held cards can be LTF or FYF; shared credit pools; available credit = limit − (entered outstanding + logged payments − bills paid); notice board with reasons; payment capture manual until statement upload (M1) and notification/Gmail capture (M2); credit score is a user-entered band (no bureau API).\n\nOpen: premium tier undecided. Known gaps: report-wrong-info does not trigger a re-fetch although its response says so; score band not asked in onboarding; offer estimates take 'up to' figures at face value; fee-offer eligibility conditions are not checked against the user; Scapia Axis is treated as the Scapia Federal card; Airtel Axis 25%/10% rules not modelled; four cards listed but not scored (SimplyCLICK, Coral, AU LIT, Scapia). No live SerpApi or Anthropic call has run (no keys)."
+  }
+ },
+ "scenes": {
+  "s1": {
+   "n": 1,
+   "short": "Set up",
+   "title": "Tell it which cards you hold",
+   "lede": "An anonymous account, your cards, their limits and their fee status. Nothing else is needed to start.",
+   "also": [
+    3
+   ],
+   "stack": false
+  },
+  "s2": {
+   "n": 2,
+   "short": "Spends",
+   "title": "Say what you spend each month",
+   "lede": "A category amount is the total; merchants under it are part of it and are scored with their own rules.",
+   "also": [],
+   "stack": false
+  },
+  "s3": {
+   "n": 3,
+   "short": "Pay",
+   "title": "Ask which card to pay with",
+   "lede": "Checkout Advisor: every card you hold is checked for this one payment, in rupees. No language model runs on this path.",
+   "also": [
+    1,
+    4
+   ],
+   "stack": true
+  },
+  "s4": {
+   "n": 4,
+   "short": "Offers",
+   "title": "See bank offers at the merchant",
+   "lede": "Live offers from the banks' own offer pages, shown next to the pick. They never change the ranking.",
+   "also": [
+    4
+   ],
+   "stack": false
+  },
+  "s5": {
+   "n": 5,
+   "short": "Credit",
+   "title": "Log a payment and watch available credit",
+   "lede": "Logged payments use caps and credit; a paid bill frees the shared limit.",
+   "also": [
+    1
+   ],
+   "stack": false
+  },
+  "s6": {
+   "n": 6,
+   "short": "Finder",
+   "title": "Find the next card",
+   "lede": "A year of your spends, simulated across your cards plus candidates, net of fees with GST, waivers and milestones.",
+   "also": [
+    2,
+    6
+   ],
+   "stack": false
+  },
+  "s7": {
+   "n": 7,
+   "short": "Notices",
+   "title": "Read the notice board",
+   "lede": "The few things you must know now: why, what to do, rupees at stake, a date and the source.",
+   "also": [
+    5,
+    7
+   ],
+   "stack": true
+  },
+  "s8": {
+   "n": 8,
+   "short": "Card facts",
+   "title": "How a card fact gets in",
+   "lede": "No human review: a fact needs an official page, a verbatim quote, and every number written in that quote. Everything else is speculation.",
+   "also": [
+    2
+   ],
+   "stack": true
+  },
+  "s9": {
+   "n": 9,
+   "short": "Market",
+   "title": "Watch new cards in the market",
+   "lede": "Google News and Google Ads Transparency (India) through one SerpApi gateway; a launch is scored only once the bank's own page confirms it.",
+   "also": [
+    8
+   ],
+   "stack": false
+  }
+ },
+ "variants": {
+  "s1-a": {
+   "scene": "s1",
+   "order": 1,
+   "name": "Two cards on a shared HDFC limit",
+   "wires": [
+    {
+     "cap": "Cards you hold",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Cards you hold"
+      },
+      {
+       "t": "input",
+       "text": "Search cards or banks",
+       "filled": false
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "HDFC Bank Millennia",
+         "meta": "Shares HDFC shared (₹2,00,000) · owes ₹70,000",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "on"
+        },
+        {
+         "no": "HSBC Live+",
+         "meta": "Limit ₹1,50,000 · owes ₹20,000 · free until 15 Nov 2026",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "on"
+        },
+        {
+         "no": "Axis Bank ACE",
+         "meta": "Axis Bank",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": ""
+        },
+        {
+         "no": "Axis Bank Atlas",
+         "meta": "Axis Bank",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": ""
+        }
+       ],
+       "hl": "held",
+       "label": "Card list"
+      },
+      {
+       "t": "btn",
+       "text": "Next",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "cap": "Limit, balance and fee",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "HDFC Bank Millennia"
+      },
+      {
+       "t": "radio",
+       "items": [
+        {
+         "label": "Own limit",
+         "side": ""
+        },
+        {
+         "label": "Shares a limit",
+         "side": "HDFC shared · ₹2,00,000"
+        }
+       ],
+       "on": 1,
+       "hl": "pool",
+       "label": "Credit limit"
+      },
+      {
+       "t": "input",
+       "text": "Outstanding today  ₹70,000",
+       "filled": true,
+       "hl": "bal"
+      },
+      {
+       "t": "chips",
+       "items": [
+        "Standard",
+        "Lifetime free",
+        "First year free"
+       ],
+       "on": 0,
+       "hl": "fee"
+      },
+      {
+       "t": "btn",
+       "text": "Done",
+       "kind": "primary"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "led"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "taps Get started",
+     "what": "First run. There is no login: the app asks the backend for an anonymous id and keeps it on the phone."
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /users",
+     "what": "Creates the account. No phone number, email or card number is ever asked for.",
+     "code": "{\"user_id\": \"820f05f0…\"}",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "app",
+     "to": "api",
+     "l": "GET /cards",
+     "what": "The catalogue: 22 cards with fee, reward type and as-of date.",
+     "t": "OLD",
+     "hl": "held"
+    },
+    {
+     "id": "m4",
+     "f": "u",
+     "to": "app",
+     "l": "ticks Millennia, sets shared limit",
+     "what": "Most banks give one limit across all your cards with them, so the sheet offers **Shares a limit** next to **Own limit**.",
+     "hl": "pool"
+    },
+    {
+     "id": "m5",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/pools",
+     "what": "The pool is saved first, so the cards can point at it.",
+     "code": "[{\"id\":\"hdfc\",\"name\":\"HDFC shared\",\"limit_paise\":20000000}]",
+     "t": "NEW",
+     "hl": "pool"
+    },
+    {
+     "id": "m6",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/holdings",
+     "what": "Each card with its pool or own limit, today's outstanding and fee status.",
+     "code": "[{\"card_id\":\"hdfc_millennia\",\"pool_id\":\"hdfc\",\"balance_paise\":7000000},\n {\"card_id\":\"hsbc_live_plus\",\"credit_limit_paise\":15000000,\"balance_paise\":2000000,\"fee_status\":\"fyf\",\"fyf_until\":\"2026-11-15\"}]",
+     "t": "MOD",
+     "hl": "bal"
+    },
+    {
+     "id": "m7",
+     "f": "api",
+     "to": "led",
+     "l": "store holdings, balance as of now",
+     "what": "The outstanding is stamped with the time it was entered; later logged payments and bills paid count from then.",
+     "t": "MOD"
+    },
+    {
+     "id": "m8",
+     "f": "api",
+     "to": "app",
+     "l": "your cards, pools, totals",
+     "what": "The app shows each card's one-line summary from this answer.",
+     "t": "MOD",
+     "res": true,
+     "hl": "held"
+    }
+   ]
+  },
+  "s1-b": {
+   "scene": "s1",
+   "order": 2,
+   "name": "A card that is first year free",
+   "wires": [
+    {
+     "cap": "Fee status",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "HSBC Live+"
+      },
+      {
+       "t": "chips",
+       "items": [
+        "Standard",
+        "Lifetime free",
+        "First year free"
+       ],
+       "on": 2,
+       "hl": "fee"
+      },
+      {
+       "t": "input",
+       "text": "Free until  15 Nov 2026",
+       "filled": true,
+       "hl": "until"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "Finder and keep-or-close use ₹0 fee for this card until 15 Nov 2026, then ₹999 + GST."
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "chooses First year free",
+     "what": "Your own card can be fee-free even when the product charges a fee (a bank waived it, or it came through a campaign).",
+     "hl": "fee"
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/holdings fee_status=fyf",
+     "what": "The free year's end date is stored with the card.",
+     "code": "{\"card_id\":\"hsbc_live_plus\",\"fee_status\":\"fyf\",\"fyf_until\":\"2026-11-15\"}",
+     "t": "MOD",
+     "hl": "until"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "eng",
+     "l": "fees override: hsbc_live_plus = ₹0",
+     "what": "Finder, keep-or-close and Launch Radar pass this override into the year simulation, so the card is scored without its fee.",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "eng",
+     "to": "api",
+     "l": "net value without the fee",
+     "what": "After 15 Nov 2026 the override stops applying and the notice board warns 60 days ahead.",
+     "t": "NEW",
+     "res": true
+    }
+   ]
+  },
+  "s1-c": {
+   "scene": "s1",
+   "order": 3,
+   "name": "Card points at a pool that doesn't exist",
+   "wires": [
+    {
+     "cap": "Error",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Cards you hold"
+      },
+      {
+       "t": "msg",
+       "kind": "crit",
+       "text": "unknown credit pools: ['hdfc']; create them with PUT /me/pools",
+       "hl": "err"
+      },
+      {
+       "t": "btn",
+       "text": "Retry",
+       "kind": "ghost"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/holdings pool_id=hdfc",
+     "what": "Happens if the app saves cards before their pool, or the pool was deleted.",
+     "code": "{\"card_id\":\"hdfc_millennia\",\"pool_id\":\"hdfc\"}",
+     "t": "MOD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "app",
+     "l": "422 unknown credit pools",
+     "what": "Nothing is saved. The app saves pools before holdings, so this only shows on an out-of-order save.",
+     "code": "{\"detail\":\"unknown credit pools: ['hdfc']; create them with PUT /me/pools\"}",
+     "t": "NEW",
+     "res": true,
+     "hl": "err"
+    }
+   ]
+  },
+  "s2-a": {
+   "scene": "s2",
+   "order": 1,
+   "name": "Dining total with Swiggy and Zomato inside",
+   "wires": [
+    {
+     "cap": "What you spend",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "What you spend each month"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Dining and food delivery",
+         "meta": "₹1,000 other dining",
+         "amt": "₹9,000",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        },
+        {
+         "no": "  Swiggy",
+         "meta": "Merchant",
+         "amt": "₹6,000",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        },
+        {
+         "no": "  Zomato",
+         "meta": "Merchant",
+         "amt": "₹2,000",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        },
+        {
+         "no": "Online shopping",
+         "meta": "₹9,000 other online",
+         "amt": "₹15,000",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        },
+        {
+         "no": "Groceries",
+         "meta": "",
+         "amt": "₹10,000",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        },
+        {
+         "no": "Fuel",
+         "meta": "",
+         "amt": "₹3,000",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        }
+       ],
+       "hl": "groups",
+       "label": "Grouped spends"
+      },
+      {
+       "t": "kv",
+       "rows": [
+        {
+         "k": "Total",
+         "v": "₹59,000 a month · ₹7,08,000 a year",
+         "total": true
+        }
+       ],
+       "hl": "total"
+      },
+      {
+       "t": "btn",
+       "text": "Next",
+       "kind": "primary"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "GET /meta",
+     "what": "Categories with their merchants grouped under them, plus the membership list.",
+     "code": "{\"groups\":[{\"category\":\"dining\",\"label\":\"Dining and food delivery\",\"merchants\":[{\"key\":\"swiggy\"},…]}]}",
+     "t": "MOD",
+     "hl": "groups"
+    },
+    {
+     "id": "m2",
+     "f": "u",
+     "to": "app",
+     "l": "enters Dining ₹9,000, Swiggy ₹6,000",
+     "what": "The remainder line updates as you type: ₹9,000 − ₹6,000 − ₹2,000 = ₹1,000 other dining.",
+     "hl": "groups"
+    },
+    {
+     "id": "m3",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/spends",
+     "what": "One map of category and merchant keys, monthly paise.",
+     "code": "{\"dining\":900000,\"swiggy\":600000,\"zomato\":200000,…}",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "eng",
+     "l": "spend lines: swiggy, zomato, dining rest",
+     "what": "Merchants become their own lines (Millennia pays 5% on Swiggy, 1% on other dining); the category keeps only the remainder.",
+     "code": "[{\"key\":\"swiggy\",\"monthly\":600000},{\"key\":\"zomato\",\"monthly\":200000},{\"key\":\"dining\",\"monthly\":100000}]",
+     "t": "MOD"
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "app",
+     "l": "category_totals",
+     "what": "Totals per category as the user means them, so the screen and the backend agree.",
+     "code": "{\"dining\":900000,\"online\":1500000,…}",
+     "t": "NEW",
+     "res": true,
+     "hl": "total"
+    }
+   ]
+  },
+  "s2-b": {
+   "scene": "s2",
+   "order": 2,
+   "name": "Merchants add up to more than the category",
+   "wires": [
+    {
+     "cap": "What you spend",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "What you spend each month"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Dining and food delivery",
+         "meta": "merchants add up to ₹3,000",
+         "amt": "₹2,000",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        },
+        {
+         "no": "  Swiggy",
+         "meta": "Merchant",
+         "amt": "₹3,000",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        }
+       ],
+       "hl": "over"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "Dining counts as ₹3,000, the sum of its merchants."
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/spends",
+     "what": "Dining ₹2,000 but Swiggy alone ₹3,000.",
+     "code": "{\"dining\":200000,\"swiggy\":300000}",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "dining = max(₹2,000, ₹3,000)",
+     "what": "The category becomes the merchants' sum and has no remainder line, so nothing is double-counted or lost.",
+     "t": "NEW",
+     "hl": "over"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "app",
+     "l": "category_totals dining ₹3,000",
+     "what": "The app shows 'merchants add up to ₹3,000' rather than an error.",
+     "t": "NEW",
+     "res": true
+    }
+   ]
+  },
+  "s2-c": {
+   "scene": "s2",
+   "order": 3,
+   "name": "A key the backend doesn't know",
+   "wires": [
+    {
+     "cap": "Error",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "What you spend each month"
+      },
+      {
+       "t": "msg",
+       "kind": "crit",
+       "text": "unknown spend key netflixx",
+       "hl": "err"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/spends {netflixx}",
+     "what": "Only category keys and registry merchant keys are accepted.",
+     "code": "{\"netflixx\":50000}",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "app",
+     "l": "422 unknown spend key",
+     "what": "Nothing is saved; the app only offers keys from /meta, so this needs a stale app.",
+     "code": "{\"detail\":\"unknown spend key netflixx\"}",
+     "t": "OLD",
+     "res": true,
+     "hl": "err"
+    }
+   ]
+  },
+  "s3-a": {
+   "scene": "s3",
+   "order": 1,
+   "name": "Swiggy ₹1,200: the normal case",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  Swiggy",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹1,200",
+       "filled": true
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Pay with",
+         "value": "HSBC Live+ · ₹120",
+         "sub": "₹60 more than Millennia",
+         "tone": "lav"
+        }
+       ],
+       "hl": "best",
+       "label": "Best card"
+      },
+      {
+       "t": "text",
+       "text": "Pay with HSBC Live+: earns ₹120 on ₹1,200 at Swiggy. That is ₹60 more than Millennia."
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "HSBC Live+",
+         "meta": "10% on dining, grocery, online, utilities",
+         "amt": "₹120",
+         "due": "",
+         "st": "ok",
+         "stl": "best",
+         "cb": "none"
+        },
+        {
+         "no": "HDFC Millennia",
+         "meta": "5% on Amazon, Swiggy, Zomato and 7 more",
+         "amt": "₹60",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        }
+       ],
+       "hl": "ranked",
+       "label": "All your cards"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "eng",
+    "led",
+    "llm"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "Swiggy, ₹1,200, Find best card",
+     "what": "Typed, picked from suggestions, or read from a UPI QR code."
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay",
+     "what": "Merchant text and amount; channel is optional (Auto uses the merchant's usual channel).",
+     "code": "{\"merchant\":\"Swiggy\",\"amount_paise\":120000}",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "api",
+     "l": "resolve merchant → swiggy, dining, online",
+     "what": "Exact alias, then fuzzy match, then the QR's merchant code; confidence high/medium/low.",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "led",
+     "l": "cap used this period, available credit",
+     "what": "Per card: how much of each cap the logged payments used in the current month/cycle, and available credit after the pool's other cards.",
+     "t": "MOD"
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "eng",
+     "l": "reward(card, purchase, cap_used) × 2",
+     "what": "Most specific rule wins (merchant > category > catch-all), then exclusions, minimum amount, caps, stacked bonuses.",
+     "code": "Live+: rule accelerated 10% → 12000 paise\nMillennia: rule online_10 5% → 6000 paise",
+     "t": "OLD"
+    },
+    {
+     "id": "m6",
+     "f": "api",
+     "to": "llm",
+     "l": "choose_card from engine figures",
+     "what": "Owner decision D10: the model chooses, the engine calculates. It gets each usable card's now, later, month and the differences, already formatted, plus bank-offer savings. No user id; the merchant text is wrapped as data.",
+     "code": "{\"card_id\": enum[\"hsbc_live_plus\",\"hdfc_millennia\"], \"reason\": string}",
+     "t": "NEW"
+    },
+    {
+     "id": "m7",
+     "f": "llm",
+     "to": "api",
+     "l": "card_id + reason",
+     "what": "One tool call. The card must be a usable candidate; any rupee amount in the reason must be one of the supplied figures, otherwise the engine's template explains the choice.",
+     "code": "{\"card_id\":\"hsbc_live_plus\",\"reason\":\"Live+ earns ₹120 here, ₹60 more than Millennia.\"}",
+     "t": "NEW",
+     "res": true
+    },
+    {
+     "id": "m8",
+     "f": "api",
+     "to": "app",
+     "l": "best, ranked, text, decided_by",
+     "what": "decided_by says whether the model or the rules chose. The rupee figures are the engine's either way.",
+     "code": "{\"best\":{\"card_id\":\"hsbc_live_plus\",\"reward_paise\":12000},\"decided_by\":\"model\"}",
+     "t": "MOD",
+     "res": true,
+     "hl": "best"
+    }
+   ]
+  },
+  "s3-b": {
+   "scene": "s3",
+   "order": 2,
+   "name": "Same 5%: spend the narrower cap",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  Swiggy",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹1,200",
+       "filled": true
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Pay with",
+         "value": "HDFC Millennia · ₹60",
+         "sub": "same ₹60 as SBI Cashback",
+         "tone": "lav"
+        }
+       ],
+       "hl": "best",
+       "label": "Best card"
+      },
+      {
+       "t": "text",
+       "text": "Cashback SBI Card earns the same now; its 5% on online payments covers more of your spending, so keep it free for later."
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "HDFC Millennia",
+         "meta": "5% on Amazon, Swiggy, Zomato and 7 more",
+         "amt": "₹60",
+         "due": "",
+         "st": "ok",
+         "stl": "best",
+         "cb": "none"
+        },
+        {
+         "no": "Cashback SBI",
+         "meta": "5% on online payments",
+         "amt": "₹60",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        }
+       ],
+       "hl": "ranked",
+       "label": "All your cards"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "eng",
+    "led"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay Swiggy ₹1,200 online",
+     "what": "This user holds HDFC Millennia and SBI Cashback. Both pay 5% here.",
+     "code": "{\"merchant\":\"Swiggy\",\"amount_paise\":120000,\"channel\":\"online\"}",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "now: both ₹60",
+     "what": "Millennia's 5% covers 10 named merchants; SBI Cashback's 5% covers every online payment, capped at ₹2,000 a statement cycle.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "eng",
+     "l": "rest of month after each choice",
+     "what": "Monthly spends prorated to the days left, routed under the caps and credit left after paying with Millennia, then with SBI Cashback.",
+     "code": "Millennia: later ₹2,706.86\nSBI Cashback: later ₹2,646.86  (heavy online month)",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "eng",
+     "to": "api",
+     "l": "SBI here costs ₹60 later",
+     "what": "When your other online spends fill SBI's cap, ₹60 used on Swiggy is ₹60 they can't earn. If the cap never fills, both futures are equal…",
+     "t": "NEW"
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "api",
+     "l": "tie → narrower rule first",
+     "what": "…and the tie goes to the card whose rule is narrower (named merchants beat 'all online'), keeping the broad cap free. Same answer whatever order the cards were added in.",
+     "t": "NEW"
+    },
+    {
+     "id": "m6",
+     "f": "api",
+     "to": "app",
+     "l": "best Millennia, says why",
+     "what": "Checked by test_swiggy_uses_millennia_and_keeps_sbi_broad_cap_whatever_the_card_order.",
+     "code": "{\"best\":{\"card_id\":\"hdfc_millennia\",\"reward_paise\":6000,\"later_paise\":270686,\"month_paise\":276686}}",
+     "t": "MOD",
+     "res": true,
+     "hl": "best"
+    }
+   ]
+  },
+  "s3-c": {
+   "scene": "s3",
+   "order": 3,
+   "name": "Cap already used up this month",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  Amazon",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹10,000",
+       "filled": true
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Pay with",
+         "value": "HDFC Regalia Gold",
+         "sub": "after two logged ₹10,000 payments",
+         "tone": "lav"
+        }
+       ],
+       "hl": "best",
+       "label": "Best card"
+      },
+      {
+       "t": "text",
+       "text": "Millennia: 5% cap reached this month."
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "HDFC Regalia Gold",
+         "meta": "5 points per ₹200",
+         "amt": "₹125",
+         "due": "",
+         "st": "ok",
+         "stl": "best",
+         "cb": "none"
+        },
+        {
+         "no": "HDFC Millennia",
+         "meta": "cap reached",
+         "amt": "₹0",
+         "due": "",
+         "st": "over",
+         "stl": "capped",
+         "cb": "none"
+        }
+       ],
+       "hl": "ranked",
+       "label": "All your cards"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "led",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay Amazon ₹10,000",
+     "what": "Two ₹10,000 Amazon payments on Millennia were logged earlier this month.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "led",
+     "l": "cap_used: online_10 = ₹1,000",
+     "what": "₹500 + ₹500 cashback already used the ₹1,000 monthly cap.",
+     "code": "{\"online_10\": 100000}",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "eng",
+     "l": "Millennia earns ₹0 (cap exhausted)",
+     "what": "The engine never earns past a cap; the reason code says so.",
+     "code": "\"reason_codes\":[\"capped:online_10\",\"cap_exhausted\"]",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "app",
+     "l": "best Regalia Gold",
+     "what": "The pick moves to the next card; Millennia shows 'cap reached'.",
+     "t": "OLD",
+     "res": true,
+     "hl": "ranked"
+    }
+   ]
+  },
+  "s3-d": {
+   "scene": "s3",
+   "order": 4,
+   "name": "Fuel: no card earns",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  BPCL",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹2,000",
+       "filled": true
+      },
+      {
+       "t": "big",
+       "kind": "fail",
+       "title": "No card earns here",
+       "lines": [
+        "No card earns on this fuel payment (fuel is excluded).",
+        "Pay with any card."
+       ],
+       "pill": "₹0",
+       "hl": "none"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay BPCL ₹2,000",
+     "what": "BPCL resolves to the fuel category, in-store.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "excluded:fuel on both cards",
+     "what": "Both banks' terms exclude fuel; the quotes are in each card's exclusions.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "app",
+     "l": "reward ₹0, 'fuel is excluded'",
+     "what": "The app says so plainly instead of pretending one card wins.",
+     "t": "OLD",
+     "res": true,
+     "hl": "none"
+    }
+   ]
+  },
+  "s3-e": {
+   "scene": "s3",
+   "order": 5,
+   "name": "UPI without a RuPay card",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  chai stall",
+       "filled": true
+      },
+      {
+       "t": "chips",
+       "items": [
+        "Auto",
+        "Online",
+        "In-store",
+        "UPI"
+       ],
+       "on": 3
+      },
+      {
+       "t": "msg",
+       "kind": "warn",
+       "text": "None of your cards can be used on UPI (that needs a RuPay credit card). Pay another way.",
+       "hl": "upi"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay channel=upi",
+     "what": "Only RuPay credit cards work on UPI in India.",
+     "code": "{\"merchant\":\"chai stall\",\"amount_paise\":5000,\"channel\":\"upi\"}",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "no_upi on Millennia",
+     "what": "The card's network facts don't say RuPay, so it isn't usable here.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "app",
+     "l": "best null, UPI text",
+     "what": "Says why, instead of a generic 'add a card'.",
+     "t": "MOD",
+     "res": true,
+     "hl": "upi"
+    }
+   ]
+  },
+  "s3-f": {
+   "scene": "s3",
+   "order": 6,
+   "name": "Kiwi on UPI, with and without Kiwi Neon",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  chai stall (UPI)",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹1,000",
+       "filled": true
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Pay with",
+         "value": "Kiwi · ₹15",
+         "sub": "1.5% on UPI scan & pay",
+         "tone": "lav"
+        }
+       ],
+       "hl": "best",
+       "label": "Best card"
+      },
+      {
+       "t": "text",
+       "text": "With Kiwi Neon: ₹20."
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Kiwi (YES Bank)",
+         "meta": "1.5%, or 2% for Kiwi Neon members",
+         "amt": "₹15",
+         "due": "",
+         "st": "ok",
+         "stl": "best",
+         "cb": "none"
+        }
+       ],
+       "hl": "ranked",
+       "label": "All your cards"
+      }
+     ]
+    },
+    {
+     "cap": "Preferences",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Your preferences"
+      },
+      {
+       "t": "radio",
+       "items": [
+        {
+         "label": "Kiwi Neon",
+         "side": "Kiwi Neon members earn 2% instead of 1.5% on UPI scan & pay."
+        }
+       ],
+       "on": 0,
+       "hl": "neon",
+       "label": "Membership"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "GET /cards → kiwi memberships",
+     "what": "Each card lists the memberships its rules depend on, so the app asks only about those.",
+     "code": "\"memberships\":[{\"key\":\"kiwi_neon\",\"name\":\"Kiwi Neon\",\"why\":\"…\"}]",
+     "t": "NEW",
+     "hl": "neon"
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay UPI ₹1,000",
+     "what": "Without Neon the 1.5% rule applies.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "app",
+     "l": "₹15",
+     "what": "1.5% of ₹1,000 on UPI scan & pay, from Kiwi's own page (Kiwi runs the programme, so its page is official for earn rates).",
+     "t": "OLD",
+     "res": true,
+     "hl": "best"
+    },
+    {
+     "id": "m4",
+     "f": "u",
+     "to": "app",
+     "l": "turns on Kiwi Neon",
+     "what": "Stored as a profile flag; any rule that requires it now matches.",
+     "hl": "neon"
+    },
+    {
+     "id": "m5",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/profile flags=[kiwi_neon]",
+     "what": "The same profile call as before, with the membership key.",
+     "code": "{\"flags\":[\"kiwi_neon\"]}",
+     "t": "OLD"
+    },
+    {
+     "id": "m6",
+     "f": "api",
+     "to": "app",
+     "l": "₹20 on the same payment",
+     "what": "The Neon rule (2%) has higher priority and now matches. Checked by test_cards_list_their_memberships_and_kiwi_neon_changes_the_pick.",
+     "t": "MOD",
+     "res": true,
+     "hl": "best"
+    }
+   ]
+  },
+  "s3-g": {
+   "scene": "s3",
+   "order": 7,
+   "name": "Not enough credit on any card",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  MakeMyTrip",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹1,40,000",
+       "filled": true
+      },
+      {
+       "t": "msg",
+       "kind": "crit",
+       "text": "None of your cards has ₹1,40,000 of credit available. Pay part now, or pay a bill first.",
+       "hl": "credit"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "HSBC Live+",
+         "meta": "Only ₹1,30,000 of credit available",
+         "amt": "₹2,100",
+         "due": "",
+         "st": "fail",
+         "stl": "no credit",
+         "cb": "none"
+        },
+        {
+         "no": "HDFC Millennia",
+         "meta": "Only ₹1,30,000 of credit available",
+         "amt": "₹1,000",
+         "due": "",
+         "st": "fail",
+         "stl": "no credit",
+         "cb": "none"
+        }
+       ],
+       "hl": "ranked"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "led",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay MakeMyTrip ₹1,40,000",
+     "what": "A large travel booking.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "led",
+     "l": "available: both ₹1,30,000",
+     "what": "Millennia: ₹2,00,000 pool − ₹70,000. Live+: ₹1,50,000 − ₹20,000.",
+     "code": "{\"hdfc_millennia\":13000000,\"hsbc_live_plus\":13000000}",
+     "t": "NEW"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "api",
+     "l": "insufficient_credit on both",
+     "what": "A card without enough available credit is skipped, with the amount it has.",
+     "code": "\"reason_codes\":[\"insufficient_credit:13000000\"]",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "app",
+     "l": "best null, credit text",
+     "what": "Names credit as the reason (it used to blame UPI).",
+     "t": "MOD",
+     "res": true,
+     "hl": "credit"
+    }
+   ]
+  },
+  "s3-h": {
+   "scene": "s3",
+   "order": 8,
+   "name": "Scanned QR from an unknown shop",
+   "wires": [
+    {
+     "cap": "Scan QR",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  SRI KRISHNA SWEETS",
+       "filled": true
+      },
+      {
+       "t": "chips",
+       "items": [
+        "Dining",
+        "medium confidence"
+       ],
+       "on": -1,
+       "hl": "conf"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "Category comes from the shop's merchant code (5812, restaurants)."
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "scans the shop's UPI QR",
+     "what": "The QR is a upi://pay link carrying payee name, merchant code and sometimes the amount.",
+     "code": "upi://pay?pa=…&pn=SRI%20KRISHNA%20SWEETS&mc=5812"
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay with mcc 5812",
+     "what": "The payee name isn't in the merchant registry, so the merchant code decides the category.",
+     "code": "{\"merchant\":\"SRI KRISHNA SWEETS\",\"mcc\":\"5812\",\"amount_paise\":45000}",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "app",
+     "l": "dining, confidence medium",
+     "what": "With no code and no match the category is 'other', confidence low, and the text says the category is a guess.",
+     "t": "OLD",
+     "res": true,
+     "hl": "conf"
+    }
+   ]
+  },
+  "s3-j": {
+   "scene": "s3",
+   "order": 10,
+   "name": "Model slow or unavailable",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  Swiggy",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹1,200",
+       "filled": true
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Pay with",
+         "value": "HSBC Live+ · ₹120",
+         "sub": "decided by the rules",
+         "tone": "lav"
+        }
+       ],
+       "hl": "best",
+       "label": "Best card"
+      },
+      {
+       "t": "text",
+       "text": "Pay with HSBC Live+: earns ₹120 on ₹1,200 at Swiggy. That is ₹60 more than Millennia."
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "HSBC Live+",
+         "meta": "10% on dining, grocery, online, utilities",
+         "amt": "₹120",
+         "due": "",
+         "st": "ok",
+         "stl": "best",
+         "cb": "none"
+        },
+        {
+         "no": "HDFC Millennia",
+         "meta": "5% on Amazon, Swiggy, Zomato and 7 more",
+         "amt": "₹60",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        }
+       ],
+       "hl": "ranked",
+       "label": "All your cards"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "eng",
+    "llm"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay",
+     "what": "Same request as the normal case.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "figures for each card",
+     "what": "The engine's work doesn't depend on the model.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "llm",
+     "l": "choose_card",
+     "what": "Two-second limit, no retries.",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "llm",
+     "to": "api",
+     "l": "timeout, error or invalid answer",
+     "what": "Also when there's no key (replay mode), the answer names a card you can't use, or there is no tool call.",
+     "t": "NEW",
+     "res": true
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "app",
+     "l": "engine's month-best pick, decided_by rules",
+     "what": "The screen never waits more than the limit. Checked by test_invalid_or_failed_model_answers_fall_back_to_rules.",
+     "code": "{\"decided_by\":\"rules\"}",
+     "t": "NEW",
+     "res": true,
+     "hl": "best"
+    }
+   ]
+  },
+  "s3-i": {
+   "scene": "s3",
+   "order": 9,
+   "name": "Earns less now, more this month",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  BigBasket",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹1,000",
+       "filled": true
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Pay with",
+         "value": "Cashback SBI · ₹50",
+         "sub": "₹20.68 more this month",
+         "tone": "lav"
+        }
+       ],
+       "hl": "best",
+       "label": "Best card"
+      },
+      {
+       "t": "text",
+       "text": "₹50 less than HSBC Live+ now, but Live+ would use up its capped rewards and cost about ₹70.68 later this month, so this pays about ₹20.68 more over the month."
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Cashback SBI",
+         "meta": "5% on online payments",
+         "amt": "₹50",
+         "due": "",
+         "st": "ok",
+         "stl": "best",
+         "cb": "none"
+        },
+        {
+         "no": "HSBC Live+",
+         "meta": "10% on dining, grocery, online, utilities",
+         "amt": "₹100",
+         "due": "",
+         "st": "up",
+         "stl": "uses cap",
+         "cb": "none"
+        }
+       ],
+       "hl": "ranked",
+       "label": "All your cards"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay BigBasket ₹1,000",
+     "what": "This user holds HSBC Live+ and SBI Cashback and spends ₹20,000 a month on offline dining.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "now: Live+ ₹100, SBI ₹50",
+     "what": "Live+ pays 10% on groceries, up to ₹1,200 a month across dining, grocery, online and utilities.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "eng",
+     "to": "eng",
+     "l": "dining alone fills Live+'s cap",
+     "what": "₹20,000 of dining at 10% is ₹2,000 a month, well over the ₹1,200 cap; offline dining earns only 1% on SBI.",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "eng",
+     "to": "api",
+     "l": "Live+ now costs ₹70.68 later",
+     "what": "Every rupee of Live+ cap spent on BigBasket is a rupee dining can't earn later this month.",
+     "t": "NEW"
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "app",
+     "l": "best SBI Cashback: month +₹20.68",
+     "what": "Owner decision: recommend the best card for the month, and say plainly that it earns less now. Checked by test_month_best_card_can_earn_less_on_this_payment.",
+     "code": "{\"best\":{\"card_id\":\"sbi_cashback\",\"reward_paise\":5000,\"month_paise\":138929}, \"ranked\":[…,{\"card_id\":\"hsbc_live_plus\",\"reward_paise\":10000,\"month_paise\":136861}]}",
+     "t": "NEW",
+     "res": true,
+     "hl": "best"
+    }
+   ]
+  },
+  "s4-a": {
+   "scene": "s4",
+   "order": 1,
+   "name": "Myntra ₹8,000 with an HDFC offer",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  myntra.com",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹8,000",
+       "filled": true
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Pay with",
+         "value": "HSBC Live+ · ₹800",
+         "sub": "₹400 more than Millennia",
+         "tone": "lav"
+        }
+       ],
+       "hl": "best",
+       "label": "Best card"
+      },
+      {
+       "t": "text",
+       "text": "But Millennia has a bank offer here worth about ₹800, ₹1,200 in all; check the offer terms."
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "HSBC Live+",
+         "meta": "10% on Myntra",
+         "amt": "₹800",
+         "due": "",
+         "st": "ok",
+         "stl": "best",
+         "cb": "none"
+        },
+        {
+         "no": "HDFC Millennia",
+         "meta": "5% on Myntra",
+         "amt": "₹400",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        }
+       ],
+       "hl": "ranked",
+       "label": "All your cards"
+      }
+     ]
+    },
+    {
+     "cap": "Bank offers here",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Bank offers here"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "10% up to ₹1,000, min ₹5,000",
+         "meta": "With your Millennia · till 25 Oct 2026",
+         "amt": "≈₹800",
+         "due": "",
+         "st": "ok",
+         "stl": "bank page",
+         "cb": "none"
+        },
+        {
+         "no": "10% up to ₹1,200 on EasyEMI",
+         "meta": "With your Millennia · till 25 Oct 2026",
+         "amt": "≈₹800",
+         "due": "",
+         "st": "ok",
+         "stl": "bank page",
+         "cb": "none"
+        }
+       ],
+       "hl": "offers",
+       "label": "Offers"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "eng",
+    "off"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay myntra.com ₹8,000",
+     "what": "A shared link resolves to the merchant from its host name.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "Live+ ₹800, Millennia ₹400",
+     "what": "Rewards first, exactly as without offers.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "off",
+     "l": "offers at myntra for your banks' cards",
+     "what": "Matched by merchant, issuer, card list on the offer, channel and today's date (India time).",
+     "t": "OLD",
+     "hl": "offers"
+    },
+    {
+     "id": "m4",
+     "f": "off",
+     "to": "api",
+     "l": "2 HDFC offers, about ₹800 each",
+     "what": "10% of ₹8,000 = ₹800, under the ₹1,000 cap and above the ₹5,000 minimum.",
+     "code": "[{\"id\":\"hdfc_myntra_10_1000\",\"tier\":\"fact\",\"est_saving_paise\":80000,\"valid_to\":\"2026-10-25\"}]",
+     "t": "OLD",
+     "res": true
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "app",
+     "l": "pick unchanged + offer hint",
+     "what": "Offer terms are free text, so offers are hints; the text adds the combined figure.",
+     "t": "OLD",
+     "res": true,
+     "hl": "best"
+    }
+   ]
+  },
+  "s4-b": {
+   "scene": "s4",
+   "order": 2,
+   "name": "Offer exists but not for you",
+   "wires": [
+    {
+     "cap": "Bank offers here",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Bank offers here"
+      },
+      {
+       "t": "muted",
+       "text": "No offers for the cards you hold at Myntra today."
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "api",
+    "off"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "api",
+     "to": "off",
+     "l": "offers at myntra",
+     "what": "Myntra has a 6% offer for Tata Neu Infinity and a 20% offer for the HSBC Taj card.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "off",
+     "to": "off",
+     "l": "filter by your cards and date",
+     "what": "Neither card is held; and after 25 Oct 2026 the HDFC offers drop out too (tested with the date set to 26 Oct).",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "off",
+     "to": "api",
+     "l": "nothing to show",
+     "what": "The screen says no offers for your cards here today, rather than showing offers you can't use.",
+     "t": "OLD",
+     "res": true
+    }
+   ]
+  },
+  "s4-c": {
+   "scene": "s4",
+   "order": 3,
+   "name": "An 'up to' offer counted at face value",
+   "wires": [
+    {
+     "cap": "Bank offers here",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Bank offers here"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Up to 25% instant discount on EasyEMI",
+         "meta": "With your Millennia · max ₹11,300 · min ₹5,000",
+         "amt": "≈₹11,300",
+         "due": "",
+         "st": "up",
+         "stl": "up to",
+         "cb": "none"
+        }
+       ],
+       "hl": "upto"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "api",
+    "off"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "api",
+     "to": "off",
+     "l": "MakeMyTrip ₹1,40,000",
+     "what": "HDFC's MakeMyTrip EasyEMI offer says 'up to 25%', max ₹11,300.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "off",
+     "to": "api",
+     "l": "estimate = 25% capped at ₹11,300",
+     "what": "The estimate assumes the full 25%. Real discounts on 'up to' offers are often lower, so this overstates (see suggestion 4).",
+     "t": "OLD",
+     "res": true,
+     "hl": "upto"
+    }
+   ]
+  },
+  "s5-a": {
+   "scene": "s5",
+   "order": 1,
+   "name": "I paid with this",
+   "wires": [
+    {
+     "cap": "Logged",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Checkout Advisor"
+      },
+      {
+       "t": "btn",
+       "text": "Logged",
+       "kind": "off"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "Logged ₹1,200 on HSBC Live+ Credit Card: ₹120 reward. Caps updated.",
+       "hl": "log"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "led",
+    "own"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "taps I paid with this",
+     "what": "Manual for now. Automatic capture comes from statements (M1) and bank notifications and Gmail alerts (M2)."
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay/confirm",
+     "what": "With an idempotency key, so a double tap or retry logs once.",
+     "code": "{\"card_id\":\"hsbc_live_plus\",\"merchant\":\"Swiggy\",\"amount_paise\":120000,\"idempotency_key\":\"…\"}",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "led",
+     "l": "txn + cap_use",
+     "what": "Stores amount, category, channel, reward and how much of each cap it used.",
+     "code": "{\"cap_use\":{\"accelerated\":12000}}",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "led",
+     "to": "own",
+     "l": "outbox txn.recorded",
+     "what": "For cap counters and future cap-watch nudges.",
+     "t": "OLD"
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "app",
+     "l": "reward ₹120",
+     "what": "The button turns into Logged; a second tap with the same key returns the same payment instead of logging twice.",
+     "t": "OLD",
+     "res": true,
+     "hl": "log"
+    }
+   ]
+  },
+  "s5-b": {
+   "scene": "s5",
+   "order": 2,
+   "name": "Shared limit draws down both cards",
+   "wires": [
+    {
+     "cap": "Profile",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Your cards"
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Millennia",
+         "value": "₹3,000 available",
+         "sub": "HDFC shared · 94% used",
+         "tone": "mint",
+         "vt": "bad"
+        },
+        {
+         "label": "Swiggy BLCK",
+         "value": "₹3,000 available",
+         "sub": "HDFC shared",
+         "tone": "mint",
+         "vt": "bad"
+        }
+       ],
+       "hl": "avail"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "Pool ₹50,000 · owed ₹30,000 + ₹15,000 + ₹2,000 logged"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "led"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay/confirm Millennia ₹2,000",
+     "what": "Example from the tests: a ₹50,000 HDFC pool with ₹30,000 owed on Millennia and ₹15,000 on Swiggy BLCK.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "GET /me/credit",
+     "what": "Available credit per card, pool-aware.",
+     "t": "NEW"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "led",
+     "l": "outstanding = entered + logged − paid",
+     "what": "Millennia ₹30,000 + ₹2,000; Swiggy BLCK ₹15,000. Pool used ₹47,000.",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "led",
+     "to": "api",
+     "l": "both cards: ₹3,000 available",
+     "what": "Same pool, same available figure on every card in it.",
+     "code": "[{\"card_id\":\"hdfc_millennia\",\"available_paise\":300000,\"pool_name\":\"HDFC shared\"}, …]",
+     "t": "NEW",
+     "res": true,
+     "hl": "avail"
+    }
+   ]
+  },
+  "s5-c": {
+   "scene": "s5",
+   "order": 3,
+   "name": "Bill paid",
+   "wires": [
+    {
+     "cap": "Bill paid",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Your cards"
+      },
+      {
+       "t": "modal",
+       "blocks": [
+        {
+         "t": "text",
+         "text": "**Bill paid** · HDFC Millennia owes ₹32,000"
+        },
+        {
+         "t": "input",
+         "text": "Amount paid (empty = full)",
+         "filled": false
+        },
+        {
+         "t": "btn",
+         "text": "Record payment",
+         "kind": "primary"
+        }
+       ]
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Swiggy BLCK",
+         "value": "₹35,000 available",
+         "sub": "after Millennia paid in full",
+         "tone": "lime",
+         "vt": "good"
+        }
+       ],
+       "hl": "avail"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "led"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "Bill paid, amount empty",
+     "what": "Empty means the whole outstanding was paid."
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /me/cards/hdfc_millennia/bill-paid",
+     "what": "Records a repayment to the bank.",
+     "code": "{}",
+     "t": "NEW"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "led",
+     "l": "card_payment ₹32,000",
+     "what": "Millennia's outstanding drops to ₹0; the pool frees up for Swiggy BLCK too.",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "app",
+     "l": "credit: Swiggy BLCK ₹35,000 available",
+     "what": "₹50,000 − ₹15,000. Checked by test_shared_limit_available_credit_and_checkout_skip.",
+     "t": "NEW",
+     "res": true,
+     "hl": "avail"
+    }
+   ]
+  },
+  "s6-a": {
+   "scene": "s6",
+   "order": 1,
+   "name": "Best move: add Swiggy BLCK",
+   "wires": [
+    {
+     "cap": "Card Finder",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Card Finder"
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Your cards today",
+         "value": "₹32,800/yr net",
+         "sub": "rewards + milestones − fees",
+         "tone": "lav"
+        },
+        {
+         "label": "Best move",
+         "value": "+₹5,912/yr",
+         "sub": "add Swiggy BLCK",
+         "tone": "lime",
+         "vt": "good"
+        }
+       ],
+       "hl": "summary"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Add Swiggy BLCK",
+         "meta": "joining fee ₹1,000 · fee waiver chip",
+         "amt": "+₹5,912",
+         "due": "",
+         "st": "ok",
+         "stl": "bank page",
+         "cb": "none"
+        },
+        {
+         "no": "Add Swiggy ORNGE",
+         "meta": "joining fee ₹500",
+         "amt": "+₹5,712",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        },
+        {
+         "no": "Add Cashback SBI",
+         "meta": "joining fee ₹999",
+         "amt": "+₹4,533",
+         "due": "",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        }
+       ],
+       "hl": "sets",
+       "label": "Top card sets"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "eng",
+    "off"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "opens Finder",
+     "what": "Finder needs your cards and monthly spends; it uses the preferences for which new cards to consider."
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /finder",
+     "what": "Up to 3 new cards.",
+     "code": "{\"max_new\":3}",
+     "t": "MOD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "eng",
+     "l": "simulate held stack, refine",
+     "what": "Month-by-month routing, then hill-climbing whole spend lines between cards to keep fee waivers and milestones. Held cards use their LTF/FYF fee overrides.",
+     "t": "MOD"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "eng",
+     "l": "prune pool, try 1–3 card sets",
+     "what": "Keeps cards in the top 4 for some spend line (max 10), tries every set, refines the best 5 distinct ones.",
+     "t": "MOD",
+     "hl": "sets"
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "off",
+     "l": "fee offers for the new cards",
+     "what": "Swiggy BLCK: joining fee waived on ₹75,000 in 90 days (bank page).",
+     "t": "NEW"
+    },
+    {
+     "id": "m6",
+     "f": "api",
+     "to": "app",
+     "l": "base ₹32,800, sets with ₹ lines",
+     "what": "Each set lists every card's rupee lines per spend, fee or waiver, and the one-time joining fee.",
+     "code": "{\"base_net_paise\":3280000,\"portfolios\":[{\"new_cards\":[\"hdfc_swiggy_blck\"],\"gain_paise\":591200,\"joining_fee_paise\":100000}]}",
+     "t": "MOD",
+     "res": true,
+     "hl": "summary"
+    }
+   ]
+  },
+  "s6-b": {
+   "scene": "s6",
+   "order": 2,
+   "name": "A new card that would break a milestone",
+   "wires": [
+    {
+     "cap": "Card Finder",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Add Axis ACE?"
+      },
+      {
+       "t": "kv",
+       "rows": [
+        {
+         "k": "Greedy routing",
+         "v": "−₹2,800/yr"
+        },
+        {
+         "k": "Fee- and milestone-aware",
+         "v": "+₹360/yr",
+         "total": true
+        }
+       ],
+       "hl": "ace"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "Moving groceries to ACE would drop Millennia below ₹1 lakh a quarter and lose its ₹1,000 voucher four times a year."
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "api",
+     "to": "eng",
+     "l": "greedy: ACE wins grocery chunks",
+     "what": "1.5% on ACE beats Millennia's 1% chunk by chunk…",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "eng",
+     "to": "eng",
+     "l": "Millennia falls below ₹1 lakh/quarter",
+     "what": "…so Millennia misses its quarterly voucher milestone: −₹4,000 a year.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "eng",
+     "to": "eng",
+     "l": "refine from 'route as before'",
+     "what": "A second start routes exactly as the held cards did; hill-climbing then moves only lines that pay off.",
+     "t": "MOD"
+    },
+    {
+     "id": "m4",
+     "f": "eng",
+     "to": "api",
+     "l": "ACE +₹360/yr",
+     "what": "Adding a card can never score below your current stack minus its fee. Checked by test_adding_a_card_never_costs_more_than_its_fee.",
+     "t": "MOD",
+     "res": true,
+     "hl": "ace"
+    }
+   ]
+  },
+  "s6-c": {
+   "scene": "s6",
+   "order": 3,
+   "name": "Greedy shows no gain, refined does",
+   "wires": [
+    {
+     "cap": "Card Finder",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Card Finder"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Add Swiggy BLCK",
+         "meta": "",
+         "amt": "+₹5,912",
+         "due": "",
+         "st": "ok",
+         "stl": "found",
+         "cb": "none"
+        }
+       ],
+       "hl": "sets"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "This list used to be empty for this user."
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "api",
+     "to": "eng",
+     "l": "greedy gain ≤ 0 for every set",
+     "what": "With Millennia + Live+, chunk routing breaks a waiver or milestone in every set.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "eng",
+     "to": "eng",
+     "l": "keep non-positive greedy sets",
+     "what": "They used to be dropped before the fee-aware step ran; now the best 5 are refined anyway.",
+     "t": "MOD"
+    },
+    {
+     "id": "m3",
+     "f": "eng",
+     "to": "api",
+     "l": "Swiggy BLCK +₹5,912",
+     "what": "Matches /finder/assess and the notice board. Checked by test_finder_finds_card_sets_when_greedy_routing_alone_shows_no_gain.",
+     "t": "MOD",
+     "res": true,
+     "hl": "sets"
+    }
+   ]
+  },
+  "s6-d": {
+   "scene": "s6",
+   "order": 4,
+   "name": "LTF card you hold",
+   "wires": [
+    {
+     "cap": "Card Finder",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Your cards today"
+      },
+      {
+       "t": "kv",
+       "rows": [
+        {
+         "k": "Regalia Gold fee (standard)",
+         "v": "₹2,950"
+        },
+        {
+         "k": "Regalia Gold fee (lifetime free)",
+         "v": "₹0",
+         "total": true
+        }
+       ],
+       "hl": "fee"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/holdings fee_status=ltf",
+     "what": "Regalia Gold normally costs ₹2,500 + 18% GST; this user's is lifetime free.",
+     "t": "MOD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "fees override ₹0",
+     "what": "Net value rises by exactly ₹2,950. Checked by test_ltf_held_card_pays_no_fee_in_finder.",
+     "t": "NEW"
+    },
+    {
+     "id": "m3",
+     "f": "eng",
+     "to": "app",
+     "l": "fee ₹0, net +₹2,950",
+     "what": "The card shows ‘Annual fee ₹0’ in Finder and keep-or-close values rise by the same amount.",
+     "t": "NEW",
+     "res": true,
+     "hl": "fee"
+    }
+   ]
+  },
+  "s6-e": {
+   "scene": "s6",
+   "order": 5,
+   "name": "No spends yet",
+   "wires": [
+    {
+     "cap": "Card Finder",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Card Finder"
+      },
+      {
+       "t": "empty",
+       "title": "Add your monthly spends",
+       "text": "Finder needs at least one spend to compare cards."
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "app",
+    "api"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "app",
+     "to": "api",
+     "l": "POST /finder",
+     "what": "Sent before any spends were entered.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "app",
+     "l": "422 add monthly spends first",
+     "what": "The app shows an empty state with a link to the spends screen.",
+     "code": "{\"detail\":\"add monthly spends first (PUT /me/spends)\"}",
+     "t": "OLD",
+     "res": true
+    }
+   ]
+  },
+  "s7-a": {
+   "scene": "s7",
+   "order": 1,
+   "name": "Your own cards first",
+   "wires": [
+    {
+     "cap": "Notices",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Notices"
+      },
+      {
+       "t": "text",
+       "text": "5 to keep an eye on"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Free year on HSBC Live+ ends 15 Nov 2026",
+         "meta": "Renewal fee ₹1,179 a year incl. GST after that",
+         "amt": "₹1,179",
+         "due": "15 Nov",
+         "st": "up",
+         "stl": "watch",
+         "cb": "none"
+        },
+        {
+         "no": "Millennia: 35% of the HDFC shared limit in use",
+         "meta": "₹1,30,000 available; above ~30% bureaus read risk (not checked)",
+         "amt": "",
+         "due": "",
+         "st": "up",
+         "stl": "watch",
+         "cb": "none"
+        },
+        {
+         "no": "Millennia: renewal fee waived on your spend",
+         "meta": "₹4,68,000 a year vs ₹1,00,000 waiver",
+         "amt": "₹1,180",
+         "due": "",
+         "st": "ok",
+         "stl": "info",
+         "cb": "none"
+        }
+       ],
+       "hl": "notices",
+       "label": "Notices"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "eng",
+    "led"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "opens Notices (badge 5)",
+     "what": "The badge counts act + watch notices."
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "GET /me/notices",
+     "what": "Built fresh from cards, spends, payments, offers and facts.",
+     "t": "NEW"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "eng",
+     "l": "refine held stack with fee overrides",
+     "what": "Gives each card's yearly spend, net value and milestone progress on your spends.",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "led",
+     "l": "caps used, credit, utilisation",
+     "what": "From logged payments and entered balances.",
+     "t": "NEW"
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "app",
+     "l": "notices, sorted",
+     "what": "Severity first, then your own cards before offers on cards you don't hold, then rupees.",
+     "code": "[{\"kind\":\"fee\",\"severity\":\"watch\",\"title\":\"Free year on HSBC Live+ Credit Card ends 15 Nov 2026\",\"reason\":\"…\",\"action\":\"…\",\"due\":\"2026-11-15\",\"refs\":[…]}]",
+     "t": "NEW",
+     "res": true,
+     "hl": "notices"
+    }
+   ]
+  },
+  "s7-b": {
+   "scene": "s7",
+   "order": 2,
+   "name": "Fee offers on cards that suit you",
+   "wires": [
+    {
+     "cap": "Notices",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Notices"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Swiggy BLCK: joining fee of ₹1,000 waived on ₹75,000 spend in first 90 days",
+         "meta": "Adds about ₹7,092 in year one on your spends",
+         "amt": "₹7,092",
+         "due": "",
+         "st": "up",
+         "stl": "bank page",
+         "cb": "none"
+        },
+        {
+         "no": "Swiggy ORNGE: lifetime free for select corporates",
+         "meta": "HDFC direct channels only",
+         "amt": "₹6,302",
+         "due": "",
+         "st": "up",
+         "stl": "bank page",
+         "cb": "none"
+        },
+        {
+         "no": "Axis Magnus: lifetime free for Burgundy Salary, ₹2 lakh/month",
+         "meta": "",
+         "amt": "₹1,656",
+         "due": "",
+         "st": "up",
+         "stl": "bank page",
+         "cb": "none"
+        }
+       ],
+       "hl": "notices",
+       "label": "Notices"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "api",
+    "off",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "api",
+     "to": "off",
+     "l": "live fee offers (LTF, FYF, joining waiver)",
+     "what": "4 from bank pages are facts; CardInsider's copy of the Flipkart FYF is speculation.",
+     "t": "NEW"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "refine with the card added",
+     "what": "Year one adds back the annual fee; an LTF keeps it off every year.",
+     "t": "NEW"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "api",
+     "l": "keep if year one > 0",
+     "what": "The offer's own title carries its conditions (select corporates, Burgundy Salary).",
+     "t": "NEW",
+     "hl": "notices"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "api",
+     "l": "eligibility not checked",
+     "what": "cc-smith can't tell whether you work at a listed corporate or hold a Burgundy Salary account (see suggestion 7).",
+     "t": "NEW"
+    }
+   ]
+  },
+  "s7-c": {
+   "scene": "s7",
+   "order": 3,
+   "name": "Cap nearly used this month",
+   "wires": [
+    {
+     "cap": "Notices",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Notices"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "HSBC Live+: 91% of the ₹1,200 cap used this month",
+         "meta": "Check Pay before your next payment in this category",
+         "amt": "",
+         "due": "",
+         "st": "up",
+         "stl": "watch",
+         "cb": "none"
+        }
+       ],
+       "hl": "notices",
+       "label": "Notices"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "api",
+    "led",
+    "kb"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "api",
+     "to": "led",
+     "l": "cap_used this period",
+     "what": "An ₹11,000 BigBasket payment logged on Live+ used ₹1,100 of the ₹1,200 accelerated cap.",
+     "code": "{\"accelerated\":110000}",
+     "t": "NEW"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "kb",
+     "l": "cap: ₹1,200 a calendar month",
+     "what": "With the HSBC quote as the source.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "api",
+     "l": "≥70% → watch, ≥100% → act",
+     "what": "Pay already accounts for what's left; the notice says which card to use next.",
+     "t": "NEW",
+     "hl": "notices"
+    }
+   ]
+  },
+  "s7-d": {
+   "scene": "s7",
+   "order": 4,
+   "name": "A change reported by a user",
+   "wires": [
+    {
+     "cap": "Notices",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Notices"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Axis Atlas: change reported, not confirmed by the bank",
+         "meta": "Travel miles now 4 per ₹100",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        }
+       ],
+       "hl": "notices",
+       "label": "Notices"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "kb"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "Report wrong info on Atlas",
+     "what": "From the card page: which field, and what the user saw."
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /cards/axis_atlas/report",
+     "what": "Stored as speculation with the report as its reference.",
+     "code": "{\"field\":\"earn_rules\",\"message\":\"Travel miles now 4 per ₹100\"}",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "kb",
+     "l": "speculation, expires in 60 days",
+     "what": "Never used in maths; promoted only if an official quote confirms it.",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "app",
+     "l": "202 '…official page is re-fetched'",
+     "what": "The response says the page is re-fetched, but nothing triggers a re-fetch (see suggestion 2).",
+     "t": "OLD",
+     "res": true
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "app",
+     "l": "notice tier speculation",
+     "what": "Holders of the card see it, labelled.",
+     "t": "NEW",
+     "res": true,
+     "hl": "notices"
+    }
+   ]
+  },
+  "s8-a": {
+   "scene": "s8",
+   "order": 1,
+   "name": "Official quote → published fact",
+   "wires": [
+    {
+     "cap": "Card",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "HDFC Bank Millennia"
+      },
+      {
+       "t": "text",
+       "text": "**How you earn** · as of 9 Oct 2026"
+      },
+      {
+       "t": "text",
+       "text": "5% at Amazon, BookMyShow, cult.fit and 7 more, capped at ₹1,000 per month"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "“10 online merchants qualifying for 5% CashBack are Amazon, … The Cardholder can earn up to 1,000 CashPoints …” · Official bank page · hdfc.bank.in",
+       "hl": "quote"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "kb",
+    "fet",
+    "web",
+    "own"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "kb",
+     "to": "kb",
+     "l": "extraction proposes fields with {url, quote}",
+     "what": "From fixtures today; live it is Sonnet 5.5 with a strict schema tool (not run yet: no key).",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "kb",
+     "to": "kb",
+     "l": "URL official for this field?",
+     "what": "hdfc.bank.in is HDFC's canonical domain; issuer pages are official for earn rules.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "kb",
+     "to": "fet",
+     "l": "fetch the PDF",
+     "what": "Recorded evidence in replay; live fetch with browser headers otherwise.",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "fet",
+     "to": "web",
+     "l": "GET millennia-tnc PDF",
+     "what": "Live mode only. A bot-check page or too little text counts as a failed fetch, not as evidence.",
+     "t": "OLD"
+    },
+    {
+     "id": "m5",
+     "f": "fet",
+     "to": "kb",
+     "l": "text (pdfplumber + pdfium)",
+     "what": "Both extractors' text is kept: each drops some table cells the other keeps.",
+     "t": "MOD",
+     "res": true
+    },
+    {
+     "id": "m6",
+     "f": "kb",
+     "to": "kb",
+     "l": "quote found; 5% and ₹1,000 in it",
+     "what": "Exact or same-window table match; numbers must be in the quote; earn ≤25%, fee ≤₹1 lakh.",
+     "t": "OLD",
+     "hl": "quote"
+    },
+    {
+     "id": "m7",
+     "f": "kb",
+     "to": "own",
+     "l": "published + owner alert",
+     "what": "New version with as-of date; the alert carries the URL, quote and evidence id.",
+     "t": "OLD"
+    }
+   ]
+  },
+  "s8-b": {
+   "scene": "s8",
+   "order": 2,
+   "name": "Right quote, misread number",
+   "wires": [
+    {
+     "cap": "Speculation",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "HDFC Bank Millennia"
+      },
+      {
+       "t": "msg",
+       "kind": "warn",
+       "text": "Reported, not confirmed by the bank: annual fee ₹500 — annual_paise not stated in its quote",
+       "hl": "spec"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "kb",
+    "fet",
+    "own"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "kb",
+     "to": "kb",
+     "l": "fee ₹500 with HDFC's real quote",
+     "what": "The quote on the page says ₹1,000.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "kb",
+     "to": "fet",
+     "l": "quote present? yes",
+     "what": "The quote is genuine, so the quote check alone would pass.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "kb",
+     "to": "kb",
+     "l": "₹500 not in its quote → speculation",
+     "what": "The published fee stays ₹1,000. Checked by test_misread_value_with_a_genuine_quote_is_speculation.",
+     "t": "OLD",
+     "hl": "spec"
+    },
+    {
+     "id": "m4",
+     "f": "kb",
+     "to": "own",
+     "l": "speculation_added alert",
+     "what": "The owner sees the value, the quote and why it failed.",
+     "t": "OLD"
+    }
+   ]
+  },
+  "s8-c": {
+   "scene": "s8",
+   "order": 3,
+   "name": "Aggregator source",
+   "wires": [
+    {
+     "cap": "Speculation",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "HDFC Bank Millennia"
+      },
+      {
+       "t": "msg",
+       "kind": "warn",
+       "text": "Reported, not confirmed by the bank · paisabazaar.com",
+       "hl": "spec"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "kb",
+    "own"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "kb",
+     "to": "kb",
+     "l": "URL paisabazaar.com → not official",
+     "what": "Aggregators, forums, news and AI answers can only produce speculation.",
+     "t": "OLD",
+     "hl": "spec"
+    },
+    {
+     "id": "m2",
+     "f": "kb",
+     "to": "own",
+     "l": "speculation_added alert",
+     "what": "Shown to holders, never used in the maths.",
+     "t": "OLD"
+    }
+   ]
+  },
+  "s8-d": {
+   "scene": "s8",
+   "order": 4,
+   "name": "Bank changes its page, then a rollback",
+   "wires": [
+    {
+     "cap": "What changed",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "What changed"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Millennia · fees published",
+         "meta": "₹1,000 → ₹2,500 · large change",
+         "amt": "",
+         "due": "",
+         "st": "up",
+         "stl": "v2",
+         "cb": "none"
+        },
+        {
+         "no": "Millennia · rolled back",
+         "meta": "re-check mismatch",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "v1",
+         "cb": "none"
+        }
+       ],
+       "hl": "feed"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "fet",
+    "kb",
+    "own"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "fet",
+     "to": "kb",
+     "l": "page now says ₹2,500",
+     "what": "The new quote and value pass every check.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "kb",
+     "to": "kb",
+     "l": "version 2 published, v1 superseded",
+     "what": "Changes over 50% are flagged large.",
+     "t": "OLD",
+     "hl": "feed"
+    },
+    {
+     "id": "m3",
+     "f": "kb",
+     "to": "own",
+     "l": "alert: large change, holders count",
+     "what": "Tells the owner how many users hold the card; affected users' numbers already use the new terms.",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "kb",
+     "to": "kb",
+     "l": "rollback(fees)",
+     "what": "Manual today; the weekly automatic re-check that triggers it is planned (DR-12), not built.",
+     "t": "OLD",
+     "hl": "feed"
+    }
+   ]
+  },
+  "s9-a": {
+   "scene": "s9",
+   "order": 1,
+   "name": "New card profiled from the bank's page",
+   "wires": [
+    {
+     "cap": "Market",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Market"
+      },
+      {
+       "t": "tabs",
+       "items": [
+        "Launch Radar",
+        "What changed"
+       ],
+       "on": 0
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Axis Bank ACE",
+         "meta": "Profiled from the bank's own pages: 5 fields",
+         "amt": "−₹349/yr",
+         "due": "",
+         "st": "ok",
+         "stl": "confirmed",
+         "cb": "none"
+        }
+       ],
+       "hl": "launch"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "gw",
+    "web",
+    "kb",
+    "own",
+    "api"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "gw",
+     "to": "web",
+     "l": "google_news launch query",
+     "what": "'launches new credit card India when:30d', without so= (SerpApi rejects q with so).",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "gw",
+     "to": "gw",
+     "l": "cache, budget, credit ledger",
+     "what": "Hourly 45, monthly 250, per-flow envelopes; every call logged with its search id.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "gw",
+     "to": "web",
+     "l": "google site:axis.bank.in ACE",
+     "what": "Results filtered to allow-listed hosts in code (site: is unreliable).",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "gw",
+     "to": "kb",
+     "l": "fetch + extract + checks",
+     "what": "Same pipeline as the seed cards.",
+     "t": "OLD"
+    },
+    {
+     "id": "m5",
+     "f": "kb",
+     "to": "own",
+     "l": "card added, launch.published",
+     "what": "The owner is alerted; the card joins the catalogue with origin launch_radar.",
+     "t": "OLD"
+    },
+    {
+     "id": "m6",
+     "f": "api",
+     "to": "api",
+     "l": "GET /launches → gain for you",
+     "what": "Refined against your stack: ACE is −₹349/yr for this user after fees.",
+     "t": "MOD",
+     "hl": "launch"
+    }
+   ]
+  },
+  "s9-b": {
+   "scene": "s9",
+   "order": 2,
+   "name": "Reported launch with no bank page",
+   "wires": [
+    {
+     "cap": "Market",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Market"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Google Pay Flex SBI Card",
+         "meta": "No official page found on sbicard.com",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        }
+       ],
+       "hl": "launch"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "gw",
+    "web",
+    "kb"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "gw",
+     "to": "web",
+     "l": "google site:sbicard.com 'Google Pay Flex'",
+     "what": "Returns only news, Reddit and review sites.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "gw",
+     "to": "kb",
+     "l": "speculative launch",
+     "what": "Listed, not scored, no user notification until the bank's page appears.",
+     "t": "OLD",
+     "hl": "launch"
+    }
+   ]
+  },
+  "s9-c": {
+   "scene": "s9",
+   "order": 3,
+   "name": "Ad from SBI, affiliates filtered",
+   "wires": [
+    {
+     "cap": "Market",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Market"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Flipkart SBI Credit Card",
+         "meta": "SBI ad: 1st year free, valid till 31 Oct 2026",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        }
+       ],
+       "hl": "launch"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "gw",
+    "web",
+    "kb"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "gw",
+     "to": "web",
+     "l": "ads_transparency text=sbicard.com region=2356",
+     "what": "India region verified. 7 of 40 advertisers were affiliates bidding on SBI's name.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "gw",
+     "to": "gw",
+     "l": "keep SBI's own advertiser only",
+     "what": "Ads from affiliates bidding on the bank's name are not the bank speaking.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "gw",
+     "to": "kb",
+     "l": "speculative (ad text isn't an official page)",
+     "what": "Promoted when sbicard.com confirms it.",
+     "t": "OLD",
+     "hl": "launch"
+    }
+   ]
+  },
+  "s9-d": {
+   "scene": "s9",
+   "order": 4,
+   "name": "Budget reached or nothing recorded",
+   "wires": [
+    {
+     "cap": "Error",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Launch Radar"
+      },
+      {
+       "t": "msg",
+       "kind": "crit",
+       "text": "flow launch_radar envelope reached (45/45)",
+       "hl": "err"
+      },
+      {
+       "t": "msg",
+       "kind": "warn",
+       "text": "no recorded response for this search (replay)"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "gw",
+    "web"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "gw",
+     "to": "gw",
+     "l": "BudgetExceeded",
+     "what": "Hourly, monthly or the flow's envelope; the 50-search demo reserve can only be spent by raising an envelope on purpose.",
+     "t": "OLD",
+     "hl": "err"
+    },
+    {
+     "id": "m2",
+     "f": "gw",
+     "to": "gw",
+     "l": "ReplayMissing in replay mode",
+     "what": "Without keys every search must have a recorded fixture; HDFC and ICICI ads are skipped for this reason.",
+     "t": "OLD"
+    }
+   ]
+  }
+ },
+ "suggestions": {
+  "g1": {
+   "order": 1,
+   "n": 1,
+   "where": "Steps 3, 5",
+   "title": "Payments are logged by hand",
+   "paras": [
+    "Available credit, cap use and the cap notices are only as current as what the user logs. Most people will not log every payment.",
+    "Statement upload (M1) resets balances to the bank's figures each cycle; notification and Gmail capture (M2) log payments automatically. Until then, label available credit 'as of your last update'."
+   ]
+  },
+  "g2": {
+   "order": 2,
+   "n": 2,
+   "where": "Steps 7, 8",
+   "title": "Reporting wrong info doesn't re-fetch the page",
+   "paras": [
+    "The report response says “the official page is re-fetched”, but no code triggers a fetch. The report only becomes speculation.",
+    "Either trigger a re-fetch of the card's official sources on report (cheap: the fetcher and pipeline exist) or change the message."
+   ]
+  },
+  "g3": {
+   "order": 3,
+   "n": 3,
+   "where": "Step 1",
+   "title": "Credit score is never asked",
+   "paras": [
+    "The backend stores a score band, but onboarding doesn't ask for it, so approval likelihood isn't shown anywhere.",
+    "Add a score-band question with “don't know” to preferences (decision A3)."
+   ]
+  },
+  "g4": {
+   "order": 4,
+   "n": 4,
+   "where": "Steps 3, 4",
+   "title": "'Up to' offers counted at face value",
+   "paras": [
+    "“Up to 25% … max ₹11,300” is estimated as the full 25%. That overstates the hint and the combined figure in the pay text.",
+    "Show “up to ₹X” for these and keep them out of the combined figure."
+   ]
+  },
+  "g5": {
+   "order": 5,
+   "n": 5,
+   "where": "Step 7",
+   "title": "Utilisation notice has no source",
+   "paras": [
+    "The 30% guideline is general bureau practice, not a card term, so the notice has nothing to quote. Its wording says so, but nothing marks it as general guidance."
+   ]
+  },
+  "g6": {
+   "order": 6,
+   "n": 6,
+   "where": "Step 6",
+   "title": "Some cards earn less in the maths than in reality",
+   "paras": [
+    "Airtel Axis's 25% Airtel and 10% utilities rules aren't modelled (their caps depend on the month's base cashback), and four cards (SimplyCLICK, Coral, AU LIT, Scapia) are listed but not scored because their base rate or point value isn't on an official page we could read."
+   ]
+  },
+  "g7": {
+   "order": 7,
+   "n": 7,
+   "where": "Step 7",
+   "title": "Fee-offer conditions aren't checked",
+   "paras": [
+    "Swiggy ORNGE LTF (select corporates) and Magnus LTF (Burgundy Salary, ₹2 lakh a month) show to everyone. Asking employer type and salary band would let cc-smith hide offers the user can't get."
+   ]
+  },
+  "g8": {
+   "order": 8,
+   "n": 8,
+   "where": "Step 9",
+   "title": "Scapia Axis is treated as the Scapia Federal card",
+   "paras": [
+    "Launch Radar marks “Scapia Axis Bank Credit Card” as already in the catalogue. Under DR-4's variant route it should be its own profile, since the issuer and terms differ."
+   ]
+  }
+ },
+ "apis": {
+  "a1": {
+   "order": 1,
+   "call": "POST /users",
+   "owner": "API",
+   "gives": "anonymous account",
+   "tag": "OLD",
+   "steps": [
+    1
+   ]
+  },
+  "a2": {
+   "order": 2,
+   "call": "GET /cards",
+   "owner": "Card facts",
+   "gives": "catalogue with memberships and fee offers",
+   "tag": "MOD",
+   "steps": [
+    1,
+    3
+   ]
+  },
+  "a3": {
+   "order": 3,
+   "call": "PUT /me/pools",
+   "owner": "Ledger",
+   "gives": "shared credit limits",
+   "tag": "NEW",
+   "steps": [
+    1
+   ]
+  },
+  "a4": {
+   "order": 4,
+   "call": "PUT /me/holdings",
+   "owner": "Users",
+   "gives": "cards with limit, balance, fee status",
+   "tag": "MOD",
+   "steps": [
+    1,
+    6
+   ]
+  },
+  "a5": {
+   "order": 5,
+   "call": "GET /meta",
+   "owner": "API",
+   "gives": "categories grouped with merchants; memberships",
+   "tag": "MOD",
+   "steps": [
+    2
+   ]
+  },
+  "a6": {
+   "order": 6,
+   "call": "PUT /me/spends",
+   "owner": "Users",
+   "gives": "monthly spends; category = total",
+   "tag": "MOD",
+   "steps": [
+    2
+   ]
+  },
+  "a7": {
+   "order": 7,
+   "call": "PUT /me/profile",
+   "owner": "Users",
+   "gives": "memberships as flags, preferences",
+   "tag": "OLD",
+   "steps": [
+    3
+   ]
+  },
+  "a8": {
+   "order": 8,
+   "call": "POST /pay",
+   "owner": "Rewards engine",
+   "gives": "best card, ranked, notes, offers",
+   "tag": "MOD",
+   "steps": [
+    3,
+    4
+   ]
+  },
+  "a9": {
+   "order": 9,
+   "call": "POST /pay/confirm",
+   "owner": "Ledger",
+   "gives": "log a payment (idempotent)",
+   "tag": "OLD",
+   "steps": [
+    5
+   ]
+  },
+  "a10": {
+   "order": 10,
+   "call": "GET /me/credit",
+   "owner": "Ledger",
+   "gives": "available credit per card, pool-aware",
+   "tag": "NEW",
+   "steps": [
+    5
+   ]
+  },
+  "a11": {
+   "order": 11,
+   "call": "POST /me/cards/{id}/bill-paid",
+   "owner": "Ledger",
+   "gives": "record a repayment",
+   "tag": "NEW",
+   "steps": [
+    5
+   ]
+  },
+  "a12": {
+   "order": 12,
+   "call": "POST /finder",
+   "owner": "Rewards engine",
+   "gives": "card sets with ₹ lines and fee offers",
+   "tag": "MOD",
+   "steps": [
+    6
+   ]
+  },
+  "a13": {
+   "order": 13,
+   "call": "POST /finder/assess",
+   "owner": "Rewards engine",
+   "gives": "value of one named card",
+   "tag": "MOD",
+   "steps": [
+    6
+   ]
+  },
+  "a14": {
+   "order": 14,
+   "call": "GET /me/notices",
+   "owner": "Notice board",
+   "gives": "must-knows with reasons",
+   "tag": "NEW",
+   "steps": [
+    7
+   ]
+  },
+  "a15": {
+   "order": 15,
+   "call": "POST /cards/{id}/report",
+   "owner": "Card facts",
+   "gives": "user report → speculation",
+   "tag": "OLD",
+   "steps": [
+    7,
+    8
+   ]
+  },
+  "a16": {
+   "order": 16,
+   "call": "GET /cards/{id}",
+   "owner": "Card facts",
+   "gives": "fields with quotes, speculation, changelog",
+   "tag": "OLD",
+   "steps": [
+    8
+   ]
+  },
+  "a17": {
+   "order": 17,
+   "call": "GET /launches",
+   "owner": "Launch Radar",
+   "gives": "launch feed with your gain",
+   "tag": "MOD",
+   "steps": [
+    9
+   ]
+  },
+  "a18": {
+   "order": 18,
+   "call": "GET /ops/changes, /ops/alerts",
+   "owner": "Owner",
+   "gives": "read-only change feed and alerts",
+   "tag": "OLD",
+   "steps": [
+    8
+   ]
+  }
+ },
+ "rollout": {
+  "r1": {
+   "order": 1,
+   "title": "Hackathon (10 Oct, 18:00 IST)",
+   "text": "Android debug build against the replay backend; demo story: Checkout Advisor with bank offers, Launch Radar, Card Finder, plus notices and credit."
+  },
+  "r2": {
+   "order": 2,
+   "title": "Before submission",
+   "text": "Add SerpApi and Anthropic keys, run one live Launch Radar sweep and one live extraction, record them as fixtures; verify the CardProfile schema is accepted by the API."
+  },
+  "r3": {
+   "order": 3,
+   "title": "M1 (11 Oct – 10 Nov)",
+   "text": "Postgres with RLS, DBOS, auth, outbox; statement upload resets balances; Gmail OAuth verification and CASA start; owner alert channel; re-fetch on user report."
+  },
+  "r4": {
+   "order": 4,
+   "title": "M2 (11 Nov – 10 Dec)",
+   "text": "Notification capture and Gmail alerts log payments automatically; trackers and replan; closed beta."
+  },
+  "r5": {
+   "order": 5,
+   "title": "M3 (11 Dec – 10 Jan)",
+   "text": "Eligibility path, renewal review, Launch Radar scoring live, evals in CI, Play listing."
+  }
+ },
+ "decisions": {
+  "d1": {
+   "order": 1,
+   "q": "Should a user report trigger an immediate re-fetch of the card's official pages?",
+   "options": [
+    "Yes, re-fetch now",
+    "No, wait for the weekly sweep",
+    "Change the message only"
+   ],
+   "affects": "Steps 7, 8"
+  },
+  "d2": {
+   "order": 2,
+   "q": "Ask for a credit score band in onboarding for the demo?",
+   "options": [
+    "Yes, with “don't know”",
+    "No, after the hackathon"
+   ],
+   "affects": "Step 1"
+  },
+  "d3": {
+   "order": 3,
+   "q": "How should 'up to' offers be shown at checkout?",
+   "options": [
+    "As “up to ₹X”, out of the combined figure",
+    "As now (full percentage)"
+   ],
+   "affects": "Steps 3, 4"
+  },
+  "d4": {
+   "order": 4,
+   "q": "Should LTF/FYF offers with eligibility conditions ask the user about them?",
+   "options": [
+    "Ask employer type and salary band",
+    "Show to everyone with the condition (now)"
+   ],
+   "affects": "Step 7"
+  },
+  "d5": {
+   "order": 5,
+   "q": "Premium tier?",
+   "options": [
+    "Yes, plan it",
+    "Not now"
+   ],
+   "affects": "Business model"
+  }
+ }
+}

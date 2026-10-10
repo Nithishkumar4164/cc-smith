@@ -1,0 +1,10 @@
+{
+ "order": 12,
+ "call": "POST /finder",
+ "owner": "Rewards engine",
+ "gives": "card sets with ₹ lines and fee offers",
+ "tag": "MOD",
+ "steps": [
+  6
+ ]
+}

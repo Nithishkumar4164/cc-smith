@@ -1,0 +1,45 @@
+{
+ "scene": "s8",
+ "order": 3,
+ "name": "Aggregator source",
+ "wires": [
+  {
+   "cap": "Speculation",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "HDFC Bank Millennia"
+    },
+    {
+     "t": "msg",
+     "kind": "warn",
+     "text": "Reported, not confirmed by the bank · paisabazaar.com",
+     "hl": "spec"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "kb",
+  "own"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "kb",
+   "to": "kb",
+   "l": "URL paisabazaar.com → not official",
+   "what": "Aggregators, forums, news and AI answers can only produce speculation.",
+   "t": "OLD",
+   "hl": "spec"
+  },
+  {
+   "id": "m2",
+   "f": "kb",
+   "to": "own",
+   "l": "speculation_added alert",
+   "what": "Shown to holders, never used in the maths.",
+   "t": "OLD"
+  }
+ ]
+}

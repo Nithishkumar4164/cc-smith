@@ -1,0 +1,105 @@
+{
+ "scene": "s7",
+ "order": 1,
+ "name": "Your own cards first",
+ "wires": [
+  {
+   "cap": "Notices",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Notices"
+    },
+    {
+     "t": "text",
+     "text": "5 to keep an eye on"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Free year on HSBC Live+ ends 15 Nov 2026",
+       "meta": "Renewal fee ₹1,179 a year incl. GST after that",
+       "amt": "₹1,179",
+       "due": "15 Nov",
+       "st": "up",
+       "stl": "watch",
+       "cb": "none"
+      },
+      {
+       "no": "Millennia: 35% of the HDFC shared limit in use",
+       "meta": "₹1,30,000 available; above ~30% bureaus read risk (not checked)",
+       "amt": "",
+       "due": "",
+       "st": "up",
+       "stl": "watch",
+       "cb": "none"
+      },
+      {
+       "no": "Millennia: renewal fee waived on your spend",
+       "meta": "₹4,68,000 a year vs ₹1,00,000 waiver",
+       "amt": "₹1,180",
+       "due": "",
+       "st": "ok",
+       "stl": "info",
+       "cb": "none"
+      }
+     ],
+     "hl": "notices",
+     "label": "Notices"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "eng",
+  "led"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "opens Notices (badge 5)",
+   "what": "The badge counts act + watch notices."
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "GET /me/notices",
+   "what": "Built fresh from cards, spends, payments, offers and facts.",
+   "t": "NEW"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "eng",
+   "l": "refine held stack with fee overrides",
+   "what": "Gives each card's yearly spend, net value and milestone progress on your spends.",
+   "t": "NEW"
+  },
+  {
+   "id": "m4",
+   "f": "api",
+   "to": "led",
+   "l": "caps used, credit, utilisation",
+   "what": "From logged payments and entered balances.",
+   "t": "NEW"
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "app",
+   "l": "notices, sorted",
+   "what": "Severity first, then your own cards before offers on cards you don't hold, then rupees.",
+   "code": "[{\"kind\":\"fee\",\"severity\":\"watch\",\"title\":\"Free year on HSBC Live+ Credit Card ends 15 Nov 2026\",\"reason\":\"…\",\"action\":\"…\",\"due\":\"2026-11-15\",\"refs\":[…]}]",
+   "t": "NEW",
+   "res": true,
+   "hl": "notices"
+  }
+ ]
+}

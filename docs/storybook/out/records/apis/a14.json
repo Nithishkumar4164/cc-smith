@@ -1,0 +1,10 @@
+{
+ "order": 14,
+ "call": "GET /me/notices",
+ "owner": "Notice board",
+ "gives": "must-knows with reasons",
+ "tag": "NEW",
+ "steps": [
+  7
+ ]
+}

@@ -447,6 +447,21 @@ def kotak_league(s: Src) -> dict:
     }
 
 
+def kiwi(s: Src) -> dict:
+    # YES Bank's MITC lists Klick on the RuPay row; Kiwi, the fintech operator, owns the reward programme.
+    return {
+        "identity": {"network": "RuPay", "upi_rupay": True, "src": [s.fees()]},
+        "fees": fees(s, 0, 0, None),
+        "currency": {"kind": "cashback", "name": "Cashback", "value_paise": 100, "src": [s.earn(0)]},
+        "earn_rules": [
+            {"id": "upi_neon", "match": {"channels": ["upi"]}, "rate": pct(200), "requires": ["kiwi_neon"], "priority": 1, "src": [s.earn(2)]},
+            {"id": "upi", "match": {"channels": ["upi"]}, "rate": pct(150), "src": [s.earn(0)]},
+            {"id": "online", "match": {"channels": ["online"]}, "rate": pct(50), "src": [s.earn(1)],
+             "note": "Kiwi's 0.5% is on online UPI payments; non-UPI card spends earn points at a rate not in the page text."},
+        ],
+    }
+
+
 def fees_only(s: Src, joining: int, annual: int, waiver: int | None) -> dict:
     return {"fees": fees(s, joining, annual, waiver)}
 
@@ -474,7 +489,7 @@ MAPPERS = {
     "icici_coral": lambda s: fees_only(s, 500, 500, 150_000),
     "au_lit": lambda s: fees_only(s, 0, 0, None),
     "scapia_federal": lambda s: fees_only(s, 0, 0, None),
-    "kiwi_yes_klick": lambda s: fees_only(s, 0, 0, None),
+    "kiwi_yes_klick": kiwi,
 }
 
 

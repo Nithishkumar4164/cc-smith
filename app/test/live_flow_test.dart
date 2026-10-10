@@ -62,6 +62,26 @@ void main() {
       expect(o.ranked.map((x) => x.cardId), sorted.map((x) => x.cardId));
     }
 
+    // Credit: a shared HDFC limit and an own limit with a free first year.
+    if (ids.containsAll({'hdfc_millennia', 'hsbc_live_plus'})) {
+      await api.putPools(const [Pool(id: 'hdfc', name: 'HDFC shared', limitPaise: 20000000)]);
+      final me2 = await api.putHoldings(const [
+        Holding(cardId: 'hdfc_millennia', poolId: 'hdfc', balancePaise: 7000000),
+        Holding(cardId: 'hsbc_live_plus', creditLimitPaise: 15000000, balancePaise: 2000000, feeStatus: 'fyf', fyfUntil: '2026-11-15'),
+      ]);
+      expect(me2.pools.single.id, 'hdfc');
+      final credit = {for (final c in await api.credit()) c.cardId: c};
+      expect(credit['hdfc_millennia']!.availablePaise, 13000000);
+      expect(credit['hdfc_millennia']!.poolName, 'HDFC shared');
+      expect(credit['hsbc_live_plus']!.utilisationBp, 1333);
+      final notices = await api.notices();
+      expect(notices.any((n) => n.id == 'fyf:hsbc_live_plus' && n.due == '2026-11-15'), isTrue);
+      final big = await api.pay(merchant: 'MakeMyTrip', amountPaise: 14000000);
+      expect(big.ranked.first.reasonCodes.any((r) => r.startsWith('insufficient_credit:')), isTrue);
+      final after = {for (final c in await api.billPaid('hdfc_millennia')) c.cardId: c};
+      expect(after['hdfc_millennia']!.outstandingPaise, 0);
+    }
+
     final launches = await api.launches();
     expect(launches, isNotEmpty);
     expect(launches.map((l) => l.status).toSet().difference({'profiled', 'speculative', 'known', 'rejected'}), isEmpty);

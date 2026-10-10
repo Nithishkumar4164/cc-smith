@@ -115,6 +115,17 @@ class Api {
   Future<Me> putSpends(Map<String, int> monthlyPaise) async =>
       Me.fromJson(_map(await _send('PUT', '/me/spends', monthlyPaise)));
 
+  Future<Me> putPools(List<Pool> pools) async =>
+      Me.fromJson(_map(await _send('PUT', '/me/pools', pools.map((p) => p.toJson()).toList())));
+  Future<List<Credit>> credit() async => _maps(await _send('GET', '/me/credit')).map(Credit.fromJson).toList();
+
+  /// [amountPaise] null = paid the full outstanding.
+  Future<List<Credit>> billPaid(String cardId, {int? amountPaise}) async =>
+      _maps(await _send('POST', '/me/cards/${Uri.encodeComponent(cardId)}/bill-paid', {'amount_paise': ?amountPaise}))
+          .map(Credit.fromJson)
+          .toList();
+  Future<List<Notice>> notices() async => _maps(await _send('GET', '/me/notices')).map(Notice.fromJson).toList();
+
   Future<FinderReport> finder({int maxNew = 3}) async =>
       FinderReport.fromJson(_map(await _send('POST', '/finder', {'max_new': maxNew})));
 

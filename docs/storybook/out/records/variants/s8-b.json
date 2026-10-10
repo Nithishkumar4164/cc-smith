@@ -1,0 +1,62 @@
+{
+ "scene": "s8",
+ "order": 2,
+ "name": "Right quote, misread number",
+ "wires": [
+  {
+   "cap": "Speculation",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "HDFC Bank Millennia"
+    },
+    {
+     "t": "msg",
+     "kind": "warn",
+     "text": "Reported, not confirmed by the bank: annual fee ₹500 — annual_paise not stated in its quote",
+     "hl": "spec"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "kb",
+  "fet",
+  "own"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "kb",
+   "to": "kb",
+   "l": "fee ₹500 with HDFC's real quote",
+   "what": "The quote on the page says ₹1,000.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "kb",
+   "to": "fet",
+   "l": "quote present? yes",
+   "what": "The quote is genuine, so the quote check alone would pass.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "kb",
+   "to": "kb",
+   "l": "₹500 not in its quote → speculation",
+   "what": "The published fee stays ₹1,000. Checked by test_misread_value_with_a_genuine_quote_is_speculation.",
+   "t": "OLD",
+   "hl": "spec"
+  },
+  {
+   "id": "m4",
+   "f": "kb",
+   "to": "own",
+   "l": "speculation_added alert",
+   "what": "The owner sees the value, the quote and why it failed.",
+   "t": "OLD"
+  }
+ ]
+}

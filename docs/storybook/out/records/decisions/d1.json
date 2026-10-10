@@ -1,0 +1,10 @@
+{
+ "order": 1,
+ "q": "Should a user report trigger an immediate re-fetch of the card's official pages?",
+ "options": [
+  "Yes, re-fetch now",
+  "No, wait for the weekly sweep",
+  "Change the message only"
+ ],
+ "affects": "Steps 7, 8"
+}

@@ -38,7 +38,7 @@ class _CardsScreenState extends State<CardsScreen> {
       ..sort((a, b) => a.issuer == b.issuer ? a.name.compareTo(b.name) : a.issuer.compareTo(b.issuer));
     final t = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('Cards')),
+      appBar: AppBar(title: const Text('Cards'), actions: const [ProfileAction()]),
       body: RefreshIndicator(
         onRefresh: _refresh,
         child: ListView(padding: const EdgeInsets.fromLTRB(16, 0, 16, 24), children: [
@@ -97,6 +97,7 @@ class _CardTile extends StatelessWidget {
                   if (held) Pill('You hold', icon: Icons.check, color: s.primary, onColor: s.onPrimary),
                   Pill(feeLabel(c.annualFeePaise)),
                   if (c.currencyKind != null) Pill(c.currencyKind == 'cashback' ? 'Cashback' : 'Points · ${c.currencyName ?? ''}'),
+                  for (final o in c.feeOffers) FeeOfferPill(o),
                   if (c.speculationCount > 0) Pill('${c.speculationCount} unconfirmed ${plural(c.speculationCount, 'report')}', icon: Icons.help_outline, color: s.tertiaryContainer, onColor: s.onTertiaryContainer),
                   if (!c.assessable) Pill('Not scored yet', color: s.surfaceContainerHighest, onColor: s.onSurfaceVariant),
                   if (c.status != 'active') Pill(c.status, color: s.surfaceContainerHighest, onColor: s.onSurfaceVariant),

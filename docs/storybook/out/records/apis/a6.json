@@ -1,0 +1,10 @@
+{
+ "order": 6,
+ "call": "PUT /me/spends",
+ "owner": "Users",
+ "gives": "monthly spends; category = total",
+ "tag": "MOD",
+ "steps": [
+  2
+ ]
+}

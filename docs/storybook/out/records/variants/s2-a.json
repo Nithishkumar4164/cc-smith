@@ -1,0 +1,148 @@
+{
+ "scene": "s2",
+ "order": 1,
+ "name": "Dining total with Swiggy and Zomato inside",
+ "wires": [
+  {
+   "cap": "What you spend",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "What you spend each month"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Dining and food delivery",
+       "meta": "₹1,000 other dining",
+       "amt": "₹9,000",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      },
+      {
+       "no": "  Swiggy",
+       "meta": "Merchant",
+       "amt": "₹6,000",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      },
+      {
+       "no": "  Zomato",
+       "meta": "Merchant",
+       "amt": "₹2,000",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      },
+      {
+       "no": "Online shopping",
+       "meta": "₹9,000 other online",
+       "amt": "₹15,000",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      },
+      {
+       "no": "Groceries",
+       "meta": "",
+       "amt": "₹10,000",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      },
+      {
+       "no": "Fuel",
+       "meta": "",
+       "amt": "₹3,000",
+       "due": "",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      }
+     ],
+     "hl": "groups",
+     "label": "Grouped spends"
+    },
+    {
+     "t": "kv",
+     "rows": [
+      {
+       "k": "Total",
+       "v": "₹59,000 a month · ₹7,08,000 a year",
+       "total": true
+      }
+     ],
+     "hl": "total"
+    },
+    {
+     "t": "btn",
+     "text": "Next",
+     "kind": "primary"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "GET /meta",
+   "what": "Categories with their merchants grouped under them, plus the membership list.",
+   "code": "{\"groups\":[{\"category\":\"dining\",\"label\":\"Dining and food delivery\",\"merchants\":[{\"key\":\"swiggy\"},…]}]}",
+   "t": "MOD",
+   "hl": "groups"
+  },
+  {
+   "id": "m2",
+   "f": "u",
+   "to": "app",
+   "l": "enters Dining ₹9,000, Swiggy ₹6,000",
+   "what": "The remainder line updates as you type: ₹9,000 − ₹6,000 − ₹2,000 = ₹1,000 other dining.",
+   "hl": "groups"
+  },
+  {
+   "id": "m3",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/spends",
+   "what": "One map of category and merchant keys, monthly paise.",
+   "code": "{\"dining\":900000,\"swiggy\":600000,\"zomato\":200000,…}",
+   "t": "OLD"
+  },
+  {
+   "id": "m4",
+   "f": "api",
+   "to": "eng",
+   "l": "spend lines: swiggy, zomato, dining rest",
+   "what": "Merchants become their own lines (Millennia pays 5% on Swiggy, 1% on other dining); the category keeps only the remainder.",
+   "code": "[{\"key\":\"swiggy\",\"monthly\":600000},{\"key\":\"zomato\",\"monthly\":200000},{\"key\":\"dining\",\"monthly\":100000}]",
+   "t": "MOD"
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "app",
+   "l": "category_totals",
+   "what": "Totals per category as the user means them, so the screen and the backend agree.",
+   "code": "{\"dining\":900000,\"online\":1500000,…}",
+   "t": "NEW",
+   "res": true,
+   "hl": "total"
+  }
+ ]
+}

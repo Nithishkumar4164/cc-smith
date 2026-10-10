@@ -1,0 +1,9 @@
+{
+ "order": 3,
+ "q": "How should 'up to' offers be shown at checkout?",
+ "options": [
+  "As “up to ₹X”, out of the combined figure",
+  "As now (full percentage)"
+ ],
+ "affects": "Steps 3, 4"
+}

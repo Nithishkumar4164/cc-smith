@@ -1,0 +1,83 @@
+{
+ "scene": "s5",
+ "order": 2,
+ "name": "Shared limit draws down both cards",
+ "wires": [
+  {
+   "cap": "Profile",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Your cards"
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Millennia",
+       "value": "₹3,000 available",
+       "sub": "HDFC shared · 94% used",
+       "tone": "mint",
+       "vt": "bad"
+      },
+      {
+       "label": "Swiggy BLCK",
+       "value": "₹3,000 available",
+       "sub": "HDFC shared",
+       "tone": "mint",
+       "vt": "bad"
+      }
+     ],
+     "hl": "avail"
+    },
+    {
+     "t": "msg",
+     "kind": "note",
+     "text": "Pool ₹50,000 · owed ₹30,000 + ₹15,000 + ₹2,000 logged"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "led"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay/confirm Millennia ₹2,000",
+   "what": "Example from the tests: a ₹50,000 HDFC pool with ₹30,000 owed on Millennia and ₹15,000 on Swiggy BLCK.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "GET /me/credit",
+   "what": "Available credit per card, pool-aware.",
+   "t": "NEW"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "led",
+   "l": "outstanding = entered + logged − paid",
+   "what": "Millennia ₹30,000 + ₹2,000; Swiggy BLCK ₹15,000. Pool used ₹47,000.",
+   "t": "NEW"
+  },
+  {
+   "id": "m4",
+   "f": "led",
+   "to": "api",
+   "l": "both cards: ₹3,000 available",
+   "what": "Same pool, same available figure on every card in it.",
+   "code": "[{\"card_id\":\"hdfc_millennia\",\"available_paise\":300000,\"pool_name\":\"HDFC shared\"}, …]",
+   "t": "NEW",
+   "res": true,
+   "hl": "avail"
+  }
+ ]
+}

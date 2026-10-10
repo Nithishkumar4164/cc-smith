@@ -37,6 +37,11 @@ def registry() -> dict:
     return yaml.safe_load(DATA.read_text())
 
 
+@lru_cache
+def memberships() -> dict[str, dict]:
+    return yaml.safe_load((DATA.parent / "memberships.yaml").read_text())
+
+
 def categories() -> dict[str, str]:
     return registry()["categories"]
 

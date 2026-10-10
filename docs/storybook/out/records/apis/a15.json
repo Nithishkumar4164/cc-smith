@@ -1,0 +1,11 @@
+{
+ "order": 15,
+ "call": "POST /cards/{id}/report",
+ "owner": "Card facts",
+ "gives": "user report → speculation",
+ "tag": "OLD",
+ "steps": [
+  7,
+  8
+ ]
+}

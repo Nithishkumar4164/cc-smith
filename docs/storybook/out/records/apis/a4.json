@@ -1,0 +1,11 @@
+{
+ "order": 4,
+ "call": "PUT /me/holdings",
+ "owner": "Users",
+ "gives": "cards with limit, balance, fee status",
+ "tag": "MOD",
+ "steps": [
+  1,
+  6
+ ]
+}

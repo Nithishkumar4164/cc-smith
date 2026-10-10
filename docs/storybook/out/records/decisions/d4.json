@@ -1,0 +1,9 @@
+{
+ "order": 4,
+ "q": "Should LTF/FYF offers with eligibility conditions ask the user about them?",
+ "options": [
+  "Ask employer type and salary band",
+  "Show to everyone with the condition (now)"
+ ],
+ "affects": "Step 7"
+}

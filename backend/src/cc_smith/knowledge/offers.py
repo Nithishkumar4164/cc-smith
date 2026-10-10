@@ -17,6 +17,7 @@ from cc_smith.knowledge.fetcher import FetchError, fetch
 from cc_smith.knowledge.pipeline import _amount_forms, _pct_forms
 from cc_smith.knowledge.quotes import match_kind, normalise
 
+FEE_KINDS = ("ltf", "fyf", "joining_waiver", "annual_waiver")
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
 
 
@@ -46,7 +47,7 @@ def check(o: dict, refresh: bool = False) -> tuple[str, list[str], dict]:
     q = normalise(o["quote"].replace(" | ", " "))
     if o.get("pct_bp") and not any(f in q for f in _pct_forms(o["pct_bp"])):
         problems.append("percentage not stated in its quote")
-    for k in ("max_paise", "min_txn_paise", "flat_paise"):
+    for k in ("max_paise", "min_txn_paise", "flat_paise", "spend_condition_paise"):
         if o.get(k) and not any(f.lower() in q for f in _amount_forms(o[k] // 100)):
             problems.append(f"{k} not stated in its quote")
     if o.get("valid_to") and not _date_stated(o["valid_to"], o["quote"]):
@@ -63,6 +64,7 @@ def load(conn: Connection, path: Path, refresh: bool = False) -> dict[str, int]:
             id=o["id"], issuer=o["issuer"], card_ids=o.get("card_ids") or ["*"], merchant_key=o.get("merchant_key"),
             merchant_name=o.get("merchant_name"), title=o["title"], kind=o.get("kind", "other"), pct_bp=o.get("pct_bp"),
             max_paise=o.get("max_paise"), min_txn_paise=o.get("min_txn_paise"), flat_paise=o.get("flat_paise"),
+            spend_condition_paise=o.get("spend_condition_paise"), spend_window_days=o.get("spend_window_days"),
             channel=o.get("channel") or "any", valid_from=o.get("valid_from"), valid_to=o.get("valid_to"),
             refs=[ref], tier=tier, reason="; ".join(problems) or None,
         ))
@@ -87,7 +89,7 @@ def for_checkout(conn: Connection, merchant_key: str | None, channel: str, held:
         return []
     # Offer validity is stated in Indian dates.
     today = today or datetime.now(ZoneInfo("Asia/Kolkata")).date()
-    rows = conn.execute(select(offer).where(offer.c.merchant_key == merchant_key)).all()
+    rows = conn.execute(select(offer).where(offer.c.merchant_key == merchant_key, offer.c.kind.not_in(FEE_KINDS))).all()
     out = []
     for o in rows:
         if o.valid_to and date.fromisoformat(o.valid_to) < today:
@@ -101,3 +103,21 @@ def for_checkout(conn: Connection, merchant_key: str | None, channel: str, held:
         if cards:
             out.append({"offer": o, "card_ids": cards})
     return out
+
+
+def fee_offers(conn: Connection, today: date | None = None) -> dict[str, list]:
+    """Live LTF / FYF / fee-waiver offers by card id."""
+    today = today or datetime.now(ZoneInfo("Asia/Kolkata")).date()
+    out: dict[str, list] = {}
+    for o in conn.execute(select(offer).where(offer.c.kind.in_(FEE_KINDS))).all():
+        if o.valid_to and date.fromisoformat(o.valid_to) < today:
+            continue
+        for cid in o.card_ids:
+            out.setdefault(cid, []).append(o)
+    return out
+
+
+def live_merchant_offers(conn: Connection, today: date | None = None) -> list:
+    today = today or datetime.now(ZoneInfo("Asia/Kolkata")).date()
+    rows = conn.execute(select(offer).where(offer.c.kind.not_in(FEE_KINDS), offer.c.merchant_key.is_not(None))).all()
+    return [o for o in rows if not (o.valid_to and date.fromisoformat(o.valid_to) < today)]

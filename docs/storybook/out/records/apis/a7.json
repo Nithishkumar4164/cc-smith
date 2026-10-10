@@ -1,0 +1,10 @@
+{
+ "order": 7,
+ "call": "PUT /me/profile",
+ "owner": "Users",
+ "gives": "memberships as flags, preferences",
+ "tag": "OLD",
+ "steps": [
+  3
+ ]
+}

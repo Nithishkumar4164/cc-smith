@@ -1,0 +1,83 @@
+{
+ "scene": "s7",
+ "order": 4,
+ "name": "A change reported by a user",
+ "wires": [
+  {
+   "cap": "Notices",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Notices"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Axis Atlas: change reported, not confirmed by the bank",
+       "meta": "Travel miles now 4 per ₹100",
+       "amt": "",
+       "due": "",
+       "st": "grey",
+       "stl": "reported",
+       "cb": "none"
+      }
+     ],
+     "hl": "notices",
+     "label": "Notices"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "kb"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "Report wrong info on Atlas",
+   "what": "From the card page: which field, and what the user saw."
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "POST /cards/axis_atlas/report",
+   "what": "Stored as speculation with the report as its reference.",
+   "code": "{\"field\":\"earn_rules\",\"message\":\"Travel miles now 4 per ₹100\"}",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "kb",
+   "l": "speculation, expires in 60 days",
+   "what": "Never used in maths; promoted only if an official quote confirms it.",
+   "t": "OLD"
+  },
+  {
+   "id": "m4",
+   "f": "api",
+   "to": "app",
+   "l": "202 '…official page is re-fetched'",
+   "what": "The response says the page is re-fetched, but nothing triggers a re-fetch (see suggestion 2).",
+   "t": "OLD",
+   "res": true
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "app",
+   "l": "notice tier speculation",
+   "what": "Holders of the card see it, labelled.",
+   "t": "NEW",
+   "res": true,
+   "hl": "notices"
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+{
+ "order": 2,
+ "title": "Before submission",
+ "text": "Add SerpApi and Anthropic keys, run one live Launch Radar sweep and one live extraction, record them as fixtures; verify the CardProfile schema is accepted by the API."
+}

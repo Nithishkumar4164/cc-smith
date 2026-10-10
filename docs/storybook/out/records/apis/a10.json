@@ -1,0 +1,10 @@
+{
+ "order": 10,
+ "call": "GET /me/credit",
+ "owner": "Ledger",
+ "gives": "available credit per card, pool-aware",
+ "tag": "NEW",
+ "steps": [
+  5
+ ]
+}

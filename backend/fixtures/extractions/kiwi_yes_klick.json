@@ -2,6 +2,16 @@
   "id": "kiwi_yes_klick",
   "name": "Kiwi RuPay Credit Card (YES BANK Klick)",
   "issuer": "YES Bank (fintech partner: Kiwi / Gokiwi Technologies)",
+  "identity": {
+    "src": [
+      {
+        "url": "https://www.yes.bank.in/sites/web/content/published/api/v1.1/assets/CONTAA57595B2EF245259C4C623B1F7D33B3/native/ybl_mitc_pdf.pdf",
+        "quote": "RuPay Virtual NIL NIL NA NA | Card/ Klick /"
+      }
+    ],
+    "network": "RuPay",
+    "upi_rupay": true
+  },
   "fees": {
     "src": [
       {
@@ -12,7 +22,94 @@
     "joining_paise": 0,
     "annual_paise": 0
   },
-  "earn_rules": [],
+  "currency": {
+    "src": [
+      {
+        "url": "https://gokiwi.in/cards/yesbank/",
+        "quote": "1.5% Cashback | on UPI scan & pay"
+      }
+    ],
+    "kind": "cashback",
+    "name": "Cashback",
+    "value_paise": 100
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://gokiwi.in/cards/yesbank/",
+          "quote": "WithMembership | 5% Cashback | on spends over ₹1.5L | 2% Cashback | on UPI scan & pay"
+        }
+      ],
+      "id": "upi_neon",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": [
+          "upi"
+        ]
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 200
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 1,
+      "requires": [
+        "kiwi_neon"
+      ]
+    },
+    {
+      "src": [
+        {
+          "url": "https://gokiwi.in/cards/yesbank/",
+          "quote": "1.5% Cashback | on UPI scan & pay"
+        }
+      ],
+      "id": "upi",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": [
+          "upi"
+        ]
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 150
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://gokiwi.in/cards/yesbank/",
+          "quote": "0.5% Cashback | on online spends"
+        }
+      ],
+      "id": "online",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": [
+          "online"
+        ]
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 50
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Kiwi's 0.5% is on online UPI payments; non-UPI card spends earn points at a rate not in the page text."
+    }
+  ],
   "caps": [],
   "exclusions": [],
   "milestones": [],

@@ -1,0 +1,5 @@
+{
+ "order": 3,
+ "title": "M1 (11 Oct – 10 Nov)",
+ "text": "Postgres with RLS, DBOS, auth, outbox; statement upload resets balances; Gmail OAuth verification and CASA start; owner alert channel; re-fetch on user report."
+}

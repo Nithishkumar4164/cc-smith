@@ -1,0 +1,11 @@
+{
+ "n": 3,
+ "short": "Pay",
+ "title": "Ask which card to pay with",
+ "lede": "Checkout Advisor: every card you hold is checked for this one payment, in rupees. No language model runs on this path.",
+ "also": [
+  1,
+  4
+ ],
+ "stack": true
+}

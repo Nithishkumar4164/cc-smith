@@ -46,6 +46,7 @@ class _FinderScreenState extends State<FinderScreen> {
         title: const Text('Card Finder'),
         actions: [
           TextButton.icon(onPressed: _editSpends, icon: const Icon(Icons.edit_outlined, size: 18), label: const Text('Spends')),
+          const ProfileAction(),
         ],
       ),
       body: FutureBuilder<FinderReport>(
@@ -208,10 +209,14 @@ class _PortfolioCard extends StatelessWidget {
           initiallyExpanded: initiallyExpanded,
           leading: CircleAvatar(radius: 14, backgroundColor: s.tertiaryContainer, child: Text('$rank', style: TextStyle(fontSize: 12, color: s.onTertiaryContainer))),
           title: Text('Add ${p.newCards.map(app.cardName).join(' + ')}', style: t.textTheme.titleSmall),
-          subtitle: Money(p.gainPaise, signed: true, suffix: '/yr more', style: t.textTheme.titleMedium),
+          subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Money(p.gainPaise, signed: true, suffix: '/yr more', style: t.textTheme.titleMedium),
+            if (p.joiningFeePaise > 0)
+              Text('One-time joining fees ${rupees(p.joiningFeePaise)} (first year)', style: t.textTheme.labelSmall),
+          ]),
           childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
           children: [
-            for (final c in newOnes) _CardBreakdown(c: c, isNew: true),
+            for (final c in newOnes) _CardBreakdown(c: c, isNew: true, feeOffers: p.feeOffers[c.cardId] ?? const []),
             if (held.isNotEmpty) ...[
               Padding(
                 padding: const EdgeInsets.fromLTRB(4, 8, 4, 4),
@@ -229,7 +234,8 @@ class _PortfolioCard extends StatelessWidget {
 class _CardBreakdown extends StatelessWidget {
   final CardResult c;
   final bool isNew;
-  const _CardBreakdown({required this.c, required this.isNew});
+  final List<FeeOffer> feeOffers;
+  const _CardBreakdown({required this.c, required this.isNew, this.feeOffers = const []});
 
   @override
   Widget build(BuildContext context) {
@@ -258,6 +264,11 @@ class _CardBreakdown extends StatelessWidget {
             Expanded(child: Text(c.name, style: t.textTheme.titleSmall)),
             const Icon(Icons.chevron_right, size: 18),
           ]),
+          if (feeOffers.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: Wrap(spacing: 6, runSpacing: 4, children: [for (final o in feeOffers) FeeOfferPill(o)]),
+            ),
           const SizedBox(height: 8),
           if (c.lines.isEmpty) Text('No spends routed to this card', style: small),
           for (final l in c.lines)

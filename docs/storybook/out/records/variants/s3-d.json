@@ -1,0 +1,70 @@
+{
+ "scene": "s3",
+ "order": 4,
+ "name": "Fuel: no card earns",
+ "wires": [
+  {
+   "cap": "Checkout Advisor",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  BPCL",
+     "filled": true
+    },
+    {
+     "t": "input",
+     "text": "Amount  ₹2,000",
+     "filled": true
+    },
+    {
+     "t": "big",
+     "kind": "fail",
+     "title": "No card earns here",
+     "lines": [
+      "No card earns on this fuel payment (fuel is excluded).",
+      "Pay with any card."
+     ],
+     "pill": "₹0",
+     "hl": "none"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "app",
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay BPCL ₹2,000",
+   "what": "BPCL resolves to the fuel category, in-store.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "eng",
+   "l": "excluded:fuel on both cards",
+   "what": "Both banks' terms exclude fuel; the quotes are in each card's exclusions.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "app",
+   "l": "reward ₹0, 'fuel is excluded'",
+   "what": "The app says so plainly instead of pretending one card wins.",
+   "t": "OLD",
+   "res": true,
+   "hl": "none"
+  }
+ ]
+}

@@ -28,6 +28,11 @@ class AppState extends ChangeNotifier {
   Me? me;
   Object? bootError;
 
+  /// Notice board and available credit; refreshed whenever user data changes.
+  List<Notice>? notices;
+  Object? noticesError;
+  List<Credit>? credit;
+
   /// Bumped whenever holdings/spends/profile change so dependent screens reload.
   int dataVersion = 0;
 
@@ -46,6 +51,36 @@ class AppState extends ChangeNotifier {
 
   Map<String, CardSummary> get cardsById => {for (final c in cards ?? const <CardSummary>[]) c.id: c};
   String cardName(String id) => cardsById[id]?.name ?? id;
+  Map<String, Credit> get creditByCard => {for (final c in credit ?? const <Credit>[]) c.cardId: c};
+  int get attentionCount => notices?.where((n) => n.needsAttention).length ?? 0;
+
+  /// Memberships that matter for the cards the user holds, in catalogue order.
+  List<Membership> get relevantMemberships {
+    final out = <String, Membership>{};
+    for (final h in me?.holdings ?? const <Holding>[]) {
+      for (final m in cardsById[h.cardId]?.memberships ?? const <Membership>[]) {
+        out.putIfAbsent(m.key, () => meta?.membership(m.key) ?? m);
+      }
+    }
+    return out.values.toList();
+  }
+
+  /// Re-reads the notice board and credit. Failures stay on the board's own error
+  /// state instead of interrupting whatever the user is doing.
+  Future<void> refreshUserData() async {
+    if (userId == null || me == null) return;
+    final a = api;
+    try {
+      notices = await a.notices();
+      noticesError = null;
+    } catch (e) {
+      noticesError = e;
+    }
+    try {
+      credit = await a.credit();
+    } catch (_) {/* credit panel shows "—" */}
+    notifyListeners();
+  }
 
   /// Loads catalogue data and, if we have a user, their state. A user unknown to
   /// the server (e.g. after a reseed) is forgotten so onboarding starts again.
@@ -59,6 +94,7 @@ class AppState extends ChangeNotifier {
       if (userId != null) {
         try {
           me = await a.me();
+          await refreshUserData();
         } on ApiException catch (e) {
           if (!e.unknownUser) rethrow;
           await _setUser(null);
@@ -74,6 +110,7 @@ class AppState extends ChangeNotifier {
   void bumpData() {
     dataVersion++;
     notifyListeners();
+    refreshUserData();
   }
 
   Future<void> refreshCatalogue() async {
@@ -84,6 +121,8 @@ class AppState extends ChangeNotifier {
   Future<void> _setUser(String? id) async {
     userId = id;
     me = null;
+    notices = null;
+    credit = null;
     if (id == null) {
       await _prefs.remove(_kUserId);
     } else {
@@ -118,9 +157,30 @@ class AppState extends ChangeNotifier {
     me = await f;
     dataVersion++;
     notifyListeners();
+    await refreshUserData();
   }
 
-  Future<void> saveHoldings(List<Holding> h) => _apply(api.putHoldings(h));
+  /// Pools first: holdings may reference a pool created in the same edit.
+  Future<void> saveHoldings(List<Holding> h, {List<Pool>? pools, List<String>? flags}) async {
+    final a = api;
+    if (pools != null) await a.putPools(pools);
+    if (flags != null && me != null) {
+      final p = me!.profile;
+      await a.putProfile(Profile(
+        flags: flags,
+        scoreBand: p.scoreBand,
+        incomeBand: p.incomeBand,
+        rewardPreference: p.rewardPreference,
+        maxAnnualFeePaise: p.maxAnnualFeePaise,
+      ));
+    }
+    await _apply(a.putHoldings(h));
+  }
+
+  Future<void> billPaid(String cardId, {int? amountPaise}) async {
+    credit = await api.billPaid(cardId, amountPaise: amountPaise);
+    bumpData();
+  }
   Future<void> saveSpends(Map<String, int> s) => _apply(api.putSpends(s));
   Future<void> saveProfile(Profile p) => _apply(api.putProfile(p));
 }

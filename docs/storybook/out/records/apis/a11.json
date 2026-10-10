@@ -1,0 +1,10 @@
+{
+ "order": 11,
+ "call": "POST /me/cards/{id}/bill-paid",
+ "owner": "Ledger",
+ "gives": "record a repayment",
+ "tag": "NEW",
+ "steps": [
+  5
+ ]
+}

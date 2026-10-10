@@ -1,0 +1,76 @@
+{
+ "scene": "s6",
+ "order": 2,
+ "name": "A new card that would break a milestone",
+ "wires": [
+  {
+   "cap": "Card Finder",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Add Axis ACE?"
+    },
+    {
+     "t": "kv",
+     "rows": [
+      {
+       "k": "Greedy routing",
+       "v": "−₹2,800/yr"
+      },
+      {
+       "k": "Fee- and milestone-aware",
+       "v": "+₹360/yr",
+       "total": true
+      }
+     ],
+     "hl": "ace"
+    },
+    {
+     "t": "msg",
+     "kind": "note",
+     "text": "Moving groceries to ACE would drop Millennia below ₹1 lakh a quarter and lose its ₹1,000 voucher four times a year."
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "api",
+   "to": "eng",
+   "l": "greedy: ACE wins grocery chunks",
+   "what": "1.5% on ACE beats Millennia's 1% chunk by chunk…",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "eng",
+   "to": "eng",
+   "l": "Millennia falls below ₹1 lakh/quarter",
+   "what": "…so Millennia misses its quarterly voucher milestone: −₹4,000 a year.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "eng",
+   "to": "eng",
+   "l": "refine from 'route as before'",
+   "what": "A second start routes exactly as the held cards did; hill-climbing then moves only lines that pay off.",
+   "t": "MOD"
+  },
+  {
+   "id": "m4",
+   "f": "eng",
+   "to": "api",
+   "l": "ACE +₹360/yr",
+   "what": "Adding a card can never score below your current stack minus its fee. Checked by test_adding_a_card_never_costs_more_than_its_fee.",
+   "t": "MOD",
+   "res": true,
+   "hl": "ace"
+  }
+ ]
+}

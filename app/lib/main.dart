@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/cards.dart';
 import 'screens/finder.dart';
 import 'screens/market.dart';
+import 'screens/notices.dart';
 import 'screens/pay.dart';
 import 'screens/profile.dart';
 import 'state.dart';
@@ -57,6 +58,7 @@ class CcSmithApp extends StatelessWidget {
         darkTheme: _theme(Brightness.dark),
         themeMode: ThemeMode.system,
         home: const RootGate(),
+        routes: {'/profile': (_) => const ProfileScreen()},
       );
 }
 
@@ -105,23 +107,28 @@ class _HomeShellState extends State<HomeShell> {
 
   @override
   Widget build(BuildContext context) {
+    final attention = AppScope.of(context).attentionCount;
     return Scaffold(
       body: IndexedStack(index: _tab, children: [
         const PayScreen(),
+        const NoticesScreen(),
         const FinderScreen(),
         const CardsScreen(),
         const MarketScreen(),
-        const ProfileScreen(),
       ]),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _tab,
         onDestinationSelected: goTo,
-        destinations: const [
+        destinations: [
           NavigationDestination(icon: Icon(Icons.point_of_sale_outlined), selectedIcon: Icon(Icons.point_of_sale), label: 'Pay'),
+          NavigationDestination(
+            icon: Badge(isLabelVisible: attention > 0, label: Text('$attention'), child: const Icon(Icons.notifications_outlined)),
+            selectedIcon: Badge(isLabelVisible: attention > 0, label: Text('$attention'), child: const Icon(Icons.notifications)),
+            label: 'Notices',
+          ),
           NavigationDestination(icon: Icon(Icons.auto_awesome_outlined), selectedIcon: Icon(Icons.auto_awesome), label: 'Finder'),
           NavigationDestination(icon: Icon(Icons.credit_card_outlined), selectedIcon: Icon(Icons.credit_card), label: 'Cards'),
           NavigationDestination(icon: Icon(Icons.radar_outlined), selectedIcon: Icon(Icons.radar), label: 'Market'),
-          NavigationDestination(icon: Icon(Icons.person_outline), selectedIcon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
     );

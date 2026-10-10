@@ -1,0 +1,9 @@
+{
+ "order": 5,
+ "q": "Premium tier?",
+ "options": [
+  "Yes, plan it",
+  "Not now"
+ ],
+ "affects": "Business model"
+}

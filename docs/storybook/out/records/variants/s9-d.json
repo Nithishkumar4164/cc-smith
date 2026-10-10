@@ -1,0 +1,50 @@
+{
+ "scene": "s9",
+ "order": 4,
+ "name": "Budget reached or nothing recorded",
+ "wires": [
+  {
+   "cap": "Error",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Launch Radar"
+    },
+    {
+     "t": "msg",
+     "kind": "crit",
+     "text": "flow launch_radar envelope reached (45/45)",
+     "hl": "err"
+    },
+    {
+     "t": "msg",
+     "kind": "warn",
+     "text": "no recorded response for this search (replay)"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "gw",
+  "web"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "gw",
+   "to": "gw",
+   "l": "BudgetExceeded",
+   "what": "Hourly, monthly or the flow's envelope; the 50-search demo reserve can only be spent by raising an envelope on purpose.",
+   "t": "OLD",
+   "hl": "err"
+  },
+  {
+   "id": "m2",
+   "f": "gw",
+   "to": "gw",
+   "l": "ReplayMissing in replay mode",
+   "what": "Without keys every search must have a recorded fixture; HDFC and ICICI ads are skipped for this reason.",
+   "t": "OLD"
+  }
+ ]
+}

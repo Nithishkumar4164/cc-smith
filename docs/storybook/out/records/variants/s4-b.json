@@ -1,0 +1,51 @@
+{
+ "scene": "s4",
+ "order": 2,
+ "name": "Offer exists but not for you",
+ "wires": [
+  {
+   "cap": "Bank offers here",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Bank offers here"
+    },
+    {
+     "t": "muted",
+     "text": "No offers for the cards you hold at Myntra today."
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "api",
+  "off"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "api",
+   "to": "off",
+   "l": "offers at myntra",
+   "what": "Myntra has a 6% offer for Tata Neu Infinity and a 20% offer for the HSBC Taj card.",
+   "t": "OLD"
+  },
+  {
+   "id": "m2",
+   "f": "off",
+   "to": "off",
+   "l": "filter by your cards and date",
+   "what": "Neither card is held; and after 25 Oct 2026 the HDFC offers drop out too (tested with the date set to 26 Oct).",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "off",
+   "to": "api",
+   "l": "nothing to show",
+   "what": "The screen says no offers for your cards here today, rather than showing offers you can't use.",
+   "t": "OLD",
+   "res": true
+  }
+ ]
+}
