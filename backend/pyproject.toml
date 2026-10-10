@@ -9,11 +9,16 @@ requires-python = ">=3.12"
 dependencies = [
     "anthropic>=1.12.1",
     "apscheduler>=3.11.3",
+    "cryptography>=50.0.2",
     "fastapi>=0.142.4",
+    "google-api-python-client>=2.201.0",
+    "google-auth-oauthlib>=1.5.0",
     "httpx>=0.28.1",
     "pdfplumber>=0.11.10",
+    "playwright>=1.63.0",
     "pydantic>=2.13.5",
     "pydantic-settings>=2.15.0",
+    "python-multipart>=0.0.32",
     "pyyaml>=6.0.3",
     "rapidfuzz>=3.14.6",
     "sqlalchemy>=2.1.4",
@@ -30,6 +35,7 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
+    "fpdf2>=2.8.9",
     "hypothesis>=6.168.5",
     "pytest>=9.1.1",
     "ruff>=0.16.10",

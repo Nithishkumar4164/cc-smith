@@ -210,7 +210,7 @@ class _PayScreenState extends State<PayScreen> {
         ]),
         if (_result != null) ...[
           const SizedBox(height: 24),
-          _ResultView(result: _result!, request: _request!, confirmed: _confirmed, onConfirm: _confirm),
+          _ResultView(result: _result!, request: _request!, confirmed: _confirmed, onConfirm: _confirm, onRerun: _ask),
         ] else if (!_busy) ...[
           const SizedBox(height: 32),
           _Hint(heldCount: app.me?.holdings.length ?? 0),
@@ -248,7 +248,19 @@ class _ResultView extends StatelessWidget {
   final _PayRequest request;
   final Set<String> confirmed;
   final void Function(PayOption) onConfirm;
-  const _ResultView({required this.result, required this.request, required this.confirmed, required this.onConfirm});
+  final VoidCallback onRerun;
+  const _ResultView(
+      {required this.result, required this.request, required this.confirmed, required this.onConfirm, required this.onRerun});
+
+  Widget _asks(PayOption o) => Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        for (final a in o.ifAnswered)
+          ConditionAsk(
+            Condition(key: a.key, question: a.question),
+            lead: '${rupees(a.rewardPaise)} on ${o.name} if yes',
+            showWhy: false,
+            onAnswered: onRerun,
+          ),
+      ]);
 
   @override
   Widget build(BuildContext context) {
@@ -325,6 +337,7 @@ class _ResultView extends StatelessWidget {
               const SizedBox(height: 8),
               _ReasonChips(best.reasonCodes),
             ],
+            if (best != null && best.ifAnswered.isNotEmpty) _asks(best),
             if (best != null) ...[
               const SizedBox(height: 16),
               Row(children: [
@@ -364,11 +377,13 @@ class _ResultView extends StatelessWidget {
                 child: Text('${i + 1}', style: TextStyle(fontSize: 12, color: o.cardId == best?.cardId ? s.onPrimary : s.onSurface)),
               ),
               title: Text(o.name),
-              subtitle: o.notes.isNotEmpty
-                  ? Text(o.notes.join(' · '), style: t.textTheme.bodySmall)
-                  : (o.reasonCodes.isEmpty
-                      ? null
-                      : Padding(padding: const EdgeInsets.only(top: 4), child: _ReasonChips(o.reasonCodes))),
+              subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                if (o.notes.isNotEmpty)
+                  Text(o.notes.join(' · '), style: t.textTheme.bodySmall)
+                else if (o.reasonCodes.isNotEmpty)
+                  Padding(padding: const EdgeInsets.only(top: 4), child: _ReasonChips(o.reasonCodes)),
+                if (o.cardId != best?.cardId && o.ifAnswered.isNotEmpty) _asks(o),
+              ]),
               trailing: Row(mainAxisSize: MainAxisSize.min, children: [
                 Money(o.rewardPaise),
                 PopupMenuButton<String>(
@@ -413,11 +428,19 @@ class _OfferCard extends StatelessWidget {
           if (!o.isFact) const Padding(padding: EdgeInsets.only(top: 8), child: SpeculationPill()),
           const SizedBox(height: 6),
           if (cards.isNotEmpty) Text('With your ${cards.join(', ')}', style: t.textTheme.bodySmall),
-          if (o.estSavingPaise != null)
+          if (o.upToPaise != null)
+            Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: Money(o.upToPaise!, suffix: ' off at most', style: t.textTheme.titleSmall),
+            )
+          else if (o.estSavingPaise != null)
             Padding(
               padding: const EdgeInsets.only(top: 4),
               child: Money(o.estSavingPaise!, suffix: ' off this payment (about)', style: t.textTheme.titleSmall),
             ),
+          if (o.upToPaise != null)
+            Text('Up to ${rupees(o.upToPaise!)} — the actual discount depends on the offer terms.',
+                style: t.textTheme.labelSmall?.copyWith(color: s.onSurfaceVariant)),
           if (facts.isNotEmpty)
             Text(facts.join(' · '), style: t.textTheme.labelSmall?.copyWith(color: s.onSurfaceVariant)),
           if (o.source != null) SourceList(refs: [o.source!], label: o.isFact ? 'Source' : 'Reference'),

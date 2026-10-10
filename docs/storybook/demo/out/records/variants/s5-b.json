@@ -1,0 +1,107 @@
+{
+ "scene": "s5",
+ "order": 2,
+ "name": "Card Finder, first visit",
+ "wires": [
+  {
+   "cap": "Card Finder · first visit",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Card Finder"
+    },
+    {
+     "t": "text",
+     "text": "Before we look for new cards: what kind of rewards do you want, and how much annual fee would you pay?"
+    },
+    {
+     "t": "chips",
+     "items": [
+      "Any",
+      "Cashback",
+      "Points"
+     ],
+     "on": 1,
+     "hl": "prefs"
+    },
+    {
+     "t": "chips",
+     "items": [
+      "Free only",
+      "Up to ₹1,000",
+      "Up to ₹5,000",
+      "Any"
+     ],
+     "on": 1
+    },
+    {
+     "t": "btn",
+     "text": "Find my best cards",
+     "kind": "primary"
+    }
+   ]
+  },
+  {
+   "cap": "Card Finder",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Card Finder"
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Your cards today",
+       "value": "₹32,800/yr net",
+       "sub": "rewards + milestones − fees",
+       "tone": "lav"
+      },
+      {
+       "label": "Best move",
+       "value": "+₹5,912/yr",
+       "sub": "add Swiggy BLCK",
+       "tone": "lime",
+       "vt": "good"
+      }
+     ],
+     "hl": "sets"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "eng"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "picks reward type and fee limit",
+   "what": "Asked once, here, instead of during onboarding. The tune icon edits it later.",
+   "t": "NEW",
+   "hl": "prefs"
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "PUT /me/profile",
+   "what": "Saves reward_preference and max_annual_fee.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "app",
+   "to": "api",
+   "l": "POST /finder",
+   "what": "Ranks the 1 to 3 cards that add the most a year, including launches the radar confirmed.",
+   "t": "OLD",
+   "hl": "sets"
+  }
+ ]
+}

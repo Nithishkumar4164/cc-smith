@@ -1,0 +1,10 @@
+{
+ "order": 4,
+ "call": "google (site:bank domain)",
+ "owner": "SerpApi",
+ "gives": "The bank's official page or terms PDF for a lead",
+ "tag": "NEW",
+ "steps": [
+  4
+ ]
+}

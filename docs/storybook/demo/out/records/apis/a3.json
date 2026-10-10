@@ -1,0 +1,10 @@
+{
+ "order": 3,
+ "call": "google_ads_transparency_center_ad_details",
+ "owner": "SerpApi",
+ "gives": "The ad creative image, read with vision",
+ "tag": "NEW",
+ "steps": [
+  3
+ ]
+}

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
@@ -5,10 +7,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'api.dart';
 import 'models.dart';
+import 'notifications.dart';
 
 const _kBaseUrl = 'base_url';
 const _kUserId = 'user_id';
 const _kOnboardedUser = 'onboarded_user';
+const _kFinderPrefsUser = 'finder_prefs_user';
 
 /// Build-time override: `flutter build apk --dart-define=CC_SMITH_API=http://10.0.2.2:8001`.
 const _apiOverride = String.fromEnvironment('CC_SMITH_API');
@@ -36,6 +40,8 @@ class AppState extends ChangeNotifier {
   /// Bumped whenever holdings/spends/profile change so dependent screens reload.
   int dataVersion = 0;
 
+  late final NotificationCapture notificationCapture = NotificationCapture(_prefs, () => api);
+
   AppState(this._prefs, {http.Client? client}) : _client = client {
     baseUrl = _prefs.getString(_kBaseUrl) ?? defaultBaseUrl();
     userId = _prefs.getString(_kUserId);
@@ -43,6 +49,14 @@ class AppState extends ChangeNotifier {
 
   Api get api => Api(baseUrl, userId: userId, client: _client);
   bool get onboarded => userId != null && me != null && _prefs.getString(_kOnboardedUser) == userId;
+
+  /// Reward type and fee ceiling are asked once, the first time Card Finder opens.
+  bool get finderPrefsSet => userId != null && _prefs.getString(_kFinderPrefsUser) == userId;
+
+  Future<void> markFinderPrefsSet() async {
+    await _prefs.setString(_kFinderPrefsUser, userId!);
+    notifyListeners();
+  }
 
   Future<void> completeOnboarding() async {
     await _prefs.setString(_kOnboardedUser, userId!);
@@ -95,6 +109,7 @@ class AppState extends ChangeNotifier {
         try {
           me = await a.me();
           await refreshUserData();
+          unawaited(notificationCapture.start());
         } on ApiException catch (e) {
           if (!e.unknownUser) rethrow;
           await _setUser(null);
@@ -176,6 +191,11 @@ class AppState extends ChangeNotifier {
     }
     await _apply(a.putHoldings(h));
   }
+
+  Map<String, bool> get answers => me?.answers ?? const {};
+
+  /// Yes / No / clear (null) for a condition; re-reads everything that depends on it.
+  Future<void> answer(String key, bool? value) => _apply(api.putAnswers({key: value}));
 
   Future<void> billPaid(String cardId, {int? amountPaise}) async {
     credit = await api.billPaid(cardId, amountPaise: amountPaise);

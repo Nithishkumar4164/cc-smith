@@ -13,9 +13,241 @@
     "annual_paise": 49900,
     "waiver_spend_paise": 10000000
   },
-  "earn_rules": [],
-  "caps": [],
-  "exclusions": [],
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+        "quote": "4 Reward Points = Re 1"
+      }
+    ],
+    "kind": "points",
+    "name": "SBI Card Reward Points",
+    "value_paise": 25
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+          "quote": "Earn 10X Reward Points on online spends with exclusive partners: Apollo 24x7, BookMyShow, Cleartrip, Dominos, IGP, Myntra, Netmeds, Swiggy, Yatra, Gyftr, Tata Cliq"
+        },
+        {
+          "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+          "quote": "Earn 1 Reward Point per Rs. 100 on all other spends"
+        }
+      ],
+      "id": "partner_10x",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "apollo_24x7",
+          "bookmyshow",
+          "cleartrip",
+          "dominos",
+          "igp",
+          "myntra",
+          "netmeds",
+          "swiggy",
+          "yatra",
+          "gyftr",
+          "tatacliq"
+        ],
+        "channels": [
+          "online"
+        ]
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 10,
+        "per_paise": 10000
+      },
+      "cap_ids": [
+        "partner_10x"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "10X of the 1 RP per Rs. 100 base. Product page lists Swiggy; the Apr 2025 notice moved it to 5X."
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+          "quote": "Earn 5X Reward Points on all other online spends"
+        },
+        {
+          "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+          "quote": "Earn 1 Reward Point per Rs. 100 on all other spends"
+        }
+      ],
+      "id": "online_5x",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": [
+          "online"
+        ]
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 5,
+        "per_paise": 10000
+      },
+      "cap_ids": [
+        "online_5x"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+          "quote": "Earn 1 Reward Point per Rs. 100 on all other spends"
+        }
+      ],
+      "id": "base",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 1,
+        "per_paise": 10000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/en/customer-notices.page",
+          "quote": "Cumulative 10X Reward Points accrued on online spends with exclusive partners on your SimplyCLICK SBI Card will have a capping of 10,000 Reward Points per month."
+        }
+      ],
+      "id": "partner_10x",
+      "amount": 10000,
+      "unit": "points",
+      "period": "calendar_month",
+      "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf",
+          "quote": "5X Reward Points are applicable for all online spends made other than on | exclusive partner brands and will be capped at 10,000 Reward Points per | calendar month. Post that, every Rs.100 spent will accrue 1 Reward Point."
+        }
+      ],
+      "id": "online_5x",
+      "amount": 10000,
+      "unit": "points",
+      "period": "calendar_month",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf",
+          "quote": "Cash Advance, Balance Transfer, Encash, Flexipay and Offline Fuel transaction | (5172, 5541, 5983, 5542) are not included in Reward Points program."
+        }
+      ],
+      "categories": [
+        "fuel"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf",
+          "quote": "e-Wallet loading transactions done using SimplyCLICK SBI Card on any partner | brand website/app identified under MCCs 6540 and 6541 (on best effort basis) | will not accrue Reward Points."
+        }
+      ],
+      "categories": [
+        "wallet"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf",
+          "quote": "W.e.f. 01 Apr 2024, accrual of Reward Points on Rent Payment transactions with | SimplyCLICK will be discontinued."
+        }
+      ],
+      "categories": [
+        "rent"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf",
+          "quote": "W.e.f. 01 Jun 2024, accrual of Reward Points on Govt Related transactions with | SimplyCLICK will be discontinued."
+        }
+      ],
+      "categories": [
+        "government"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf",
+          "quote": "W.e.f. 1 Dec 2024, accrual of Reward Points on spends done on Digital Gaming | Platforms/Merchants with SimplyCLICK will be discontinued."
+        }
+      ],
+      "categories": [
+        "gaming"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf",
+          "quote": "10X Reward Points on e-Gift Voucher purchases shall be applicable only on | transactions made at GyFTR portal using SimplyCLICK Credit Card."
+        }
+      ],
+      "categories": [
+        "gift_card"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [
+        "gyftr"
+      ],
+      "rule_ids": [
+        "partner_10x"
+      ]
+    }
+  ],
   "milestones": [],
   "min_txn_src": []
 }

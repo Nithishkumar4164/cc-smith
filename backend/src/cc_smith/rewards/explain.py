@@ -70,7 +70,11 @@ def option_notes(card, reward) -> list[str]:
         if rule is None:
             continue
         note = f"{_rate(card, rule)} on {_scope(rule)}" + (" (bonus)" if rule.stacks else "")
-        if line.capped:
+        multiple = next((c for c in card.caps if c.id in rule.cap_ids and c.unit == "base_multiple"), None)
+        if line.capped and multiple:
+            times = {100: "the", 200: "twice the", 300: "three times the"}.get(multiple.amount, f"{multiple.amount / 100:g}x the")
+            note += f" — capped at {times} base cashback earned this month; spend more on other things to unlock more"
+        elif line.capped:
             note += " — cap reached"
         notes.append(note)
     for code in reward.reason_codes:
@@ -138,8 +142,11 @@ def offer_hint(best, eligible, offer_views) -> str:
                 total = by_card[cid].reward_paise + ov.est_saving_paise
                 if total > best.reward_paise and (top is None or total > top[0]):
                     top = (total, by_card[cid], ov)
+    up_to = next((ov for ov in offer_views if ov.tier == "fact" and ov.up_to_paise and best.card_id in ov.card_ids), None)
+    # "Up to" offers never join a combined figure: their real value is unknown.
+    tail = f" Bank offer on this card: up to {rupees(up_to.up_to_paise)} ({up_to.title}); check the offer terms." if up_to else ""
     if top is None:
-        return ""
+        return tail
     total, card, ov = top
     if card.card_id == best.card_id:
         return f" Bank offer on this card too: {ov.title} (about {rupees(ov.est_saving_paise)})."

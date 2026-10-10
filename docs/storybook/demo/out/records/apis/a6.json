@@ -1,0 +1,10 @@
+{
+ "order": 6,
+ "call": "GET /ops/credits",
+ "owner": "API",
+ "gives": "Live and cached SerpApi calls by flow",
+ "tag": "OLD",
+ "steps": [
+  6
+ ]
+}

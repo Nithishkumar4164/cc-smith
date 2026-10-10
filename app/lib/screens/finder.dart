@@ -6,7 +6,8 @@ import '../models.dart';
 import '../state.dart';
 import '../widgets.dart';
 import 'card_detail.dart';
-import 'profile.dart';
+import 'budget.dart';
+import 'editors.dart';
 
 /// Card Finder: the 1–3 new cards that add the most rupees a year.
 class FinderScreen extends StatefulWidget {
@@ -32,19 +33,41 @@ class _FinderScreenState extends State<FinderScreen> {
 
   void _load() => setState(() => _future = AppScope.read(context).api.finder(maxNew: _maxNew));
 
-  void _editSpends() => Navigator.of(context).push(MaterialPageRoute(
+  void _editSpends() => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const BudgetScreen()));
+
+  void _editPrefs() => Navigator.of(context).push(MaterialPageRoute(
         builder: (ctx) => Scaffold(
-          appBar: AppBar(title: const Text('Monthly spends')),
-          body: SpendsEditor(actionLabel: 'Save', onSaved: () => Navigator.of(ctx).pop()),
+          appBar: AppBar(title: const Text('Finder preferences')),
+          body: PreferencesEditor(actionLabel: 'Save', memberships: false, onSaved: () => Navigator.of(ctx).pop()),
         ),
       ));
 
   @override
   Widget build(BuildContext context) {
+    if (!AppScope.of(context).finderPrefsSet) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('Card Finder'), actions: const [ProfileAction()]),
+        body: Column(children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+            child: Text('Before we look for new cards: what kind of rewards do you want, and how much annual fee would you pay?',
+                style: Theme.of(context).textTheme.titleMedium),
+          ),
+          Expanded(
+            child: PreferencesEditor(
+              actionLabel: 'Find my best cards',
+              memberships: false,
+              onSaved: () => AppScope.read(context).markFinderPrefsSet(),
+            ),
+          ),
+        ]),
+      );
+    }
     return Scaffold(
       appBar: AppBar(
         title: const Text('Card Finder'),
         actions: [
+          IconButton(onPressed: _editPrefs, tooltip: 'Finder preferences', icon: const Icon(Icons.tune)),
           TextButton.icon(onPressed: _editSpends, icon: const Icon(Icons.edit_outlined, size: 18), label: const Text('Spends')),
           const ProfileAction(),
         ],
@@ -269,6 +292,8 @@ class _CardBreakdown extends StatelessWidget {
               padding: const EdgeInsets.only(top: 6),
               child: Wrap(spacing: 6, runSpacing: 4, children: [for (final o in feeOffers) FeeOfferPill(o)]),
             ),
+          for (final c in {for (final o in feeOffers) for (final r in o.requires) r.key: r}.values)
+            if (AppScope.of(context).answers[c.key] == null) ConditionAsk(c),
           const SizedBox(height: 8),
           if (c.lines.isEmpty) Text('No spends routed to this card', style: small),
           for (final l in c.lines)

@@ -8,9 +8,12 @@ from cc_smith.ops.outbox import drain
 
 
 def test_seed_cards_publish_as_facts_from_recorded_evidence(db, cards):
+    # Scapia's exclusions are only in a Scapia-hosted copy; the bank's page is bot-walled.
+    expected = {("scapia_federal", "exclusions")}
     for c in cards.values():
         r = profile_card(c)
-        assert "speculation" not in r.summary(), (c.id, [f for f in r.fields if f.outcome == "speculation"])
+        spec = {(c.id, f.field) for f in r.fields if f.outcome == "speculation"}
+        assert spec <= expected, (c.id, [f for f in r.fields if f.outcome == "speculation"])
     with db.begin() as conn:
         prof, meta = store.profile(conn, "hdfc_regalia_gold")
     assert prof.assessable()
@@ -109,3 +112,15 @@ def test_rollback_restores_previous_version(db, cards, monkeypatch):
     with db.begin() as conn:
         assert store.rollback(conn, c.id, "fees", "re-check mismatch")
         assert store.current(conn, c.id, "fees").value["annual_paise"] == 100_000
+
+
+def test_card_with_unconfirmed_exclusions_is_not_scored(db, cards):
+    """Earn rules are facts but exclusions failed the checks: scoring would let the card
+    earn on fuel or rent, so it stays 'can't assess yet' until they are confirmed."""
+    bad = cards["hdfc_millennia"].model_copy(deep=True)
+    bad.exclusions[0].src[0].url = "https://www.paisabazaar.com/hdfc-millennia"
+    profile_card(bad)
+    with db.begin() as conn:
+        prof, meta = store.profile(conn, "hdfc_millennia")
+    assert not prof.assessable()
+    assert meta["earn_rules"]["blocked"] == "exclusions not confirmed"

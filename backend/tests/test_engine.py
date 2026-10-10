@@ -95,4 +95,29 @@ def test_reward_never_negative_and_cap_use_bounded(cards, amount, category):
         r = reward(card, Purchase(amount, category))
         assert r.value_paise >= 0
         for cid, used in r.cap_use.items():
-            assert used <= card.cap(cid).amount
+            if cid.startswith("earned:"):  # base-rule counter for base-multiple caps, not a cap
+                continue
+            cap = card.cap(cid)
+            if cap.unit != "base_multiple":
+                assert used <= cap.amount
+
+
+def test_airtel_bill_cap_is_twice_the_months_base_cashback(cards):
+    """Axis: 25% on Airtel bills 'capped at twice the base cashback earned during the
+    statement month'; the base is 1% on other spends."""
+    at = cards["axis_airtel"]
+    bill = Purchase(999 * R, "utilities", "airtel", "online")
+    assert reward(at, bill).value_paise == 0  # nothing earned at 1% yet, so the cap is ₹0
+    other = reward(at, Purchase(2_000 * R, "other"))
+    assert other.value_paise == 20 * R and other.cap_use == {"earned:other": 20 * R}
+    capped = reward(at, bill, other.cap_use)
+    assert capped.value_paise == 40 * R  # 2 x ₹20, not 25% of ₹999
+    assert "capped:airtel" in capped.reason_codes
+    plenty = reward(at, bill, {"earned:other": 200 * R})
+    assert plenty.value_paise == 24975  # 25% of ₹999 fits under 2 x ₹200
+
+
+def test_airtel_utilities_cap_is_once_the_base(cards):
+    at = cards["axis_airtel"]
+    r = reward(at, Purchase(2_000 * R, "utilities", "airtel_thanks_bills", "online"), {"earned:other": 50 * R})
+    assert r.value_paise == 50 * R

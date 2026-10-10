@@ -32,11 +32,14 @@ def cap_used(conn: Connection, uid: str, card: CardProfile, statement_day: int |
     today = today or datetime.now(UTC).date()
     used: dict[str, int] = {}
     starts = {c.id: _period_start(c.period, today, statement_day) for c in card.caps}
+    for c in card.caps:
+        if c.unit == "base_multiple" and c.of_rule:
+            starts[f"earned:{c.of_rule}"] = starts[c.id]
     if not starts:
         return used
     earliest = min(starts.values())
     rows = conn.execute(select(txn.c.cap_use, txn.c.ts).where(and_(
-        txn.c.user_id == uid, txn.c.card_id == card.id, txn.c.superseded_by.is_(None),
+        txn.c.user_id == uid, txn.c.card_id == card.id, txn.c.superseded_by.is_(None), txn.c.source.not_like("demo_%"),
         txn.c.ts >= datetime.combine(earliest, datetime.min.time(), UTC),
     ))).all()
     for r in rows:

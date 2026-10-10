@@ -111,6 +111,14 @@ def _quotes_text(item) -> str:
     return normalise(" ".join(s["quote"].replace(" | ", " ") for s in _sources(item)))
 
 
+# How issuers write "N times the base cashback" (amount is the multiple x 100).
+_MULTIPLE_FORMS = {
+    100: {"capped at the base cashback", "1x the base", "equal to the base cashback"},
+    200: {"twice the base cashback", "2x the base", "2 times the base", "double the base"},
+    300: {"thrice the base cashback", "3x the base", "3 times the base"},
+}
+
+
 def _value_problems(name: str, value) -> list[str]:
     """Each number we publish must be written in its own quote, so a misread value
     cannot pass on the strength of a quote that says something else."""
@@ -128,6 +136,9 @@ def _value_problems(name: str, value) -> list[str]:
                 need(_amount_forms(v // 100), text, k)
     elif name == "caps":
         for c in value:
+            if c["unit"] == "base_multiple":
+                need(_MULTIPLE_FORMS.get(c["amount"], {"__none__"}), _quotes_text(c), f"cap {c['id']}")
+                continue
             amount = c["amount"] // 100 if c["unit"] in ("paise", "spend_paise") else c["amount"]
             need(_amount_forms(amount), _quotes_text(c), f"cap {c['id']}")
     elif name == "earn_rules":

@@ -13,6 +13,8 @@ import re
 from dataclasses import dataclass, field
 from functools import lru_cache
 
+from rapidfuzz import fuzz
+
 from cc_smith.config import REPO
 from cc_smith.knowledge import allowlist
 from cc_smith.knowledge.discover import issuer_tokens
@@ -23,7 +25,13 @@ _CARD = re.compile(r"\bcards?\b", re.IGNORECASE)
 # Card-adjacent launches that are not a new credit card (live run R17: ~9 Apple Pay stories).
 _NOISE = re.compile(
     r"\b(apple pay|google wallet|samsung wallet|tap to pay|debit cards?|prepaid|forex cards?|gift cards?|upi lite|"
-    r"credit line on upi|fd[- ]backed loan|insurance|mutual fund|stocks?|shares?|ipo)\b", re.IGNORECASE)
+    r"credit line on upi|fd[- ]backed loan|insurance|mutual fund|stocks?|shares?|ipo|e-debit|"
+    r"savings accounts?|current accounts?|salary accounts?|home loans?|personal loans?|car loans?)\b", re.IGNORECASE)
+
+
+def is_noise(text: str) -> bool:
+    """Not a new credit card: wallets, debit/prepaid/forex cards, bank accounts, loans."""
+    return bool(_NOISE.search(text))
 _NETWORKS = {"visa", "mastercard", "rupay", "amex", "american", "express", "diners", "club"}
 _GENERIC = {
     "credit", "card", "cards", "bank", "the", "and", "with", "new", "launch", "launches", "launched", "india", "indian",
@@ -47,12 +55,11 @@ ISSUER_NAMES = {
     "indusind": "IndusInd Bank", "rbl": "RBL Bank", **EXTRA_ISSUERS,
 }
 
-# Seed cards whose names in seed-cards.md cover more than one product (row 15: Scapia
-# runs on Federal, BOBCARD and, since 3 Sep 2026, Axis). They are known, not launches.
-SEED_ALIASES: list[tuple[str, str, str]] = [
-    ("scapia_federal", "Scapia Axis Bank Credit Card", "Axis Bank"),
-    ("scapia_federal", "Scapia BOBCARD Credit Card", "BOBCARD"),
-]
+# Seed cards listed under another name. Empty on purpose: a co-brand on a different
+# issuer (Scapia on Axis vs Federal) is a separate card under DR-4's variant route,
+# matched on issuer + family + variant, never on the co-brand name alone.
+SEED_ALIASES: list[tuple[str, str, str]] = []
+SAME_LAUNCH_RATIO = 85
 
 
 @dataclass
@@ -81,14 +88,58 @@ def _issuer_words(issuer: str) -> set[str]:
     return issuer_tokens(issuer) | set(_WORD.findall(issuer_slug(issuer).replace("_", " ")))
 
 
+# Indian banking shorthand seen in launch headlines ("OD CC linked card" = overdraft and
+# cash-credit linked). "credit" is already generic, so "cc" maps to its other word.
+_ABBREV = {"od": "overdraft", "cc": "cash"}
+
+
 def name_tokens(name: str, issuer: str) -> list[str]:
     name = re.sub(r"\([^)]*\)", " ", name)
     drop = _GENERIC | _NETWORKS | _issuer_words(issuer)
-    return sorted({w for w in _WORD.findall(name.lower()) if w not in drop})
+    return sorted({_ABBREV.get(w, w) for w in _WORD.findall(name.lower()) if w not in drop})
 
 
 def dedupe_key(issuer: str, name: str) -> str:
     return f"{issuer_slug(issuer)}:{'-'.join(name_tokens(name, issuer)) or '*'}"
+
+
+def is_generic(name: str, issuer: str) -> bool:
+    """Nothing left once the issuer and generic words are removed ("SBI Credit Cards")."""
+    return not name_tokens(name, issuer)
+
+
+def specificity(name: str, issuer: str) -> int:
+    """How specific a launch name is; names that are really headlines rank lower."""
+    return len(name_tokens(name, issuer)) - (2 if _LAUNCH.match(name.strip()) else 0)
+
+
+def same_launch(issuer_a: str, name_a: str, text_a: str, issuer_b: str, name_b: str, text_b: str) -> bool:
+    """Two leads are one launch when they share an issuer and either their names are
+    near-identical (token-set similarity >= 85, which includes one name's words being a
+    subset of the other's) or one name's words all appear in the other lead's headline."""
+    if issuer_slug(issuer_a) != issuer_slug(issuer_b):
+        return False
+    ta, tb = set(name_tokens(name_a, issuer_a)), set(name_tokens(name_b, issuer_b))
+    if not ta or not tb:
+        return False
+    if fuzz.token_set_ratio(" ".join(sorted(ta)), " ".join(sorted(tb))) >= SAME_LAUNCH_RATIO:
+        return True
+    return ta <= set(name_tokens(text_b, issuer_b)) or tb <= set(name_tokens(text_a, issuer_a))
+
+
+def variant_family(issuer: str, name: str, catalogue: list[tuple[str, str, str]]) -> tuple[str, str] | None:
+    """A catalogue card from a different issuer in the same family (Scapia on Axis vs
+    Scapia on Federal): returns (card_id, family words) or None."""
+    tokens = set(name_tokens(name, issuer))
+    if not tokens:
+        return None
+    for cid, cname, cissuer in catalogue:
+        if issuer_slug(cissuer) == issuer_slug(issuer):
+            continue
+        family = set(name_tokens(cname, cissuer))
+        if family and (family <= tokens or tokens <= family):
+            return cid, " ".join(sorted(family & tokens)).title()
+    return None
 
 
 def card_id_for(issuer: str, name: str) -> str:

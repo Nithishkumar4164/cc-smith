@@ -1,0 +1,10 @@
+{
+ "order": 2,
+ "n": 2,
+ "where": "Step 2",
+ "title": "Checkout and Finder do not call SerpApi",
+ "paras": [
+  "The credit ledger shows SerpApi spend only for launch_radar. The 22 seeded cards' facts came from bank pages gathered during research.",
+  "Judges may check, so keep the SerpApi claims to Market, verification and the gateway."
+ ]
+}

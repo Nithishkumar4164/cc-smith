@@ -141,8 +141,9 @@ holding = Table(
     Column("last4", String),
     Column("statement_day", Integer),
     Column("renewal_month", Integer),
-    # standard | ltf | fyf — the user's own card may be fee-free even when the product is not.
+    # standard | ltf | fyf | custom — the user's own card may be fee-free even when the product is not.
     Column("fee_status", String, nullable=False, default="standard"),
+    Column("annual_fee_paise", Integer),  # custom: what the user pays a year, GST included
     Column("fyf_until", String),  # ISO date the free first year ends
     Column("credit_limit_paise", Integer),
     # Cards in one pool share a single limit (most banks share across your cards with them).
@@ -268,7 +269,18 @@ def make_engine(url: str | None = None):
             conn.execute("PRAGMA foreign_keys=ON")
             conn.execute("PRAGMA journal_mode=WAL")
     metadata.create_all(eng)
+    _add_missing_columns(eng)
     return eng
+
+
+def _add_missing_columns(eng) -> None:
+    """create_all never alters existing tables; add nullable columns introduced later."""
+    with eng.begin() as c:
+        for t in (holding,):
+            have = {r[1] for r in c.exec_driver_sql(f"PRAGMA table_info({t.name})")} if eng.url.get_backend_name() == "sqlite" else None
+            for col in t.columns:
+                if have is not None and have and col.name not in have and col.nullable:
+                    c.exec_driver_sql(f"ALTER TABLE {t.name} ADD COLUMN {col.name} {col.type.compile(eng.dialect)}")
 
 
 _engine = None
@@ -279,3 +291,41 @@ def engine():
     if _engine is None:
         _engine = make_engine()
     return _engine
+
+
+# capture (statement upload, phone notification events, Gmail alerts, credit reports).
+# Only outcomes and links to ledger rows are kept here: no raw text, files or passwords (DR-9).
+capture_event = Table(
+    "capture_event", metadata,
+    Column("id", Integer, primary_key=True, autoincrement=True),
+    Column("user_id", ForeignKey("app_user.id"), nullable=False, index=True),
+    # notification | gmail | statement
+    Column("source", String, nullable=False),
+    Column("idempotency_key", String, nullable=False, unique=True),  # sha256(source:event id)
+    # recorded | duplicate | unmatched_card | ignored
+    Column("outcome", String, nullable=False),
+    Column("reason", String),
+    Column("card_id", String),
+    Column("txn_id", Integer),  # the ledger row this event recorded or was matched to
+    Column("payment_id", Integer),  # card_payment row for a repayment
+    _ts(),
+)
+capture_state = Table(
+    "capture_state", metadata,
+    Column("user_id", ForeignKey("app_user.id"), primary_key=True),
+    Column("source", String, primary_key=True),
+    Column("last_sync_at", DateTime(timezone=True)),
+    Column("cursor", JSON),  # gmail: {"history_id": "..."}
+    Column("detail", JSON),
+)
+# Gmail OAuth tokens, Fernet-encrypted at rest with settings.capture_token_key. M1 moves
+# this to a per-user KMS data key so erasure can crypto-shred it (DR-9).
+gmail_account = Table(
+    "gmail_account", metadata,
+    Column("user_id", ForeignKey("app_user.id"), primary_key=True),
+    Column("token_enc", Text),
+    Column("pending_state", String),
+    Column("pending_verifier_enc", Text),
+    Column("connected_at", DateTime(timezone=True)),
+    Column("updated_at", DateTime(timezone=True), nullable=False, default=now),
+)

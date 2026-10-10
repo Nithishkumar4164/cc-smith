@@ -125,6 +125,13 @@ def profile(conn: Connection, card_id: str) -> tuple[CardProfile, dict[str, dict
     if any(cid not in cap_ids for r in body.get("earn_rules", []) for cid in r.get("cap_ids", [])):
         body.pop("earn_rules", None)
         meta.setdefault("earn_rules", {})["blocked"] = "caps not confirmed"
+    # Exclusions that exist but failed the checks would let the card "earn" on fuel or rent;
+    # until they are confirmed the card is not scored (Scapia: issuer copy behind a bot wall).
+    if "exclusions" not in body and conn.execute(select(speculation.c.id).where(and_(
+        speculation.c.card_id == card_id, speculation.c.field == "exclusions", speculation.c.status == "open",
+    ))).first():
+        body.pop("earn_rules", None)
+        meta.setdefault("earn_rules", {})["blocked"] = "exclusions not confirmed"
     return CardProfile.model_validate(body), meta
 
 

@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'api.dart';
 import 'format.dart';
 import 'models.dart';
+import 'state.dart';
 
 void showError(BuildContext context, Object e) {
   final msg = e is ApiException ? e.message : 'Something went wrong: $e';
@@ -259,6 +260,13 @@ class FeeOfferPill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final s = Theme.of(context).colorScheme;
+    final elig = eligibilityFor(o.requires, AppScope.of(context).answers, o.eligibility);
+    if (elig == 'no') {
+      return Pill('${o.kindLabel} · not for you', icon: Icons.block, color: s.surfaceContainerHighest, onColor: s.onSurfaceVariant);
+    }
+    if (elig == 'unknown') {
+      return Pill('${o.kindLabel} · if eligible', icon: Icons.help_outline, color: s.secondaryContainer, onColor: s.onSecondaryContainer);
+    }
     return o.isFact
         ? Pill('${o.kindLabel} · bank page', icon: Icons.card_giftcard, color: s.primaryContainer, onColor: s.onPrimaryContainer)
         : Pill('${o.kindLabel} · reported, not confirmed', icon: Icons.help_outline, color: s.tertiaryContainer, onColor: s.onTertiaryContainer);
@@ -282,7 +290,95 @@ class FeeOfferView extends StatelessWidget {
       const SizedBox(height: 6),
       Text(o.title, style: t.textTheme.bodyLarge),
       if (cond.isNotEmpty) Text(cond.join(' · '), style: t.textTheme.bodySmall?.copyWith(color: t.colorScheme.onSurfaceVariant)),
+      for (final c in o.requires) ConditionAsk(c),
       if (o.source != null) SourceList(refs: [o.source!], label: o.isFact ? 'Source' : 'Reference'),
     ]);
+  }
+}
+
+
+/// Inline Yes / No / Skip for a condition an offer or reward depends on. Answers are saved
+/// (PUT /me/answers) and shown as "You said Yes · Change" afterwards.
+class ConditionAsk extends StatefulWidget {
+  final Condition condition;
+
+  /// Replaces the question as the headline, e.g. "₹250 if you have Amazon Prime".
+  final String? lead;
+  final bool showWhy;
+  final VoidCallback? onAnswered;
+  const ConditionAsk(this.condition, {super.key, this.lead, this.showWhy = true, this.onAnswered});
+  @override
+  State<ConditionAsk> createState() => _ConditionAskState();
+}
+
+class _ConditionAskState extends State<ConditionAsk> {
+  bool _busy = false;
+  bool _skipped = false;
+
+  Future<void> _set(bool? v) async {
+    setState(() => _busy = true);
+    try {
+      await AppScope.read(context).answer(widget.condition.key, v);
+      widget.onAnswered?.call();
+    } catch (e) {
+      if (mounted) showError(context, e);
+    } finally {
+      if (mounted) setState(() => _busy = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final app = AppScope.of(context);
+    final t = Theme.of(context);
+    final s = t.colorScheme;
+    final c = app.meta?.condition(widget.condition.key) ?? widget.condition;
+    final answer = app.answers[c.key];
+    if (_skipped && answer == null) {
+      return Align(
+        alignment: Alignment.centerLeft,
+        child: TextButton(
+          style: TextButton.styleFrom(padding: EdgeInsets.zero, visualDensity: VisualDensity.compact),
+          onPressed: () => setState(() => _skipped = false),
+          child: Text('Skipped: ${c.question}', style: t.textTheme.labelSmall),
+        ),
+      );
+    }
+    final compact = const ButtonStyle(visualDensity: VisualDensity.compact, padding: WidgetStatePropertyAll(EdgeInsets.symmetric(horizontal: 14)));
+    return Container(
+      margin: const EdgeInsets.only(top: 6),
+      padding: const EdgeInsets.fromLTRB(12, 8, 8, 6),
+      decoration: BoxDecoration(color: s.secondaryContainer.withValues(alpha: 0.45), borderRadius: BorderRadius.circular(12)),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Icon(Icons.help_outline, size: 18, color: s.secondary),
+          const SizedBox(width: 8),
+          Expanded(child: Text(widget.lead ?? c.question, style: t.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600))),
+        ]),
+        if (widget.lead != null)
+          Padding(padding: const EdgeInsets.only(left: 26, top: 2), child: Text(c.question, style: t.textTheme.bodySmall)),
+        if (widget.showWhy && c.why != null)
+          Padding(
+            padding: const EdgeInsets.only(left: 26, top: 2),
+            child: Text(c.why!, style: t.textTheme.labelSmall?.copyWith(color: s.onSurfaceVariant)),
+          ),
+        const SizedBox(height: 4),
+        Padding(
+          padding: const EdgeInsets.only(left: 18),
+          child: _busy
+              ? const Padding(padding: EdgeInsets.all(8), child: SizedBox.square(dimension: 18, child: CircularProgressIndicator(strokeWidth: 2)))
+              : answer == null
+                  ? Wrap(spacing: 6, children: [
+                      FilledButton.tonal(style: compact, onPressed: () => _set(true), child: const Text('Yes')),
+                      OutlinedButton(style: compact, onPressed: () => _set(false), child: const Text('No')),
+                      TextButton(style: compact, onPressed: () => setState(() => _skipped = true), child: const Text('Skip')),
+                    ])
+                  : Wrap(crossAxisAlignment: WrapCrossAlignment.center, spacing: 6, children: [
+                      Pill(answer ? 'You said Yes' : 'You said No', icon: answer ? Icons.check : Icons.close),
+                      TextButton(style: compact, onPressed: () => _set(null), child: const Text('Change')),
+                    ]),
+        ),
+      ]),
+    );
   }
 }

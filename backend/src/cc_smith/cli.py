@@ -36,6 +36,9 @@ def main() -> None:
     s.add_argument("--refresh", action="store_true", help="re-fetch official pages (needs network)")
     r = sub.add_parser("radar", help="one Launch Radar sweep")
     r.add_argument("--as-of", help="YYYY-MM-DD; replay fixtures were recorded on 2026-10-07")
+    f = sub.add_parser("refresh", help="re-check catalogue cards on the bank's site (SerpApi + quote checks)")
+    f.add_argument("card_ids", nargs="*", help="cards to refresh; default: the ones checked longest ago")
+    f.add_argument("--n", type=int, default=3, help="how many cards when none are named")
     v = sub.add_parser("serve")
     v.add_argument("--host", default="127.0.0.1")
     v.add_argument("--port", type=int, default=8000)
@@ -46,6 +49,10 @@ def main() -> None:
         from cc_smith.signals.scheduler import run_radar_cli
 
         raise SystemExit(run_radar_cli(args.as_of))
+    elif args.cmd == "refresh":
+        from cc_smith.signals.scheduler import run_refresh_cli
+
+        raise SystemExit(run_refresh_cli(args.card_ids, args.n))
     elif args.cmd == "serve":
         import uvicorn
 

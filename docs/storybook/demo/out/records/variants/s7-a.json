@@ -1,0 +1,35 @@
+{
+ "scene": "s7",
+ "order": 1,
+ "name": "End card",
+ "wires": [
+  {
+   "cap": "End card",
+   "blocks": [
+    {
+     "t": "big",
+     "kind": "ok",
+     "title": "cc-smith",
+     "lines": [
+      "Which card to pay with, and which to get",
+      "Market intelligence by SerpApi: Google News, Ads Transparency, Google Search"
+     ],
+     "pill": "SerpApi India Hackathon 2026"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "back on Pay",
+   "what": "End on the Pay screen with the Market tab one tap away."
+  }
+ ]
+}

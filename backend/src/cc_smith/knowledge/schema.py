@@ -75,10 +75,14 @@ class EarnRule(Sourced):
 class Cap(Sourced):
     id: str
     amount: int
-    unit: Literal["paise", "points", "spend_paise"]
+    # base_multiple: the cap is a multiple of what another rule earned in the same period
+    # (Airtel Axis: 25% on Airtel bills, capped at twice the month's base cashback).
+    # amount is the multiple x 100 (200 = twice) and of_rule names the base rule.
+    unit: Literal["paise", "points", "spend_paise", "base_multiple"]
     period: Period
     # For spend caps: whether spend beyond the cap earns under the next applicable rule.
     spill: bool = True
+    of_rule: str | None = None
 
 
 class Exclusion(Sourced):

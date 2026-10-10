@@ -80,12 +80,29 @@ def _caps(card: CardProfile) -> dict:
     return hit[1]
 
 
+def earned_key(rule_id: str) -> str:
+    """Counter, kept alongside cap usage, of what a base rule earned in the period."""
+    return f"earned:{rule_id}"
+
+
+def _limit(cap, used: dict[str, int]) -> int:
+    if cap.unit == "base_multiple":
+        return cap.amount * used.get(earned_key(cap.of_rule), 0) // 100
+    return cap.amount
+
+
+def _base_rules(card: CardProfile) -> set[str]:
+    return {c.of_rule for c in _caps(card).values() if c.unit == "base_multiple" and c.of_rule}
+
+
 def _cap_left(card: CardProfile, rule: EarnRule, unit: str, used: dict[str, int]) -> int | None:
     caps = _caps(card)
+    # A base-multiple cap limits earned units like a paise cap does.
+    units = {unit, "base_multiple"} if unit == "paise" else {unit}
     lefts = [
-        caps[cid].amount - used.get(cid, 0)
+        _limit(caps[cid], used) - used.get(cid, 0)
         for cid in rule.cap_ids
-        if caps[cid].unit == unit
+        if caps[cid].unit in units
     ]
     return max(0, min(lefts)) if lefts else None
 
@@ -124,6 +141,10 @@ def _apply_rule(card: CardProfile, rule: EarnRule, spend: int, used: dict[str, i
         delta = eligible if cap.unit == "spend_paise" else units
         used[cid] = used.get(cid, 0) + delta
         out.cap_use[cid] = out.cap_use.get(cid, 0) + delta
+    if rule.id in _base_rules(card):
+        k = earned_key(rule.id)
+        used[k] = used.get(k, 0) + units
+        out.cap_use[k] = out.cap_use.get(k, 0) + units
     out.lines.append(RuleLine(rule.id, units, _value(card, rule, units), eligible, capped))
     if capped:
         out.reason_codes.append(f"capped:{rule.id}")

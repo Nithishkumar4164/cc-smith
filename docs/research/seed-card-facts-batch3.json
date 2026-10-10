@@ -1,0 +1,396 @@
+{
+ "as_of": "2026-10-10",
+ "source_policy": "Official issuer pages and documents only (plus Scapia, the fintech operator, for its reward programme). Pages that are JavaScript-rendered or bot-walled were read with a headless browser; every quote is verbatim from the recorded text. Overrides batch 2 for these cards.",
+ "cards": [
+  {
+   "id": "sbi_simplyclick",
+   "name": "SimplyCLICK SBI Card",
+   "issuer": "SBI Card",
+   "network": null,
+   "upi_rupay": null,
+   "fees": {
+    "joining": 499,
+    "annual": 499,
+    "waiver_spend": 100000,
+    "quote": "SimplyCLICK SBI Card 499 499 (Waived off on annual spends of Rs.1 Lakh or more in the | preceding year)",
+    "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf"
+   },
+   "earn": [
+    {
+     "category": "apollo_24x7|bookmyshow|cleartrip|dominos|igp|myntra|netmeds|swiggy|yatra|gyftr|tatacliq (online, 10X)",
+     "rate_pct": null,
+     "unit": "points",
+     "points_per": {
+      "points": 10,
+      "per_inr": 100
+     },
+     "cap": {
+      "amount": 10000,
+      "unit": "points",
+      "period": "calendar_month"
+     },
+     "quote": "Earn 10X Reward Points on online spends with exclusive partners: Apollo 24x7, BookMyShow, Cleartrip, Dominos, IGP, Myntra, Netmeds, Swiggy, Yatra, Gyftr, Tata Cliq",
+     "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+     "cap_quote": "Cumulative 10X Reward Points accrued on online spends with exclusive partners on your SimplyCLICK SBI Card will have a capping of 10,000 Reward Points per month.",
+     "cap_url": "https://www.sbicard.com/en/customer-notices.page",
+     "multiplier": "10X",
+     "note": "10X of the 1 RP per Rs. 100 base. Partner list is the product page as rendered on 2026-10-10; it names Swiggy, which the 1 Apr 2025 customer notice moved to 5X (the T&C partner table is an image, newest effective date 20 Mar 2026). Product page taken as current."
+    },
+    {
+     "category": "online (other, 5X)",
+     "rate_pct": null,
+     "unit": "points",
+     "points_per": {
+      "points": 5,
+      "per_inr": 100
+     },
+     "cap": {
+      "amount": 10000,
+      "unit": "points",
+      "period": "calendar_month"
+     },
+     "quote": "Earn 5X Reward Points on all other online spends",
+     "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+     "cap_quote": "5X Reward Points are applicable for all online spends made other than on | exclusive partner brands and will be capped at 10,000 Reward Points per | calendar month. Post that, every Rs.100 spent will accrue 1 Reward Point.",
+     "cap_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf",
+     "multiplier": "5X"
+    },
+    {
+     "category": "other",
+     "rate_pct": null,
+     "unit": "points",
+     "points_per": {
+      "points": 1,
+      "per_inr": 100
+     },
+     "cap": null,
+     "quote": "Earn 1 Reward Point per Rs. 100 on all other spends",
+     "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html"
+    }
+   ],
+   "exclusions": [
+    {
+     "what": "cash advance, balance transfer, encash, Flexipay, offline fuel",
+     "quote": "Cash Advance, Balance Transfer, Encash, Flexipay and Offline Fuel transaction | (5172, 5541, 5983, 5542) are not included in Reward Points program.",
+     "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf"
+    },
+    {
+     "what": "wallet loads on partner sites (MCC 6540, 6541)",
+     "quote": "e-Wallet loading transactions done using SimplyCLICK SBI Card on any partner | brand website/app identified under MCCs 6540 and 6541 (on best effort basis) | will not accrue Reward Points.",
+     "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf"
+    },
+    {
+     "what": "rent (MCC 6513), from 1 Apr 2024",
+     "quote": "W.e.f. 01 Apr 2024, accrual of Reward Points on Rent Payment transactions with | SimplyCLICK will be discontinued.",
+     "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf"
+    },
+    {
+     "what": "government (MCC 9399, 9311), from 1 Jun 2024",
+     "quote": "W.e.f. 01 Jun 2024, accrual of Reward Points on Govt Related transactions with | SimplyCLICK will be discontinued.",
+     "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf"
+    },
+    {
+     "what": "digital gaming (MCC 5816, 7993, 7994), from 1 Dec 2024",
+     "quote": "W.e.f. 1 Dec 2024, accrual of Reward Points on spends done on Digital Gaming | Platforms/Merchants with SimplyCLICK will be discontinued.",
+     "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf"
+    },
+    {
+     "what": "e-gift vouchers earn 10X only at the GyFTR portal",
+     "quote": "10X Reward Points on e-Gift Voucher purchases shall be applicable only on | transactions made at GyFTR portal using SimplyCLICK Credit Card.",
+     "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf"
+    }
+   ],
+   "point_value_inr": 0.25,
+   "point_value_quote": "4 Reward Points = Re 1",
+   "point_value_url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+   "eligibility": null,
+   "lounge": null,
+   "milestones": [
+    {
+     "quote": "E-Vouchers worth Rs. 2,000 each on reaching annual online spends of 1 Lakh and 2 Lakhs respectively",
+     "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+     "note": "Counts online spends only; not mapped because milestones are modelled on total spend."
+    }
+   ],
+   "notes": [
+    "Product page is JavaScript-rendered; read with the headless-browser fetch (Playwright) on 2026-10-10.",
+    "Utility bills paid on the SBI Card site/app do not earn 5X; Cleartrip and Yatra via affiliate channels do not earn 10X (rp-tnc). Not modelled (merchant-channel specific).",
+    "10X applies only to INR payments: '10X Reward Points are applicable only when payment is done in INR' (rp-tnc)."
+   ],
+   "fetch_log": [
+    {
+     "url": "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html",
+     "status": "200 (browser render; static HTML has no card content)"
+    },
+    {
+     "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-sbi-card-rp-tnc.pdf",
+     "status": "200 (PDF, reward T&C, effective dates up to 20 Mar 2026)"
+    },
+    {
+     "url": "https://www.sbicard.com/en/customer-notices.page",
+     "status": "200 (browser render)"
+    },
+    {
+     "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf",
+     "status": "200 (PDF, recorded earlier)"
+    }
+   ]
+  },
+  {
+   "id": "icici_coral",
+   "name": "ICICI Bank Coral Credit Card (incl. Coral RuPay)",
+   "issuer": "ICICI Bank",
+   "network": null,
+   "upi_rupay": null,
+   "fees": {
+    "joining": 500,
+    "annual": 500,
+    "waiver_spend": 150000,
+    "quote": "Joining fee- ₹500 + Goods and Services Tax (GST) | Annual fee- ₹500 + GST (Spend over ₹1.5 lakh and get annual fee waived off for the next year)",
+    "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card"
+   },
+   "earn": [
+    {
+     "category": "other (retail)",
+     "rate_pct": null,
+     "unit": "points",
+     "points_per": {
+      "points": 2,
+      "per_inr": 100
+     },
+     "cap": null,
+     "quote": "Earn Points on every ₹100 spend | 2 | On Retail | Spend",
+     "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card"
+    },
+    {
+     "category": "utilities|insurance",
+     "rate_pct": null,
+     "unit": "points",
+     "points_per": {
+      "points": 1,
+      "per_inr": 100
+     },
+     "cap": null,
+     "quote": "1 | On Utility and Insurance | Spend",
+     "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card"
+    }
+   ],
+   "exclusions": [
+    {
+     "what": "fuel",
+     "quote": "Earn 2 reward points on every `100 spent on all purchases, except on fuel.",
+     "url": "https://www.icici.bank.in/content/dam/icicibank/managed-assets/docs/personal/cards/credit-cards/membership-kits/ICICI_Bank_Coral_Credit_Card_Membership_Guide.pdf",
+     "note": "Membership guide (undated; rupee sign extracts as a backtick)."
+    }
+   ],
+   "point_value_inr": null,
+   "point_value_quote": "Not stated on any official page fetched (Coral page, ICICI rewards page, rewards FAQs, rewards-points page, MITC, Coral membership guide). The ₹0.25 PAYBACK value seen in search snippets is from the retired PAYBACK programme and is not on any page that renders today.",
+   "eligibility": null,
+   "lounge": null,
+   "milestones": [],
+   "notes": [
+    "Coral page is server-rendered; recorded evidence (httpx, 2026-10-08) is used. A browser render on 2026-10-10 shows the same earn table.",
+    "Without a sourced point value the card stays 'can't assess yet' even though its earn rules are facts."
+   ],
+   "fetch_log": [
+    {
+     "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card",
+     "status": "200"
+    },
+    {
+     "url": "https://www.icici.bank.in/content/dam/icicibank/managed-assets/docs/personal/cards/credit-cards/membership-kits/ICICI_Bank_Coral_Credit_Card_Membership_Guide.pdf",
+     "status": "200 (PDF, served as a download; read via the browser session)"
+    },
+    {
+     "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/credit-card-services/rewards",
+     "status": "200 (browser render; no point value)"
+    },
+    {
+     "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/credit-card-services/rewards/faqs",
+     "status": "200 (browser render; no point value)"
+    },
+    {
+     "url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/mitc_cc.pdf",
+     "status": "200 (no point value)"
+    }
+   ]
+  },
+  {
+   "id": "au_lit",
+   "name": "AU Bank LIT Credit Card",
+   "issuer": "AU Small Finance Bank",
+   "network": null,
+   "upi_rupay": null,
+   "fees": {
+    "joining": 0,
+    "annual": 0,
+    "waiver_spend": null,
+    "quote": "LIT, InstaPay, AU KOSMO, ixigo AU, AU CA, AU CS, Paytm AU | AU Zaggle | Lifetime Free",
+    "url": "https://www.au.bank.in/content/dam/aubank/in/en/pdf/credit-card/MITC(with-Schedule-of-Charges).pdf"
+   },
+   "earn": [
+    {
+     "category": "other (base, lifetime)",
+     "rate_pct": null,
+     "unit": "points",
+     "points_per": {
+      "points": 1,
+      "per_inr": 100
+     },
+     "cap": {
+      "amount": 10000,
+      "unit": "points",
+      "period": "statement_cycle"
+     },
+     "quote": "Cardholders are eligible for earn rate of 1 Reward Point for every INR 100 retail spends done on the LIT Card.",
+     "url": "https://www.au.bank.in/lit-terms-and-conditions",
+     "cap_quote": "Cardholders can earn a maximum of 10000 Reward Points in a statement cycle.",
+     "cap_url": "https://www.au.bank.in/lit-terms-and-conditions",
+     "note": "Base programme only. Paid 90-day feature packs (5X/10X points, category and milestone cashback) are out of scope."
+    },
+    {
+     "category": "utilities|insurance (base only)",
+     "rate_pct": null,
+     "unit": "points",
+     "points_per": {
+      "points": 1,
+      "per_inr": 100
+     },
+     "cap": null,
+     "quote": "Transactions on Utilities (subject to maximum capping of 100 RP per transaction) and Insurance transactions will continue to earn Base reward (1 Reward) on every Rs. 100 spent",
+     "url": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card/features",
+     "note": "Same rate as the base; the 100 RP per-transaction cap on utilities is not modelled."
+    }
+   ],
+   "exclusions": [
+    {
+     "what": "cash withdrawal, BBPS, EMI, fuel, rent, education, government",
+     "quote": "Cash Withdrawal (MCC- 6010, 6011), BBPS, EMI, Fuel transactions (MCC- 5172, 5541, 5542, 5552 and 5983), Rent (MCC- 6513), Education & Govt ... transactions will not be considered for earning of Base Reward Points.",
+     "url": "https://www.au.bank.in/lit-terms-and-conditions"
+    }
+   ],
+   "point_value_inr": 0.2,
+   "point_value_quote": "Redemption of Gift card’s/Vouchers/E-vouchers: Value of each Reward Points will be | INR 0.20 if redeemed against Gift card’s/Vouchers/E-vouchers. This will be applicable | for all AU Bank Credit Card variants.",
+   "point_value_url": "https://www.au.bank.in/ausfb-reward-points-ausfb-credit-card-reward-points-usage-tnc_2ndjune23.pdf",
+   "eligibility": null,
+   "lounge": null,
+   "milestones": [],
+   "notes": [
+    "Product page, T&C and features page are behind Cloudflare (403 to plain HTTP); read with the headless-browser fetch on 2026-10-10. Each render takes about 30 s (Cloudflare challenge).",
+    "LIT T&C 'Last updated on 15th January, 2025'. Point-value notice dated 2 June 2023: other redemption routes 'remain unchanged' at a value it does not state; ₹0.20 (vouchers) is the only value in official text.",
+    "Paid 90-day packs (out of scope): 5X/10X Reward Points on online or offline spends, 5% grocery/apparel cashback, 5%/2% milestone cashback, lounge, fuel waiver. Accelerated 5X/10X exclude utilities, insurance, fuel, rent, education, government, cash.",
+    "BBPS bill payments earn nothing, but utilities paid outside BBPS earn the base rate; the exclusion therefore does not list utilities.",
+    "Redemption fee: 'Reward Points Redemption Fees: A nominal fees of Rs. 99 + GST will be levied on every successful redemption' (2023 notice)."
+   ],
+   "fetch_log": [
+    {
+     "url": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
+     "status": "200 (browser render; 403 to plain HTTP)"
+    },
+    {
+     "url": "https://www.au.bank.in/lit-terms-and-conditions",
+     "status": "200 (browser render; 403 to plain HTTP)"
+    },
+    {
+     "url": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card/features",
+     "status": "200 (browser render)"
+    },
+    {
+     "url": "https://www.au.bank.in/ausfb-reward-points-ausfb-credit-card-reward-points-usage-tnc_2ndjune23.pdf",
+     "status": "200 (PDF)"
+    },
+    {
+     "url": "https://www.au.bank.in/content/dam/aubank/in/en/pdf/credit-card/MITC(with-Schedule-of-Charges).pdf",
+     "status": "200 (PDF, recorded earlier)"
+    }
+   ]
+  },
+  {
+   "id": "scapia_federal",
+   "name": "Scapia Federal Bank Credit Card",
+   "issuer": "Federal Bank (fintech partner: Scapia)",
+   "network": "Visa (primary card) + complimentary RuPay card",
+   "upi_rupay": true,
+   "fees": {
+    "joining": 0,
+    "annual": 0,
+    "waiver_spend": null,
+    "quote": "Card Name Scapia Federal Credit Card | Issued by Federal Bank | Joining Fees Nil | Annual Membership Fees Nil",
+    "url": "https://www.federal.bank.in/documents/d/guest/kfs_v11-30_04_26"
+   },
+   "earn": [
+    {
+     "category": "other (Visa card, all eligible purchases)",
+     "rate_pct": 10.0,
+     "unit": "points",
+     "points_per": null,
+     "cap": null,
+     "min_txn_inr": 20,
+     "quote": "Currently, on your Scapia Federal Visa Credit Card, you will earn 10% | rewards on every purchase of Rs. 20 and above.",
+     "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+     "note": "10% in Scapia coins (1 reward = 1 coin), worth 2% at 5 coins = ₹1, travel-only redemption."
+    },
+    {
+     "category": "scapia app travel bookings",
+     "rate_pct": 20.0,
+     "unit": "points",
+     "points_per": null,
+     "cap": null,
+     "quote": "You will earn 20% rewards on travel purchases made on the Scapia | App.",
+     "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+     "note": "Worth 4% at 5 coins = ₹1."
+    },
+    {
+     "category": "upi (RuPay card)",
+     "rate_pct": 5.0,
+     "unit": "points",
+     "points_per": null,
+     "cap": null,
+     "min_txn_inr": 500,
+     "quote": "Also, currently, on your Scapia Federal Rupay Credit Card, | you will earn 5% rewards on eligible spends of more than 500 Rs.",
+     "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+     "note": "Worth 1% at 5 coins = ₹1. Text says 'more than 500 Rs.'; modelled as ₹500 minimum."
+    }
+   ],
+   "exclusions": [
+    {
+     "what": "money transfers, rent, cash, EMI, forex, education, gift cards, card repayments, crypto, fuel, wallet loads, insurance, utilities/telecom",
+     "quote": "Rewards will not accrue for money transfers, rent payments, cash | withdrawals, EMI transactions, forex transaction, education and school fees, | gift cards, credit card repayments, crypto/digital asset transactions, fuel, fuel | surcharge, rent and digital wallet loading or top-up transactions, Insurance, | Utility, telecom and cable spends.",
+     "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+     "note": "Official text (Scapia-hosted Federal Bank cardholder agreement v10 27-02-26), but the allow-list makes Scapia official only for currency, earn rules and caps; exclusions need an issuer (Federal Bank) URL, and federal.bank.in serves a Radware bot wall to both plain HTTP and headless Chromium. Not mapped."
+    }
+   ],
+   "point_value_inr": 0.2,
+   "point_value_quote": "5 Scapia coins = ₹1",
+   "point_value_url": "https://www.scapia.cards/",
+   "coin_conversion_quote": "Rewards earned on card transactions will be converted to Scapia coins | on the statement date with the conversion ratio 1 Reward = 1 Scapia | Coin.",
+   "coin_conversion_url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+   "eligibility": null,
+   "lounge": "Unlimited domestic lounge access, unlocked on ₹20,000 combined monthly spend (scapia.cards).",
+   "milestones": [],
+   "notes": [
+    "Coins redeem only for travel booked in the Scapia app: 'Use Scapia coins to book travel on the Scapia app' (scapia.cards).",
+    "On scapia.cards the card-spend and app-travel percentages are drawn as graphics; even after a browser render the text reads 'rewards on your card spends' with no number. The rates come from the cardholder agreement PDF linked from scapia.cards ('Card holder agreement - Federal Bank').",
+    "Federal Bank pages (KFS/MITC v10 27-02-26, card T&C v4 21-04-25) returned a Radware 'Verifying your browser' page on 2026-10-10 to both plain HTTP and headless Chromium."
+   ],
+   "fetch_log": [
+    {
+     "url": "https://www.scapia.cards/",
+     "status": "200 (browser render; rates still drawn as graphics)"
+    },
+    {
+     "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+     "status": "200 (PDF, Federal Bank cardholder agreement v10 27-02-26, hosted by Scapia)"
+    },
+    {
+     "url": "https://www.federal.bank.in/documents/d/guest/scapia-federal-credit-card-tnc-v4-21_04_25",
+     "status": "bot wall (Radware) to plain HTTP and browser"
+    },
+    {
+     "url": "https://www.federal.bank.in/documents/d/guest/kfs_v11-30_04_26",
+     "status": "200 (recorded earlier)"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "scene": "s5",
+ "order": 1,
+ "name": "Launch notice rule",
+ "wires": [
+  {
+   "cap": "Notices",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Notices"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "New card worth about ₹4,800 a year to you",
+       "meta": "Confirmed on the bank's page · scored on your spends",
+       "amt": "+₹4,800",
+       "st": "ok",
+       "stl": "launch",
+       "cb": "none"
+      }
+     ],
+     "hl": "notice"
+    },
+    {
+     "t": "msg",
+     "kind": "note",
+     "text": "Example from test data: no launch qualifies live today."
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "radar",
+  "kb",
+  "eng",
+  "api",
+  "app"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "radar",
+   "to": "kb",
+   "l": "profile the confirmed card",
+   "what": "A launch confirmed on the bank's page becomes a scored card in the catalogue.",
+   "t": "NEW"
+  },
+  {
+   "id": "m2",
+   "f": "api",
+   "to": "eng",
+   "l": "gain on this user's budget",
+   "what": "Year simulation with and without the card, fees and milestones included.",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "api",
+   "l": "≥ ₹2,000 a year and ≥ 15% of fee incl. GST",
+   "what": "Both must hold, so a ₹500 gain on a ₹10,000 card never nags.",
+   "t": "NEW",
+   "hl": "notice"
+  },
+  {
+   "id": "m4",
+   "f": "api",
+   "to": "app",
+   "l": "GET /me/notices",
+   "what": "Notices are only about you; discovery stays in Market.",
+   "t": "MOD",
+   "res": true
+  }
+ ]
+}

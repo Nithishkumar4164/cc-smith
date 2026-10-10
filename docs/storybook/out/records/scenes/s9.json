@@ -1,10 +1,1 @@
-{
- "n": 9,
- "short": "Market",
- "title": "Watch new cards in the market",
- "lede": "Google News and Google Ads Transparency (India) through one SerpApi gateway; a launch is scored only once the bank's own page confirms it.",
- "also": [
-  8
- ],
- "stack": false
-}
+{"n": 9, "short": "Market", "title": "Watch new cards in the market", "lede": "Google News and Google Ads Transparency (India) through one SerpApi gateway; a launch is scored only once the bank's own page confirms it.", "also": [8, 9], "stack": false, "updatedAt": "2026-10-10T03:10:00Z", "note": "Linked the duplicate-launch suggestion"}

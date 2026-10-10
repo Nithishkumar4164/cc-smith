@@ -38,6 +38,26 @@ def registry() -> dict:
 
 
 @lru_cache
+def conditions() -> dict[str, dict]:
+    return yaml.safe_load((DATA.parent / "conditions.yaml").read_text())
+
+
+@lru_cache
+def offer_conditions() -> dict[str, list[str]]:
+    return yaml.safe_load((DATA.parent / "offer_conditions.yaml").read_text()) or {}
+
+
+def eligibility(requires: list[str], answers: dict[str, bool]) -> str:
+    """'yes' when every condition is answered yes, 'no' when any is answered no,
+    otherwise 'unknown'. Unanswered never hides anything."""
+    if any(answers.get(k) is False for k in requires):
+        return "no"
+    if all(answers.get(k) is True for k in requires):
+        return "yes"
+    return "unknown"
+
+
+@lru_cache
 def memberships() -> dict[str, dict]:
     return yaml.safe_load((DATA.parent / "memberships.yaml").read_text())
 

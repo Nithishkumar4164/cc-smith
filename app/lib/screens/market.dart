@@ -6,6 +6,7 @@ import '../models.dart';
 import '../state.dart';
 import '../widgets.dart';
 import 'card_detail.dart';
+import 'notices.dart';
 
 /// Launch Radar plus the recent fact changes across the catalogue.
 class MarketScreen extends StatefulWidget {
@@ -17,6 +18,7 @@ class MarketScreen extends StatefulWidget {
 class _MarketScreenState extends State<MarketScreen> {
   Future<List<Launch>>? _launches;
   Future<List<ChangeEvent>>? _changes;
+  Future<List<Notice>>? _offers;
   int _version = -1;
 
   @override
@@ -33,6 +35,7 @@ class _MarketScreenState extends State<MarketScreen> {
     final api = AppScope.read(context).api;
     _launches = api.launches();
     _changes = api.changes(limit: 40);
+    _offers = api.marketOffers();
   }
 
   void _load() => setState(_fetch);
@@ -40,13 +43,16 @@ class _MarketScreenState extends State<MarketScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Market'),
           actions: const [ProfileAction()],
           bottom: const TabBar(
+            isScrollable: true,
+            tabAlignment: TabAlignment.start,
             tabs: [
+              Tab(text: 'Offers for you'),
               Tab(text: 'Launch Radar'),
               Tab(text: 'What changed'),
             ],
@@ -54,6 +60,13 @@ class _MarketScreenState extends State<MarketScreen> {
         ),
         body: TabBarView(
           children: [
+            RefreshIndicator(
+              onRefresh: () async {
+                _load();
+                await _offers;
+              },
+              child: _OffersList(future: _offers),
+            ),
             RefreshIndicator(
               onRefresh: () async {
                 _load();
@@ -152,7 +165,16 @@ class _LaunchCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(l.name, style: t.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
             if (l.issuer != null) Text(l.issuer!, style: t.textTheme.bodySmall?.copyWith(color: s.onSurfaceVariant)),
-            if (l.summary != null) Padding(padding: const EdgeInsets.only(top: 6), child: Text(l.summary!)),
+            if (l.variantOf(app.cardsById.keys) case final base?)
+            Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: ActionChip(
+                avatar: const Icon(Icons.call_split, size: 16),
+                label: Text('New variant of ${app.cardName(base)}'),
+                onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => CardDetailScreen(cardId: base))),
+              ),
+            ),
+          if (l.summary != null) Padding(padding: const EdgeInsets.only(top: 6), child: Text(l.summary!)),
             if (l.confirmed && l.gainPaise != null)
               Padding(
                 padding: const EdgeInsets.only(top: 10),
@@ -259,6 +281,41 @@ class _ChangeList extends StatelessWidget {
                 ),
               ),
           ],
+        );
+      },
+    );
+  }
+}
+
+
+/// Fee offers on cards the user doesn't hold (GET /me/market/offers), with their conditions.
+class _OffersList extends StatelessWidget {
+  final Future<List<Notice>>? future;
+  const _OffersList({required this.future});
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<Notice>>(
+      future: future,
+      builder: (context, snap) {
+        if (snap.connectionState != ConnectionState.done) return const Center(child: CircularProgressIndicator());
+        if (snap.hasError) {
+          return ListView(children: [EmptyState(icon: Icons.cloud_off_outlined, title: 'Couldn\'t load offers', message: '${snap.error}')]);
+        }
+        final items = snap.data!;
+        if (items.isEmpty) {
+          return ListView(children: const [
+            SizedBox(height: 60),
+            EmptyState(icon: Icons.card_giftcard, title: 'No fee offers right now', message: 'Lifetime-free and first-year-free offers on cards you don\'t hold show up here.'),
+          ]);
+        }
+        return NoticeList(
+          notices: items,
+          showCounts: false,
+          header: Padding(
+            padding: const EdgeInsets.only(bottom: 4),
+            child: Text('Fee offers on cards you don\'t hold, from the banks\' own pages. No referral links.',
+                style: Theme.of(context).textTheme.bodySmall),
+          ),
         );
       },
     );

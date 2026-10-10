@@ -1,0 +1,122 @@
+{
+ "scene": "s2",
+ "order": 1,
+ "name": "Swiggy ₹1,200",
+ "wires": [
+  {
+   "cap": "Checkout Advisor",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Which card should I pay with?"
+    },
+    {
+     "t": "input",
+     "text": "Merchant  Swiggy",
+     "filled": true
+    },
+    {
+     "t": "input",
+     "text": "Amount  ₹1,200",
+     "filled": true
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Pay with",
+       "value": "HSBC Live+ · ₹120",
+       "sub": "₹60 more than Millennia",
+       "tone": "lav"
+      }
+     ],
+     "hl": "best"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "HSBC Live+",
+       "meta": "10% on dining",
+       "amt": "₹120",
+       "st": "ok",
+       "stl": "best",
+       "cb": "none"
+      },
+      {
+       "no": "HDFC Millennia",
+       "meta": "5% on Swiggy",
+       "amt": "₹60",
+       "st": "grey",
+       "stl": "",
+       "cb": "none"
+      }
+     ]
+    },
+    {
+     "t": "muted",
+     "text": "Source: bank page quote"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api",
+  "eng",
+  "kb",
+  "llm"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "Swiggy, ₹1,200",
+   "what": "The user types a merchant and amount, or scans a UPI QR."
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "POST /pay",
+   "what": "One call: merchant, amount, channel.",
+   "code": "{\"merchant\":\"swiggy\",\"amount_paise\":120000}",
+   "t": "OLD"
+  },
+  {
+   "id": "m3",
+   "f": "api",
+   "to": "eng",
+   "l": "reward for every card",
+   "what": "Rules, caps and the rest of the month. All sums are plain Python, no model.",
+   "t": "OLD"
+  },
+  {
+   "id": "m4",
+   "f": "eng",
+   "to": "kb",
+   "l": "rates with quotes",
+   "what": "Each rate is stored with the bank's verbatim quote and URL.",
+   "t": "OLD"
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "llm",
+   "l": "choose between engine figures",
+   "what": "Haiku 4.5 picks and phrases the reason; if it is slow (2.5 s), the rules decide.",
+   "t": "OLD"
+  },
+  {
+   "id": "m6",
+   "f": "api",
+   "to": "app",
+   "l": "HSBC Live+ ₹120",
+   "what": "No SerpApi on this path. The card facts were gathered from bank pages before the demo.",
+   "res": true,
+   "hl": "best"
+  }
+ ]
+}

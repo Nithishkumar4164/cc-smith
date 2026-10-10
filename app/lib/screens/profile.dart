@@ -5,6 +5,9 @@ import '../format.dart';
 import '../models.dart';
 import '../state.dart';
 import '../widgets.dart';
+import 'budget.dart';
+import 'capture.dart';
+import 'discovery.dart';
 import 'editors.dart';
 
 export 'editors.dart';
@@ -78,31 +81,52 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
               const SizedBox(height: 8),
-              Center(
-                child: TextButton(
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SettingsScreen())),
-                  child: Text('Server: ${app.baseUrl}', style: t.textTheme.labelSmall),
-                ),
-              ),
             ]),
           ),
         ),
       );
     }
-    final titles = ['', 'Cards you hold', 'What you spend each month', 'Your preferences'];
+    final titles = ['', 'Cards you hold', 'What you spend each month'];
     return Scaffold(
       appBar: AppBar(
         title: Text(titles[step]),
         leading: step > 1 ? BackButton(onPressed: () => setState(() => _step = step - 1)) : null,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(4),
-          child: LinearProgressIndicator(value: step / 3),
+          child: LinearProgressIndicator(value: step / 2),
         ),
       ),
       body: switch (step) {
-        1 => HoldingsEditor(actionLabel: 'Next', onSaved: () => setState(() => _step = 2), requireOne: true),
-        2 => SpendsEditor(actionLabel: 'Next', onSaved: () => setState(() => _step = 3)),
-        _ => PreferencesEditor(actionLabel: 'Finish', onSaved: () => AppScope.read(context).completeOnboarding()),
+        1 => Column(children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+            child: Card(
+              color: Theme.of(context).colorScheme.primaryContainer,
+              child: ListTile(
+                leading: const Icon(Icons.travel_explore),
+                title: const Text('Find my cards'),
+                subtitle: const Text('From your credit bureau, with your mobile number and a one-time code'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const BureauDiscoveryScreen())),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
+            child: Text('or pick manually', style: Theme.of(context).textTheme.labelMedium),
+          ),
+          Expanded(
+            child: HoldingsEditor(
+              // Rebuilt when the bureau flow adds cards, so they show as selected.
+              key: ValueKey(app.me?.holdings.map((h) => h.cardId).join(',')),
+              actionLabel: 'Next',
+              onSaved: () => setState(() => _step = 2),
+              requireOne: true,
+            ),
+          ),
+        ]),
+        // Reward type and fee ceiling are asked the first time the user opens Card Finder.
+        _ => BudgetPanel(onNext: () => AppScope.read(context).completeOnboarding()),
       },
     );
   }
@@ -158,23 +182,33 @@ class ProfileScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.edit_outlined),
               title: Text(me?.spends.isEmpty ?? true ? 'Add monthly spends' : 'Edit monthly spends'),
-              onTap: () => _push(context, 'Monthly spends', (done) => SpendsEditor(actionLabel: 'Save', onSaved: done)),
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const BudgetScreen())),
             ),
           ]),
         ),
-        const SectionHeader('Preferences'),
+        const SectionHeader('Memberships'),
         Card(
           child: ListTile(
-            leading: const Icon(Icons.tune),
-            title: Text([
-              for (final f in me?.profile.flags ?? const <String>[]) meta?.membership(f)?.name ?? f,
-              'Rewards: ${me?.profile.rewardPreference ?? 'any'}',
-              'Max fee: ${feeOptionLabel(me?.profile.maxAnnualFeePaise)}',
-            ].join(' · ')),
+            leading: const Icon(Icons.card_membership),
+            title: Text((me?.profile.flags ?? const <String>[]).isEmpty
+                ? 'None added'
+                : [for (final f in me!.profile.flags) meta?.membership(f)?.name ?? f].join(' · ')),
             trailing: const Icon(Icons.chevron_right),
-            onTap: () => _push(context, 'Preferences', (done) => PreferencesEditor(actionLabel: 'Save', onSaved: done)),
+            onTap: () => _push(context, 'Memberships', (done) => PreferencesEditor(actionLabel: 'Save', onSaved: done, finder: false)),
           ),
         ),
+        const SectionHeader('Data sources'),
+        Card(
+          child: ListTile(
+            leading: const Icon(Icons.cloud_sync_outlined),
+            title: const Text('Statements, credit report, notifications, Gmail'),
+            subtitle: const Text('Optional: keep balances, limits and caps up to date without typing'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const DataSourcesScreen())),
+          ),
+        ),
+        const SectionHeader('Your answers'),
+        const _AnswersCard(),
         const SectionHeader('Payments you logged'),
         const _TransactionsCard(),
         const SectionHeader('App'),
@@ -369,7 +403,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             contentPadding: EdgeInsets.zero,
             leading: const Icon(Icons.restart_alt),
             title: const Text('Start over'),
-            subtitle: const Text('Create a fresh profile (useful for demos)'),
+            subtitle: const Text('Create a fresh profile'),
             onTap: _resetUser,
           ),
         ],
@@ -474,6 +508,39 @@ class CreditTile extends StatelessWidget {
           ]),
         ),
       ]),
+    );
+  }
+}
+
+
+/// Every condition the user answered (editable), plus the ones still open.
+class _AnswersCard extends StatelessWidget {
+  const _AnswersCard();
+  @override
+  Widget build(BuildContext context) {
+    final app = AppScope.of(context);
+    final t = Theme.of(context);
+    final conds = app.meta?.conditions ?? const <Condition>[];
+    final answered = conds.where((c) => app.answers.containsKey(c.key)).toList();
+    final open = conds.where((c) => !app.answers.containsKey(c.key)).toList();
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text('Used to tell which offers and rewards apply to you. Change them any time.', style: t.textTheme.bodySmall),
+          if (answered.isEmpty) Padding(padding: const EdgeInsets.only(top: 6), child: Text('Nothing answered yet.', style: t.textTheme.bodyMedium)),
+          for (final c in answered) ConditionAsk(c, showWhy: false),
+          if (open.isNotEmpty)
+            Theme(
+              data: t.copyWith(dividerColor: Colors.transparent),
+              child: ExpansionTile(
+                tilePadding: EdgeInsets.zero,
+                title: Text('Other questions (${open.length})', style: t.textTheme.labelLarge),
+                children: [for (final c in open) ConditionAsk(c)],
+              ),
+            ),
+        ]),
+      ),
     );
   }
 }

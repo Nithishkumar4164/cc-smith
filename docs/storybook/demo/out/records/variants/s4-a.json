@@ -1,0 +1,99 @@
+{
+ "scene": "s4",
+ "order": 1,
+ "name": "Official page found: Google Pay Flex SBI Card",
+ "wires": [
+  {
+   "cap": "Launch detail",
+   "blocks": [
+    {
+     "t": "back",
+     "text": "Market"
+    },
+    {
+     "t": "title",
+     "text": "Google Pay Flex SBI Card"
+    },
+    {
+     "t": "chips",
+     "items": [
+      "News",
+      "Official page"
+     ],
+     "on": -1
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Google Pay Flex SBI Card Launched",
+       "meta": "fintechbiznews.com · News · Not an official source",
+       "amt": "",
+       "st": "grey",
+       "stl": "news",
+       "cb": "none"
+      },
+      {
+       "no": "Google Pay Flex SBI Card - Benefits & Features",
+       "meta": "sbicard.com",
+       "amt": "",
+       "st": "ok",
+       "stl": "official",
+       "cb": "none"
+      }
+     ],
+     "hl": "refs"
+    },
+    {
+     "t": "msg",
+     "kind": "warn",
+     "text": "Reported, not confirmed: the bank's page was found but no figure passed the quote check yet."
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "radar",
+  "gw",
+  "serp",
+  "bank",
+  "kb"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "radar",
+   "to": "gw",
+   "l": "google: site:sbicard.com \"Google Pay Flex\"",
+   "what": "A Google Search through SerpApi, limited to the bank's domain from the allow-list.",
+   "code": "engine=google  q=site:sbicard.com \"Google Pay Flex\"  google_domain=google.co.in",
+   "t": "NEW",
+   "hl": "refs"
+  },
+  {
+   "id": "m2",
+   "f": "serp",
+   "to": "radar",
+   "l": "organic_results[]",
+   "what": "Each result must be on the allow-listed domain and mention the card's name.",
+   "code": "search_id 6ac9992bd114dfc541d51e44",
+   "res": true
+  },
+  {
+   "id": "m3",
+   "f": "radar",
+   "to": "bank",
+   "l": "fetch the official page",
+   "what": "Plain fetch, headless browser if the page needs it.",
+   "t": "OLD"
+  },
+  {
+   "id": "m4",
+   "f": "radar",
+   "to": "kb",
+   "l": "only verbatim quotes become facts",
+   "what": "Each number must appear inside a quote from the page. Here 8 fields came back empty, so it stays ‘Reported’.",
+   "t": "OLD"
+  }
+ ]
+}

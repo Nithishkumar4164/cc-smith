@@ -1,0 +1,5 @@
+{
+ "order": 1,
+ "title": "Before recording",
+ "text": "Backend on :8001 in live mode, emulator open, Settings › Start over so onboarding shows. Run `uv run cc-smith radar` once in a terminal for the gateway shot."
+}

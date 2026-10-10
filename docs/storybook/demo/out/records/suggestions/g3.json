@@ -1,0 +1,9 @@
+{
+ "order": 3,
+ "n": 3,
+ "where": "Step 6",
+ "title": "Four budget envelopes have no job running yet",
+ "paras": [
+  "card_profile, cap_watch, checkout_merchant and commerce_offers have budgets and cache times in the gateway, but no scheduled job calls them. Call them budgeted, not running."
+ ]
+}

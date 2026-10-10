@@ -39,8 +39,10 @@ def test_dedupe_key_merges_headlines_and_matches_seeds():
     a = triage.rules("Bandhan Bank enters credit card business, launches four cards with Mastercard")
     b = triage.rules("Bandhan Bank forays into credit cards with four Mastercard variants")
     assert triage.dedupe_key(a.issuer, a.card_name) == triage.dedupe_key(b.issuer, b.card_name) == "bandhan_bank:*"
-    assert triage.dedupe_key("Axis Bank", "Scapia Axis Bank Credit Card") in {
+    # Scapia on Axis is not the Scapia Federal card: different issuer, same family.
+    assert triage.dedupe_key("Axis Bank", "Scapia Axis Bank Credit Card") not in {
         triage.dedupe_key(i, n) for _, n, i in triage.seed_cards()}
+    assert triage.variant_family("Axis Bank", "Scapia Axis Bank Credit Card", list(triage.seed_cards())) == ("scapia_federal", "Scapia")
     # Parenthetical variants in seed names do not change the key.
     assert triage.dedupe_key("HDFC Bank", "HDFC Bank INFINIA Credit Card (Metal Edition)") == "hdfc_bank:infinia"
     assert triage.dedupe_key("Federal Bank (fintech partner: Scapia)", "Scapia Federal Bank Credit Card") == "federal_bank:scapia"
@@ -67,13 +69,15 @@ def test_sweep_outcomes_speculative_profiled_known(swept):
         "Bandhan Bank credit cards": "speculative",  # issuer not on the allow-list
         "Google Pay Flex SBI Card": "speculative",  # R20: no sbicard.com page found
         "Flipkart SBI Credit Card": "speculative",  # SBI's own ad, no official page discovered
-        "Scapia Axis Bank Credit Card": "known",  # seed-cards.md row 15
+        "Scapia Axis Bank Credit Card": "speculative",  # its own card on Axis (suggestion 9), no Axis page recorded
         "Axis Bank ACE Credit Card": "profiled",
     }
     gpay = rows["Google Pay Flex SBI Card"]
     assert gpay.card_id is None and gpay.refs[0]["kind"] == "news" and gpay.refs[0]["official"] is False
     assert "not confirmed by the bank" in gpay.summary
-    assert rows["Scapia Axis Bank Credit Card"].card_id == "scapia_federal"
+    scapia_axis = rows["Scapia Axis Bank Credit Card"]
+    assert scapia_axis.card_id is None
+    assert scapia_axis.summary.startswith("New variant of Scapia (the catalogue has scapia_federal from another issuer).")
     flipkart = rows["Flipkart SBI Credit Card"]
     assert flipkart.refs[0]["advertiser"] == "SBI CARDS AND PAYMENT SERVICES LIMITED"
     assert "1st Year Free" in flipkart.refs[0]["quote"]
@@ -125,7 +129,7 @@ def test_speculative_launch_is_promoted_when_the_official_page_appears(db):
 def test_get_launches_lists_candidates_and_scores_the_profiled_one(swept):
     client = TestClient(app)
     rows = client.get("/launches").json()
-    assert {r["status"] for r in rows} == {"speculative", "profiled", "known"}
+    assert {r["status"] for r in rows} == {"speculative", "profiled"}
     uid = client.post("/users").json()["user_id"]
     hdr = {"X-User-Id": uid}
     assert client.put("/me/spends", json={"swiggy": 4_000 * 100, "online": 10_000 * 100}, headers=hdr).status_code == 200
@@ -141,3 +145,70 @@ def test_cli_records_run_state(db, capsys):
     with engine().begin() as c:
         rs = c.execute(select(run_state).where(run_state.c.job == "launch_radar")).first()
     assert rs.status == "ok" and rs.detail["as_of"] == "2026-10-07"
+
+
+
+# Headlines from the first live sweep (10 Oct 2026), suggestion 8.
+LIVE_HEADLINES = [
+    ("IndusInd Bank", "Overdraft And Cash Credit Linked Corporate Credit Card",
+     "IndusInd Bank Launches Overdraft And Cash Credit Linked Corporate Credit Card For Businesses"),
+    ("IndusInd Bank", "OD CC IndusInd Bank Credit Card", "IndusInd Bank launches OD and CC linked corporate credit card for businesses"),
+    ("IndusInd Bank", "IndusInd Bank OD CC Corporate Credit Card", "IndusInd Bank OD CC Corporate Credit Card Launch 2026"),
+    ("SBI Card", "Launches FD-Backed Credit Card", "SBI Card Launches FD-Backed Credit Card on YONO App"),
+    ("SBI Card", "Advantage SBI Card", "FD-backed SBI credit card: Advantage SBI Card launched; who can benefit from it?"),
+    ("SBI Card", "FD-backed YONO SBI Card Credit Card", "SBI Card launches FD-backed secured card on SBI YONO"),
+    ("SBI Card", "SBI Credit Cards", "New SBI Card ad: 10X Reward Points on everyday spends"),
+    ("SBI Card", "SimplySAVE Credit Card", "New SBI Card ad: 10X Reward Points on everyday spends"),
+    ("YES Bank", "Ultimate Travel Credit Card", "Niyo, YES BANK and Visa Partner to Launch the Ultimate Travel Credit Card"),
+]
+
+
+def _live_leads():
+    from cc_smith.signals.sources import Lead
+
+    return [Lead("news", i, n, [{"url": f"https://example.org/{k}", "kind": "news"}], h) for k, (i, n, h) in enumerate(LIVE_HEADLINES)]
+
+
+def test_same_launch_under_different_headlines_collapses_to_one_lead():
+    from cc_smith.signals.launch_radar import _merge
+
+    merged = _merge(_live_leads(), covered_issuers={"sbi_card", "axis_bank", "hdfc_bank", "yes_bank"})
+    by_issuer = {}
+    for lead in merged.values():
+        by_issuer.setdefault(lead.issuer, []).append(lead)
+    assert len(by_issuer["IndusInd Bank"]) == 1 and len(by_issuer["IndusInd Bank"][0].refs) == 3
+    sbi = {lead.card_name for lead in by_issuer["SBI Card"]}
+    assert len(sbi) == 2  # the FD-backed card (three headlines) and SimplySAVE stay separate
+    assert "SimplySAVE Credit Card" in sbi
+    assert "SBI Credit Cards" not in sbi  # generic name from a bank the catalogue covers
+    fd = next(lead for lead in by_issuer["SBI Card"] if lead.card_name != "SimplySAVE Credit Card")
+    assert len(fd.refs) == 3
+    assert len(by_issuer["YES Bank"]) == 1
+
+
+def test_generic_lead_from_a_bank_new_to_the_market_is_kept():
+    from cc_smith.signals.launch_radar import _merge
+    from cc_smith.signals.sources import Lead
+
+    leads = [Lead("news", "Bandhan Bank", "Bandhan Bank credit cards", [{"url": "https://a"}], "Bandhan Bank enters credit cards"),
+             Lead("news", "Bandhan Bank", "Bandhan Bank credit cards", [{"url": "https://b"}], "Bandhan forays into credit cards")]
+    merged = _merge(leads, covered_issuers={"sbi_card"})
+    assert len(merged) == 1 and len(next(iter(merged.values())).refs) == 2
+
+
+def test_ads_for_accounts_and_debit_cards_are_not_launches():
+    assert triage.is_noise("Axis Bank Digital Savings Account")
+    assert triage.is_noise("e-debit card")
+    assert not triage.is_noise("SimplySAVE Credit Card")
+
+
+def test_empty_launch_cards_are_pruned_and_profiled_ones_kept(db, cards):
+    from cc_smith.knowledge import store
+    from cc_smith.knowledge.pipeline import profile_card
+    from cc_smith.signals.launch_radar import prune_empty_cards
+
+    profile_card(cards["hdfc_millennia"], origin="launch_radar")
+    with db.begin() as c:
+        store.ensure_card(c, "sbi_flex_google_pay", "Google Pay Flex SBI Card", "SBI Card", origin="launch_radar")
+        assert prune_empty_cards(c) == ["sbi_flex_google_pay"]
+        assert {r.id for r in store.all_cards(c)} == {"hdfc_millennia"}

@@ -43,3 +43,16 @@ def test_checkout_offers_match_issuer_card_and_date(db):
         o = next(f["offer"] for f in found if f["offer"].id == "hdfc_myntra_10_1000")
         assert offers.estimate(o, 4_000 * R) == 0  # below ₹5,000 minimum
         assert offers.estimate(o, 20_000 * R) == 1_000 * R  # 10% capped at ₹1,000
+
+
+def test_up_to_percentage_offers_show_a_ceiling_and_no_estimate(db):
+    with db.begin() as c:
+        offers.load(c, BATCH)
+        rows = {o.id: o for o in c.execute(select(offer)).all()}
+    mmt = rows["hdfc_makemytrip_easyemi_25"]   # "Up to 25% … max ₹11,300, min ₹5,000"
+    myntra = rows["hdfc_myntra_10_1000"]        # "10% up to ₹1,000": fixed rate with a cap
+    assert offers.is_up_to(mmt) and not offers.is_up_to(myntra)
+    assert offers.estimate(mmt, 20_000 * R) is None
+    assert offers.up_to_ceiling(mmt, 20_000 * R) == 5_000 * R      # 25% of ₹20,000, under the ₹11,300 max
+    assert offers.up_to_ceiling(mmt, 100_000 * R) == 11_300 * R    # the offer's own maximum
+    assert offers.estimate(myntra, 8_000 * R) == 800 * R

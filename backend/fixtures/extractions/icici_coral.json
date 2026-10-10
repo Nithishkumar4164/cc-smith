@@ -13,9 +13,79 @@
     "annual_paise": 50000,
     "waiver_spend_paise": 15000000
   },
-  "earn_rules": [],
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card",
+          "quote": "Earn Points on every ₹100 spend | 2 | On Retail | Spend"
+        },
+        {
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card",
+          "quote": "1 | On Utility and Insurance | Spend"
+        }
+      ],
+      "id": "utilities_insurance",
+      "match": {
+        "categories": [
+          "utilities",
+          "insurance"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 1,
+        "per_paise": 10000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/coral-credit-card",
+          "quote": "Earn Points on every ₹100 spend | 2 | On Retail | Spend"
+        }
+      ],
+      "id": "retail",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 2,
+        "per_paise": 10000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    }
+  ],
   "caps": [],
-  "exclusions": [],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.icici.bank.in/content/dam/icicibank/managed-assets/docs/personal/cards/credit-cards/membership-kits/ICICI_Bank_Coral_Credit_Card_Membership_Guide.pdf",
+          "quote": "Earn 2 reward points on every `100 spent on all purchases, except on fuel."
+        }
+      ],
+      "categories": [
+        "fuel"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
   "milestones": [],
   "min_txn_src": []
 }

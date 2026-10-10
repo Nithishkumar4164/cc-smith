@@ -1,0 +1,87 @@
+{
+ "scene": "s3",
+ "order": 2,
+ "name": "Ads Transparency: a new SBI Card ad",
+ "wires": [
+  {
+   "cap": "Market",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Market"
+    },
+    {
+     "t": "tabs",
+     "items": [
+      "Offers for you",
+      "New launches",
+      "What changed"
+     ],
+     "on": 1
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "SimplySAVE Credit Card",
+       "meta": "Bank ad · first shown 9 Oct 2026",
+       "amt": "",
+       "st": "grey",
+       "stl": "reported",
+       "cb": "none"
+      }
+     ],
+     "hl": "ad"
+    },
+    {
+     "t": "msg",
+     "kind": "note",
+     "text": "New SBI Card ad: 10X Reward Points on everyday spends"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "radar",
+  "gw",
+  "serp",
+  "llm"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "radar",
+   "to": "gw",
+   "l": "ads by sbicard.com, last 30 days",
+   "what": "Ad search by the bank's own domain in region India (2356). Ads by affiliates are dropped; only the bank's own advertiser counts.",
+   "code": "engine=google_ads_transparency_center  text=sbicard.com  region=2356",
+   "t": "NEW",
+   "hl": "ad"
+  },
+  {
+   "id": "m2",
+   "f": "serp",
+   "to": "radar",
+   "l": "ad_creatives[]",
+   "what": "Creatives first shown in the last 14 days are new.",
+   "res": true
+  },
+  {
+   "id": "m3",
+   "f": "radar",
+   "to": "gw",
+   "l": "ad details for 2 newest creatives",
+   "what": "Text ads come back as images, so the creative itself is fetched.",
+   "code": "engine=google_ads_transparency_center_ad_details  creative_id=CR06036348016498049025",
+   "t": "NEW"
+  },
+  {
+   "id": "m4",
+   "f": "radar",
+   "to": "llm",
+   "l": "read the ad image",
+   "what": "Vision reads the ad's words and names the card, if the ad names one.",
+   "t": "NEW"
+  }
+ ]
+}

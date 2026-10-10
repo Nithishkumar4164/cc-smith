@@ -106,7 +106,7 @@ void main() {
   });
 
   test('launches: profiled / speculative / known, with ad and official refs', () {
-    final ls = (fixture('launches') as List).map((e) => Launch.fromJson(e)).toList();
+    final ls = (fixture('launches_v3') as List).map((e) => Launch.fromJson(e)).toList();
     final ace = ls.firstWhere((l) => l.cardId == 'axis_ace');
     expect(ace.confirmed, isTrue);
     expect(ace.refs.first.kind, 'ad');
@@ -144,8 +144,15 @@ void main() {
     expect(fyf.due, '2026-11-15');
     expect(fyf.rupeesPaise, 117882);
     expect(fyf.refs.single.official, isTrue);
-    expect(ns.firstWhere((n) => n.kind == 'cap').title, contains('91%'));
-    expect(ns.firstWhere((n) => n.kind == 'credit').refs, isEmpty);
+    final util = ns.firstWhere((n) => n.kind == 'credit');
+    expect(util.isGuidance, isTrue);
+    expect(util.refs, isEmpty);
+    final ornge = ns.firstWhere((n) => n.id == 'feeoffer:hdfc_swiggy_ornge_ltf_corporate');
+    expect(ornge.eligibility, 'unknown');
+    expect(ornge.requires.single.key, 'select_corporate_employee');
+    expect(eligibilityFor(ornge.requires, {'select_corporate_employee': false}, ornge.eligibility), 'no');
+    expect(eligibilityFor(ornge.requires, {'select_corporate_employee': true}, ornge.eligibility), 'yes');
+    expect(eligibilityFor(ornge.requires, {}, ornge.eligibility), 'unknown');
     expect(ns.where((n) => n.needsAttention).length, ns.where((n) => n.severity != 'info').length);
   });
 
@@ -189,6 +196,25 @@ void main() {
     expect(live.reasonCodes, contains('insufficient_credit:11900000'));
     expect(live.notes, contains('Only ₹1,19,000 of credit available'));
     expect(reasonLabel('insufficient_credit:11900000'), 'Only ₹1,19,000 credit left');
+  });
+
+  test('conditions, if-answered rewards, up-to offers, launch variants (live recordings)', () {
+    expect(meta.condition('amazon_prime')!.kind, 'membership');
+    expect(meta.condition('axis_burgundy_salary')!.kind, 'eligibility');
+    final pay = PayResult.fromJson(fixture('pay_amazon_ifans'));
+    final ap = pay.ranked.firstWhere((o) => o.cardId == 'icici_amazon_pay');
+    expect(ap.ifAnswered.single.key, 'amazon_prime');
+    expect(ap.ifAnswered.single.rewardPaise, 25000);
+    final upto = PayResult.fromJson(fixture('pay_upto'));
+    expect(upto.offers.every((o) => o.estSavingPaise == null && o.upToPaise != null), isTrue);
+    final ls = (fixture('launches') as List).map((e) => Launch.fromJson(e)).toList();
+    final scapia = ls.firstWhere((l) => l.name.startsWith('Scapia'));
+    expect(scapia.variantOf(['scapia_federal']), 'scapia_federal');
+    expect(scapia.variantOf(const []), isNull);
+    final magnus = (fixture('cards') as List).map((e) => CardSummary.fromJson(e)).firstWhere((c) => c.id == 'axis_magnus');
+    expect(magnus.feeOffers.single.requires.single.key, 'axis_burgundy_salary');
+    expect(magnus.feeOffers.single.eligibility, 'unknown');
+    expect(Me.fromJson(fixture('me_v4')).answers, isEmpty);
   });
 
   test('transactions', () {

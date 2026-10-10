@@ -1,0 +1,10 @@
+{
+ "order": 2,
+ "call": "google_ads_transparency_center",
+ "owner": "SerpApi",
+ "gives": "New ads by SBI, HDFC, ICICI and Axis, by domain",
+ "tag": "NEW",
+ "steps": [
+  3
+ ]
+}

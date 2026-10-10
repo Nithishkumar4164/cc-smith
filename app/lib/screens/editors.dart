@@ -12,6 +12,7 @@ String feeOptionLabel(int? p) => p == null ? 'No limit' : (p == 0 ? 'Free only' 
 
 String feeStatusLabel(Holding h) => switch (h.feeStatus) {
   'ltf' => 'Lifetime free',
+  'custom' => h.annualFeePaise == null ? 'Custom fee' : 'Fee ${rupees(h.annualFeePaise!)}/yr',
   'fyf' => h.fyfUntil == null ? 'First year free' : 'Free until ${shortDate(h.fyfUntil)}',
   _ => 'Standard fee',
 };
@@ -179,15 +180,9 @@ class _HoldingsEditorState extends State<HoldingsEditor> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(holdingSummary(h, _pools), style: t.textTheme.bodySmall),
+                          // Asked next to the card that uses it; saved straight away as an answer.
                           for (final m in c.memberships)
-                            Padding(
-                              padding: const EdgeInsets.only(top: 4),
-                              child: FilterChip(
-                                label: Text('I have ${app.meta?.membership(m.key)?.name ?? m.name}'),
-                                selected: _flags.contains(m.key),
-                                onSelected: (v) => setState(() => v ? _flags.add(m.key) : _flags.remove(m.key)),
-                              ),
-                            ),
+                            ConditionAsk(app.meta?.condition(m.key) ?? Condition(key: m.key, question: 'Do you have ${m.name}?', why: m.why)),
                           TextButton.icon(
                             style: TextButton.styleFrom(padding: EdgeInsets.zero, visualDensity: VisualDensity.compact),
                             onPressed: () => _editDetails(c),
@@ -226,6 +221,13 @@ class _CardDetailsSheetState extends State<CardDetailsSheet> {
   late bool _shared;
   late final TextEditingController _limit;
   late final TextEditingController _balance;
+  late final TextEditingController _fee;
+
+  /// The bank's annual fee from our catalogue, GST included.
+  int? get _bankFee {
+    final f = widget.card.annualFeePaise; // the catalogue stores it before GST
+    return f == null ? null : f * 118 ~/ 100;
+  }
 
   @override
   void initState() {
@@ -235,12 +237,14 @@ class _CardDetailsSheetState extends State<CardDetailsSheet> {
     _shared = _h.poolId != null;
     _limit = TextEditingController(text: _rupeeText(_h.creditLimitPaise));
     _balance = TextEditingController(text: _rupeeText(_h.balancePaise));
+    _fee = TextEditingController(text: _rupeeText(_h.annualFeePaise ?? _bankFee));
   }
 
   @override
   void dispose() {
     _limit.dispose();
     _balance.dispose();
+    _fee.dispose();
     super.dispose();
   }
 
@@ -308,6 +312,14 @@ class _CardDetailsSheetState extends State<CardDetailsSheet> {
       balancePaise: balance,
       clearBalance: balance == null,
     );
+    if (h.feeStatus == 'custom') {
+      final fee = parseRupeesToPaise(_fee.text);
+      if (fee == null) {
+        showError(context, const ApiException('Enter the annual fee you pay.'));
+        return;
+      }
+      h = h.copyWith(annualFeePaise: fee);
+    }
     if (h.feeStatus == 'fyf' && h.fyfUntil == null) {
       showError(context, const ApiException('Pick the date the free year ends.'));
       return;
@@ -376,13 +388,38 @@ class _CardDetailsSheetState extends State<CardDetailsSheet> {
             SegmentedButton<String>(
               showSelectedIcon: false,
               segments: const [
-                ButtonSegment(value: 'standard', label: Text('Standard')),
-                ButtonSegment(value: 'ltf', label: Text('Lifetime free')),
-                ButtonSegment(value: 'fyf', label: Text('First year free')),
+                ButtonSegment(value: 'standard', label: Text('Standard'), tooltip: "The bank's fee"),
+                ButtonSegment(value: 'ltf', label: Text('LTF'), tooltip: 'Lifetime free'),
+                ButtonSegment(value: 'fyf', label: Text('FYF'), tooltip: 'First year free'),
+                ButtonSegment(value: 'custom', label: Text('Custom'), tooltip: 'A fee the bank offered you'),
               ],
               selected: {_h.feeStatus},
               onSelectionChanged: (v) => setState(() => _h = _h.copyWith(feeStatus: v.first)),
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: Text(
+                switch (_h.feeStatus) {
+                  'ltf' => 'Lifetime free: no annual fee on your card.',
+                  'fyf' => 'First year free: no fee until the date below, then the bank\'s fee.',
+                  'custom' => 'The fee you actually pay each year, GST included.',
+                  _ => _bankFee == null
+                      ? 'The bank\'s fee for this card.'
+                      : 'The bank\'s fee: ${rupees(_bankFee!)} a year including GST.',
+                },
+                style: t.textTheme.bodySmall,
+              ),
+            ),
+            if (_h.feeStatus == 'custom')
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: TextField(
+                  controller: _fee,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                  decoration: const InputDecoration(labelText: 'Annual fee you pay', prefixText: '₹ '),
+                ),
+              ),
             if (_h.feeStatus == 'fyf')
               Align(
                 alignment: Alignment.centerLeft,
@@ -588,7 +625,10 @@ class _SpendsEditorState extends State<SpendsEditor> {
 class PreferencesEditor extends StatefulWidget {
   final String actionLabel;
   final VoidCallback onSaved;
-  const PreferencesEditor({super.key, required this.actionLabel, required this.onSaved});
+  /// Which sections to show: memberships live in Profile, reward type and fee in Card Finder.
+  final bool memberships;
+  final bool finder;
+  const PreferencesEditor({super.key, required this.actionLabel, required this.onSaved, this.memberships = true, this.finder = true});
   @override
   State<PreferencesEditor> createState() => _PreferencesEditorState();
 }
@@ -614,7 +654,9 @@ class _PreferencesEditorState extends State<PreferencesEditor> {
   Future<void> _save() async {
     setState(() => _busy = true);
     try {
-      await AppScope.read(context).saveProfile(_p);
+      final app = AppScope.read(context);
+      // Membership flags follow the saved answers; don't resend stale ones.
+      await app.saveProfile(_with(flags: _p.flags.where((f) => app.meta?.condition(f) == null).toList()));
       widget.onSaved();
     } catch (e) {
       if (mounted) showError(context, e);
@@ -634,25 +676,15 @@ class _PreferencesEditorState extends State<PreferencesEditor> {
           child: ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              const SectionHeader('Memberships'),
-              if (memberships.isEmpty)
+              if (widget.memberships) ...[
+                const SectionHeader('Memberships'),
+                if (memberships.isEmpty)
                 Text('None of your cards pays more for a membership.', style: t.textTheme.bodySmall)
               else
-                Card(
-                  child: Column(
-                    children: [
-                      for (final m in memberships)
-                        SwitchListTile(
-                          value: _p.flags.contains(m.key),
-                          onChanged: (v) => setState(
-                            () => _p = _with(flags: v ? {..._p.flags, m.key}.toList() : _p.flags.where((f) => f != m.key).toList()),
-                          ),
-                          title: Text('${m.name} member'),
-                          subtitle: Text(m.why ?? (m.by != null ? 'From ${m.by}' : '')),
-                        ),
-                    ],
-                  ),
-                ),
+                for (final m in memberships)
+                  ConditionAsk(app.meta?.condition(m.key) ?? Condition(key: m.key, question: 'Do you have ${m.name}?', why: m.why)),
+              ],
+              if (widget.finder) ...[
               const SectionHeader('Reward type you prefer'),
               SegmentedButton<String>(
                 segments: const [
@@ -681,6 +713,7 @@ class _PreferencesEditorState extends State<PreferencesEditor> {
                 'Card Finder only suggests new cards that match these. Cards you already hold are always scored.',
                 style: t.textTheme.bodySmall,
               ),
+              ],
             ],
           ),
         ),

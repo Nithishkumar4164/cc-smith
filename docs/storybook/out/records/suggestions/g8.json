@@ -1,9 +1,1 @@
-{
- "order": 8,
- "n": 8,
- "where": "Step 9",
- "title": "Scapia Axis is treated as the Scapia Federal card",
- "paras": [
-  "Launch Radar marks “Scapia Axis Bank Credit Card” as already in the catalogue. Under DR-4's variant route it should be its own profile, since the issuer and terms differ."
- ]
-}
+{"order": 8, "n": 8, "where": "Step 9", "title": "Same launch listed several times", "paras": ["The first live sweep listed IndusInd's corporate card and SBI's FD-backed card three times each, under different headline wordings (“Launches FD-Backed Credit Card”, “Advantage SBI Card”, “FD-backed YONO SBI Card”). An ad also produced a generic “SBI Credit Cards” candidate.", "Group leads by issuer plus fuzzy-matched card name, and drop generic names before discovery. About 30 minutes with tests."], "updatedAt": "2026-10-10T03:10:00Z", "note": "New: same launch listed several times"}

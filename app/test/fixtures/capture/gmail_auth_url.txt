@@ -1,0 +1,1 @@
+{"detail":{"code":"not_configured","message":"Google OAuth client JSON not found; set GOOGLE_OAUTH_CLIENT_PATH"}} 503

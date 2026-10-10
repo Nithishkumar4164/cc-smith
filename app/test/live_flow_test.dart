@@ -3,6 +3,8 @@
 import 'dart:io';
 
 import 'package:app/api.dart';
+import 'package:app/capture.dart';
+import 'package:app/notifications.dart';
 import 'package:app/models.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -81,6 +83,47 @@ void main() {
       final after = {for (final c in await api.billPaid('hdfc_millennia')) c.cardId: c};
       expect(after['hdfc_millennia']!.outstandingPaise, 0);
     }
+
+    // Conditions: answers merge, null clears.
+    var me3 = await api.putAnswers({'amazon_prime': true, 'axis_burgundy_salary': false});
+    expect(me3.answers, {'amazon_prime': true, 'axis_burgundy_salary': false});
+    me3 = await api.putAnswers({'axis_burgundy_salary': null});
+    expect(me3.answers, {'amazon_prime': true});
+
+    // Capture: a password-protected synthetic statement (made by backend/tests/capture_docs.py).
+    if (ids.contains('hdfc_millennia')) {
+      final pdf = File('test/fixtures/capture/statement_pw.pdf').readAsBytesSync();
+      await expectLater(api.uploadStatement(pdf, 's.pdf', cardId: 'hdfc_millennia'),
+          throwsA(isA<ApiException>().having((e) => e.code, 'code', 'password_required')));
+      final st = StatementResult.fromJson(await api.uploadStatement(pdf, 's.pdf', password: 'TEST1234', cardId: 'hdfc_millennia'));
+      expect(st.matched, isTrue);
+      expect(st.totalDuePaise, 3678600);
+      final cr = CreditReportResult.fromJson(await api.uploadCreditReport(File('test/fixtures/capture/credit_report.pdf').readAsBytesSync(), 'r.pdf'));
+      expect(cr.score, isNotNull);
+      final ev = eventFromNotification({
+        'key': 'k1', 'package': 'com.snapwork.hdfc', 'postTime': DateTime.now().millisecondsSinceEpoch,
+        'text': 'Spent Rs.499 On HDFC Bank Card 4321 At SWIGGY On 2026-10-10:10:00:00.',
+      })!;
+      final out = await api.postEvents([ev]);
+      expect((out['outcomes'] as List).single['outcome'], isIn(['recorded', 'duplicate', 'unmatched_card']));
+    }
+
+    // Demo bureau discovery, demo budget import + pin/unpin, market offers.
+    final start = await api.bureauStart('9876543210');
+    expect(start['mock'], isTrue);
+    final found = CreditReportResult.fromJson(await api.bureauVerify('${start['request_id']}', '${start['demo_otp']}'));
+    expect(found.accounts, isNotEmpty);
+    final (n, b) = await api.importBudgetDemo();
+    expect(n, greaterThan(0));
+    expect(b.lines, isNotEmpty);
+    final line = b.lines.first;
+    final pinned = await api.putBudget({line.key: line.budgetPaise + 100000});
+    expect(pinned.lines.firstWhere((l) => l.key == line.key).pinned, isTrue);
+    final unpinned = await api.putBudget({line.key: null});
+    expect(unpinned.lines.firstWhere((l) => l.key == line.key).pinned, isFalse);
+    final offers = await api.marketOffers();
+    expect(offers.every((o) => o.kind == 'fee_offer'), isTrue);
+    expect((await api.notices()).any((x) => x.kind == 'fee_offer'), isFalse);
 
     final launches = await api.launches();
     expect(launches, isNotEmpty);

@@ -1,0 +1,44 @@
+{
+ "lanes": {
+  "u": {
+   "name": "Card holder",
+   "role": "the user"
+  },
+  "app": {
+   "name": "App",
+   "role": "Flutter, Android"
+  },
+  "api": {
+   "name": "API",
+   "role": "FastAPI backend"
+  },
+  "radar": {
+   "name": "Launch Radar",
+   "role": "daily sweep job"
+  },
+  "gw": {
+   "name": "SerpApi gateway",
+   "role": "guard, cache, budget"
+  },
+  "serp": {
+   "name": "SerpApi",
+   "role": "Google engines"
+  },
+  "bank": {
+   "name": "Bank website",
+   "role": "official pages"
+  },
+  "llm": {
+   "name": "Haiku 4.5",
+   "role": "reads and names"
+  },
+  "eng": {
+   "name": "Rewards engine",
+   "role": "plain Python maths"
+  },
+  "kb": {
+   "name": "Card facts",
+   "role": "quotes from banks"
+  }
+ }
+}

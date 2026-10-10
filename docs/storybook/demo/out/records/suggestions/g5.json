@@ -1,0 +1,9 @@
+{
+ "order": 5,
+ "n": 5,
+ "where": "Step 3",
+ "title": "A re-run sweep today answers from cache",
+ "paras": [
+  "Launch Radar results are cached for 7 days, so `uv run cc-smith radar` now returns cached answers and spends nothing. That is fine to show: it prints searches, leads and the credit counts. 224 live searches are left this month."
+ ]
+}

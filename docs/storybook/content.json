@@ -129,7 +129,7 @@
    ]
   },
   "context": {
-   "digest": "Product: cc-smith, for credit-card holders in India. Hackathon build for the SerpApi India Hackathon 2026 (Commerce & Market Intelligence), submission 10 Oct 2026 18:00 IST.\n\nFacts: 22 cards in the catalogue, profiled from official bank pages (allow-list in docs/research/official-domains.yaml). A card fact is published only if (1) its URL is official for that field (bank for fees/earn/caps; co-brand partner for its reward currency; fintech operators like Kiwi and Scapia also for earn rules), (2) the verbatim quote is found in the fetched page or PDF, (3) every rupee amount, cap and percentage appears in its own quote, (4) range checks pass (earn ≤25%, fee ≤₹1 lakh). Otherwise it is speculation: shown as 'reported, not confirmed by the bank', never used in maths. No human review; every change alerts the owner. 21 merchant offers and 4 fee offers (LTF/FYF/joining waiver) from bank pages; one distributor copy is speculation. Money is integer paise. Fees include 18% GST.\n\nA quick model (Haiku 4.5, 2 s limit) chooses the card at checkout from engine-computed figures and never calculates; rupee amounts in its reason must be supplied figures; timeout, error or invalid answer falls back to the engine's pick (decision D10). Checkout's engine pick is the best card for the month: this payment plus what the rest of the month still earns after it (spends prorated to the days left, under remaining caps and credit); ties go to the narrower rule, keeping broad caps like SBI Cashback's 5% on all online free. Engine: per purchase, rules matched by merchant > category > catch-all, then rule priority; exclusions; minimum amount; caps per period from the ledger; stacked bonus rules; UPI only for RuPay cards; memberships (Amazon Prime, Tata NeuPass, Kiwi Neon, paying bills through Google Pay) gate some rules. Finder simulates a year month by month, routing each spend to the best card, then hill-climbs whole-line moves so fee waivers and milestones are kept; adding a card can never score below the current stack minus its fee.\n\nDecisions (owner): no affiliate money; no human in the loop (DR-12); hackathon first; Android only through M3; category spend amount is the total and merchants are part of it; per-card memberships; held cards can be LTF or FYF; shared credit pools; available credit = limit − (entered outstanding + logged payments − bills paid); notice board with reasons; payment capture manual until statement upload (M1) and notification/Gmail capture (M2); credit score is a user-entered band (no bureau API).\n\nOpen: premium tier undecided. Known gaps: report-wrong-info does not trigger a re-fetch although its response says so; score band not asked in onboarding; offer estimates take 'up to' figures at face value; fee-offer eligibility conditions are not checked against the user; Scapia Axis is treated as the Scapia Federal card; Airtel Axis 25%/10% rules not modelled; four cards listed but not scored (SimplyCLICK, Coral, AU LIT, Scapia). No live SerpApi or Anthropic call has run (no keys)."
+   "digest": "Product: cc-smith, for credit-card holders in India. Hackathon build for the SerpApi India Hackathon 2026 (Commerce & Market Intelligence), submission 10 Oct 2026 18:00 IST.\n\nFacts: 22 cards in the catalogue, profiled from official bank pages (allow-list in docs/research/official-domains.yaml). A card fact is published only if (1) its URL is official for that field (bank for fees/earn/caps; co-brand partner for its reward currency; fintech operators like Kiwi and Scapia also for earn rules), (2) the verbatim quote is found in the fetched page or PDF, (3) every rupee amount, cap and percentage appears in its own quote, (4) range checks pass (earn ≤25%, fee ≤₹1 lakh). Otherwise it is speculation: shown as 'reported, not confirmed by the bank', never used in maths. No human review; every change alerts the owner. 21 merchant offers and 4 fee offers (LTF/FYF/joining waiver) from bank pages; one distributor copy is speculation. Money is integer paise. Fees include 18% GST.\n\nA quick model (Haiku 4.5, 2.5 s limit, median 1.5 s measured) chooses the card at checkout from engine-computed figures and never calculates; rupee amounts in its reason must be supplied figures; timeout, error or invalid answer falls back to the engine's pick (decision D10). Checkout's engine pick is the best card for the month: this payment plus what the rest of the month still earns after it (spends prorated to the days left, under remaining caps and credit); ties go to the narrower rule, keeping broad caps like SBI Cashback's 5% on all online free. Engine: per purchase, rules matched by merchant > category > catch-all, then rule priority; exclusions; minimum amount; caps per period from the ledger; stacked bonus rules; UPI only for RuPay cards; memberships (Amazon Prime, Tata NeuPass, Kiwi Neon, paying bills through Google Pay) gate some rules. Finder simulates a year month by month, routing each spend to the best card, then hill-climbs whole-line moves so fee waivers and milestones are kept; adding a card can never score below the current stack minus its fee.\n\nDecisions (owner): no affiliate money; no human in the loop (DR-12); hackathon first; Android only through M3; category spend amount is the total and merchants are part of it; per-card memberships; held cards can be LTF or FYF; shared credit pools; available credit = limit − (entered outstanding + logged payments − bills paid); notice board with reasons; payment capture manual until statement upload (M1) and notification/Gmail capture (M2); credit score is a user-entered band (no bureau API).\n\nOpen: premium tier undecided. Known gaps: report-wrong-info does not trigger a re-fetch although its response says so; score band not asked in onboarding; offer estimates take 'up to' figures at face value; fee-offer eligibility conditions are not checked against the user; Scapia Axis is treated as the Scapia Federal card; Airtel Axis 25%/10% rules not modelled; four cards listed but not scored (SimplyCLICK, Coral, AU LIT, Scapia). Live since 10 Oct: SerpApi key (22 searches used, 228 of 250 left) and Anthropic key; checkout model median 1.5 s with a 2.5 s limit; extraction runs live without strict mode; the first live Launch Radar sweep found 12 reported launches, with duplicates from headline wording."
   }
  },
  "scenes": {
@@ -220,7 +220,8 @@
    "title": "Watch new cards in the market",
    "lede": "Google News and Google Ads Transparency (India) through one SerpApi gateway; a launch is scored only once the bank's own page confirms it.",
    "also": [
-    8
+    8,
+    9
    ],
    "stack": false
   }
@@ -950,7 +951,7 @@
      "f": "api",
      "to": "llm",
      "l": "choose_card from engine figures",
-     "what": "Owner decision D10: the model chooses, the engine calculates. It gets each usable card's now, later, month and the differences, already formatted, plus bank-offer savings. No user id; the merchant text is wrapped as data.",
+     "what": "Owner decision D10: the model chooses, the engine calculates. It gets each usable card's now, later, month and the differences, already formatted, plus bank-offer savings. No user id; the merchant text is wrapped as data. Measured live on 10 Oct: median 1.5 s (2.6 s with a strict schema, so strict is off; the card is checked in code).",
      "code": "{\"card_id\": enum[\"hsbc_live_plus\",\"hdfc_millennia\"], \"reason\": string}",
      "t": "NEW"
     },
@@ -1766,7 +1767,7 @@
      "f": "api",
      "to": "llm",
      "l": "choose_card",
-     "what": "Two-second limit, no retries.",
+     "what": "2.5-second limit, no retries. The first live call took 2.43 s, so a slow first call can still fall back.",
      "t": "NEW"
     },
     {
@@ -3189,7 +3190,7 @@
      "f": "kb",
      "to": "kb",
      "l": "extraction proposes fields with {url, quote}",
-     "what": "From fixtures today; live it is Sonnet 5.5 with a strict schema tool (not run yet: no key).",
+     "what": "Recorded extractions for the seed cards; live it is Sonnet 5.5 with one schema tool. Not strict: the API rejects this schema's grammar as too large, so the answer is validated afterwards and every quote and number is checked here.",
      "t": "OLD"
     },
     {
@@ -3696,6 +3697,126 @@
      "t": "OLD"
     }
    ]
+  },
+  "s9-e": {
+   "scene": "s9",
+   "order": 5,
+   "name": "First live sweep (10 Oct)",
+   "wires": [
+    {
+     "cap": "Market",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Market"
+      },
+      {
+       "t": "tabs",
+       "items": [
+        "Launch Radar",
+        "What changed"
+       ],
+       "on": 0
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "IndusInd OD/CC-linked corporate card",
+         "meta": "no official page yet · seen 3 times under different headlines",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        },
+        {
+         "no": "SBI Card FD-backed card on YONO",
+         "meta": "no official page yet · seen 3 times",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        },
+        {
+         "no": "Niyo + YES Bank travel card",
+         "meta": "no official page yet",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        },
+        {
+         "no": "Google Pay Flex SBI Card",
+         "meta": "official page found; nothing passed the quote check",
+         "amt": "",
+         "due": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        }
+       ],
+       "hl": "launch"
+      },
+      {
+       "t": "muted",
+       "text": "14 launches in the feed · 22 live searches today, 228 of 250 left"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "gw",
+    "web",
+    "kb",
+    "api"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "gw",
+     "to": "web",
+     "l": "google_news + 9 Ads Transparency searches",
+     "what": "One news query (72 results, 9 kept as leads) and Ads Transparency for each issuer domain in India.",
+     "t": "OLD"
+    },
+    {
+     "id": "m2",
+     "f": "gw",
+     "to": "gw",
+     "l": "record without overwriting",
+     "what": "Undated queries hash to the same file every day; the recorder now keeps the committed recording and files today's under fixtures/serp_live_2026-10-10/.",
+     "t": "MOD"
+    },
+    {
+     "id": "m3",
+     "f": "gw",
+     "to": "kb",
+     "l": "discover, fetch, extract",
+     "what": "For Google Pay Flex SBI an official page was found and extracted live, but no field passed the quote check, so it stays reported.",
+     "t": "MOD"
+    },
+    {
+     "id": "m4",
+     "f": "kb",
+     "to": "kb",
+     "l": "one card failing no longer stops the sweep",
+     "what": "The first live run stopped on an API error for one card; now that card is kept as reported and the sweep carries on.",
+     "t": "MOD"
+    },
+    {
+     "id": "m5",
+     "f": "kb",
+     "to": "api",
+     "l": "12 reported, 1 known, 1 confirmed",
+     "what": "Real launches, none with an official card page yet. Duplicates from different headline wordings are visible (see suggestion 8).",
+     "t": "OLD",
+     "res": true,
+     "hl": "launch"
+    }
+   ]
   }
  },
  "suggestions": {
@@ -3769,6 +3890,16 @@
   "g8": {
    "order": 8,
    "n": 8,
+   "where": "Step 9",
+   "title": "Same launch listed several times",
+   "paras": [
+    "The first live sweep listed IndusInd's corporate card and SBI's FD-backed card three times each, under different headline wordings (“Launches FD-Backed Credit Card”, “Advantage SBI Card”, “FD-backed YONO SBI Card”). An ad also produced a generic “SBI Credit Cards” candidate.",
+    "Group leads by issuer plus fuzzy-matched card name, and drop generic names before discovery. About 30 minutes with tests."
+   ]
+  },
+  "g9": {
+   "order": 9,
+   "n": 9,
    "where": "Step 9",
    "title": "Scapia Axis is treated as the Scapia Federal card",
    "paras": [
@@ -3971,7 +4102,7 @@
   "r2": {
    "order": 2,
    "title": "Before submission",
-   "text": "Add SerpApi and Anthropic keys, run one live Launch Radar sweep and one live extraction, record them as fixtures; verify the CardProfile schema is accepted by the API."
+   "text": "Done 10 Oct: keys added, live Launch Radar sweep recorded, live model choice at checkout measured (median 1.5 s). Strict schemas dropped where the API was slow or refused them. Left: record the demo video and submit by 18:00."
   },
   "r3": {
    "order": 3,

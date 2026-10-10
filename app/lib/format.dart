@@ -57,6 +57,12 @@ String shortDate(String? iso) {
   return '${l.day} ${_months[l.month - 1]} ${l.year}';
 }
 
+/// ISO date -> "Mar 2023". Returns the input unchanged if unparseable.
+String monthYear(String iso) {
+  final d = DateTime.tryParse(iso);
+  return d == null ? iso : '${_months[d.month - 1]} ${d.year}';
+}
+
 /// Human period label for a cap/milestone period key.
 String periodLabel(String period) => switch (period) {
       'statement_cycle' => 'statement cycle',

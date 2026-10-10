@@ -1,0 +1,1166 @@
+Last updated on 15th January, 2025
+General Terms and Conditions for Features of LIT Credit Card
+These Terms and Conditions apply to the AU Small Finance Bank (“AU Bank”) LIT Credit Card.
+Feature Duration:
+All features, activated by cardholders, are valid for 90 days effective from the day they are activated. For example, if a cardholder chooses the feature(s) on April 5, 2022, the feature(s) will be valid until July 3, 2022, with April 5th being considered as the first day. Each feature will be designated as auto renewal and will be renewed after 90 days by default, unless explicitly disabled by cardholders. For example, in the preceding scenario, the feature would be automatically renewed on July 4, 2022. Additionally, Feature cannot be deactivated within 90 days of activation. If a cardholder wants to disable auto-renewal of their subscribed features, they may switch-off the same on LIT feature activation page by visiting 0101 Mobile Banking after 7 days from date of feature activation. Once disabled, feature would not be auto-renewed post 90 days of existing feature duration.
+Feature Pricing:
+Pricing shown against each feature during the feature selection journey is applicable for 90 days. Feature fees for 90 days would be levied on the day Cardholder opts in for the feature except in case of feature selected during application process, in which fee is levied from the date of Card issuance. Feature(s) fee will be billed in the upcoming monthly billing statement. GST will be levied as applicable on the feature fee. Feature fee waivers through promotional campaigns such as wallet, spin the wheel or any other similar campaigns will not include GST, applicable GST will be chargeable to the credit card account.
+Total Qualifying Spends:
+Reversal transactions accrued during a feature cycle shall be considered for the calculation of milestone spends and cashback/reward points calculation. Hereby, reversals accrued during current feature period or cycle, of transactions that earned benefit in previous feature cycle/period, will be adjusted to total eligible spends for the current feature cycle/ period.
+Illustration for benefit calculation is as below:
+| Trxn Date | Category | Type | Amount (Rs.) | Cashback Category | Cashback Accrued (Rs.) | 
+| 11-Nov | Railway | Purchase | 5000 | 5% Cashback on Travel | 250 | 
+| 18-Nov | Airlines | Purchase | 7000 | 5% Cashback on Travel | 350 | 
+| 19-Nov | Taxi | Purchase | 500 | 5% Cashback on Travel | 25 | 
+| 20-Nov | Railway | Purchase | -2500 | 5% Cashback on Travel | -125 | 
+| 5-Dec | Airlines | Purchase | 8000 | 5% Cashback on Travel | 400 | 
+| | | Net spends | 18000 | Net Cashback | 900 | 
+Base Reward Points (Program Rewards):
+Cardholders are eligible for earn rate of 1 Reward Point for every INR 100 retail spends done on the LIT Card. Earning of Base Reward Points is in addition to Cashback as applicable in case features opted by the customer. Cardholders can earn a maximum of 10000 Reward Points in a statement cycle. Cash Withdrawal (MCC- 6010, 6011), BBPS, EMI, Fuel transactions (MCC- 5172, 5541, 5542, 5552 and 5983), Rent (MCC- 6513), Education & Govt (MCC- 8211, 8220, 8241, 8244, 8249, 8299, 9211, 9222, 9223, 9311, 9399, 9402, 9405, 9950) transactions will not be considered for earning of Base Reward Points. Cardholders can earn base -1 Reward Point per INR 100 spent on Utility and Telecom spends (with a maximum of 100 Reward Points per transaction).
+Additional Cashback:
+For categories like Milestone Cashback, cardholders are required to meet spends condition in every 30 days cycle to be eligible for Cashback as per the feature selected. For example, if a cardholder opts for feature on 5th April 2022, then spends done between 5th April and 4th May would be considered to check if spends condition has been met or not.
+Similarly, spends between 5th May and 3rd June, and spends between 4th June and 3rd July 2022 will be considered to check if condition has been met or not. Cash withdrawal (MCC-6010,6011), EMI and fuel transactions (with MCC 5172, 5541, 5542, 5552, 5983 and 6513), Rent and BBPS transactions will not be considered for Milestone achievement and for Cashback calculation. Max. Cashback of INR 500 is applicable for each 30 days' cycle/period. Cashback will be credited after 5 days of the 30-day ending period. Cardholders can opt for single feature in this category.
+Accelerated Reward Points (5X/10X):
+Cardholders can enjoy accelerated reward points as applicable if feature(s) under this category is/are opted. Base earning of Reward Points is included in accelerated earn rate. For example, 10X Reward Points on Online Spends includes earning of 1 RP/INR 100. Transactions done on the following categories will not be considered for accelerated Reward Points (5X/10X Rewards) and such transactions will earn as per the below mentioned grid:
+| Fuel | 5541,5542,5172,5983 | 0 Reward points | 
+| Electric Vehicle Charging | 5552 | 0 Reward points | 
+| Rent transactions | 6513 | 0 Reward points | 
+| Utilities & Telecom | 4812, 4814, 4899, 4900 | 1 Reward Point (Max 100 RPs per transaction) | 
+| Education & Govt | 8211, 8220, 8241, 8244, 8249, 8299, 9211, 9222, 9223, 9311, 9399, 9402, 9405, 9950 | 0 Reward points | 
+| Insurance | 6300,5960 | 1 Reward points | 
+| Cash withdrawal and Quasi Cash | 6010 , 6011, 6050 | 0 Reward points | 
+Transactions done on the following categories along with BBPS and EMI transactions will not be considered for accelerated Reward Points (5X/10X Rewards) and such transactions will earn reward points as per the below mentioned grid. Reward Points can be redeemed post statement generation. Reward Points earning can be checked through AU 0101 or https://rewardz.au.bank.in.
+Cardholders can opt for either 5X or 10X reward points in subcategory of Online and Offline (POS and Contactless) spends.
+Category Cashback:
+This category offers Cashback earning basis the spends done on specific category. Grocery category is defined by the spends done on MCC – 5411, 5422, 5441, 5451, 5462, 5499 and 5921, Dining category is defined by the spends done on MCC – 5811, 5812, 5813, 5814, Travel category is defined by the spends done on MCC – 4112, 4131, 4511, 4722, 4723 and Airline MCCs, Apparel category is defined by the spends done on MCC- 5611, 5621, 5631, 5641, 5651, 5655, 5661, 5691, 5698, 5699, 7296, 5139, 5697, 5941 and Electronics category is defined by the spends done on MCC – 4812, 4816, 5044, 5045, 5732, 5734, 5722, 7622. Max. Cashback of INR 500 is applicable for 5% cashback on grocery and 5% cashback on apparel features for each 30 days' cycle/period.
+Fuel Surcharge Waiver:
+All fuel transactions between INR 400 and INR 5,000 will be eligible for Fuel Surcharge Waiver if a Cardholder opts for the Fuel Surcharge Waiver feature. Fuel transactions are considered basis the spends done on MCC - 5172, 5541, 5542, 5552 and 5983. Cardholders will be eligible for a maximum of Rs.1500 fuel surcharge waiver in a 90 days feature period.
+Lounge Access:
+Features under this category offers complimentary visit to domestic lounge (within India) as applicable. Only the Cardholder is eligible for complimentary visit and voucher/QR code is non- transferable. Lounge access outside India will be chargeable up to maximum of USD 35 per visit depending on the country of Visit. Charges will be billed in monthly billing statement. QR Code issued for the complimentary visit to Lounge will be valid till the end date of feature or up to 90 days from the date of feature enabled. All unused voucher/QR codes will get expired post feature end date or 90 days, whichever is earlier. Visit https://loungefinder.loungekey.com/en/au-small-finance-bank to check out the list of eligible lounges.
+Card Transfer:
+Request for card variant and network transfer will be taken on case to case basis, decision to transfer card variant and network lies with the bank. Cardholder’s account which have undergone change in card variant or network, for example from LIT VISA to LIT RuPay or vice versa will not be eligible for earlier subscribed features/benefits and cashback, features subscribed on the old network/variant will not be transferred to the new variant/network. Reward points on the earlier variant/network will automatically be transferred into new account within 15 working days.
+Memberships:
+This is the category where Cardholders can get memberships of different brands/merchants. The membership voucher code will be issued instantly and will be available in the AU 0101 App/NetBanking. To avail selected membership, follow the steps outlined in AU 0101. The fulfilment of these memberships is done by third party. All memberships will be subject to spends condition, which will be specified throughout the membership selection process. Reversal transactions accrued during a feature cycle shall be considered for the calculation of milestone spends and cashback/reward points calculation. Hereby, reversals accrued during current feature period or cycle, of transactions that earned benefit in previous feature cycle/period, will be adjusted to total eligible spends for the current feature cycle/ period. Fuel, Rent, Government & Education cash, withdrawal and BBPS transactions will not be considered in spends calculation for memberships. If the spends requirement is not met, further membership charges (penalty) and GST will be billed in your credit card statement. Rs.299 + GST will be charged for Amazon prime and Rs.50 + GST will be charged for zee5 membership if the spends requirement is not met over 90 days. Penalty will be charged on sixth day after period end date.
+Bank may decide to add more features on the card from time to time for a specific duration. These benefits may or may not get auto-renewed and maybe available for one time subscription. These features will be communicated to customers and they will be will be visible along with their conditions on the feature activation page. The Bank reserves the right to add, modify or amend any of the above-mentioned terms and conditions with or without prior notice to the Cardholders.
+The Bank is not responsible or accountable in any manner for non-delivery of third-party services, such as lounge access and memberships, including but not limited to deficiency/delay in services, quality, benefits, facilities, and so on. The Bank reserves the right to add, modify or amend any of the above-mentioned terms and conditions with or without prior notice to the Cardholders.
+The Courts in Jaipur shall have jurisdiction in with respect to any dispute herein subject to the arbitration clause hereafter. Any dispute, matters, difference, or claim arising out of or in connection with the terms herein shall be referred to arbitration by a sole arbitrator (“Arbitrator”) to be appointed by AU Small Finance Bank. The venue for conducting arbitration proceedings shall be in Jaipur, India. The language of arbitration shall be English.
+This LIT Credit Card T&Cs are in addition to Card Member agreement, Most Important Terms and Conditions of credit card & AU Bank General Terms and Conditions as uploaded on Bank's website and agrees and gives the consent to all its content.
+ LIT Credit Card Terms and Conditions | AU Small Finance Bank 
+ -->
+ Personal
+ Business
+ NRI
+ Premium
+ Language 
+ -->
+ Research
+ Investor
+ About us
+ 1800 1200 1200
+ English
+ हिंदी
+ ગુજરાતી
+ मराठी
+ தமிழ்
+ తెలుగు
+ ಕನ್ನಡ
+ മലയാളം
+ বাংলা
+ ਪੰਜਾਬੀ
+ অসমীয়া
+ ଓଡ଼ିଆ
+ Accounts 
+ Savings Account 
+ Featured 
+ AU ivy Savings 
+ AU Eternity Savings 
+ AU Royale Savings 
+ Related links 
+ Open Account 
+ Interest Rates 
+ Schedule of charges 
+ Salary Account 
+ Featured 
+ AU ivy Salary 
+ AU Eternity Salary 
+ AU Royale Salary 
+ Related Links 
+ Open Account 
+ Schedule of charges 
+ Term Deposit 
+ Featured 
+ Fixed Deposit 
+ Recurring Deposit 
+ AU FCNR (B) Deposit 
+ Related Links 
+ Interest Rates 
+ Current Account 
+ Featured 
+ AU Eternity Business 
+ AU Royale Business 
+ AU Platinum Business 
+ Related Links 
+ Schedule of charges 
+ Lockers 
+ Door step banking 
+ Trade Account 
+ Featured 
+ AU Royale Trade 
+ AU Platinum Trade 
+ EEFC, DDA, SNRR 
+ Related Links 
+ Schedule of charges 
+ Lockers 
+ Door step banking 
+ Exclusive Offerings 
+ Featured 
+ 'M' circle 
+ AU Chartered Accountants Program 
+ AU Royale Program for Company Secretaries 
+ Related Links 
+ Interest Rates 
+ -->
+ AU 0101 
+ AU 0101 App 
+ AU 0101 Business App 
+ AU 0101 NetBanking 
+ Forex 
+ Video Banking 
+ WhatsApp Banking 
+ Missed Call Banking 
+ AU Refer-A-Friend 
+ -->
+ Cards 
+ Debit Card 
+ Featured 
+ AU ivy Debit Card 
+ AU Eternity Debit Card 
+ AU Royale Debit Card 
+ Related links 
+ Debit Card Services 
+ Schedule of charges 
+ Debit Card Insurance 
+ Lounge Access 
+ Credit Card 
+ Featured 
+ Zenith+ Credit Card 
+ Ananta Credit Card 
+ Laksya Credit Card 
+ AU CS Credit Card 
+ AU CA Metal Credit Card 
+ Related links 
+ Credit Card Application Status 
+ Apply for Credit Card 
+ Commercial Credit Card 
+ Featured 
+ Purchase Credit Card 
+ Business Cashback Credit Card 
+ Corporate Credit Card 
+ Related links 
+ Credit Card Application Status 
+ Apply for Credit Card 
+ Prepaid Card 
+ Featured 
+ AU Haryana Roadways NCMC Card 
+ Related Links 
+ Schedule of charges 
+ -->
+ Loans 
+ Personal Loan 
+ Featured 
+ AU ivy Account 
+ AU Royale Account 
+ Related links 
+ EMI Calculators 
+ Track Loan Application 
+ Home Loan 
+ Featured 
+ Home Purchase Loan 
+ Home Construction Loan 
+ Home Loan Balance Transfer 
+ Related links 
+ EMI Calculators 
+ Track Loan Application 
+ Vehicle Loan 
+ Featured 
+ Car Loan 
+ Two Wheeler Loan 
+ Commercial Vehicle Loan 
+ Related Links 
+ EMI Calculators 
+ Track Loan Application 
+ Loan Against Vehicle 
+ Featured 
+ Loan Against Car 
+ Loan Against Commercial Vehicle 
+ Loan Against Tractor 
+ Related Links 
+ EMI Calculators 
+ Track Loan Application 
+ Gold Loan 
+ Related Links 
+ EMI Calculators 
+ Track Loan Application 
+ Loan on Credit Card 
+ Featured 
+ SMARTLoan 
+ Xpress Loan 
+ Related Links 
+ EMI Calculators 
+ Track Loan Application 
+ -->
+ Investments 
+ Mutual Funds 
+ Premium Accounts 
+ AU ivy Account 
+ AU Royale Account 
+ Related links 
+ AU Select 
+ Note to Fixed Income Investors 
+ Market Insights & Investment Strategy 
+ 3 in 1 Account 
+ Premium Accounts 
+ AU ivy Account 
+ AU Royale Account 
+ Related Links 
+ AU Select 
+ Note to Fixed Income Investors 
+ Market Insights & Investment Strategy 
+ ASBA 
+ Premium Accounts 
+ AU ivy Account 
+ AU Royale Account 
+ Related links 
+ AU Select 
+ Note to Fixed Income Investors 
+ Market Insights & Investment Strategy 
+ National Pension System 
+ Premium Accounts 
+ AU ivy Account 
+ AU Royale Account 
+ Related Links 
+ AU Select 
+ Note to Fixed Income Investors 
+ Market Insights & Investment Strategy 
+ NPS Vatsalya 
+ Premium Accounts 
+ AU ivy Account 
+ AU Royale Account 
+ Related Links 
+ AU Select 
+ Note to Fixed Income Investors 
+ Market Insights & Investment Strategy 
+ Atal Pension Yojana 
+ Premium Accounts 
+ AU ivy Account 
+ AU Royale Account 
+ Related Links 
+ AU Select 
+ Note to Fixed Income Investors 
+ Market Insights & Investment Strategy 
+ Corporate NPS 
+ Premium Accounts 
+ AU ivy Account 
+ AU Royale Account 
+ Related links 
+ AU Select 
+ Note to Fixed Income Investors 
+ Market Insights & Investment Strategy 
+ -->
+ Insurance 
+ Life Insurance 
+ Accounts 
+ Savings Plan 
+ Investment Plan 
+ Health Plan 
+ Term Plan 
+ Related links 
+ Apply for Insurance 
+ Claims 
+ Insurance Policy Renewal 
+ Mandate Registration 
+ Our Insurance Partner 
+ Health Insurance 
+ Accounts 
+ Hospitalization 
+ Critical Illness 
+ Personal Accident 
+ Top Up/ Super Top Up 
+ Related links 
+ Apply for Insurance 
+ Claims 
+ Insurance Policy Renewal 
+ Our Insurance Partner 
+ Motor Insurance 
+ Accounts 
+ Private Car 
+ Two Wheeler 
+ Commercial Vehicle Insurance 
+ Related links 
+ Apply for Insurance 
+ Claims 
+ Insurance Policy Renewal 
+ Mandate Registration 
+ Our Insurance Partner 
+ Social Security Scheme 
+ Accounts 
+ PMJJBY 
+ PMSBY 
+ Related links 
+ Apply for Insurance 
+ Claims 
+ Insurance Policy Renewal 
+ Mandate Registration 
+ Our Insurance Partner 
+ -->
+ Payments 
+ BHIM UPI 
+ NRI UPI 
+ Bill Payments (Bharat Connect) 
+ Positive Pay 
+ Send Money Abroad 
+ NETC | Fastag 
+ AU 0101 NetBanking Payment 
+ Loan EMI & Other Bill Payments 
+ -->
+ Offers 
+ Support 
+ Locate us 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ Contact us 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ Raise a complaint 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ -->
+ -->
+ -->
+ TOP SEARCHES 
+ Login
+ -->
+ AU 0101 NetBanking 
+ Corporate NetBanking 
+ AU 0101 Business NetBanking 
+ Forex Card 
+ Accounts 
+ Current Account 
+ Featured 
+ AU Eternity Business 
+ AU Royale Business 
+ AU Platinum Business 
+ Related Links 
+ Schedule of Charges 
+ Trade Account 
+ Featured 
+ AU Royale Trade Account 
+ AU Platinum Trade Account 
+ Related Links 
+ Schedule of Charges 
+ Escrow Account 
+ Related Links 
+ Schedule of Charges 
+ RERA Account 
+ Related Links 
+ Schedule of Charges 
+ Institutional Account 
+ FEATURED 
+ AU Institutional Savings Account 
+ AU Institutional Current Account 
+ Related Links 
+ Schedule of Charges 
+ -->
+ Digital Banking 
+ AU 0101 Business App 
+ Online Banking 
+ Payment Solutions 
+ Collection/Receivable Solutions 
+ API Banking 
+ -->
+ Loans 
+ Loan Against Property 
+ Related Links 
+ Track Loan Application 
+ Working Capital Loans 
+ Related Links 
+ Track Loan Application 
+ Term Loans 
+ Related Links 
+ Track Loan Application 
+ Agri Loans 
+ Related Links 
+ Track Loan Application 
+ Construction Finance 
+ Related Links 
+ Track Loan Application 
+ Financial Institution Lending 
+ Related Links 
+ Track Loan Application 
+ Vehicle Loan 
+ Related Links 
+ Track Loan Application 
+ Government Schemes & Subsidies 
+ Related Links 
+ Track Loan Application 
+ -->
+ Trade Finance 
+ Digital Trade 
+ Bank Guarantee 
+ Letter of Credit 
+ LC Backed Bill Discounting 
+ Import & Export Bills under Collections & LC 
+ Inward & Outward Remittance 
+ SWIFT/BIC 
+ Request Formats 
+ Schedule of Charges 
+ FX - Retail 
+ -->
+ Government Banking 
+ Support 
+ Locate us 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ Contact us 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ Raise a complaint 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ -->
+ -->
+ -->
+ TOP SEARCHES 
+ Login
+ -->
+ AU 0101 NetBanking 
+ Corporate NetBanking 
+ AU 0101 Business NetBanking 
+ Forex Card 
+ Accounts 
+ Savings Account 
+ Featured 
+ AU ivy World Savings Account 
+ AU Eternity World Savings Account 
+ AU Royale World Savings Account 
+ Related links 
+ Update FATCA 
+ AU FCNR (B) Deposit 
+ Featured 
+ Interest rates 
+ -->
+ AU 0101 
+ AU 0101 App 
+ Related links 
+ Interest Rates 
+ Service Requests 
+ Schedule of charges 
+ AU 0101 NetBanking 
+ Related links 
+ Interest Rates 
+ Service Requests 
+ Schedule of charges 
+ Forex 
+ Related links 
+ Interest Rates 
+ Service Requests 
+ Schedule of charges 
+ Video Banking 
+ Related links 
+ Interest Rates 
+ Service Requests 
+ Schedule of charges 
+ WhatsApp Banking 
+ Related links 
+ Interest Rates 
+ Service Requests 
+ Schedule of charges 
+ -->
+ Cards 
+ Debit Cards 
+ Related links 
+ Debit Card Services 
+ Credit Cards 
+ Featured 
+ Traverse Credit card 
+ Related links 
+ Credit Card Application Status 
+ Apply for Credit Card 
+ -->
+ Offers 
+ Support 
+ Locate us 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ Contact us 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ Raise a complaint 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ -->
+ -->
+ -->
+ TOP SEARCHES 
+ Login
+ -->
+ AU 0101 NetBanking 
+ Corporate NetBanking 
+ AU 0101 Business NetBanking 
+ Forex Card 
+ Banking Programs 
+ AU ivy 
+ Related links 
+ Schedule of Charges 
+ Service Request Guarantee Program 
+ AU Eternity 
+ Related links 
+ Schedule of Charges 
+ Service Request Guarantee Program 
+ AU Royale 
+ Related links 
+ Schedule of Charges 
+ Service Request Guarantee Program 
+ -->
+ Cards 
+ Debit Cards 
+ Related links 
+ Credit Card Application Status 
+ Apply for Credit Card 
+ Credit Cards 
+ Related links 
+ Credit Card Application Status 
+ Apply for Credit Card 
+ -->
+ Support 
+ Locate us 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ Contact us 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ Raise a complaint 
+ Related Links 
+ Download Forms 
+ Schedule of Charges 
+ -->
+ -->
+ -->
+ TOP SEARCHES 
+ Login
+ -->
+ AU 0101 NetBanking 
+ Corporate NetBanking 
+ AU 0101 Business NetBanking 
+ Forex Card 
+ -->
+ -->
+ -->
+ -->
+ -->
+ -->
+ -->
+ -->
+ AU Bank 
+ -->
+ -->
+ -->
+ Log in -->
+ Login
+ AU 0101 NetBanking 
+ Corporate NetBanking 
+ AU 0101 Business NetBanking 
+ Forex Card 
+ Personal 
+ Business 
+ NRI 
+ Premium 
+ Accounts
+ Savings Account 
+ -->
+ -->
+ Salary Account 
+ -->
+ -->
+ Term Deposit 
+ -->
+ -->
+ Current Account 
+ -->
+ -->
+ Trade Account 
+ -->
+ -->
+ Exclusive Offerings 
+ -->
+ -->
+ -->
+ AU 0101
+ AU 0101 App 
+ -->
+ -->
+ AU 0101 Business App 
+ -->
+ -->
+ AU 0101 NetBanking 
+ -->
+ -->
+ Forex 
+ -->
+ -->
+ Video Banking 
+ -->
+ -->
+ WhatsApp Banking 
+ -->
+ -->
+ Missed Call Banking 
+ -->
+ -->
+ AU Refer-A-Friend 
+ -->
+ -->
+ -->
+ Cards
+ Debit Card 
+ -->
+ -->
+ Credit Card 
+ -->
+ -->
+ Commercial Credit Card 
+ -->
+ -->
+ Prepaid Card 
+ -->
+ -->
+ -->
+ Loans
+ Personal Loan 
+ -->
+ -->
+ Home Loan 
+ -->
+ -->
+ Vehicle Loan 
+ -->
+ -->
+ Loan Against Vehicle 
+ -->
+ -->
+ Gold Loan 
+ -->
+ Loan on Credit Card 
+ -->
+ -->
+ -->
+ Investments
+ Mutual Funds 
+ -->
+ -->
+ 3 in 1 Account 
+ -->
+ -->
+ ASBA 
+ -->
+ -->
+ National Pension System 
+ -->
+ -->
+ NPS Vatsalya 
+ -->
+ -->
+ Atal Pension Yojana 
+ -->
+ -->
+ Corporate NPS 
+ -->
+ -->
+ -->
+ Insurance
+ Life Insurance 
+ -->
+ -->
+ Health Insurance 
+ -->
+ -->
+ Motor Insurance 
+ -->
+ -->
+ Social Security Scheme 
+ -->
+ -->
+ -->
+ Payments
+ BHIM UPI 
+ -->
+ -->
+ NRI UPI 
+ -->
+ -->
+ Bill Payments (Bharat Connect) 
+ -->
+ -->
+ Positive Pay 
+ -->
+ -->
+ Send Money Abroad 
+ NETC | Fastag 
+ -->
+ -->
+ AU 0101 NetBanking Payment 
+ -->
+ -->
+ Loan EMI & Other Bill Payments 
+ -->
+ -->
+ -->
+ Offers
+ -->
+ Support
+ Locate us 
+ -->
+ -->
+ Contact us 
+ -->
+ -->
+ Raise a complaint 
+ -->
+ -->
+ -->
+ -->
+ Quick links 
+ Research 
+ Investor 
+ About us 
+ Language 
+ English 
+ हिंदी 
+ ગુજરાતી 
+ मराठी 
+ தமிழ் 
+ తెలుగు 
+ ಕನ್ನಡ 
+ മലയാളം 
+ বাংলা 
+ ਪੰਜਾਬੀ 
+ অসমীয়া 
+ ଓଡ଼ିଆ 
+ -->
+ Accounts
+ Current Account 
+ -->
+ -->
+ Trade Account 
+ -->
+ -->
+ Escrow Account 
+ -->
+ RERA Account 
+ -->
+ Institutional Account 
+ -->
+ -->
+ -->
+ Digital Banking
+ AU 0101 Business App 
+ Online Banking 
+ Payment Solutions 
+ Collection/Receivable Solutions 
+ API Banking 
+ -->
+ Loans
+ Loan Against Property 
+ -->
+ Working Capital Loans 
+ -->
+ Term Loans 
+ -->
+ Agri Loans 
+ -->
+ Construction Finance 
+ -->
+ Financial Institution Lending 
+ -->
+ Vehicle Loan 
+ -->
+ Government Schemes & Subsidies 
+ -->
+ -->
+ Trade Finance
+ Digital Trade 
+ Bank Guarantee 
+ Letter of Credit 
+ LC Backed Bill Discounting 
+ Import & Export Bills under Collections & LC 
+ Inward & Outward Remittance 
+ SWIFT/BIC 
+ Request Formats 
+ Schedule of Charges 
+ FX - Retail 
+ -->
+ Government Banking
+ -->
+ Support
+ Locate us 
+ -->
+ -->
+ Contact us 
+ -->
+ -->
+ Raise a complaint 
+ -->
+ -->
+ -->
+ -->
+ Quick links 
+ Research 
+ Investor 
+ About us 
+ Language 
+ English 
+ हिंदी 
+ ગુજરાતી 
+ मराठी 
+ தமிழ் 
+ తెలుగు 
+ ಕನ್ನಡ 
+ മലയാളം 
+ বাংলা 
+ ਪੰਜਾਬੀ 
+ অসমীয়া 
+ ଓଡ଼ିଆ 
+ -->
+ Accounts
+ Savings Account 
+ -->
+ -->
+ AU FCNR (B) Deposit 
+ -->
+ -->
+ AU 0101
+ AU 0101 App 
+ -->
+ AU 0101 NetBanking 
+ -->
+ Forex 
+ -->
+ Video Banking 
+ -->
+ WhatsApp Banking 
+ -->
+ -->
+ Cards
+ Debit Cards 
+ -->
+ Credit Cards 
+ -->
+ -->
+ -->
+ Offers
+ -->
+ Support
+ Locate us 
+ -->
+ -->
+ Contact us 
+ -->
+ -->
+ Raise a complaint 
+ -->
+ -->
+ -->
+ -->
+ Quick links 
+ Research 
+ Investor 
+ About us 
+ Language 
+ English 
+ हिंदी 
+ ગુજરાતી 
+ मराठी 
+ தமிழ் 
+ తెలుగు 
+ ಕನ್ನಡ 
+ മലയാളം 
+ বাংলা 
+ ਪੰਜਾਬੀ 
+ অসমীয়া 
+ ଓଡ଼ିଆ 
+ -->
+ Banking Programs
+ AU ivy 
+ -->
+ AU Eternity 
+ -->
+ AU Royale 
+ -->
+ -->
+ Cards
+ Debit Cards 
+ -->
+ Credit Cards 
+ -->
+ -->
+ Support
+ Locate us 
+ -->
+ -->
+ Contact us 
+ -->
+ -->
+ Raise a complaint 
+ -->
+ -->
+ -->
+ -->
+ Quick links 
+ Research 
+ Investor 
+ About us 
+ Language 
+ English 
+ हिंदी 
+ ગુજરાતી 
+ मराठी 
+ தமிழ் 
+ తెలుగు 
+ ಕನ್ನಡ 
+ മലയാളം 
+ বাংলা 
+ ਪੰਜਾਬੀ 
+ অসমীয়া 
+ ଓଡ଼ିଆ 
+ -->
+ Subcategories > Details
+ ======================================== -->
+ Personal 
+ › 
+ › 
+ Business 
+ › 
+ › 
+ NRI 
+ › 
+ › 
+ Premium 
+ › 
+ › 
+ -->
+ -->
+ Cancel 
+ TOP SEARCHES 
+ Last updated on 15 th  January, 2025 
+ General Terms and Conditions for Features of LIT Credit Card 
+ These Terms and Conditions apply to the AU Small Finance Bank (“AU Bank”) LIT Credit Card. 
+ Feature Duration: 
+ All features, activated by cardholders, are valid for 90 days effective from the day they are activated. For example, if a cardholder chooses the feature(s) on April 5, 2022, the feature(s) will be valid until July 3, 2022, with April 5th being considered as the first day. Each feature will be designated as auto renewal and will be renewed after 90 days by default, unless explicitly disabled by cardholders. For example, in the preceding scenario, the feature would be automatically renewed on July 4, 2022. Additionally, Feature cannot be deactivated within 90 days of activation. If a cardholder wants to disable auto-renewal of their subscribed features, they may switch-off the same on LIT feature activation page by visiting 0101 Mobile Banking after 7 days from date of feature activation. Once disabled, feature would not be auto-renewed post 90 days of existing feature duration. 
+ Feature Pricing: 
+ Pricing shown against each feature during the feature selection journey is applicable for 90 days. Feature fees for 90 days would be levied on the day Cardholder opts in for the feature except in case of feature selected during application process, in which fee is levied from the date of Card issuance. Feature(s) fee will be billed in the upcoming monthly billing statement. GST will be levied as applicable on the feature fee. Feature fee waivers through promotional campaigns such as wallet, spin the wheel or any other similar campaigns will not include GST, applicable GST will be chargeable to the credit card account. 
+ Total Qualifying Spends: 
+ Reversal transactions accrued during a feature cycle shall be considered for the calculation of milestone spends and cashback/reward points calculation. Hereby, reversals accrued during current feature period or cycle, of transactions that earned benefit in previous feature cycle/period, will be adjusted to total eligible spends for the current feature cycle/ period. 
+ Illustration for benefit calculation is as below: 
+ Trxn Date Category Type Amount (Rs.) Cashback 
+Category Cashback 
+Accrued (Rs.) 11-Nov Railway Purchase 5000 5% Cashback on Travel 250 18-Nov Airlines Purchase 7000 5% Cashback on 
+Travel 350 19-Nov Taxi Purchase 500 5% Cashback on 
+Travel 25 20-Nov Railway Purchase -2500 5% Cashback on 
+Travel -125 5-Dec Airlines Purchase 8000 5% Cashback on 
+Travel 400     Net spends 18000 Net Cashback 900 
+ Base Reward Points (Program Rewards): 
+ Cardholders are eligible for earn rate of 1 Reward Point for every INR 100 retail spends done on the LIT Card. Earning of Base Reward Points is in addition to Cashback as applicable in case features opted by the customer. Cardholders can earn a maximum of 10000 Reward Points in a statement cycle. Cash Withdrawal (MCC- 6010, 6011), BBPS, EMI, Fuel transactions (MCC- 5172, 5541, 5542, 5552 and 5983), Rent (MCC- 6513), Education & Govt (MCC- 8211, 8220, 8241, 8244, 8249, 8299, 9211, 9222, 9223, 9311, 9399, 9402, 9405, 9950) transactions will not be considered for earning of Base Reward Points. Cardholders can earn base -1 Reward Point per INR 100 spent on Utility and Telecom spends (with a maximum of 100 Reward Points per transaction). 
+ Additional Cashback: 
+ For categories like Milestone Cashback, cardholders are required to meet spends condition in every 30 days cycle to be eligible for Cashback as per the feature selected. For example, if a cardholder opts for feature on 5th April 2022, then spends done between 5th April and 4th May would be considered to check if spends condition has been met or not. 
+Similarly, spends between 5th May and 3rd June, and spends between 4th June and 3rd July 2022 will be considered to check if condition has been met or not. Cash withdrawal (MCC-6010,6011), EMI and fuel transactions (with MCC 5172, 5541, 5542, 5552, 5983 and 6513), Rent and BBPS transactions will not be considered for Milestone achievement and for Cashback calculation. Max. Cashback of INR 500 is applicable for each 30 days' cycle/period. Cashback will be credited after 5 days of the 30-day ending period. Cardholders can opt for single feature in this category. 
+ Accelerated Reward Points (5X/10X): 
+ Cardholders can enjoy accelerated reward points as applicable if feature(s) under this category is/are opted. Base earning of Reward Points is included in accelerated earn rate. For example, 10X Reward Points on Online Spends includes earning of 1 RP/INR 100. Transactions done on the following categories will not be considered for accelerated Reward Points (5X/10X Rewards) and such transactions will earn as per the below mentioned grid: 
+ Fuel 5541,5542,5172,5983 0 Reward points Electric Vehicle Charging 5552 0 Reward points Rent transactions 6513 0 Reward points Utilities & Telecom 4812, 4814, 4899, 4900 1 Reward Point (Max 100 RPs per transaction) Education & Govt 8211, 8220, 8241, 8244, 8249, 8299, 9211, 9222, 9223, 9311, 9399, 9402, 9405, 9950 0 Reward points Insurance 6300,5960 1 Reward points Cash withdrawal and Quasi Cash 6010 , 6011, 6050 0 Reward points 
+ Transactions done on the following categories along with BBPS and EMI  transactions will not be considered for accelerated Reward Points (5X/10X Rewards) and such transactions will earn reward points as per the below mentioned grid. Reward Points can be redeemed post statement generation. Reward Points earning can be checked through AU 0101 or  https://rewardz.au.bank.in . 
+ Cardholders can opt for either 5X or 10X reward points in subcategory of Online and Offline (POS and Contactless) spends. 
+ Category Cashback: 
+ This category offers Cashback earning basis the spends done on specific category. Grocery category is defined by the spends done on MCC – 5411, 5422, 5441, 5451, 5462, 5499 and 5921, Dining category is defined by the spends done on MCC – 5811, 5812, 5813, 5814, Travel category is defined by the spends done on MCC – 4112, 4131, 4511, 4722, 4723 and Airline MCCs, Apparel category is defined by the spends done on MCC- 5611, 5621, 5631, 5641, 5651, 5655, 5661, 5691, 5698, 5699, 7296, 5139, 5697, 5941 and Electronics category is defined by the spends done on MCC – 4812, 4816, 5044, 5045, 5732, 5734, 5722, 7622. Max. Cashback of INR 500 is applicable for 5% cashback on grocery and 5% cashback on apparel features for each 30 days' cycle/period. 
+ Fuel Surcharge Waiver: 
+ All fuel transactions between INR 400 and INR 5,000 will be eligible for Fuel Surcharge Waiver if a Cardholder opts for the Fuel Surcharge Waiver feature. Fuel transactions are considered basis the spends done on MCC - 5172, 5541, 5542, 5552 and 5983. Cardholders will be eligible for a maximum of Rs.1500 fuel surcharge waiver in a 90 days feature period. 
+ Lounge Access: 
+ Features under this category offers complimentary visit to domestic lounge (within India) as applicable. Only the Cardholder is eligible for complimentary visit and voucher/QR code is non- transferable. Lounge access outside India will be chargeable up to maximum of USD 35 per visit depending on the country of Visit. Charges will be billed in monthly billing statement. QR Code issued for the complimentary visit to Lounge will be valid till the end date of feature or up to 90 days from the date of feature enabled. All unused voucher/QR codes will get expired post feature end date or 90 days, whichever is earlier. Visit https://loungefinder.loungekey.com/en/au-small-finance-bank to check out the list of eligible lounges. 
+ Card Transfer: 
+ Request for card variant and network transfer will be taken on case to case basis, decision to transfer card variant and network lies with the bank. Cardholder’s account which have undergone change in card variant or network, for example from LIT VISA to LIT RuPay or vice versa will not be eligible for earlier subscribed features/benefits and cashback, features subscribed on the old network/variant will not be transferred to the new variant/network. Reward points on the earlier variant/network will automatically be transferred into new account within 15 working days. 
+ Memberships: 
+ This is the category where Cardholders can get memberships of different brands/merchants. The membership voucher code will be issued instantly and will be available in the AU 0101 App/NetBanking. To avail selected membership, follow the steps outlined in AU 0101. The fulfilment of these memberships is done by third party. All memberships will be subject to spends condition, which will be specified throughout the membership selection process. Reversal transactions accrued during a feature cycle shall be considered for the calculation of milestone spends and cashback/reward points calculation. Hereby, reversals accrued during current feature period or cycle, of transactions that earned benefit in previous feature cycle/period, will be adjusted to total eligible spends for the current feature cycle/ period. Fuel, Rent, Government & Education cash, withdrawal and BBPS transactions will not be considered in  spends calculation for memberships. If the spends requirement is not met, further membership charges (penalty) and GST will be billed in your credit card statement. Rs.299 + GST will be charged for Amazon prime and Rs.50 + GST will be charged for zee5 membership if the spends requirement is not met over 90 days. Penalty will be charged on sixth day after period end date. 
+ Bank may decide to add more features on the card from time to time for a specific duration. These benefits may or may not get auto-renewed and maybe available for one time subscription. These features will be communicated to customers and they will be will be visible along with their conditions on the feature activation page. The Bank reserves the right to add, modify or amend any of the above-mentioned terms and conditions with or without prior notice to the Cardholders. 
+ The Bank is not responsible or accountable in any manner for non-delivery of third-party services, such as lounge access and memberships, including but not limited to deficiency/delay in services, quality, benefits, facilities, and so on. The Bank reserves the right to add, modify or amend any of the above-mentioned terms and conditions with or without prior notice to the Cardholders. 
+ The Courts in Jaipur shall have jurisdiction in with respect to any dispute herein subject to the arbitration clause hereafter. Any dispute, matters, difference, or claim arising out of or in connection with the terms herein shall be referred to arbitration by a sole arbitrator (“Arbitrator”) to be appointed by AU Small Finance Bank. The venue for conducting arbitration proceedings shall be in Jaipur, India. The language of arbitration shall be English. 
+ This LIT Credit Card T&Cs are in addition to Card Member agreement, Most Important Terms and Conditions of credit card & AU Bank General Terms and Conditions as uploaded on Bank's website and agrees and gives the consent to all its content. 
+ AU Small Finance Bank
+ Important Links 
+ Media Centre 
+ Bank Auction 
+ Notice Board 
+ Service Fee 
+ Branch Locator 
+ SWIFT/BIC 
+ AU Forms 
+ Terms and Conditions 
+ Digital Lending 
+ Report Unauthorized Transactions 
+ Swadesh Banking 
+ Officially Valid Documents for KYC 
+ AU SFB x Fincare SFB Merger 
+ Explore More 
+ Careers 
+ Offers 
+ Blogs 
+ Bank Interest Rate 
+ Debit Card Services 
+ Apply Now 
+ Locate Us 
+ Contact Us 
+ Regulatory Disclosures Section 
+ Lodge a Complaint 
+ Check SR Status 
+ Know your Customer ID 
+ Popular Searches 
+ High Interest Rate Savings Account 
+ Savings Account Interest Rates 
+ Apply Credit Card  
+ Online FD  
+ FD Interest Rates  
+ Video Banking 
+ AU 0101 
+ AU 0101 App 
+ AU 0101 NetBanking 
+ Video Banking 
+ WhatsApp Banking 
+ Missed Call Banking 
+ AU Refer-A-Friend 
+ AU 0101 Business App 
+ Premium Banking 
+ AU Royale 
+ AU Platinum 
+ AU Royale World 
+ AU Royale Salary 
+ AU Royale Business Program 
+ Personal Banking 
+ Savings Account 
+ Salary Account 
+ Current Account 
+ Fixed Deposits 
+ Recurring Deposit 
+ Cards 
+ Credit Card 
+ Debit Card 
+ Commercial Credit Cards 
+ Interest Rates 
+ Savings Account Interest Rates 
+ Fixed Deposit Interest Rates 
+ Bulk FD Interest Rate 
+ RD Interest Rates 
+ MCLR 
+ Forex 
+ Forex Card Rates 
+ Nostro/ Correspondent Bank details for Fund Transfer 
+ Intermediary Bank Charges 
+ Product Disclosure Statement Forward Contract 
+ Document Checklist for Retail Remittance 
+ Policy on Cross-Border Transactions 
+ Export & Import Policy 2026 
+ Loans 
+ Car Loan 
+ Two Wheeler Loan 
+ Commercial Vehicle Loan 
+ Personal Loan 
+ Tractor Loan 
+ Home Loan 
+ Construction Equipment Loan 
+ Gold Loan 
+ Payment 
+ BHIM UPI 
+ NETC | FASTag 
+ Business Banking 
+ Corporate Net Banking 
+ Corporate Mobile Banking 
+ Current Account 
+ Payment Solutions 
+ Collection / Receivable Solutions 
+ Business Loans 
+ Working Capital Loans 
+ Agri Loans 
+ Government Banking 
+ Calculators 
+ Home Loan Calculator 
+ Car Loan Calculator 
+ Personal Loan Calculator 
+ Two Wheeler Loan Calculator 
+ Savings Account Calculator 
+ Fixed Deposit Calculator 
+ AMB Calculator 
+ APR Calculator 
+ Insurance 
+ Life Insurance 
+ Health Insurance 
+ Motor Insurance 
+ PMJJBY 
+ PMSBY 
+ Investments 
+ Mutual Funds 
+ National Pension System 
+ Atal Pension Yojana 
+ Note to fixed income investors 
+ Other Links 
+ About Us 
+ AU Foundation 
+ Corporate Social Responsibility (CSR) 
+ DICGC 
+ Unauthorised FX transactions 
+ Interest relief Under Ex-Gratia Scheme 
+ Loan E-Mandate Request 
+ Loan E-Mandate Cancellation 
+ AU Small Finance Bank – GST Registration Numbers 
+ AU Positive Pay 
+ FAQ-Tax Deducted at Source (TDS) 
+ Regulatory Disclosures Section 
+ Asset Classification Norms 
+ Loan Related - NOC Signatories 
+ Do Not Call Registry 
+ Safe Banking 
+ MFI Practice Code 
+ Branch Relocation 
+ Glossary 
+ Language Disclaimer 
+ Fincare 
+ Use of Unparliamentary Language by Customers 
+ Deceased Claim Settlement 
+ Grievance Redressal Policy 
+ Check Your Unclaimed Deposits 
+ Employee Code of Conduct 
+ Direct Selling Agent List 
+ Online dispute resolution 
+ Download AU 0101 - Digital Banking app 
+ -->
+ -->
+ PCI DSS Security Compliant 
+ -->
+ -->
+ Registered with DICGC 
+ -->
+ -->
+ © Copyright AU Small Finance Bank Limited 
+ Disclaimer 
+ Privacy Policy 
+ -->
+ -->
+ -->
+ -->
+ -->

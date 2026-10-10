@@ -2,6 +2,7 @@
 search cap). A worker turns SerpApi results into Leads; it never writes knowledge."""
 
 import json
+import re
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 
@@ -205,6 +206,10 @@ def ads_worker(as_of: date, issuers: tuple[str, ...] = ADS_ISSUERS) -> WorkerRep
                 "quote": reading.get("text"), "search_id": sid, "official": False, "kind": "ad",
             }
             for card in reading.get("cards", []):
+                # Bank ads also sell savings accounts and debit cards; only credit cards are launches.
+                if triage.is_noise(card) or not re.search(r"\bcard\b", card, re.IGNORECASE):
+                    rep.dropped.append(f"{key}: not a credit card: {card}")
+                    continue
                 summary = f"New {issuer_name} ad" + (f": {reading['offer']}" if reading.get("offer") else "")
                 rep.leads.append(Lead("ads", issuer_name, card, [ref], summary))
     return rep

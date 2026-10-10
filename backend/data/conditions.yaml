@@ -1,0 +1,9 @@
+# Questions whose answers change what a card earns or which offers apply. Answers are
+# stored once per user (profile.data.answers: key -> true | false; absent = unanswered)
+# and reused everywhere. Memberships also gate earn rules (EarnRule.requires).
+amazon_prime: {kind: membership, question: "Do you have Amazon Prime?", why: "Amazon Pay ICICI pays 5% on Amazon to Prime members, 3% otherwise."}
+neupass: {kind: membership, question: "Are you registered for Tata NeuPass?", why: "Tata Neu Infinity pays an extra 5% NeuCoins on selected Tata Neu categories with NeuPass."}
+kiwi_neon: {kind: membership, question: "Do you have Kiwi Neon?", why: "Kiwi Neon members earn 2% instead of 1.5% on UPI scan & pay."}
+google_pay_android: {kind: membership, question: "Do you pay utility bills through Google Pay?", why: "Axis ACE's 5% on bills and recharges applies only when paid through Google Pay."}
+select_corporate_employee: {kind: eligibility, question: "Does your employer appear on HDFC Bank's list of select corporates?", why: "Swiggy ORNGE is lifetime free for employees of select corporates, through HDFC Bank's direct channels."}
+axis_burgundy_salary: {kind: eligibility, question: "Do you have an Axis Burgundy Salary account with a net monthly salary of ₹2 lakh or more?", why: "Axis Magnus is lifetime free for these account holders."}

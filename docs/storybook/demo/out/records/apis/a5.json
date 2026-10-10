@@ -1,0 +1,11 @@
+{
+ "order": 5,
+ "call": "GET /launches",
+ "owner": "API",
+ "gives": "Market › New launches with sources",
+ "tag": "OLD",
+ "steps": [
+  3,
+  4
+ ]
+}

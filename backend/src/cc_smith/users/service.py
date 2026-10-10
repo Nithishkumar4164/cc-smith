@@ -27,6 +27,33 @@ def get_profile(conn: Connection, uid: str) -> dict:
     return row.data if row else {}
 
 
+def answers(conn: Connection, uid: str) -> dict[str, bool]:
+    """Condition answers (key -> True/False); membership flags count as True."""
+    data = get_profile(conn, uid)
+    out = {k: v for k, v in (data.get("answers") or {}).items() if v is not None}
+    for k in data.get("flags", []):
+        out.setdefault(k, True)
+    return out
+
+
+def set_answers(conn: Connection, uid: str, changes: dict[str, bool | None]) -> dict:
+    """Merge answers (None clears one). A membership answered yes joins the flags the
+    engine reads; answered no or cleared leaves them."""
+    data = dict(get_profile(conn, uid))
+    current = dict(data.get("answers") or {})
+    flags = set(data.get("flags", []))
+    for k, v in changes.items():
+        if v is None:
+            current.pop(k, None)
+            flags.discard(k)
+        else:
+            current[k] = v
+            (flags.add if v else flags.discard)(k)
+    data["answers"], data["flags"] = current, sorted(flags)
+    set_profile(conn, uid, data)
+    return data
+
+
 def set_profile(conn: Connection, uid: str, data: dict) -> None:
     conn.execute(delete(profile).where(profile.c.user_id == uid))
     conn.execute(insert(profile).values(user_id=uid, data=data))
@@ -47,6 +74,7 @@ def set_holdings(conn: Connection, uid: str, items: list[dict]) -> None:
         conn.execute(insert(holding).values(
             user_id=uid, card_id=h["card_id"], last4=h.get("last4"), statement_day=h.get("statement_day"),
             renewal_month=h.get("renewal_month"), fee_status=h.get("fee_status") or "standard", fyf_until=h.get("fyf_until"),
+            annual_fee_paise=h.get("annual_fee_paise") if h.get("fee_status") == "custom" else None,
             credit_limit_paise=h.get("credit_limit_paise"), pool_id=h.get("pool_id"), balance_paise=balance, balance_as_of=as_of,
         ))
 

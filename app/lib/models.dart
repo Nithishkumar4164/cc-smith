@@ -31,6 +31,23 @@ class Membership {
       Membership(key: '${j['key']}', name: '${j['name'] ?? j['key']}', by: _strN(j['by']), why: _strN(j['why']));
 }
 
+/// A yes/no question an offer or reward depends on (/meta conditions; offers' `requires`).
+class Condition {
+  final String key, question;
+  final String? kind, why; // kind: membership | eligibility
+  const Condition({required this.key, required this.question, this.kind, this.why});
+  factory Condition.fromJson(Json j) =>
+      Condition(key: '${j['key']}', question: '${j['question'] ?? j['key']}', kind: _strN(j['kind']), why: _strN(j['why']));
+}
+
+/// yes | no | unknown from required conditions and the user's answers; [server] when nothing is required.
+String eligibilityFor(List<Condition> requires, Map<String, bool> answers, String? server) {
+  if (requires.isEmpty) return server ?? 'yes';
+  if (requires.any((c) => answers[c.key] == false)) return 'no';
+  if (requires.every((c) => answers[c.key] == true)) return 'yes';
+  return 'unknown';
+}
+
 /// A spend category and the merchants that are part of it.
 class SpendGroup {
   final String category, label;
@@ -46,7 +63,14 @@ class Meta {
   final List<MerchantMeta> merchants;
   final List<SpendGroup> groups;
   final List<Membership> memberships;
-  const Meta({required this.categories, required this.merchants, this.groups = const [], this.memberships = const []});
+  final List<Condition> conditions;
+  const Meta({
+    required this.categories,
+    required this.merchants,
+    this.groups = const [],
+    this.memberships = const [],
+    this.conditions = const [],
+  });
   factory Meta.fromJson(Json j) {
     final categories = Map<String, dynamic>.from(j['categories'] as Map).map((k, v) => MapEntry(k, '$v'));
     final merchants = _list(j['merchants'], MerchantMeta.fromJson);
@@ -62,7 +86,15 @@ class Meta {
       merchants: merchants,
       groups: groups,
       memberships: _list(j['memberships'], Membership.fromJson),
+      conditions: _list(j['conditions'], Condition.fromJson),
     );
+  }
+
+  Condition? condition(String key) {
+    for (final c in conditions) {
+      if (c.key == key) return c;
+    }
+    return null;
   }
 
   Membership? membership(String key) {
@@ -156,7 +188,11 @@ class FeeOffer {
   final String id, kind, title, tier;
   final String? validTo, url, quote;
   final int? spendConditionPaise, spendWindowDays;
+  final List<Condition> requires;
+  final String? eligibility; // yes | no | unknown
   const FeeOffer({
+    this.requires = const [],
+    this.eligibility,
     required this.id,
     required this.kind,
     required this.title,
@@ -177,6 +213,8 @@ class FeeOffer {
     quote: _strN(j['quote']),
     spendConditionPaise: _intN(j['spend_condition_paise']),
     spendWindowDays: _intN(j['spend_window_days']),
+    requires: _list(j['requires'], Condition.fromJson),
+    eligibility: _strN(j['eligibility']),
   );
   bool get isFact => tier == 'fact';
   String get kindLabel => switch (kind) {
@@ -283,8 +321,9 @@ class Holding {
   final String? last4;
   final int? statementDay;
   final int? renewalMonth;
-  final String feeStatus; // standard | ltf | fyf
+  final String feeStatus; // standard | ltf | fyf | custom
   final String? fyfUntil; // YYYY-MM-DD
+  final int? annualFeePaise; // custom: what the user pays a year, GST included
   final int? creditLimitPaise;
   final String? poolId; // shares a limit with other cards
   final int? balancePaise; // outstanding when the user typed it
@@ -295,6 +334,7 @@ class Holding {
     this.renewalMonth,
     this.feeStatus = 'standard',
     this.fyfUntil,
+    this.annualFeePaise,
     this.creditLimitPaise,
     this.poolId,
     this.balancePaise,
@@ -306,6 +346,7 @@ class Holding {
     renewalMonth: _intN(j['renewal_month']),
     feeStatus: _strN(j['fee_status']) ?? 'standard',
     fyfUntil: _strN(j['fyf_until']),
+    annualFeePaise: _intN(j['annual_fee_paise']),
     creditLimitPaise: _intN(j['credit_limit_paise']),
     poolId: _strN(j['pool_id']),
     balancePaise: _intN(j['balance_paise']),
@@ -317,6 +358,7 @@ class Holding {
     'renewal_month': ?renewalMonth,
     'fee_status': feeStatus,
     if (feeStatus == 'fyf') 'fyf_until': ?fyfUntil,
+    if (feeStatus == 'custom') 'annual_fee_paise': ?annualFeePaise,
     if (poolId == null) 'credit_limit_paise': ?creditLimitPaise,
     'pool_id': ?poolId,
     'balance_paise': ?balancePaise,
@@ -326,6 +368,8 @@ class Holding {
     bool clearStatementDay = false,
     String? feeStatus,
     String? fyfUntil,
+    int? annualFeePaise,
+    int? renewalMonth,
     int? creditLimitPaise,
     bool clearLimit = false,
     String? poolId,
@@ -336,9 +380,10 @@ class Holding {
     cardId: cardId,
     last4: last4,
     statementDay: clearStatementDay ? null : (statementDay ?? this.statementDay),
-    renewalMonth: renewalMonth,
+    renewalMonth: renewalMonth ?? this.renewalMonth,
     feeStatus: feeStatus ?? this.feeStatus,
     fyfUntil: fyfUntil ?? this.fyfUntil,
+    annualFeePaise: annualFeePaise ?? this.annualFeePaise,
     creditLimitPaise: clearLimit ? null : (creditLimitPaise ?? this.creditLimitPaise),
     poolId: clearPool ? null : (poolId ?? this.poolId),
     balancePaise: clearBalance ? null : (balancePaise ?? this.balancePaise),
@@ -386,7 +431,11 @@ class Notice {
   final String? cardId, due;
   final int? rupeesPaise;
   final List<Ref> refs;
+  final List<Condition> requires;
+  final String? eligibility;
   const Notice({
+    this.requires = const [],
+    this.eligibility,
     required this.id,
     required this.kind,
     required this.severity,
@@ -411,7 +460,10 @@ class Notice {
     due: _strN(j['due']),
     rupeesPaise: _intN(j['rupees_paise']),
     refs: _list(j['refs'], Ref.fromJson),
+    requires: _list(j['requires'], Condition.fromJson),
+    eligibility: _strN(j['eligibility']),
   );
+  bool get isGuidance => tier == 'guidance';
   bool get needsAttention => severity == 'act' || severity == 'watch';
 }
 
@@ -450,7 +502,9 @@ class Me {
   final Map<String, int> spends; // monthly paise
   final List<Pool> pools;
   final Map<String, int> categoryTotals; // monthly paise per category, merchants included
+  final Map<String, bool> answers; // condition key -> yes/no; absent = not answered
   const Me({
+    this.answers = const {},
     required this.userId,
     required this.profile,
     required this.holdings,
@@ -465,6 +519,7 @@ class Me {
     spends: (j['spends'] as Map? ?? {}).map((k, v) => MapEntry('$k', _int(v))),
     pools: _list(j['pools'], Pool.fromJson),
     categoryTotals: (j['category_totals'] as Map? ?? {}).map((k, v) => MapEntry('$k', _int(v))),
+    answers: (j['answers'] as Map? ?? {}).map((k, v) => MapEntry('$k', v == true)),
   );
 }
 
@@ -584,6 +639,15 @@ class MerchantView {
   bool get isGuess => confidence != 'high';
 }
 
+/// "₹150 if you have Amazon Prime": what a card would earn if a condition were true.
+class IfAnswered {
+  final String key, question;
+  final int rewardPaise;
+  const IfAnswered({required this.key, required this.question, required this.rewardPaise});
+  factory IfAnswered.fromJson(Json j) =>
+      IfAnswered(key: '${j['key']}', question: '${j['question'] ?? j['key']}', rewardPaise: _int(j['reward_paise']));
+}
+
 class PayOption {
   final String cardId, name;
   final int rewardPaise;
@@ -595,7 +659,11 @@ class PayOption {
   /// Rest-of-month rewards if this card is used now, and now + later. The server ranks
   /// usable cards by [monthPaise]; both are null when it has no spends to project from.
   final int? laterPaise, monthPaise;
+
+  /// Unanswered memberships that would raise this card's reward here.
+  final List<IfAnswered> ifAnswered;
   const PayOption({
+    this.ifAnswered = const [],
     required this.cardId,
     required this.name,
     required this.rewardPaise,
@@ -614,6 +682,7 @@ class PayOption {
     notes: _strs(j['notes']),
     laterPaise: j['later_paise'] == null ? null : _int(j['later_paise']),
     monthPaise: j['month_paise'] == null ? null : _int(j['month_paise']),
+    ifAnswered: _list(j['if_answered'], IfAnswered.fromJson),
   );
 }
 
@@ -624,7 +693,11 @@ class Offer {
   final String? issuer, validTo, url, quote;
   final List<String> cardIds;
   final int? minTxnPaise, estSavingPaise;
+
+  /// "Up to N%" offers: the ceiling on this payment; the real value is unknown.
+  final int? upToPaise;
   const Offer({
+    this.upToPaise,
     required this.id,
     required this.title,
     required this.tier,
@@ -647,6 +720,7 @@ class Offer {
     cardIds: _strs(j['card_ids']),
     minTxnPaise: _intN(j['min_txn_paise']),
     estSavingPaise: _intN(j['est_saving_paise']),
+    upToPaise: _intN(j['up_to_paise']),
   );
   bool get isFact => tier == 'fact';
   Ref? get source => url == null ? null : Ref(url: url!, quote: quote, official: isFact);
@@ -755,6 +829,15 @@ class Launch {
   bool get speculative => status == 'speculative';
   bool get known => status == 'known';
   bool get rejected => status == 'rejected';
+
+  /// "New variant of Scapia (the catalogue has scapia_federal …)": the existing card id, if any.
+  String? variantOf(Iterable<String> catalogue) {
+    final s = summary;
+    if (s == null || !s.toLowerCase().startsWith('new variant')) return null;
+    final m = RegExp(r'catalogue has ([a-z0-9_]+)').firstMatch(s);
+    final id = m?.group(1);
+    return id != null && catalogue.contains(id) ? id : null;
+  }
 }
 
 /// POST /finder/assess: what adding one card is worth on top of current holdings.
@@ -769,5 +852,47 @@ class AssessResult {
     gainPaise: _int(j['gain_paise']),
     assessable: j['assessable'] == true,
     cards: _list(j['cards'], CardResult.fromJson),
+  );
+}
+
+
+/// One budget line (GET /me/budget). Unpinned lines follow last month's actual spend.
+class BudgetLine {
+  final String key, label, kind; // kind: category | merchant
+  final String? category;
+  final int budgetPaise;
+  final int? lastMonthPaise;
+  final bool pinned;
+  const BudgetLine({
+    required this.key,
+    required this.label,
+    required this.kind,
+    this.category,
+    required this.budgetPaise,
+    this.lastMonthPaise,
+    required this.pinned,
+  });
+  factory BudgetLine.fromJson(Json j) => BudgetLine(
+    key: '${j['key']}',
+    label: '${j['label'] ?? j['key']}',
+    kind: '${j['kind'] ?? 'category'}',
+    category: _strN(j['category']),
+    budgetPaise: _int(j['budget_paise']),
+    lastMonthPaise: _intN(j['last_month_paise']),
+    pinned: j['pinned'] == true,
+  );
+}
+
+class Budget {
+  final String month;
+  final String? adaptedFrom;
+  final List<BudgetLine> lines;
+  final int totalPaise;
+  const Budget({required this.month, this.adaptedFrom, this.lines = const [], required this.totalPaise});
+  factory Budget.fromJson(Json j) => Budget(
+    month: '${j['month'] ?? ''}',
+    adaptedFrom: _strN(j['adapted_from']),
+    lines: _list(j['lines'], BudgetLine.fromJson),
+    totalPaise: _int(j['total_paise']),
   );
 }

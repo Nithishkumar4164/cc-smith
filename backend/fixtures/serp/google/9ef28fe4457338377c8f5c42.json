@@ -1,0 +1,342 @@
+{
+  "_recorded": {
+    "engine": "google",
+    "params": {
+      "gl": "in",
+      "google_domain": "google.co.in",
+      "hl": "en",
+      "q": "site:axis.bank.in \"e-debit\" terms filetype:pdf"
+    },
+    "at": "2026-10-10T02:35:02.970761+00:00"
+  },
+  "search_metadata": {
+    "id": "6ac9a4550bbc380339806c52",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/8tH0th9YQcbbbGlhDdd5QztV9UBeifoJQGGAr6IWyVI/6ac9a4550bbc380339806c52.json",
+    "markdown_endpoint": "https://serpapi.com/searches/8tH0th9YQcbbbGlhDdd5QztV9UBeifoJQGGAr6IWyVI/6ac9a4550bbc380339806c52.md",
+    "pixel_position_endpoint": "https://serpapi.com/searches/8tH0th9YQcbbbGlhDdd5QztV9UBeifoJQGGAr6IWyVI/6ac9a4550bbc380339806c52.json_with_pixel_position",
+    "created_at": "2026-10-10 02:35:01 UTC",
+    "processed_at": "2026-10-10 02:35:01 UTC",
+    "google_url": "https://www.google.co.in/search?q=site%3Aaxis.bank.in+%22e-debit%22+terms+filetype%3Apdf&oq=site%3Aaxis.bank.in+%22e-debit%22+terms+filetype%3Apdf&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/8tH0th9YQcbbbGlhDdd5QztV9UBeifoJQGGAr6IWyVI/6ac9a4550bbc380339806c52.html",
+    "total_time_taken": 1.27
+  },
+  "search_parameters": {
+    "device": "desktop",
+    "engine": "google",
+    "gl": "in",
+    "google_domain": "google.co.in",
+    "hl": "en",
+    "q": "site:axis.bank.in \"e-debit\" terms filetype:pdf"
+  },
+  "search_information": {
+    "query_displayed": "site:axis.bank.in \"e-debit\" terms filetype:pdf",
+    "total_results": 43,
+    "time_taken_displayed": 0.15,
+    "organic_results_state": "Results for exact spelling"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "All you need to know about the new Credit, Debit card rules",
+      "link": "https://bfsi.economictimes.indiatimes.com/news/policy/all-you-need-to-know-about-the-new-credit-debit-card-rules/78422275",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEStAEB6zswFf6DBeUCjecXwc0_6BsDOwEBkdzFYUNKY_9szEBLy5FeZFinz34ghKBgmZKQ04OwTIk8lfrVoKEGmPnP9nDSD22Aays1cOe8CHVflylybS-jzp8SemnFFMEJLL4kSiofoF5yLBFPHW8vZIF3AqNVkki1-EhpKwVhCKfx0dqHAxbWreCVejosG7-bnCAALDMgQUfcNKCv1yDkmeLx5-sKDefSXHIbDBVDE9JAdWl1APg&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECBYQAQ&uoh=1",
+      "displayed_link": "https://bfsi.economictimes.indiatimes.com › News › Policy",
+      "favicon": "https://serpapi.com/images/i/UklGRtgBAABXRUJQVlA4IMwBAADQCACdASogACAAPtEutFooIagoGAEAGglsAJ0vwvpLKldMz9AD9QPJA-Cl8uGAaqniA0gUyLxr4mO1FrSMEPz7ArF5TDucVVd0YO3ZSwAAAP7r-Oa3Y1x55RLX4MT36RDyhc2LX2ln_0EeKJ_YXxcHdPqRLFsyeKn_DEujlW9Omu6LPTeg7AIff56mEmwESR9-4TezApq7IHT7_DuAef1kPwOd6iCf_95P4rt_rIY_mH_eNLC_yq_9oJmwv5EOv8Wz6-3n_ouuXuvVI73eBzk_4VfSA_j2At-85jfbyv1P_cKx_reYVKkM_5FLIXUp-fH9mfXa3IzZcr_wFoLChME_BXYrdc81P5jsp_ov_5q2yDFV_fxE1fkrdco0wLC7CfXlZCW95tiPAOUTiQJ_6Qkonos1CiQrf8zTX3AFa4-mfqkzBGIQVcV0uejWv1xdn5xeYHJmekXG4Lb8Ur3H1v4M7VHaVO2nMD8wAfJ75yk56V92YTdVE33NKoq48v5Zp0rU_uh93c8TLmG-641ZQFYF6xVcSmxanldy1in4Z8-9ynosHcumCmcyDfJWuRTO4JUfsKdKLMOuA9nWySllqUjTw2XM6ch1hzm1fWgA.webp",
+      "date": "1 Oct 2020",
+      "snippet": "New guidelines for Credit, Debit cards provides customers with the option to register for preferences such as opt-in or opt-out services, spend ...",
+      "about_this_result": {
+        "source": {
+          "description": "New guidelines for Credit, Debit cards provides customers with the option to register for preferences such as opt-in or opt-out services, spend ...",
+          "source_info_link": "https://bfsi.economictimes.indiatimes.com/news/policy/all-you-need-to-know-about-the-new-credit-debit-card-rules/78422275",
+          "icon": "https://serpapi.com/images/i/UklGRtgBAABXRUJQVlA4IMwBAADQCACdASogACAAPtEutFooIagoGAEAGglsAJ0vwvpLKldMz9AD9QPJA-Cl8uGAaqniA0gUyLxr4mO1FrSMEPz7ArF5TDucVVd0YO3ZSwAAAP7r-Oa3Y1x55RLX4MT36RDyhc2LX2ln_0EeKJ_YXxcHdPqRLFsyeKn_DEujlW9Omu6LPTeg7AIff56mEmwESR9-4TezApq7IHT7_DuAef1kPwOd6iCf_95P4rt_rIY_mH_eNLC_yq_9oJmwv5EOv8Wz6-3n_ouuXuvVI73eBzk_4VfSA_j2At-85jfbyv1P_cKx_reYVKkM_5FLIXUp-fH9mfXa3IzZcr_wFoLChME_BXYrdc81P5jsp_ov_5q2yDFV_fxE1fkrdco0wLC7CfXlZCW95tiPAOUTiQJ_6Qkonos1CiQrf8zTX3AFa4-mfqkzBGIQVcV0uejWv1xdn5xeYHJmekXG4Lb8Ur3H1v4M7VHaVO2nMD8wAfJ75yk56V92YTdVE33NKoq48v5Zp0rU_uh93c8TLmG-641ZQFYF6xVcSmxanldy1in4Z8-9ynosHcumCmcyDfJWuRTO4JUfsKdKLMOuA9nWySllqUjTw2XM6ch1hzm1fWgA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CoECL2dvdG8_dXJsPUNBRVN0QUVCNnpzd0ZmNkRCZVVDamVjWHdjMF82QnNET3dFQmtkekZZVU5LWV85c3pFQkx5NUZlWkZpbnozNGdoS0JnbVpLUTA0T3dUSWs4bGZyVm9LRUdtUG5QOW5EU0QyMkFheXMxY09lOENIVmZseWx5YlMtanpwOFNlbW5GRk1FSkxMNGtTaW9mb0Y1eUxCRlBIVzh2WklGM0FxTlZra2kxLUVocEt3VmhDS2Z4MGRxSEF4YldyZUNWZWpvc0c3LWJuQ0FBTERNZ1FVZmNOS0N2MXlEa21lTHg1LXNLRGVmU1hISWJEQlZERTlKQWRXbDFBUGcSBBoCCAAawQQSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAnQQIABAAGAAgACoICgFlFSNehz0qDAoFZGViaXQV4WwYQCofCgV0ZXJtcxVg8Xg5GgR0ZXJtGgt0ZXJtaW5vbG9neTKBAi9nb3RvP3VybD1DQUVTdEFFQjZ6c3dGZjZEQmVVQ2plY1h3YzBfNkJzRE93RUJrZHpGWVVOS1lfOXN6RUJMeTVGZVpGaW56MzRnaEtCZ21aS1EwNE93VElrOGxmclZvS0VHbVBuUDluRFNEMjJBYXlzMWNPZThDSFZmbHlseWJTLWp6cDhTZW1uRkZNRUpMTDRrU2lvZm9GNXlMQkZQSFc4dlpJRjNBcU5Wa2tpMS1FaHBLd1ZoQ0tmeDBkcUhBeGJXcmVDVmVqb3NHNy1ibkNBQUxETWdRVWZjTktDdjF5RGttZUx4NS1zS0RlZlNYSEliREJWREU5SkFkV2wxQVBnOjtBbGwgeW91IG5lZWQgdG8ga25vdyBhYm91dCB0aGUgbmV3IENyZWRpdCwgRGViaXQgY2FyZCBydWxlc0KYAU5ldyBndWlkZWxpbmVzIGZvciBDcmVkaXQsIERlYml0IGNhcmRzIHByb3ZpZGVzIGN1c3RvbWVycyB3aXRoIHRoZSBvcHRpb24gdG8gcmVnaXN0ZXIgZm9yIHByZWZlcmVuY2VzIHN1Y2ggYXMgb3B0LWluIG9yIG9wdC1vdXQgc2VydmljZXMsIHNwZW5kJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CoECL2dvdG8_dXJsPUNBRVN0QUVCNnpzd0ZmNkRCZVVDamVjWHdjMF82QnNET3dFQmtkekZZVU5LWV85c3pFQkx5NUZlWkZpbnozNGdoS0JnbVpLUTA0T3dUSWs4bGZyVm9LRUdtUG5QOW5EU0QyMkFheXMxY09lOENIVmZseWx5YlMtanpwOFNlbW5GRk1FSkxMNGtTaW9mb0Y1eUxCRlBIVzh2WklGM0FxTlZra2kxLUVocEt3VmhDS2Z4MGRxSEF4YldyZUNWZWpvc0c3LWJuQ0FBTERNZ1FVZmNOS0N2MXlEa21lTHg1LXNLRGVmU1hISWJEQlZERTlKQWRXbDFBUGcSBBoCCAAawQQSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAnQQIABAAGAAgACoICgFlFSNehz0qDAoFZGViaXQV4WwYQCofCgV0ZXJtcxVg8Xg5GgR0ZXJtGgt0ZXJtaW5vbG9neTKBAi9nb3RvP3VybD1DQUVTdEFFQjZ6c3dGZjZEQmVVQ2plY1h3YzBfNkJzRE93RUJrZHpGWVVOS1lfOXN6RUJMeTVGZVpGaW56MzRnaEtCZ21aS1EwNE93VElrOGxmclZvS0VHbVBuUDluRFNEMjJBYXlzMWNPZThDSFZmbHlseWJTLWp6cDhTZW1uRkZNRUpMTDRrU2lvZm9GNXlMQkZQSFc4dlpJRjNBcU5Wa2tpMS1FaHBLd1ZoQ0tmeDBkcUhBeGJXcmVDVmVqb3NHNy1ibkNBQUxETWdRVWZjTktDdjF5RGttZUx4NS1zS0RlZlNYSEliREJWREU5SkFkV2wxQVBnOjtBbGwgeW91IG5lZWQgdG8ga25vdyBhYm91dCB0aGUgbmV3IENyZWRpdCwgRGViaXQgY2FyZCBydWxlc0KYAU5ldyBndWlkZWxpbmVzIGZvciBDcmVkaXQsIERlYml0IGNhcmRzIHByb3ZpZGVzIGN1c3RvbWVycyB3aXRoIHRoZSBvcHRpb24gdG8gcmVnaXN0ZXIgZm9yIHByZWZlcmVuY2VzIHN1Y2ggYXMgb3B0LWluIG9yIG9wdC1vdXQgc2VydmljZXMsIHNwZW5kJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "bfsi.economictimes.indiatimes.com",
+      "read_more_link": "https://bfsi.economictimes.indiatimes.com/news/policy/all-you-need-to-know-about-the-new-credit-debit-card-rules/78422275#:~:text=New%20guidelines%20for%20Credit%2C%20Debit,international%20transactions%20and%20contactless%20transactions."
+    },
+    {
+      "position": 2,
+      "title": "Debit, credit cards to be disabled for online transactions if ...",
+      "link": "https://www.livemint.com/industry/banking/debit-credit-cards-to-be-disabled-for-online-transactions-if-not-used-before-11579093989732.html",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESxgEB6zswFeHyR4kUTQFvv0iFXieXH2dqjA0X_do8W1UJftmpl_4-yrlOtuNpqJI2nblMrX1L2AmhoK-M5jk42j8svmHpTfJ96blwM89FUEtMZwGv1jFQzHXUrPrIHez4BNic5aGkp0WHoRY_PpgDtOw5V3VvmZys8zriEDFiR2v7Vbxz5SmqE9Disjq72B3XhqxPPSqCIlTn4DGJWFjK6mchuT0vjgGDO63O79IRyUsp-9E_Wy4MYviLpnBaX1RH2VA9rxWR5w4&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECBQQAQ&uoh=1",
+      "displayed_link": "https://www.livemint.com › Industry › Banking",
+      "favicon": "https://serpapi.com/images/i/UklGRvwAAABXRUJQVlA4IPAAAADwBQCdASocABwAPtEutFooIagoGAEAGglsAJ0vd_nN6GxAt_8B6IEr5Sa3OnZh3gObpTQY9ojIUAD-kqv0KFfJdZC2Z-5KaKLQeVwl0qFmm66U2or_4tCYT2WQHIIm_CMv-G0m-zrnNQQuvrPn68PyAvSiX9BUhBh6eMFt0wPCpHtTtrrr3Y8tYwWsdLOz_By74Fp_uf-Pvr3_g3J6gcEvN9VaQPkp_rnp53JmtE1Cxef4RuhJ1IDkC4MivffCdKl3y1kKmten5wTgtvpuP7pNh87u0Uv4O1c21B-8tb98gUOXFGjg1UBb7rFkuMpYAAA.webp",
+      "date": "15 Jan 2020",
+      "snippet": "\"Existing cards which have never been used for online (card not present) / international/contactless transactions shall be mandatorily disabled ...",
+      "about_this_result": {
+        "source": {
+          "description": "\"Existing cards which have never been used for online (card not present) / international/contactless transactions shall be mandatorily disabled ...",
+          "source_info_link": "https://www.livemint.com/industry/banking/debit-credit-cards-to-be-disabled-for-online-transactions-if-not-used-before-11579093989732.html",
+          "icon": "https://serpapi.com/images/i/UklGRvwAAABXRUJQVlA4IPAAAADwBQCdASocABwAPtEutFooIagoGAEAGglsAJ0vd_nN6GxAt_8B6IEr5Sa3OnZh3gObpTQY9ojIUAD-kqv0KFfJdZC2Z-5KaKLQeVwl0qFmm66U2or_4tCYT2WQHIIm_CMv-G0m-zrnNQQuvrPn68PyAvSiX9BUhBh6eMFt0wPCpHtTtrrr3Y8tYwWsdLOz_By74Fp_uf-Pvr3_g3J6gcEvN9VaQPkp_rnp53JmtE1Cxef4RuhJ1IDkC4MivffCdKl3y1kKmten5wTgtvpuP7pNh87u0Uv4O1c21B-8tb98gUOXFGjg1UBb7rFkuMpYAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpkCL2dvdG8_dXJsPUNBRVN4Z0VCNnpzd0ZlSHlSNGtVVFFGdnYwaUZYaWVYSDJkcWpBMFhfZG84VzFVSmZ0bXBsXzQteXJsT3R1TnBxSkkybmJsTXJYMUwyQW1ob0stTTVqazQyajhzdm1IcFRmSjk2Ymx3TTg5RlVFdE1ad0d2MWpGUXpIWFVyUHJJSGV6NEJOaWM1YUdrcDBXSG9SWV9QcGdEdE93NVYzVnZtWnlzOHpyaUVERmlSMnY3VmJ4ejVTbXFFOURpc2pxNzJCM1hocXhQUFNxQ0lsVG40REdKV0ZqSzZtY2h1VDB2amdHRE82M083OUlSeVVzcC05RV9XeTRNWXZpTHBuQmFYMVJIMlZBOXJ4V1I1dzQSBBoCCAAa6gQSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDEBAgAEAAYACAAKggKAWUVmXDdPSoMCgVkZWJpdBW-DBNAKh8KBXRlcm1zFaKBnDwaBHRlcm0aC3Rlcm1pbm9sb2d5MpkCL2dvdG8_dXJsPUNBRVN4Z0VCNnpzd0ZlSHlSNGtVVFFGdnYwaUZYaWVYSDJkcWpBMFhfZG84VzFVSmZ0bXBsXzQteXJsT3R1TnBxSkkybmJsTXJYMUwyQW1ob0stTTVqazQyajhzdm1IcFRmSjk2Ymx3TTg5RlVFdE1ad0d2MWpGUXpIWFVyUHJJSGV6NEJOaWM1YUdrcDBXSG9SWV9QcGdEdE93NVYzVnZtWnlzOHpyaUVERmlSMnY3VmJ4ejVTbXFFOURpc2pxNzJCM1hocXhQUFNxQ0lsVG40REdKV0ZqSzZtY2h1VDB2amdHRE82M083OUlSeVVzcC05RV9XeTRNWXZpTHBuQmFYMVJIMlZBOXJ4V1I1dzQ6RURlYml0LCBjcmVkaXQgY2FyZHMgdG8gYmUgZGlzYWJsZWQgZm9yIG9ubGluZSB0cmFuc2FjdGlvbnMgaWYgbm90IC4uLkKdASZxdW90O0V4aXN0aW5nIGNhcmRzIHdoaWNoIGhhdmUgbmV2ZXIgYmVlbiB1c2VkIGZvciBvbmxpbmUgKGNhcmQgbm90IHByZXNlbnQpIC8gaW50ZXJuYXRpb25hbC9jb250YWN0bGVzcyB0cmFuc2FjdGlvbnMgc2hhbGwgYmUgbWFuZGF0b3JpbHkgZGlzYWJsZWQmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpkCL2dvdG8_dXJsPUNBRVN4Z0VCNnpzd0ZlSHlSNGtVVFFGdnYwaUZYaWVYSDJkcWpBMFhfZG84VzFVSmZ0bXBsXzQteXJsT3R1TnBxSkkybmJsTXJYMUwyQW1ob0stTTVqazQyajhzdm1IcFRmSjk2Ymx3TTg5RlVFdE1ad0d2MWpGUXpIWFVyUHJJSGV6NEJOaWM1YUdrcDBXSG9SWV9QcGdEdE93NVYzVnZtWnlzOHpyaUVERmlSMnY3VmJ4ejVTbXFFOURpc2pxNzJCM1hocXhQUFNxQ0lsVG40REdKV0ZqSzZtY2h1VDB2amdHRE82M083OUlSeVVzcC05RV9XeTRNWXZpTHBuQmFYMVJIMlZBOXJ4V1I1dzQSBBoCCAAa6gQSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDEBAgAEAAYACAAKggKAWUVmXDdPSoMCgVkZWJpdBW-DBNAKh8KBXRlcm1zFaKBnDwaBHRlcm0aC3Rlcm1pbm9sb2d5MpkCL2dvdG8_dXJsPUNBRVN4Z0VCNnpzd0ZlSHlSNGtVVFFGdnYwaUZYaWVYSDJkcWpBMFhfZG84VzFVSmZ0bXBsXzQteXJsT3R1TnBxSkkybmJsTXJYMUwyQW1ob0stTTVqazQyajhzdm1IcFRmSjk2Ymx3TTg5RlVFdE1ad0d2MWpGUXpIWFVyUHJJSGV6NEJOaWM1YUdrcDBXSG9SWV9QcGdEdE93NVYzVnZtWnlzOHpyaUVERmlSMnY3VmJ4ejVTbXFFOURpc2pxNzJCM1hocXhQUFNxQ0lsVG40REdKV0ZqSzZtY2h1VDB2amdHRE82M083OUlSeVVzcC05RV9XeTRNWXZpTHBuQmFYMVJIMlZBOXJ4V1I1dzQ6RURlYml0LCBjcmVkaXQgY2FyZHMgdG8gYmUgZGlzYWJsZWQgZm9yIG9ubGluZSB0cmFuc2FjdGlvbnMgaWYgbm90IC4uLkKdASZxdW90O0V4aXN0aW5nIGNhcmRzIHdoaWNoIGhhdmUgbmV2ZXIgYmVlbiB1c2VkIGZvciBvbmxpbmUgKGNhcmQgbm90IHByZXNlbnQpIC8gaW50ZXJuYXRpb25hbC9jb250YWN0bGVzcyB0cmFuc2FjdGlvbnMgc2hhbGwgYmUgbWFuZGF0b3JpbHkgZGlzYWJsZWQmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Livemint",
+      "read_more_link": "https://www.livemint.com/industry/banking/debit-credit-cards-to-be-disabled-for-online-transactions-if-not-used-before-11579093989732.html#:~:text=%22Existing%20cards%20which%20have%20never,purpose%2C%22%20the%20central%20bank%20said."
+    },
+    {
+      "position": 3,
+      "title": "Smart things you must know about a Virtual Card",
+      "link": "https://m.economictimes.com/wealth/spend/smart-things-you-must-know-about-a-virtual-card/articleshow/54262577.cms",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESrAEB6zswFWtlrUCVSCr2OGE3DRuu5JxGr6V4-w0HcjDt-1BC8zF4xJ3lrehqwxpO-s7v7D-Js93m3XI6Eo2jCpkayIrjrhYFdZTDwBi6WnLq9Erz9vlyzgEr-V4yUiklh2jgSehDmwdw-HYZL0g9ijm69qEGY72aaCW5-km_SGrM3vpsb7fpJPnZNjHV5E-jVwwTqpILG08jQAjMact6iLK9hTcGV1lN2oIHRiz1&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECB4QAQ&uoh=1",
+      "displayed_link": "https://m.economictimes.com › Wealth › Spend",
+      "favicon": "https://serpapi.com/images/i/UklGRvQAAABXRUJQVlA4IOgAAAAQBQCdASocABwAPtEwtFooIigoGAEAGgloAKwy6M4BtGUG_e7Uf_IM7saSf5E0ERQAAP6cqPZjr7J-9SavpOBfLsbhlRwsMG_a8Rbp-_R4cS-RyVWgx5cgvXgNo_-N4_cBT3AAfxeKB3GuT5gvQ2UDKHi3eJKJK7jykwBhT-W8b8M_9sh_hHbBkT3H1HVTQjuw2pclgD91RkaQw8HgF_E7-Uesx4U0eMZZ9A1fwXZEgmRpqxY79imRAM-wGZUCybLSh9vT7Cu1eXa4O844RnSmSGtBnZe52XwjAOzZeq5f8f8NlC3MH6AA.webp",
+      "date": "12 Sept 2016",
+      "snippet": "1. A Virtual Card is a one-time use online card (no physical existence) that can be used only for online transactions or payments.",
+      "about_this_result": {
+        "source": {
+          "description": "1. A Virtual Card is a one-time use online card (no physical existence) that can be used only for online transactions or payments.",
+          "source_info_link": "https://m.economictimes.com/wealth/spend/smart-things-you-must-know-about-a-virtual-card/articleshow/54262577.cms",
+          "icon": "https://serpapi.com/images/i/UklGRvQAAABXRUJQVlA4IOgAAAAQBQCdASocABwAPtEwtFooIigoGAEAGgloAKwy6M4BtGUG_e7Uf_IM7saSf5E0ERQAAP6cqPZjr7J-9SavpOBfLsbhlRwsMG_a8Rbp-_R4cS-RyVWgx5cgvXgNo_-N4_cBT3AAfxeKB3GuT5gvQ2UDKHi3eJKJK7jykwBhT-W8b8M_9sh_hHbBkT3H1HVTQjuw2pclgD91RkaQw8HgF_E7-Uesx4U0eMZZ9A1fwXZEgmRpqxY79imRAM-wGZUCybLSh9vT7Cu1eXa4O844RnSmSGtBnZe52XwjAOzZeq5f8f8NlC3MH6AA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CvYBL2dvdG8_dXJsPUNBRVNyQUVCNnpzd0ZXdGxyVUNWU0NyMk9HRTNEUnV1NUp4R3I2VjQtdzBIY2pEdC0xQkM4ekY0eEozbHJlaHF3eHBPLXM3djdELUpzOTNtM1hJNkVvMmpDcGtheUlyanJoWUZkWlREd0JpNlduTHE5RXJ6OXZseXpnRXItVjR5VWlrbGgyamdTZWhEbXdkdy1IWVpMMGc5aWptNjlxRUdZNzJhYUNXNS1rbV9TR3JNM3Zwc2I3ZnBKUG5aTmpIVjVFLWpWd3dUcXBJTEcwOGpRQWpNYWN0NmlMSzloVGNHVjFsTjJvSUhSaXoxEgQaAggAGpQEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQPADCAAQABgAIAAqCAoBZRXEWnU6KgwKBWRlYml0Ffc0aD4qHwoFdGVybXMVF5KdPRoEdGVybRoLdGVybWlub2xvZ3ky9gEvZ290bz91cmw9Q0FFU3JBRUI2enN3Rld0bHJVQ1ZTQ3IyT0dFM0RSdXU1SnhHcjZWNC13MEhjakR0LTFCQzh6RjR4SjNscmVocXd4cE8tczd2N0QtSnM5M20zWEk2RW8yakNwa2F5SXJqcmhZRmRaVER3Qmk2V25McTlFcno5dmx5emdFci1WNHlVaWtsaDJqZ1NlaERtd2R3LUhZWkwwZzlpam02OXFFR1k3MmFhQ1c1LWttX1NHck0zdnBzYjdmcEpQblpOakhWNUUtalZ3d1RxcElMRzA4alFBak1hY3Q2aUxLOWhUY0dWMWxOMm9JSFJpejE6L1NtYXJ0IHRoaW5ncyB5b3UgbXVzdCBrbm93IGFib3V0IGEgVmlydHVhbCBDYXJkQoIBMS4gQSBWaXJ0dWFsIENhcmQgaXMgYSBvbmUtdGltZSB1c2Ugb25saW5lIGNhcmQgKG5vIHBoeXNpY2FsIGV4aXN0ZW5jZSkgdGhhdCBjYW4gYmUgdXNlZCBvbmx5IGZvciBvbmxpbmUgdHJhbnNhY3Rpb25zIG9yIHBheW1lbnRzLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CvYBL2dvdG8_dXJsPUNBRVNyQUVCNnpzd0ZXdGxyVUNWU0NyMk9HRTNEUnV1NUp4R3I2VjQtdzBIY2pEdC0xQkM4ekY0eEozbHJlaHF3eHBPLXM3djdELUpzOTNtM1hJNkVvMmpDcGtheUlyanJoWUZkWlREd0JpNlduTHE5RXJ6OXZseXpnRXItVjR5VWlrbGgyamdTZWhEbXdkdy1IWVpMMGc5aWptNjlxRUdZNzJhYUNXNS1rbV9TR3JNM3Zwc2I3ZnBKUG5aTmpIVjVFLWpWd3dUcXBJTEcwOGpRQWpNYWN0NmlMSzloVGNHVjFsTjJvSUhSaXoxEgQaAggAGpQEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQPADCAAQABgAIAAqCAoBZRXEWnU6KgwKBWRlYml0Ffc0aD4qHwoFdGVybXMVF5KdPRoEdGVybRoLdGVybWlub2xvZ3ky9gEvZ290bz91cmw9Q0FFU3JBRUI2enN3Rld0bHJVQ1ZTQ3IyT0dFM0RSdXU1SnhHcjZWNC13MEhjakR0LTFCQzh6RjR4SjNscmVocXd4cE8tczd2N0QtSnM5M20zWEk2RW8yakNwa2F5SXJqcmhZRmRaVER3Qmk2V25McTlFcno5dmx5emdFci1WNHlVaWtsaDJqZ1NlaERtd2R3LUhZWkwwZzlpam02OXFFR1k3MmFhQ1c1LWttX1NHck0zdnBzYjdmcEpQblpOakhWNUUtalZ3d1RxcElMRzA4alFBak1hY3Q2aUxLOWhUY0dWMWxOMm9JSFJpejE6L1NtYXJ0IHRoaW5ncyB5b3UgbXVzdCBrbm93IGFib3V0IGEgVmlydHVhbCBDYXJkQoIBMS4gQSBWaXJ0dWFsIENhcmQgaXMgYSBvbmUtdGltZSB1c2Ugb25saW5lIGNhcmQgKG5vIHBoeXNpY2FsIGV4aXN0ZW5jZSkgdGhhdCBjYW4gYmUgdXNlZCBvbmx5IGZvciBvbmxpbmUgdHJhbnNhY3Rpb25zIG9yIHBheW1lbnRzLiICEAFIAFgAaAA",
+      "source": "The Economic Times",
+      "read_more_link": "https://m.economictimes.com/wealth/spend/smart-things-you-must-know-about-a-virtual-card/articleshow/54262577.cms#:~:text=1.%20A%20Virtual%20Card%20is,for%20online%20transactions%20or%20payments."
+    },
+    {
+      "position": 4,
+      "title": "Explain Debit Card?",
+      "link": "https://www.sarthaks.com/1013102/explain-debit-card",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESbgHrOzAVI6x0s4htdUX0S3U4knx2Xv2Ti3uBk5-k6VERa-O6_45JHxsNKhKQ3BUAOOm1WQWjB2yHgteNQhhjLiW04mY5n6QE3o7uIXxYs9CkqAIV4wM0je0qfTnIaAOKxDAOXG4q5EM8UTPRgh5H&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECBIQAQ&uoh=1",
+      "displayed_link": "https://www.sarthaks.com › explain-debit-card",
+      "favicon": "https://serpapi.com/images/i/UklGRlYBAABXRUJQVlA4IEoBAACwBgCdASocABwAPtE-tFooIigoFAEAGglsADUAVwB1okwiGAaS9noMDRa_nujGxgTkz3DZZm1rv_fQwJB3wAD-9gnHi3niphvD76ycQBRjMJ-Ckhc-6YxMCe5pJhX3giH7c5Vwk1UR223vYI4KJLREbgRr86E-KGuznKn_LSjfe5ioaOcW5BNfz9E7hIA5P24CidvlH0Z-FFTvkPReBJQbJB0Y1kpvSeLwEHfbTIpB_t-ZLzlXWEi_TCI82YYXQcfTrPwO2X_g2bJkZv_4a_44_Na-0mJSSgH86bs8MQjpCN_jB2oHS50DfipafCdy5z6o6B26vj8f-3e-b-dZkYpqyGy3cQFI-icmtLmZ873Kf2l_KJ265Lv7vffzvIZq2SviGNuzZ8Zn5Hww9fQT5cProiKc3PTpGLJQiqelLvl97PvqpSOPi2aVAAA.webp",
+      "date": "22 Dec 2020",
+      "snippet": "Debit Card: Debit Card is an electronic payment card where the transaction amount is deducted directly from the card holder's bank account ...",
+      "about_this_result": {
+        "source": {
+          "description": "Debit Card: Debit Card is an electronic payment card where the transaction amount is deducted directly from the card holder's bank account ...",
+          "source_info_link": "https://www.sarthaks.com/1013102/explain-debit-card",
+          "icon": "https://serpapi.com/images/i/UklGRlYBAABXRUJQVlA4IEoBAACwBgCdASocABwAPtE-tFooIigoFAEAGglsADUAVwB1okwiGAaS9noMDRa_nujGxgTkz3DZZm1rv_fQwJB3wAD-9gnHi3niphvD76ycQBRjMJ-Ckhc-6YxMCe5pJhX3giH7c5Vwk1UR223vYI4KJLREbgRr86E-KGuznKn_LSjfe5ioaOcW5BNfz9E7hIA5P24CidvlH0Z-FFTvkPReBJQbJB0Y1kpvSeLwEHfbTIpB_t-ZLzlXWEi_TCI82YYXQcfTrPwO2X_g2bJkZv_4a_44_Na-0mJSSgH86bs8MQjpCN_jB2oHS50DfipafCdy5z6o6B26vj8f-3e-b-dZkYpqyGy3cQFI-icmtLmZ873Kf2l_KJ265Lv7vffzvIZq2SviGNuzZ8Zn5Hww9fQT5cProiKc3PTpGLJQiqelLvl97PvqpSOPi2aVAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqIBL2dvdG8_dXJsPUNBRVNiZ0hyT3pBVkk2eDBzNGh0ZFVYMFMzVTRrbngyWHYyVGkzdUJrNS1rNlZFUmEtTzZfNDVKSHhzTktoS1EzQlVBT09tMVdRV2pCMnlIZ3RlTlFoaGpMaVcwNG1ZNW42UUUzbzd1SVh4WXM5Q2txQUlWNHdNMGplMHFmVG5JYUFPS3hEQU9YRzRxNUVNOFVUUFJnaDVIEgQaAggAGs0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQKkDCAAQABgAIAAqCAoBZRXqAQI5KgwKBWRlYml0FVjqTEAqHwoFdGVybXMVKQRHOhoEdGVybRoLdGVybWlub2xvZ3kyogEvZ290bz91cmw9Q0FFU2JnSHJPekFWSTZ4MHM0aHRkVVgwUzNVNGtueDJYdjJUaTN1Qms1LWs2VkVSYS1PNl80NUpIeHNOS2hLUTNCVUFPT20xV1FXakIyeUhndGVOUWhoakxpVzA0bVk1bjZRRTNvN3VJWHhZczlDa3FBSVY0d00wamUwcWZUbklhQU9LeERBT1hHNHE1RU04VVRQUmdoNUg6J0V4cGxhaW4gRGViaXQgQ2FyZD8gLSBTYXJ0aGFrcyBlQ29ubmVjdEKXAURlYml0IENhcmQ6IERlYml0IENhcmQgaXMgYW4gZWxlY3Ryb25pYyBwYXltZW50IGNhcmQgd2hlcmUgdGhlIHRyYW5zYWN0aW9uIGFtb3VudCBpcyBkZWR1Y3RlZCBkaXJlY3RseSBmcm9tIHRoZSBjYXJkIGhvbGRlciYjMzk7cyBiYW5rIGFjY291bnQmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqIBL2dvdG8_dXJsPUNBRVNiZ0hyT3pBVkk2eDBzNGh0ZFVYMFMzVTRrbngyWHYyVGkzdUJrNS1rNlZFUmEtTzZfNDVKSHhzTktoS1EzQlVBT09tMVdRV2pCMnlIZ3RlTlFoaGpMaVcwNG1ZNW42UUUzbzd1SVh4WXM5Q2txQUlWNHdNMGplMHFmVG5JYUFPS3hEQU9YRzRxNUVNOFVUUFJnaDVIEgQaAggAGs0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQKkDCAAQABgAIAAqCAoBZRXqAQI5KgwKBWRlYml0FVjqTEAqHwoFdGVybXMVKQRHOhoEdGVybRoLdGVybWlub2xvZ3kyogEvZ290bz91cmw9Q0FFU2JnSHJPekFWSTZ4MHM0aHRkVVgwUzNVNGtueDJYdjJUaTN1Qms1LWs2VkVSYS1PNl80NUpIeHNOS2hLUTNCVUFPT20xV1FXakIyeUhndGVOUWhoakxpVzA0bVk1bjZRRTNvN3VJWHhZczlDa3FBSVY0d00wamUwcWZUbklhQU9LeERBT1hHNHE1RU04VVRQUmdoNUg6J0V4cGxhaW4gRGViaXQgQ2FyZD8gLSBTYXJ0aGFrcyBlQ29ubmVjdEKXAURlYml0IENhcmQ6IERlYml0IENhcmQgaXMgYW4gZWxlY3Ryb25pYyBwYXltZW50IGNhcmQgd2hlcmUgdGhlIHRyYW5zYWN0aW9uIGFtb3VudCBpcyBkZWR1Y3RlZCBkaXJlY3RseSBmcm9tIHRoZSBjYXJkIGhvbGRlciYjMzk7cyBiYW5rIGFjY291bnQmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Sarthaks eConnect",
+      "read_more_link": "https://www.sarthaks.com/1013102/explain-debit-card#:~:text=Debit%20Card%3A,holder's%20bank%20account%20upon%20authorization."
+    },
+    {
+      "position": 5,
+      "title": "6 Most Common Modes of Electronic Payment",
+      "link": "https://globallegallawfirm.com/6-most-common-modes-of-electronic-payment/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEShAEB6zswFYS6kO8XkC57n3UQdSX0Unwk5-WADohPk-2vK9nbMO2f9rVsU9kTXP3guvYax0JcW8cPZF2CSpv5wtVKwUzn1GtFuwszWYB8EG6ajgZoQOYVtiBThmbJj599WsvNGHfUD2LrL53NR1NADAB2OLBiop09HqVxOvuQaJEkSVJv1no&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECBwQAQ&uoh=1",
+      "displayed_link": "https://globallegallawfirm.com › 6-most-common-mode...",
+      "favicon": "https://serpapi.com/images/i/UklGRrwBAABXRUJQVlA4ILABAACwCACdASocABwAPtE-tFooIigoFAEAGglsAJ0yhHAn57wG2A3AG8wbydLTXsDH8c5X0Z0xwV7jG58SY-ps_d0MBUqBvIzLTVzLHXhNuAAA_vYQ4P8JDgFLne_p-nOVxOZT27bC0NVSHCUInUVinYncaeTNPQ0Ugy06u7672W-Pyuuit_d24eQ6CZ-IkLvl2fsidWtACnuV2_ErL_fPtQKVyQTDvxauLmz8PsbiPyXe579O0pzeWW5xn6Wmrl08C8yNDh5twPSJItNQBvBZA8fEEd8ClQHPvTg_DbZWJt-CpbmhhAqu9ibwhBTsl1AomUbmX3Zks7AeHSg_17rKwsCiB3ofiuHzi_CviZu_SMaNbnL3PR8PhtkJaJ3nOL8lebIWbOfme82_TIWX8829yAcfzR2VbP4qmHLJ-CIyeTGkD6__cLt-pg5q4o5s61Zwy7Tnpy1mDp3OfzYy2rQuwp2vSmtuSdYKLGmWg6R2t56G5i8D6ybOsB6VYsy_E3TvhZGAzVYpi_FVMBSjYGHimsC4ZUkEy3SHHIk4U_f77KJCHybQHBBuYkFoD0l-0VKSAAA.webp",
+      "date": "17 Oct 2022",
+      "snippet": "Unlike credit cards, however, debit cards are linked directly to a bank account. This means that there are no interest fees or other finance ...",
+      "about_this_result": {
+        "source": {
+          "description": "Unlike credit cards, however, debit cards are linked directly to a bank account. This means that there are no interest fees or other finance ...",
+          "source_info_link": "https://globallegallawfirm.com/6-most-common-modes-of-electronic-payment/",
+          "icon": "https://serpapi.com/images/i/UklGRrwBAABXRUJQVlA4ILABAACwCACdASocABwAPtE-tFooIigoFAEAGglsAJ0yhHAn57wG2A3AG8wbydLTXsDH8c5X0Z0xwV7jG58SY-ps_d0MBUqBvIzLTVzLHXhNuAAA_vYQ4P8JDgFLne_p-nOVxOZT27bC0NVSHCUInUVinYncaeTNPQ0Ugy06u7672W-Pyuuit_d24eQ6CZ-IkLvl2fsidWtACnuV2_ErL_fPtQKVyQTDvxauLmz8PsbiPyXe579O0pzeWW5xn6Wmrl08C8yNDh5twPSJItNQBvBZA8fEEd8ClQHPvTg_DbZWJt-CpbmhhAqu9ibwhBTsl1AomUbmX3Zks7AeHSg_17rKwsCiB3ofiuHzi_CviZu_SMaNbnL3PR8PhtkJaJ3nOL8lebIWbOfme82_TIWX8829yAcfzR2VbP4qmHLJ-CIyeTGkD6__cLt-pg5q4o5s61Zwy7Tnpy1mDp3OfzYy2rQuwp2vSmtuSdYKLGmWg6R2t56G5i8D6ybOsB6VYsy_E3TvhZGAzVYpi_FVMBSjYGHimsC4ZUkEy3SHHIk4U_f77KJCHybQHBBuYkFoD0l-0VKSAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsEBL2dvdG8_dXJsPUNBRVNoQUVCNnpzd0ZZUzZrTzhYa0M1N24zVVFkU1gwVW53azUtV0FEb2hQay0ydks5bmJNTzJmOXJWc1U5a1RYUDNndXZZYXgwSmNXOGNQWkYyQ1NwdjV3dFZLd1V6bjFHdEZ1d3N6V1lCOEVHNmFqZ1pvUU9ZVnRpQlRobWJKajU5OVdzdk5HSGZVRDJMckw1M05SMU5BREFCMk9MQmlvcDA5SHFWeE92dVFhSkVrU1ZKdjFubxIEGgIIABrsAxIAGgAiACoAMgYIAhICaW46AEIECAEQAEoAWgByAHoAgkDIAwgAEAAYACAAKggKAWUVAAAAACoMCgVkZWJpdBV8Kd0-Kh8KBXRlcm1zFQAAAAAaBHRlcm0aC3Rlcm1pbm9sb2d5MsEBL2dvdG8_dXJsPUNBRVNoQUVCNnpzd0ZZUzZrTzhYa0M1N24zVVFkU1gwVW53azUtV0FEb2hQay0ydks5bmJNTzJmOXJWc1U5a1RYUDNndXZZYXgwSmNXOGNQWkYyQ1NwdjV3dFZLd1V6bjFHdEZ1d3N6V1lCOEVHNmFqZ1pvUU9ZVnRpQlRobWJKajU5OVdzdk5HSGZVRDJMckw1M05SMU5BREFCMk9MQmlvcDA5SHFWeE92dVFhSkVrU1ZKdjFubzopNiBNb3N0IENvbW1vbiBNb2RlcyBvZiBFbGVjdHJvbmljIFBheW1lbnRClQFVbmxpa2UgY3JlZGl0IGNhcmRzLCBob3dldmVyLCBkZWJpdCBjYXJkcyBhcmUgbGlua2VkIGRpcmVjdGx5IHRvIGEgYmFuayBhY2NvdW50LiBUaGlzIG1lYW5zIHRoYXQgdGhlcmUgYXJlIG5vIGludGVyZXN0IGZlZXMgb3Igb3RoZXIgZmluYW5jZSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsEBL2dvdG8_dXJsPUNBRVNoQUVCNnpzd0ZZUzZrTzhYa0M1N24zVVFkU1gwVW53azUtV0FEb2hQay0ydks5bmJNTzJmOXJWc1U5a1RYUDNndXZZYXgwSmNXOGNQWkYyQ1NwdjV3dFZLd1V6bjFHdEZ1d3N6V1lCOEVHNmFqZ1pvUU9ZVnRpQlRobWJKajU5OVdzdk5HSGZVRDJMckw1M05SMU5BREFCMk9MQmlvcDA5SHFWeE92dVFhSkVrU1ZKdjFubxIEGgIIABrsAxIAGgAiACoAMgYIAhICaW46AEIECAEQAEoAWgByAHoAgkDIAwgAEAAYACAAKggKAWUVAAAAACoMCgVkZWJpdBV8Kd0-Kh8KBXRlcm1zFQAAAAAaBHRlcm0aC3Rlcm1pbm9sb2d5MsEBL2dvdG8_dXJsPUNBRVNoQUVCNnpzd0ZZUzZrTzhYa0M1N24zVVFkU1gwVW53azUtV0FEb2hQay0ydks5bmJNTzJmOXJWc1U5a1RYUDNndXZZYXgwSmNXOGNQWkYyQ1NwdjV3dFZLd1V6bjFHdEZ1d3N6V1lCOEVHNmFqZ1pvUU9ZVnRpQlRobWJKajU5OVdzdk5HSGZVRDJMckw1M05SMU5BREFCMk9MQmlvcDA5SHFWeE92dVFhSkVrU1ZKdjFubzopNiBNb3N0IENvbW1vbiBNb2RlcyBvZiBFbGVjdHJvbmljIFBheW1lbnRClQFVbmxpa2UgY3JlZGl0IGNhcmRzLCBob3dldmVyLCBkZWJpdCBjYXJkcyBhcmUgbGlua2VkIGRpcmVjdGx5IHRvIGEgYmFuayBhY2NvdW50LiBUaGlzIG1lYW5zIHRoYXQgdGhlcmUgYXJlIG5vIGludGVyZXN0IGZlZXMgb3Igb3RoZXIgZmluYW5jZSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Global Legal Law Firm",
+      "read_more_link": "https://globallegallawfirm.com/6-most-common-modes-of-electronic-payment/#:~:text=Unlike%20credit%20cards%2C%20however%2C%20debit,with%20accepting%20debit%20card%20payments."
+    },
+    {
+      "position": 6,
+      "title": "Compare payment services in India - IndiaBanks.org",
+      "link": "https://indiabanks.org/compare/cards-payments/payment-services",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESeQHrOzAV1MmY2D0hc8VwYL28dVFMi1xVU02-hrY19OiT8_LMXbgLG0F8HzxS_iFK8aM5lDYGOQyONGpv2OWLgdUWz-WDXo-h_Hrc2mUR7wFVtA7ZhTz8IDVyGn-nF0hAc45kA6X7EeR55UrqEhDNL9CzCXMteEXVOOc&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECBcQAQ&uoh=1",
+      "displayed_link": "https://indiabanks.org › compare › cards-payments › pa...",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAMFBMVEVHcEwHPioHQi0LNi0FQSkEQygEQykFQSkuHFETOTMFQSkIPSsFQSgFQikGQSvHdwgKyULrAAAAEHRSTlMAR1Uazf_augMNsCuh6W_D0wUrCQAAAN1JREFUeAFjIACElKBAGcx1DYWBZBDXvcG9c2ZXwsyZk0I3gLgMXgwMPAlAFu8FkOK00LTcPWFpad7cQUCu75m7Z-_YxCxdkzrhDkQxywKeBFMD1gclYK47kHtZVPipQBacC7QnhjMOSVbagD0AwoXoZViqAOfGf60pDWJA4qalBjIgK-YAKkZwNzBwRaBYxIGw6OLTR08fuCM7kvcA2JHzrun6zbn09N1RBbAjRYH6ZEB6mYPAihmg3mcDO5Jz5syZPMDAmXh1AyzodGBBx7FREAisgVgYHLAdeOIAAN-sV4jLBn8EAAAAAElFTkSuQmCC.png",
+      "snippet": "Online e-commerce purchases up to the available balance or ₹10,000, whichever is lower · ATM cash withdrawal is not permitted.",
+      "about_this_result": {
+        "source": {
+          "description": "Online e-commerce purchases up to the available balance or ₹10,000, whichever is lower · ATM cash withdrawal is not permitted.",
+          "source_info_link": "https://indiabanks.org/compare/cards-payments/payment-services",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAMFBMVEVHcEwHPioHQi0LNi0FQSkEQygEQykFQSkuHFETOTMFQSkIPSsFQSgFQikGQSvHdwgKyULrAAAAEHRSTlMAR1Uazf_augMNsCuh6W_D0wUrCQAAAN1JREFUeAFjIACElKBAGcx1DYWBZBDXvcG9c2ZXwsyZk0I3gLgMXgwMPAlAFu8FkOK00LTcPWFpad7cQUCu75m7Z-_YxCxdkzrhDkQxywKeBFMD1gclYK47kHtZVPipQBacC7QnhjMOSVbagD0AwoXoZViqAOfGf60pDWJA4qalBjIgK-YAKkZwNzBwRaBYxIGw6OLTR08fuCM7kvcA2JHzrun6zbn09N1RBbAjRYH6ZEB6mYPAihmg3mcDO5Jz5syZPMDAmXh1AyzodGBBx7FREAisgVgYHLAdeOIAAN-sV4jLBn8EAAAAAElFTkSuQmCC.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrEBL2dvdG8_dXJsPUNBRVNlUUhyT3pBVjFNbVkyRDBoYzhWd1lMMjhkVkZNaTF4VlUwMi1oclkxOU9pVDhfTE1YYmdMRzBGOEh6eFNfaUZLOGFNNWxEWUdPUXlPTkdwdjJPV0xnZFVXei1XRFhvLWhfSHJjMm1VUjd3RlZ0QTdaaFR6OElEVnlHbi1uRjBoQWM0NWtBNlg3RWVSNTVVcnFFaEROTDlDekNYTXRlRVhWT09jEgQaAggAGtcDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQLMDCAAQABgAIAAqCAoBZRWjfKc-KgwKBWRlYml0FbNt9T4qHwoFdGVybXMVGDQzPRoEdGVybRoLdGVybWlub2xvZ3kysQEvZ290bz91cmw9Q0FFU2VRSHJPekFWMU1tWTJEMGhjOFZ3WUwyOGRWRk1pMXhWVTAyLWhyWTE5T2lUOF9MTVhiZ0xHMEY4SHp4U19pRks4YU01bERZR09ReU9OR3B2Mk9XTGdkVVd6LVdEWG8taF9IcmMybVVSN3dGVnRBN1poVHo4SURWeUduLW5GMGhBYzQ1a0E2WDdFZVI1NVVycUVoRE5MOUN6Q1hNdGVFWFZPT2M6MkNvbXBhcmUgcGF5bWVudCBzZXJ2aWNlcyBpbiBJbmRpYSAtIEluZGlhQmFua3Mub3JnQocBT25saW5lIGUtY29tbWVyY2UgcHVyY2hhc2VzIHVwIHRvIHRoZSBhdmFpbGFibGUgYmFsYW5jZSBvciDigrkxMCwwMDAsIHdoaWNoZXZlciBpcyBsb3dlciAmbWlkZG90OyBBVE0gY2FzaCB3aXRoZHJhd2FsIGlzIG5vdCBwZXJtaXR0ZWQuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrEBL2dvdG8_dXJsPUNBRVNlUUhyT3pBVjFNbVkyRDBoYzhWd1lMMjhkVkZNaTF4VlUwMi1oclkxOU9pVDhfTE1YYmdMRzBGOEh6eFNfaUZLOGFNNWxEWUdPUXlPTkdwdjJPV0xnZFVXei1XRFhvLWhfSHJjMm1VUjd3RlZ0QTdaaFR6OElEVnlHbi1uRjBoQWM0NWtBNlg3RWVSNTVVcnFFaEROTDlDekNYTXRlRVhWT09jEgQaAggAGtcDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQLMDCAAQABgAIAAqCAoBZRWjfKc-KgwKBWRlYml0FbNt9T4qHwoFdGVybXMVGDQzPRoEdGVybRoLdGVybWlub2xvZ3kysQEvZ290bz91cmw9Q0FFU2VRSHJPekFWMU1tWTJEMGhjOFZ3WUwyOGRWRk1pMXhWVTAyLWhyWTE5T2lUOF9MTVhiZ0xHMEY4SHp4U19pRks4YU01bERZR09ReU9OR3B2Mk9XTGdkVVd6LVdEWG8taF9IcmMybVVSN3dGVnRBN1poVHo4SURWeUduLW5GMGhBYzQ1a0E2WDdFZVI1NVVycUVoRE5MOUN6Q1hNdGVFWFZPT2M6MkNvbXBhcmUgcGF5bWVudCBzZXJ2aWNlcyBpbiBJbmRpYSAtIEluZGlhQmFua3Mub3JnQocBT25saW5lIGUtY29tbWVyY2UgcHVyY2hhc2VzIHVwIHRvIHRoZSBhdmFpbGFibGUgYmFsYW5jZSBvciDigrkxMCwwMDAsIHdoaWNoZXZlciBpcyBsb3dlciAmbWlkZG90OyBBVE0gY2FzaCB3aXRoZHJhd2FsIGlzIG5vdCBwZXJtaXR0ZWQuIgIQAUgAWABoAA",
+      "source": "indiabanks.org",
+      "read_more_link": "https://indiabanks.org/compare/cards-payments/payment-services#:~:text=Online%20e%2Dcommerce%20purchases%20up%20to,or%20%E2%82%B910%2C000%2C%20whichever%20is%20lower&text=See%20more"
+    },
+    {
+      "position": 7,
+      "title": "Virtual Debit Cards: What Are They & Do You Need One?",
+      "link": "https://momswhosave.com/virtual-debit-cards-what-are-they-do-you-need-one/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEShQEB6zswFfjosr4T8D-e7dhqnO4K4NM-x9Y3tVVFNOxGjDmka2rI8C89rs0t8VX9SDJaWBI2VZBb392C7UpoxjVA-yNLIrzJuRb4D83Jf8ipF513hsHly-BKxUTMriaNnEUkfgDtx0WiWu1vvgLzuyXjtkhaHJTRvDhkmOGGRenjluSUvhNd&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECBoQAQ&uoh=1",
+      "displayed_link": "https://momswhosave.com › virtual-debit-cards-what-ar...",
+      "favicon": "https://serpapi.com/images/i/UklGRsgAAABXRUJQVlA4ILwAAADQBACdASocABwAPtE-tFooIigoFAEAGglpAARArxWkJ4BlJhs_jp5PkzzuMu_0AAD-9gnTHXugvW5Lv28sJ0GCJc6bWctkcBJwvysHnRJI80y79KeN_oJDcF8jDiOupM2iYa0MVySWy9nhvT1Oc1z-lz91ffSO8X3YVDJ5ZpLQ3_vzWhtyqUuia-Onwqg3hcnoy8X5VOuk8Eh-u6evMtDIHiwgaazi6CjFYgFoLNL9TnEvO9w897M3lJwAAA.webp",
+      "date": "14 Jun 2023",
+      "snippet": "A virtual debit card works just like a regular debit card but with one big difference: it only exists online. That's right, no physical card.",
+      "about_this_result": {
+        "source": {
+          "description": "A virtual debit card works just like a regular debit card but with one big difference: it only exists online. That's right, no physical card.",
+          "source_info_link": "https://momswhosave.com/virtual-debit-cards-what-are-they-do-you-need-one/",
+          "icon": "https://serpapi.com/images/i/UklGRsgAAABXRUJQVlA4ILwAAADQBACdASocABwAPtE-tFooIigoFAEAGglpAARArxWkJ4BlJhs_jp5PkzzuMu_0AAD-9gnTHXugvW5Lv28sJ0GCJc6bWctkcBJwvysHnRJI80y79KeN_oJDcF8jDiOupM2iYa0MVySWy9nhvT1Oc1z-lz91ffSO8X3YVDJ5ZpLQ3_vzWhtyqUuia-Onwqg3hcnoy8X5VOuk8Eh-u6evMtDIHiwgaazi6CjFYgFoLNL9TnEvO9w897M3lJwAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsIBL2dvdG8_dXJsPUNBRVNoUUVCNnpzd0Zmam9zcjRUOEQtZTdkaHFuTzRLNE5NLXg5WTN0VlZGTk94R2pEbWthMnJJOEM4OXJzMHQ4Vlg5U0RKYVdCSTJWWkJiMzkyQzdVcG94alZBLXlOTElyekp1UmI0RDgzSmY4aXBGNTEzaHNIbHktQkt4VVRNcmlhTm5FVWtmZ0R0eDBXaVd1MXZ2Z0x6dXlYanRraGFISlRSdkRoa21PR0dSZW5qbHVTVXZoTmQSBBoCCAAa-QMSABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA1QMIABAAGAAgACoICgFlFQAAAAAqDAoFZGViaXQVZLsdQCofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTLCAS9nb3RvP3VybD1DQUVTaFFFQjZ6c3dGZmpvc3I0VDhELWU3ZGhxbk80SzROTS14OVkzdFZWRk5PeEdqRG1rYTJySThDODlyczB0OFZYOVNESmFXQkkyVlpCYjM5MkM3VXBveGpWQS15TkxJcnpKdVJiNEQ4M0pmOGlwRjUxM2hzSGx5LUJLeFVUTXJpYU5uRVVrZmdEdHgwV2lXdTF2dmdMenV5WGp0a2hhSEpUUnZEaGttT0dHUmVuamx1U1V2aE5kOjlWaXJ0dWFsIERlYml0IENhcmRzOiBXaGF0IEFyZSBUaGV5ICZhbXA7IERvIFlvdSBOZWVkIE9uZT9CkQFBIHZpcnR1YWwgZGViaXQgY2FyZCB3b3JrcyBqdXN0IGxpa2UgYSByZWd1bGFyIGRlYml0IGNhcmQgYnV0IHdpdGggb25lIGJpZyBkaWZmZXJlbmNlOiBpdCBvbmx5IGV4aXN0cyBvbmxpbmUuIFRoYXQmIzM5O3MgcmlnaHQsIG5vIHBoeXNpY2FsIGNhcmQuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsIBL2dvdG8_dXJsPUNBRVNoUUVCNnpzd0Zmam9zcjRUOEQtZTdkaHFuTzRLNE5NLXg5WTN0VlZGTk94R2pEbWthMnJJOEM4OXJzMHQ4Vlg5U0RKYVdCSTJWWkJiMzkyQzdVcG94alZBLXlOTElyekp1UmI0RDgzSmY4aXBGNTEzaHNIbHktQkt4VVRNcmlhTm5FVWtmZ0R0eDBXaVd1MXZ2Z0x6dXlYanRraGFISlRSdkRoa21PR0dSZW5qbHVTVXZoTmQSBBoCCAAa-QMSABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA1QMIABAAGAAgACoICgFlFQAAAAAqDAoFZGViaXQVZLsdQCofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTLCAS9nb3RvP3VybD1DQUVTaFFFQjZ6c3dGZmpvc3I0VDhELWU3ZGhxbk80SzROTS14OVkzdFZWRk5PeEdqRG1rYTJySThDODlyczB0OFZYOVNESmFXQkkyVlpCYjM5MkM3VXBveGpWQS15TkxJcnpKdVJiNEQ4M0pmOGlwRjUxM2hzSGx5LUJLeFVUTXJpYU5uRVVrZmdEdHgwV2lXdTF2dmdMenV5WGp0a2hhSEpUUnZEaGttT0dHUmVuamx1U1V2aE5kOjlWaXJ0dWFsIERlYml0IENhcmRzOiBXaGF0IEFyZSBUaGV5ICZhbXA7IERvIFlvdSBOZWVkIE9uZT9CkQFBIHZpcnR1YWwgZGViaXQgY2FyZCB3b3JrcyBqdXN0IGxpa2UgYSByZWd1bGFyIGRlYml0IGNhcmQgYnV0IHdpdGggb25lIGJpZyBkaWZmZXJlbmNlOiBpdCBvbmx5IGV4aXN0cyBvbmxpbmUuIFRoYXQmIzM5O3MgcmlnaHQsIG5vIHBoeXNpY2FsIGNhcmQuIgIQAUgAWABoAA",
+      "source": "MomsWhoSave.com",
+      "read_more_link": "https://momswhosave.com/virtual-debit-cards-what-are-they-do-you-need-one/#:~:text=So%2C%20what%20is%20a%20virtual,talk%20about%20how%20it%20works."
+    },
+    {
+      "position": 8,
+      "title": "What Is A Virtual Debit Card",
+      "link": "https://www.instagram.com/popular/what-is-a-virtual-debit-card/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESegHrOzAVbG5eNbx4BiCLtzZD-8cipRU4leW0MjN5F-ArslerbG9I4Y_e4Lze7OVFLJs9CTOXT95gpbij2BYHIXdvDLZTGNLfivxfvsESlnOzs5p4_I5Cb6x3IcRM0y2_NtKT0L8lyIHxqFwltombJA7647LSNi5VrvJY&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECBMQAQ&uoh=1",
+      "displayed_link": "https://www.instagram.com › popular › what-is-a-virtua...",
+      "favicon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp",
+      "snippet": "Payment Bank भारत में एक विशेष प्रकार का बैंक है जिसे छोटे बचत खाते, डिजिटल भुगतान और वित्तीय ...",
+      "about_this_result": {
+        "source": {
+          "description": "Payment Bank भारत में एक विशेष प्रकार का बैंक है जिसे छोटे बचत खाते, डिजिटल भुगतान और वित्तीय ...",
+          "source_info_link": "https://www.instagram.com/popular/what-is-a-virtual-debit-card/",
+          "icon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVmJHNWVOYng0QmlDTHR6WkQtOGNpcFJVNGxlVzBNak41Ri1BcnNsZXJiRzlJNFlfZTRMemU3T1ZGTEpzOUNUT1hUOTVncGJpajJCWUhJWGR2RExaVEdOTGZpdnhmdnNFU2xuT3pzNXA0X0k1Q2I2eDNJY1JNMHkyX050S1QwTDhseUlIeHFGd2x0b21iSkE3NjQ3TFNOaTVWcnZKWRIEGgIIABqtBBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkCJBAgAEAAYACAAKggKAWUVAAAAACoMCgVkZWJpdBVNBSBAKh8KBXRlcm1zFQAAAAAaBHRlcm0aC3Rlcm1pbm9sb2d5MrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVmJHNWVOYng0QmlDTHR6WkQtOGNpcFJVNGxlVzBNak41Ri1BcnNsZXJiRzlJNFlfZTRMemU3T1ZGTEpzOUNUT1hUOTVncGJpajJCWUhJWGR2RExaVEdOTGZpdnhmdnNFU2xuT3pzNXA0X0k1Q2I2eDNJY1JNMHkyX050S1QwTDhseUlIeHFGd2x0b21iSkE3NjQ3TFNOaTVWcnZKWTooV2hhdCBJcyBBIFZpcnR1YWwgRGViaXQgQ2FyZCAtIEluc3RhZ3JhbULmAVBheW1lbnQgQmFuayDgpK3gpL7gpLDgpKQg4KSu4KWH4KSCIOCkj-CklSDgpLXgpL_gpLbgpYfgpLcg4KSq4KWN4KSw4KSV4KS-4KSwIOCkleCkviDgpKzgpYjgpILgpJUg4KS54KWIIOCknOCkv-CkuOClhyDgpJvgpYvgpJ_gpYcg4KSs4KSa4KSkIOCkluCkvuCkpOClhywg4KSh4KS_4KSc4KS_4KSf4KSyIOCkreClgeCkl-CkpOCkvuCkqCDgpJTgpLAg4KS14KS_4KSk4KWN4KSk4KWA4KSvJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVmJHNWVOYng0QmlDTHR6WkQtOGNpcFJVNGxlVzBNak41Ri1BcnNsZXJiRzlJNFlfZTRMemU3T1ZGTEpzOUNUT1hUOTVncGJpajJCWUhJWGR2RExaVEdOTGZpdnhmdnNFU2xuT3pzNXA0X0k1Q2I2eDNJY1JNMHkyX050S1QwTDhseUlIeHFGd2x0b21iSkE3NjQ3TFNOaTVWcnZKWRIEGgIIABqtBBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkCJBAgAEAAYACAAKggKAWUVAAAAACoMCgVkZWJpdBVNBSBAKh8KBXRlcm1zFQAAAAAaBHRlcm0aC3Rlcm1pbm9sb2d5MrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVmJHNWVOYng0QmlDTHR6WkQtOGNpcFJVNGxlVzBNak41Ri1BcnNsZXJiRzlJNFlfZTRMemU3T1ZGTEpzOUNUT1hUOTVncGJpajJCWUhJWGR2RExaVEdOTGZpdnhmdnNFU2xuT3pzNXA0X0k1Q2I2eDNJY1JNMHkyX050S1QwTDhseUlIeHFGd2x0b21iSkE3NjQ3TFNOaTVWcnZKWTooV2hhdCBJcyBBIFZpcnR1YWwgRGViaXQgQ2FyZCAtIEluc3RhZ3JhbULmAVBheW1lbnQgQmFuayDgpK3gpL7gpLDgpKQg4KSu4KWH4KSCIOCkj-CklSDgpLXgpL_gpLbgpYfgpLcg4KSq4KWN4KSw4KSV4KS-4KSwIOCkleCkviDgpKzgpYjgpILgpJUg4KS54KWIIOCknOCkv-CkuOClhyDgpJvgpYvgpJ_gpYcg4KSs4KSa4KSkIOCkluCkvuCkpOClhywg4KSh4KS_4KSc4KS_4KSf4KSyIOCkreClgeCkl-CkpOCkvuCkqCDgpJTgpLAg4KS14KS_4KSk4KWN4KSk4KWA4KSvJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "Instagram"
+    },
+    {
+      "position": 9,
+      "title": "What Is an Electronic Debit Card - Calandraresources",
+      "link": "https://calandraresources.com/source/what-is-an-electronic-debit-card",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESgAEB6zswFW2bBiyQdn84V3Rn2tjwHx5BKlc_mKh0f2YAIjwgoYPELKEBQ49ovkOCC58LSGKAUbz0yFKqijtFOIEC19U1xwt24mEG6owWozLkeG9K9-D-31qIq1-xkNyPFFSTWIU8CCamKyUL1OZWqtTVP8_KljwAczIiUJVSpEpZbg&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECBsQAQ&uoh=1",
+      "displayed_link": "https://calandraresources.com › source › what-is-an-elec...",
+      "favicon": "https://serpapi.com/images/i/UklGRjgAAABXRUJQVlA4ICwAAACwAgCdASocABwAPtE-tFooIigoFAEAGglnAAA-EuAA_u_eV1oglekgUAAAAA.webp",
+      "date": "12 Apr 2026",
+      "snippet": "While closely related, the term “electronic debit card” often refers to card systems designed for enhanced digital interaction—emphasizing ...",
+      "snippet_highlighted_words": [
+        "term"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "While closely related, the term “electronic debit card” often refers to card systems designed for enhanced digital interaction—emphasizing ...",
+          "source_info_link": "https://calandraresources.com/source/what-is-an-electronic-debit-card",
+          "icon": "https://serpapi.com/images/i/UklGRjgAAABXRUJQVlA4ICwAAACwAgCdASocABwAPtE-tFooIigoFAEAGglnAAA-EuAA_u_eV1oglekgUAAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrwBL2dvdG8_dXJsPUNBRVNnQUVCNnpzd0ZXMmJCaXlRZG44NFYzUm4ydGp3SHg1QktsY19tS2gwZjJZQUlqd2dvWVBFTEtFQlE0OW92a09DQzU4TFNHS0FVYnoweUZLcWlqdEZPSUVDMTlVMXh3dDI0bUVHNm93V296TGtlRzlLOS1ELTMxcUlxMS14a055UEZGU1RXSVU4Q0NhbUt5VUwxT1pXcXRUVlA4X0tsandBY3pJaVVKVlNwRXBaYmcSBBoCCAAa_QMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA2QMIABAAGAAgACoICgFlFQAAAAAqDAoFZGViaXQV8P9HQCofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTK8AS9nb3RvP3VybD1DQUVTZ0FFQjZ6c3dGVzJiQml5UWRuODRWM1JuMnRqd0h4NUJLbGNfbUtoMGYyWUFJandnb1lQRUxLRUJRNDlvdmtPQ0M1OExTR0tBVWJ6MHlGS3FpanRGT0lFQzE5VTF4d3QyNG1FRzZvd1dvekxrZUc5SzktRC0zMXFJcTEteGtOeVBGRlNUV0lVOENDYW1LeVVMMU9aV3F0VFZQOF9LbGp3QWN6SWlVSlZTcEVwWmJnOjRXaGF0IElzIGFuIEVsZWN0cm9uaWMgRGViaXQgQ2FyZCAtIENhbGFuZHJhcmVzb3VyY2VzQqABV2hpbGUgY2xvc2VseSByZWxhdGVkLCB0aGUgPGI-dGVybTwvYj4g4oCcZWxlY3Ryb25pYyBkZWJpdCBjYXJk4oCdIG9mdGVuIHJlZmVycyB0byBjYXJkIHN5c3RlbXMgZGVzaWduZWQgZm9yIGVuaGFuY2VkIGRpZ2l0YWwgaW50ZXJhY3Rpb27igJRlbXBoYXNpemluZyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrwBL2dvdG8_dXJsPUNBRVNnQUVCNnpzd0ZXMmJCaXlRZG44NFYzUm4ydGp3SHg1QktsY19tS2gwZjJZQUlqd2dvWVBFTEtFQlE0OW92a09DQzU4TFNHS0FVYnoweUZLcWlqdEZPSUVDMTlVMXh3dDI0bUVHNm93V296TGtlRzlLOS1ELTMxcUlxMS14a055UEZGU1RXSVU4Q0NhbUt5VUwxT1pXcXRUVlA4X0tsandBY3pJaVVKVlNwRXBaYmcSBBoCCAAa_QMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA2QMIABAAGAAgACoICgFlFQAAAAAqDAoFZGViaXQV8P9HQCofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTK8AS9nb3RvP3VybD1DQUVTZ0FFQjZ6c3dGVzJiQml5UWRuODRWM1JuMnRqd0h4NUJLbGNfbUtoMGYyWUFJandnb1lQRUxLRUJRNDlvdmtPQ0M1OExTR0tBVWJ6MHlGS3FpanRGT0lFQzE5VTF4d3QyNG1FRzZvd1dvekxrZUc5SzktRC0zMXFJcTEteGtOeVBGRlNUV0lVOENDYW1LeVVMMU9aV3F0VFZQOF9LbGp3QWN6SWlVSlZTcEVwWmJnOjRXaGF0IElzIGFuIEVsZWN0cm9uaWMgRGViaXQgQ2FyZCAtIENhbGFuZHJhcmVzb3VyY2VzQqABV2hpbGUgY2xvc2VseSByZWxhdGVkLCB0aGUgPGI-dGVybTwvYj4g4oCcZWxlY3Ryb25pYyBkZWJpdCBjYXJk4oCdIG9mdGVuIHJlZmVycyB0byBjYXJkIHN5c3RlbXMgZGVzaWduZWQgZm9yIGVuaGFuY2VkIGRpZ2l0YWwgaW50ZXJhY3Rpb27igJRlbXBoYXNpemluZyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "calandraresources.com",
+      "read_more_link": "https://calandraresources.com/source/what-is-an-electronic-debit-card#:~:text=While%20closely%20related%2C%20the%20term,specifically%20for%20today's%20connected%20environment."
+    },
+    {
+      "position": 10,
+      "title": "https://support.remote.com/hc/en-us/articles/36751...",
+      "link": "https://support.remote.com/hc/en-us/articles/36751758731789",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESdgHrOzAV_MqzWhWesc_dK0aRqvBrqQMk62dpIpbKjkV0dqpWISnAHMjzQ9KwuU1Gbq5QRjKo43FcQhWQJZAE6FMxh764EvtBRAQIDf1AzsDsp3ODIRaSLJUG2nRbdNOtfXP0I_ytevIGjkzZaXcfK-fd3BL8zPw&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQFnoECBAQAQ&uoh=1",
+      "displayed_link": "https://support.remote.com › en-us › articles",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd-UAAAAyUlEQVR4AWJwL_ChKx61EAOHMwDarWMbAEEgCsNLsINbsAJLsIVjMAIjOIgtLZOcFFdQPI7kQags_krjF1AB8a2oeR6cQ7klgzINAujCCOyiQcWcDcDcClgIsFKgfhwy6NVkkGfAZL8n8_0mBkQjuMF9N5qBXWAA94XTIPo_n72gMZ1a3ArCa136jK2gGMWTYDIwHiRGtgxWYnQ8aGxVj-6TgQGLAc62rMKAufV2lZbHPzyz0hDpFJ4Du7W08lPKw647YIX_XHqsD0jPSD6YIHk4AAAAAElFTkSuQmCC.png",
+      "snippet": "No information is available for this page.",
+      "about_this_result": {
+        "source": {
+          "source_info_link": "https://support.remote.com/hc/en-us/articles/36751758731789",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd-UAAAAyUlEQVR4AWJwL_ChKx61EAOHMwDarWMbAEEgCsNLsINbsAJLsIVjMAIjOIgtLZOcFFdQPI7kQags_krjF1AB8a2oeR6cQ7klgzINAujCCOyiQcWcDcDcClgIsFKgfhwy6NVkkGfAZL8n8_0mBkQjuMF9N5qBXWAA94XTIPo_n72gMZ1a3ArCa136jK2gGMWTYDIwHiRGtgxWYnQ8aGxVj-6TgQGLAc62rMKAufV2lZbHPzyz0hDpFJ4Du7W08lPKw647YIX_XHqsD0jPSD6YIHk4AAAAAElFTkSuQmCC.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cq0BL2dvdG8_dXJsPUNBRVNkZ0hyT3pBVl9NcXpXaFdlc2NfZEswYVJxdkJycVFNazYyZHBJcGJLamtWMGRxcFdJU25BSE1qelE5S3d1VTFHYnE1UVJqS280M0ZjUWhXUUpaQUU2Rk14aDc2NEV2dEJSQVFJRGYxQXpzRHNwM09ESVJhU0xKVUcyblJiZE5PdGZYUDBJX3l0ZXZJR2prelphWGNmSy1mZDNCTDh6UHcSBBoCCAAalwISABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA8wEIABAAGAAgACoICgFlFQAAAAAqDAoFZGViaXQVAAAAACofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTKtAS9nb3RvP3VybD1DQUVTZGdIck96QVZfTXF6V2hXZXNjX2RLMGFScXZCcnFRTWs2MmRwSXBiS2prVjBkcXBXSVNuQUhNanpROUt3dVUxR2JxNVFSaktvNDNGY1FoV1FKWkFFNkZNeGg3NjRFdnRCUkFRSURmMUF6c0RzcDNPRElSYVNMSlVHMm5SYmROT3RmWFAwSV95dGV2SUdqa3paYVhjZkstZmQzQkw4elB3OgAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cq0BL2dvdG8_dXJsPUNBRVNkZ0hyT3pBVl9NcXpXaFdlc2NfZEswYVJxdkJycVFNazYyZHBJcGJLamtWMGRxcFdJU25BSE1qelE5S3d1VTFHYnE1UVJqS280M0ZjUWhXUUpaQUU2Rk14aDc2NEV2dEJSQVFJRGYxQXpzRHNwM09ESVJhU0xKVUcyblJiZE5PdGZYUDBJX3l0ZXZJR2prelphWGNmSy1mZDNCTDh6UHcSBBoCCAAalwISABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA8wEIABAAGAAgACoICgFlFQAAAAAqDAoFZGViaXQVAAAAACofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTKtAS9nb3RvP3VybD1DQUVTZGdIck96QVZfTXF6V2hXZXNjX2RLMGFScXZCcnFRTWs2MmRwSXBiS2prVjBkcXBXSVNuQUhNanpROUt3dVUxR2JxNVFSaktvNDNGY1FoV1FKWkFFNkZNeGg3NjRFdnRCUkFRSURmMUF6c0RzcDNPRElSYVNMSlVHMm5SYmROT3RmWFAwSV95dGV2SUdqa3paYVhjZkstZmQzQkw4elB3OgAiAhABSABYAGgA",
+      "source": "remote.com"
+    }
+  ],
+  "related_searches": [
+    {
+      "block_position": 1,
+      "query": "E debit terms sbi",
+      "link": "https://www.google.co.in/search?sca_esv=8d1b837b7db4d113&hl=en&gl=in&sxsrf=APpeQntKKpRHi6r48_tXI06xyciyHRD_Fg:1791599702517&q=E+debit+terms+sbi&sa=X&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQ1QJ6BAgJEAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=E+debit+terms+sbi"
+    },
+    {
+      "block_position": 1,
+      "query": "E debit terms hdfc",
+      "link": "https://www.google.co.in/search?sca_esv=8d1b837b7db4d113&hl=en&gl=in&sxsrf=APpeQntKKpRHi6r48_tXI06xyciyHRD_Fg:1791599702517&q=E+debit+terms+hdfc&sa=X&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQ1QJ6BAgLEAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=E+debit+terms+hdfc"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.co.in/search?q=site:axis.bank.in+%22e-debit%22+terms+filetype:pdf&sca_esv=8d1b837b7db4d113&hl=en&gl=in&sxsrf=APpeQntKKpRHi6r48_tXI06xyciyHRD_Fg:1791599702517&ei=VqTJauOVH9TT5NoPnZaUwQ8&start=10&sa=N&sstk=AS6-VmJKIsGUAbnWkbHu9eikrV6BfeIZ2fE5dBuWYBA0Az6alORMZj_rodgJ243rkUAAL1C8c8zddtHRZZQYPolnjyz73VRv20Eb4w&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQ8NMDegQIQxAM",
+    "other_pages": {
+      "2": "https://www.google.co.in/search?q=site:axis.bank.in+%22e-debit%22+terms+filetype:pdf&sca_esv=8d1b837b7db4d113&hl=en&gl=in&sxsrf=APpeQntKKpRHi6r48_tXI06xyciyHRD_Fg:1791599702517&ei=VqTJauOVH9TT5NoPnZaUwQ8&start=10&sa=N&sstk=AS6-VmJKIsGUAbnWkbHu9eikrV6BfeIZ2fE5dBuWYBA0Az6alORMZj_rodgJ243rkUAAL1C8c8zddtHRZZQYPolnjyz73VRv20Eb4w&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQ8tMDegQIQxAE",
+      "3": "https://www.google.co.in/search?q=site:axis.bank.in+%22e-debit%22+terms+filetype:pdf&sca_esv=8d1b837b7db4d113&hl=en&gl=in&sxsrf=APpeQntKKpRHi6r48_tXI06xyciyHRD_Fg:1791599702517&ei=VqTJauOVH9TT5NoPnZaUwQ8&start=20&sa=N&sstk=AS6-VmJKIsGUAbnWkbHu9eikrV6BfeIZ2fE5dBuWYBA0Az6alORMZj_rodgJ243rkUAAL1C8c8zddtHRZZQYPolnjyz73VRv20Eb4w&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQ8tMDegQIQxAG",
+      "4": "https://www.google.co.in/search?q=site:axis.bank.in+%22e-debit%22+terms+filetype:pdf&sca_esv=8d1b837b7db4d113&hl=en&gl=in&sxsrf=APpeQntKKpRHi6r48_tXI06xyciyHRD_Fg:1791599702517&ei=VqTJauOVH9TT5NoPnZaUwQ8&start=30&sa=N&sstk=AS6-VmJKIsGUAbnWkbHu9eikrV6BfeIZ2fE5dBuWYBA0Az6alORMZj_rodgJ243rkUAAL1C8c8zddtHRZZQYPolnjyz73VRv20Eb4w&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQ8tMDegQIQxAI",
+      "5": "https://www.google.co.in/search?q=site:axis.bank.in+%22e-debit%22+terms+filetype:pdf&sca_esv=8d1b837b7db4d113&hl=en&gl=in&sxsrf=APpeQntKKpRHi6r48_tXI06xyciyHRD_Fg:1791599702517&ei=VqTJauOVH9TT5NoPnZaUwQ8&start=40&sa=N&sstk=AS6-VmJKIsGUAbnWkbHu9eikrV6BfeIZ2fE5dBuWYBA0Az6alORMZj_rodgJ243rkUAAL1C8c8zddtHRZZQYPolnjyz73VRv20Eb4w&ved=2ahUKEwjjmOT-tK6XAxXUKVkFHR0LJfgQ8tMDegQIQxAK"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aaxis.bank.in+%22e-debit%22+terms+filetype%3Apdf&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aaxis.bank.in+%22e-debit%22+terms+filetype%3Apdf&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aaxis.bank.in+%22e-debit%22+terms+filetype%3Apdf&start=10",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aaxis.bank.in+%22e-debit%22+terms+filetype%3Apdf&start=20",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aaxis.bank.in+%22e-debit%22+terms+filetype%3Apdf&start=30",
+      "5": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aaxis.bank.in+%22e-debit%22+terms+filetype%3Apdf&start=40"
+    }
+  }
+}

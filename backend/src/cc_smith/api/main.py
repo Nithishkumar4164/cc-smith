@@ -2,6 +2,7 @@
 X-User-Id header returned from POST /users (JWT auth comes in M1)."""
 
 import calendar
+from contextlib import asynccontextmanager
 from typing import Literal
 
 from fastapi import Depends, FastAPI, Header, HTTPException
@@ -11,6 +12,9 @@ from sqlalchemy import func, select
 
 import cc_smith.notify.alerts  # noqa: F401  registers outbox consumers
 from cc_smith import merchants
+from cc_smith.api.discovery import router as discovery_router
+from cc_smith.capture.router import router as capture_router
+from cc_smith.config import settings
 from cc_smith.db import card as card_t
 from cc_smith.db import credit_ledger, engine, knowledge_event, launch_candidate, owner_alert
 from cc_smith.knowledge import offers, store
@@ -31,7 +35,23 @@ from cc_smith.rewards.finder import (
 )
 from cc_smith.users import service as users
 
-app = FastAPI(title="cc-smith", version="0.1.0")
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    sched = None
+    if settings.scheduler_enabled:
+        from cc_smith.signals.scheduler import build_scheduler
+
+        sched = build_scheduler()
+        sched.start()
+    yield
+    if sched is not None:
+        sched.shutdown(wait=False)
+
+
+app = FastAPI(title="cc-smith", version="0.1.0", lifespan=lifespan)
+app.include_router(capture_router)  # statements, credit reports, phone notifications, Gmail
+app.include_router(discovery_router)  # demo bureau fetch, budget that fills and adapts itself
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 
@@ -133,6 +153,8 @@ class MeView(BaseModel):
     profile: dict
     holdings: list[dict]
     pools: list[dict] = []
+    # Condition answers: key -> true/false; absent = not answered (see /meta conditions).
+    answers: dict[str, bool] = {}
     spends: dict[str, int]
     # Per category: the monthly total as the user means it (category amount, or its merchants' sum if larger).
     category_totals: dict[str, int] = {}
@@ -151,8 +173,9 @@ class HoldingIn(BaseModel):
     last4: str | None = Field(None, pattern=r"^\d{4}$")
     statement_day: int | None = Field(None, ge=1, le=31)
     renewal_month: int | None = Field(None, ge=1, le=12)
-    fee_status: Literal["standard", "ltf", "fyf"] = "standard"
+    fee_status: Literal["standard", "ltf", "fyf", "custom"] = "standard"
     fyf_until: str | None = Field(None, pattern=r"^\d{4}-\d{2}-\d{2}$")
+    annual_fee_paise: int | None = Field(None, ge=0)  # with fee_status "custom", GST included
     credit_limit_paise: int | None = Field(None, ge=0)
     pool_id: str | None = None
     balance_paise: int | None = Field(None, ge=0)
@@ -181,7 +204,7 @@ class CreditView(BaseModel):
 
 class NoticeView(BaseModel):
     id: str
-    kind: Literal["fee", "cap", "milestone", "credit", "fee_offer", "offer", "card_change"]
+    kind: Literal["fee", "cap", "milestone", "credit", "fee_offer", "offer", "card_change", "launch"]
     severity: Literal["act", "watch", "info"]
     title: str
     reason: str
@@ -189,8 +212,12 @@ class NoticeView(BaseModel):
     card_id: str | None
     rupees_paise: int | None
     due: str | None
-    tier: Literal["fact", "speculation"]
+    # guidance = general practice, not a card term; it has no source to show.
+    tier: Literal["fact", "speculation", "guidance"]
     refs: list[dict]
+    # Offers with conditions: yes | no (collapse as "Not for you") | unknown (ask inline).
+    eligibility: Literal["yes", "no", "unknown"] | None = None
+    requires: list[dict] = []
 
 
 class CardLineView(BaseModel):
@@ -275,6 +302,8 @@ class PayOption(BaseModel):
     # reward_paise + later_paise. Pay ranks usable cards by month_paise. Null when unusable.
     later_paise: int | None = None
     month_paise: int | None = None
+    # What this card would earn if an unanswered membership were yes ("₹150 with Amazon Prime").
+    if_answered: list[dict] = []
 
 
 class OfferView(BaseModel):
@@ -286,8 +315,11 @@ class OfferView(BaseModel):
     tier: Literal["fact", "speculation"]
     valid_to: str | None
     min_txn_paise: int | None
-    # Rough value of the offer on this amount; not used in the card ranking.
+    # Rough value of the offer on this amount; not used in the card ranking. None for
+    # "up to N%" offers, whose real value is unknown (see up_to_paise).
     est_saving_paise: int | None
+    # For "up to N%" offers: the most it can give on this amount. Never added to rewards.
+    up_to_paise: int | None = None
     url: str
     quote: str
 
@@ -341,10 +373,20 @@ def _memberships(prof: CardProfile) -> list[dict]:
     return [{"key": k, **known.get(k, {"name": k})} for k in keys]
 
 
-def _fee_offer_views(rows) -> list[dict]:
-    return [{"id": o.id, "kind": o.kind, "title": o.title, "tier": o.tier, "valid_to": o.valid_to,
-             "spend_condition_paise": o.spend_condition_paise, "spend_window_days": o.spend_window_days,
-             "url": o.refs[0]["url"], "quote": o.refs[0]["quote"]} for o in rows]
+def _fee_offer_views(rows, answers: dict[str, bool] | None = None) -> list[dict]:
+    conds, need = merchants.conditions(), merchants.offer_conditions()
+    out = []
+    for o in rows:
+        req = need.get(o.id, [])
+        out.append({
+            "id": o.id, "kind": o.kind, "title": o.title, "tier": o.tier, "valid_to": o.valid_to,
+            "spend_condition_paise": o.spend_condition_paise, "spend_window_days": o.spend_window_days,
+            "url": o.refs[0]["url"], "quote": o.refs[0]["quote"],
+            # Conditions the offer needs, with the user's eligibility when known.
+            "requires": [{"key": k, "question": conds[k]["question"], "why": conds[k]["why"]} for k in req if k in conds],
+            "eligibility": merchants.eligibility(req, answers or {}) if req else "yes",
+        })
+    return out
 
 
 def _summary(cid: str, prof: CardProfile, meta: dict, status: str, spec_count: int, fee_offers: list | None = None) -> CardSummary:
@@ -398,7 +440,8 @@ def meta():
     ms = [{k: m[k] for k in ("key", "name", "category", "channel")} for m in reg["merchants"]]
     groups = [{"category": k, "label": label, "merchants": [m for m in ms if m["category"] == k]} for k, label in reg["categories"].items()]
     return {"categories": reg["categories"], "merchants": ms, "groups": groups,
-            "memberships": [{"key": k, **v} for k, v in merchants.memberships().items()]}
+            "memberships": [{"key": k, **v} for k, v in merchants.memberships().items()],
+            "conditions": [{"key": k, **v} for k, v in merchants.conditions().items()]}
 
 
 @app.get("/cards", response_model=list[CardSummary])
@@ -460,6 +503,7 @@ def me(uid: str = Depends(user_id), c=Depends(conn)):
     sp = users.spends(c, uid)
     holds = [{**h, "balance_as_of": h["balance_as_of"].isoformat() if h.get("balance_as_of") else None} for h in users.holdings(c, uid)]
     return MeView(user_id=uid, profile=users.get_profile(c, uid), holdings=holds, pools=users.pools(c, uid), spends=sp,
+                  answers=users.answers(c, uid),
                   category_totals=users.category_totals(sp))
 
 
@@ -483,6 +527,13 @@ def bill_paid(card_id: str, body: BillPaidIn, uid: str = Depends(user_id), c=Dep
     return get_credit(uid, c)
 
 
+@app.get("/me/market/offers", response_model=list[NoticeView])
+def market_offers(uid: str = Depends(user_id), c=Depends(conn)):
+    """Fee offers (LTF, FYF, joining waivers) on cards you don't hold that suit your spends."""
+    prof, _, lines = _user_inputs(c, uid)
+    return board.fee_offer_items(c, uid, catalogue(c), users.holdings(c, uid), prof, lines)
+
+
 @app.get("/me/notices", response_model=list[NoticeView])
 def notices(uid: str = Depends(user_id), c=Depends(conn)):
     prof, _, lines = _user_inputs(c, uid)
@@ -491,7 +542,23 @@ def notices(uid: str = Depends(user_id), c=Depends(conn)):
 
 @app.put("/me/profile", response_model=MeView)
 def put_profile(body: ProfileIn, uid: str = Depends(user_id), c=Depends(conn)):
-    users.set_profile(c, uid, body.model_dump())
+    # Merge: the profile also holds answers and credit-report data that this form doesn't send.
+    data = dict(users.get_profile(c, uid))
+    data.update(body.model_dump())
+    # Memberships answered yes stay on as engine flags; the form's own flags add to them.
+    yes = {k for k, v in (data.get("answers") or {}).items() if v}
+    data["flags"] = sorted(set(body.flags) | yes)
+    users.set_profile(c, uid, data)
+    return me(uid, c)
+
+
+@app.put("/me/answers", response_model=MeView)
+def put_answers(body: dict[str, bool | None], uid: str = Depends(user_id), c=Depends(conn)):
+    """Yes / No to a condition (true / false), or null to clear it. Keys from /meta conditions."""
+    unknown = sorted(set(body) - set(merchants.conditions()))
+    if unknown:
+        raise HTTPException(422, f"unknown conditions: {unknown}")
+    users.set_answers(c, uid, body)
     return me(uid, c)
 
 
@@ -538,7 +605,7 @@ def finder(body: FinderIn, uid: str = Depends(user_id), c=Depends(conn)):
         portfolios=[PortfolioView(
             new_cards=p.new_cards, gain_paise=p.gain_paise, cards=_sim_cards(p.simulation, names),
             joining_fee_paise=sum(cat[i][0].fees.joining_paise for i in p.new_cards if cat[i][0].fees),
-            fee_offers={i: _fee_offer_views(fo[i]) for i in p.new_cards if i in fo},
+            fee_offers={i: _fee_offer_views(fo[i], users.answers(c, uid)) for i in p.new_cards if i in fo},
         ) for p in portfolios],
         keep_or_close=keep_or_close(held, lines, fees) if held else {},
         unearned=base.unearned,
@@ -562,6 +629,18 @@ def assess(body: AssessIn, uid: str = Depends(user_id), c=Depends(conn)):
     base, _ = refine(held, lines, fees=fees)
     with_card, _ = refine(held + [target], lines, {p.id for p in held}, fees)
     return AssessOut(card_id=body.card_id, gain_paise=with_card.net_paise - base.net_paise, cards=_sim_cards(with_card, names), assessable=True)
+
+
+def _if_answered(c, uid: str, cp, p: Purchase, r) -> list[dict]:
+    """Unanswered memberships that would raise this card's reward on this payment."""
+    answered = users.answers(c, uid)
+    conds = merchants.conditions()
+    out = []
+    for key in sorted({k for rule in cp.earn_rules for k in rule.requires} - set(answered)):
+        alt = reward(cp, Purchase(p.amount_paise, p.category, p.merchant, p.channel, p.flags | {key}))
+        if alt.value_paise > r.value_paise and key in conds:
+            out.append({"key": key, "question": conds[key]["question"], "reward_paise": alt.value_paise})
+    return out
 
 
 def _usable(codes: list[str]) -> bool:
@@ -620,6 +699,7 @@ def pay(body: PayIn, uid: str = Depends(user_id), c=Depends(conn)):
     m, channel, p, options, later = _pay(c, uid, body)
     ranked = [PayOption(card_id=cp.id, name=cp.name, reward_paise=r.value_paise, reason_codes=r.reason_codes,
                         rules=[line.rule_id for line in r.lines], notes=option_notes(cp, r),
+                        if_answered=_if_answered(c, uid, cp, p, r),
                         later_paise=later.get(cp.id), month_paise=r.value_paise + later[cp.id] if cp.id in later else None)
               for cp, r in options]
     eligible = [o for o in ranked if _usable(o.reason_codes)]
@@ -629,7 +709,9 @@ def pay(body: PayIn, uid: str = Depends(user_id), c=Depends(conn)):
     offer_views = [OfferView(
         id=f["offer"].id, issuer=f["offer"].issuer, title=f["offer"].title, card_ids=f["card_ids"], tier=f["offer"].tier,
         valid_to=f["offer"].valid_to, min_txn_paise=f["offer"].min_txn_paise,
-        est_saving_paise=offers.estimate(f["offer"], p.amount_paise), url=f["offer"].refs[0]["url"], quote=f["offer"].refs[0]["quote"],
+        est_saving_paise=offers.estimate(f["offer"], p.amount_paise),
+        up_to_paise=offers.up_to_ceiling(f["offer"], p.amount_paise) if offers.is_up_to(f["offer"]) else None,
+        url=f["offer"].refs[0]["url"], quote=f["offer"].refs[0]["quote"],
     ) for f in found]
     offer_views.sort(key=lambda o: (o.tier != "fact", -(o.est_saving_paise or 0)))
 
@@ -638,7 +720,8 @@ def pay(body: PayIn, uid: str = Depends(user_id), c=Depends(conn)):
         {"name": m.name, "category": m.category, "channel": channel}, p.amount_paise,
         [{"card_id": o.card_id, "name": o.name, "notes": o.notes, "now": o.reward_paise, "later": o.later_paise,
           "month": o.month_paise,
-          "offers": [{"title": ov.title, "saving": ov.est_saving_paise} for ov in offer_views if ov.tier == "fact" and o.card_id in ov.card_ids]}
+          "offers": [{"title": ov.title, "saving": ov.est_saving_paise} for ov in offer_views
+                     if ov.tier == "fact" and o.card_id in ov.card_ids and ov.est_saving_paise]}
          for o in eligible],
     )
     decided_by = "rules"

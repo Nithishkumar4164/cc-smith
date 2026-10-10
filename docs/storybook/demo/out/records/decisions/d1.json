@@ -1,0 +1,10 @@
+{
+ "order": 1,
+ "q": "How should step 5 show the launch notice?",
+ "options": [
+  "Say the rule over Market",
+  "Show it labelled as an example",
+  "Skip it"
+ ],
+ "affects": "Step 5"
+}

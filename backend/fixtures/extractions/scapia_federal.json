@@ -12,9 +12,122 @@
     "joining_paise": 0,
     "annual_paise": 0
   },
-  "earn_rules": [],
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.scapia.cards/",
+        "quote": "5 Scapia coins = ₹1"
+      },
+      {
+        "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+        "quote": "Rewards earned on card transactions will be converted to Scapia coins | on the statement date with the conversion ratio 1 Reward = 1 Scapia | Coin."
+      }
+    ],
+    "kind": "points",
+    "name": "Scapia coins",
+    "value_paise": 20
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+          "quote": "You will earn 20% rewards on travel purchases made on the Scapia | App."
+        }
+      ],
+      "id": "scapia_travel",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "scapia"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 2000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Coins redeem only for travel booked in the Scapia app (travel-only redemption)."
+    },
+    {
+      "src": [
+        {
+          "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+          "quote": "Also, currently, on your Scapia Federal Rupay Credit Card, | you will earn 5% rewards on eligible spends of more than 500 Rs."
+        }
+      ],
+      "id": "upi_rupay",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": [
+          "upi"
+        ]
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 500
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 1,
+      "requires": [],
+      "min_txn_paise": 50000,
+      "note": "Complimentary RuPay card; 'more than 500 Rs.' modelled as a ₹500 minimum. Coins redeem only for travel booked in the Scapia app (travel-only redemption)."
+    },
+    {
+      "src": [
+        {
+          "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+          "quote": "Currently, on your Scapia Federal Visa Credit Card, you will earn 10% | rewards on every purchase of Rs. 20 and above."
+        }
+      ],
+      "id": "visa",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 1000
+      },
+      "cap_ids": [],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "min_txn_paise": 2000,
+      "note": "Coins redeem only for travel booked in the Scapia app (travel-only redemption)."
+    }
+  ],
   "caps": [],
-  "exclusions": [],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://res.cloudinary.com/scapiacards/raw/upload/v1774342764/spitha_prod_uploads/2026_03/Cardholderagreementv1027_02_26_1774342761664.pdf",
+          "quote": "Rewards will not accrue for money transfers, rent payments, cash | withdrawals, EMI transactions, forex transaction, education and school fees, | gift cards, credit card repayments, crypto/digital asset transactions, fuel, fuel | surcharge, rent and digital wallet loading or top-up transactions, Insurance, | Utility, telecom and cable spends."
+        }
+      ],
+      "categories": [
+        "rent",
+        "education",
+        "gift_card",
+        "fuel",
+        "wallet",
+        "insurance",
+        "utilities"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
   "milestones": [],
   "min_txn_src": []
 }

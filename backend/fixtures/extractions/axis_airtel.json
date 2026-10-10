@@ -83,6 +83,59 @@
       "src": [
         {
           "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+          "quote": "25% cashback on Airtel Mobile, Broadband, WiFi and DTH bill payments via Airtel Thanks App is capped at twice the base cashback earned during the statement month"
+        }
+      ],
+      "id": "airtel",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "airtel"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 2500
+      },
+      "cap_ids": [
+        "airtel"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Mobile, broadband, Wi-Fi and DTH bills via the Airtel Thanks app."
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+          "quote": "10% cashback on Utility bill payments such as gas, electricity, etc., via Airtel Thanks | App is capped at the base cashback earned during the statement month"
+        }
+      ],
+      "id": "airtel_utilities",
+      "match": {
+        "categories": [],
+        "merchants": [
+          "airtel_thanks_bills"
+        ],
+        "channels": []
+      },
+      "rate": {
+        "kind": "pct",
+        "bp": 1000
+      },
+      "cap_ids": [
+        "airtel_utilities"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": []
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
           "quote": "1% Base Cashback (No Cap) earned on all other spends (excluding specific categories)."
         }
       ],
@@ -99,8 +152,7 @@
       "cap_ids": [],
       "stacks": false,
       "priority": 0,
-      "requires": [],
-      "note": "Airtel 25% and utilities 10% are capped at multiples of the month's base cashback; not modelled yet, so they earn the base 1%."
+      "requires": []
     }
   ],
   "caps": [
@@ -129,6 +181,34 @@
       "unit": "paise",
       "period": "calendar_month",
       "spill": true
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+          "quote": "25% cashback on Airtel Mobile, Broadband, WiFi and DTH bill payments via Airtel Thanks App is capped at twice the base cashback earned during the statement month"
+        }
+      ],
+      "id": "airtel",
+      "amount": 200,
+      "unit": "base_multiple",
+      "period": "statement_cycle",
+      "spill": true,
+      "of_rule": "other"
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf",
+          "quote": "10% cashback on Utility bill payments such as gas, electricity, etc., via Airtel Thanks | App is capped at the base cashback earned during the statement month"
+        }
+      ],
+      "id": "airtel_utilities",
+      "amount": 100,
+      "unit": "base_multiple",
+      "period": "statement_cycle",
+      "spill": true,
+      "of_rule": "other"
     }
   ],
   "exclusions": [

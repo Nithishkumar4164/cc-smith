@@ -1,0 +1,816 @@
+{
+ "version": 1,
+ "about": "Shared test vectors for the alert parser: backend/src/cc_smith/capture/alerts.py and the phone's Dart port must both map every text to its expected output (null = not a transaction). Card numbers are synthetic.",
+ "received_at": "2026-10-10T12:00:00+05:30",
+ "sources": {
+  "A": "akhilnarang/bank-sms-parser tests/fixtures/sms (scrubbed real SMS) https://github.com/akhilnarang/bank-sms-parser/tree/main/tests/fixtures/sms",
+  "P": "sarim2000/pennywiseai-tracker parser-core tests (user-reported SMS) https://github.com/sarim2000/pennywiseai-tracker/tree/main/parser-core/src/test/kotlin",
+  "D": "Rrishik/dus-aane-bot BankTemplates.js (approximated public format, secondary) https://github.com/Rrishik/dus-aane-bot/blob/main/BankTemplates.js",
+  "G": "guess: written from memory of issuer email/app formats; verify against real alerts"
+ },
+ "cases": [
+  {
+   "id": "hdfc_cc_spend",
+   "source": "A",
+   "sender": "AX-HDFCBK-S",
+   "text": "Spent Rs.10290 On HDFC Bank Card 1234 At EAZYDINE0000000 On 2026-05-02:22:26:01.Not You? To Block+Reissue Call 18002586161/SMS BLOCK CC 1234 to 7308080808",
+   "expected": {
+    "amount_paise": 1029000,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": "EAZYDINE0000000",
+    "ts": "2026-05-02T22:26:01+05:30",
+    "kind": "debit",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_spend_multiword",
+   "source": "A",
+   "sender": null,
+   "text": "Spent Rs.100 On HDFC Bank Card 1234 At URBAN BISTRO On 2026-05-16:15:55:55.Not You? To Block+Reissue Call 18002586161/SMS BLOCK CC 1234 to 7308080808",
+   "expected": {
+    "amount_paise": 10000,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": "URBAN BISTRO",
+    "ts": "2026-05-16T15:55:55+05:30",
+    "kind": "debit",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_spend_amount_first",
+   "source": "A",
+   "sender": null,
+   "text": "Rs.569 spent on HDFC Bank Card x1234 at RAZ*SampleFood on 2026-07-12:17:00:56.Not U? To Block & Reissue Call 18002586161/SMS BLOCK CC 1234 to 7308080808",
+   "expected": {
+    "amount_paise": 56900,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": "RAZ*SampleFood",
+    "ts": "2026-07-12T17:00:56+05:30",
+    "kind": "debit",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_upi_spend",
+   "source": "A",
+   "sender": null,
+   "text": "Txn Rs.100.00\nOn HDFC Bank Card 1234\nAt swiggy.food@hdfcbank\nby UPI 612345678901\nOn 23-05\nNot You?\nCall 18002586161/SMS BLOCK CC 1234 to 7308080808",
+   "expected": {
+    "amount_paise": 10000,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": "swiggy food",
+    "ts": "2026-05-23T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_reversal",
+   "source": "A",
+   "sender": null,
+   "text": "Transaction Reversed!On HDFC Bank CREDIT Card xx1234 Amt: Rs.862.16 By AMAZON                000 On 2026-08-21:05:20:26",
+   "expected": {
+    "amount_paise": 86216,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": "AMAZON",
+    "ts": "2026-08-21T05:20:26+05:30",
+    "kind": "refund",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_merchant_refund",
+   "source": "A",
+   "sender": null,
+   "text": "Alert! Rs. 262.56 refunded by SampleMerchant Payments BANGALORE IND on 17/MAY/2026 & adjusted against HDFC Bank Credit Card 1234 View updated balance here: https://hdfcbk.io/HDFCBK/s/0000000A",
+   "expected": {
+    "amount_paise": 26256,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": "SampleMerchant Payments BANGALORE IND",
+    "ts": "2026-05-17T00:00:00+05:30",
+    "kind": "refund",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_payment_received",
+   "source": "A",
+   "sender": null,
+   "text": "HDFC Bank Cardmember, Online Payment of Rs.1000 vide Ref# 000XXXXXXXXXXXX was credited to your card ending 1234 On 08/MAY/2026_value Date 08/MAY/2026",
+   "expected": {
+    "amount_paise": 100000,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": null,
+    "ts": "2026-05-08T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_payment_received_upper",
+   "source": "A",
+   "sender": null,
+   "text": "DEAR HDFCBANK CARDMEMBER, PAYMENT OF Rs. 100.00 RECEIVED TOWARDS YOUR CREDIT CARD ENDING WITH 1234 ON 17-5-2026.YOUR AVAILABLE LIMIT IS RS. 200.00",
+   "expected": {
+    "amount_paise": 10000,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": null,
+    "ts": "2026-05-17T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_refund_initiated",
+   "source": "P",
+   "sender": null,
+   "text": "Refund initiated: Amt: Rs.34274.66 on HDFC Bank Credit Card 1111. To receive your Refund,please update your Bank details: TnC.",
+   "expected": {
+    "amount_paise": 3427466,
+    "currency": "INR",
+    "last4": "1111",
+    "merchant_text": null,
+    "ts": null,
+    "kind": "refund",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_email_debit",
+   "source": "G",
+   "sender": "HDFC Bank InstaAlerts <alerts@hdfcbank.net>",
+   "text": "Dear Customer, Rs.1,499.00 is debited from your HDFC Bank Credit Card ending 1234 towards SWIGGY on 15 Sep, 2026 at 21:14:05. If you did not authorize this transaction, please report it immediately.",
+   "expected": {
+    "amount_paise": 149900,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": "SWIGGY",
+    "ts": "2026-09-15T21:14:05+05:30",
+    "kind": "debit",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_cc_email_legacy",
+   "source": "G",
+   "sender": "alerts@hdfcbank.net",
+   "text": "Dear Card Member, Thank you for using your HDFC Bank Credit Card ending 1234 for Rs 500.00 at AMAZON on 15-09-2026 12:30:45. Authorization code:- 123456",
+   "expected": {
+    "amount_paise": 50000,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": "AMAZON",
+    "ts": "2026-09-15T12:30:45+05:30",
+    "kind": "debit",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "icici_cc_spend",
+   "source": "A",
+   "sender": "VM-ICICIT-S",
+   "text": "INR 1,604.00 spent using ICICI Bank Card XX5678 on 01-May-26 on ONYX BAR. Avl Limit: INR 99,99,999.99. If not you, call 1800 2662/SMS BLOCK 5678 to 9215676766.",
+   "expected": {
+    "amount_paise": 160400,
+    "currency": "INR",
+    "last4": "5678",
+    "merchant_text": "ONYX BAR",
+    "ts": "2026-05-01T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "icici_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "icici_cc_spend_variant2",
+   "source": "A",
+   "sender": null,
+   "text": "Rs 100.00 spent on ICICI Bank Card XX5678 on 16-May-26 at SAMPLE MERCHANT. Avl Lmt: Rs 200.00. To dispute, call 18002662/SMS BLOCK 5678 to 9215676766.",
+   "expected": {
+    "amount_paise": 10000,
+    "currency": "INR",
+    "last4": "5678",
+    "merchant_text": "SAMPLE MERCHANT",
+    "ts": "2026-05-16T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "icici_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "icici_cc_spend_usd",
+   "source": "P",
+   "sender": null,
+   "text": "USD 11.80 spent using ICICI Bank Card XX7004 on 03-Sep-25 on 1xJetBrains AI . Avl Limit: INR 17,95,899.53. If not you, call 1800 2662/SMS BLOCK 7004 to 9215676766.",
+   "expected": {
+    "amount_paise": 1180,
+    "currency": "USD",
+    "last4": "7004",
+    "merchant_text": "1xJetBrains AI",
+    "ts": "2025-09-03T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "icici_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "icici_cc_payment_received",
+   "source": "A",
+   "sender": null,
+   "text": "Payment of Rs 12,345.00 has been received on your ICICI Bank Credit Card XX5678 through Bharat Bill Payment System on 21-MAY-26.",
+   "expected": {
+    "amount_paise": 1234500,
+    "currency": "INR",
+    "last4": "5678",
+    "merchant_text": null,
+    "ts": "2026-05-21T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "icici_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "icici_cc_payment_received_account",
+   "source": "A",
+   "sender": null,
+   "text": "Dear Customer, Payment of INR 1,234.00 has been received on your ICICI Bank Credit Card Account 4xxx5678 on 06-SEP-26.Thank you.",
+   "expected": {
+    "amount_paise": 123400,
+    "currency": "INR",
+    "last4": "5678",
+    "merchant_text": null,
+    "ts": "2026-09-06T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "icici_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "icici_cc_refund",
+   "source": "A",
+   "sender": null,
+   "text": "SAMPLE MERCHANT AI refund of Rs 2.00 credited to ICICI Bank Credit Card XX5678 on 06-SEP-26. Revised total due Rs 99,999.00, minimum due Rs 4,999.00",
+   "expected": {
+    "amount_paise": 200,
+    "currency": "INR",
+    "last4": "5678",
+    "merchant_text": "SAMPLE MERCHANT AI",
+    "ts": "2026-09-06T00:00:00+05:30",
+    "kind": "refund",
+    "issuer_hint": "icici_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "icici_cc_email",
+   "source": "G",
+   "sender": "credit_cards@icicibank.com",
+   "text": "Dear Customer, Your ICICI Bank Credit Card XX5678 has been used for a transaction of INR 2,340.00 on Sep 15, 2026 at 10:22:11. Info: ZOMATO. The Available Credit Limit on your card is INR 1,23,456.00.",
+   "expected": {
+    "amount_paise": 234000,
+    "currency": "INR",
+    "last4": "5678",
+    "merchant_text": "ZOMATO",
+    "ts": "2026-09-15T10:22:11+05:30",
+    "kind": "debit",
+    "issuer_hint": "icici_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "sbi_cc_spend",
+   "source": "A",
+   "sender": "AD-SBICRD-S",
+   "text": "Rs.123.45 spent on your SBI Credit Card ending 4321 at SAMPLE MART on 19/07/26. Trxn. not done by you? Report at https://sbicard.com/Dispute",
+   "expected": {
+    "amount_paise": 12345,
+    "currency": "INR",
+    "last4": "4321",
+    "merchant_text": "SAMPLE MART",
+    "ts": "2026-07-19T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "sbi_card",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "sbi_cc_spend_no_merchant",
+   "source": "P",
+   "sender": null,
+   "text": "Rs.259.00 spent on your SBI Credit Card ending with 4321 on 15Jan26. Your available limit is Rs.1,235.00. If not done by you, call 39 02 02 02.",
+   "expected": {
+    "amount_paise": 25900,
+    "currency": "INR",
+    "last4": "4321",
+    "merchant_text": null,
+    "ts": "2026-01-15T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "sbi_card",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "sbi_cc_spend_styled_unicode",
+   "source": "P",
+   "sender": null,
+   "text": "Rs.90.00 𝗌𝗉𝖾𝗇𝗍 𝗈𝗇 𝗒𝗈𝗎𝗋 𝖲𝖡𝖨 𝖢𝗋𝖾𝖽𝗂𝗍 𝖢𝖺𝗋𝖽 𝖾𝗇𝖽𝗂𝗇𝗀 4321 at SUPREMEGOURMET on 13/02/26. 𝖳𝗋𝗑𝗇. 𝗇𝗈𝗍 𝖽𝗈𝗇𝖾 𝖻𝗒 𝗒𝗈𝗎? 𝖱𝖾𝗉𝗈𝗋𝗍 𝖺𝗍 https://sbicard.com/Dispute",
+   "expected": {
+    "amount_paise": 9000,
+    "currency": "INR",
+    "last4": "4321",
+    "merchant_text": "SUPREMEGOURMET",
+    "ts": "2026-02-13T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "sbi_card",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "sbi_cc_payment_credited",
+   "source": "P",
+   "sender": null,
+   "text": "Your payment of Rs.1,644.55 has been credited to your SBI Credit Card ending with 4321. Your available limit is Rs.48,355.45.",
+   "expected": {
+    "amount_paise": 164455,
+    "currency": "INR",
+    "last4": "4321",
+    "merchant_text": null,
+    "ts": null,
+    "kind": "payment_received",
+    "issuer_hint": "sbi_card",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "sbi_cc_payment_processed_no_last4",
+   "source": "A",
+   "sender": null,
+   "text": "Dear SBI Cardholder, payment of Rs. 12345.00 for your SBI Credit Card has been successfully processed. ref no : ABC00DE0FG0HIJ.",
+   "expected": {
+    "amount_paise": 1234500,
+    "currency": "INR",
+    "last4": null,
+    "merchant_text": null,
+    "ts": null,
+    "kind": "payment_received",
+    "issuer_hint": "sbi_card",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "axis_cc_spend_multiline",
+   "source": "A",
+   "sender": "AX-AXISBK-S",
+   "text": "Spent INR 123.45\nAxis Bank Card no. XX2468\n02-05-26 19:53:18 IST\nSampleMerchant Store\nAvl Limit: INR 99,999.99\nNot you? SMS BLOCK 2468 to 9999999999",
+   "expected": {
+    "amount_paise": 12345,
+    "currency": "INR",
+    "last4": "2468",
+    "merchant_text": "SampleMerchant Store",
+    "ts": "2026-05-02T19:53:18+05:30",
+    "kind": "debit",
+    "issuer_hint": "axis_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "axis_cc_spend_format2",
+   "source": "P",
+   "sender": "CP-AXISBK-S",
+   "text": "Spent\nCard no. XX7441\nINR 562\n01-09-25 12:04:18\nAVENUE SUPE\nAvl Lmt INR 5120.87\nSMS BLOCK 7441 to 919951860002, if not you - Axis Bank",
+   "expected": {
+    "amount_paise": 56200,
+    "currency": "INR",
+    "last4": "7441",
+    "merchant_text": "AVENUE SUPE",
+    "ts": "2025-09-01T12:04:18+05:30",
+    "kind": "debit",
+    "issuer_hint": "axis_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "axis_cc_reversal",
+   "source": "A",
+   "sender": null,
+   "text": "Txn reversal of INR 2499 at SAMPLESHOP IN was successful.\nCard no. XX2468\n02-05-26 19:53:18 IST\nAvl Limit: INR 99,999.99\nAxis Bank",
+   "expected": {
+    "amount_paise": 249900,
+    "currency": "INR",
+    "last4": "2468",
+    "merchant_text": "SAMPLESHOP IN",
+    "ts": "2026-05-02T19:53:18+05:30",
+    "kind": "refund",
+    "issuer_hint": "axis_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "axis_cc_payment_received",
+   "source": "A",
+   "sender": null,
+   "text": "Payment of INR 15000 has been received towards your Axis Bank Credit Card XX2468 on 02-05-26 - Axis Bank",
+   "expected": {
+    "amount_paise": 1500000,
+    "currency": "INR",
+    "last4": "2468",
+    "merchant_text": null,
+    "ts": "2026-05-02T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "axis_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "axis_cc_email",
+   "source": "G",
+   "sender": "alerts@axisbank.com",
+   "text": "Transaction alert on your Axis Bank Credit Card\nTransaction Amount: INR 899\nMerchant Name: NETFLIX\nAxis Bank Credit Card No. XX2468\nDate & Time: 15-09-2026, 22:10:05 IST\nAvailable Limit*: INR 50,000",
+   "expected": {
+    "amount_paise": 89900,
+    "currency": "INR",
+    "last4": "2468",
+    "merchant_text": "NETFLIX",
+    "ts": "2026-09-15T22:10:05+05:30",
+    "kind": "debit",
+    "issuer_hint": "axis_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hsbc_cc_spend",
+   "source": "A",
+   "sender": null,
+   "text": "HSBC creditcard xxxxx1357 used at SampleMerchant Store for INR 100.00 on 01/07/26.Limit Rs 99999.99 Due Rs 5000.00.Report fraud on +910000000000",
+   "expected": {
+    "amount_paise": 10000,
+    "currency": "INR",
+    "last4": "1357",
+    "merchant_text": "SampleMerchant Store",
+    "ts": "2026-07-01T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "hsbc_india",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hsbc_cc_spend_variant2",
+   "source": "A",
+   "sender": null,
+   "text": "HSBC Credit Card xx1357 used at SampleMerchant Store for INR 100.00 on 01/08/26. Avl limit INR 99999.99; due INR 5000.00. Call +910000000000 to report fraud.",
+   "expected": {
+    "amount_paise": 10000,
+    "currency": "INR",
+    "last4": "1357",
+    "merchant_text": "SampleMerchant Store",
+    "ts": "2026-08-01T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "hsbc_india",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hsbc_cc_spend_eur",
+   "source": "A",
+   "sender": null,
+   "text": "HSBC Credit Card xx1357 used at SampleMerchant Store for EUR 100.00 on 01/09/26. Avl limit INR 99999.99; due INR 50.00. Call +910000000000 to report fraud.",
+   "expected": {
+    "amount_paise": 10000,
+    "currency": "EUR",
+    "last4": "1357",
+    "merchant_text": "SampleMerchant Store",
+    "ts": "2026-09-01T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "hsbc_india",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hsbc_cc_payment_received",
+   "source": "A",
+   "sender": null,
+   "text": "Dear Customer, we have received a payment of INR 15000.00 for credit card ending 1357 on 02-JUL-26. Thank you for using HSBC credit card.",
+   "expected": {
+    "amount_paise": 1500000,
+    "currency": "INR",
+    "last4": "1357",
+    "merchant_text": null,
+    "ts": "2026-07-02T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "hsbc_india",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "kotak_cc_spend",
+   "source": "P",
+   "sender": null,
+   "text": "INR 20 spent on Kotak Credit Card x5236 on 23-JAN-2026 at UPI-638903921672-CORN. Avl limit INR 73733.02 Fraud? https://www.kotak.bank.in/KBANKT/querytxn",
+   "expected": {
+    "amount_paise": 2000,
+    "currency": "INR",
+    "last4": "5236",
+    "merchant_text": "CORN",
+    "ts": "2026-01-23T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "kotak_mahindra_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "kotak_cc_refund",
+   "source": "P",
+   "sender": null,
+   "text": "INR 2 from Airport Lounge refunded to your Kotak Credit Card x8848 on 17-Jul-2026. Opted for EMI? Please call 18602662666 to cancel.",
+   "expected": {
+    "amount_paise": 200,
+    "currency": "INR",
+    "last4": "8848",
+    "merchant_text": "Airport Lounge",
+    "ts": "2026-07-17T00:00:00+05:30",
+    "kind": "refund",
+    "issuer_hint": "kotak_mahindra_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "kotak_cc_payment_received",
+   "source": "G",
+   "sender": null,
+   "text": "Payment of Rs.5,000.00 has been received towards your Kotak Credit Card x8848 on 05-Sep-2026. Thank you.",
+   "expected": {
+    "amount_paise": 500000,
+    "currency": "INR",
+    "last4": "8848",
+    "merchant_text": null,
+    "ts": "2026-09-05T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "kotak_mahindra_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "idfc_cc_spend",
+   "source": "A",
+   "sender": null,
+   "text": "Transaction Successful! INR 370.80 spent on your IDFC FIRST Bank Credit Card ending XX9753 at SAMPLE MERCHANT LTD on 05 JUL 2026 at 11:54 AM Avbl Limit: INR 99999.9 If not done by you, call 180010888 for dispute or to block your card SMS CCBLOCK 9753 to 5676732",
+   "expected": {
+    "amount_paise": 37080,
+    "currency": "INR",
+    "last4": "9753",
+    "merchant_text": "SAMPLE MERCHANT LTD",
+    "ts": "2026-07-05T11:54:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "idfc_first_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "idfc_cc_spend_sgd",
+   "source": "A",
+   "sender": null,
+   "text": "Transaction Successful! SGD 100.00 spent on your IDFC FIRST Bank Credit Card ending XX9753 at SAMPLE MERCHANT on 01 SEP 2026 at 11:38 AM Avbl Limit: INR 99999.9 If not done by you, call 180010888",
+   "expected": {
+    "amount_paise": 10000,
+    "currency": "SGD",
+    "last4": "9753",
+    "merchant_text": "SAMPLE MERCHANT",
+    "ts": "2026-09-01T11:38:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "idfc_first_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "idfc_cc_payment_received",
+   "source": "A",
+   "sender": null,
+   "text": "Thank you for payment of INR 3,000.00 towards your FIRST Wealth Credit Card XX9753 on 02 May 2026. IDFC FIRST Bank",
+   "expected": {
+    "amount_paise": 300000,
+    "currency": "INR",
+    "last4": "9753",
+    "merchant_text": null,
+    "ts": "2026-05-02T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "idfc_first_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "yes_cc_upi_spend",
+   "source": "P",
+   "sender": "VM-YESBNK-S",
+   "text": "INR 404.36 spent on YES BANK Card X3349 @UPI_C N S FUEL PORT 24-08-2025 06:17:25 pm. Avl Lmt INR 211,476.24. SMS BLKCC 3349 to 9840909000 if not you",
+   "expected": {
+    "amount_paise": 40436,
+    "currency": "INR",
+    "last4": "3349",
+    "merchant_text": "C N S FUEL PORT",
+    "ts": "2025-08-24T18:17:25+05:30",
+    "kind": "debit",
+    "issuer_hint": "yes_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "yes_cc_upi_spend_am",
+   "source": "P",
+   "sender": null,
+   "text": "INR 56.00 spent on YES BANK Card X3349 @UPI_S B ENTERPRISES 24-08-2025 06:03:40 am. Avl Lmt INR 211,880.60. SMS BLKCC 3349 to 9840909000 if not you",
+   "expected": {
+    "amount_paise": 5600,
+    "currency": "INR",
+    "last4": "3349",
+    "merchant_text": "S B ENTERPRISES",
+    "ts": "2025-08-24T06:03:40+05:30",
+    "kind": "debit",
+    "issuer_hint": "yes_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "yes_cc_payment_received",
+   "source": "G",
+   "sender": null,
+   "text": "Payment of INR 10,000.00 received towards your YES BANK Credit Card X3349 on 05-09-2026. Thank you.",
+   "expected": {
+    "amount_paise": 1000000,
+    "currency": "INR",
+    "last4": "3349",
+    "merchant_text": null,
+    "ts": "2026-09-05T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "yes_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "kiwi_app_notification",
+   "source": "G",
+   "sender": null,
+   "text": "Paid ₹250 to Swiggy using your Kiwi YES BANK RuPay Credit Card ending 3349 on 15 Sep 2026",
+   "expected": {
+    "amount_paise": 25000,
+    "currency": "INR",
+    "last4": "3349",
+    "merchant_text": "Swiggy",
+    "ts": "2026-09-15T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "yes_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "au_cc_spend",
+   "source": "P",
+   "sender": null,
+   "text": "INR 259.90 spent at TELEGRAM PREMIUM on AU Bank Credit Card x1234 21-03-2026 05:49:40 PM. Not you? Call 180012001500 or SMS PBLOCK 1234 to 5676767",
+   "expected": {
+    "amount_paise": 25990,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": "TELEGRAM PREMIUM",
+    "ts": "2026-03-21T17:49:40+05:30",
+    "kind": "debit",
+    "issuer_hint": "au_small_finance_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "au_cc_payment_received",
+   "source": "G",
+   "sender": null,
+   "text": "Payment of INR 2,000.00 has been credited to your AU Bank Credit Card x1234 on 10-09-2026.",
+   "expected": {
+    "amount_paise": 200000,
+    "currency": "INR",
+    "last4": "1234",
+    "merchant_text": null,
+    "ts": "2026-09-10T00:00:00+05:30",
+    "kind": "payment_received",
+    "issuer_hint": "au_small_finance_bank",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "hdfc_account_upi_debit",
+   "source": "A",
+   "sender": null,
+   "text": "Sent Rs.100.00\nFrom HDFC Bank A/C *4455\nTo CUSTOMER NAME\nOn 17/05/26\nRef 612345678901\nNot You?\nCall 18002586161/SMS BLOCK UPI to 7308080808",
+   "expected": {
+    "amount_paise": 10000,
+    "currency": "INR",
+    "last4": "4455",
+    "merchant_text": "CUSTOMER NAME",
+    "ts": "2026-05-17T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "account"
+   }
+  },
+  {
+   "id": "icici_account_upi_debit",
+   "source": "A",
+   "sender": null,
+   "text": "ICICI Bank Acct XX455 debited for Rs 14.00 on 09-May-26; Pune Metro credited. UPI:612345678901. Call 18002662 for dispute. SMS BLOCK 455 to 9215676766.",
+   "expected": {
+    "amount_paise": 1400,
+    "currency": "INR",
+    "last4": "455",
+    "merchant_text": "Pune Metro",
+    "ts": "2026-05-09T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "icici_bank",
+    "instrument": "account"
+   }
+  },
+  {
+   "id": "hdfc_debit_card_spend",
+   "source": "A",
+   "sender": null,
+   "text": "Spent Rs.250.00 From HDFC Bank Card x4455 At SAMPLE CAFE On 2026-05-02:10:00:00 Bal Rs.1000.00 Not You? Call 18002586161/SMS BLOCK DC 4455 to 7308080808",
+   "expected": {
+    "amount_paise": 25000,
+    "currency": "INR",
+    "last4": "4455",
+    "merchant_text": "SAMPLE CAFE",
+    "ts": "2026-05-02T10:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "hdfc_bank",
+    "instrument": "debit_card"
+   }
+  },
+  {
+   "id": "full_pan_is_stripped",
+   "source": "G",
+   "sender": null,
+   "text": "Rs.500.00 spent on your SBI Credit Card 4111 1111 1111 4321 at SAMPLE MART on 19/07/26.",
+   "expected": {
+    "amount_paise": 50000,
+    "currency": "INR",
+    "last4": null,
+    "merchant_text": "SAMPLE MART",
+    "ts": "2026-07-19T00:00:00+05:30",
+    "kind": "debit",
+    "issuer_hint": "sbi_card",
+    "instrument": "credit_card"
+   }
+  },
+  {
+   "id": "otp",
+   "source": "P",
+   "sender": null,
+   "text": "Your IDFC First Bank OTP is 123456. Do not share this code with anyone.",
+   "expected": null
+  },
+  {
+   "id": "promo",
+   "source": "P",
+   "sender": null,
+   "text": "Get exciting offers on Yes Bank Credit Cards. Apply now! Visit yesbank.in",
+   "expected": null
+  },
+  {
+   "id": "due_reminder",
+   "source": "P",
+   "sender": null,
+   "text": "Your Yes Bank Credit Card payment of INR 10,000 is due by 25-08-2025",
+   "expected": null
+  },
+  {
+   "id": "mandate",
+   "source": "P",
+   "sender": null,
+   "text": "Auto Pay HDFC Bank NACH Mandate : Rs. 100000.00 UMRN:HDFC7031703262015557 To:NationalSecuritiesClearin Freq ADHO received today for processing.",
+   "expected": null
+  },
+  {
+   "id": "declined",
+   "source": "G",
+   "sender": null,
+   "text": "Your transaction of Rs.1,200.00 on HDFC Bank Credit Card 1234 at AMAZON was declined due to incorrect PIN.",
+   "expected": null
+  }
+ ]
+}

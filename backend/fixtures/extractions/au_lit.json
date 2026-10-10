@@ -12,9 +12,109 @@
     "joining_paise": 0,
     "annual_paise": 0
   },
-  "earn_rules": [],
-  "caps": [],
-  "exclusions": [],
+  "currency": {
+    "src": [
+      {
+        "url": "https://www.au.bank.in/ausfb-reward-points-ausfb-credit-card-reward-points-usage-tnc_2ndjune23.pdf",
+        "quote": "Redemption of Gift card’s/Vouchers/E-vouchers: Value of each Reward Points will be | INR 0.20 if redeemed against Gift card’s/Vouchers/E-vouchers. This will be applicable | for all AU Bank Credit Card variants."
+      }
+    ],
+    "kind": "points",
+    "name": "AU Reward Points",
+    "value_paise": 20
+  },
+  "earn_rules": [
+    {
+      "src": [
+        {
+          "url": "https://www.au.bank.in/lit-terms-and-conditions",
+          "quote": "Cardholders are eligible for earn rate of 1 Reward Point for every INR 100 retail spends done on the LIT Card."
+        }
+      ],
+      "id": "base",
+      "match": {
+        "categories": [],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 1,
+        "per_paise": 10000
+      },
+      "cap_ids": [
+        "cycle"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "Lifetime base rate only; paid 90-day feature packs (5X/10X points, category and milestone cashback) are out of scope."
+    },
+    {
+      "src": [
+        {
+          "url": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card/features",
+          "quote": "Transactions on Utilities (subject to maximum capping of 100 RP per transaction) and Insurance transactions will continue to earn Base reward (1 Reward) on every Rs. 100 spent"
+        }
+      ],
+      "id": "utilities_insurance",
+      "match": {
+        "categories": [
+          "utilities",
+          "insurance"
+        ],
+        "merchants": [],
+        "channels": []
+      },
+      "rate": {
+        "kind": "per_spend",
+        "points": 1,
+        "per_paise": 10000
+      },
+      "cap_ids": [
+        "cycle"
+      ],
+      "stacks": false,
+      "priority": 0,
+      "requires": [],
+      "note": "The 100 RP per-transaction cap on utilities is not modelled."
+    }
+  ],
+  "caps": [
+    {
+      "src": [
+        {
+          "url": "https://www.au.bank.in/lit-terms-and-conditions",
+          "quote": "Cardholders can earn a maximum of 10000 Reward Points in a statement cycle."
+        }
+      ],
+      "id": "cycle",
+      "amount": 10000,
+      "unit": "points",
+      "period": "statement_cycle",
+      "spill": true
+    }
+  ],
+  "exclusions": [
+    {
+      "src": [
+        {
+          "url": "https://www.au.bank.in/lit-terms-and-conditions",
+          "quote": "Cash Withdrawal (MCC- 6010, 6011), BBPS, EMI, Fuel transactions (MCC- 5172, 5541, 5542, 5552 and 5983), Rent (MCC- 6513), Education & Govt ... transactions will not be considered for earning of Base Reward Points."
+        }
+      ],
+      "categories": [
+        "fuel",
+        "rent",
+        "education",
+        "government"
+      ],
+      "merchants": [],
+      "channels": [],
+      "except_merchants": [],
+      "rule_ids": []
+    }
+  ],
   "milestones": [],
   "min_txn_src": []
 }

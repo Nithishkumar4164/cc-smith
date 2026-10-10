@@ -5,8 +5,10 @@ from dataclasses import asdict, dataclass, field
 from datetime import UTC, date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from sqlalchemy import Connection
+from sqlalchemy import Connection, select
 
+from cc_smith import merchants
+from cc_smith.db import launch_candidate
 from cc_smith.knowledge import offers as offers_mod
 from cc_smith.knowledge import store
 from cc_smith.knowledge.schema import PERIOD_MONTHS, CardProfile
@@ -17,6 +19,8 @@ from cc_smith.rewards.explain import rupees
 from cc_smith.rewards.finder import GST_BP, refine
 
 SEVERITY = {"act": 0, "watch": 1, "info": 2}
+LAUNCH_MIN_GAIN = 2_000 * 100
+LAUNCH_MIN_FEE_PCT = 15
 PERIOD_WORD = {"statement_cycle": "statement cycle", "calendar_month": "month", "calendar_quarter": "quarter",
                "statement_quarter": "statement quarter", "anniversary_year": "card year", "calendar_year": "year", "half_year": "six months"}
 FIELD_WORD = {"fees": "fees", "earn_rules": "how you earn", "caps": "caps", "exclusions": "exclusions",
@@ -38,8 +42,13 @@ class Notice:
     card_id: str | None = None
     rupees_paise: int | None = None
     due: str | None = None
-    tier: str = "fact"  # fact | speculation
+    # fact: from a card's published terms; speculation: reported, not confirmed by the bank;
+    # guidance: general practice, not a card term (shown with no source link).
+    tier: str = "fact"
     refs: list[dict] = field(default_factory=list)
+    # For offers with conditions: yes | no | unknown, and the questions behind it.
+    eligibility: str | None = None
+    requires: list[dict] = field(default_factory=list)
 
 
 def _refs(meta: dict, name: str) -> list[dict]:
@@ -51,10 +60,14 @@ def _fee_with_gst(p: CardProfile) -> int:
 
 
 def held_fees(holds: list[dict], cat: dict, today: date) -> dict[str, int]:
-    """Annual fee to use for each held card: 0 when LTF or inside its free first year."""
+    """Annual fee to use for each held card: 0 when LTF or inside its free first year, or the
+    amount the user said they pay (GST included)."""
     out = {}
     for h in holds:
         if h["card_id"] not in cat:
+            continue
+        if h.get("fee_status") == "custom" and h.get("annual_fee_paise") is not None:
+            out[h["card_id"]] = h["annual_fee_paise"]
             continue
         if h.get("fee_status") == "ltf" or (h.get("fee_status") == "fyf" and h.get("fyf_until") and date.fromisoformat(h["fyf_until"]) >= today):
             out[h["card_id"]] = 0
@@ -81,7 +94,9 @@ def build(conn: Connection, uid: str, cat: dict, holds: list[dict], profile: dic
             y = today.year + (1 if h["renewal_month"] < today.month else 0)
             due = date(y, h["renewal_month"], 1).isoformat()
         fee = _fee_with_gst(p)
-        if h.get("fee_status") == "ltf":
+        if h.get("fee_status") == "custom" and h.get("annual_fee_paise") is not None:
+            fee = h["annual_fee_paise"]
+        if h.get("fee_status") == "ltf" or fee == 0:
             continue
         if h.get("fee_status") == "fyf" and h.get("fyf_until"):
             end = date.fromisoformat(h["fyf_until"])
@@ -162,35 +177,23 @@ def build(conn: Connection, uid: str, cat: dict, holds: list[dict], profile: dic
         if c.utilisation_bp >= 3_000:
             notes.append(Notice(f"util:{c.pool_id or cid}", "credit", "act" if c.utilisation_bp >= 7_000 else "watch",
                                 f"{name}: {c.utilisation_bp // 100}% of {scope} in use",
-                                f"{rupees(c.available_paise or 0)} available. Bureaus treat using more than about 30% of a limit as a risk signal when the statement is reported.",
-                                "Pay part of the balance before the statement date, or spread spends across cards.", cid))
+                                f"{rupees(c.available_paise or 0)} available. General guidance, not a card term: bureaus commonly treat using more than about 30% of a limit as a risk signal when the statement is reported.",
+                                "Pay part of the balance before the statement date, or spread spends across cards.", cid,
+                                tier="guidance"))
 
-    # LTF / FYF / fee-waiver offers on cards that would pay off for you
-    fee_offers = offers_mod.fee_offers(conn, today)
+    # New cards in the market that would pay off for you (plan §4: ₹2,000 a year and 15% of the fee).
     if lines:
         base_net = sim.net_paise if sim else 0
-        for cid, offs in fee_offers.items():
-            if cid in held_ids or cid not in cat or not cat[cid][0].assessable():
+        for lc in conn.execute(select(launch_candidate).where(launch_candidate.c.status == "profiled")).all():
+            if not lc.card_id or lc.card_id in held_ids or lc.card_id not in cat or not cat[lc.card_id][0].assessable():
                 continue
-            p, meta, status = cat[cid]
-            if status != "active":
-                continue
-            with_card = refine(held + [p], lines, held_ids, fees)[0].net_paise - base_net
-            for o in offs:
-                # with_card already pays the yearly fee; each of these offers makes year one fee-free,
-                # and an LTF keeps every later year fee-free too.
-                annual = _fee_with_gst(p)
-                year_one = with_card + annual
-                gain = with_card + (annual if o.kind in ("ltf", "annual_waiver") else 0)
-                if year_one <= 0:
-                    continue
-                # The offer's own title carries its conditions (e.g. "for select corporates").
-                notes.append(Notice(f"feeoffer:{o.id}", "fee_offer", "watch" if o.tier == "fact" else "info",
-                                    f"{p.name}: {o.title}",
-                                    f"{o.title}. On your spends it adds about {rupees(year_one)} in the first year"
-                                    + (f" and {rupees(gain)} a year after" if o.kind in ("ltf", "annual_waiver") else "") + ".",
-                                    "Apply through the source below if the card suits you; cc-smith takes no referral money.",
-                                    cid, year_one, o.valid_to, o.tier, [{"url": r["url"], "quote": r["quote"], "official": r.get("official")} for r in o.refs]))
+            p, meta, _ = cat[lc.card_id]
+            gain = refine(held + [p], lines, held_ids, fees)[0].net_paise - base_net
+            if gain >= LAUNCH_MIN_GAIN and gain * 100 >= LAUNCH_MIN_FEE_PCT * _fee_with_gst(p):
+                notes.append(Notice(f"launch:{lc.id}", "launch", "watch", f"New in the market: {p.name} would earn you {rupees(gain)} a year",
+                                    f"Launched recently and profiled from the bank's own pages. On your spends it adds {rupees(gain)} a year after its "
+                                    f"{rupees(_fee_with_gst(p))} fee.",
+                                    "Open it in Market to see the rupee lines and the bank's terms.", lc.card_id, gain, refs=_refs(meta, "earn_rules")))
 
     # Bank offers at merchants you spend at, ending within 10 days
     spend_merchants = {k for k in spend_items if by_key(k)}
@@ -227,8 +230,52 @@ def build(conn: Connection, uid: str, cat: dict, holds: list[dict], profile: dic
                                 (s.reason or "")[:240], "Nothing changes in your numbers until the bank's own page confirms it.",
                                 cid, tier="speculation", refs=[{k: r.get(k) for k in ("url", "quote")} for r in (s.refs or [])][:2]))
 
-    # Your own cards' issues come before offers on cards you don't hold.
-    notes.sort(key=lambda n: (SEVERITY[n.severity], n.kind in ("fee_offer", "offer"), -(n.rupees_paise or 0)))
+    # Your own cards' issues come before offers on cards you don't hold; offers you said
+    # you don't qualify for go last (the app collapses them as "Not for you").
+    notes.sort(key=lambda n: (n.eligibility == "no", SEVERITY[n.severity], n.kind in ("fee_offer", "offer"), -(n.rupees_paise or 0)))
     return [asdict(n) for n in notes]
 
 
+def fee_offer_items(conn: Connection, uid: str, cat: dict, holds: list[dict], profile: dict, lines, today: date | None = None) -> list[dict]:
+    """LTF / FYF / fee-waiver offers on cards you don't hold that would pay off on your
+    spends. Discovery, so they are shown in Market, not on the notice board."""
+    today = today or datetime.now(ZoneInfo("Asia/Kolkata")).date()
+    notes: list[Notice] = []
+    held = [cat[h["card_id"]][0] for h in holds if h["card_id"] in cat and cat[h["card_id"]][0].assessable()]
+    held_ids = {h["card_id"] for h in holds}
+    fees = held_fees(holds, cat, today)
+    sim = refine(held, lines, fees=fees)[0] if held and lines else None
+    answers = {k: v for k, v in (profile.get("answers") or {}).items() if v is not None}
+    fee_offers = offers_mod.fee_offers(conn, today)
+    if lines:
+        base_net = sim.net_paise if sim else 0
+        for cid, offs in fee_offers.items():
+            if cid in held_ids or cid not in cat or not cat[cid][0].assessable():
+                continue
+            p, _, status = cat[cid]
+            if status != "active":
+                continue
+            with_card = refine(held + [p], lines, held_ids, fees)[0].net_paise - base_net
+            for o in offs:
+                # with_card already pays the yearly fee; each of these offers makes year one fee-free,
+                # and an LTF keeps every later year fee-free too.
+                annual = _fee_with_gst(p)
+                year_one = with_card + annual
+                gain = with_card + (annual if o.kind in ("ltf", "annual_waiver") else 0)
+                if year_one <= 0:
+                    continue
+                # The offer's own title carries its conditions (e.g. "for select corporates").
+                req = merchants.offer_conditions().get(o.id, [])
+                elig = merchants.eligibility(req, answers) if req else None
+                conds = merchants.conditions()
+                notes.append(Notice(f"feeoffer:{o.id}", "fee_offer", "info" if o.tier != "fact" or elig == "no" else "watch",
+                                    f"{p.name}: {o.title}",
+                                    f"{o.title}. On your spends it adds about {rupees(year_one)} in the first year"
+                                    + (f" and {rupees(gain)} a year after" if o.kind in ("ltf", "annual_waiver") else "") + ".",
+                                    "Apply through the source below if the card suits you; cc-smith takes no referral money.",
+                                    cid, year_one, o.valid_to, o.tier, [{"url": r["url"], "quote": r["quote"], "official": r.get("official")} for r in o.refs],
+                                    eligibility=elig,
+                                    requires=[{"key": k, "question": conds[k]["question"], "why": conds[k]["why"]} for k in req if k in conds]))
+
+    notes.sort(key=lambda n: (n.eligibility == "no", SEVERITY[n.severity], -(n.rupees_paise or 0)))
+    return [asdict(n) for n in notes]

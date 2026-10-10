@@ -1,0 +1,115 @@
+{
+ "scene": "s6",
+ "order": 1,
+ "name": "Guard, cache, budget, ledger",
+ "wires": [
+  {
+   "cap": "SerpApi usage · /ops/credits",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "SerpApi usage"
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "Live searches",
+       "value": "26",
+       "sub": "credits spent today",
+       "tone": "lav"
+      },
+      {
+       "label": "From cache",
+       "value": "67",
+       "sub": "no credit spent",
+       "tone": "lime",
+       "vt": "good"
+      }
+     ],
+     "hl": "ledger"
+    },
+    {
+     "t": "kv",
+     "rows": [
+      {
+       "k": "Launch Radar",
+       "v": "45 a month · 7-day cache"
+      },
+      {
+       "k": "Card profiles",
+       "v": "70 a month · 30-day cache"
+      },
+      {
+       "k": "Commerce offers",
+       "v": "10 a month · 6-hour cache"
+      },
+      {
+       "k": "Demo reserve",
+       "v": "50 unallocated",
+       "total": true
+      }
+     ],
+     "hl": "budget"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "radar",
+  "gw",
+  "serp"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "radar",
+   "to": "gw",
+   "l": "search(flow, engine, params)",
+   "what": "Every caller uses this one function; there is no other path to SerpApi.",
+   "t": "NEW"
+  },
+  {
+   "id": "m2",
+   "f": "gw",
+   "to": "gw",
+   "l": "refuse personal data",
+   "what": "Phone numbers, emails, card digits and user ids are rejected: queries carry card and bank names only.",
+   "t": "NEW"
+  },
+  {
+   "id": "m3",
+   "f": "gw",
+   "to": "gw",
+   "l": "cache hit? no credit",
+   "what": "Same engine and parameters within the flow's cache time returns the stored answer.",
+   "t": "NEW",
+   "hl": "ledger"
+  },
+  {
+   "id": "m4",
+   "f": "gw",
+   "to": "gw",
+   "l": "hourly, monthly and per-flow budget",
+   "what": "A flow that reaches its monthly envelope stops; the 50-search demo reserve is spent only on purpose.",
+   "t": "NEW",
+   "hl": "budget"
+  },
+  {
+   "id": "m5",
+   "f": "gw",
+   "to": "serp",
+   "l": "live call",
+   "what": "Logged in the credit ledger before caching, so a spent credit is never lost from the count.",
+   "t": "NEW"
+  },
+  {
+   "id": "m6",
+   "f": "serp",
+   "to": "gw",
+   "l": "response recorded",
+   "what": "Saved as a dated replay fixture, so tests and the demo run without spending credits.",
+   "res": true
+  }
+ ]
+}

@@ -58,13 +58,31 @@ class SweepReport:
         }
 
 
-def _merge(leads: list[Lead]) -> dict[str, Lead]:
-    out: dict[str, Lead] = {}
+def _merge(leads: list[Lead], covered_issuers: set[str] | None = None) -> dict[str, Lead]:
+    """Group leads that are one launch under different wordings (suggestion 8); each group
+    keeps the most specific name and every source. A generic name ("SBI Credit Cards") is
+    dropped for issuers the catalogue already covers; for a bank new to the market
+    ("Bandhan Bank enters credit cards") the generic lead is the news, so it stays."""
+    covered = covered_issuers or set()
+    groups: list[list[Lead]] = []
     for lead in leads:
-        if lead.key in out:
-            out[lead.key].refs = _union(out[lead.key].refs, lead.refs)
+        if triage.is_generic(lead.card_name, lead.issuer) and triage.issuer_slug(lead.issuer) in covered:
+            continue
+        home = next((g for g in groups if any(
+            m.key == lead.key or triage.same_launch(m.issuer, m.card_name, m.summary, lead.issuer, lead.card_name, lead.summary)
+            for m in g)), None)
+        if home is None:
+            groups.append([lead])
         else:
-            out[lead.key] = Lead(lead.source, lead.issuer, lead.card_name, list(lead.refs), lead.summary)
+            home.append(lead)
+    out: dict[str, Lead] = {}
+    for g in groups:
+        best = max(g, key=lambda m: (triage.specificity(m.card_name, m.issuer), len(m.card_name)))
+        refs: list[dict] = []
+        for m in g:
+            refs = _union(refs, m.refs)
+        merged = Lead(best.source, best.issuer, best.card_name, refs, best.summary)
+        out[merged.key] = merged
     return out
 
 
@@ -75,6 +93,32 @@ def _ref_id(r: dict) -> tuple:
 def _union(a: list[dict], b: list[dict]) -> list[dict]:
     seen = {_ref_id(r) for r in a}
     return a + [r for r in b if _ref_id(r) not in seen]
+
+
+def catalogue_names(conn: Connection) -> list[tuple[str, str, str]]:
+    """(card_id, name, issuer) for the catalogue plus the seed list."""
+    out = list(triage.seed_cards())
+    out += [(row.id, row.name, row.issuer) for row in store.all_cards(conn)]
+    return out
+
+
+def _known_card(lead: Lead, known: dict[str, str], catalogue: list[tuple[str, str, str]]) -> str | None:
+    if lead.key in known:
+        return known[lead.key]
+    return next((cid for cid, name, issuer in catalogue
+                 if triage.same_launch(issuer, name, name, lead.issuer, lead.card_name, lead.card_name)), None)
+
+
+def _existing_row(c: Connection, lead: Lead):
+    """The candidate from an earlier sweep for this launch: same key, or the same launch
+    under another wording."""
+    row = c.execute(select(launch_candidate).where(launch_candidate.c.dedupe_key == lead.key)).first()
+    if row is not None:
+        return row
+    for r in c.execute(select(launch_candidate)).all():
+        if r.issuer and triage.same_launch(r.issuer, r.name, r.summary or "", lead.issuer, lead.card_name, lead.summary):
+            return r
+    return None
 
 
 def known_keys(conn: Connection) -> dict[str, str]:
@@ -139,20 +183,24 @@ def _profiled_summary(result: ProfileResult) -> str:
     return f"Profiled from the bank's own pages: {published} fields published as facts{tail}."
 
 
-def _process(lead: Lead, known: dict[str, str]) -> Outcome:
+def _process(lead: Lead, known: dict[str, str], catalogue: list[tuple[str, str, str]] | None = None) -> Outcome:
+    catalogue = catalogue or []
     with engine().begin() as c:
-        row = c.execute(select(launch_candidate).where(launch_candidate.c.dedupe_key == lead.key)).first()
+        row = _existing_row(c, lead)
     if row is not None and row.status != "speculative":
         with engine().begin() as c:
             c.execute(update(launch_candidate).where(launch_candidate.c.id == row.id).values(refs=_union(row.refs, lead.refs)))
         return Outcome(lead.key, row.name, row.issuer, row.status, row.card_id, row.summary, "seen")
-    if row is None and lead.key in known:
-        summary = f"Already in the catalogue as {known[lead.key]}."
+    known_id = _known_card(lead, known, catalogue) if row is None else None
+    if known_id:
+        summary = f"Already in the catalogue as {known_id}."
         with engine().begin() as c:
             c.execute(insert(launch_candidate).values(
-                dedupe_key=lead.key, name=lead.card_name, issuer=lead.issuer, card_id=known[lead.key], status="known",
+                dedupe_key=lead.key, name=lead.card_name, issuer=lead.issuer, card_id=known_id, status="known",
                 refs=lead.refs, summary=summary))
-        return Outcome(lead.key, lead.card_name, lead.issuer, "known", known[lead.key], summary, "new")
+        return Outcome(lead.key, lead.card_name, lead.issuer, "known", known_id, summary, "new")
+    variant = triage.variant_family(lead.issuer, lead.card_name, catalogue)
+    prefix = f"New variant of {variant[1]} (the catalogue has {variant[0]} from another issuer). " if variant else ""
 
     prep = _prepare(lead)
     refs = _union(_union(row.refs if row is not None else [], lead.refs), prep.refs)
@@ -162,16 +210,20 @@ def _process(lead: Lead, known: dict[str, str]) -> Outcome:
         status, card_id, reason = "speculative", None, prep.reason
         result = None
         if prep.extraction is not None:
+            # Savepoint: a card joins the catalogue only if at least one fact publishes;
+            # otherwise its empty card row and events are undone.
+            sp = c.begin_nested()
             result = profile_card(prep.extraction, origin="launch_radar", conn=c)
-            card_id = prep.extraction.id
             if any(f.outcome in PUBLISHED for f in result.fields):
-                status = "profiled"
+                sp.commit()
+                status, card_id = "profiled", prep.extraction.id
             else:
+                sp.rollback()
                 reason = f"official page found but no field passed the quote check ({result.summary()})"
         if status == "profiled":
-            summary = _profiled_summary(result)
+            summary = prefix + _profiled_summary(result)
         else:
-            summary = f"Reported, not confirmed by the bank: {reason}. {lead.summary}".strip()
+            summary = f"{prefix}Reported, not confirmed by the bank: {reason}. {lead.summary}".strip()
         values = {"name": lead.card_name, "issuer": lead.issuer, "card_id": card_id, "status": status, "refs": refs, "summary": summary}
         if row is None:
             cid = c.execute(insert(launch_candidate).values(dedupe_key=lead.key, **values)).inserted_primary_key[0]
@@ -203,10 +255,31 @@ def run_sweep(as_of: date | None = None, ads_issuers: tuple[str, ...] = sources.
     workers = [sources.news_worker(as_of), sources.ads_worker(as_of, ads_issuers)]
     report = SweepReport(as_of, workers)
     with engine().begin() as c:
+        # Before reading the catalogue, so an empty card from an older sweep isn't "known".
+        prune_empty_cards(c)
         known = known_keys(c)
-    for lead in _merge([lead for w in workers for lead in w.leads]).values():
-        report.outcomes.append(_process(lead, known))
+        catalogue = catalogue_names(c)
+    covered = {triage.issuer_slug(issuer) for _, _, issuer in catalogue}
+    for lead in _merge([lead for w in workers for lead in w.leads], covered).values():
+        report.outcomes.append(_process(lead, known, catalogue))
     with engine().begin() as c:
         detect_variants(c)
         detect_closed(c)
     return report
+
+
+def prune_empty_cards(conn: Connection) -> list[str]:
+    """Remove catalogue cards Launch Radar added that have no published fact (left by
+    sweeps before the savepoint above), with their events and speculation."""
+    from cc_smith.db import card, card_field, knowledge_event, speculation
+
+    removed = []
+    for row in conn.execute(select(card.c.id).where(card.c.origin == "launch_radar")).all():
+        published = conn.execute(select(card_field.c.id).where(
+            card_field.c.card_id == row.id, card_field.c.status == "published")).first()
+        if published is None:
+            for t in (card_field, speculation, knowledge_event):
+                conn.execute(t.delete().where(t.c.card_id == row.id))
+            conn.execute(card.delete().where(card.c.id == row.id))
+            removed.append(row.id)
+    return removed

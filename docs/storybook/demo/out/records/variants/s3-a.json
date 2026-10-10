@@ -1,0 +1,107 @@
+{
+ "scene": "s3",
+ "order": 1,
+ "name": "Google News: launches in the last 30 days",
+ "wires": [
+  {
+   "cap": "Market",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Market"
+    },
+    {
+     "t": "tabs",
+     "items": [
+      "Offers for you",
+      "New launches",
+      "What changed"
+     ],
+     "on": 1
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "Advantage SBI Card",
+       "meta": "News · Kalkine India, The Economic Times",
+       "amt": "",
+       "st": "grey",
+       "stl": "reported",
+       "cb": "none"
+      },
+      {
+       "no": "Ultimate Travel Credit Card",
+       "meta": "News · The Economic Times · YES Bank",
+       "amt": "",
+       "st": "grey",
+       "stl": "reported",
+       "cb": "none"
+      },
+      {
+       "no": "Scapia Axis Bank Credit Card",
+       "meta": "New variant of Scapia",
+       "amt": "",
+       "st": "grey",
+       "stl": "reported",
+       "cb": "none"
+      }
+     ],
+     "hl": "news",
+     "label": "New launches"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "radar",
+  "gw",
+  "serp",
+  "llm"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "radar",
+   "to": "gw",
+   "l": "google_news: launches new credit card India",
+   "what": "One query a day, India and English. Results older than 30 days are dropped.",
+   "code": "engine=google_news  q=\"launches new credit card India when:30d\"  gl=in  hl=en",
+   "t": "NEW",
+   "hl": "news"
+  },
+  {
+   "id": "m2",
+   "f": "gw",
+   "to": "serp",
+   "l": "GET serpapi.com/search.json",
+   "what": "Only after the guard, cache and budget checks (step 6).",
+   "t": "NEW"
+  },
+  {
+   "id": "m3",
+   "f": "serp",
+   "to": "radar",
+   "l": "news_results[]",
+   "what": "Title, source, date and link for each story. The search_id is kept with every lead as provenance.",
+   "code": "search_id 6ac998f1e6590e5fe4201004",
+   "res": true
+  },
+  {
+   "id": "m4",
+   "f": "radar",
+   "to": "radar",
+   "l": "rules drop noise",
+   "what": "Rules remove non-card stories (loans, offers, results) and fuzzy-merge the same launch reported twice.",
+   "t": "NEW"
+  },
+  {
+   "id": "m5",
+   "f": "radar",
+   "to": "llm",
+   "l": "name the card in each headline",
+   "what": "Haiku names the card and issuer for headlines the rules kept; if it fails, the rules' answer stands.",
+   "t": "NEW"
+  }
+ ]
+}

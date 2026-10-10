@@ -72,7 +72,32 @@ def load(conn: Connection, path: Path, refresh: bool = False) -> dict[str, int]:
     return counts
 
 
+_UP_TO_PCT = re.compile(r"\bup\s?to\s+\d+(?:\.\d+)?\s?%", re.IGNORECASE)
+
+
+def is_up_to(o) -> bool:
+    """'Up to 25% … max ₹11,300' leaves the actual percentage open; '10% up to ₹1,000' is a
+    fixed 10% with a cap and is not an 'up to' offer."""
+    text = f"{o.title} {o.refs[0].get('quote', '') if o.refs else ''}"
+    return bool(_UP_TO_PCT.search(text))
+
+
+def up_to_ceiling(o, amount_paise: int) -> int | None:
+    """The most an 'up to' offer can give on this amount: the offer's own maximum, or the
+    top percentage when no maximum is stated."""
+    if o.min_txn_paise and amount_paise < o.min_txn_paise:
+        return 0
+    top = amount_paise * o.pct_bp // 10_000 if o.pct_bp else None
+    if o.max_paise and top is not None:
+        return min(top, o.max_paise)
+    return o.max_paise or top
+
+
 def estimate(o, amount_paise: int) -> int | None:
+    """Expected value for offers with a fixed rate. 'Up to' offers return None: their real
+    value is unknown, so they are shown with up_to_ceiling and kept out of combined figures."""
+    if is_up_to(o):
+        return None
     if o.min_txn_paise and amount_paise < o.min_txn_paise:
         return 0
     if o.flat_paise:

@@ -1,0 +1,9 @@
+{
+ "order": 4,
+ "n": 4,
+ "where": "Step 1",
+ "title": "Bureau and SMS import are simulated",
+ "paras": [
+  "The screens no longer say so. The voiceover must say it once, in step 1."
+ ]
+}

@@ -29,16 +29,7 @@ class NoticesScreen extends StatelessWidget {
         ),
       ]);
     } else {
-      final act = notices.where((n) => n.severity == 'act').length;
-      final watch = notices.where((n) => n.severity == 'watch').length;
-      body = ListView(padding: const EdgeInsets.fromLTRB(16, 4, 16, 24), children: [
-        Text(
-          [if (act > 0) '$act to act on', if (watch > 0) '$watch to keep an eye on', if (act + watch == 0) 'All good'].join(' · '),
-          style: Theme.of(context).textTheme.titleSmall,
-        ),
-        const SizedBox(height: 4),
-        for (final n in notices) NoticeCard(n: n),
-      ]);
+      body = NoticeList(notices: notices);
     }
     return Scaffold(
       appBar: AppBar(title: const Text('Notices'), actions: const [ProfileAction()]),
@@ -64,6 +55,7 @@ IconData noticeIcon(String kind) => switch (kind) {
   'fee_offer' => Icons.card_giftcard,
   'offer' => Icons.local_offer_outlined,
   'card_change' => Icons.change_circle_outlined,
+  'launch' => Icons.rocket_launch_outlined,
   _ => Icons.notifications_none,
 };
 
@@ -95,6 +87,7 @@ class NoticeCard extends StatelessWidget {
                   Pill(label, icon: icon, color: chipBg, onColor: onChip),
                   if (n.due != null) Pill('By ${shortDate(n.due)}', icon: Icons.event, color: s.surfaceContainerHigh, onColor: s.onSurface),
                   if (n.tier == 'speculation') const SpeculationPill(),
+                  if (n.isGuidance) Pill('General guidance', icon: Icons.lightbulb_outline, color: s.surfaceContainerHighest, onColor: s.onSurfaceVariant),
                 ]),
                 const SizedBox(height: 8),
                 Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -121,7 +114,9 @@ class NoticeCard extends StatelessWidget {
                       label: Text(app.cardName(n.cardId!), overflow: TextOverflow.ellipsis),
                     ),
                   ),
-                SourceList(refs: n.refs, label: n.tier == 'fact' ? 'Source' : 'References'),
+                for (final c in n.requires) ConditionAsk(c),
+                // Guidance is general advice, not a bank statement: no source to show.
+                if (!n.isGuidance) SourceList(refs: n.refs, label: n.tier == 'fact' ? 'Source' : 'References'),
               ]),
             ),
           ),
@@ -145,5 +140,48 @@ class _Labelled extends StatelessWidget {
         TextSpan(text: text, style: t.textTheme.bodyMedium),
       ])),
     );
+  }
+}
+
+
+/// Notices with a summary line; ones whose conditions the user said No to collapse into
+/// "Not for you (N)" at the end. Unanswered ones stay in the list with their question.
+class NoticeList extends StatelessWidget {
+  final List<Notice> notices;
+  final bool showCounts;
+  final Widget? header;
+  const NoticeList({super.key, required this.notices, this.showCounts = true, this.header});
+
+  @override
+  Widget build(BuildContext context) {
+    final app = AppScope.of(context);
+    String elig(Notice n) => eligibilityFor(n.requires, app.answers, n.eligibility);
+    final notForYou = notices.where((n) => elig(n) == 'no').toList();
+    final shown = notices.where((n) => elig(n) != 'no').toList();
+    final act = shown.where((n) => n.severity == 'act').length;
+    final watch = shown.where((n) => n.severity == 'watch').length;
+    return ListView(padding: const EdgeInsets.fromLTRB(16, 4, 16, 24), children: [
+      ?header,
+      if (showCounts)
+        Text(
+          [if (act > 0) '$act to act on', if (watch > 0) '$watch to keep an eye on', if (act + watch == 0) 'All good'].join(' · '),
+          style: Theme.of(context).textTheme.titleSmall,
+        ),
+      const SizedBox(height: 4),
+      for (final n in shown) NoticeCard(n: n),
+      if (notForYou.isNotEmpty)
+        Card(
+          child: Theme(
+            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+            child: ExpansionTile(
+              leading: const Icon(Icons.block),
+              title: Text('Not for you (${notForYou.length})'),
+              subtitle: const Text('Offers whose conditions you said you don\'t meet'),
+              childrenPadding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+              children: [for (final n in notForYou) NoticeCard(n: n)],
+            ),
+          ),
+        ),
+    ]);
   }
 }

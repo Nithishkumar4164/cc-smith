@@ -1,0 +1,10 @@
+{
+ "order": 1,
+ "call": "google_news",
+ "owner": "SerpApi",
+ "gives": "Launch stories in India from the last 30 days",
+ "tag": "NEW",
+ "steps": [
+  3
+ ]
+}

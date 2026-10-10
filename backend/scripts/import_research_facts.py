@@ -18,7 +18,8 @@ RUPEE = 100
 
 def load_cards() -> dict[str, dict]:
     cards = {}
-    for name in ("verified-card-facts.json", "seed-card-facts-batch2.json"):
+    # Later files override earlier ones card by card (batch 3 re-read JS-rendered pages).
+    for name in ("verified-card-facts.json", "seed-card-facts-batch2.json", "seed-card-facts-batch3.json"):
         path = ROOT / "docs" / "research" / name
         if path.exists():
             for c in json.loads(path.read_text())["cards"]:
@@ -377,11 +378,17 @@ def airtel_axis(s: Src) -> dict:
         "earn_rules": [
             {"id": "zomato", "match": {"merchants": ["zomato"]}, "rate": pct(1000), "cap_ids": ["zomato"], "min_txn_paise": 499 * RUPEE, "src": [s.earn(2)]},
             {"id": "blinkit", "match": {"merchants": ["blinkit"]}, "rate": pct(1000), "cap_ids": ["blinkit"], "min_txn_paise": 499 * RUPEE, "src": [s.earn(2)]},
-            {"id": "other", "rate": pct(100), "src": [s.earn(3)],
-             "note": "Airtel 25% and utilities 10% are capped at multiples of the month's base cashback; not modelled yet, so they earn the base 1%."},
+            {"id": "airtel", "match": {"merchants": ["airtel"]}, "rate": pct(2500), "cap_ids": ["airtel"], "src": [s.earn(0)],
+             "note": "Mobile, broadband, Wi-Fi and DTH bills via the Airtel Thanks app."},
+            {"id": "airtel_utilities", "match": {"merchants": ["airtel_thanks_bills"]}, "rate": pct(1000), "cap_ids": ["airtel_utilities"], "src": [s.earn(1)]},
+            {"id": "other", "rate": pct(100), "src": [s.earn(3)]},
         ],
         "caps": [
             {"id": k, "amount": 200 * RUPEE, "unit": "paise", "period": "calendar_month", "src": [s.earn(2)]} for k in ("zomato", "blinkit")
+        ] + [
+            # Capped at a multiple of the base cashback earned in the same statement month.
+            {"id": "airtel", "amount": 200, "unit": "base_multiple", "of_rule": "other", "period": "statement_cycle", "src": [s.earn(0)]},
+            {"id": "airtel_utilities", "amount": 100, "unit": "base_multiple", "of_rule": "other", "period": "statement_cycle", "src": [s.earn(1)]},
         ],
         "exclusions": [
             {"categories": ["fuel", "rent", "wallet", "jewellery", "insurance", "education", "government"], "src": [s.excl(0)]},
@@ -462,8 +469,83 @@ def kiwi(s: Src) -> dict:
     }
 
 
-def fees_only(s: Src, joining: int, annual: int, waiver: int | None) -> dict:
-    return {"fees": fees(s, joining, annual, waiver)}
+def simplyclick(s: Src) -> dict:
+    partners = ["apollo_24x7", "bookmyshow", "cleartrip", "dominos", "igp", "myntra", "netmeds", "swiggy", "yatra", "gyftr", "tatacliq"]
+    return {
+        "fees": fees(s, 499, 499, 100_000),
+        "currency": {"kind": "points", "name": "SBI Card Reward Points", "value_paise": 25, "src": s.point_value()},
+        "earn_rules": [
+            {"id": "partner_10x", "match": {"merchants": partners, "channels": ["online"]}, "rate": per(10, 100), "cap_ids": ["partner_10x"],
+             "src": [s.earn(0), s.earn(2)], "note": "10X of the 1 RP per Rs. 100 base. Product page lists Swiggy; the Apr 2025 notice moved it to 5X."},
+            {"id": "online_5x", "match": {"channels": ["online"]}, "rate": per(5, 100), "cap_ids": ["online_5x"], "src": [s.earn(1), s.earn(2)]},
+            {"id": "base", "rate": per(1, 100), "src": [s.earn(2)]},
+        ],
+        "caps": [
+            {"id": "partner_10x", "amount": 10_000, "unit": "points", "period": "calendar_month", "src": [s.earn_cap(0)]},
+            {"id": "online_5x", "amount": 10_000, "unit": "points", "period": "calendar_month", "src": [s.earn_cap(1)]},
+        ],
+        "exclusions": [
+            {"categories": ["fuel"], "src": [s.excl(0)]},
+            {"categories": ["wallet"], "src": [s.excl(1)]},
+            {"categories": ["rent"], "src": [s.excl(2)]},
+            {"categories": ["government"], "src": [s.excl(3)]},
+            {"categories": ["gaming"], "src": [s.excl(4)]},
+            {"categories": ["gift_card"], "except_merchants": ["gyftr"], "rule_ids": ["partner_10x"], "src": [s.excl(5)]},
+        ],
+    }
+
+
+def coral(s: Src) -> dict:
+    # No official point value found, so no currency: earn rules publish, the card stays "can't assess yet".
+    return {
+        "fees": fees(s, 500, 500, 150_000),
+        "earn_rules": [
+            {"id": "utilities_insurance", "match": {"categories": ["utilities", "insurance"]}, "rate": per(1, 100), "src": [s.earn(0), s.earn(1)]},
+            {"id": "retail", "rate": per(2, 100), "src": [s.earn(0)]},
+        ],
+        "exclusions": [{"categories": ["fuel"], "src": [s.excl(0)]}],
+    }
+
+
+def au_lit(s: Src) -> dict:
+    return {
+        "fees": fees(s, 0, 0, None),
+        "currency": {"kind": "points", "name": "AU Reward Points", "value_paise": 20, "src": s.point_value()},
+        "earn_rules": [
+            {"id": "base", "rate": per(1, 100), "cap_ids": ["cycle"], "src": [s.earn(0)],
+             "note": "Lifetime base rate only; paid 90-day feature packs (5X/10X points, category and milestone cashback) are out of scope."},
+            {"id": "utilities_insurance", "match": {"categories": ["utilities", "insurance"]}, "rate": per(1, 100), "cap_ids": ["cycle"], "src": [s.earn(1)],
+             "note": "The 100 RP per-transaction cap on utilities is not modelled."},
+        ],
+        "caps": [
+            {"id": "cycle", "amount": 10_000, "unit": "points", "period": "statement_cycle", "src": [s.earn_cap(0)]},
+        ],
+        "exclusions": [
+            {"categories": ["fuel", "rent", "education", "government"], "src": [s.excl(0)]},
+        ],
+    }
+
+
+def scapia_federal(s: Src) -> dict:
+    # Scapia operates the reward programme, so scapia.cards (and its document host) is official
+    # for currency and earn rules. Exclusions are issuer-owned; Federal Bank's pages are bot-walled.
+    travel_only = "Coins redeem only for travel booked in the Scapia app (travel-only redemption)."
+    return {
+        "fees": fees(s, 0, 0, None),
+        "currency": {"kind": "points", "name": "Scapia coins", "value_paise": 20,
+                     "src": [*s.point_value(), {"url": s.c["coin_conversion_url"], "quote": s.c["coin_conversion_quote"]}]},
+        "earn_rules": [
+            {"id": "scapia_travel", "match": {"merchants": ["scapia"]}, "rate": pct(2000), "src": [s.earn(1)], "note": travel_only},
+            {"id": "upi_rupay", "match": {"channels": ["upi"]}, "rate": pct(500), "priority": 1, "min_txn_paise": 500 * RUPEE, "src": [s.earn(2)],
+             "note": "Complimentary RuPay card; 'more than 500 Rs.' modelled as a ₹500 minimum. " + travel_only},
+            {"id": "visa", "rate": pct(1000), "min_txn_paise": 20 * RUPEE, "src": [s.earn(0)], "note": travel_only},
+        ],
+        # Issuer-owned field from a Scapia-hosted copy: it becomes speculation, which keeps the
+        # card unscored until Federal Bank's own page confirms the exclusions.
+        "exclusions": [
+            {"categories": ["rent", "education", "gift_card", "fuel", "wallet", "insurance", "utilities"], "src": [s.excl(0)]},
+        ],
+    }
 
 
 MAPPERS = {
@@ -483,12 +565,11 @@ MAPPERS = {
     "idfc_first_millennia": idfc_millennia,
     "hsbc_live_plus": live_plus,
     "kotak_league_platinum": kotak_league,
-    # Base earn rate or point value not stated on any official page we could fetch:
-    # catalogue entry with fees only, shown as "can't assess yet" (A1).
-    "sbi_simplyclick": lambda s: fees_only(s, 499, 499, 100_000),
-    "icici_coral": lambda s: fees_only(s, 500, 500, 150_000),
-    "au_lit": lambda s: fees_only(s, 0, 0, None),
-    "scapia_federal": lambda s: fees_only(s, 0, 0, None),
+    # Batch 3: official pages read with the headless-browser fetch.
+    "sbi_simplyclick": simplyclick,
+    "icici_coral": coral,
+    "au_lit": au_lit,
+    "scapia_federal": scapia_federal,
     "kiwi_yes_klick": kiwi,
 }
 

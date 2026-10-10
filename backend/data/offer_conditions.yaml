@@ -1,0 +1,4 @@
+# Which conditions each fee offer requires (keys from conditions.yaml). Kept beside the
+# offer records; the offer's own quote states the condition.
+hdfc_swiggy_ornge_ltf_corporate: [select_corporate_employee]
+axis_magnus_ltf_burgundy_salary: [axis_burgundy_salary]

@@ -1,1 +1,46 @@
-{"nodes": [{"name": "Card holder", "role": "on an Android phone", "note": "no login, no card numbers"}, {"name": "App", "role": "Flutter", "note": "draws screens, decodes UPI QR codes"}, {"name": "API", "role": "FastAPI", "note": "one backend; integer paise everywhere"}, {"name": "Rewards engine", "role": "pure Python", "note": "does every calculation", "plus": true}, {"name": "Quick model", "role": "Haiku 4.5, 2 s limit", "note": "chooses the card from the engine's figures; never calculates"}, {"name": "Card facts", "role": "SQLite now, Postgres in M1", "note": "facts quoted from bank pages; the rest is speculation"}, {"name": "Ledger", "role": "payments and limits", "note": "manual capture until M2", "plus": true}, {"name": "Fetcher + SerpApi gateway", "role": "bank pages, News, Ads Transparency", "note": "replay fixtures when there are no keys"}], "updatedAt": "2026-10-09T15:20:00Z", "note": "Rewards engine calculates; a quick model chooses (D10)"}
+{
+ "nodes": [
+  {
+   "name": "Card holder",
+   "role": "on an Android phone",
+   "note": "no login, no card numbers"
+  },
+  {
+   "name": "App",
+   "role": "Flutter",
+   "note": "draws screens, decodes UPI QR codes"
+  },
+  {
+   "name": "API",
+   "role": "FastAPI",
+   "note": "one backend; integer paise everywhere"
+  },
+  {
+   "name": "Rewards engine",
+   "role": "pure Python",
+   "note": "does every calculation",
+   "plus": true
+  },
+  {
+   "name": "Quick model",
+   "role": "Haiku 4.5, 2 s limit",
+   "note": "chooses the card from the engine's figures; never calculates"
+  },
+  {
+   "name": "Card facts",
+   "role": "SQLite now, Postgres in M1",
+   "note": "facts quoted from bank pages; the rest is speculation"
+  },
+  {
+   "name": "Ledger",
+   "role": "payments and limits",
+   "note": "manual capture until M2",
+   "plus": true
+  },
+  {
+   "name": "Fetcher + SerpApi gateway",
+   "role": "bank pages, News, Ads Transparency",
+   "note": "replay fixtures when there are no keys"
+  }
+ ]
+}

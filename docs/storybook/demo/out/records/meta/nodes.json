@@ -1,0 +1,29 @@
+{
+ "nodes": [
+  {
+   "name": "App",
+   "role": "Flutter",
+   "note": "Pay, Finder, Notices, Market"
+  },
+  {
+   "name": "API",
+   "role": "FastAPI",
+   "note": "rewards engine, card facts"
+  },
+  {
+   "name": "Launch Radar",
+   "role": "daily job",
+   "note": "leads, verify, profile"
+  },
+  {
+   "name": "SerpApi gateway",
+   "role": "one door",
+   "note": "guard, cache, budget, ledger"
+  },
+  {
+   "name": "SerpApi",
+   "role": "4 Google engines",
+   "note": "news, ads, ad details, search"
+  }
+ ]
+}

@@ -103,3 +103,14 @@ def test_checkout_shows_bank_offer_hint_without_changing_the_pick(client, user, 
     assert r["offers"][0]["issuer"] == "HDFC Bank" and r["offers"][0]["tier"] == "fact"
     assert r["offers"][0]["est_saving_paise"] == 800 * R
     assert "₹1,200 in all" in r["text"]
+
+
+def test_logged_payments_build_the_airtel_base_and_unlock_the_bill_cap(client, user):
+    client.put("/me/holdings", json=[{"card_id": "axis_airtel"}], headers=user)
+    first = client.post("/pay", json={"merchant": "Airtel", "amount_paise": 999 * R}, headers=user).json()
+    assert first["best"]["reward_paise"] == 0
+    assert any("twice the base cashback" in n for n in first["best"]["notes"])
+    client.post("/pay/confirm", json={"card_id": "axis_airtel", "merchant": "DMart", "amount_paise": 3_000 * R,
+                                      "idempotency_key": "base-1"}, headers=user)
+    after = client.post("/pay", json={"merchant": "Airtel", "amount_paise": 999 * R}, headers=user).json()
+    assert after["best"]["reward_paise"] == 60 * R  # 2 x ₹30 base from the ₹3,000 DMart payment

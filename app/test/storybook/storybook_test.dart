@@ -39,6 +39,8 @@ http.Client backend() => MockClient((req) async {
         ('GET', '/me') => freshMe ? jsonEncode({...jsonDecode(fx('me')) as Map, 'holdings': [], 'pools': [], 'spends': {}, 'category_totals': {}}) : fx('me'),
         ('GET', '/me/transactions') => fx('transactions'),
         ('GET', '/me/notices') => fx('notices'),
+        ('GET', '/me/market/offers') => File('test/fixtures/contract/market_offers.json').readAsStringSync(),
+        ('GET', '/me/budget') => '{"month":"2026-10","adapted_from":null,"lines":[],"total_paise":0}',
         ('GET', '/me/credit') => fx('credit'),
         ('PUT', '/me/pools') => fx('me'),
         ('POST', final p) when p.endsWith('/bill-paid') => fx('credit'),
@@ -64,12 +66,12 @@ http.Client backend() => MockClient((req) async {
 
 var freshMe = false;
 
-Future<void> pumpApp(WidgetTester tester, {bool fresh = false}) async {
+Future<void> pumpApp(WidgetTester tester, {bool fresh = false, bool finderPrefs = true}) async {
   freshMe = fresh;
   tester.view.physicalSize = const Size(1080, 2340);
   tester.view.devicePixelRatio = 2.625;
   addTearDown(tester.view.reset);
-  SharedPreferences.setMockInitialValues(fresh ? {} : {'user_id': uid, 'onboarded_user': uid});
+  SharedPreferences.setMockInitialValues(fresh ? {} : {'user_id': uid, 'onboarded_user': uid, if (finderPrefs) 'finder_prefs_user': uid});
   final state = AppState(await SharedPreferences.getInstance(), client: backend());
   await tester.pumpWidget(AppScope(state: state, child: const CcSmithApp()));
   await state.boot();
@@ -158,6 +160,9 @@ void main() {
     await shot('02_cards_you_hold');
     await tester.tap(find.text('Next'));
     await tester.pumpAndSettle();
+    await shot('03a_budget_choice');
+    await tester.tap(find.text('Enter manually'));
+    await tester.pumpAndSettle();
     // Category totals; merchants are part of their category (Dining ₹9,000 of which Swiggy ₹6,000…).
     const amounts = {
       'Dining and food delivery': '9000', 'Groceries': '10000', 'Online shopping': '15000',
@@ -198,10 +203,7 @@ void main() {
     await tester.drag(pageScroll.first, const Offset(0, 3000));
     await tester.pumpAndSettle();
     await shot('03_spends');
-    await tester.tap(find.text('Next'));
-    await tester.pumpAndSettle();
-    await shot('04_preferences');
-    await tester.tap(find.text('Finish'));
+    await tester.tap(find.text('Save'));
     await tester.pumpAndSettle();
     await shot('05_pay_empty');
   });
@@ -236,8 +238,12 @@ void main() {
   });
 
   testWidgets('finder', (tester) async {
-    await pumpApp(tester);
+    await pumpApp(tester, finderPrefs: false);
     await tester.tap(find.text('Finder'));
+    await tester.pumpAndSettle();
+    // First visit: reward type and fee ceiling are asked here, not in onboarding.
+    await shot('04_preferences');
+    await tester.tap(find.text('Find my best cards'));
     await tester.pumpAndSettle();
     await shot('13_finder');
     await scroll(tester, 800);
@@ -265,6 +271,9 @@ void main() {
   testWidgets('market and profile', (tester) async {
     await pumpApp(tester);
     await tester.tap(find.text('Market'));
+    await tester.pumpAndSettle();
+    await shot('19b_market_offers');
+    await tester.tap(find.text('Launch Radar'));
     await tester.pumpAndSettle();
     await shot('19_market');
     await tester.tap(find.text('What changed'));

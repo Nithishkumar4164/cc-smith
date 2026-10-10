@@ -1,0 +1,130 @@
+{
+ "scene": "s1",
+ "order": 1,
+ "name": "Find my cards, then budget",
+ "wires": [
+  {
+   "cap": "Find my cards",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Find my cards"
+    },
+    {
+     "t": "input",
+     "text": "Mobile number  +91 98765 43210",
+     "filled": true
+    },
+    {
+     "t": "text",
+     "text": "Code sent to +91 9876543210. Filled in automatically from the SMS."
+    },
+    {
+     "t": "input",
+     "text": "One-time code  123456",
+     "filled": true
+    },
+    {
+     "t": "btn",
+     "text": "Verify and find my cards",
+     "kind": "primary",
+     "hl": "otp"
+    }
+   ]
+  },
+  {
+   "cap": "What you spend each month",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "What you spend each month"
+    },
+    {
+     "t": "btn",
+     "text": "Read my SMS & email",
+     "kind": "primary",
+     "hl": "sms"
+    },
+    {
+     "t": "text",
+     "text": "Read 40 card transactions from last month's SMS and email."
+    },
+    {
+     "t": "kv",
+     "rows": [
+      {
+       "k": "Dining",
+       "v": "₹9,000"
+      },
+      {
+       "k": "Groceries",
+       "v": "₹12,000"
+      },
+      {
+       "k": "Shopping",
+       "v": "₹15,000"
+      },
+      {
+       "k": "Total",
+       "v": "₹59,000 / month",
+       "total": true
+      }
+     ],
+     "hl": "budget"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "u",
+  "app",
+  "api"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "u",
+   "to": "app",
+   "l": "enters phone, consents",
+   "what": "The bureau step. **Simulated** for the demo: say it in the voiceover, not on screen.",
+   "t": "NEW"
+  },
+  {
+   "id": "m2",
+   "f": "app",
+   "to": "api",
+   "l": "POST /me/discovery/bureau/start",
+   "what": "Starts a fetch and returns a request id. The app fills the code in, as SMS autofill would.",
+   "code": "{\"phone\":\"9876543210\",\"consent\":true}",
+   "t": "NEW",
+   "hl": "otp"
+  },
+  {
+   "id": "m3",
+   "f": "app",
+   "to": "api",
+   "l": "POST /me/discovery/bureau/verify",
+   "what": "Returns the card accounts and limits; the user confirms which catalogue card each one is.",
+   "t": "NEW"
+  },
+  {
+   "id": "m4",
+   "f": "app",
+   "to": "api",
+   "l": "POST /me/budget/import-demo",
+   "what": "Reads last month's transactions (simulated SMS and email) and fills the budget from them.",
+   "code": "{\"sources\":[\"sms\",\"email\"]}",
+   "t": "NEW",
+   "hl": "sms"
+  },
+  {
+   "id": "m5",
+   "f": "api",
+   "to": "app",
+   "l": "budget, editable and self-adapting",
+   "what": "Unpinned lines follow last month's actuals each new month; edited lines stay.",
+   "res": true,
+   "hl": "budget"
+  }
+ ]
+}

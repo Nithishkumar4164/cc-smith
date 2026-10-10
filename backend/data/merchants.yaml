@@ -51,6 +51,12 @@ merchants:
   - {key: irctc, name: IRCTC, category: travel, channel: online, aliases: [indian railways], mcc: "4112"}
   - {key: marriott, name: Marriott hotels, category: travel, channel: offline, aliases: [jw marriott, westin, sheraton], mcc: "3500"}
   - {key: taj, name: Taj Hotels, category: travel, channel: offline, aliases: [ihcl, taj hotel], mcc: "7011"}
+  - {key: scapia, name: Scapia app (travel), category: travel, channel: online, aliases: [scapia travel, scapia flights, scapia hotels], mcc: "4722"}
+  - {key: apollo_24x7, name: Apollo 24|7, category: other, channel: online, aliases: [apollo 247, apollo pharmacy online], mcc: "5912"}
+  - {key: dominos, name: Domino's, category: dining, channel: online, aliases: [dominos pizza, domino's pizza], mcc: "5814"}
+  - {key: igp, name: IGP, category: online, channel: online, aliases: [igp.com, indian gifts portal], mcc: "5992"}
+  - {key: netmeds, name: Netmeds, category: other, channel: online, aliases: [netmeds.com], mcc: "5912"}
+  - {key: gyftr, name: GyFTR, category: gift_card, channel: online, aliases: [gyftr vouchers], mcc: "5947"}
   - {key: bookmyshow, name: BookMyShow, category: entertainment, channel: online, aliases: [bms], mcc: "7832"}
   - {key: pvr, name: PVR INOX, category: entertainment, channel: offline, aliases: [inox, pvr cinemas], mcc: "7832"}
   - {key: netflix, name: Netflix, category: entertainment, channel: online, aliases: [], mcc: "4899"}
@@ -58,6 +64,7 @@ merchants:
   - {key: sonyliv, name: Sony LIV, category: entertainment, channel: online, aliases: [], mcc: "4899"}
   - {key: cultfit, name: cult.fit, category: other, channel: online, aliases: [cult fit, curefit], mcc: "7997"}
   - {key: airtel, name: Airtel, category: utilities, channel: online, aliases: [airtel thanks, airtel recharge, airtel postpaid], mcc: "4814"}
+  - {key: airtel_thanks_bills, name: Bills via Airtel Thanks app, category: utilities, channel: online, aliases: [airtel thanks bill, airtel thanks electricity, airtel thanks gas], mcc: "4900"}
   - {key: jio, name: Jio, category: utilities, channel: online, aliases: [reliance jio, myjio], mcc: "4814"}
   - {key: bescom, name: BESCOM electricity, category: utilities, channel: online, aliases: [electricity bill], mcc: "4900"}
   - {key: bpcl, name: BPCL petrol pump, category: fuel, channel: offline, aliases: [bharat petroleum], mcc: "5541"}

@@ -1,0 +1,1273 @@
+{
+ "meta": {
+  "page": {
+   "eyebrow": "cc-smith · SerpApi India Hackathon 2026",
+   "title": "3-minute demo video",
+   "intro": "Seven timed shots with the voiceover for each. SerpApi carries the middle of the video: it finds launches (Google News, Ads Transparency), reads bank ads, and checks every lead on the bank's own site. Each step shows the screen to record and the calls behind it.",
+   "rolloutTitle": "Shot list",
+   "rolloutLede": "Record in this order."
+  },
+  "lanes": {
+   "lanes": {
+    "u": {
+     "name": "Card holder",
+     "role": "the user"
+    },
+    "app": {
+     "name": "App",
+     "role": "Flutter, Android"
+    },
+    "api": {
+     "name": "API",
+     "role": "FastAPI backend"
+    },
+    "radar": {
+     "name": "Launch Radar",
+     "role": "daily sweep job"
+    },
+    "gw": {
+     "name": "SerpApi gateway",
+     "role": "guard, cache, budget"
+    },
+    "serp": {
+     "name": "SerpApi",
+     "role": "Google engines"
+    },
+    "bank": {
+     "name": "Bank website",
+     "role": "official pages"
+    },
+    "llm": {
+     "name": "Haiku 4.5",
+     "role": "reads and names"
+    },
+    "eng": {
+     "name": "Rewards engine",
+     "role": "plain Python maths"
+    },
+    "kb": {
+     "name": "Card facts",
+     "role": "quotes from banks"
+    }
+   }
+  },
+  "theme": {
+   "brand": "cc-smith",
+   "font": "\"Roboto\", system-ui, sans-serif",
+   "colors": {
+    "primary": "#0E5E6F",
+    "on-primary": "#FFFFFF",
+    "ink": "#151D1F",
+    "sub": "#55666A",
+    "line": "#D5E2E4",
+    "bg": "#F4F9F9",
+    "grey": "#EEF2F3",
+    "lav": "#D4F1F6",
+    "lime": "#E6F4E9",
+    "mint": "#E2F1F3",
+    "good": "#1E7A3F",
+    "bad": "#B3261E",
+    "bad-bg": "#FCE8E6",
+    "warn": "#8A5100",
+    "warn-bg": "#FFF1DE",
+    "amber": "#8A5100",
+    "amber-bg": "#FFF1DE"
+   }
+  },
+  "nodes": {
+   "nodes": [
+    {
+     "name": "App",
+     "role": "Flutter",
+     "note": "Pay, Finder, Notices, Market"
+    },
+    {
+     "name": "API",
+     "role": "FastAPI",
+     "note": "rewards engine, card facts"
+    },
+    {
+     "name": "Launch Radar",
+     "role": "daily job",
+     "note": "leads, verify, profile"
+    },
+    {
+     "name": "SerpApi gateway",
+     "role": "one door",
+     "note": "guard, cache, budget, ledger"
+    },
+    {
+     "name": "SerpApi",
+     "role": "4 Google engines",
+     "note": "news, ads, ad details, search"
+    }
+   ]
+  },
+  "context": {
+   "digest": "cc-smith: Indian credit-card app. Checkout Advisor (which card), Card Finder (which to get), Notices (only about your own cards, plus a launch notice when a new card would earn >= Rs 2,000/yr and >= 15% of its fee incl GST), Market (Offers for you, New launches, What changed). Facts only from verbatim quotes on official bank pages; non-official = 'Reported'. SerpApi use (verified in code, backend/src/cc_smith/signals/sources.py, knowledge/discover.py, ops/serp.py): Launch Radar daily: google_news q='launches new credit card India when:30d'; google_ads_transparency_center for sbicard.com, hdfcbank.com, icicibank.com, axisbank.com region 2356 last 30 days, new = first shown in 14 days; ..._ad_details for up to 2 creatives per bank, image read by Haiku vision; google search site:<bank domain> to find official page/PDF. Gateway: rejects personal data, cache per flow (launch_radar 7 days), budgets per flow (card_profile 70, launch_radar 45, cap_watch 25, checkout_merchant 15, commerce_offers 10, dev 35; 50 demo reserve), ledger. Today: 26 live, 67 cached, all launch_radar; 224 left this month. Checkout/Finder do not call SerpApi. Today's 6 leads are all 'Reported' (none confirmed); launch notice shown only in test data. Bureau fetch and SMS/email budget import are simulated; the voiceover says so, the screens do not. Demo figures: Swiggy Rs 1,200 -> HSBC Live+ Rs 120, Rs 60 more than Millennia; Finder Rs 32,800/yr today, best move +Rs 5,912 add Swiggy BLCK. Deadline 2026-10-10 18:00 IST, video under 3 minutes."
+  }
+ },
+ "scenes": {
+  "s1": {
+   "n": 1,
+   "short": "0:00 Set up",
+   "title": "0:00–0:20 · Set up in two taps",
+   "lede": "Voiceover: “Indians hold 3 to 4 cards and still guess at checkout. cc-smith answers in rupees, from the bank's own words. Setup: we find your cards from the credit bureau with a one-time code, and build your budget from last month's card SMS and email — both simulated for this demo.”",
+   "also": [
+    4
+   ]
+  },
+  "s2": {
+   "n": 2,
+   "short": "0:20 Pay",
+   "title": "0:20–0:45 · Which card at Swiggy?",
+   "lede": "Voiceover: “₹1,200 at Swiggy. HSBC Live+ earns ₹120, ₹60 more than Millennia. The maths is plain code; a small model only picks between the engine's figures. Every rate links to a quote on the bank's page.” No SerpApi call here: say so if asked.",
+   "also": [
+    2
+   ]
+  },
+  "s3": {
+   "n": 3,
+   "short": "0:45 Radar",
+   "title": "0:45–1:25 · SerpApi finds new cards before we know their names",
+   "lede": "Voiceover: “The Market tab is fed by SerpApi. Every Monday morning Launch Radar runs Google News for card launches in India, and the Google Ads Transparency Center for new ads by SBI, HDFC, ICICI and Axis. Ad text arrives as images, so we pull the creative with SerpApi's ad-details engine and read it.”",
+   "also": [
+    5
+   ]
+  },
+  "s4": {
+   "n": 4,
+   "short": "1:25 Verify",
+   "title": "1:25–1:55 · SerpApi checks every lead on the bank's own site",
+   "lede": "Voiceover: “News is not proof. For each lead we run a Google Search through SerpApi restricted to the bank's domain. Only a page on sbicard.com or hdfcbank.com can make a fact; everything else stays tagged ‘Reported’ — like these six today.”"
+  },
+  "s5": {
+   "n": 5,
+   "short": "1:55 For you",
+   "title": "1:55–2:20 · A confirmed launch is scored on your spends",
+   "lede": "Voiceover: “When the bank's page confirms a card, the engine scores it on your budget. If it would earn you at least ₹2,000 a year and 15% of its fee, it becomes a notice. Card Finder asks your reward type and fee limit the first time, then ranks the best 1 to 3 cards to add.”",
+   "also": [
+    1
+   ]
+  },
+  "s6": {
+   "n": 6,
+   "short": "2:20 Gateway",
+   "title": "2:20–2:45 · One gateway for every SerpApi call",
+   "lede": "Voiceover: “Every SerpApi call goes through one gateway: it refuses anything that looks like personal data, caches results, and holds a monthly budget per feature. Today: 26 live searches and 67 answered from cache.”",
+   "also": [
+    3
+   ]
+  },
+  "s7": {
+   "n": 7,
+   "short": "2:45 Close",
+   "title": "2:45–3:00 · Close",
+   "lede": "Voiceover: “Checkout advice from bank quotes, and a market feed powered by SerpApi. cc-smith.”"
+  }
+ },
+ "variants": {
+  "s1-a": {
+   "scene": "s1",
+   "order": 1,
+   "name": "Find my cards, then budget",
+   "wires": [
+    {
+     "cap": "Find my cards",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Find my cards"
+      },
+      {
+       "t": "input",
+       "text": "Mobile number  +91 98765 43210",
+       "filled": true
+      },
+      {
+       "t": "text",
+       "text": "Code sent to +91 9876543210. Filled in automatically from the SMS."
+      },
+      {
+       "t": "input",
+       "text": "One-time code  123456",
+       "filled": true
+      },
+      {
+       "t": "btn",
+       "text": "Verify and find my cards",
+       "kind": "primary",
+       "hl": "otp"
+      }
+     ]
+    },
+    {
+     "cap": "What you spend each month",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "What you spend each month"
+      },
+      {
+       "t": "btn",
+       "text": "Read my SMS & email",
+       "kind": "primary",
+       "hl": "sms"
+      },
+      {
+       "t": "text",
+       "text": "Read 40 card transactions from last month's SMS and email."
+      },
+      {
+       "t": "kv",
+       "rows": [
+        {
+         "k": "Dining",
+         "v": "₹9,000"
+        },
+        {
+         "k": "Groceries",
+         "v": "₹12,000"
+        },
+        {
+         "k": "Shopping",
+         "v": "₹15,000"
+        },
+        {
+         "k": "Total",
+         "v": "₹59,000 / month",
+         "total": true
+        }
+       ],
+       "hl": "budget"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "enters phone, consents",
+     "what": "The bureau step. **Simulated** for the demo: say it in the voiceover, not on screen.",
+     "t": "NEW"
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /me/discovery/bureau/start",
+     "what": "Starts a fetch and returns a request id. The app fills the code in, as SMS autofill would.",
+     "code": "{\"phone\":\"9876543210\",\"consent\":true}",
+     "t": "NEW",
+     "hl": "otp"
+    },
+    {
+     "id": "m3",
+     "f": "app",
+     "to": "api",
+     "l": "POST /me/discovery/bureau/verify",
+     "what": "Returns the card accounts and limits; the user confirms which catalogue card each one is.",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "app",
+     "to": "api",
+     "l": "POST /me/budget/import-demo",
+     "what": "Reads last month's transactions (simulated SMS and email) and fills the budget from them.",
+     "code": "{\"sources\":[\"sms\",\"email\"]}",
+     "t": "NEW",
+     "hl": "sms"
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "app",
+     "l": "budget, editable and self-adapting",
+     "what": "Unpinned lines follow last month's actuals each new month; edited lines stay.",
+     "res": true,
+     "hl": "budget"
+    }
+   ]
+  },
+  "s2-a": {
+   "scene": "s2",
+   "order": 1,
+   "name": "Swiggy ₹1,200",
+   "wires": [
+    {
+     "cap": "Checkout Advisor",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Which card should I pay with?"
+      },
+      {
+       "t": "input",
+       "text": "Merchant  Swiggy",
+       "filled": true
+      },
+      {
+       "t": "input",
+       "text": "Amount  ₹1,200",
+       "filled": true
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Pay with",
+         "value": "HSBC Live+ · ₹120",
+         "sub": "₹60 more than Millennia",
+         "tone": "lav"
+        }
+       ],
+       "hl": "best"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "HSBC Live+",
+         "meta": "10% on dining",
+         "amt": "₹120",
+         "st": "ok",
+         "stl": "best",
+         "cb": "none"
+        },
+        {
+         "no": "HDFC Millennia",
+         "meta": "5% on Swiggy",
+         "amt": "₹60",
+         "st": "grey",
+         "stl": "",
+         "cb": "none"
+        }
+       ]
+      },
+      {
+       "t": "muted",
+       "text": "Source: bank page quote"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "eng",
+    "kb",
+    "llm"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "Swiggy, ₹1,200",
+     "what": "The user types a merchant and amount, or scans a UPI QR."
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "POST /pay",
+     "what": "One call: merchant, amount, channel.",
+     "code": "{\"merchant\":\"swiggy\",\"amount_paise\":120000}",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "eng",
+     "l": "reward for every card",
+     "what": "Rules, caps and the rest of the month. All sums are plain Python, no model.",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "eng",
+     "to": "kb",
+     "l": "rates with quotes",
+     "what": "Each rate is stored with the bank's verbatim quote and URL.",
+     "t": "OLD"
+    },
+    {
+     "id": "m5",
+     "f": "api",
+     "to": "llm",
+     "l": "choose between engine figures",
+     "what": "Haiku 4.5 picks and phrases the reason; if it is slow (2.5 s), the rules decide.",
+     "t": "OLD"
+    },
+    {
+     "id": "m6",
+     "f": "api",
+     "to": "app",
+     "l": "HSBC Live+ ₹120",
+     "what": "No SerpApi on this path. The card facts were gathered from bank pages before the demo.",
+     "res": true,
+     "hl": "best"
+    }
+   ]
+  },
+  "s3-a": {
+   "scene": "s3",
+   "order": 1,
+   "name": "Google News: launches in the last 30 days",
+   "wires": [
+    {
+     "cap": "Market",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Market"
+      },
+      {
+       "t": "tabs",
+       "items": [
+        "Offers for you",
+        "New launches",
+        "What changed"
+       ],
+       "on": 1
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Advantage SBI Card",
+         "meta": "News · Kalkine India, The Economic Times",
+         "amt": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        },
+        {
+         "no": "Ultimate Travel Credit Card",
+         "meta": "News · The Economic Times · YES Bank",
+         "amt": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        },
+        {
+         "no": "Scapia Axis Bank Credit Card",
+         "meta": "New variant of Scapia",
+         "amt": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        }
+       ],
+       "hl": "news",
+       "label": "New launches"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "radar",
+    "gw",
+    "serp",
+    "llm"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "radar",
+     "to": "gw",
+     "l": "google_news: launches new credit card India",
+     "what": "One query per weekly sweep (Monday 08:00 IST), India and English. Results older than 30 days are dropped.",
+     "code": "engine=google_news  q=\"launches new credit card India when:30d\"  gl=in  hl=en",
+     "t": "NEW",
+     "hl": "news"
+    },
+    {
+     "id": "m2",
+     "f": "gw",
+     "to": "serp",
+     "l": "GET serpapi.com/search.json",
+     "what": "Only after the guard, cache and budget checks (step 6).",
+     "t": "NEW"
+    },
+    {
+     "id": "m3",
+     "f": "serp",
+     "to": "radar",
+     "l": "news_results[]",
+     "what": "Title, source, date and link for each story. The search_id is kept with every lead as provenance.",
+     "code": "search_id 6ac998f1e6590e5fe4201004",
+     "res": true
+    },
+    {
+     "id": "m4",
+     "f": "radar",
+     "to": "radar",
+     "l": "rules drop noise",
+     "what": "Rules remove non-card stories (loans, offers, results) and fuzzy-merge the same launch reported twice.",
+     "t": "NEW"
+    },
+    {
+     "id": "m5",
+     "f": "radar",
+     "to": "llm",
+     "l": "name the card in each headline",
+     "what": "Haiku names the card and issuer for headlines the rules kept; if it fails, the rules' answer stands.",
+     "t": "NEW"
+    }
+   ]
+  },
+  "s3-b": {
+   "scene": "s3",
+   "order": 2,
+   "name": "Ads Transparency: a new SBI Card ad",
+   "wires": [
+    {
+     "cap": "Market",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Market"
+      },
+      {
+       "t": "tabs",
+       "items": [
+        "Offers for you",
+        "New launches",
+        "What changed"
+       ],
+       "on": 1
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "SimplySAVE Credit Card",
+         "meta": "Bank ad · first shown 9 Oct 2026",
+         "amt": "",
+         "st": "grey",
+         "stl": "reported",
+         "cb": "none"
+        }
+       ],
+       "hl": "ad"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "New SBI Card ad: 10X Reward Points on everyday spends"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "radar",
+    "gw",
+    "serp",
+    "llm"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "radar",
+     "to": "gw",
+     "l": "ads by sbicard.com, last 30 days",
+     "what": "Ad search by the bank's own domain in region India (2356). Ads by affiliates are dropped; only the bank's own advertiser counts.",
+     "code": "engine=google_ads_transparency_center  text=sbicard.com  region=2356",
+     "t": "NEW",
+     "hl": "ad"
+    },
+    {
+     "id": "m2",
+     "f": "serp",
+     "to": "radar",
+     "l": "ad_creatives[]",
+     "what": "Creatives first shown in the last 14 days are new.",
+     "res": true
+    },
+    {
+     "id": "m3",
+     "f": "radar",
+     "to": "gw",
+     "l": "ad details for 2 newest creatives",
+     "what": "Text ads come back as images, so the creative itself is fetched.",
+     "code": "engine=google_ads_transparency_center_ad_details  creative_id=CR06036348016498049025",
+     "t": "NEW"
+    },
+    {
+     "id": "m4",
+     "f": "radar",
+     "to": "llm",
+     "l": "read the ad image",
+     "what": "Vision reads the ad's words and names the card, if the ad names one.",
+     "t": "NEW"
+    }
+   ]
+  },
+  "s4-a": {
+   "scene": "s4",
+   "order": 1,
+   "name": "Official page found: Google Pay Flex SBI Card",
+   "wires": [
+    {
+     "cap": "Launch detail",
+     "blocks": [
+      {
+       "t": "back",
+       "text": "Market"
+      },
+      {
+       "t": "title",
+       "text": "Google Pay Flex SBI Card"
+      },
+      {
+       "t": "chips",
+       "items": [
+        "News",
+        "Official page"
+       ],
+       "on": -1
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "Google Pay Flex SBI Card Launched",
+         "meta": "fintechbiznews.com · News · Not an official source",
+         "amt": "",
+         "st": "grey",
+         "stl": "news",
+         "cb": "none"
+        },
+        {
+         "no": "Google Pay Flex SBI Card - Benefits & Features",
+         "meta": "sbicard.com",
+         "amt": "",
+         "st": "ok",
+         "stl": "official",
+         "cb": "none"
+        }
+       ],
+       "hl": "refs"
+      },
+      {
+       "t": "msg",
+       "kind": "warn",
+       "text": "Reported, not confirmed: the bank's page was found but no figure passed the quote check yet."
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "radar",
+    "gw",
+    "serp",
+    "bank",
+    "kb"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "radar",
+     "to": "gw",
+     "l": "google: site:sbicard.com \"Google Pay Flex\"",
+     "what": "A Google Search through SerpApi, limited to the bank's domain from the allow-list.",
+     "code": "engine=google  q=site:sbicard.com \"Google Pay Flex\"  google_domain=google.co.in",
+     "t": "NEW",
+     "hl": "refs"
+    },
+    {
+     "id": "m2",
+     "f": "serp",
+     "to": "radar",
+     "l": "organic_results[]",
+     "what": "Each result must be on the allow-listed domain and mention the card's name.",
+     "code": "search_id 6ac9992bd114dfc541d51e44",
+     "res": true
+    },
+    {
+     "id": "m3",
+     "f": "radar",
+     "to": "bank",
+     "l": "fetch the official page",
+     "what": "Plain fetch, headless browser if the page needs it.",
+     "t": "OLD"
+    },
+    {
+     "id": "m4",
+     "f": "radar",
+     "to": "kb",
+     "l": "only verbatim quotes become facts",
+     "what": "Each number must appear inside a quote from the page. Here 8 fields came back empty, so it stays ‘Reported’.",
+     "t": "OLD"
+    }
+   ]
+  },
+  "s4-b": {
+   "scene": "s4",
+   "order": 2,
+   "name": "No bank page: Advantage SBI Card",
+   "wires": [
+    {
+     "cap": "Launch detail",
+     "blocks": [
+      {
+       "t": "back",
+       "text": "Market"
+      },
+      {
+       "t": "title",
+       "text": "Advantage SBI Card"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "SBI Card Launches FD-Backed Credit Card on YONO App",
+         "meta": "Kalkine India · News",
+         "amt": "",
+         "st": "grey",
+         "stl": "news",
+         "cb": "none"
+        },
+        {
+         "no": "FD-backed SBI credit card: Advantage SBI Card launched",
+         "meta": "The Economic Times · News",
+         "amt": "",
+         "st": "grey",
+         "stl": "news",
+         "cb": "none"
+        }
+       ]
+      },
+      {
+       "t": "msg",
+       "kind": "warn",
+       "text": "Reported, not confirmed by the bank: no official page found on the issuer's domain.",
+       "hl": "tag"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "radar",
+    "gw",
+    "serp"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "radar",
+     "to": "gw",
+     "l": "google: site:sbicard.com \"Advantage SBI\"",
+     "what": "Same domain-limited search, page and then terms PDF.",
+     "t": "NEW"
+    },
+    {
+     "id": "m2",
+     "f": "serp",
+     "to": "radar",
+     "l": "no result on sbicard.com",
+     "what": "Nothing passes the domain check, so the app shows news links only, never numbers.",
+     "res": true,
+     "hl": "tag"
+    }
+   ]
+  },
+  "s5-a": {
+   "scene": "s5",
+   "order": 1,
+   "name": "Launch notice rule",
+   "wires": [
+    {
+     "cap": "Notices",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Notices"
+      },
+      {
+       "t": "rows",
+       "items": [
+        {
+         "no": "New card worth about ₹4,800 a year to you",
+         "meta": "Confirmed on the bank's page · scored on your spends",
+         "amt": "+₹4,800",
+         "st": "ok",
+         "stl": "launch",
+         "cb": "none"
+        }
+       ],
+       "hl": "notice"
+      },
+      {
+       "t": "msg",
+       "kind": "note",
+       "text": "Example from test data: no launch qualifies live today."
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "radar",
+    "kb",
+    "eng",
+    "api",
+    "app"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "radar",
+     "to": "kb",
+     "l": "profile the confirmed card",
+     "what": "A launch confirmed on the bank's page becomes a scored card in the catalogue.",
+     "t": "NEW"
+    },
+    {
+     "id": "m2",
+     "f": "api",
+     "to": "eng",
+     "l": "gain on this user's budget",
+     "what": "Year simulation with and without the card, fees and milestones included.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "api",
+     "to": "api",
+     "l": "≥ ₹2,000 a year and ≥ 15% of fee incl. GST",
+     "what": "Both must hold, so a ₹500 gain on a ₹10,000 card never nags.",
+     "t": "NEW",
+     "hl": "notice"
+    },
+    {
+     "id": "m4",
+     "f": "api",
+     "to": "app",
+     "l": "GET /me/notices",
+     "what": "Notices are only about you; discovery stays in Market.",
+     "t": "MOD",
+     "res": true
+    }
+   ]
+  },
+  "s5-b": {
+   "scene": "s5",
+   "order": 2,
+   "name": "Card Finder, first visit",
+   "wires": [
+    {
+     "cap": "Card Finder · first visit",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Card Finder"
+      },
+      {
+       "t": "text",
+       "text": "Before we look for new cards: what kind of rewards do you want, and how much annual fee would you pay?"
+      },
+      {
+       "t": "chips",
+       "items": [
+        "Any",
+        "Cashback",
+        "Points"
+       ],
+       "on": 1,
+       "hl": "prefs"
+      },
+      {
+       "t": "chips",
+       "items": [
+        "Free only",
+        "Up to ₹1,000",
+        "Up to ₹5,000",
+        "Any"
+       ],
+       "on": 1
+      },
+      {
+       "t": "btn",
+       "text": "Find my best cards",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "cap": "Card Finder",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Card Finder"
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Your cards today",
+         "value": "₹32,800/yr net",
+         "sub": "rewards + milestones − fees",
+         "tone": "lav"
+        },
+        {
+         "label": "Best move",
+         "value": "+₹5,912/yr",
+         "sub": "add Swiggy BLCK",
+         "tone": "lime",
+         "vt": "good"
+        }
+       ],
+       "hl": "sets"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app",
+    "api",
+    "eng"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "picks reward type and fee limit",
+     "what": "Asked once, here, instead of during onboarding. The tune icon edits it later.",
+     "t": "NEW",
+     "hl": "prefs"
+    },
+    {
+     "id": "m2",
+     "f": "app",
+     "to": "api",
+     "l": "PUT /me/profile",
+     "what": "Saves reward_preference and max_annual_fee.",
+     "t": "OLD"
+    },
+    {
+     "id": "m3",
+     "f": "app",
+     "to": "api",
+     "l": "POST /finder",
+     "what": "Ranks the 1 to 3 cards that add the most a year, including launches the radar confirmed.",
+     "t": "OLD",
+     "hl": "sets"
+    }
+   ]
+  },
+  "s6-a": {
+   "scene": "s6",
+   "order": 1,
+   "name": "Guard, cache, budget, ledger",
+   "wires": [
+    {
+     "cap": "SerpApi usage · /ops/credits",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "SerpApi usage"
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "Live searches",
+         "value": "26",
+         "sub": "credits spent today",
+         "tone": "lav"
+        },
+        {
+         "label": "From cache",
+         "value": "67",
+         "sub": "no credit spent",
+         "tone": "lime",
+         "vt": "good"
+        }
+       ],
+       "hl": "ledger"
+      },
+      {
+       "t": "kv",
+       "rows": [
+        {
+         "k": "Launch Radar",
+         "v": "45 a month · 7-day cache"
+        },
+        {
+         "k": "Card profiles",
+         "v": "70 a month · 30-day cache"
+        },
+        {
+         "k": "Commerce offers",
+         "v": "10 a month · 6-hour cache"
+        },
+        {
+         "k": "Demo reserve",
+         "v": "50 unallocated",
+         "total": true
+        }
+       ],
+       "hl": "budget"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "radar",
+    "gw",
+    "serp"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "radar",
+     "to": "gw",
+     "l": "search(flow, engine, params)",
+     "what": "Every caller uses this one function; there is no other path to SerpApi.",
+     "t": "NEW"
+    },
+    {
+     "id": "m2",
+     "f": "gw",
+     "to": "gw",
+     "l": "refuse personal data",
+     "what": "Phone numbers, emails, card digits and user ids are rejected: queries carry card and bank names only.",
+     "t": "NEW"
+    },
+    {
+     "id": "m3",
+     "f": "gw",
+     "to": "gw",
+     "l": "cache hit? no credit",
+     "what": "Same engine and parameters within the flow's cache time returns the stored answer.",
+     "t": "NEW",
+     "hl": "ledger"
+    },
+    {
+     "id": "m4",
+     "f": "gw",
+     "to": "gw",
+     "l": "hourly, monthly and per-flow budget",
+     "what": "A flow that reaches its monthly envelope stops; the 50-search demo reserve is spent only on purpose.",
+     "t": "NEW",
+     "hl": "budget"
+    },
+    {
+     "id": "m5",
+     "f": "gw",
+     "to": "serp",
+     "l": "live call",
+     "what": "Logged in the credit ledger before caching, so a spent credit is never lost from the count.",
+     "t": "NEW"
+    },
+    {
+     "id": "m6",
+     "f": "serp",
+     "to": "gw",
+     "l": "response recorded",
+     "what": "Saved as a dated replay fixture, so tests and the demo run without spending credits.",
+     "res": true
+    }
+   ]
+  },
+  "s7-a": {
+   "scene": "s7",
+   "order": 1,
+   "name": "End card",
+   "wires": [
+    {
+     "cap": "End card",
+     "blocks": [
+      {
+       "t": "big",
+       "kind": "ok",
+       "title": "cc-smith",
+       "lines": [
+        "Which card to pay with, and which to get",
+        "Market intelligence by SerpApi: Google News, Ads Transparency, Google Search"
+       ],
+       "pill": "SerpApi India Hackathon 2026"
+      }
+     ]
+    }
+   ],
+   "lanes": [
+    "u",
+    "app"
+   ],
+   "msgs": [
+    {
+     "id": "m1",
+     "f": "u",
+     "to": "app",
+     "l": "back on Pay",
+     "what": "End on the Pay screen with the Market tab one tap away."
+    }
+   ]
+  }
+ },
+ "suggestions": {
+  "g1": {
+   "order": 1,
+   "n": 1,
+   "where": "Step 5",
+   "title": "No live launch qualifies for a notice today",
+   "paras": [
+    "The launch notice exists only in test data: none of today's 6 leads is confirmed by its bank and worth ₹2,000 a year on the demo budget.",
+    "On camera, say the rule over the Market list, or show the notice clearly marked as an example. Do not present it as live."
+   ]
+  },
+  "g2": {
+   "order": 2,
+   "n": 2,
+   "where": "Step 2",
+   "title": "Checkout and Finder do not call SerpApi",
+   "paras": [
+    "The credit ledger shows SerpApi spend only for launch_radar. The 22 seeded cards' facts came from bank pages gathered during research.",
+    "Judges may check, so keep the SerpApi claims to Market, verification and the gateway."
+   ]
+  },
+  "g3": {
+   "order": 3,
+   "n": 3,
+   "where": "Step 6",
+   "title": "Four budget envelopes have no job running yet",
+   "paras": [
+    "card_profile, cap_watch, checkout_merchant and commerce_offers have budgets and cache times in the gateway, but no scheduled job calls them. Call them budgeted, not running."
+   ]
+  },
+  "g4": {
+   "order": 4,
+   "n": 4,
+   "where": "Step 1",
+   "title": "Bureau and SMS import are simulated",
+   "paras": [
+    "The screens no longer say so. The voiceover must say it once, in step 1."
+   ]
+  },
+  "g5": {
+   "order": 5,
+   "n": 5,
+   "where": "Step 3",
+   "title": "A re-run sweep today answers from cache",
+   "paras": [
+    "Launch Radar results are cached for 7 days, so `uv run cc-smith radar` now returns cached answers and spends nothing. That is fine to show: it prints searches, leads and the credit counts. 224 live searches are left this month."
+   ]
+  }
+ },
+ "apis": {
+  "a1": {
+   "order": 1,
+   "call": "google_news",
+   "owner": "SerpApi",
+   "gives": "Launch stories in India from the last 30 days",
+   "tag": "NEW",
+   "steps": [
+    3
+   ]
+  },
+  "a2": {
+   "order": 2,
+   "call": "google_ads_transparency_center",
+   "owner": "SerpApi",
+   "gives": "New ads by SBI, HDFC, ICICI and Axis, by domain",
+   "tag": "NEW",
+   "steps": [
+    3
+   ]
+  },
+  "a3": {
+   "order": 3,
+   "call": "google_ads_transparency_center_ad_details",
+   "owner": "SerpApi",
+   "gives": "The ad creative image, read with vision",
+   "tag": "NEW",
+   "steps": [
+    3
+   ]
+  },
+  "a4": {
+   "order": 4,
+   "call": "google (site:bank domain)",
+   "owner": "SerpApi",
+   "gives": "The bank's official page or terms PDF for a lead",
+   "tag": "NEW",
+   "steps": [
+    4
+   ]
+  },
+  "a5": {
+   "order": 5,
+   "call": "GET /launches",
+   "owner": "API",
+   "gives": "Market › New launches with sources",
+   "tag": "OLD",
+   "steps": [
+    3,
+    4
+   ]
+  },
+  "a6": {
+   "order": 6,
+   "call": "GET /ops/credits",
+   "owner": "API",
+   "gives": "Live and cached SerpApi calls by flow",
+   "tag": "OLD",
+   "steps": [
+    6
+   ]
+  }
+ },
+ "rollout": {
+  "r1": {
+   "order": 1,
+   "title": "Before recording",
+   "text": "Backend on :8001 in live mode, emulator open, Settings › Start over so onboarding shows. Run `uv run cc-smith radar` once in a terminal for the gateway shot."
+  },
+  "r2": {
+   "order": 2,
+   "title": "0:00–0:45",
+   "text": "Onboarding (Find my cards → code → Add these cards → Read my SMS & email → Next), then Pay: Swiggy ₹1,200."
+  },
+  "r3": {
+   "order": 3,
+   "title": "0:45–1:55",
+   "text": "Market › New launches. Tap SimplySAVE (bank ad), then Google Pay Flex SBI Card (news + sbicard.com page). This is the SerpApi centre of the video: slow down here."
+  },
+  "r4": {
+   "order": 4,
+   "title": "1:55–2:45",
+   "text": "Notices, then Finder first visit (Cashback, up to ₹1,000, Find my best cards). Cut to the terminal: radar output and the credits line."
+  },
+  "r5": {
+   "order": 5,
+   "title": "2:45–3:00",
+   "text": "End card. Keep the whole video under 3:00."
+  }
+ },
+ "decisions": {
+  "d1": {
+   "order": 1,
+   "q": "How should step 5 show the launch notice?",
+   "options": [
+    "Say the rule over Market",
+    "Show it labelled as an example",
+    "Skip it"
+   ],
+   "affects": "Step 5"
+  }
+ }
+}

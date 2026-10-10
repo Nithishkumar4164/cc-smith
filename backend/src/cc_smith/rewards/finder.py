@@ -76,6 +76,8 @@ def simulate(
             for cap in c.caps:
                 if _reset_due(cap.period, month):
                     caps[c.id].pop(cap.id, None)
+                    if cap.unit == "base_multiple" and cap.of_rule:
+                        caps[c.id].pop(f"earned:{cap.of_rule}", None)
         for line in spends:
             chunk = line.monthly_paise // CHUNKS_PER_LINE
             last = line.monthly_paise - chunk * (CHUNKS_PER_LINE - 1)

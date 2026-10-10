@@ -33,6 +33,8 @@ def outstanding(conn: Connection, uid: str, h: dict) -> int:
     since = _since(h.get("balance_as_of"))
     spent = conn.execute(select(func.coalesce(func.sum(txn.c.amount_paise), 0)).where(and_(
         txn.c.user_id == uid, txn.c.card_id == h["card_id"], txn.c.superseded_by.is_(None), txn.c.ts >= since,
+        # Demo imports (simulated SMS/email) build a budget; they are not money owed.
+        txn.c.source.not_like("demo_%"),
     ))).scalar_one()
     paid = conn.execute(select(func.coalesce(func.sum(card_payment.c.amount_paise), 0)).where(and_(
         card_payment.c.user_id == uid, card_payment.c.card_id == h["card_id"], card_payment.c.ts >= since,

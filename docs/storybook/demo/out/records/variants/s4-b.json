@@ -1,0 +1,71 @@
+{
+ "scene": "s4",
+ "order": 2,
+ "name": "No bank page: Advantage SBI Card",
+ "wires": [
+  {
+   "cap": "Launch detail",
+   "blocks": [
+    {
+     "t": "back",
+     "text": "Market"
+    },
+    {
+     "t": "title",
+     "text": "Advantage SBI Card"
+    },
+    {
+     "t": "rows",
+     "items": [
+      {
+       "no": "SBI Card Launches FD-Backed Credit Card on YONO App",
+       "meta": "Kalkine India · News",
+       "amt": "",
+       "st": "grey",
+       "stl": "news",
+       "cb": "none"
+      },
+      {
+       "no": "FD-backed SBI credit card: Advantage SBI Card launched",
+       "meta": "The Economic Times · News",
+       "amt": "",
+       "st": "grey",
+       "stl": "news",
+       "cb": "none"
+      }
+     ]
+    },
+    {
+     "t": "msg",
+     "kind": "warn",
+     "text": "Reported, not confirmed by the bank: no official page found on the issuer's domain.",
+     "hl": "tag"
+    }
+   ]
+  }
+ ],
+ "lanes": [
+  "radar",
+  "gw",
+  "serp"
+ ],
+ "msgs": [
+  {
+   "id": "m1",
+   "f": "radar",
+   "to": "gw",
+   "l": "google: site:sbicard.com \"Advantage SBI\"",
+   "what": "Same domain-limited search, page and then terms PDF.",
+   "t": "NEW"
+  },
+  {
+   "id": "m2",
+   "f": "serp",
+   "to": "radar",
+   "l": "no result on sbicard.com",
+   "what": "Nothing passes the domain check, so the app shows news links only, never numbers.",
+   "res": true,
+   "hl": "tag"
+  }
+ ]
+}

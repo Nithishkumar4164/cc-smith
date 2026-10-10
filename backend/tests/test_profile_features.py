@@ -101,7 +101,7 @@ def test_fee_offer_notice_for_a_card_that_suits_you(client, user):
     assert counts == {"fact": 4, "speculation": 1}
     client.put("/me/spends", json={"swiggy": 8_000 * R, "online": 6_000 * R}, headers=user)
     client.put("/me/holdings", json=[{"card_id": "hdfc_regalia_gold"}], headers=user)
-    notices = {n["id"]: n for n in client.get("/me/notices", headers=user).json()}
+    notices = {n["id"]: n for n in client.get("/me/market/offers", headers=user).json()}
     blck = notices["feeoffer:hdfc_swiggy_blck_joining_waiver_75k"]
     assert blck["kind"] == "fee_offer" and blck["tier"] == "fact" and blck["rupees_paise"] > 0
     assert "waived on ₹75,000 spend" in blck["title"] and blck["refs"][0]["url"].startswith("https://www.hdfc.bank.in/")
@@ -135,7 +135,7 @@ def test_pay_text_names_credit_when_no_card_has_enough(client, user):
     assert "credit available" in r["text"] and "UPI" not in r["text"]
 
 
-def test_own_card_notices_come_before_offers_on_other_cards(client, user):
+def test_notices_hold_only_your_cards_and_offers_move_to_market(client, user):
     from pathlib import Path
 
     from cc_smith.db import engine
@@ -146,7 +146,60 @@ def test_own_card_notices_come_before_offers_on_other_cards(client, user):
     client.put("/me/holdings", json=[{"card_id": "hsbc_live_plus", "credit_limit_paise": 100_000 * R, "balance_paise": 40_000 * R}], headers=user)
     client.put("/me/spends", json={"swiggy": 8_000 * R, "online": 6_000 * R}, headers=user)
     notices = client.get("/me/notices", headers=user).json()
-    watch = [n for n in notices if n["severity"] == "watch"]
-    kinds = [n["kind"] for n in watch]
-    assert "credit" in kinds and "fee_offer" in kinds
-    assert kinds.index("credit") < kinds.index("fee_offer")
+    # Notices are only about your own cards; offers on other cards are discovery (Market).
+    assert "credit" in {n["kind"] for n in notices}
+    assert "fee_offer" not in {n["kind"] for n in notices}
+    assert {n["kind"] for n in client.get("/me/market/offers", headers=user).json()} == {"fee_offer"}
+
+
+def test_utilisation_notice_is_general_guidance_without_source(client, user):
+    client.put("/me/holdings", json=[{"card_id": "hdfc_millennia", "credit_limit_paise": 100_000 * R, "balance_paise": 50_000 * R}], headers=user)
+    util = next(n for n in client.get("/me/notices", headers=user).json() if n["kind"] == "credit")
+    assert util["tier"] == "guidance" and util["refs"] == []
+    assert "General guidance, not a card term" in util["reason"]
+
+
+def test_prime_answer_changes_the_reward_and_unanswered_says_what_it_would_be(client, user):
+    client.put("/me/holdings", json=[{"card_id": "icici_amazon_pay"}], headers=user)
+    pay = {"merchant": "Amazon", "amount_paise": 3_000 * R}
+    unanswered = client.post("/pay", json=pay, headers=user).json()["best"]
+    assert unanswered["reward_paise"] == 90 * R  # 3% until you say you have Prime
+    assert unanswered["if_answered"] == [{"key": "amazon_prime", "question": "Do you have Amazon Prime?", "reward_paise": 150 * R}]
+    me = client.put("/me/answers", json={"amazon_prime": True}, headers=user).json()
+    assert me["answers"]["amazon_prime"] is True and "amazon_prime" in me["profile"]["flags"]
+    yes = client.post("/pay", json=pay, headers=user).json()["best"]
+    assert yes["reward_paise"] == 150 * R and yes["if_answered"] == []
+    client.put("/me/answers", json={"amazon_prime": False}, headers=user)
+    no = client.post("/pay", json=pay, headers=user).json()["best"]
+    assert no["reward_paise"] == 90 * R and no["if_answered"] == []  # answered: no more nudging
+
+
+def test_offer_condition_eligibility_moves_from_unknown_to_not_for_you(client, user):
+    from pathlib import Path
+
+    from cc_smith.db import engine
+    from cc_smith.knowledge import offers
+
+    with engine().begin() as c:
+        offers.load(c, Path(__file__).resolve().parents[1] / "fixtures" / "offers" / "fees1.json")
+    client.put("/me/spends", json={"swiggy": 8_000 * R, "online": 6_000 * R}, headers=user)
+    client.put("/me/holdings", json=[{"card_id": "hdfc_regalia_gold"}], headers=user)
+
+    def ornge():
+        return next(n for n in client.get("/me/market/offers", headers=user).json() if n["id"] == "feeoffer:hdfc_swiggy_ornge_ltf_corporate")
+
+    first = ornge()
+    assert first["eligibility"] == "unknown" and first["requires"][0]["key"] == "select_corporate_employee"
+    client.put("/me/answers", json={"select_corporate_employee": False}, headers=user)
+    offers = client.get("/me/market/offers", headers=user).json()
+    assert offers[-1]["id"] == "feeoffer:hdfc_swiggy_ornge_ltf_corporate" and offers[-1]["eligibility"] == "no"
+    client.put("/me/answers", json={"select_corporate_employee": True}, headers=user)
+    assert ornge()["eligibility"] == "yes"
+
+
+def test_saving_preferences_keeps_answers_and_unknown_conditions_are_rejected(client, user):
+    client.put("/me/answers", json={"kiwi_neon": True}, headers=user)
+    me = client.put("/me/profile", json={"reward_preference": "cashback"}, headers=user).json()
+    assert me["answers"] == {"kiwi_neon": True}
+    assert "kiwi_neon" in me["profile"]["flags"]  # the engine still applies Kiwi Neon
+    assert client.put("/me/answers", json={"has_a_yacht": True}, headers=user).status_code == 422

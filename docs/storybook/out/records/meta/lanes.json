@@ -1,1 +1,52 @@
-{"lanes": {"u": {"name": "Card holder", "role": "the user"}, "app": {"name": "App", "role": "Flutter, Android"}, "api": {"name": "API", "role": "FastAPI backend"}, "eng": {"name": "Rewards engine", "role": "pure Python maths"}, "kb": {"name": "Card facts", "role": "versioned facts store"}, "led": {"name": "Ledger", "role": "payments and credit"}, "off": {"name": "Offers", "role": "bank and fee offers"}, "fet": {"name": "Fetcher", "role": "bank pages and PDFs"}, "gw": {"name": "SerpApi gateway", "role": "cache and budget"}, "web": {"name": "Outside world", "role": "SerpApi, bank sites"}, "own": {"name": "Owner alerts", "role": "outbox and log"}, "llm": {"name": "Quick model", "role": "Haiku 4.5, chooses"}}, "updatedAt": "2026-10-09T15:20:00Z", "note": "Added the Quick model column"}
+{
+ "lanes": {
+  "u": {
+   "name": "Card holder",
+   "role": "the user"
+  },
+  "app": {
+   "name": "App",
+   "role": "Flutter, Android"
+  },
+  "api": {
+   "name": "API",
+   "role": "FastAPI backend"
+  },
+  "eng": {
+   "name": "Rewards engine",
+   "role": "pure Python maths"
+  },
+  "kb": {
+   "name": "Card facts",
+   "role": "versioned facts store"
+  },
+  "led": {
+   "name": "Ledger",
+   "role": "payments and credit"
+  },
+  "off": {
+   "name": "Offers",
+   "role": "bank and fee offers"
+  },
+  "fet": {
+   "name": "Fetcher",
+   "role": "bank pages and PDFs"
+  },
+  "gw": {
+   "name": "SerpApi gateway",
+   "role": "cache and budget"
+  },
+  "web": {
+   "name": "Outside world",
+   "role": "SerpApi, bank sites"
+  },
+  "own": {
+   "name": "Owner alerts",
+   "role": "outbox and log"
+  },
+  "llm": {
+   "name": "Quick model",
+   "role": "Haiku 4.5, chooses"
+  }
+ }
+}
