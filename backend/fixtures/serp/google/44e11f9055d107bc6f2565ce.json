@@ -1,0 +1,627 @@
+{
+  "_recorded": {
+    "engine": "google",
+    "params": {
+      "gl": "in",
+      "google_domain": "google.co.in",
+      "hl": "en",
+      "q": "site:yes.bank.in \"Ultimate Travel\""
+    },
+    "at": "2026-10-10T01:50:03.971508+00:00"
+  },
+  "search_metadata": {
+    "id": "6ac999cb70e9d0794323c124",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/HtMMBuXSqmj59Ojb5zG3MAvsJCW92mK5w8Ib01TzcEw/6ac999cb70e9d0794323c124.json",
+    "markdown_endpoint": "https://serpapi.com/searches/HtMMBuXSqmj59Ojb5zG3MAvsJCW92mK5w8Ib01TzcEw/6ac999cb70e9d0794323c124.md",
+    "pixel_position_endpoint": "https://serpapi.com/searches/HtMMBuXSqmj59Ojb5zG3MAvsJCW92mK5w8Ib01TzcEw/6ac999cb70e9d0794323c124.json_with_pixel_position",
+    "created_at": "2026-10-10 01:50:03 UTC",
+    "processed_at": "2026-10-10 01:50:03 UTC",
+    "google_url": "https://www.google.co.in/search?q=site%3Ayes.bank.in+%22Ultimate+Travel%22&oq=site%3Ayes.bank.in+%22Ultimate+Travel%22&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/HtMMBuXSqmj59Ojb5zG3MAvsJCW92mK5w8Ib01TzcEw/6ac999cb70e9d0794323c124.html",
+    "total_time_taken": 0.4
+  },
+  "search_parameters": {
+    "device": "desktop",
+    "engine": "google",
+    "gl": "in",
+    "google_domain": "google.co.in",
+    "hl": "en",
+    "q": "site:yes.bank.in \"Ultimate Travel\""
+  },
+  "search_information": {
+    "query_displayed": "site:yes.bank.in \"Ultimate Travel\"",
+    "total_results": 6550000,
+    "time_taken_displayed": 0.25,
+    "organic_results_state": "Results for exact spelling"
+  },
+  "inline_videos": [
+    {
+      "position": 1,
+      "title": "The ULTIMATE Travel Hack",
+      "link": "https://www.youtube.com/shorts/fYTDYvrSS_o",
+      "thumbnail": "https://serpapi.com/searches/6ac999cb70e9d0794323c124/images/NQKrmWRhmW1Zv4wxxp2_JZMUcs5ehzFLsiUBFbHyif0.jpeg",
+      "channel": "Proton",
+      "duration": "0:29",
+      "platform": "YouTube",
+      "date": "4 days ago",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTLES_EMVWMPEjC5mHK-EwrxO29UW9XHCmlGQ"
+    },
+    {
+      "position": 2,
+      "title": "Top 100 Places To Visit in The World - Ultimate Travel Guide",
+      "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c",
+      "thumbnail": "https://serpapi.com/searches/6ac999cb70e9d0794323c124/images/YDHtZzKgSa5J-PC5ohZgrpeLd2GYMRb5LCvrvO9-QWE.jpeg",
+      "channel": "Ryan Shirley",
+      "duration": "1:11:34",
+      "platform": "YouTube",
+      "date": "22 Dec 2024",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRsjN2liQm9S16z-iSiTepAvWxH-beWhkC-Aw",
+      "key_moments": [
+        {
+          "time": "00:00",
+          "title": "Intro",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=0"
+        },
+        {
+          "time": "01:56",
+          "title": "New Zealand (Wharariki & Mt. Cook)",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=116"
+        },
+        {
+          "time": "05:49",
+          "title": "Tanzania & The Serengeti",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=349"
+        },
+        {
+          "time": "10:46",
+          "title": "Iceland",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=646"
+        },
+        {
+          "time": "15:01",
+          "title": "Slovenia",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=901"
+        },
+        {
+          "time": "17:20",
+          "title": "Dolomites",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=1040"
+        },
+        {
+          "time": "20:25",
+          "title": "Nepal",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=1225"
+        },
+        {
+          "time": "24:40",
+          "title": "Bangladesh",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=1480"
+        },
+        {
+          "time": "27:40",
+          "title": "Mount Roraima & Los Roques",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=1660"
+        },
+        {
+          "time": "29:21",
+          "title": "Lençois Maranhenses",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=1761"
+        },
+        {
+          "time": "31:40",
+          "title": "Patagonia",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=1900"
+        },
+        {
+          "time": "33:52",
+          "title": "Okavango Delta",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=2032"
+        },
+        {
+          "time": "36:40",
+          "title": "Dzanga Bai (Village of Elephants)",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=2200"
+        },
+        {
+          "time": "38:48",
+          "title": "Chad",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=2328"
+        },
+        {
+          "time": "41:39",
+          "title": "Tunisia",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=2499"
+        },
+        {
+          "time": "43:59",
+          "title": "United Arab Emirates",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=2639"
+        },
+        {
+          "time": "46:27",
+          "title": "Uzbekistan",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=2787"
+        },
+        {
+          "time": "48:35",
+          "title": "Kamchatka",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=2915"
+        },
+        {
+          "time": "51:19",
+          "title": "Thailand",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=3079"
+        },
+        {
+          "time": "54:40",
+          "title": "Oregon",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=3280"
+        },
+        {
+          "time": "57:09",
+          "title": "Alaska",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=3429"
+        },
+        {
+          "time": "59:06",
+          "title": "Bahamas",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=3546"
+        },
+        {
+          "time": "01:01:30",
+          "title": "El Salvador",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=3690"
+        },
+        {
+          "time": "01:05:09",
+          "title": "Corsica",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=3909"
+        },
+        {
+          "time": "01:09:53",
+          "title": "Switzerland",
+          "link": "https://www.youtube.com/watch?v=QGmZ1rsKJ9c&t=4193"
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "title": "My ultimate travel buddy!! From hotel rooms to flights and ...",
+      "link": "https://www.instagram.com/reel/DeMuzmMhIb0/",
+      "thumbnail": "https://serpapi.com/searches/6ac999cb70e9d0794323c124/images/6vjsLkOXRNxjTM1xU2XsUYoytr7o5PJ-Tpi6-TEPcjM.jpeg",
+      "channel": "Georgia Amoore",
+      "duration": "0:38",
+      "platform": "Instagram",
+      "date": "2 days ago"
+    },
+    {
+      "position": 4,
+      "title": "Top 100 Places To Visit On Earth - Ultimate Travel Guide",
+      "link": "https://www.youtube.com/watch?v=s3G2kLruJJo",
+      "thumbnail": "https://serpapi.com/searches/6ac999cb70e9d0794323c124/images/oarF7r5XmZ2MiCOVCSRBTrBrif0QZRIhLiwdIYPhb_Q.jpeg",
+      "channel": "Ryan Shirley",
+      "duration": "1:01:56",
+      "platform": "YouTube",
+      "date": "5 Feb 2023",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRE8NsI4aH6cm6t6z-BRHSSovlmMC60pN-g0w",
+      "key_moments": [
+        {
+          "time": "00:00",
+          "title": "Intro",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=0"
+        },
+        {
+          "time": "01:25",
+          "title": "Okavango Delta",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=85"
+        },
+        {
+          "time": "04:02",
+          "title": "Amboseli National Park (Kenya)",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=242"
+        },
+        {
+          "time": "05:51",
+          "title": "Reunion & Mauritius",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=351"
+        },
+        {
+          "time": "08:07",
+          "title": "Saudi Arabia",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=487"
+        },
+        {
+          "time": "10:42",
+          "title": "Sri Lanka",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=642"
+        },
+        {
+          "time": "13:28",
+          "title": "Bagan (Myanmar)",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=808"
+        },
+        {
+          "time": "15:02",
+          "title": "Phi Phi Islands & Phang Nga Bay",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=902"
+        },
+        {
+          "time": "17:29",
+          "title": "Komodo Islands & Raja Ampat",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=1049"
+        },
+        {
+          "time": "21:00",
+          "title": "French Polynesia (Bora Bora & Mo'orea)",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=1260"
+        },
+        {
+          "time": "22:37",
+          "title": "Saint Lucia",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=1357"
+        },
+        {
+          "time": "24:31",
+          "title": "Tikal (Guatemala)",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=1471"
+        },
+        {
+          "time": "26:52",
+          "title": "Lençóis Maranhenses",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=1612"
+        },
+        {
+          "time": "28:22",
+          "title": "Patagonia",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=1702"
+        },
+        {
+          "time": "30:56",
+          "title": "Galapagos Islands",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=1856"
+        },
+        {
+          "time": "34:04",
+          "title": "Oregon",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=2044"
+        },
+        {
+          "time": "36:55",
+          "title": "Alaska & Aleutian Islands",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=2215"
+        },
+        {
+          "time": "39:09",
+          "title": "Zhangjiajie & Guangxi",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=2349"
+        },
+        {
+          "time": "42:28",
+          "title": "Turkey (Istanbul & Cappadocia)",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=2548"
+        },
+        {
+          "time": "45:13",
+          "title": "Aeolian Islands & Rome",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=2713"
+        },
+        {
+          "time": "48:36",
+          "title": "Madeira & The Azores",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=2916"
+        },
+        {
+          "time": "52:30",
+          "title": "Lofoten Islands",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=3150"
+        },
+        {
+          "time": "54:47",
+          "title": "Faroe Islands",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=3287"
+        },
+        {
+          "time": "57:22",
+          "title": "Mont Saint Michel",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=3442"
+        },
+        {
+          "time": "01:01:27",
+          "title": "Outro",
+          "link": "https://www.youtube.com/watch?v=s3G2kLruJJo&t=3687"
+        }
+      ]
+    }
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "ULTIMATE Travel",
+      "link": "https://www.ultimate.travel/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESVwHrOzAVoGVnimAJ9IVxfwVSAok3LUPmgrLjgYUZ0pA2e-i4Ttjqp2SDNlw68ulOlqxnMYczGhRR9cIHtXSHWRqo_EtAOkHsPXrC_0GT00gFfry7X3OEVw&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4QFnoECBgQAQ&uoh=1",
+      "displayed_link": "https://www.ultimate.travel",
+      "favicon": "https://serpapi.com/images/i/UklGRtgAAABXRUJQVlA4IMwAAADwBQCdASocABwAPtEutFooIagoGAEAGglsAJ0y7PV3pvFDBc6qcC9-FDkXpHqjMI_qec-5-QZDkADMT6jFtJCAEd-Qott0qbQmuicxDR62gv0bPX3efCxihuMgXl-IskzVf_F6xNk2q2ySYsXdDPjWOFmLAAuPz3l2jVN2VYI4ttLuxIK5NV5NBWqHlBf8CN5fr62_55SCJaoL5Nr3b5fDTDATBIcL2p0q7GWd9ZCtwoTfXyAyyAqoJi_csBW13KcwLHGYI43IBYTQAAA.webp",
+      "snippet": "Looking for the ULTIMATE Travel Adventure? Group Tours and Gap Year adventures in Australia, New Zealand, Bali, Thailand, Vietnam & more.",
+      "snippet_highlighted_words": [
+        "ULTIMATE Travel"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Looking for the ULTIMATE Travel Adventure? Group Tours and Gap Year adventures in Australia, New Zealand, Bali, Thailand, Vietnam & more.",
+          "source_info_link": "https://www.ultimate.travel/",
+          "icon": "https://serpapi.com/images/i/UklGRtgAAABXRUJQVlA4IMwAAADwBQCdASocABwAPtEutFooIagoGAEAGglsAJ0y7PV3pvFDBc6qcC9-FDkXpHqjMI_qec-5-QZDkADMT6jFtJCAEd-Qott0qbQmuicxDR62gv0bPX3efCxihuMgXl-IskzVf_F6xNk2q2ySYsXdDPjWOFmLAAuPz3l2jVN2VYI4ttLuxIK5NV5NBWqHlBf8CN5fr62_55SCJaoL5Nr3b5fDTDATBIcL2p0q7GWd9ZCtwoTfXyAyyAqoJi_csBW13KcwLHGYI43IBYTQAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CoQBL2dvdG8_dXJsPUNBRVNWd0hyT3pBVm9HVm5pbUFKOUlWeGZ3VlNBb2szTFVQbWdyTGpnWVVaMHBBMmUtaTRUdGpxcDJTRE5sdzY4dWxPbHF4bk1ZY3pHaFJSOWNJSHRYU0hXUnFvX0V0QU9rSHNQWHJDXzBHVDAwZ0Zmcnk3WDNPRVZ3EgQaAggAGoQDEgIIARoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA3gIIABAAGAAgACoPCgh1bHRpbWF0ZRX6fo5AKg0KBnRyYXZlbBVtTJtAMoQBL2dvdG8_dXJsPUNBRVNWd0hyT3pBVm9HVm5pbUFKOUlWeGZ3VlNBb2szTFVQbWdyTGpnWVVaMHBBMmUtaTRUdGpxcDJTRE5sdzY4dWxPbHF4bk1ZY3pHaFJSOWNJSHRYU0hXUnFvX0V0QU9rSHNQWHJDXzBHVDAwZ0Zmcnk3WDNPRVZ3OhY8Yj5VTFRJTUFURSBUcmF2ZWw8L2I-QpQBTG9va2luZyBmb3IgdGhlIDxiPlVMVElNQVRFIFRyYXZlbDwvYj4gQWR2ZW50dXJlPyBHcm91cCBUb3VycyBhbmQgR2FwIFllYXIgYWR2ZW50dXJlcyBpbiBBdXN0cmFsaWEsIE5ldyBaZWFsYW5kLCBCYWxpLCBUaGFpbGFuZCwgVmlldG5hbSAmYW1wOyBtb3JlLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CoQBL2dvdG8_dXJsPUNBRVNWd0hyT3pBVm9HVm5pbUFKOUlWeGZ3VlNBb2szTFVQbWdyTGpnWVVaMHBBMmUtaTRUdGpxcDJTRE5sdzY4dWxPbHF4bk1ZY3pHaFJSOWNJSHRYU0hXUnFvX0V0QU9rSHNQWHJDXzBHVDAwZ0Zmcnk3WDNPRVZ3EgQaAggAGoQDEgIIARoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA3gIIABAAGAAgACoPCgh1bHRpbWF0ZRX6fo5AKg0KBnRyYXZlbBVtTJtAMoQBL2dvdG8_dXJsPUNBRVNWd0hyT3pBVm9HVm5pbUFKOUlWeGZ3VlNBb2szTFVQbWdyTGpnWVVaMHBBMmUtaTRUdGpxcDJTRE5sdzY4dWxPbHF4bk1ZY3pHaFJSOWNJSHRYU0hXUnFvX0V0QU9rSHNQWHJDXzBHVDAwZ0Zmcnk3WDNPRVZ3OhY8Yj5VTFRJTUFURSBUcmF2ZWw8L2I-QpQBTG9va2luZyBmb3IgdGhlIDxiPlVMVElNQVRFIFRyYXZlbDwvYj4gQWR2ZW50dXJlPyBHcm91cCBUb3VycyBhbmQgR2FwIFllYXIgYWR2ZW50dXJlcyBpbiBBdXN0cmFsaWEsIE5ldyBaZWFsYW5kLCBCYWxpLCBUaGFpbGFuZCwgVmlldG5hbSAmYW1wOyBtb3JlLiICEAFIAFgAaAA",
+      "source": "ultimate.travel"
+    },
+    {
+      "position": 2,
+      "title": "My Ultimate Travel Experience 'Down Under'!",
+      "link": "https://www.ultimate.travel/our-blog/my-ultimate-travel-experience-down-under/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESiQEB6zswFYzW4eJymDm0C0zM-PO2xHTpg212zWhZmrg5VU5ozbELZ3MMaGRG3QW90Iq94AW_3h54UrSNsFXCig86-Bj_rtLHENL7tSxtvz6UbrK-pRWE9TXWUpaxzP5ZcF71RwNVaFLTT5YLmdMW7SVyYLleOSas-ILFCvJ6mZZ_mOSplUs9f596LQ&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4QFnoECBoQAQ&uoh=1",
+      "displayed_link": "https://www.ultimate.travel › Featured",
+      "favicon": "https://serpapi.com/images/i/UklGRtgAAABXRUJQVlA4IMwAAADwBQCdASocABwAPtEutFooIagoGAEAGglsAJ0y7PV3pvFDBc6qcC9-FDkXpHqjMI_qec-5-QZDkADMT6jFtJCAEd-Qott0qbQmuicxDR62gv0bPX3efCxihuMgXl-IskzVf_F6xNk2q2ySYsXdDPjWOFmLAAuPz3l2jVN2VYI4ttLuxIK5NV5NBWqHlBf8CN5fr62_55SCJaoL5Nr3b5fDTDATBIcL2p0q7GWd9ZCtwoTfXyAyyAqoJi_csBW13KcwLHGYI43IBYTQAAA.webp",
+      "snippet": "My original plan was to look for a travel buddy and buy a van, but Ultimate Travel offers so many cool trips to the places I want to go. And the trips are in ...",
+      "snippet_highlighted_words": [
+        "Ultimate Travel"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "My original plan was to look for a travel buddy and buy a van, but Ultimate Travel offers so many cool trips to the places I want to go. And the trips are in ...",
+          "source_info_link": "https://www.ultimate.travel/our-blog/my-ultimate-travel-experience-down-under/",
+          "icon": "https://serpapi.com/images/i/UklGRtgAAABXRUJQVlA4IMwAAADwBQCdASocABwAPtEutFooIagoGAEAGglsAJ0y7PV3pvFDBc6qcC9-FDkXpHqjMI_qec-5-QZDkADMT6jFtJCAEd-Qott0qbQmuicxDR62gv0bPX3efCxihuMgXl-IskzVf_F6xNk2q2ySYsXdDPjWOFmLAAuPz3l2jVN2VYI4ttLuxIK5NV5NBWqHlBf8CN5fr62_55SCJaoL5Nr3b5fDTDATBIcL2p0q7GWd9ZCtwoTfXyAyyAqoJi_csBW13KcwLHGYI43IBYTQAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsgBL2dvdG8_dXJsPUNBRVNpUUVCNnpzd0ZZelc0ZUp5bURtMEMwek0tUE8yeEhUcGcyMTJ6V2habXJnNVZVNW96YkVMWjNNTWFHUkczUVc5MElxOTRBV18zaDU0VXJTTnNGWENpZzg2LUJqX3J0TEhFTkw3dFN4dHZ6NlVickstcFJXRTlUWFdVcGF4elA1WmNGNzFSd05WYUZMVFQ1WUxtZE1XN1NWeVlMbGVPU2FzLUlMRkN2SjZtWlpfbU9TcGxVczlmNTk2TFESBBoCCAAagwQSABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA3wMIABAAGAAgACoPCgh1bHRpbWF0ZRU_rZFAKg0KBnRyYXZlbBVAV51AMsgBL2dvdG8_dXJsPUNBRVNpUUVCNnpzd0ZZelc0ZUp5bURtMEMwek0tUE8yeEhUcGcyMTJ6V2habXJnNVZVNW96YkVMWjNNTWFHUkczUVc5MElxOTRBV18zaDU0VXJTTnNGWENpZzg2LUJqX3J0TEhFTkw3dFN4dHZ6NlVickstcFJXRTlUWFdVcGF4elA1WmNGNzFSd05WYUZMVFQ1WUxtZE1XN1NWeVlMbGVPU2FzLUlMRkN2SjZtWlpfbU9TcGxVczlmNTk2TFE6Ok15IDxiPlVsdGltYXRlIFRyYXZlbDwvYj4gRXhwZXJpZW5jZSAmIzM5O0Rvd24gVW5kZXImIzM5OyFCrQFNeSBvcmlnaW5hbCBwbGFuIHdhcyB0byBsb29rIGZvciBhIHRyYXZlbCBidWRkeSBhbmQgYnV5IGEgdmFuLCBidXQgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiBvZmZlcnMgc28gbWFueSBjb29sIHRyaXBzIHRvIHRoZSBwbGFjZXMgSSB3YW50IHRvIGdvLiBBbmQgdGhlIHRyaXBzIGFyZSBpbiZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsgBL2dvdG8_dXJsPUNBRVNpUUVCNnpzd0ZZelc0ZUp5bURtMEMwek0tUE8yeEhUcGcyMTJ6V2habXJnNVZVNW96YkVMWjNNTWFHUkczUVc5MElxOTRBV18zaDU0VXJTTnNGWENpZzg2LUJqX3J0TEhFTkw3dFN4dHZ6NlVickstcFJXRTlUWFdVcGF4elA1WmNGNzFSd05WYUZMVFQ1WUxtZE1XN1NWeVlMbGVPU2FzLUlMRkN2SjZtWlpfbU9TcGxVczlmNTk2TFESBBoCCAAagwQSABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA3wMIABAAGAAgACoPCgh1bHRpbWF0ZRU_rZFAKg0KBnRyYXZlbBVAV51AMsgBL2dvdG8_dXJsPUNBRVNpUUVCNnpzd0ZZelc0ZUp5bURtMEMwek0tUE8yeEhUcGcyMTJ6V2habXJnNVZVNW96YkVMWjNNTWFHUkczUVc5MElxOTRBV18zaDU0VXJTTnNGWENpZzg2LUJqX3J0TEhFTkw3dFN4dHZ6NlVickstcFJXRTlUWFdVcGF4elA1WmNGNzFSd05WYUZMVFQ1WUxtZE1XN1NWeVlMbGVPU2FzLUlMRkN2SjZtWlpfbU9TcGxVczlmNTk2TFE6Ok15IDxiPlVsdGltYXRlIFRyYXZlbDwvYj4gRXhwZXJpZW5jZSAmIzM5O0Rvd24gVW5kZXImIzM5OyFCrQFNeSBvcmlnaW5hbCBwbGFuIHdhcyB0byBsb29rIGZvciBhIHRyYXZlbCBidWRkeSBhbmQgYnV5IGEgdmFuLCBidXQgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiBvZmZlcnMgc28gbWFueSBjb29sIHRyaXBzIHRvIHRoZSBwbGFjZXMgSSB3YW50IHRvIGdvLiBBbmQgdGhlIHRyaXBzIGFyZSBpbiZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "ultimate.travel",
+      "read_more_link": "https://www.ultimate.travel/our-blog/my-ultimate-travel-experience-down-under/#:~:text=My%20original%20plan%20was%20to,even%20easier%20to%20meet%20people!"
+    },
+    {
+      "position": 3,
+      "title": "The Ultimate Travel Superpower | Chris Guillebeau",
+      "link": "https://chrisguillebeau.com/ultimate-travel-superpower",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEScQHrOzAV46jXO-YYqdzJb1WsxOUvhJTz4Od8TCki_1yl5cIqm2YJOFUSsa_Y1oaP3RzhoMy27KjyyaVI_JBZAcgS2XnNnJhbq3cLqX3pxTKQ9zJuc-XMiuwvCmTZFExJhGF3x62cretUuScPa36cTpi8&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4QFnoECB4QAQ&uoh=1",
+      "displayed_link": "https://chrisguillebeau.com › Travel",
+      "favicon": "https://serpapi.com/images/i/UklGRogAAABXRUJQVlA4IHwAAABwBACdASocABwAPtEutFooIagoGAEAGglpAAPjBln8PtxLyjfpzzQEsFACAAD-_sImvoPf7OVr_4Hf_7vfmIanKJQX_JawbLPptAj_4pm4Ur09QUepxdCsbmw5im7T06oiuXa3qX7Kw_uh58OYnbQF2u0FsdY0AnLQAAAA.webp",
+      "snippet": "A much more difficult problem is that the ultimate travel superpower doesn't make decisions for you. In fact, you could argue that it makes some decisions more ...",
+      "snippet_highlighted_words": [
+        "ultimate travel"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "A much more difficult problem is that the ultimate travel superpower doesn't make decisions for you. In fact, you could argue that it makes some decisions more ...",
+          "source_info_link": "https://chrisguillebeau.com/ultimate-travel-superpower",
+          "icon": "https://serpapi.com/images/i/UklGRogAAABXRUJQVlA4IHwAAABwBACdASocABwAPtEutFooIagoGAEAGglpAAPjBln8PtxLyjfpzzQEsFACAAD-_sImvoPf7OVr_4Hf_7vfmIanKJQX_JawbLPptAj_4pm4Ur09QUepxdCsbmw5im7T06oiuXa3qX7Kw_uh58OYnbQF2u0FsdY0AnLQAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqYBL2dvdG8_dXJsPUNBRVNjUUhyT3pBVjQ2alhPLVlZcWR6SmIxV3N4T1V2aEpUejRPZDhUQ2tpXzF5bDVjSXFtMllKT0ZVU3NhX1kxb2FQM1J6aG9NeTI3S2p5eWFWSV9KQlpBY2dTMlhuTm5KaGJxM2NMcVgzcHhUS1E5ekp1Yy1YTWl1d3ZDbVRaRkV4SmhHRjN4NjJjcmV0VXVTY1BhMzZjVHBpOBIEGgIIABrnAxICCAAaACIAKgAyBggCEgJpbjoAQgQIARAASgBaAHIAegCCQMEDCAAQABgAIAAqDwoIdWx0aW1hdGUVG2GEQCoNCgZ0cmF2ZWwVbl-2QDKmAS9nb3RvP3VybD1DQUVTY1FIck96QVY0NmpYTy1ZWXFkekpiMVdzeE9VdmhKVHo0T2Q4VENraV8xeWw1Y0lxbTJZSk9GVVNzYV9ZMW9hUDNSemhvTXkyN0tqeXlhVklfSkJaQWNnUzJYbk5uSmhicTNjTHFYM3B4VEtROXpKdWMtWE1pdXd2Q21UWkZFeEpoR0YzeDYyY3JldFV1U2NQYTM2Y1RwaTg6OFRoZSA8Yj5VbHRpbWF0ZSBUcmF2ZWw8L2I-IFN1cGVycG93ZXIgfCBDaHJpcyBHdWlsbGViZWF1QrMBQSBtdWNoIG1vcmUgZGlmZmljdWx0IHByb2JsZW0gaXMgdGhhdCB0aGUgPGI-dWx0aW1hdGUgdHJhdmVsPC9iPiBzdXBlcnBvd2VyIGRvZXNuJiMzOTt0IG1ha2UgZGVjaXNpb25zIGZvciB5b3UuIEluIGZhY3QsIHlvdSBjb3VsZCBhcmd1ZSB0aGF0IGl0IG1ha2VzIHNvbWUgZGVjaXNpb25zIG1vcmUmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqYBL2dvdG8_dXJsPUNBRVNjUUhyT3pBVjQ2alhPLVlZcWR6SmIxV3N4T1V2aEpUejRPZDhUQ2tpXzF5bDVjSXFtMllKT0ZVU3NhX1kxb2FQM1J6aG9NeTI3S2p5eWFWSV9KQlpBY2dTMlhuTm5KaGJxM2NMcVgzcHhUS1E5ekp1Yy1YTWl1d3ZDbVRaRkV4SmhHRjN4NjJjcmV0VXVTY1BhMzZjVHBpOBIEGgIIABrnAxICCAAaACIAKgAyBggCEgJpbjoAQgQIARAASgBaAHIAegCCQMEDCAAQABgAIAAqDwoIdWx0aW1hdGUVG2GEQCoNCgZ0cmF2ZWwVbl-2QDKmAS9nb3RvP3VybD1DQUVTY1FIck96QVY0NmpYTy1ZWXFkekpiMVdzeE9VdmhKVHo0T2Q4VENraV8xeWw1Y0lxbTJZSk9GVVNzYV9ZMW9hUDNSemhvTXkyN0tqeXlhVklfSkJaQWNnUzJYbk5uSmhicTNjTHFYM3B4VEtROXpKdWMtWE1pdXd2Q21UWkZFeEpoR0YzeDYyY3JldFV1U2NQYTM2Y1RwaTg6OFRoZSA8Yj5VbHRpbWF0ZSBUcmF2ZWw8L2I-IFN1cGVycG93ZXIgfCBDaHJpcyBHdWlsbGViZWF1QrMBQSBtdWNoIG1vcmUgZGlmZmljdWx0IHByb2JsZW0gaXMgdGhhdCB0aGUgPGI-dWx0aW1hdGUgdHJhdmVsPC9iPiBzdXBlcnBvd2VyIGRvZXNuJiMzOTt0IG1ha2UgZGVjaXNpb25zIGZvciB5b3UuIEluIGZhY3QsIHlvdSBjb3VsZCBhcmd1ZSB0aGF0IGl0IG1ha2VzIHNvbWUgZGVjaXNpb25zIG1vcmUmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Chris Guillebeau | The Art of Non-Conformity",
+      "read_more_link": "https://chrisguillebeau.com/ultimate-travel-superpower#:~:text=A%20much%20more%20difficult%20problem,makes%20some%20decisions%20more%20difficult."
+    },
+    {
+      "position": 4,
+      "title": "which creator do you think is the ultimate travel guide?",
+      "link": "https://www.facebook.com/youtube/posts/which-creator-do-you-think-is-the-ultimate-travel-guide/1035957632280003/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESqwEB6zswFXGAe_lnX541yFtvR6-20yPrO3LlFhHrLe5ExXN-K6YX5BU_Mi6QHbzM8bmjA9ZrI0J2aDRZXK0u5rI_ZvDh_ldW-QAHHIpEoLWl1gU4g1d783pfDQj6yS9VYQgm5YNH2QoZPks5C6VEx6jcE7EFqxh9uWYHrtS83QkcGZGRNiK_krqKb9JmLOSWEJH8j-fleXIcCklvScFWFwu95PbfyF7tXr5LFRg&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4QFnoECBwQAQ&uoh=1",
+      "displayed_link": "810+ reactions · 4 months ago",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Every travel creator shows destinations, but only a few inspire people to pack their bags and go. Who's the ultimate travel guide in your...",
+      "snippet_highlighted_words": [
+        "ultimate travel"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Every travel creator shows destinations, but only a few inspire people to pack their bags and go. Who's the ultimate travel guide in your...",
+          "source_info_link": "https://www.facebook.com/youtube/posts/which-creator-do-you-think-is-the-ultimate-travel-guide/1035957632280003/",
+          "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CvUBL2dvdG8_dXJsPUNBRVNxd0VCNnpzd0ZYR0FlX2xuWDU0MXlGdHZSNi0yMHlQck8zTGxGaEhyTGU1RXhYTi1LNllYNUJVX01pNlFIYnpNOGJtakE5WnJJMEoyYURSWlhLMHU1cklfWnZEaF9sZFctUUFISElwRW9MV2wxZ1U0ZzFkNzgzcGZEUWo2eVM5VllRZ201WU5IMlFvWlBrczVDNlZFeDZqY0U3RUZxeGg5dVdZSHJ0UzgzUWtjR1pHUk5pS19rcnFLYjlKbUxPU1dFSkg4ai1mbGVYSWNDa2x2U2NGV0Z3dTk1UGJmeUY3dFhyNUxGUmcSBBoCCAAanwQSABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA-wMIABAAGAAgACoPCgh1bHRpbWF0ZRUpPYZAKg0KBnRyYXZlbBWf6qdAMvUBL2dvdG8_dXJsPUNBRVNxd0VCNnpzd0ZYR0FlX2xuWDU0MXlGdHZSNi0yMHlQck8zTGxGaEhyTGU1RXhYTi1LNllYNUJVX01pNlFIYnpNOGJtakE5WnJJMEoyYURSWlhLMHU1cklfWnZEaF9sZFctUUFISElwRW9MV2wxZ1U0ZzFkNzgzcGZEUWo2eVM5VllRZ201WU5IMlFvWlBrczVDNlZFeDZqY0U3RUZxeGg5dVdZSHJ0UzgzUWtjR1pHUk5pS19rcnFLYjlKbUxPU1dFSkg4ai1mbGVYSWNDa2x2U2NGV0Z3dTk1UGJmeUY3dFhyNUxGUmc6P3doaWNoIGNyZWF0b3IgZG8geW91IHRoaW5rIGlzIHRoZSA8Yj51bHRpbWF0ZSB0cmF2ZWw8L2I-IGd1aWRlP0KXAUV2ZXJ5IHRyYXZlbCBjcmVhdG9yIHNob3dzIGRlc3RpbmF0aW9ucywgYnV0IG9ubHkgYSBmZXcgaW5zcGlyZSBwZW9wbGUgdG8gcGFjayB0aGVpciBiYWdzIGFuZCBnby4gV2hvJiMzOTtzIHRoZSA8Yj51bHRpbWF0ZSB0cmF2ZWw8L2I-IGd1aWRlIGluIHlvdXIuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CvUBL2dvdG8_dXJsPUNBRVNxd0VCNnpzd0ZYR0FlX2xuWDU0MXlGdHZSNi0yMHlQck8zTGxGaEhyTGU1RXhYTi1LNllYNUJVX01pNlFIYnpNOGJtakE5WnJJMEoyYURSWlhLMHU1cklfWnZEaF9sZFctUUFISElwRW9MV2wxZ1U0ZzFkNzgzcGZEUWo2eVM5VllRZ201WU5IMlFvWlBrczVDNlZFeDZqY0U3RUZxeGg5dVdZSHJ0UzgzUWtjR1pHUk5pS19rcnFLYjlKbUxPU1dFSkg4ai1mbGVYSWNDa2x2U2NGV0Z3dTk1UGJmeUY3dFhyNUxGUmcSBBoCCAAanwQSABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA-wMIABAAGAAgACoPCgh1bHRpbWF0ZRUpPYZAKg0KBnRyYXZlbBWf6qdAMvUBL2dvdG8_dXJsPUNBRVNxd0VCNnpzd0ZYR0FlX2xuWDU0MXlGdHZSNi0yMHlQck8zTGxGaEhyTGU1RXhYTi1LNllYNUJVX01pNlFIYnpNOGJtakE5WnJJMEoyYURSWlhLMHU1cklfWnZEaF9sZFctUUFISElwRW9MV2wxZ1U0ZzFkNzgzcGZEUWo2eVM5VllRZ201WU5IMlFvWlBrczVDNlZFeDZqY0U3RUZxeGg5dVdZSHJ0UzgzUWtjR1pHUk5pS19rcnFLYjlKbUxPU1dFSkg4ai1mbGVYSWNDa2x2U2NGV0Z3dTk1UGJmeUY3dFhyNUxGUmc6P3doaWNoIGNyZWF0b3IgZG8geW91IHRoaW5rIGlzIHRoZSA8Yj51bHRpbWF0ZSB0cmF2ZWw8L2I-IGd1aWRlP0KXAUV2ZXJ5IHRyYXZlbCBjcmVhdG9yIHNob3dzIGRlc3RpbmF0aW9ucywgYnV0IG9ubHkgYSBmZXcgaW5zcGlyZSBwZW9wbGUgdG8gcGFjayB0aGVpciBiYWdzIGFuZCBnby4gV2hvJiMzOTtzIHRoZSA8Yj51bHRpbWF0ZSB0cmF2ZWw8L2I-IGd1aWRlIGluIHlvdXIuLi4iAhABSABYAGgA",
+      "source": "Facebook · YouTube"
+    },
+    {
+      "position": 5,
+      "title": "The Ultimate Travel Company: Luxury Bespoke Holidays ...",
+      "link": "https://www.theultimatetravelcompany.co.uk/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESZgHrOzAV29Ip6xNHseMysBEy7hQH-YHzRi5oH5y9uGLYfYHpawBMfFXUvHAT6ocgQcC9gwg_s1c866s0NmWtWo1z9DMZhKmFKtDRWJo79UbvbirIhqYbIzmApDNpPnJ3IhMsNTkRXA&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4QFnoECBQQAQ&uoh=1",
+      "displayed_link": "https://www.theultimatetravelcompany.co.uk",
+      "favicon": "https://serpapi.com/images/i/UklGRqYAAABXRUJQVlA4IJoAAACwBACdASogACAAPtEutFooIagoGAEAGgllAMrUlUn-LXJWQAtIL33HBQ_W6MiAAP7-wg7L1VubC2R48xsHjteNedSfetfzw5TdSFsgOsZphc2Aq9-3HKeXCtCrMKZe9RL3do_Y8AAA1PS6nny88Dci98aWf5zgnEOlo-7xzXL2bkXncKj8jPSlBZ__mMgnD3okB3rR2naVKAAA.webp",
+      "snippet": "Plan your next adventure with The Ultimate Travel Company, a travel agency with four decades of experience in tailor-made holidays, safaris & tours.",
+      "snippet_highlighted_words": [
+        "Ultimate Travel"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Plan your next adventure with The Ultimate Travel Company, a travel agency with four decades of experience in tailor-made holidays, safaris & tours.",
+          "source_info_link": "https://www.theultimatetravelcompany.co.uk/",
+          "icon": "https://serpapi.com/images/i/UklGRqYAAABXRUJQVlA4IJoAAACwBACdASogACAAPtEutFooIagoGAEAGgllAMrUlUn-LXJWQAtIL33HBQ_W6MiAAP7-wg7L1VubC2R48xsHjteNedSfetfzw5TdSFsgOsZphc2Aq9-3HKeXCtCrMKZe9RL3do_Y8AAA1PS6nny88Dci98aWf5zgnEOlo-7xzXL2bkXncKj8jPSlBZ__mMgnD3okB3rR2naVKAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjI5SXA2eE5Ic2VNeXNCRXk3aFFILVlIelJpNW9INXk5dUdMWWZZSHBhd0JNZkZYVXZIQVQ2b2NnUWNDOWd3Z19zMWM4NjZzME5tV3RXbzF6OURNWmhLbUZLdERSV0pvNzlVYnZiaXJJaHFZYkl6bUFwRE5wUG5KM0loTXNOVGtSWEESBBoCCAAazAMSAggAGgAiACoAMgYIAhICaW46AEIECAEQAEoAWgByAHoAgkCmAwgAEAAYACAAKg8KCHVsdGltYXRlFfNfA0EqDQoGdHJhdmVsFSYQCEEymAEvZ290bz91cmw9Q0FFU1pnSHJPekFWMjlJcDZ4TkhzZU15c0JFeTdoUUgtWUh6Umk1b0g1eTl1R0xZZllIcGF3Qk1mRlhVdkhBVDZvY2dRY0M5Z3dnX3MxYzg2NnMwTm1XdFdvMXo5RE1aaEttRkt0RFJXSm83OVVidmJpcklocVliSXptQXBETnBQbkozSWhNc05Ua1JYQTo_VGhlIDxiPlVsdGltYXRlIFRyYXZlbDwvYj4gQ29tcGFueTogTHV4dXJ5IEJlc3Bva2UgSG9saWRheXMgLi4uQp8BUGxhbiB5b3VyIG5leHQgYWR2ZW50dXJlIHdpdGggVGhlIDxiPlVsdGltYXRlIFRyYXZlbDwvYj4gQ29tcGFueSwgYSB0cmF2ZWwgYWdlbmN5IHdpdGggZm91ciBkZWNhZGVzIG9mIGV4cGVyaWVuY2UgaW4gdGFpbG9yLW1hZGUgaG9saWRheXMsIHNhZmFyaXMgJmFtcDsgdG91cnMuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjI5SXA2eE5Ic2VNeXNCRXk3aFFILVlIelJpNW9INXk5dUdMWWZZSHBhd0JNZkZYVXZIQVQ2b2NnUWNDOWd3Z19zMWM4NjZzME5tV3RXbzF6OURNWmhLbUZLdERSV0pvNzlVYnZiaXJJaHFZYkl6bUFwRE5wUG5KM0loTXNOVGtSWEESBBoCCAAazAMSAggAGgAiACoAMgYIAhICaW46AEIECAEQAEoAWgByAHoAgkCmAwgAEAAYACAAKg8KCHVsdGltYXRlFfNfA0EqDQoGdHJhdmVsFSYQCEEymAEvZ290bz91cmw9Q0FFU1pnSHJPekFWMjlJcDZ4TkhzZU15c0JFeTdoUUgtWUh6Umk1b0g1eTl1R0xZZllIcGF3Qk1mRlhVdkhBVDZvY2dRY0M5Z3dnX3MxYzg2NnMwTm1XdFdvMXo5RE1aaEttRkt0RFJXSm83OVVidmJpcklocVliSXptQXBETnBQbkozSWhNc05Ua1JYQTo_VGhlIDxiPlVsdGltYXRlIFRyYXZlbDwvYj4gQ29tcGFueTogTHV4dXJ5IEJlc3Bva2UgSG9saWRheXMgLi4uQp8BUGxhbiB5b3VyIG5leHQgYWR2ZW50dXJlIHdpdGggVGhlIDxiPlVsdGltYXRlIFRyYXZlbDwvYj4gQ29tcGFueSwgYSB0cmF2ZWwgYWdlbmN5IHdpdGggZm91ciBkZWNhZGVzIG9mIGV4cGVyaWVuY2UgaW4gdGFpbG9yLW1hZGUgaG9saWRheXMsIHNhZmFyaXMgJmFtcDsgdG91cnMuIgIQAUgAWABoAA",
+      "source": "The Ultimate Travel Company"
+    },
+    {
+      "position": 6,
+      "title": "Nick Van Gruisen - Owner, The Ultimate Travel Company Ltd",
+      "link": "https://uk.linkedin.com/in/nick-van-gruisen-a315006",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESbgHrOzAV9IzcU2V8Es41wfhJosT7VoVL4RQbgzuUi8Lv3vYq1Jg9mSpsTQl4a_dj6S_QPXiUkbaCFmCBehYNdGjyu1vKs3A8FhMivej6Ji9zWqSmu6-gSmpJ3gnhF2iJ2AOQX8XaPr_uDeZZaNO0&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4QFnoECBcQAQ&uoh=1",
+      "displayed_link": "870+ followers",
+      "favicon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp",
+      "snippet": "Owner, The Ultimate Travel Company Ltd · Experience: The Ultimate Travel Company Ltd · Location: London · 500+ connections on LinkedIn.",
+      "snippet_highlighted_words": [
+        "Ultimate Travel",
+        "Ultimate Travel"
+      ],
+      "rich_snippet": {
+        "top": {
+          "extensions": [
+            "London, England, United Kingdom",
+            "Owner",
+            "The Ultimate Travel Company Ltd"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "Owner, The Ultimate Travel Company Ltd · Experience: The Ultimate Travel Company Ltd · Location: London · 500+ connections on LinkedIn.",
+          "source_info_link": "https://uk.linkedin.com/in/nick-van-gruisen-a315006",
+          "icon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqIBL2dvdG8_dXJsPUNBRVNiZ0hyT3pBVjlJemNVMlY4RXM0MXdmaEpvc1Q3Vm9WTDRSUWJnenVVaThMdjN2WXExSmc5bVNwc1RRbDRhX2RqNlNfUVBYaVVrYmFDRm1DQmVoWU5kR2p5dTF2S3MzQThGaE1pdmVqNkppOXpXcVNtdTYtZ1NtcEozZ25oRjJpSjJBT1FYOFhhUHJfdURlWlphTk8wEgQaAggAGs4DEgAaACIAKgAyBggCEgJpbjoAQgQIARAASgBaAHIAegCCQKoDCAAQABgAIAAqDwoIdWx0aW1hdGUV5QhnQCoNCgZ0cmF2ZWwVQiKBQDKiAS9nb3RvP3VybD1DQUVTYmdIck96QVY5SXpjVTJWOEVzNDF3ZmhKb3NUN1ZvVkw0UlFiZ3p1VWk4THYzdllxMUpnOW1TcHNUUWw0YV9kajZTX1FQWGlVa2JhQ0ZtQ0JlaFlOZEdqeXUxdktzM0E4RmhNaXZlajZKaTl6V3FTbXU2LWdTbXBKM2duaEYyaUoyQU9RWDhYYVByX3VEZVpaYU5PMDpATmljayBWYW4gR3J1aXNlbiAtIE93bmVyLCBUaGUgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiBDb21wYW55IEx0ZEKYAU93bmVyLCBUaGUgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiBDb21wYW55IEx0ZCDCtyBFeHBlcmllbmNlOiBUaGUgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiBDb21wYW55IEx0ZCDCtyBMb2NhdGlvbjogTG9uZG9uIMK3IDUwMCsgY29ubmVjdGlvbnMgb24gTGlua2VkSW4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqIBL2dvdG8_dXJsPUNBRVNiZ0hyT3pBVjlJemNVMlY4RXM0MXdmaEpvc1Q3Vm9WTDRSUWJnenVVaThMdjN2WXExSmc5bVNwc1RRbDRhX2RqNlNfUVBYaVVrYmFDRm1DQmVoWU5kR2p5dTF2S3MzQThGaE1pdmVqNkppOXpXcVNtdTYtZ1NtcEozZ25oRjJpSjJBT1FYOFhhUHJfdURlWlphTk8wEgQaAggAGs4DEgAaACIAKgAyBggCEgJpbjoAQgQIARAASgBaAHIAegCCQKoDCAAQABgAIAAqDwoIdWx0aW1hdGUV5QhnQCoNCgZ0cmF2ZWwVQiKBQDKiAS9nb3RvP3VybD1DQUVTYmdIck96QVY5SXpjVTJWOEVzNDF3ZmhKb3NUN1ZvVkw0UlFiZ3p1VWk4THYzdllxMUpnOW1TcHNUUWw0YV9kajZTX1FQWGlVa2JhQ0ZtQ0JlaFlOZEdqeXUxdktzM0E4RmhNaXZlajZKaTl6V3FTbXU2LWdTbXBKM2duaEYyaUoyQU9RWDhYYVByX3VEZVpaYU5PMDpATmljayBWYW4gR3J1aXNlbiAtIE93bmVyLCBUaGUgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiBDb21wYW55IEx0ZEKYAU93bmVyLCBUaGUgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiBDb21wYW55IEx0ZCDCtyBFeHBlcmllbmNlOiBUaGUgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiBDb21wYW55IEx0ZCDCtyBMb2NhdGlvbjogTG9uZG9uIMK3IDUwMCsgY29ubmVjdGlvbnMgb24gTGlua2VkSW4uIgIQAUgAWABoAA",
+      "source": "LinkedIn · Nick Van Gruisen"
+    },
+    {
+      "position": 7,
+      "title": "Not great - Review of Ultimate Travel, Sydney, Australia",
+      "link": "https://www.tripadvisor.com/ShowUserReviews-g255060-d17514865-r876382232-Ultimate_Travel-Sydney_New_South_Wales.html",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESrwEB6zswFd_HLBa7C_jm_2i_8Xxnoj4BIiLKvmMobw9wRX3_sJlaCOPt3nSEMEo8Ky6Qa-JqXaKQWreXwvHu9nRQBNp7_P9PBmz2ikD5ePhGQlTgh8G67Nq8KWVxgCA7owRuGEo4LNDpuPBQMc5-8XPyGC27jv_0q385gaH_fVwjGLGtGG8L1t24SRg0ydE1NOeEXjvrBD2fV9CLHCt0OHWou2blcEXBfoQQkaO_-_dW&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4QFnoECBYQAQ&uoh=1",
+      "displayed_link": "https://www.tripadvisor.com › ... › Ultimate Travel",
+      "favicon": "https://serpapi.com/images/i/UklGRkoBAABXRUJQVlA4ID4BAADQBgCdASocABwAPrkurlcnIacnG_DgFwlsAJ0y43UHrqeAN4sRoIQDV4vgCTRvB1tMXw-Ape1f4gxv7fJIlmAA_FHCFlLdcABXyY72clExk4RdAtev8mLy_Ws-uojgoLjRWQZ0Gku77ttm-gMJFu3wFcz6gfhtA_OZN_79epZAT2R1__0YegM5bI2MS1sgfHl64Ymve17rG-lDfFSkP0pfcGpBIipy0siH9dzFV4xzcVO-6OrAR2QkZyrGrsLlkJJACSgyoWsgnNLLc5mXcbTqYXfBtftqxSxjvuV-6f1iJrv9NKKGGVrzr55G7G76DtPh7l8RrCfPlKt4k-QrcVlba5dWvj71G5MmPPx1ZbpHL-xUS1c4Ve8M_Co8xZoYJUKG-Z3wfFCGQUJmSLSO4_79-i6ze-Ay_IbZCcAAAAA.webp",
+      "snippet": "If you're thinking of travelling the East Coast I would 100% recommend doing it with Ultimate Travel. Date of experience: February 2020. Thank ...",
+      "snippet_highlighted_words": [
+        "Ultimate Travel"
+      ],
+      "rich_snippet": {
+        "top": {
+          "detected_extensions": {
+            "rating": 2.0
+          },
+          "extensions": [
+            "2.0",
+            "Review by Caitlinhodgk"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "If you're thinking of travelling the East Coast I would 100% recommend doing it with Ultimate Travel. Date of experience: February 2020. Thank ...",
+          "source_info_link": "https://www.tripadvisor.com/ShowUserReviews-g255060-d17514865-r876382232-Ultimate_Travel-Sydney_New_South_Wales.html",
+          "icon": "https://serpapi.com/images/i/UklGRkoBAABXRUJQVlA4ID4BAADQBgCdASocABwAPrkurlcnIacnG_DgFwlsAJ0y43UHrqeAN4sRoIQDV4vgCTRvB1tMXw-Ape1f4gxv7fJIlmAA_FHCFlLdcABXyY72clExk4RdAtev8mLy_Ws-uojgoLjRWQZ0Gku77ttm-gMJFu3wFcz6gfhtA_OZN_79epZAT2R1__0YegM5bI2MS1sgfHl64Ymve17rG-lDfFSkP0pfcGpBIipy0siH9dzFV4xzcVO-6OrAR2QkZyrGrsLlkJJACSgyoWsgnNLLc5mXcbTqYXfBtftqxSxjvuV-6f1iJrv9NKKGGVrzr55G7G76DtPh7l8RrCfPlKt4k-QrcVlba5dWvj71G5MmPPx1ZbpHL-xUS1c4Ve8M_Co8xZoYJUKG-Z3wfFCGQUJmSLSO4_79-i6ze-Ay_IbZCcAAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CvoBL2dvdG8_dXJsPUNBRVNyd0VCNnpzd0ZkX0hMQmE3Q19qbV8yaV84WHhub2o0QklpTEt2bU1vYnc5d1JYM19zSmxhQ09QdDNuU0VNRW84S3k2UWEtSnFYYUtRV3JlWHd2SHU5blJRQk5wN19QOVBCbXoyaWtENWVQaEdRbFRnaDhHNjdOcThLV1Z4Z0NBN293UnVHRW80TE5EcHVQQlFNYzUtOFhQeUdDMjdqdl8wcTM4NWdhSF9mVndqR0xHdEdHOEwxdDI0U1JnMHlkRTFOT2VFWGp2ckJEMmZWOUNMSEN0ME9IV291MmJsY0VYQmZvUVFrYU9fLV9kVxIEGgIIABqvBBIAGgAiACoAMgYIAhICaW46AEIECAEQAEoAWgByAHoAgkCLBAgAEAAYACAAKg8KCHVsdGltYXRlFSXQmkAqDQoGdHJhdmVsFQAZkEAy-gEvZ290bz91cmw9Q0FFU3J3RUI2enN3RmRfSExCYTdDX2ptXzJpXzhYeG5vajRCSWlMS3ZtTW9idzl3UlgzX3NKbGFDT1B0M25TRU1FbzhLeTZRYS1KcVhhS1FXcmVYd3ZIdTluUlFCTnA3X1A5UEJtejJpa0Q1ZVBoR1FsVGdoOEc2N05xOEtXVnhnQ0E3b3dSdUdFbzRMTkRwdVBCUU1jNS04WFB5R0MyN2p2XzBxMzg1Z2FIX2ZWd2pHTEd0R0c4TDF0MjRTUmcweWRFMU5PZUVYanZyQkQyZlY5Q0xIQ3QwT0hXb3UyYmxjRVhCZm9RUWthT18tX2RXOj9Ob3QgZ3JlYXQgLSBSZXZpZXcgb2YgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiwgU3lkbmV5LCBBdXN0cmFsaWFCogFJZiB5b3UmIzM5O3JlIHRoaW5raW5nIG9mIHRyYXZlbGxpbmcgdGhlIEVhc3QgQ29hc3QgSSB3b3VsZCAxMDAlIHJlY29tbWVuZCBkb2luZyBpdCB3aXRoIDxiPlVsdGltYXRlIFRyYXZlbDwvYj4uIERhdGUgb2YgZXhwZXJpZW5jZTogRmVicnVhcnkgMjAyMC4gVGhhbmsmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CvoBL2dvdG8_dXJsPUNBRVNyd0VCNnpzd0ZkX0hMQmE3Q19qbV8yaV84WHhub2o0QklpTEt2bU1vYnc5d1JYM19zSmxhQ09QdDNuU0VNRW84S3k2UWEtSnFYYUtRV3JlWHd2SHU5blJRQk5wN19QOVBCbXoyaWtENWVQaEdRbFRnaDhHNjdOcThLV1Z4Z0NBN293UnVHRW80TE5EcHVQQlFNYzUtOFhQeUdDMjdqdl8wcTM4NWdhSF9mVndqR0xHdEdHOEwxdDI0U1JnMHlkRTFOT2VFWGp2ckJEMmZWOUNMSEN0ME9IV291MmJsY0VYQmZvUVFrYU9fLV9kVxIEGgIIABqvBBIAGgAiACoAMgYIAhICaW46AEIECAEQAEoAWgByAHoAgkCLBAgAEAAYACAAKg8KCHVsdGltYXRlFSXQmkAqDQoGdHJhdmVsFQAZkEAy-gEvZ290bz91cmw9Q0FFU3J3RUI2enN3RmRfSExCYTdDX2ptXzJpXzhYeG5vajRCSWlMS3ZtTW9idzl3UlgzX3NKbGFDT1B0M25TRU1FbzhLeTZRYS1KcVhhS1FXcmVYd3ZIdTluUlFCTnA3X1A5UEJtejJpa0Q1ZVBoR1FsVGdoOEc2N05xOEtXVnhnQ0E3b3dSdUdFbzRMTkRwdVBCUU1jNS04WFB5R0MyN2p2XzBxMzg1Z2FIX2ZWd2pHTEd0R0c4TDF0MjRTUmcweWRFMU5PZUVYanZyQkQyZlY5Q0xIQ3QwT0hXb3UyYmxjRVhCZm9RUWthT18tX2RXOj9Ob3QgZ3JlYXQgLSBSZXZpZXcgb2YgPGI-VWx0aW1hdGUgVHJhdmVsPC9iPiwgU3lkbmV5LCBBdXN0cmFsaWFCogFJZiB5b3UmIzM5O3JlIHRoaW5raW5nIG9mIHRyYXZlbGxpbmcgdGhlIEVhc3QgQ29hc3QgSSB3b3VsZCAxMDAlIHJlY29tbWVuZCBkb2luZyBpdCB3aXRoIDxiPlVsdGltYXRlIFRyYXZlbDwvYj4uIERhdGUgb2YgZXhwZXJpZW5jZTogRmVicnVhcnkgMjAyMC4gVGhhbmsmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Tripadvisor",
+      "read_more_link": "https://www.tripadvisor.com/ShowUserReviews-g255060-d17514865-r876382232-Ultimate_Travel-Sydney_New_South_Wales.html#:~:text=If%20you're%20thinking%20of%20travelling,Thank%20gemmarK6505QS"
+    },
+    {
+      "position": 8,
+      "title": "The Ultimate Travel Destination: Home",
+      "link": "https://www.nationalgeographic.com/travel/article/the-ultimate-travel-destination-home-rreid",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESlwEB6zswFW8Kwx6QjCEHRtSorp_RvUpxUjnu3rIXGHHnjenC-xA5r4bteolXtCjlq_cIPOSp_1Ew4ltJK1iNu4Q9qrUHS6nR5_OWPw2LgEWkvFFHdY8NpCZwvO2Q5SODF5Q4x4H4xPIcurJPjRyRr1BxQ8M3saENFv9Ki8E-JzDQsp5X7Mg581kK_UgmhS_b6kZKFidqjB7L&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4QFnoECEEQAQ&uoh=1",
+      "displayed_link": "https://www.nationalgeographic.com › Travel",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd-UAAAAV0lEQVR4AWNwL_CB4_9nGMSBeB8Q_6cGhpoljmzHoLNwHzmYEgv1gFgYJE4C1qPIQpA4KZhGFo5aOGrhqIWjFo5aOGrhqIWjFtKzESUM0jOomonDv-UNAHDLM_g8duTkAAAAAElFTkSuQmCC.png",
+      "snippet": "Home, I think, is the ultimate travel destination – and sort of the point of it all. “Home,” of course, can mean different things to different ...",
+      "snippet_highlighted_words": [
+        "ultimate travel"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Home, I think, is the ultimate travel destination – and sort of the point of it all. “Home,” of course, can mean different things to different ...",
+          "source_info_link": "https://www.nationalgeographic.com/travel/article/the-ultimate-travel-destination-home-rreid",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd-UAAAAV0lEQVR4AWNwL_CB4_9nGMSBeB8Q_6cGhpoljmzHoLNwHzmYEgv1gFgYJE4C1qPIQpA4KZhGFo5aOGrhqIWjFo5aOGrhqIWjFtKzESUM0jOomonDv-UNAHDLM_g8duTkAAAAAElFTkSuQmCC.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZXOEt3eDZRakNFSFJ0U29ycF9SdlVweFVqbnUzcklYR0hIbmplbkMteEE1cjRidGVvbFh0Q2pscV9jSVBPU3BfMUV3NGx0SksxaU51NFE5cXJVSFM2blI1X09XUHcyTGdFV2t2RkZIZFk4TnBDWnd2TzJRNVNPREY1UTR4NEg0eFBJY3VySlBqUnlScjFCeFE4TTNzYUVORnY5S2k4RS1KekRRc3A1WDdNZzU4MWtLX1VnbWhTX2I2a1pLRmlkcWpCN0wSBBoCCAAalAQSABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA8AMIABAAGAAgACoPCgh1bHRpbWF0ZRWi24BAKg0KBnRyYXZlbBWPZLFAMtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZXOEt3eDZRakNFSFJ0U29ycF9SdlVweFVqbnUzcklYR0hIbmplbkMteEE1cjRidGVvbFh0Q2pscV9jSVBPU3BfMUV3NGx0SksxaU51NFE5cXJVSFM2blI1X09XUHcyTGdFV2t2RkZIZFk4TnBDWnd2TzJRNVNPREY1UTR4NEg0eFBJY3VySlBqUnlScjFCeFE4TTNzYUVORnY5S2k4RS1KekRRc3A1WDdNZzU4MWtLX1VnbWhTX2I2a1pLRmlkcWpCN0w6QlRoZSA8Yj5VbHRpbWF0ZSBUcmF2ZWw8L2I-IERlc3RpbmF0aW9uOiBIb21lIHwgTmF0aW9uYWwgR2VvZ3JhcGhpY0KkAUhvbWUsIEkgdGhpbmssIGlzIHRoZSA8Yj51bHRpbWF0ZSB0cmF2ZWw8L2I-IGRlc3RpbmF0aW9uIOKAkyBhbmQgc29ydCBvZiB0aGUgcG9pbnQgb2YgaXQgYWxsLiDigJxIb21lLOKAnSBvZiBjb3Vyc2UsIGNhbiBtZWFuIGRpZmZlcmVudCB0aGluZ3MgdG8gZGlmZmVyZW50Jm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZXOEt3eDZRakNFSFJ0U29ycF9SdlVweFVqbnUzcklYR0hIbmplbkMteEE1cjRidGVvbFh0Q2pscV9jSVBPU3BfMUV3NGx0SksxaU51NFE5cXJVSFM2blI1X09XUHcyTGdFV2t2RkZIZFk4TnBDWnd2TzJRNVNPREY1UTR4NEg0eFBJY3VySlBqUnlScjFCeFE4TTNzYUVORnY5S2k4RS1KekRRc3A1WDdNZzU4MWtLX1VnbWhTX2I2a1pLRmlkcWpCN0wSBBoCCAAalAQSABoAIgAqADIGCAISAmluOgBCBAgBEABKAFoAcgB6AIJA8AMIABAAGAAgACoPCgh1bHRpbWF0ZRWi24BAKg0KBnRyYXZlbBWPZLFAMtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZXOEt3eDZRakNFSFJ0U29ycF9SdlVweFVqbnUzcklYR0hIbmplbkMteEE1cjRidGVvbFh0Q2pscV9jSVBPU3BfMUV3NGx0SksxaU51NFE5cXJVSFM2blI1X09XUHcyTGdFV2t2RkZIZFk4TnBDWnd2TzJRNVNPREY1UTR4NEg0eFBJY3VySlBqUnlScjFCeFE4TTNzYUVORnY5S2k4RS1KekRRc3A1WDdNZzU4MWtLX1VnbWhTX2I2a1pLRmlkcWpCN0w6QlRoZSA8Yj5VbHRpbWF0ZSBUcmF2ZWw8L2I-IERlc3RpbmF0aW9uOiBIb21lIHwgTmF0aW9uYWwgR2VvZ3JhcGhpY0KkAUhvbWUsIEkgdGhpbmssIGlzIHRoZSA8Yj51bHRpbWF0ZSB0cmF2ZWw8L2I-IGRlc3RpbmF0aW9uIOKAkyBhbmQgc29ydCBvZiB0aGUgcG9pbnQgb2YgaXQgYWxsLiDigJxIb21lLOKAnSBvZiBjb3Vyc2UsIGNhbiBtZWFuIGRpZmZlcmVudCB0aGluZ3MgdG8gZGlmZmVyZW50Jm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "National Geographic",
+      "read_more_link": "https://www.nationalgeographic.com/travel/article/the-ultimate-travel-destination-home-rreid#:~:text=Home%2C%20I%20think%2C%20is%20the,different%20things%20to%20different%20people."
+    }
+  ],
+  "related_searches": [
+    {
+      "block_position": 1,
+      "query": "Ultimate travel tour packages",
+      "link": "https://www.google.co.in/search?sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsSkZDpRVTOXqnaB2eegYG_2zP7XQ:1791597003319&q=Ultimate+travel+tour+packages&sa=X&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4Q1QJ6BAg_EAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Ultimate+travel+tour+packages"
+    },
+    {
+      "block_position": 1,
+      "query": "Ultimate travel packages",
+      "link": "https://www.google.co.in/search?sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsSkZDpRVTOXqnaB2eegYG_2zP7XQ:1791597003319&q=Ultimate+travel+packages&sa=X&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4Q1QJ6BAhAEAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Ultimate+travel+packages"
+    },
+    {
+      "block_position": 1,
+      "query": "Ultimate travel tours",
+      "link": "https://www.google.co.in/search?sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsSkZDpRVTOXqnaB2eegYG_2zP7XQ:1791597003319&q=Ultimate+travel+tours&sa=X&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4Q1QJ6BAg-EAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Ultimate+travel+tours"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.co.in/search?q=site:yes.bank.in+%22Ultimate+Travel%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsSkZDpRVTOXqnaB2eegYG_2zP7XQ:1791597003319&ei=y5nJau7oEp_W5NoPn5uN8AI&start=10&sa=N&sstk=AS6-VmLxdhXlaHy3YpBgeBx_ejqv5Qz_VfG0oafXynrGwrOM9rQFlnEdfS7j4X7bwA1dU_T8SO3HCx7LKUTEy56qWxPfUrcNmLeIwA&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4Q8NMDegQIOhAK",
+    "other_pages": {
+      "2": "https://www.google.co.in/search?q=site:yes.bank.in+%22Ultimate+Travel%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsSkZDpRVTOXqnaB2eegYG_2zP7XQ:1791597003319&ei=y5nJau7oEp_W5NoPn5uN8AI&start=10&sa=N&sstk=AS6-VmLxdhXlaHy3YpBgeBx_ejqv5Qz_VfG0oafXynrGwrOM9rQFlnEdfS7j4X7bwA1dU_T8SO3HCx7LKUTEy56qWxPfUrcNmLeIwA&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4Q8tMDegQIOhAE",
+      "3": "https://www.google.co.in/search?q=site:yes.bank.in+%22Ultimate+Travel%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsSkZDpRVTOXqnaB2eegYG_2zP7XQ:1791597003319&ei=y5nJau7oEp_W5NoPn5uN8AI&start=20&sa=N&sstk=AS6-VmLxdhXlaHy3YpBgeBx_ejqv5Qz_VfG0oafXynrGwrOM9rQFlnEdfS7j4X7bwA1dU_T8SO3HCx7LKUTEy56qWxPfUrcNmLeIwA&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4Q8tMDegQIOhAG",
+      "4": "https://www.google.co.in/search?q=site:yes.bank.in+%22Ultimate+Travel%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsSkZDpRVTOXqnaB2eegYG_2zP7XQ:1791597003319&ei=y5nJau7oEp_W5NoPn5uN8AI&start=30&sa=N&sstk=AS6-VmLxdhXlaHy3YpBgeBx_ejqv5Qz_VfG0oafXynrGwrOM9rQFlnEdfS7j4X7bwA1dU_T8SO3HCx7LKUTEy56qWxPfUrcNmLeIwA&ved=2ahUKEwiu-tn3qq6XAxUfK1kFHZ9NAy4Q8tMDegQIOhAI"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Ayes.bank.in+%22Ultimate+Travel%22&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Ayes.bank.in+%22Ultimate+Travel%22&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Ayes.bank.in+%22Ultimate+Travel%22&start=10",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Ayes.bank.in+%22Ultimate+Travel%22&start=20",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Ayes.bank.in+%22Ultimate+Travel%22&start=30"
+    }
+  }
+}

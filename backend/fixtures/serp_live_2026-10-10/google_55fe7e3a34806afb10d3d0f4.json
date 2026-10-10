@@ -1,0 +1,369 @@
+{
+  "_recorded": {
+    "engine": "google",
+    "params": {
+      "gl": "in",
+      "google_domain": "google.co.in",
+      "hl": "en",
+      "q": "site:sbicard.com \"Google Pay Flex\""
+    },
+    "at": "2026-10-10T01:47:23.791691+00:00"
+  },
+  "search_metadata": {
+    "id": "6ac9992bd114dfc541d51e44",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/7XvfbMNxc20lkUYVb5MnTAsWEVc3dMv9iRLgrI8S4Ro/6ac9992bd114dfc541d51e44.json",
+    "markdown_endpoint": "https://serpapi.com/searches/7XvfbMNxc20lkUYVb5MnTAsWEVc3dMv9iRLgrI8S4Ro/6ac9992bd114dfc541d51e44.md",
+    "pixel_position_endpoint": "https://serpapi.com/searches/7XvfbMNxc20lkUYVb5MnTAsWEVc3dMv9iRLgrI8S4Ro/6ac9992bd114dfc541d51e44.json_with_pixel_position",
+    "created_at": "2026-10-10 01:47:23 UTC",
+    "processed_at": "2026-10-10 01:47:23 UTC",
+    "google_url": "https://www.google.co.in/search?q=site%3Asbicard.com+%22Google+Pay+Flex%22&oq=site%3Asbicard.com+%22Google+Pay+Flex%22&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/7XvfbMNxc20lkUYVb5MnTAsWEVc3dMv9iRLgrI8S4Ro/6ac9992bd114dfc541d51e44.html",
+    "total_time_taken": 0.37
+  },
+  "search_parameters": {
+    "device": "desktop",
+    "engine": "google",
+    "gl": "in",
+    "google_domain": "google.co.in",
+    "hl": "en",
+    "q": "site:sbicard.com \"Google Pay Flex\""
+  },
+  "search_information": {
+    "query_displayed": "site:sbicard.com \"Google Pay Flex\"",
+    "total_results": 6530,
+    "time_taken_displayed": 0.2,
+    "organic_results_state": "Results for exact spelling"
+  },
+  "inline_videos": [
+    {
+      "position": 1,
+      "title": "Flex by Google Pay SBI Credit Card Launch 2026",
+      "link": "https://www.youtube.com/watch?v=hwP-T7qLSfo",
+      "thumbnail": "https://serpapi.com/searches/6ac9992bd114dfc541d51e44/images/jC3gZqppszRUCWtZ0_VhsWE_8IPG9aD8CzL2CbpuC6g.jpeg",
+      "channel": "NK DIGITAL POINT",
+      "duration": "8:00",
+      "platform": "YouTube",
+      "date": "2 Aug 2026",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQpFjGJ8XUGtlxeDd8U7T0uULTCiJGMsW-e3g"
+    },
+    {
+      "position": 2,
+      "title": "Introducing the Google Pay Flex SBI Card",
+      "link": "https://www.youtube.com/shorts/SUcjTn1W_YA",
+      "thumbnail": "https://serpapi.com/searches/6ac9992bd114dfc541d51e44/images/QKQh3pJBJQPH1x8yf8h-OjMCnoKAKLcPfmqfWhTbPac.jpeg",
+      "channel": "SBI Card",
+      "duration": "0:45",
+      "platform": "YouTube",
+      "date": "29 Jul 2026",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcS47FfPsTxdSKLIJGgjv-6U9_tzWgRQv-2YMA"
+    },
+    {
+      "position": 3,
+      "title": "Google Pay Axis Flex Credit Card Full Details | Benefit | Eligibility",
+      "link": "https://www.youtube.com/watch?v=FYuUvLizSyE",
+      "thumbnail": "https://serpapi.com/searches/6ac9992bd114dfc541d51e44/images/Ry060aMI_d1xyKMORi1_mWcDjz4bjI19XV2bAowG0SI.jpeg",
+      "channel": "Saagar Madnani",
+      "duration": "5:14",
+      "platform": "YouTube",
+      "date": "27 Jul 2026",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTM6VEnEPqMzgT2mw4i_zd2lMIl2tCaB-nMVA"
+    },
+    {
+      "position": 4,
+      "title": "Google Pay Flex Credit Card Apply Kaise kare?",
+      "link": "https://www.youtube.com/watch?v=pOrGlMEbqvg",
+      "thumbnail": "https://serpapi.com/searches/6ac9992bd114dfc541d51e44/images/WtRWsm7nZfxDh44jfHQbG5va6u_4N6xTzY58N_HUNOQ.jpeg",
+      "channel": "NK DIGITAL POINT",
+      "duration": "5:17",
+      "platform": "YouTube",
+      "date": "18 Jun 2026",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQ5hf9mvYUxv3dorWCsKH9jdPg3MmQ_lygAWw"
+    }
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Introducing Flex by Google Pay",
+      "link": "https://support.google.com/pay/india/answer/16597732?hl=en",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=https://support.google.com/pay/india/answer/16597732%3Fhl%3Den&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQFnoECBcQAQ",
+      "displayed_link": "https://support.google.com › pay › india › answer",
+      "favicon": "https://serpapi.com/images/i/UklGRq4AAABXRUJQVlA4IKIAAADwAgCdASoQABAAAsBMJbACdDiAN4z-0AFj302FejU2AAD-9nwIHnctDt4yPbFvK77LGPb6brAEqY6T1zYyWbjXB1uF9_Uj7wHz6zN7NYUQSHV49IiqjS-X2Ma8SvIJ1Yz1zaTOUQdbJFjhPMWxQQ-L8rWiceEEj1--p48_g8UrXrinoKsbx2bf93Q4BjOi9thY669Kz4H3_8YLw06o8JwAAAA.webp",
+      "snippet": "Card / Fee Type, Joining / Annual Fee (Year 1), Renewal Fee (Year 2 Onwards) ; Google Pay Flex SBI Card, ₹499 + applicable taxes, ₹499 + applicable taxes ...",
+      "snippet_highlighted_words": [
+        "Google Pay Flex"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Card / Fee Type, Joining / Annual Fee (Year 1), Renewal Fee (Year 2 Onwards) ; Google Pay Flex SBI Card, ₹499 + applicable taxes, ₹499 + applicable taxes ...",
+          "source_info_link": "https://support.google.com/pay/india/answer/16597732?hl=en",
+          "icon": "https://serpapi.com/images/i/UklGRq4AAABXRUJQVlA4IKIAAADwAgCdASoQABAAAsBMJbACdDiAN4z-0AFj302FejU2AAD-9nwIHnctDt4yPbFvK77LGPb6brAEqY6T1zYyWbjXB1uF9_Uj7wHz6zN7NYUQSHV49IiqjS-X2Ma8SvIJ1Yz1zaTOUQdbJFjhPMWxQQ-L8rWiceEEj1--p48_g8UrXrinoKsbx2bf93Q4BjOi9thY669Kz4H3_8YLw06o8JwAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CjpodHRwczovL3N1cHBvcnQuZ29vZ2xlLmNvbS9wYXkvaW5kaWEvYW5zd2VyLzE2NTk3NzMyP2hsPWVuEgQaAggAGuICEgIIABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAvAIIABAAGAAgACoNCgZnb29nbGUVWnIaQSoKCgNwYXkVGfHLQCoLCgRmbGV4Fdalv0AyOmh0dHBzOi8vc3VwcG9ydC5nb29nbGUuY29tL3BheS9pbmRpYS9hbnN3ZXIvMTY1OTc3MzI_aGw9ZW46HkludHJvZHVjaW5nIEZsZXggYnkgR29vZ2xlIFBheUKtAUNhcmQgLyBGZWUgVHlwZSwgSm9pbmluZyAvIEFubnVhbCBGZWUgKFllYXIgMSksIFJlbmV3YWwgRmVlIChZZWFyIDIgT253YXJkcykgOyA8Yj5Hb29nbGUgUGF5IEZsZXg8L2I-IFNCSSBDYXJkLCDigrk0OTkgKyBhcHBsaWNhYmxlIHRheGVzLCDigrk0OTkgKyBhcHBsaWNhYmxlIHRheGVzJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CjpodHRwczovL3N1cHBvcnQuZ29vZ2xlLmNvbS9wYXkvaW5kaWEvYW5zd2VyLzE2NTk3NzMyP2hsPWVuEgQaAggAGuICEgIIABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAvAIIABAAGAAgACoNCgZnb29nbGUVWnIaQSoKCgNwYXkVGfHLQCoLCgRmbGV4Fdalv0AyOmh0dHBzOi8vc3VwcG9ydC5nb29nbGUuY29tL3BheS9pbmRpYS9hbnN3ZXIvMTY1OTc3MzI_aGw9ZW46HkludHJvZHVjaW5nIEZsZXggYnkgR29vZ2xlIFBheUKtAUNhcmQgLyBGZWUgVHlwZSwgSm9pbmluZyAvIEFubnVhbCBGZWUgKFllYXIgMSksIFJlbmV3YWwgRmVlIChZZWFyIDIgT253YXJkcykgOyA8Yj5Hb29nbGUgUGF5IEZsZXg8L2I-IFNCSSBDYXJkLCDigrk0OTkgKyBhcHBsaWNhYmxlIHRheGVzLCDigrk0OTkgKyBhcHBsaWNhYmxlIHRheGVzJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "Google Help",
+      "read_more_link": "https://support.google.com/pay/india/answer/16597732?hl=en#:~:text=How%20can%20I%20close%20my&text=How%20can%20I%20close%20my"
+    },
+    {
+      "position": 2,
+      "title": "Apply for Google Pay Flex Axis Bank Credit Card",
+      "link": "https://www.axis.bank.in/cards/credit-card/google-pay-flex-axis-bank-credit-card",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESiwEB6zswFWlVUah38rRpkPNTx1ZJhX-Y1AOFK4LRSYi5BRUjY3vZ0RbMmP-qnq0T0snD0c3laLNNTBfx8Jb5xRdqLvwGezhrH9_npX2oyfA2C1jJ2JQ-L91WT1lp9TElhNzO7cagW7FNAcYDKibQmec94e4QHaPz8macKrQwTBTNQEUmayJcF0ENLETZ&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQFnoECBIQAQ&uoh=1",
+      "displayed_link": "https://www.axis.bank.in › cards › google-pay-flex-axis-...",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAKlBMVEX___-SAFWSAAC2barbtqq2AAC2bVW2AFW2JFXbbarbkqrb26r_26r_2__YmxF4AAAAWElEQVR4AWPAChgVoAxDEShDVBBCs4krQRjsgVCRRvUAMM0ZFLgAorlIHCKzVahCXFAAyBAUV2ASLwTqES08wKKo1MDALh7IwBBUXsBQJF7LwLBRsAJuMwAnpAxIZnrISQAAAABJRU5ErkJggg.png",
+      "snippet": "Get the Google Pay Flex Axis Bank Credit Card and earn GPay coins on all spends. Enjoy welcome benefits, dining offers & convert big purchases into easy ...",
+      "snippet_highlighted_words": [
+        "Google Pay Flex"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Get the Google Pay Flex Axis Bank Credit Card and earn GPay coins on all spends. Enjoy welcome benefits, dining offers & convert big purchases into easy ...",
+          "source_info_link": "https://www.axis.bank.in/cards/credit-card/google-pay-flex-axis-bank-credit-card",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAKlBMVEX___-SAFWSAAC2barbtqq2AAC2bVW2AFW2JFXbbarbkqrb26r_26r_2__YmxF4AAAAWElEQVR4AWPAChgVoAxDEShDVBBCs4krQRjsgVCRRvUAMM0ZFLgAorlIHCKzVahCXFAAyBAUV2ASLwTqES08wKKo1MDALh7IwBBUXsBQJF7LwLBRsAJuMwAnpAxIZnrISQAAAABJRU5ErkJggg.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZXbFZVYWgzOHJScGtQTlR4MVpKaFgtWTFBT0ZLNExSU1lpNUJSVWpZM3ZaMFJiTW1QLXFucTBUMHNuRDBjM2xhTE5OVEJmeDhKYjV4UmRxTHZ3R2V6aHJIOV9ucFgyb3lmQTJDMWpKMkpRLUw5MVdUMWxwOVRFbGhOek83Y2FnVzdGTkFjWURLaWJRbWVjOTRlNFFIYVB6OG1hY0tyUXdUQlROUUVVbWF5SmNGMEVOTEVUWhIEGgIIABqKBBICCAEaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQOQDCAAQABgAIAAqDQoGZ29vZ2xlFfJzWkAqCgoDcGF5FWCJXEAqCwoEZmxleBXJtVBAMsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZXbFZVYWgzOHJScGtQTlR4MVpKaFgtWTFBT0ZLNExSU1lpNUJSVWpZM3ZaMFJiTW1QLXFucTBUMHNuRDBjM2xhTE5OVEJmeDhKYjV4UmRxTHZ3R2V6aHJIOV9ucFgyb3lmQTJDMWpKMkpRLUw5MVdUMWxwOVRFbGhOek83Y2FnVzdGTkFjWURLaWJRbWVjOTRlNFFIYVB6OG1hY0tyUXdUQlROUUVVbWF5SmNGMEVOTEVUWjo2QXBwbHkgZm9yIDxiPkdvb2dsZSBQYXkgRmxleDwvYj4gQXhpcyBCYW5rIENyZWRpdCBDYXJkQqwBR2V0IHRoZSA8Yj5Hb29nbGUgUGF5IEZsZXg8L2I-IEF4aXMgQmFuayBDcmVkaXQgQ2FyZCBhbmQgZWFybiBHUGF5IGNvaW5zIG9uIGFsbCBzcGVuZHMuIEVuam95IHdlbGNvbWUgYmVuZWZpdHMsIGRpbmluZyBvZmZlcnMgJmFtcDsgY29udmVydCBiaWcgcHVyY2hhc2VzIGludG8gZWFzeSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZXbFZVYWgzOHJScGtQTlR4MVpKaFgtWTFBT0ZLNExSU1lpNUJSVWpZM3ZaMFJiTW1QLXFucTBUMHNuRDBjM2xhTE5OVEJmeDhKYjV4UmRxTHZ3R2V6aHJIOV9ucFgyb3lmQTJDMWpKMkpRLUw5MVdUMWxwOVRFbGhOek83Y2FnVzdGTkFjWURLaWJRbWVjOTRlNFFIYVB6OG1hY0tyUXdUQlROUUVVbWF5SmNGMEVOTEVUWhIEGgIIABqKBBICCAEaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQOQDCAAQABgAIAAqDQoGZ29vZ2xlFfJzWkAqCgoDcGF5FWCJXEAqCwoEZmxleBXJtVBAMsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZXbFZVYWgzOHJScGtQTlR4MVpKaFgtWTFBT0ZLNExSU1lpNUJSVWpZM3ZaMFJiTW1QLXFucTBUMHNuRDBjM2xhTE5OVEJmeDhKYjV4UmRxTHZ3R2V6aHJIOV9ucFgyb3lmQTJDMWpKMkpRLUw5MVdUMWxwOVRFbGhOek83Y2FnVzdGTkFjWURLaWJRbWVjOTRlNFFIYVB6OG1hY0tyUXdUQlROUUVVbWF5SmNGMEVOTEVUWjo2QXBwbHkgZm9yIDxiPkdvb2dsZSBQYXkgRmxleDwvYj4gQXhpcyBCYW5rIENyZWRpdCBDYXJkQqwBR2V0IHRoZSA8Yj5Hb29nbGUgUGF5IEZsZXg8L2I-IEF4aXMgQmFuayBDcmVkaXQgQ2FyZCBhbmQgZWFybiBHUGF5IGNvaW5zIG9uIGFsbCBzcGVuZHMuIEVuam95IHdlbGNvbWUgYmVuZWZpdHMsIGRpbmluZyBvZmZlcnMgJmFtcDsgY29udmVydCBiaWcgcHVyY2hhc2VzIGludG8gZWFzeSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Axis Bank"
+    },
+    {
+      "position": 3,
+      "title": "Google Pay Flex Card: Best Credit Card of 2025 ...",
+      "link": "https://www.reddit.com/r/CreditCardsIndia/comments/1ps71y5/google_pay_flex_card_best_credit_card_of_2025/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESpAEB6zswFdzQOxpM7pe5fM9DKIp5Kiyp6z0RqyM-5k9WvEMh9fXbgyBWGeOXfA6x_Y40239GHhjpUW9e_fr4ymtbR3hcdRaQhXpVPtpcmkqm4JDdTtMflx9hFS1n64nCNL0RqWz_YglJEPKtaFshYBzFEHAIk-qV-_wNjVdeLVZCa6m4s7pld8fu2wuAkWl4Txhu80I3VZQZdfBHAUVIMZa409hK2Q&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQFnoECBoQAQ&uoh=1",
+      "displayed_link": "100+ comments · 9 months ago",
+      "favicon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp",
+      "snippet": "Google Pay Flex card is giving 20% cashback on Zomato Dineout. Which is really great. But, not sure till when.",
+      "snippet_highlighted_words": [
+        "Google Pay Flex"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Google Pay Flex card is giving 20% cashback on Zomato Dineout. Which is really great. But, not sure till when.",
+          "source_info_link": "https://www.reddit.com/r/CreditCardsIndia/comments/1ps71y5/google_pay_flex_card_best_credit_card_of_2025/",
+          "icon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CuwBL2dvdG8_dXJsPUNBRVNwQUVCNnpzd0ZkelFPeHBNN3BlNWZNOURLSXA1S2l5cDZ6MFJxeU0tNWs5V3ZFTWg5ZlhiZ3lCV0dlT1hmQTZ4X1k0MDIzOUdIaGpwVVc5ZV9mcjR5bXRiUjNoY2RSYVFoWHBWUHRwY21rcW00SkRkVHRNZmx4OWhGUzFuNjRuQ05MMFJxV3pfWWdsSkVQS3RhRnNoWUJ6RkVIQUlrLXFWLV93TmpWZGVMVlpDYTZtNHM3cGxkOGZ1Mnd1QWtXbDRUeGh1ODBJM1ZaUVpkZkJIQVVWSU1aYTQwOWhLMlESBBoCCAAagwQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA3wMIABAAGAAgACoNCgZnb29nbGUVwEGGQCoKCgNwYXkV03GGQCoLCgRmbGV4FUsrhEAy7AEvZ290bz91cmw9Q0FFU3BBRUI2enN3RmR6UU94cE03cGU1Zk05REtJcDVLaXlwNnowUnF5TS01azlXdkVNaDlmWGJneUJXR2VPWGZBNnhfWTQwMjM5R0hoanBVVzllX2ZyNHltdGJSM2hjZFJhUWhYcFZQdHBjbWtxbTRKRGRUdE1mbHg5aEZTMW42NG5DTkwwUnFXel9ZZ2xKRVBLdGFGc2hZQnpGRUhBSWstcVYtX3dOalZkZUxWWkNhNm00czdwbGQ4ZnUyd3VBa1dsNFR4aHU4MEkzVlpRWmRmQkhBVVZJTVphNDA5aEsyUTpHPGI-R29vZ2xlIFBheSBGbGV4PC9iPiBDYXJkOiBCZXN0IENyZWRpdCBDYXJkIG9mIDIwMjUgKEFjY29yZGluZyB0byAuLi5CdTxiPkdvb2dsZSBQYXkgRmxleDwvYj4gY2FyZCBpcyBnaXZpbmcgMjAlIGNhc2hiYWNrIG9uIFpvbWF0byBEaW5lb3V0LiBXaGljaCBpcyByZWFsbHkgZ3JlYXQuIEJ1dCwgbm90IHN1cmUgdGlsbCB3aGVuLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CuwBL2dvdG8_dXJsPUNBRVNwQUVCNnpzd0ZkelFPeHBNN3BlNWZNOURLSXA1S2l5cDZ6MFJxeU0tNWs5V3ZFTWg5ZlhiZ3lCV0dlT1hmQTZ4X1k0MDIzOUdIaGpwVVc5ZV9mcjR5bXRiUjNoY2RSYVFoWHBWUHRwY21rcW00SkRkVHRNZmx4OWhGUzFuNjRuQ05MMFJxV3pfWWdsSkVQS3RhRnNoWUJ6RkVIQUlrLXFWLV93TmpWZGVMVlpDYTZtNHM3cGxkOGZ1Mnd1QWtXbDRUeGh1ODBJM1ZaUVpkZkJIQVVWSU1aYTQwOWhLMlESBBoCCAAagwQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA3wMIABAAGAAgACoNCgZnb29nbGUVwEGGQCoKCgNwYXkV03GGQCoLCgRmbGV4FUsrhEAy7AEvZ290bz91cmw9Q0FFU3BBRUI2enN3RmR6UU94cE03cGU1Zk05REtJcDVLaXlwNnowUnF5TS01azlXdkVNaDlmWGJneUJXR2VPWGZBNnhfWTQwMjM5R0hoanBVVzllX2ZyNHltdGJSM2hjZFJhUWhYcFZQdHBjbWtxbTRKRGRUdE1mbHg5aEZTMW42NG5DTkwwUnFXel9ZZ2xKRVBLdGFGc2hZQnpGRUhBSWstcVYtX3dOalZkZUxWWkNhNm00czdwbGQ4ZnUyd3VBa1dsNFR4aHU4MEkzVlpRWmRmQkhBVVZJTVphNDA5aEsyUTpHPGI-R29vZ2xlIFBheSBGbGV4PC9iPiBDYXJkOiBCZXN0IENyZWRpdCBDYXJkIG9mIDIwMjUgKEFjY29yZGluZyB0byAuLi5CdTxiPkdvb2dsZSBQYXkgRmxleDwvYj4gY2FyZCBpcyBnaXZpbmcgMjAlIGNhc2hiYWNrIG9uIFpvbWF0byBEaW5lb3V0LiBXaGljaCBpcyByZWFsbHkgZ3JlYXQuIEJ1dCwgbm90IHN1cmUgdGlsbCB3aGVuLiICEAFIAFgAaAA",
+      "source": "Reddit · r/CreditCardsIndia",
+      "read_more_link": "https://www.reddit.com/r/CreditCardsIndia/comments/1ps71y5/google_pay_flex_card_best_credit_card_of_2025/#:~:text=Google%20Pay%20Flex%20card%20is,But%2C%20not%20sure%20till%20when."
+    },
+    {
+      "position": 4,
+      "title": "Google Pay Flex SBI Card - Benefits & Features - Apply Now",
+      "link": "https://www.sbicard.com/en/personal/credit-cards/google-pay-flex-sbicard.html",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESiAEB6zswFaD1AqWdVkQtSu_f3NxQUcIeuvYVZMvlgQNbX_cLCxD4mLeuooUAeyJLaJhN7HRgEojrEexsKSrOpvO3xrmmNy4ptNuhxyCga8fJt6vmWDdF0Yp2qP1SdBJrmkXYCsAOZMsl64LwTibloXlup9BdGvMnWlU5HvuaimiNTfMPW6Kfminp&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQFnoECBMQAQ&uoh=1",
+      "displayed_link": "https://www.sbicard.com › personal › credit-cards › go...",
+      "favicon": "https://serpapi.com/images/i/UklGRjIBAABXRUJQVlA4ICYBAAAQBwCdASocABwAPtEutFooIagoGAEAGglsALsZoDbAXZXvJx7AEel-wfsAbpWOrX4pDQqSC9OvoDhvLlnitulwAAD-9gJZAHCD2dg40GwVckRmUWd3kjaAspRXxE_MsjvS7xCXlTmBv-oFIvi87T4a_FMmCQC2pwShRSeZlZFagJR73_y3uOP_xn-7d2Ji8QmF_502Hfh-B5KTuf2_wdPsuulP05qlqwNqcdv7neWcSj_Dy4q-nUPJRAueuEGL_5FMCK8Qj1mf4fz1PLLNKQe2ia5bvCm1JRqXvJAiZ7XjJGo8xlHsf--4KORS5HhC57zZ130r6zCqzmWWmzNkqKVDPwGxN-EyYcXr9EnETbyOMC_ThllXkHNFCgsHH3EFsWi1NGAuAAA.webp",
+      "snippet": "Apply now for Google Pay Flex SBI Credit Card online to get benefits like welcome gift worth Rs. 1000, up to 8X stars, 2 stars on every Rs. 500 spent and ...",
+      "snippet_highlighted_words": [
+        "Google Pay Flex"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Apply now for Google Pay Flex SBI Credit Card online to get benefits like welcome gift worth Rs. 1000, up to 8X stars, 2 stars on every Rs. 500 spent and ...",
+          "source_info_link": "https://www.sbicard.com/en/personal/credit-cards/google-pay-flex-sbicard.html",
+          "icon": "https://serpapi.com/images/i/UklGRjIBAABXRUJQVlA4ICYBAAAQBwCdASocABwAPtEutFooIagoGAEAGglsALsZoDbAXZXvJx7AEel-wfsAbpWOrX4pDQqSC9OvoDhvLlnitulwAAD-9gJZAHCD2dg40GwVckRmUWd3kjaAspRXxE_MsjvS7xCXlTmBv-oFIvi87T4a_FMmCQC2pwShRSeZlZFagJR73_y3uOP_xn-7d2Ji8QmF_502Hfh-B5KTuf2_wdPsuulP05qlqwNqcdv7neWcSj_Dy4q-nUPJRAueuEGL_5FMCK8Qj1mf4fz1PLLNKQe2ia5bvCm1JRqXvJAiZ7XjJGo8xlHsf--4KORS5HhC57zZ130r6zCqzmWWmzNkqKVDPwGxN-EyYcXr9EnETbyOMC_ThllXkHNFCgsHH3EFsWi1NGAuAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsYBL2dvdG8_dXJsPUNBRVNpQUVCNnpzd0ZhRDFBcVdkVmtRdFN1X2YzTnhRVWNJZXV2WVZaTXZsZ1FOYlhfY0xDeEQ0bUxldW9vVUFleUpMYUpoTjdIUmdFb2pyRWV4c0tTck9wdk8zeHJtbU55NHB0TnVoeHlDZ2E4Zkp0NnZtV0RkRjBZcDJxUDFTZEJKcm1rWFlDc0FPWk1zbDY0THdUaWJsb1hsdXA5QmRHdk1uV2xVNUh2dWFpbWlOVGZNUFc2S2ZtaW5wEgQaAggAGqEEEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoPCAESC3NiaWNhcmQuY29tcgB6AIJA7AMIABAAGAAgACoNCgZnb29nbGUVCjpdQCoKCgNwYXkVmWi1QCoLCgRmbGV4FU7sHEAyxgEvZ290bz91cmw9Q0FFU2lBRUI2enN3RmFEMUFxV2RWa1F0U3VfZjNOeFFVY0lldXZZVlpNdmxnUU5iWF9jTEN4RDRtTGV1b29VQWV5SkxhSmhON0hSZ0VvanJFZXhzS1NyT3B2TzN4cm1tTnk0cHROdWh4eUNnYThmSnQ2dm1XRGRGMFlwMnFQMVNkQkpybWtYWUNzQU9aTXNsNjRMd1RpYmxvWGx1cDlCZEd2TW5XbFU1SHZ1YWltaU5UZk1QVzZLZm1pbnA6RTxiPkdvb2dsZSBQYXkgRmxleDwvYj4gU0JJIENhcmQgLSBCZW5lZml0cyAmYW1wOyBGZWF0dXJlcyAtIEFwcGx5IE5vd0KpAUFwcGx5IG5vdyBmb3IgPGI-R29vZ2xlIFBheSBGbGV4PC9iPiBTQkkgQ3JlZGl0IENhcmQgb25saW5lIHRvIGdldCBiZW5lZml0cyBsaWtlIHdlbGNvbWUgZ2lmdCB3b3J0aCBScy4gMTAwMCwgdXAgdG8gOFggc3RhcnMsIDIgc3RhcnMgb24gZXZlcnkgUnMuIDUwMCBzcGVudCBhbmQmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsYBL2dvdG8_dXJsPUNBRVNpQUVCNnpzd0ZhRDFBcVdkVmtRdFN1X2YzTnhRVWNJZXV2WVZaTXZsZ1FOYlhfY0xDeEQ0bUxldW9vVUFleUpMYUpoTjdIUmdFb2pyRWV4c0tTck9wdk8zeHJtbU55NHB0TnVoeHlDZ2E4Zkp0NnZtV0RkRjBZcDJxUDFTZEJKcm1rWFlDc0FPWk1zbDY0THdUaWJsb1hsdXA5QmRHdk1uV2xVNUh2dWFpbWlOVGZNUFc2S2ZtaW5wEgQaAggAGqEEEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoPCAESC3NiaWNhcmQuY29tcgB6AIJA7AMIABAAGAAgACoNCgZnb29nbGUVCjpdQCoKCgNwYXkVmWi1QCoLCgRmbGV4FU7sHEAyxgEvZ290bz91cmw9Q0FFU2lBRUI2enN3RmFEMUFxV2RWa1F0U3VfZjNOeFFVY0lldXZZVlpNdmxnUU5iWF9jTEN4RDRtTGV1b29VQWV5SkxhSmhON0hSZ0VvanJFZXhzS1NyT3B2TzN4cm1tTnk0cHROdWh4eUNnYThmSnQ2dm1XRGRGMFlwMnFQMVNkQkpybWtYWUNzQU9aTXNsNjRMd1RpYmxvWGx1cDlCZEd2TW5XbFU1SHZ1YWltaU5UZk1QVzZLZm1pbnA6RTxiPkdvb2dsZSBQYXkgRmxleDwvYj4gU0JJIENhcmQgLSBCZW5lZml0cyAmYW1wOyBGZWF0dXJlcyAtIEFwcGx5IE5vd0KpAUFwcGx5IG5vdyBmb3IgPGI-R29vZ2xlIFBheSBGbGV4PC9iPiBTQkkgQ3JlZGl0IENhcmQgb25saW5lIHRvIGdldCBiZW5lZml0cyBsaWtlIHdlbGNvbWUgZ2lmdCB3b3J0aCBScy4gMTAwMCwgdXAgdG8gOFggc3RhcnMsIDIgc3RhcnMgb24gZXZlcnkgUnMuIDUwMCBzcGVudCBhbmQmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "SBI Card"
+    },
+    {
+      "position": 5,
+      "title": "Manage Flex credit card bills on Google Pay",
+      "link": "https://support.google.com/pay/india/answer/16589869?hl=en",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=https://support.google.com/pay/india/answer/16589869%3Fhl%3Den&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQFnoECBEQAQ",
+      "displayed_link": "https://support.google.com › pay › india › answer",
+      "favicon": "https://serpapi.com/images/i/UklGRq4AAABXRUJQVlA4IKIAAADwAgCdASoQABAAAsBMJbACdDiAN4z-0AFj302FejU2AAD-9nwIHnctDt4yPbFvK77LGPb6brAEqY6T1zYyWbjXB1uF9_Uj7wHz6zN7NYUQSHV49IiqjS-X2Ma8SvIJ1Yz1zaTOUQdbJFjhPMWxQQ-L8rWiceEEj1--p48_g8UrXrinoKsbx2bf93Q4BjOi9thY669Kz4H3_8YLw06o8JwAAAA.webp",
+      "snippet": "Learn more about the official Google Pay Flex SBI Card details. How to pay bills. On your mobile device, open the Google Pay app . Go to Flex homepage. Find ...",
+      "snippet_highlighted_words": [
+        "Google Pay Flex"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Learn more about the official Google Pay Flex SBI Card details. How to pay bills. On your mobile device, open the Google Pay app . Go to Flex homepage. Find ...",
+          "source_info_link": "https://support.google.com/pay/india/answer/16589869?hl=en",
+          "icon": "https://serpapi.com/images/i/UklGRq4AAABXRUJQVlA4IKIAAADwAgCdASoQABAAAsBMJbACdDiAN4z-0AFj302FejU2AAD-9nwIHnctDt4yPbFvK77LGPb6brAEqY6T1zYyWbjXB1uF9_Uj7wHz6zN7NYUQSHV49IiqjS-X2Ma8SvIJ1Yz1zaTOUQdbJFjhPMWxQQ-L8rWiceEEj1--p48_g8UrXrinoKsbx2bf93Q4BjOi9thY669Kz4H3_8YLw06o8JwAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CjpodHRwczovL3N1cHBvcnQuZ29vZ2xlLmNvbS9wYXkvaW5kaWEvYW5zd2VyLzE2NTg5ODY5P2hsPWVuEgQaAggAGuwCEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQMgCCAAQABgAIAAqDQoGZ29vZ2xlFThSD0EqCgoDcGF5FTTMy0AqCwoEZmxleBVwCp1AMjpodHRwczovL3N1cHBvcnQuZ29vZ2xlLmNvbS9wYXkvaW5kaWEvYW5zd2VyLzE2NTg5ODY5P2hsPWVuOitNYW5hZ2UgRmxleCBjcmVkaXQgY2FyZCBiaWxscyBvbiBHb29nbGUgUGF5QqwBTGVhcm4gbW9yZSBhYm91dCB0aGUgb2ZmaWNpYWwgPGI-R29vZ2xlIFBheSBGbGV4PC9iPiBTQkkgQ2FyZCBkZXRhaWxzLiBIb3cgdG8gcGF5IGJpbGxzLiBPbiB5b3VyIG1vYmlsZSBkZXZpY2UsIG9wZW4gdGhlIEdvb2dsZSBQYXkgYXBwIC4gR28gdG8gRmxleCBob21lcGFnZS4gRmluZCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CjpodHRwczovL3N1cHBvcnQuZ29vZ2xlLmNvbS9wYXkvaW5kaWEvYW5zd2VyLzE2NTg5ODY5P2hsPWVuEgQaAggAGuwCEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQMgCCAAQABgAIAAqDQoGZ29vZ2xlFThSD0EqCgoDcGF5FTTMy0AqCwoEZmxleBVwCp1AMjpodHRwczovL3N1cHBvcnQuZ29vZ2xlLmNvbS9wYXkvaW5kaWEvYW5zd2VyLzE2NTg5ODY5P2hsPWVuOitNYW5hZ2UgRmxleCBjcmVkaXQgY2FyZCBiaWxscyBvbiBHb29nbGUgUGF5QqwBTGVhcm4gbW9yZSBhYm91dCB0aGUgb2ZmaWNpYWwgPGI-R29vZ2xlIFBheSBGbGV4PC9iPiBTQkkgQ2FyZCBkZXRhaWxzLiBIb3cgdG8gcGF5IGJpbGxzLiBPbiB5b3VyIG1vYmlsZSBkZXZpY2UsIG9wZW4gdGhlIEdvb2dsZSBQYXkgYXBwIC4gR28gdG8gRmxleCBob21lcGFnZS4gRmluZCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Google Help",
+      "read_more_link": "https://support.google.com/pay/india/answer/16589869?hl=en#:~:text=Learn%20more%20about%20the%20official,amount%20and%20the%20due%20date."
+    },
+    {
+      "position": 6,
+      "title": "Flex by Google Pay: Reimagining Everyday Credit for India",
+      "link": "https://blog.google/intl/en-in/products/explore-communicate/flex-by-google-pay-reimagining-everyday-credit-for-india/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESsAEB6zswFTYLh7lCH-iXCEzBv9wjyC08oDjqIGrIu2U-8aCzYJvVuToXOcqYIiWVVcMRU0tVlaEBihc2oEJgdvmjKpZYYBxveeDKUBx9vn5NT7iQEbQoeDiJhHPBjZn0gS0iSwxKgUtT1mFtfmq8gz7BjlFTRuo2PUf6OipXdZiNjKrPCHM-EX8wEOhQpym6k5fcvVowjMSFB27yvQgLmJVyAv1ls-S4smCE-RESAwZM_Q&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQFnoECBQQAQ&uoh=1",
+      "displayed_link": "https://blog.google › products › explore-communicate",
+      "favicon": "https://serpapi.com/images/i/UklGRrABAABXRUJQVlA4IKQBAADQCACdASocABwAPtEutFooIagoGAEAGglsALElQIQBdgG8lt-ZNBUoPIN9GdLN6s_2A9EAcX9xKXfh4jhijtW_WgTYbuoQY08RBvFvngwAAP73gdh7vRo0XvXYhrHeuQ2seCWb8ZrML9tkSQfQY7TPBAqUC62WSPT8Up7-ibuSDDtPpxqXfdNUX8HcsBgqA9cHf77Gqr1sM2aQ1Wn6X2ecltRU79mf319nPk_rrfidOeJwozcv1nbpeyFshUVyCKGJOtbKYkUUzOYcZZ5R9NgXvwngeJZHnM3f8A7hTwgiCsbkhkHuvhzn_njYRdEcbKqL30k7K2cgEcrtZR79j6BHBP8yRJJx-cxU-eJGKFXgO1yK54itvQu2cPG30DMr9xVeDrZUCffw48VV7C2s4kLHTE8-EdAwO2WisrBH7LGIppBKFtxqydbB5YhQRJFAzrk1JRdH94jD_fvv0xnLkaY0oItTVWQTO2gNYd4LkhvveuJap6tE6HEoHoP9_jpSxz-jv4d0UqWkss05tX57748_1-_PIhbS83KWw0abwl3lJzXBAAA.webp",
+      "date": "17 Dec 2025",
+      "snippet": "Built on the RuPay network, we are excited to launch this first in partnership with Axis Bank, introducing the Google Pay Flex Axis Bank Credit ...",
+      "snippet_highlighted_words": [
+        "Google Pay Flex"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Built on the RuPay network, we are excited to launch this first in partnership with Axis Bank, introducing the Google Pay Flex Axis Bank Credit ...",
+          "source_info_link": "https://blog.google/intl/en-in/products/explore-communicate/flex-by-google-pay-reimagining-everyday-credit-for-india/",
+          "icon": "https://serpapi.com/images/i/UklGRrABAABXRUJQVlA4IKQBAADQCACdASocABwAPtEutFooIagoGAEAGglsALElQIQBdgG8lt-ZNBUoPIN9GdLN6s_2A9EAcX9xKXfh4jhijtW_WgTYbuoQY08RBvFvngwAAP73gdh7vRo0XvXYhrHeuQ2seCWb8ZrML9tkSQfQY7TPBAqUC62WSPT8Up7-ibuSDDtPpxqXfdNUX8HcsBgqA9cHf77Gqr1sM2aQ1Wn6X2ecltRU79mf319nPk_rrfidOeJwozcv1nbpeyFshUVyCKGJOtbKYkUUzOYcZZ5R9NgXvwngeJZHnM3f8A7hTwgiCsbkhkHuvhzn_njYRdEcbKqL30k7K2cgEcrtZR79j6BHBP8yRJJx-cxU-eJGKFXgO1yK54itvQu2cPG30DMr9xVeDrZUCffw48VV7C2s4kLHTE8-EdAwO2WisrBH7LGIppBKFtxqydbB5YhQRJFAzrk1JRdH94jD_fvv0xnLkaY0oItTVWQTO2gNYd4LkhvveuJap6tE6HEoHoP9_jpSxz-jv4d0UqWkss05tX57748_1-_PIhbS83KWw0abwl3lJzXBAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CvwBL2dvdG8_dXJsPUNBRVNzQUVCNnpzd0ZUWUxoN2xDSC1pWENFekJ2OXdqeUMwOG9EanFJR3JJdTJVLThhQ3pZSnZWdVRvWE9jcVlJaVdWVmNNUlUwdFZsYUVCaWhjMm9FSmdkdm1qS3BaWVlCeHZlZURLVUJ4OXZuNU5UN2lRRWJRb2VEaUpoSFBCalpuMGdTMGlTd3hLZ1V0VDFtRnRmbXE4Z3o3QmpsRlRSdW8yUFVmNk9pcFhkWmlOaktyUENITS1FWDh3RU9oUXB5bTZrNWZjdlZvd2pNU0ZCMjd5dlFnTG1KVnlBdjFscy1TNHNtQ0UtUkVTQXdaTV9REgQaAggAGrIEEgIIARoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAjAQIABAAGAAgACoNCgZnb29nbGUVvYTIQCoKCgNwYXkVqunDQCoLCgRmbGV4FRxLtkAy_AEvZ290bz91cmw9Q0FFU3NBRUI2enN3RlRZTGg3bENILWlYQ0V6QnY5d2p5QzA4b0RqcUlHckl1MlUtOGFDellKdlZ1VG9YT2NxWUlpV1ZWY01SVTB0VmxhRUJpaGMyb0VKZ2R2bWpLcFpZWUJ4dmVlREtVQng5dm41TlQ3aVFFYlFvZURpSmhIUEJqWm4wZ1MwaVN3eEtnVXRUMW1GdGZtcThnejdCamxGVFJ1bzJQVWY2T2lwWGRaaU5qS3JQQ0hNLUVYOHdFT2hRcHltNms1ZmN2Vm93ak1TRkIyN3l2UWdMbUpWeUF2MWxzLVM0c21DRS1SRVNBd1pNX1E6OUZsZXggYnkgR29vZ2xlIFBheTogUmVpbWFnaW5pbmcgRXZlcnlkYXkgQ3JlZGl0IGZvciBJbmRpYUKfAUJ1aWx0IG9uIHRoZSBSdVBheSBuZXR3b3JrLCB3ZSBhcmUgZXhjaXRlZCB0byBsYXVuY2ggdGhpcyBmaXJzdCBpbiBwYXJ0bmVyc2hpcCB3aXRoIEF4aXMgQmFuaywgaW50cm9kdWNpbmcgdGhlIDxiPkdvb2dsZSBQYXkgRmxleDwvYj4gQXhpcyBCYW5rIENyZWRpdCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CvwBL2dvdG8_dXJsPUNBRVNzQUVCNnpzd0ZUWUxoN2xDSC1pWENFekJ2OXdqeUMwOG9EanFJR3JJdTJVLThhQ3pZSnZWdVRvWE9jcVlJaVdWVmNNUlUwdFZsYUVCaWhjMm9FSmdkdm1qS3BaWVlCeHZlZURLVUJ4OXZuNU5UN2lRRWJRb2VEaUpoSFBCalpuMGdTMGlTd3hLZ1V0VDFtRnRmbXE4Z3o3QmpsRlRSdW8yUFVmNk9pcFhkWmlOaktyUENITS1FWDh3RU9oUXB5bTZrNWZjdlZvd2pNU0ZCMjd5dlFnTG1KVnlBdjFscy1TNHNtQ0UtUkVTQXdaTV9REgQaAggAGrIEEgIIARoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAjAQIABAAGAAgACoNCgZnb29nbGUVvYTIQCoKCgNwYXkVqunDQCoLCgRmbGV4FRxLtkAy_AEvZ290bz91cmw9Q0FFU3NBRUI2enN3RlRZTGg3bENILWlYQ0V6QnY5d2p5QzA4b0RqcUlHckl1MlUtOGFDellKdlZ1VG9YT2NxWUlpV1ZWY01SVTB0VmxhRUJpaGMyb0VKZ2R2bWpLcFpZWUJ4dmVlREtVQng5dm41TlQ3aVFFYlFvZURpSmhIUEJqWm4wZ1MwaVN3eEtnVXRUMW1GdGZtcThnejdCamxGVFJ1bzJQVWY2T2lwWGRaaU5qS3JQQ0hNLUVYOHdFT2hRcHltNms1ZmN2Vm93ak1TRkIyN3l2UWdMbUpWeUF2MWxzLVM0c21DRS1SRVNBd1pNX1E6OUZsZXggYnkgR29vZ2xlIFBheTogUmVpbWFnaW5pbmcgRXZlcnlkYXkgQ3JlZGl0IGZvciBJbmRpYUKfAUJ1aWx0IG9uIHRoZSBSdVBheSBuZXR3b3JrLCB3ZSBhcmUgZXhjaXRlZCB0byBsYXVuY2ggdGhpcyBmaXJzdCBpbiBwYXJ0bmVyc2hpcCB3aXRoIEF4aXMgQmFuaywgaW50cm9kdWNpbmcgdGhlIDxiPkdvb2dsZSBQYXkgRmxleDwvYj4gQXhpcyBCYW5rIENyZWRpdCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "blog.google",
+      "read_more_link": "https://blog.google/intl/en-in/products/explore-communicate/flex-by-google-pay-reimagining-everyday-credit-for-india/#:~:text=Built%20on%20the%20RuPay%20network%2C,Flex%20Axis%20Bank%20Credit%20Card."
+    },
+    {
+      "position": 7,
+      "title": "Flex by Google Pay Credit Card Review 2026",
+      "link": "https://www.youtube.com/watch?v=C1rvKBY0Ljo",
+      "displayed_link": "59K+ views · 6 months ago",
+      "thumbnail": "https://serpapi.com/searches/6ac9992bd114dfc541d51e44/images/HFe0-Q2AkRkHFkgf5XCsquJgGUcSot9ot6D9U1DlWVI.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "Flex by Google Pay Credit Card Review 2026 | Google Pay Flex Credit Card Full Details.",
+      "duration": "8:09",
+      "about_this_result": {
+        "source": {
+          "description": "Flex by Google Pay Credit Card Review 2026 | Google Pay Flex Credit Card Full Details.",
+          "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+        }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVkFzQkZYQi1YU3I1UjhsRFE3Nms0X2tjMm1MMXFJdy10OEJjRUZCaFJEX3pVOEhPWjNmQ29JTFhPb1lkb2UzakRhNzVtVVowdXQ3TEtWTjY2Z2dxaEZhZkZia01SUXJvaGNrVExZQWh0MS1seWZiVTN5b19NTW1zTTBQSUMwaXUzeEESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVkFzQkZYQi1YU3I1UjhsRFE3Nms0X2tjMm1MMXFJdy10OEJjRUZCaFJEX3pVOEhPWjNmQ29JTFhPb1lkb2UzakRhNzVtVVowdXQ3TEtWTjY2Z2dxaEZhZkZia01SUXJvaGNrVExZQWh0MS1seWZiVTN5b19NTW1zTTBQSUMwaXUzeEESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "source": "YouTube · NK DIGITAL POINT"
+    },
+    {
+      "position": 8,
+      "title": "Google flex physical card : r/CreditCardsIndia",
+      "link": "https://www.reddit.com/r/CreditCardsIndia/comments/1u696t8/google_flex_physical_card/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESkAEB6zswFaiIXl5k7xz4CS7yASJsZrNqz5MRT1QAG-G7WKXvWdN2IFisMsTpv55lZOgxPnmUnO46mG37b3hDXaDr51Bei2N8zbpIwTkZEmQ5yByXbgZwrZbRzkxujcqBIzoIkTT8URk7IVKV31bPlsyL_1ScGxj1bF1L6rOxBhznsVCq9kisJA-KPXgzxhSujEU&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQFnoECD4QAQ&uoh=1",
+      "displayed_link": "100+ comments · 3 months ago",
+      "favicon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp",
+      "snippet": "Google Pay Flex Card: Best Credit Card of 2025 (According to Memes ... r/IndianCreditCardz - SBI Card × Google Pay launches the Google Pay Flex ...",
+      "snippet_highlighted_words": [
+        "Google Pay Flex",
+        "Google Pay Flex"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Google Pay Flex Card: Best Credit Card of 2025 (According to Memes ... r/IndianCreditCardz - SBI Card × Google Pay launches the Google Pay Flex ...",
+          "source_info_link": "https://www.reddit.com/r/CreditCardsIndia/comments/1u696t8/google_flex_physical_card/",
+          "icon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtEBL2dvdG8_dXJsPUNBRVNrQUVCNnpzd0ZhaUlYbDVrN3h6NENTN3lBU0pzWnJOcXo1TVJUMVFBRy1HN1dLWHZXZE4ySUZpc01zVHB2NTVsWk9neFBubVVuTzQ2bUczN2IzaERYYURyNTFCZWkyTjh6YnBJd1RrWkVtUTV5QnlYYmdad3JaYlJ6a3h1amNxQkl6b0lrVFQ4VVJrN0lWS1YzMWJQbHN5TF8xU2NHeGoxYkYxTDZyT3hCaHpuc1ZDcTlraXNKQS1LUFhnenhoU3VqRVUSBBoCCAAajQQSAggAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDnAwgAEAAYACAAKg0KBmdvb2dsZRU_8ZBAKgoKA3BheRXN7eM_KgsKBGZsZXgVdaKQQDLRAS9nb3RvP3VybD1DQUVTa0FFQjZ6c3dGYWlJWGw1azd4ejRDUzd5QVNKc1pyTnF6NU1SVDFRQUctRzdXS1h2V2ROMklGaXNNc1RwdjU1bFpPZ3hQbm1Vbk80Nm1HMzdiM2hEWGFEcjUxQmVpMk44emJwSXdUa1pFbVE1eUJ5WGJnWndyWmJSemt4dWpjcUJJem9Ja1RUOFVSazdJVktWMzFiUGxzeUxfMVNjR3hqMWJGMUw2ck94Qmh6bnNWQ3E5a2lzSkEtS1BYZ3p4aFN1akVVOjdHb29nbGUgZmxleCBwaHlzaWNhbCBjYXJkIDogci9DcmVkaXRDYXJkc0luZGlhIC0gUmVkZGl0QqcBPGI-R29vZ2xlIFBheSBGbGV4PC9iPiBDYXJkOiBCZXN0IENyZWRpdCBDYXJkIG9mIDIwMjUgKEFjY29yZGluZyB0byBNZW1lcyAuLi4gci9JbmRpYW5DcmVkaXRDYXJkeiAtIFNCSSBDYXJkIMOXIEdvb2dsZSBQYXkgbGF1bmNoZXMgdGhlIDxiPkdvb2dsZSBQYXkgRmxleDwvYj4mbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtEBL2dvdG8_dXJsPUNBRVNrQUVCNnpzd0ZhaUlYbDVrN3h6NENTN3lBU0pzWnJOcXo1TVJUMVFBRy1HN1dLWHZXZE4ySUZpc01zVHB2NTVsWk9neFBubVVuTzQ2bUczN2IzaERYYURyNTFCZWkyTjh6YnBJd1RrWkVtUTV5QnlYYmdad3JaYlJ6a3h1amNxQkl6b0lrVFQ4VVJrN0lWS1YzMWJQbHN5TF8xU2NHeGoxYkYxTDZyT3hCaHpuc1ZDcTlraXNKQS1LUFhnenhoU3VqRVUSBBoCCAAajQQSAggAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDnAwgAEAAYACAAKg0KBmdvb2dsZRU_8ZBAKgoKA3BheRXN7eM_KgsKBGZsZXgVdaKQQDLRAS9nb3RvP3VybD1DQUVTa0FFQjZ6c3dGYWlJWGw1azd4ejRDUzd5QVNKc1pyTnF6NU1SVDFRQUctRzdXS1h2V2ROMklGaXNNc1RwdjU1bFpPZ3hQbm1Vbk80Nm1HMzdiM2hEWGFEcjUxQmVpMk44emJwSXdUa1pFbVE1eUJ5WGJnWndyWmJSemt4dWpjcUJJem9Ja1RUOFVSazdJVktWMzFiUGxzeUxfMVNjR3hqMWJGMUw2ck94Qmh6bnNWQ3E5a2lzSkEtS1BYZ3p4aFN1akVVOjdHb29nbGUgZmxleCBwaHlzaWNhbCBjYXJkIDogci9DcmVkaXRDYXJkc0luZGlhIC0gUmVkZGl0QqcBPGI-R29vZ2xlIFBheSBGbGV4PC9iPiBDYXJkOiBCZXN0IENyZWRpdCBDYXJkIG9mIDIwMjUgKEFjY29yZGluZyB0byBNZW1lcyAuLi4gci9JbmRpYW5DcmVkaXRDYXJkeiAtIFNCSSBDYXJkIMOXIEdvb2dsZSBQYXkgbGF1bmNoZXMgdGhlIDxiPkdvb2dsZSBQYXkgRmxleDwvYj4mbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Reddit · r/CreditCardsIndia",
+      "read_more_link": "https://www.reddit.com/r/CreditCardsIndia/comments/1u696t8/google_flex_physical_card/#:~:text=Google%20Pay%20Flex%20Card%3A%20Best,of%202025%20(According%20to%20Memes%F0%9F%A4%A1%F0%9F%A4%A1)&text=11"
+    },
+    {
+      "position": 9,
+      "title": "SBI Google Pay Credit Card Launched",
+      "link": "https://www.youtube.com/watch?v=tqNQmW0ap8g",
+      "displayed_link": "13.4K+ views · 2 months ago",
+      "thumbnail": "https://serpapi.com/searches/6ac9992bd114dfc541d51e44/images/HFe0-Q2AkRkHFkgf5XCsqhznhDEd4dTl3cO3nEVLKSI.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "SBI and Google Pay together launched their new credit card that is Google Pay flex sbi credit card and it comes on two networks Visa and Rupay ...",
+      "duration": "3:08",
+      "about_this_result": {
+        "source": {
+          "description": "SBI and Google Pay together launched their new credit card that is Google Pay flex sbi credit card and it comes on two networks Visa and Rupay ...",
+          "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+        }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVkk3RXVXNTczYlpibGFjWklOTG1IQkdHX3BWSWhMaC1ZQUp1RGVqZ3ZDTlVvV2Fvejhta01uYzZad3QwS3NZckhhTGxrUHExeXJxV3NqdUpSS2doR1dwMUp2LXdsMndUNFNBTDg3R3VsNHhsVk9yaXJrelBYRk1NelZ2c0RpM2xWYncSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVkk3RXVXNTczYlpibGFjWklOTG1IQkdHX3BWSWhMaC1ZQUp1RGVqZ3ZDTlVvV2Fvejhta01uYzZad3QwS3NZckhhTGxrUHExeXJxV3NqdUpSS2doR1dwMUp2LXdsMndUNFNBTDg3R3VsNHhsVk9yaXJrelBYRk1NelZ2c0RpM2xWYncSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTydTnk3o0gvpCT5fTeEfe_os1WDmqfhW5I7g",
+      "source": "YouTube · ANNA DM"
+    }
+  ],
+  "related_searches": [
+    {
+      "block_position": 1,
+      "query": "Google pay flex app",
+      "link": "https://www.google.co.in/search?sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnvzJ6ZI_GyDKkq_kpHWjhPK4GL4YA:1791596843250&q=Google+pay+flex+app&sa=X&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQ1QJ6BAg6EAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Google+pay+flex+app"
+    },
+    {
+      "block_position": 1,
+      "query": "Google pay flex limit",
+      "link": "https://www.google.co.in/search?sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnvzJ6ZI_GyDKkq_kpHWjhPK4GL4YA:1791596843250&q=Google+pay+flex+limit&sa=X&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQ1QJ6BAg8EAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Google+pay+flex+limit"
+    },
+    {
+      "block_position": 1,
+      "query": "Google pay flex card",
+      "link": "https://www.google.co.in/search?sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnvzJ6ZI_GyDKkq_kpHWjhPK4GL4YA:1791596843250&q=Google+pay+flex+card&sa=X&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQ1QJ6BAg7EAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Google+pay+flex+card"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.co.in/search?q=site:sbicard.com+%22Google+Pay+Flex%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnvzJ6ZI_GyDKkq_kpHWjhPK4GL4YA:1791596843250&ei=K5nJaqXqDpjY5NoPzOqyiAg&start=10&sa=N&sstk=AS6-VmLxgup8-FOxjkNZo4kT7gyiTqtgNSWxAqifKxoNflpF1zEAgSH1P_G9W4LFZZ41dUzUG1YVTf7qIqWHhMTvPbLq3qQ-IK6xog&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQ8NMDegQINhAM",
+    "other_pages": {
+      "2": "https://www.google.co.in/search?q=site:sbicard.com+%22Google+Pay+Flex%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnvzJ6ZI_GyDKkq_kpHWjhPK4GL4YA:1791596843250&ei=K5nJaqXqDpjY5NoPzOqyiAg&start=10&sa=N&sstk=AS6-VmLxgup8-FOxjkNZo4kT7gyiTqtgNSWxAqifKxoNflpF1zEAgSH1P_G9W4LFZZ41dUzUG1YVTf7qIqWHhMTvPbLq3qQ-IK6xog&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQ8tMDegQINhAE",
+      "3": "https://www.google.co.in/search?q=site:sbicard.com+%22Google+Pay+Flex%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnvzJ6ZI_GyDKkq_kpHWjhPK4GL4YA:1791596843250&ei=K5nJaqXqDpjY5NoPzOqyiAg&start=20&sa=N&sstk=AS6-VmLxgup8-FOxjkNZo4kT7gyiTqtgNSWxAqifKxoNflpF1zEAgSH1P_G9W4LFZZ41dUzUG1YVTf7qIqWHhMTvPbLq3qQ-IK6xog&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQ8tMDegQINhAG",
+      "4": "https://www.google.co.in/search?q=site:sbicard.com+%22Google+Pay+Flex%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnvzJ6ZI_GyDKkq_kpHWjhPK4GL4YA:1791596843250&ei=K5nJaqXqDpjY5NoPzOqyiAg&start=30&sa=N&sstk=AS6-VmLxgup8-FOxjkNZo4kT7gyiTqtgNSWxAqifKxoNflpF1zEAgSH1P_G9W4LFZZ41dUzUG1YVTf7qIqWHhMTvPbLq3qQ-IK6xog&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQ8tMDegQINhAI",
+      "5": "https://www.google.co.in/search?q=site:sbicard.com+%22Google+Pay+Flex%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnvzJ6ZI_GyDKkq_kpHWjhPK4GL4YA:1791596843250&ei=K5nJaqXqDpjY5NoPzOqyiAg&start=40&sa=N&sstk=AS6-VmLxgup8-FOxjkNZo4kT7gyiTqtgNSWxAqifKxoNflpF1zEAgSH1P_G9W4LFZZ41dUzUG1YVTf7qIqWHhMTvPbLq3qQ-IK6xog&ved=2ahUKEwjlq7Crqq6XAxUYLFkFHUy1DIEQ8tMDegQINhAK"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22Google+Pay+Flex%22&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22Google+Pay+Flex%22&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22Google+Pay+Flex%22&start=10",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22Google+Pay+Flex%22&start=20",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22Google+Pay+Flex%22&start=30",
+      "5": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22Google+Pay+Flex%22&start=40"
+    }
+  }
+}

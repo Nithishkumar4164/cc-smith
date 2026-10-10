@@ -55,7 +55,7 @@ def test_live_extraction_offers_only_the_schema_tool_and_validates(monkeypatch):
     client = _client({**body, "id": "ignored", "name": "ignored"})
     p = extract_terms("axis_ace", "Axis Bank ACE Credit Card", "Axis Bank", [("https://www.axis.bank.in/x", "page text")], client=client)
     kw = client.messages.kwargs
-    assert [t["name"] for t in kw["tools"]] == [TOOL_NAME] and kw["tools"][0]["strict"] is True
+    assert [t["name"] for t in kw["tools"]] == [TOOL_NAME] and "strict" not in kw["tools"][0]  # grammar too large for strict (400)
     assert kw["tool_choice"]["type"] == "auto"  # Sonnet 5.5 rejects forced tool_choice
     assert kw["model"] == settings.extract_model and '<document url="https://www.axis.bank.in/x">' in kw["messages"][0]["content"]
     assert p.id == "axis_ace" and p.name == "Axis Bank ACE Credit Card"

@@ -90,7 +90,8 @@ def decide(merchant: dict, amount_paise: int, cands: list[dict], client=None) ->
             "type": "object", "additionalProperties": False, "required": ["card_id", "reason"],
             "properties": {"card_id": {"type": "string", "enum": [c["card_id"] for c in cands]}, "reason": {"type": "string"}},
         },
-        "strict": True,
+        # Not strict: measured on Haiku 4.5 (10 Oct 2026), strict added ~1.1 s (median 2.6 s vs 1.5 s).
+        # The card id is checked against the candidates below either way.
     }
     import json
 

@@ -1,0 +1,362 @@
+{
+  "_recorded": {
+    "engine": "google",
+    "params": {
+      "gl": "in",
+      "google_domain": "google.co.in",
+      "hl": "en",
+      "q": "site:sbicard.com \"SimplySAVE\""
+    },
+    "at": "2026-10-10T01:50:13.534025+00:00"
+  },
+  "search_metadata": {
+    "id": "6ac999d43680702f62f2db79",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/jBxCibjx_7dALIlXSMXoO5OaQX-XMIazthwjgImcFak/6ac999d43680702f62f2db79.json",
+    "markdown_endpoint": "https://serpapi.com/searches/jBxCibjx_7dALIlXSMXoO5OaQX-XMIazthwjgImcFak/6ac999d43680702f62f2db79.md",
+    "pixel_position_endpoint": "https://serpapi.com/searches/jBxCibjx_7dALIlXSMXoO5OaQX-XMIazthwjgImcFak/6ac999d43680702f62f2db79.json_with_pixel_position",
+    "created_at": "2026-10-10 01:50:12 UTC",
+    "processed_at": "2026-10-10 01:50:12 UTC",
+    "google_url": "https://www.google.co.in/search?q=site%3Asbicard.com+%22SimplySAVE%22&oq=site%3Asbicard.com+%22SimplySAVE%22&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/jBxCibjx_7dALIlXSMXoO5OaQX-XMIazthwjgImcFak/6ac999d43680702f62f2db79.html",
+    "total_time_taken": 1.16
+  },
+  "search_parameters": {
+    "device": "desktop",
+    "engine": "google",
+    "gl": "in",
+    "google_domain": "google.co.in",
+    "hl": "en",
+    "q": "site:sbicard.com \"SimplySAVE\""
+  },
+  "search_information": {
+    "query_displayed": "site:sbicard.com \"SimplySAVE\"",
+    "total_results": 38,
+    "time_taken_displayed": 0.15,
+    "organic_results_state": "Results for exact spelling"
+  },
+  "inline_videos": [
+    {
+      "position": 1,
+      "title": "New SBI SimplySave Credit Card - Benefits, Features, Charges",
+      "link": "https://www.youtube.com/shorts/loVunnuoCHg?xstg=CAMSBhUDzO3xHw%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6ac999d43680702f62f2db79/images/5wZ-JoBlbNyirAxDkizATbJ7IyIjoyjZ3dVe7if9qbw.jpeg",
+      "channel": "Dekh Review",
+      "duration": "0:44",
+      "platform": "YouTube",
+      "date": "11 Nov 2025",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQ-iwtVAATwkuXSav-SZySJqkeiaAF33LyFhw"
+    },
+    {
+      "position": 2,
+      "title": "New SBI SimplySave Credit Card - Benefits, Features, Charges",
+      "link": "https://www.youtube.com/watch?v=ckjT88bVW5E&xstg=CAMSBhUDzO3xHw%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6ac999d43680702f62f2db79/images/9Ktzde2-vev8ijvTEPs7HxjvSAa3NACWCdq4KQ6RM7M.jpeg",
+      "channel": "Dekh Review",
+      "duration": "3:14",
+      "platform": "YouTube",
+      "date": "10 Nov 2025",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTZ8sPUsbnaPo0X3kJca66jZwbrc07RbaMfTA"
+    },
+    {
+      "position": 3,
+      "title": "SBI SimplySAVE Credit Card Benefits You Must Know in 2025!",
+      "link": "https://www.youtube.com/watch?v=UOOYH5ywzcY&xstg=CAMSBhUDzO3xHw%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6ac999d43680702f62f2db79/images/4UF91izSl_47BKly-AoJo-oMfKv8msWTfddwxdcvrcA.jpeg",
+      "channel": "Smart Banking Hindi",
+      "duration": "5:43",
+      "platform": "YouTube",
+      "date": "24 Jan 2025",
+      "short_clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRZWaPcI_US9HWP2fvZEocw3n64b_A908vJvQ"
+    }
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "SBI SimplySAVE Credit Card Review: Offline Dining & Grocery",
+      "link": "https://credsutra.in/product/sbi-simplysave/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESZwHrOzAVab41SujxsIYo8u8GMx50Tt2Ii_WfrS-XEnq0QvnvMmP3Zcjt4jZRgU9JheL-uPJjmAsrmRLLW5em0FrEufUxNb8paCW_GTwJM9ygwKyzpF07ViVhSBSf49fC3icJnOJ9VcY&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQFnoECBEQAQ&uoh=1",
+      "displayed_link": "https://credsutra.in › Choose Cards",
+      "favicon": "https://serpapi.com/images/i/UklGRgYBAABXRUJQVlA4IPoAAAAQBgCdASocABwAPtE-tFooIigoFAEAGglAGcfWAZkB6YmgF8gDjaW4zUX2zitn5RpLhLNKzpEBoAAA_vKjW-R5NckZYxe51UZ6WLq4ohOEtSQcu9lGWta87lbiM1DfRmvJYfIcGCsAUbDVQpo7dND4HTVuva0zj-YQM7Oyi7-hky3X2jN8yWH3E5bBE-BZq7IL2y0s6xpEcjZdj76nfjo3DYbnfw59Hh8NFfXBCZSbdyIPclM50OHyZ8xbXkT_kz40RosjqdISeSmczcLNnKzMPNLiJsH4kx8mN7UZ3QZMHwJ66F_K0VzwQyAy3msZroXFzTRAScwAAAAA.webp",
+      "date": "14 Aug 2026",
+      "snippet": "The SimplySAVE SBI Card is SBI Card's classic offline companion, tailored for households that spend heavily on physical supermarket groceries, ...",
+      "snippet_highlighted_words": [
+        "SimplySAVE"
+      ],
+      "rich_snippet": {
+        "top": {
+          "detected_extensions": {
+            "rating": 1.9
+          },
+          "extensions": [
+            "1.9",
+            "Review by CredSutra Intelligence"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "The SimplySAVE SBI Card is SBI Card's classic offline companion, tailored for households that spend heavily on physical supermarket groceries, ...",
+          "source_info_link": "https://credsutra.in/product/sbi-simplysave/",
+          "icon": "https://serpapi.com/images/i/UklGRgYBAABXRUJQVlA4IPoAAAAQBgCdASocABwAPtE-tFooIigoFAEAGglAGcfWAZkB6YmgF8gDjaW4zUX2zitn5RpLhLNKzpEBoAAA_vKjW-R5NckZYxe51UZ6WLq4ohOEtSQcu9lGWta87lbiM1DfRmvJYfIcGCsAUbDVQpo7dND4HTVuva0zj-YQM7Oyi7-hky3X2jN8yWH3E5bBE-BZq7IL2y0s6xpEcjZdj76nfjo3DYbnfw59Hh8NFfXBCZSbdyIPclM50OHyZ8xbXkT_kz40RosjqdISeSmczcLNnKzMPNLiJsH4kx8mN7UZ3QZMHwJ66F_K0VzwQyAy3msZroXFzTRAScwAAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpkBL2dvdG8_dXJsPUNBRVNad0hyT3pBVmFiNDFTdWp4c0lZbzh1OEdNeDUwVHQySWlfV2ZyUy1YRW5xMFF2bnZNbVAzWmNqdDRqWlJnVTlKaGVMLXVQSmptQXNybVJMTFc1ZW0wRnJFdWZVeE5iOHBhQ1dfR1R3Sk05eWd3S3l6cEYwN1ZpVmhTQlNmNDlmQzNpY0puT0o5VmNZEgQaAggAGsgDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQKQDCAAQABgAIAAqEQoKc2ltcGx5c2F2ZRWzuohAMpkBL2dvdG8_dXJsPUNBRVNad0hyT3pBVmFiNDFTdWp4c0lZbzh1OEdNeDUwVHQySWlfV2ZyUy1YRW5xMFF2bnZNbVAzWmNqdDRqWlJnVTlKaGVMLXVQSmptQXNybVJMTFc1ZW0wRnJFdWZVeE5iOHBhQ1dfR1R3Sk05eWd3S3l6cEYwN1ZpVmhTQlNmNDlmQzNpY0puT0o5VmNZOkZTQkkgPGI-U2ltcGx5U0FWRTwvYj4gQ3JlZGl0IENhcmQgUmV2aWV3OiBPZmZsaW5lIERpbmluZyAmYW1wOyBHcm9jZXJ5QqIBVGhlIDxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkIGlzIFNCSSBDYXJkJiMzOTtzIGNsYXNzaWMgb2ZmbGluZSBjb21wYW5pb24sIHRhaWxvcmVkIGZvciBob3VzZWhvbGRzIHRoYXQgc3BlbmQgaGVhdmlseSBvbiBwaHlzaWNhbCBzdXBlcm1hcmtldCBncm9jZXJpZXMsJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpkBL2dvdG8_dXJsPUNBRVNad0hyT3pBVmFiNDFTdWp4c0lZbzh1OEdNeDUwVHQySWlfV2ZyUy1YRW5xMFF2bnZNbVAzWmNqdDRqWlJnVTlKaGVMLXVQSmptQXNybVJMTFc1ZW0wRnJFdWZVeE5iOHBhQ1dfR1R3Sk05eWd3S3l6cEYwN1ZpVmhTQlNmNDlmQzNpY0puT0o5VmNZEgQaAggAGsgDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQKQDCAAQABgAIAAqEQoKc2ltcGx5c2F2ZRWzuohAMpkBL2dvdG8_dXJsPUNBRVNad0hyT3pBVmFiNDFTdWp4c0lZbzh1OEdNeDUwVHQySWlfV2ZyUy1YRW5xMFF2bnZNbVAzWmNqdDRqWlJnVTlKaGVMLXVQSmptQXNybVJMTFc1ZW0wRnJFdWZVeE5iOHBhQ1dfR1R3Sk05eWd3S3l6cEYwN1ZpVmhTQlNmNDlmQzNpY0puT0o5VmNZOkZTQkkgPGI-U2ltcGx5U0FWRTwvYj4gQ3JlZGl0IENhcmQgUmV2aWV3OiBPZmZsaW5lIERpbmluZyAmYW1wOyBHcm9jZXJ5QqIBVGhlIDxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkIGlzIFNCSSBDYXJkJiMzOTtzIGNsYXNzaWMgb2ZmbGluZSBjb21wYW5pb24sIHRhaWxvcmVkIGZvciBob3VzZWhvbGRzIHRoYXQgc3BlbmQgaGVhdmlseSBvbiBwaHlzaWNhbCBzdXBlcm1hcmtldCBncm9jZXJpZXMsJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "credsutra.in",
+      "read_more_link": "https://credsutra.in/product/sbi-simplysave/#:~:text=The%20SimplySAVE%20SBI%20Card%20is,dining%20out%2C%20and%20movie%20entertainment."
+    },
+    {
+      "position": 2,
+      "title": "SBI SimplySAVE Credit Card Review",
+      "link": "https://www.credithita.com/blog/sbi-simply-save-credit-card-review",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESfQHrOzAVdkbb6dNXqljiqt_0ONAIo87OUrtaCtRZs_Q-JBnv_m97F9joX_RO3Mf8oMwE0G9QYEefKqlb9IqwL45M04aPSsFGmaQPfVxxC1PIegTFUkOg9F3vrQZZuBM8Qu8ERqurqOfxZlLvZClnoahjA2iSON-R0mFe48Sh&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQFnoECBMQAQ&uoh=1",
+      "displayed_link": "https://www.credithita.com › blog › sbi-simply-save-credi...",
+      "favicon": "https://serpapi.com/images/i/UklGRm4BAABXRUJQVlA4IGIBAADQBwCdASogACAAPrkurlcnIacnG_DgFwlsAKwzMuW-ACkIN4m_bctATRpLduoGoPqOGdBcw81aa0T_Dl94mxtYWnYsh1j_qAD-8o1ILjVCCKykGp4AlXFCrcrbYjYNQ78f7POPDzjaIIufw5kyhqdQQblSbnb3zI__Ks_lZzWf_TTXH4n1W2CKvdW5lX7DqojNvZQI4vSdqS5R6Emp6zDCTXehPrahsGTBeY1Q3C4izCTW388LkjCbaV2ZQfY94Z8Ifnbc6gsb7pTULdOXEv9-NBO0ofU9D-3XTErsPOA-cOOWEm-07qVK5QQ9bgxO5G84PKpXQZ3ewHFibdh_P2W_U9Y0Yp70uljZi8HJ9Yf0eiV0zPQ17wVHyyDMq6ixwvlSWnkdtNdSjM3MyHrdUwFlKNsN9y2gCpr7Q4re49Cn874Lh0oN0Exv_64EfXKi5z_9WJ-Tfnlp8T1dt_x4PrqgAAA.webp",
+      "date": "4 Apr 2020",
+      "snippet": "Transfer the outstanding balance of other banks' credit cards using your SimplySAVE SBI Card, and avail a lower rate of interest and payback in ...",
+      "snippet_highlighted_words": [
+        "SimplySAVE"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Transfer the outstanding balance of other banks' credit cards using your SimplySAVE SBI Card, and avail a lower rate of interest and payback in ...",
+          "source_info_link": "https://www.credithita.com/blog/sbi-simply-save-credit-card-review",
+          "icon": "https://serpapi.com/images/i/UklGRm4BAABXRUJQVlA4IGIBAADQBwCdASogACAAPrkurlcnIacnG_DgFwlsAKwzMuW-ACkIN4m_bctATRpLduoGoPqOGdBcw81aa0T_Dl94mxtYWnYsh1j_qAD-8o1ILjVCCKykGp4AlXFCrcrbYjYNQ78f7POPDzjaIIufw5kyhqdQQblSbnb3zI__Ks_lZzWf_TTXH4n1W2CKvdW5lX7DqojNvZQI4vSdqS5R6Emp6zDCTXehPrahsGTBeY1Q3C4izCTW388LkjCbaV2ZQfY94Z8Ifnbc6gsb7pTULdOXEv9-NBO0ofU9D-3XTErsPOA-cOOWEm-07qVK5QQ9bgxO5G84PKpXQZ3ewHFibdh_P2W_U9Y0Yp70uljZi8HJ9Yf0eiV0zPQ17wVHyyDMq6ixwvlSWnkdtNdSjM3MyHrdUwFlKNsN9y2gCpr7Q4re49Cn874Lh0oN0Exv_64EfXKi5z_9WJ-Tfnlp8T1dt_x4PrqgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrYBL2dvdG8_dXJsPUNBRVNmUUhyT3pBVmRrYmI2ZE5YcWxqaXF0XzBPTkFJbzg3T1VydGFDdFJac19RLUpCbnZfbTk3Rjlqb1hfUk8zTWY4b013RTBHOVFZRWVmS3FsYjlJcXdMNDVNMDRhUFNzRkdtYVFQZlZ4eEMxUEllZ1RGVWtPZzlGM3ZyUVpadUJNOFF1OEVScXVycU9meFpsTHZaQ2xub2FoakEyaVNPTi1SMG1GZTQ4U2gSBBoCCAAa1QMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAsQMIABAAGAAgACoRCgpzaW1wbHlzYXZlFTvikEAytgEvZ290bz91cmw9Q0FFU2ZRSHJPekFWZGtiYjZkTlhxbGppcXRfME9OQUlvODdPVXJ0YUN0UlpzX1EtSkJudl9tOTdGOWpvWF9STzNNZjhvTXdFMEc5UVlFZWZLcWxiOUlxd0w0NU0wNGFQU3NGR21hUVBmVnh4QzFQSWVnVEZVa09nOUYzdnJRWlp1Qk04UXU4RVJxdXJxT2Z4WmxMdlpDbG5vYWhqQTJpU09OLVIwbUZlNDhTaDo1U0JJIDxiPlNpbXBseVNBVkU8L2I-IENyZWRpdCBDYXJkIFJldmlldyAtIENyZWRpdEhpdGFCowFUcmFuc2ZlciB0aGUgb3V0c3RhbmRpbmcgYmFsYW5jZSBvZiBvdGhlciBiYW5rcyYjMzk7IGNyZWRpdCBjYXJkcyB1c2luZyB5b3VyIDxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkLCBhbmQgYXZhaWwgYSBsb3dlciByYXRlIG9mIGludGVyZXN0IGFuZCBwYXliYWNrIGluJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrYBL2dvdG8_dXJsPUNBRVNmUUhyT3pBVmRrYmI2ZE5YcWxqaXF0XzBPTkFJbzg3T1VydGFDdFJac19RLUpCbnZfbTk3Rjlqb1hfUk8zTWY4b013RTBHOVFZRWVmS3FsYjlJcXdMNDVNMDRhUFNzRkdtYVFQZlZ4eEMxUEllZ1RGVWtPZzlGM3ZyUVpadUJNOFF1OEVScXVycU9meFpsTHZaQ2xub2FoakEyaVNPTi1SMG1GZTQ4U2gSBBoCCAAa1QMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAsQMIABAAGAAgACoRCgpzaW1wbHlzYXZlFTvikEAytgEvZ290bz91cmw9Q0FFU2ZRSHJPekFWZGtiYjZkTlhxbGppcXRfME9OQUlvODdPVXJ0YUN0UlpzX1EtSkJudl9tOTdGOWpvWF9STzNNZjhvTXdFMEc5UVlFZWZLcWxiOUlxd0w0NU0wNGFQU3NGR21hUVBmVnh4QzFQSWVnVEZVa09nOUYzdnJRWlp1Qk04UXU4RVJxdXJxT2Z4WmxMdlpDbG5vYWhqQTJpU09OLVIwbUZlNDhTaDo1U0JJIDxiPlNpbXBseVNBVkU8L2I-IENyZWRpdCBDYXJkIFJldmlldyAtIENyZWRpdEhpdGFCowFUcmFuc2ZlciB0aGUgb3V0c3RhbmRpbmcgYmFsYW5jZSBvZiBvdGhlciBiYW5rcyYjMzk7IGNyZWRpdCBjYXJkcyB1c2luZyB5b3VyIDxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkLCBhbmQgYXZhaWwgYSBsb3dlciByYXRlIG9mIGludGVyZXN0IGFuZCBwYXliYWNrIGluJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "credithita.com",
+      "read_more_link": "https://www.credithita.com/blog/sbi-simply-save-credit-card-review#:~:text=Transfer%20the%20outstanding%20balance%20of,interest%20and%20payback%20in%20EMIs."
+    },
+    {
+      "position": 3,
+      "title": "SBI SimplySAVE Credit Card Review",
+      "link": "https://www.credithita.com/blog/sbi-simply-click-credit-card-review",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESfgHrOzAVBQ72VEfki4VYoQYidBc9PSydj9E1b3Q1HEBbBgTrL9Qiss04N5j2EoCHjRE5ByyzlBGnLFC4VEVE7Co_JE3E5cr878r5qHYUtkdHxGxIVATEnYkvGhzB8mzCFeZO6s1Qn4n8beHbgl-Iv2VPT12PNSO5U3nLzjdWYw&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQFnoECA8QAQ&uoh=1",
+      "displayed_link": "https://www.credithita.com › blog › sbi-simply-click-cred...",
+      "favicon": "https://serpapi.com/images/i/UklGRm4BAABXRUJQVlA4IGIBAADQBwCdASogACAAPrkurlcnIacnG_DgFwlsAKwzMuW-ACkIN4m_bctATRpLduoGoPqOGdBcw81aa0T_Dl94mxtYWnYsh1j_qAD-8o1ILjVCCKykGp4AlXFCrcrbYjYNQ78f7POPDzjaIIufw5kyhqdQQblSbnb3zI__Ks_lZzWf_TTXH4n1W2CKvdW5lX7DqojNvZQI4vSdqS5R6Emp6zDCTXehPrahsGTBeY1Q3C4izCTW388LkjCbaV2ZQfY94Z8Ifnbc6gsb7pTULdOXEv9-NBO0ofU9D-3XTErsPOA-cOOWEm-07qVK5QQ9bgxO5G84PKpXQZ3ewHFibdh_P2W_U9Y0Yp70uljZi8HJ9Yf0eiV0zPQ17wVHyyDMq6ixwvlSWnkdtNdSjM3MyHrdUwFlKNsN9y2gCpr7Q4re49Cn874Lh0oN0Exv_64EfXKi5z_9WJ-Tfnlp8T1dt_x4PrqgAAA.webp",
+      "snippet": "SBI SimplySAVE Credit Card Review. 14 Mar 2021. Admin. SBI SimplySAVE Credit Card Review. State Bank of India (SBI) offers many credit cards ...",
+      "snippet_highlighted_words": [
+        "SimplySAVE",
+        "SimplySAVE"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "SBI SimplySAVE Credit Card Review. 14 Mar 2021. Admin. SBI SimplySAVE Credit Card Review. State Bank of India (SBI) offers many credit cards ...",
+          "source_info_link": "https://www.credithita.com/blog/sbi-simply-click-credit-card-review",
+          "icon": "https://serpapi.com/images/i/UklGRm4BAABXRUJQVlA4IGIBAADQBwCdASogACAAPrkurlcnIacnG_DgFwlsAKwzMuW-ACkIN4m_bctATRpLduoGoPqOGdBcw81aa0T_Dl94mxtYWnYsh1j_qAD-8o1ILjVCCKykGp4AlXFCrcrbYjYNQ78f7POPDzjaIIufw5kyhqdQQblSbnb3zI__Ks_lZzWf_TTXH4n1W2CKvdW5lX7DqojNvZQI4vSdqS5R6Emp6zDCTXehPrahsGTBeY1Q3C4izCTW388LkjCbaV2ZQfY94Z8Ifnbc6gsb7pTULdOXEv9-NBO0ofU9D-3XTErsPOA-cOOWEm-07qVK5QQ9bgxO5G84PKpXQZ3ewHFibdh_P2W_U9Y0Yp70uljZi8HJ9Yf0eiV0zPQ17wVHyyDMq6ixwvlSWnkdtNdSjM3MyHrdUwFlKNsN9y2gCpr7Q4re49Cn874Lh0oN0Exv_64EfXKi5z_9WJ-Tfnlp8T1dt_x4PrqgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrgBL2dvdG8_dXJsPUNBRVNmZ0hyT3pBVkJRNzJWRWZraTRWWW9RWWlkQmM5UFN5ZGo5RTFiM1ExSEVCYkJnVHJMOVFpc3MwNE41ajJFb0NIalJFNUJ5eXpsQkduTEZDNFZFVkU3Q29fSkUzRTVjcjg3OHI1cUhZVXRrZEh4R3hJVkFURW5Za3ZHaHpCOG16Q0ZlWk82czFRbjRuOGJlSGJnbC1JdjJWUFQxMlBOU081VTNuTHpqZFdZdxIEGgIIABrXAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCzAwgAEAAYACAAKhEKCnNpbXBseXNhdmUV_MZlQDK4AS9nb3RvP3VybD1DQUVTZmdIck96QVZCUTcyVkVma2k0VllvUVlpZEJjOVBTeWRqOUUxYjNRMUhFQmJCZ1RyTDlRaXNzMDRONWoyRW9DSGpSRTVCeXl6bEJHbkxGQzRWRVZFN0NvX0pFM0U1Y3I4NzhyNXFIWVV0a2RIeEd4SVZBVEVuWWt2R2h6QjhtekNGZVpPNnMxUW40bjhiZUhiZ2wtSXYyVlBUMTJQTlNPNVUzbkx6amRXWXc6NVNCSSA8Yj5TaW1wbHlTQVZFPC9iPiBDcmVkaXQgQ2FyZCBSZXZpZXcgLSBDcmVkaXRIaXRhQqMBU0JJIDxiPlNpbXBseVNBVkU8L2I-IENyZWRpdCBDYXJkIFJldmlldy4gMTQgTWFyIDIwMjEuIEFkbWluLiBTQkkgPGI-U2ltcGx5U0FWRTwvYj4gQ3JlZGl0IENhcmQgUmV2aWV3LiBTdGF0ZSBCYW5rIG9mIEluZGlhIChTQkkpIG9mZmVycyBtYW55IGNyZWRpdCBjYXJkcyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrgBL2dvdG8_dXJsPUNBRVNmZ0hyT3pBVkJRNzJWRWZraTRWWW9RWWlkQmM5UFN5ZGo5RTFiM1ExSEVCYkJnVHJMOVFpc3MwNE41ajJFb0NIalJFNUJ5eXpsQkduTEZDNFZFVkU3Q29fSkUzRTVjcjg3OHI1cUhZVXRrZEh4R3hJVkFURW5Za3ZHaHpCOG16Q0ZlWk82czFRbjRuOGJlSGJnbC1JdjJWUFQxMlBOU081VTNuTHpqZFdZdxIEGgIIABrXAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCzAwgAEAAYACAAKhEKCnNpbXBseXNhdmUV_MZlQDK4AS9nb3RvP3VybD1DQUVTZmdIck96QVZCUTcyVkVma2k0VllvUVlpZEJjOVBTeWRqOUUxYjNRMUhFQmJCZ1RyTDlRaXNzMDRONWoyRW9DSGpSRTVCeXl6bEJHbkxGQzRWRVZFN0NvX0pFM0U1Y3I4NzhyNXFIWVV0a2RIeEd4SVZBVEVuWWt2R2h6QjhtekNGZVpPNnMxUW40bjhiZUhiZ2wtSXYyVlBUMTJQTlNPNVUzbkx6amRXWXc6NVNCSSA8Yj5TaW1wbHlTQVZFPC9iPiBDcmVkaXQgQ2FyZCBSZXZpZXcgLSBDcmVkaXRIaXRhQqMBU0JJIDxiPlNpbXBseVNBVkU8L2I-IENyZWRpdCBDYXJkIFJldmlldy4gMTQgTWFyIDIwMjEuIEFkbWluLiBTQkkgPGI-U2ltcGx5U0FWRTwvYj4gQ3JlZGl0IENhcmQgUmV2aWV3LiBTdGF0ZSBCYW5rIG9mIEluZGlhIChTQkkpIG9mZmVycyBtYW55IGNyZWRpdCBjYXJkcyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "credithita.com",
+      "read_more_link": "https://www.credithita.com/blog/sbi-simply-click-credit-card-review#:~:text=SBI%20SimplySAVE%20Credit%20Card%20Review,card%20has%20easy%20eligibility%20terms."
+    },
+    {
+      "position": 4,
+      "title": "SBI Simply Save Credit Card Benefits & Features",
+      "link": "https://www.youtube.com/watch?v=tjWtmcG564g&xstg=CAMSBhUDzO3xHw%3D%3D",
+      "displayed_link": "830+ views · 3 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac999d43680702f62f2db79/images/gr-EH3gJwi1XryfUhc-0HuyoohkFgvaoIyKoxD_S9ps.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "Apply For SBI SimplySAVE Card : https://bit.ly/3YUhVLa All Banks Credit Card Offers & Apply Online Link : https://loan.datalog24.",
+      "duration": "6:56",
+      "about_this_result": {
+        "source": {
+          "description": "Apply For SBI SimplySAVE Card : https://bit.ly/3YUhVLa All Banks Credit Card Offers & Apply Online Link : https://loan.datalog24.",
+          "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+        }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVmVJX0pSSngwWGotTzIyZ1ZVT2NmRHRLTHd6ZkxPZ0s5T3lTWXRib2pjZW9TXy05a0NILW04bDFFYmVXb1hWdjNRTW5TOW81QUZIWGdUOHNoOVJ6Vi1HcFZqNnNrd01UbllPanhlRFg3ejU0cVNvbko2UWR0WW5NT01GaWdEZlI1NUESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVmVJX0pSSngwWGotTzIyZ1ZVT2NmRHRLTHd6ZkxPZ0s5T3lTWXRib2pjZW9TXy05a0NILW04bDFFYmVXb1hWdjNRTW5TOW81QUZIWGdUOHNoOVJ6Vi1HcFZqNnNrd01UbllPanhlRFg3ejU0cVNvbko2UWR0WW5NT01GaWdEZlI1NUESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRyhNCbpG1b5fVDOPK7gAiwRq3afO2IV_fICA",
+      "source": "YouTube · Desi Profit Talk"
+    },
+    {
+      "position": 5,
+      "title": "SimplySAVE SBI Card — fees, eligibility and official sources",
+      "link": "https://indiabanks.org/products/state-bank-of-india-simplysave-sbi-card",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESggEB6zswFSW71BaLu_vdFryCzXupnpAwjLEEmbGmXVFd5KLj5E1fnnbL5flkXP-5R6VMrqH9L7I70EMuEtWpmEkAAeUaqKwz7Ghvdc7s9lHF_pcsISlhZSJE9rUYcq5oe2zgeH_wUU9bOFEtypW9FA1BY6_0L8mQ0Psjl-bU9HW9f95A&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQFnoECBAQAQ&uoh=1",
+      "displayed_link": "https://indiabanks.org › ... › Cashback credit cards",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAMFBMVEVHcEwHPioHQi0LNi0FQSkEQygEQykFQSkuHFETOTMFQSkIPSsFQSgFQikGQSvHdwgKyULrAAAAEHRSTlMAR1Uazf_augMNsCuh6W_D0wUrCQAAAN1JREFUeAFjIACElKBAGcx1DYWBZBDXvcG9c2ZXwsyZk0I3gLgMXgwMPAlAFu8FkOK00LTcPWFpad7cQUCu75m7Z-_YxCxdkzrhDkQxywKeBFMD1gclYK47kHtZVPipQBacC7QnhjMOSVbagD0AwoXoZViqAOfGf60pDWJA4qalBjIgK-YAKkZwNzBwRaBYxIGw6OLTR08fuCM7kvcA2JHzrun6zbn09N1RBbAjRYH6ZEB6mYPAihmg3mcDO5Jz5syZPMDAmXh1AyzodGBBx7FREAisgVgYHLAdeOIAAN-sV4jLBn8EAAAAAElFTkSuQmCC.png",
+      "snippet": "SimplySAVE. SBI Card. An everyday rewards credit card with accelerated points on dining, movies, department stores and grocery, a ₹499 annual fee and spend- ...",
+      "snippet_highlighted_words": [
+        "SimplySAVE"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "SimplySAVE. SBI Card. An everyday rewards credit card with accelerated points on dining, movies, department stores and grocery, a ₹499 annual fee and spend- ...",
+          "source_info_link": "https://indiabanks.org/products/state-bank-of-india-simplysave-sbi-card",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAMFBMVEVHcEwHPioHQi0LNi0FQSkEQygEQykFQSkuHFETOTMFQSkIPSsFQSgFQikGQSvHdwgKyULrAAAAEHRSTlMAR1Uazf_augMNsCuh6W_D0wUrCQAAAN1JREFUeAFjIACElKBAGcx1DYWBZBDXvcG9c2ZXwsyZk0I3gLgMXgwMPAlAFu8FkOK00LTcPWFpad7cQUCu75m7Z-_YxCxdkzrhDkQxywKeBFMD1gclYK47kHtZVPipQBacC7QnhjMOSVbagD0AwoXoZViqAOfGf60pDWJA4qalBjIgK-YAKkZwNzBwRaBYxIGw6OLTR08fuCM7kvcA2JHzrun6zbn09N1RBbAjRYH6ZEB6mYPAihmg3mcDO5Jz5syZPMDAmXh1AyzodGBBx7FREAisgVgYHLAdeOIAAN-sV4jLBn8EAAAAAElFTkSuQmCC.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZTVzcxQmFMdV92ZEZyeUN6WHVwbnBBd2pMRUVtYkdtWFZGZDVLTGo1RTFmbm5iTDVmbGtYUC01UjZWTXJxSDlMN0k3MEVNdUV0V3BtRWtBQWVVYXFLd3o3R2h2ZGM3czlsSEZfcGNzSVNsaFpTSkU5clVZY3E1b2UyemdlSF93VVU5Yk9GRXR5cFc5RkExQlk2XzBMOG1RMFBzamwtYlU5SFc5Zjk1QRIEGgIIABr4AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDUAwgAEAAYACAAKhEKCnNpbXBseXNhdmUVrKuRQDK-AS9nb3RvP3VybD1DQUVTZ2dFQjZ6c3dGU1c3MUJhTHVfdmRGcnlDelh1cG5wQXdqTEVFbWJHbVhWRmQ1S0xqNUUxZm5uYkw1ZmxrWFAtNVI2Vk1ycUg5TDdJNzBFTXVFdFdwbUVrQUFlVWFxS3d6N0dodmRjN3M5bEhGX3Bjc0lTbGhaU0pFOXJVWWNxNW9lMnpnZUhfd1VVOWJPRkV0eXBXOUZBMUJZNl8wTDhtUTBQc2psLWJVOUhXOWY5NUE6RTxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkIOKAlCBmZWVzLCBlbGlnaWJpbGl0eSBhbmQgb2ZmaWNpYWwgc291cmNlc0KuATxiPlNpbXBseVNBVkU8L2I-LiBTQkkgQ2FyZC4gQW4gZXZlcnlkYXkgcmV3YXJkcyBjcmVkaXQgY2FyZCB3aXRoIGFjY2VsZXJhdGVkIHBvaW50cyBvbiBkaW5pbmcsIG1vdmllcywgZGVwYXJ0bWVudCBzdG9yZXMgYW5kIGdyb2NlcnksIGEg4oK5NDk5IGFubnVhbCBmZWUgYW5kIHNwZW5kLSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZTVzcxQmFMdV92ZEZyeUN6WHVwbnBBd2pMRUVtYkdtWFZGZDVLTGo1RTFmbm5iTDVmbGtYUC01UjZWTXJxSDlMN0k3MEVNdUV0V3BtRWtBQWVVYXFLd3o3R2h2ZGM3czlsSEZfcGNzSVNsaFpTSkU5clVZY3E1b2UyemdlSF93VVU5Yk9GRXR5cFc5RkExQlk2XzBMOG1RMFBzamwtYlU5SFc5Zjk1QRIEGgIIABr4AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDUAwgAEAAYACAAKhEKCnNpbXBseXNhdmUVrKuRQDK-AS9nb3RvP3VybD1DQUVTZ2dFQjZ6c3dGU1c3MUJhTHVfdmRGcnlDelh1cG5wQXdqTEVFbWJHbVhWRmQ1S0xqNUUxZm5uYkw1ZmxrWFAtNVI2Vk1ycUg5TDdJNzBFTXVFdFdwbUVrQUFlVWFxS3d6N0dodmRjN3M5bEhGX3Bjc0lTbGhaU0pFOXJVWWNxNW9lMnpnZUhfd1VVOWJPRkV0eXBXOUZBMUJZNl8wTDhtUTBQc2psLWJVOUhXOWY5NUE6RTxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkIOKAlCBmZWVzLCBlbGlnaWJpbGl0eSBhbmQgb2ZmaWNpYWwgc291cmNlc0KuATxiPlNpbXBseVNBVkU8L2I-LiBTQkkgQ2FyZC4gQW4gZXZlcnlkYXkgcmV3YXJkcyBjcmVkaXQgY2FyZCB3aXRoIGFjY2VsZXJhdGVkIHBvaW50cyBvbiBkaW5pbmcsIG1vdmllcywgZGVwYXJ0bWVudCBzdG9yZXMgYW5kIGdyb2NlcnksIGEg4oK5NDk5IGFubnVhbCBmZWUgYW5kIHNwZW5kLSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "indiabanks.org",
+      "read_more_link": "https://indiabanks.org/products/state-bank-of-india-simplysave-sbi-card#:~:text=SimplySAVE,fee%20and%20spend%2Dbased%20renewal%2Dfee%20reversal."
+    },
+    {
+      "position": 6,
+      "title": "SBI SimplySAVE Credit Card review (June 2026)",
+      "link": "https://nexmaxo.com/reviews/credit-cards/sbi-simplysave/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEScwHrOzAVeGJ3jqoBF-HuZnqLoYplPzesl11mkDrX0UlmMIP3wmY5nkuETtdPpGTIqPjsSr-VOAGyGZR8OX2gF9D0xyEgVfurNTdrznRkplPPPU6V6DbC_KBP51ifT_Nfd5tEcVKB1YOMdXh0O5J5B37_Z98&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQFnoECBQQAQ&uoh=1",
+      "displayed_link": "https://nexmaxo.com › Reviews › Credit cards",
+      "favicon": "https://serpapi.com/images/i/UklGRlQBAABXRUJQVlA4IEgBAADwBgCdASogACAAPtEwtFooIigoGAEAGglpABPPngA4Axi3OL9H8Aj0AFrX-Gq5EewnxAzHcrW1tHY_UxJwD9rAAP7-lUmmMWX9DcdgKSvVrUhEBiqfhtoTYmwhCQipfPdGh29I8lH11WORFJVtDmyBFn-rAGN_LvBYmDEcRWqeMC7HTY49Cu2D_XqEUfGKxDQo6h5nern8ybj2mBsKz4woQHTjIqztQxtpy9nRdehoIHLC31VPreLd4kOQ3u_QfyzS0k5offpIWQn0SZbb680S4mimds_e4IFboWtRD_CdATObCWp3CTIgNTM_jV8DBgysBA2RGZTj1IsMFjEhOkEfr_gvvFr1WSf7UFjNk3ZSo--f7tdaK4dyke7_j6JKElrHJOHVhccmR6qaX8QL2y2_cUEcn10pGZ7Hf_0FXdAbBgrD59CdgAAA.webp",
+      "snippet": "The SBI SimplySAVE Credit Card carries a fee — ₹499 + GST joining and ₹499 + GST annual renewal (renewal waived on ₹1 lakh annual spend). That fee is ...",
+      "snippet_highlighted_words": [
+        "SimplySAVE"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "The SBI SimplySAVE Credit Card carries a fee — ₹499 + GST joining and ₹499 + GST annual renewal (renewal waived on ₹1 lakh annual spend). That fee is ...",
+          "source_info_link": "https://nexmaxo.com/reviews/credit-cards/sbi-simplysave/",
+          "icon": "https://serpapi.com/images/i/UklGRlQBAABXRUJQVlA4IEgBAADwBgCdASogACAAPtEwtFooIigoGAEAGglpABPPngA4Axi3OL9H8Aj0AFrX-Gq5EewnxAzHcrW1tHY_UxJwD9rAAP7-lUmmMWX9DcdgKSvVrUhEBiqfhtoTYmwhCQipfPdGh29I8lH11WORFJVtDmyBFn-rAGN_LvBYmDEcRWqeMC7HTY49Cu2D_XqEUfGKxDQo6h5nern8ybj2mBsKz4woQHTjIqztQxtpy9nRdehoIHLC31VPreLd4kOQ3u_QfyzS0k5offpIWQn0SZbb680S4mimds_e4IFboWtRD_CdATObCWp3CTIgNTM_jV8DBgysBA2RGZTj1IsMFjEhOkEfr_gvvFr1WSf7UFjNk3ZSo--f7tdaK4dyke7_j6JKElrHJOHVhccmR6qaX8QL2y2_cUEcn10pGZ7Hf_0FXdAbBgrD59CdgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqkBL2dvdG8_dXJsPUNBRVNjd0hyT3pBVmVHSjNqcW9CRi1IdVpucUxvWXBsUHplc2wxMW1rRHJYMFVsbU1JUDN3bVk1bmt1RVR0ZFBwR1RJcVBqc1NyLVZPQUd5R1pSOE9YMmdGOUQweHlFZ1ZmdXJOVGRyem5Sa3BsUFBQVTZWNkRiQ19LQlA1MWlmVF9OZmQ1dEVjVktCMVlPTWRYaDBPNUo1QjM3X1o5OBIEGgIIABrbAxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkC3AwgAEAAYACAAKhEKCnNpbXBseXNhdmUVkyqMQDKpAS9nb3RvP3VybD1DQUVTY3dIck96QVZlR0ozanFvQkYtSHVabnFMb1lwbFB6ZXNsMTFta0RyWDBVbG1NSVAzd21ZNW5rdUVUdGRQcEdUSXFQanNTci1WT0FHeUdaUjhPWDJnRjlEMHh5RWdWZnVyTlRkcnpuUmtwbFBQUFU2VjZEYkNfS0JQNTFpZlRfTmZkNXRFY1ZLQjFZT01kWGgwTzVKNUIzN19aOTg6PlNCSSA8Yj5TaW1wbHlTQVZFPC9iPiBDcmVkaXQgQ2FyZCByZXZpZXcgKEp1bmUgMjAyNikgLSBOZXhNYXhvQq0BVGhlIFNCSSA8Yj5TaW1wbHlTQVZFPC9iPiBDcmVkaXQgQ2FyZCBjYXJyaWVzIGEgZmVlIOKAlCDigrk0OTkgKyBHU1Qgam9pbmluZyBhbmQg4oK5NDk5ICsgR1NUIGFubnVhbCByZW5ld2FsIChyZW5ld2FsIHdhaXZlZCBvbiDigrkxIGxha2ggYW5udWFsIHNwZW5kKS4gVGhhdCBmZWUgaXMmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqkBL2dvdG8_dXJsPUNBRVNjd0hyT3pBVmVHSjNqcW9CRi1IdVpucUxvWXBsUHplc2wxMW1rRHJYMFVsbU1JUDN3bVk1bmt1RVR0ZFBwR1RJcVBqc1NyLVZPQUd5R1pSOE9YMmdGOUQweHlFZ1ZmdXJOVGRyem5Sa3BsUFBQVTZWNkRiQ19LQlA1MWlmVF9OZmQ1dEVjVktCMVlPTWRYaDBPNUo1QjM3X1o5OBIEGgIIABrbAxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkC3AwgAEAAYACAAKhEKCnNpbXBseXNhdmUVkyqMQDKpAS9nb3RvP3VybD1DQUVTY3dIck96QVZlR0ozanFvQkYtSHVabnFMb1lwbFB6ZXNsMTFta0RyWDBVbG1NSVAzd21ZNW5rdUVUdGRQcEdUSXFQanNTci1WT0FHeUdaUjhPWDJnRjlEMHh5RWdWZnVyTlRkcnpuUmtwbFBQUFU2VjZEYkNfS0JQNTFpZlRfTmZkNXRFY1ZLQjFZT01kWGgwTzVKNUIzN19aOTg6PlNCSSA8Yj5TaW1wbHlTQVZFPC9iPiBDcmVkaXQgQ2FyZCByZXZpZXcgKEp1bmUgMjAyNikgLSBOZXhNYXhvQq0BVGhlIFNCSSA8Yj5TaW1wbHlTQVZFPC9iPiBDcmVkaXQgQ2FyZCBjYXJyaWVzIGEgZmVlIOKAlCDigrk0OTkgKyBHU1Qgam9pbmluZyBhbmQg4oK5NDk5ICsgR1NUIGFubnVhbCByZW5ld2FsIChyZW5ld2FsIHdhaXZlZCBvbiDigrkxIGxha2ggYW5udWFsIHNwZW5kKS4gVGhhdCBmZWUgaXMmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "NexMaxo",
+      "read_more_link": "https://nexmaxo.com/reviews/credit-cards/sbi-simplysave/#:~:text=The%20SBI%20SimplySAVE%20Credit%20Card,annual%20spend).%20That%20fee%20is"
+    },
+    {
+      "position": 7,
+      "title": "SimplySAVE SBI Card Review 2026: Fees & Rewards",
+      "link": "https://www.cardmasters.in/card/sbi-simplysave",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESaQHrOzAVwuBHvzcUe-ttMp1T3-u5R_Kj3S6xubX_vM4dApgHJcoRD4Kq6hWfy-1wLfHJeu202nDyaBqFOLdu_Jzkm9MD4e4riBfejXB2oedJuFJtyH7d-O807EXsIxP-5fB7bCGzD_M6uQ&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQFnoECBUQAQ&uoh=1",
+      "displayed_link": "https://www.cardmasters.in › Credit card directory",
+      "favicon": "https://serpapi.com/images/i/UklGRsABAABXRUJQVlA4ILQBAACwCQCdASogACAAPrUurVanIacnG_DgFolsAJ0yhH4w2fLY8apBaqA5KgMK3B44coMZXzmkXfrI_blmvrjNUSUStKhoVsO6DNTgKhcbIxpSBbSu3sCiOAD-68fm_yufzY7pIqPnztWgWQHCTgc-lqTMiswGXDuCcbiNU6rqZcwmi7amodqtqFpEdIhiovoZC10dD7NEUJTR4M1XsKYuxpQj0X3NhHtDHgdEjtUfujtQ6SlXpfXwppFWzVf-Y4dq61Bw7epDXrdjk1cEeohwCCegcI23G6iq7GYOYuFBcfY-Oz8X4mj-iLV0odkev2AH_blJbM2xZ7mKwXvrzVrKAN56gZCQXF73XqZgn5XMe_qwcHaWGfbVuU5SCDoHb7DNiFtFcAu7zwd-DEBBHop52_FMbnkwdKmDPnwca4dM2QU_VkMLLGV0ZdwBTXESgZgL_aFvVP2w6GcsSS34t3QdxtF9zBRkFQeT1HBiD6R6Z68VOomVYO_4CoCGo5mrmW5eZ33KyAADNlUIQHRhs385RCB9fm18_XA91Abmu1dtcK13LtfWWJj5IKWIxndJXadwtA4pYAAA.webp",
+      "date": "19 Aug 2026",
+      "snippet": "The SimplySAVE SBI Card has a recorded annual fee of ₹499 plus GST and a base earn of 1 Reward Point per ₹150 spent on all other categories.",
+      "snippet_highlighted_words": [
+        "SimplySAVE"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "The SimplySAVE SBI Card has a recorded annual fee of ₹499 plus GST and a base earn of 1 Reward Point per ₹150 spent on all other categories.",
+          "source_info_link": "https://www.cardmasters.in/card/sbi-simplysave",
+          "icon": "https://serpapi.com/images/i/UklGRsABAABXRUJQVlA4ILQBAACwCQCdASogACAAPrUurVanIacnG_DgFolsAJ0yhH4w2fLY8apBaqA5KgMK3B44coMZXzmkXfrI_blmvrjNUSUStKhoVsO6DNTgKhcbIxpSBbSu3sCiOAD-68fm_yufzY7pIqPnztWgWQHCTgc-lqTMiswGXDuCcbiNU6rqZcwmi7amodqtqFpEdIhiovoZC10dD7NEUJTR4M1XsKYuxpQj0X3NhHtDHgdEjtUfujtQ6SlXpfXwppFWzVf-Y4dq61Bw7epDXrdjk1cEeohwCCegcI23G6iq7GYOYuFBcfY-Oz8X4mj-iLV0odkev2AH_blJbM2xZ7mKwXvrzVrKAN56gZCQXF73XqZgn5XMe_qwcHaWGfbVuU5SCDoHb7DNiFtFcAu7zwd-DEBBHop52_FMbnkwdKmDPnwca4dM2QU_VkMLLGV0ZdwBTXESgZgL_aFvVP2w6GcsSS34t3QdxtF9zBRkFQeT1HBiD6R6Z68VOomVYO_4CoCGo5mrmW5eZ33KyAADNlUIQHRhs385RCB9fm18_XA91Abmu1dtcK13LtfWWJj5IKWIxndJXadwtA4pYAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVnd1Qkh2emNVZS10dE1wMVQzLXU1Ul9LajNTNnh1Ylhfdk00ZEFwZ0hKY29SRDRLcTZoV2Z5LTF3TGZISmV1MjAybkR5YUJxRk9MZHVfSnprbTlNRDRlNHJpQmZlalhCMm9lZEp1Rkp0eUg3ZC1PODA3RVhzSXhQLTVmQjdiQ0d6RF9NNnVREgQaAggAGrQDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJADCAAQABgAIAAqEQoKc2ltcGx5c2F2ZRVi3qlAMpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVnd1Qkh2emNVZS10dE1wMVQzLXU1Ul9LajNTNnh1Ylhfdk00ZEFwZ0hKY29SRDRLcTZoV2Z5LTF3TGZISmV1MjAybkR5YUJxRk9MZHVfSnprbTlNRDRlNHJpQmZlalhCMm9lZEp1Rkp0eUg3ZC1PODA3RVhzSXhQLTVmQjdiQ0d6RF9NNnVROjo8Yj5TaW1wbHlTQVZFPC9iPiBTQkkgQ2FyZCBSZXZpZXcgMjAyNjogRmVlcyAmYW1wOyBSZXdhcmRzQpcBVGhlIDxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkIGhhcyBhIHJlY29yZGVkIGFubnVhbCBmZWUgb2Yg4oK5NDk5IHBsdXMgR1NUIGFuZCBhIGJhc2UgZWFybiBvZiAxIFJld2FyZCBQb2ludCBwZXIg4oK5MTUwIHNwZW50IG9uIGFsbCBvdGhlciBjYXRlZ29yaWVzLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVnd1Qkh2emNVZS10dE1wMVQzLXU1Ul9LajNTNnh1Ylhfdk00ZEFwZ0hKY29SRDRLcTZoV2Z5LTF3TGZISmV1MjAybkR5YUJxRk9MZHVfSnprbTlNRDRlNHJpQmZlalhCMm9lZEp1Rkp0eUg3ZC1PODA3RVhzSXhQLTVmQjdiQ0d6RF9NNnVREgQaAggAGrQDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJADCAAQABgAIAAqEQoKc2ltcGx5c2F2ZRVi3qlAMpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVnd1Qkh2emNVZS10dE1wMVQzLXU1Ul9LajNTNnh1Ylhfdk00ZEFwZ0hKY29SRDRLcTZoV2Z5LTF3TGZISmV1MjAybkR5YUJxRk9MZHVfSnprbTlNRDRlNHJpQmZlalhCMm9lZEp1Rkp0eUg3ZC1PODA3RVhzSXhQLTVmQjdiQ0d6RF9NNnVROjo8Yj5TaW1wbHlTQVZFPC9iPiBTQkkgQ2FyZCBSZXZpZXcgMjAyNjogRmVlcyAmYW1wOyBSZXdhcmRzQpcBVGhlIDxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkIGhhcyBhIHJlY29yZGVkIGFubnVhbCBmZWUgb2Yg4oK5NDk5IHBsdXMgR1NUIGFuZCBhIGJhc2UgZWFybiBvZiAxIFJld2FyZCBQb2ludCBwZXIg4oK5MTUwIHNwZW50IG9uIGFsbCBvdGhlciBjYXRlZ29yaWVzLiICEAFIAFgAaAA",
+      "source": "cardmasters.in",
+      "read_more_link": "https://www.cardmasters.in/card/sbi-simplysave#:~:text=The%20SimplySAVE%20SBI%20Card%20has,its%20issuer%20terms%20on%202026%2D08%2D19."
+    },
+    {
+      "position": 8,
+      "title": "KVB SimplySAVE SBI Card: fees and rewards - SahiCard",
+      "link": "https://sahicard.co.in/card/sbi-kvb-simplysave",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESaQHrOzAVwXj49pzJKXVt96SWJjKVs0Ot0PmdG9Ou5g55ZaHg49hNmv6x-gIWF-sUCkMl6LM43RafZGtxFZfsl57K64_j2cQq2DykwharPQmm1V4LGOtYUZRhPw_ftxP5i6PEzNqpN7IzpQ&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQFnoECBgQAQ&uoh=1",
+      "displayed_link": "https://sahicard.co.in › All cards › SBI Card",
+      "favicon": "https://serpapi.com/images/i/UklGRjYBAABXRUJQVlA4ICoBAADwBgCdASocABwAPtEytFooIigoGAEAGglsAHjQU_7JEIibSQP1VXuP8wYdhMzKYtkv-emt0l8eQnX9x9UeQBsAAPw_3n8NkTAj8z5CWJPFxwHBnR48uXO63E5mnn4BF69qxMeI7mHR3r37qacieJGFihYdXgqWub2XfD2gw4UwPrzDJh-Swl9swj3lpRC_SV4nGxZ6_ioFkc5PxjMIOr586Y5PHflI5_dTRQ7sp-JgzPMdRRUYS7p46IORnMv4rd86BMbpL-LGt-zsZ9Zhwzy9tpth9RvF2Ir5D-nNfTXOpIcrAQaXtXnqoJrYvS_JZGuSBd3QhjHAiuMzmP7Uu2bHOjForb16DeN8pybRPm7GyJwWtHthrsJIm_ghIH4zfsaTuaEVcp5WzAAA.webp",
+      "date": "29 Sept 2026",
+      "snippet": "KVB SimplySAVE SBI Card: ₹499 a year. A low-fee card for everyday spending on groceries and eating out.",
+      "snippet_highlighted_words": [
+        "SimplySAVE"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "KVB SimplySAVE SBI Card: ₹499 a year. A low-fee card for everyday spending on groceries and eating out.",
+          "source_info_link": "https://sahicard.co.in/card/sbi-kvb-simplysave",
+          "icon": "https://serpapi.com/images/i/UklGRjYBAABXRUJQVlA4ICoBAADwBgCdASocABwAPtEytFooIigoGAEAGglsAHjQU_7JEIibSQP1VXuP8wYdhMzKYtkv-emt0l8eQnX9x9UeQBsAAPw_3n8NkTAj8z5CWJPFxwHBnR48uXO63E5mnn4BF69qxMeI7mHR3r37qacieJGFihYdXgqWub2XfD2gw4UwPrzDJh-Swl9swj3lpRC_SV4nGxZ6_ioFkc5PxjMIOr586Y5PHflI5_dTRQ7sp-JgzPMdRRUYS7p46IORnMv4rd86BMbpL-LGt-zsZ9Zhwzy9tpth9RvF2Ir5D-nNfTXOpIcrAQaXtXnqoJrYvS_JZGuSBd3QhjHAiuMzmP7Uu2bHOjForb16DeN8pybRPm7GyJwWtHthrsJIm_ghIH4zfsaTuaEVcp5WzAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVndYajQ5cHpKS1hWdDk2U1dKaktWczBPdDBQbWRHOU91NWc1NVphSGc0OWhObXY2eC1nSVdGLXNVQ2tNbDZMTTQzUmFmWkd0eEZaZnNsNTdLNjRfajJjUXEyRHlrd2hhclBRbW0xVjRMR090WVVaUmhQd19mdHhQNWk2UEV6TnFwTjdJenBREgQaAggAGo0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQOkCCAAQABgAIAAqEQoKc2ltcGx5c2F2ZRUQS4BAMpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVndYajQ5cHpKS1hWdDk2U1dKaktWczBPdDBQbWRHOU91NWc1NVphSGc0OWhObXY2eC1nSVdGLXNVQ2tNbDZMTTQzUmFmWkd0eEZaZnNsNTdLNjRfajJjUXEyRHlrd2hhclBRbW0xVjRMR090WVVaUmhQd19mdHhQNWk2UEV6TnFwTjdJenBROjtLVkIgPGI-U2ltcGx5U0FWRTwvYj4gU0JJIENhcmQ6IGZlZXMgYW5kIHJld2FyZHMgLSBTYWhpQ2FyZEJwS1ZCIDxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkOiDigrk0OTkgYSB5ZWFyLiBBIGxvdy1mZWUgY2FyZCBmb3IgZXZlcnlkYXkgc3BlbmRpbmcgb24gZ3JvY2VyaWVzIGFuZCBlYXRpbmcgb3V0LiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVndYajQ5cHpKS1hWdDk2U1dKaktWczBPdDBQbWRHOU91NWc1NVphSGc0OWhObXY2eC1nSVdGLXNVQ2tNbDZMTTQzUmFmWkd0eEZaZnNsNTdLNjRfajJjUXEyRHlrd2hhclBRbW0xVjRMR090WVVaUmhQd19mdHhQNWk2UEV6TnFwTjdJenBREgQaAggAGo0DEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQOkCCAAQABgAIAAqEQoKc2ltcGx5c2F2ZRUQS4BAMpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVndYajQ5cHpKS1hWdDk2U1dKaktWczBPdDBQbWRHOU91NWc1NVphSGc0OWhObXY2eC1nSVdGLXNVQ2tNbDZMTTQzUmFmWkd0eEZaZnNsNTdLNjRfajJjUXEyRHlrd2hhclBRbW0xVjRMR090WVVaUmhQd19mdHhQNWk2UEV6TnFwTjdJenBROjtLVkIgPGI-U2ltcGx5U0FWRTwvYj4gU0JJIENhcmQ6IGZlZXMgYW5kIHJld2FyZHMgLSBTYWhpQ2FyZEJwS1ZCIDxiPlNpbXBseVNBVkU8L2I-IFNCSSBDYXJkOiDigrk0OTkgYSB5ZWFyLiBBIGxvdy1mZWUgY2FyZCBmb3IgZXZlcnlkYXkgc3BlbmRpbmcgb24gZ3JvY2VyaWVzIGFuZCBlYXRpbmcgb3V0LiICEAFIAFgAaAA",
+      "source": "sahicard.co.in"
+    },
+    {
+      "position": 9,
+      "title": "Simply Save SBI Card vs SBI SimplyClick Credit Card",
+      "link": "https://www.finowings.com/credit-cards/simplysave-sbi-card-vs-sbi-simplyclick-credit-card",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESlAEB6zswFcMp8VxUj8tS6Es9zFxZiYkvgQCqxmm3UgFu62EUIREYaYmC-F46EXoDuQZs_kJsq1qq8aIqCDwj3Y-1g-1l03nRqIpnb2M9UZQVCvll7TKvTpbNQAzr8kB-u6kYzlUf4FQnK4Gwds624bPJsmh6OBqpDyvhDs5nvdLVSLCgPbJXfa-4rGffoS7T8fzFOdcc&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQFnoECDYQAQ&uoh=1",
+      "displayed_link": "https://www.finowings.com › credit-cards › simplysave-...",
+      "favicon": "https://serpapi.com/images/i/UklGRpIBAABXRUJQVlA4IIYBAACwBwCdASocABwAPtE-tFooIigoFAEAGglsALTusxbgsgUxvxd_SW_A9FwOKMielmLPJkzYzkmXMF3pAlT6rGUGjTO-UgwAAP72E0TJXm5kdWRiauwYmWjbDF2j830gKl_NQ-iwDDsCeCE-0fT1XoKNiJQ85oIvCX52JMMnj4KYauQiu4naQnoyWuDuwm47zzLPeGxv40fPlbEYna_K6krLvcBn1r9E0bjOERR9_Utk_w9v3GqFvX39oGVO84zP89Ar3b5cyyxUvAk99J6MdtDdh2NWvjw5G9rDktsm2FEBLwrsVsk3ZI3gINrkV255kf766G-qrNzc-VH7In1zJ3FZcBDPzpbDS79E_PH-ESNFLwRQPAZXx93H0oGWn8tUd-v0oN3WG2UCvQ8KujyFPHFrvm6n7Re1-n5RMjnqH4KHDNfE3ZJXsbJi6L6I73TvEJDw1RgytbtqW3et5f_Ufn1djgkQ-_nFBvbNqfSkpDNG9Ksy-hUomAF6cA4u7csr11SrR_RgAAA.webp",
+      "date": "11 Oct 2025",
+      "snippet": "For individuals seeking a rewards credit card with a low annual fee, the SBI SimplySave credit card is a fantastic choice. It is appropriate ...",
+      "snippet_highlighted_words": [
+        "SimplySave"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "For individuals seeking a rewards credit card with a low annual fee, the SBI SimplySave credit card is a fantastic choice. It is appropriate ...",
+          "source_info_link": "https://www.finowings.com/credit-cards/simplysave-sbi-card-vs-sbi-simplyclick-credit-card",
+          "icon": "https://serpapi.com/images/i/UklGRpIBAABXRUJQVlA4IIYBAACwBwCdASocABwAPtE-tFooIigoFAEAGglsALTusxbgsgUxvxd_SW_A9FwOKMielmLPJkzYzkmXMF3pAlT6rGUGjTO-UgwAAP72E0TJXm5kdWRiauwYmWjbDF2j830gKl_NQ-iwDDsCeCE-0fT1XoKNiJQ85oIvCX52JMMnj4KYauQiu4naQnoyWuDuwm47zzLPeGxv40fPlbEYna_K6krLvcBn1r9E0bjOERR9_Utk_w9v3GqFvX39oGVO84zP89Ar3b5cyyxUvAk99J6MdtDdh2NWvjw5G9rDktsm2FEBLwrsVsk3ZI3gINrkV255kf766G-qrNzc-VH7In1zJ3FZcBDPzpbDS79E_PH-ESNFLwRQPAZXx93H0oGWn8tUd-v0oN3WG2UCvQ8KujyFPHFrvm6n7Re1-n5RMjnqH4KHDNfE3ZJXsbJi6L6I73TvEJDw1RgytbtqW3et5f_Ufn1djgkQ-_nFBvbNqfSkpDNG9Ksy-hUomAF6cA4u7csr11SrR_RgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtYBL2dvdG8_dXJsPUNBRVNsQUVCNnpzd0ZjTXA4VnhVajh0UzZFczl6RnhaaVlrdmdRQ3F4bW0zVWdGdTYyRVVJUkVZYVltQy1GNDZFWG9EdVFac19rSnNxMXFxOGFJcUNEd2ozWS0xZy0xbDAzblJxSXBuYjJNOVVaUVZDdmxsN1RLdlRwYk5RQXpyOGtCLXU2a1l6bFVmNEZRbks0R3dkczYyNGJQSnNtaDZPQnFwRHl2aERzNW52ZExWU0xDZ1BiSlhmYS00ckdmZm9TN1Q4ZnpGT2RjYxIEGgIIABrsAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDIAwgAEAAYACAAKhEKCnNpbXBseXNhdmUVs3oQPzLWAS9nb3RvP3VybD1DQUVTbEFFQjZ6c3dGY01wOFZ4VWo4dFM2RXM5ekZ4WmlZa3ZnUUNxeG1tM1VnRnU2MkVVSVJFWWFZbUMtRjQ2RVhvRHVRWnNfa0pzcTFxcThhSXFDRHdqM1ktMWctMWwwM25ScUlwbmIyTTlVWlFWQ3ZsbDdUS3ZUcGJOUUF6cjhrQi11NmtZemxVZjRGUW5LNEd3ZHM2MjRiUEpzbWg2T0JxcER5dmhEczVudmRMVlNMQ2dQYkpYZmEtNHJHZmZvUzdUOGZ6Rk9kY2M6M1NpbXBseSBTYXZlIFNCSSBDYXJkIHZzIFNCSSBTaW1wbHlDbGljayBDcmVkaXQgQ2FyZEKcAUZvciBpbmRpdmlkdWFscyBzZWVraW5nIGEgcmV3YXJkcyBjcmVkaXQgY2FyZCB3aXRoIGEgbG93IGFubnVhbCBmZWUsIHRoZSBTQkkgPGI-U2ltcGx5U2F2ZTwvYj4gY3JlZGl0IGNhcmQgaXMgYSBmYW50YXN0aWMgY2hvaWNlLiBJdCBpcyBhcHByb3ByaWF0ZSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtYBL2dvdG8_dXJsPUNBRVNsQUVCNnpzd0ZjTXA4VnhVajh0UzZFczl6RnhaaVlrdmdRQ3F4bW0zVWdGdTYyRVVJUkVZYVltQy1GNDZFWG9EdVFac19rSnNxMXFxOGFJcUNEd2ozWS0xZy0xbDAzblJxSXBuYjJNOVVaUVZDdmxsN1RLdlRwYk5RQXpyOGtCLXU2a1l6bFVmNEZRbks0R3dkczYyNGJQSnNtaDZPQnFwRHl2aERzNW52ZExWU0xDZ1BiSlhmYS00ckdmZm9TN1Q4ZnpGT2RjYxIEGgIIABrsAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDIAwgAEAAYACAAKhEKCnNpbXBseXNhdmUVs3oQPzLWAS9nb3RvP3VybD1DQUVTbEFFQjZ6c3dGY01wOFZ4VWo4dFM2RXM5ekZ4WmlZa3ZnUUNxeG1tM1VnRnU2MkVVSVJFWWFZbUMtRjQ2RVhvRHVRWnNfa0pzcTFxcThhSXFDRHdqM1ktMWctMWwwM25ScUlwbmIyTTlVWlFWQ3ZsbDdUS3ZUcGJOUUF6cjhrQi11NmtZemxVZjRGUW5LNEd3ZHM2MjRiUEpzbWg2T0JxcER5dmhEczVudmRMVlNMQ2dQYkpYZmEtNHJHZmZvUzdUOGZ6Rk9kY2M6M1NpbXBseSBTYXZlIFNCSSBDYXJkIHZzIFNCSSBTaW1wbHlDbGljayBDcmVkaXQgQ2FyZEKcAUZvciBpbmRpdmlkdWFscyBzZWVraW5nIGEgcmV3YXJkcyBjcmVkaXQgY2FyZCB3aXRoIGEgbG93IGFubnVhbCBmZWUsIHRoZSBTQkkgPGI-U2ltcGx5U2F2ZTwvYj4gY3JlZGl0IGNhcmQgaXMgYSBmYW50YXN0aWMgY2hvaWNlLiBJdCBpcyBhcHByb3ByaWF0ZSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Finowings",
+      "read_more_link": "https://www.finowings.com/credit-cards/simplysave-sbi-card-vs-sbi-simplyclick-credit-card#:~:text=%2B"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.co.in/search?q=site:sbicard.com+%22SimplySAVE%22&sca_esv=f63cda19340afddb&gl=in&hl=en&sxsrf=APpeQntpVbpGawoQT6sGvZQ-lmMxWpliRQ:1791597012877&ei=1JnJat2RNfSOxc8Pt_vV2AU&start=10&sa=N&sstk=AS6-VmKRPTwbHOiEzKQTtXlVS9qYfYrpWnLuHJ7lJTZFmMeLAnkDdvvbYlDTsM1J_KM32XaPMIW4t6hzIsPY9PwfbqLSLNO0UDy75w&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQ8NMDegQINRAK",
+    "other_pages": {
+      "2": "https://www.google.co.in/search?q=site:sbicard.com+%22SimplySAVE%22&sca_esv=f63cda19340afddb&gl=in&hl=en&sxsrf=APpeQntpVbpGawoQT6sGvZQ-lmMxWpliRQ:1791597012877&ei=1JnJat2RNfSOxc8Pt_vV2AU&start=10&sa=N&sstk=AS6-VmKRPTwbHOiEzKQTtXlVS9qYfYrpWnLuHJ7lJTZFmMeLAnkDdvvbYlDTsM1J_KM32XaPMIW4t6hzIsPY9PwfbqLSLNO0UDy75w&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQ8tMDegQINRAE",
+      "3": "https://www.google.co.in/search?q=site:sbicard.com+%22SimplySAVE%22&sca_esv=f63cda19340afddb&gl=in&hl=en&sxsrf=APpeQntpVbpGawoQT6sGvZQ-lmMxWpliRQ:1791597012877&ei=1JnJat2RNfSOxc8Pt_vV2AU&start=20&sa=N&sstk=AS6-VmKRPTwbHOiEzKQTtXlVS9qYfYrpWnLuHJ7lJTZFmMeLAnkDdvvbYlDTsM1J_KM32XaPMIW4t6hzIsPY9PwfbqLSLNO0UDy75w&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQ8tMDegQINRAG",
+      "4": "https://www.google.co.in/search?q=site:sbicard.com+%22SimplySAVE%22&sca_esv=f63cda19340afddb&gl=in&hl=en&sxsrf=APpeQntpVbpGawoQT6sGvZQ-lmMxWpliRQ:1791597012877&ei=1JnJat2RNfSOxc8Pt_vV2AU&start=30&sa=N&sstk=AS6-VmKRPTwbHOiEzKQTtXlVS9qYfYrpWnLuHJ7lJTZFmMeLAnkDdvvbYlDTsM1J_KM32XaPMIW4t6hzIsPY9PwfbqLSLNO0UDy75w&ved=2ahUKEwjdy6H8qq6XAxV0R_EDHbd9FVsQ8tMDegQINRAI"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SimplySAVE%22&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SimplySAVE%22&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SimplySAVE%22&start=10",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SimplySAVE%22&start=20",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SimplySAVE%22&start=30"
+    }
+  }
+}

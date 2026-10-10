@@ -1,0 +1,54 @@
+{
+  "_recorded": {
+    "engine": "google_ads_transparency_center_ad_details",
+    "params": {
+      "advertiser_id": "AR09489343092159938561",
+      "creative_id": "CR15008879669615263745",
+      "region": "2356"
+    },
+    "at": "2026-10-10T01:47:17.512564+00:00"
+  },
+  "search_metadata": {
+    "id": "6ac9992417bdbf78059925b0",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/afOK1Ze8_2l8UmY7-NNvSFHSy8JTjhhKAJeLOK6x4cs/6ac9992417bdbf78059925b0.json",
+    "markdown_endpoint": "https://serpapi.com/searches/afOK1Ze8_2l8UmY7-NNvSFHSy8JTjhhKAJeLOK6x4cs/6ac9992417bdbf78059925b0.md",
+    "created_at": "2026-10-10 01:47:16 UTC",
+    "processed_at": "2026-10-10 01:47:16 UTC",
+    "google_ads_transparency_center_ad_details_url": "https://adstransparency.google.com/advertiser/AR09489343092159938561/creative/CR15008879669615263745?region=2356",
+    "raw_html_file": "https://serpapi.com/searches/afOK1Ze8_2l8UmY7-NNvSFHSy8JTjhhKAJeLOK6x4cs/6ac9992417bdbf78059925b0.html",
+    "prettify_html_file": "https://serpapi.com/searches/afOK1Ze8_2l8UmY7-NNvSFHSy8JTjhhKAJeLOK6x4cs/6ac9992417bdbf78059925b0.prettify",
+    "total_time_taken": 0.48
+  },
+  "search_parameters": {
+    "advertiser_id": "AR09489343092159938561",
+    "creative_id": "CR15008879669615263745",
+    "engine": "google_ads_transparency_center_ad_details",
+    "region": "2356"
+  },
+  "search_information": {
+    "format": "text",
+    "last_shown": 1791578012,
+    "region": 2356,
+    "region_name": "India",
+    "more_ads_by_advertiser": "https://adstransparency.google.com/advertiser/AR09489343092159938561?region=IN",
+    "regions": [
+      {
+        "region": 2356,
+        "region_name": "India",
+        "last_shown": 20261009
+      }
+    ]
+  },
+  "ad_creatives": [
+    {
+      "image": "https://tpc.googlesyndication.com/archive/simgad/10922499245396299447"
+    },
+    {
+      "image": "https://tpc.googlesyndication.com/archive/simgad/2638065592288862207"
+    },
+    {
+      "image": "https://tpc.googlesyndication.com/archive/simgad/14446649488914528279"
+    }
+  ]
+}

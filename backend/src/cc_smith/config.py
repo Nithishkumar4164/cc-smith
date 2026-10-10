@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     # Checkout card choice (D10): a quick model picks among engine-computed options.
     advisor_enabled: bool = True
     advisor_model: str = "claude-haiku-4-5-20251001"
-    advisor_timeout_s: float = 2.0
+    advisor_timeout_s: float = 2.5
     allowlist_path: Path = REPO / "docs" / "research" / "official-domains.yaml"
     fixtures_dir: Path = BACKEND / "fixtures"
     alerts_log: Path = BACKEND / "var" / "owner-alerts.log"

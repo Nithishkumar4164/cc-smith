@@ -94,18 +94,24 @@ def extract_terms(card_id: str, name: str, issuer: str, evidence_texts: Sequence
         "name": TOOL_NAME,
         "description": "Record the card profile extracted from the documents. Every sourced element carries verbatim {url, quote}.",
         "input_schema": strict_schema(CardProfile),
-        "strict": True,
+        # Not strict: the API rejects CardProfile's compiled grammar as too large (400,
+        # 10 Oct 2026). The answer is validated against CardProfile below, then every
+        # quote and number is checked by profile_card.
     }
     # Sonnet 5.5 rejects forced tool_choice (400), so the tool is offered with `auto`,
     # the prompt requires it, and a reply without the call is an error.
-    resp = client.messages.create(
-        model=settings.extract_model,
-        max_tokens=16000,
-        system=SYSTEM,
-        tools=[tool],
-        tool_choice={"type": "auto", "disable_parallel_tool_use": True},
-        messages=[{"role": "user", "content": _user_message(card_id, name, issuer, evidence_texts)}],
-    )
+    try:
+        resp = client.messages.create(
+            model=settings.extract_model,
+            max_tokens=16000,
+            system=SYSTEM,
+            tools=[tool],
+            tool_choice={"type": "auto", "disable_parallel_tool_use": True},
+            messages=[{"role": "user", "content": _user_message(card_id, name, issuer, evidence_texts)}],
+        )
+    except anthropic.APIError as e:
+        # One card's failure must not stop a sweep; the caller keeps the lead as reported.
+        raise ExtractionError(f"{card_id}: model request failed: {type(e).__name__}: {str(e)[:300]}") from e
     if resp.stop_reason in ("max_tokens", "refusal"):
         raise ExtractionError(f"{card_id}: model stopped with {resp.stop_reason}")
     call = next((b for b in resp.content if b.type == "tool_use" and b.name == TOOL_NAME), None)

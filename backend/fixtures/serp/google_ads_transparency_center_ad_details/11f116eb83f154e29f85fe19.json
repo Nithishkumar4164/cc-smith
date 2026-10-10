@@ -1,0 +1,48 @@
+{
+  "_recorded": {
+    "engine": "google_ads_transparency_center_ad_details",
+    "params": {
+      "advertiser_id": "AR11279621233638899713",
+      "creative_id": "CR06036348016498049025",
+      "region": "2356"
+    },
+    "at": "2026-10-10T01:46:40.230214+00:00"
+  },
+  "search_metadata": {
+    "id": "6ac998ffee2318bd691824b3",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/gP1yz-UQx_CZQlGTlIk0sVSSYNPt1dOOOc59cRVn2CM/6ac998ffee2318bd691824b3.json",
+    "markdown_endpoint": "https://serpapi.com/searches/gP1yz-UQx_CZQlGTlIk0sVSSYNPt1dOOOc59cRVn2CM/6ac998ffee2318bd691824b3.md",
+    "created_at": "2026-10-10 01:46:39 UTC",
+    "processed_at": "2026-10-10 01:46:39 UTC",
+    "google_ads_transparency_center_ad_details_url": "https://adstransparency.google.com/advertiser/AR11279621233638899713/creative/CR06036348016498049025?region=2356",
+    "raw_html_file": "https://serpapi.com/searches/gP1yz-UQx_CZQlGTlIk0sVSSYNPt1dOOOc59cRVn2CM/6ac998ffee2318bd691824b3.html",
+    "prettify_html_file": "https://serpapi.com/searches/gP1yz-UQx_CZQlGTlIk0sVSSYNPt1dOOOc59cRVn2CM/6ac998ffee2318bd691824b3.prettify",
+    "total_time_taken": 0.72
+  },
+  "search_parameters": {
+    "advertiser_id": "AR11279621233638899713",
+    "creative_id": "CR06036348016498049025",
+    "engine": "google_ads_transparency_center_ad_details",
+    "region": "2356"
+  },
+  "search_information": {
+    "format": "image",
+    "last_shown": 1791561187,
+    "region": 2356,
+    "region_name": "India",
+    "more_ads_by_advertiser": "https://adstransparency.google.com/advertiser/AR11279621233638899713?region=IN",
+    "regions": [
+      {
+        "region": 2356,
+        "region_name": "India",
+        "last_shown": 20261009
+      }
+    ]
+  },
+  "ad_creatives": [
+    {
+      "image": "https://tpc.googlesyndication.com/archive/simgad/1378500912933226684"
+    }
+  ]
+}

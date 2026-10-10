@@ -8,6 +8,16 @@ from cc_smith.knowledge.schema import CardProfile
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "extractions"
 
 
+@pytest.fixture(autouse=True)
+def _never_live(monkeypatch):
+    """Tests ignore backend/.env: no live SerpApi, Anthropic or page fetch, whatever keys are set."""
+    from cc_smith.config import settings
+
+    monkeypatch.setattr(settings, "mode", "replay")
+    monkeypatch.setattr(settings, "serpapi_api_key", None)
+    monkeypatch.setattr(settings, "anthropic_api_key", None)
+
+
 @pytest.fixture(scope="session")
 def cards() -> dict[str, CardProfile]:
     return {p.stem: CardProfile.model_validate(json.loads(p.read_text())) for p in FIXTURES.glob("*.json")}

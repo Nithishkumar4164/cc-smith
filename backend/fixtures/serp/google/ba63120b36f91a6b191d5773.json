@@ -1,0 +1,346 @@
+{
+  "_recorded": {
+    "engine": "google",
+    "params": {
+      "gl": "in",
+      "google_domain": "google.co.in",
+      "hl": "en",
+      "q": "site:sbicard.com \"Launches FD-Backed\""
+    },
+    "at": "2026-10-10T01:50:01.000009+00:00"
+  },
+  "search_metadata": {
+    "id": "6ac999c8c06680a55ed4cd59",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/sNFr_gZ-7bVEzQ3BnleWrNAcdqhCqJtgR3qKUVOrNEw/6ac999c8c06680a55ed4cd59.json",
+    "markdown_endpoint": "https://serpapi.com/searches/sNFr_gZ-7bVEzQ3BnleWrNAcdqhCqJtgR3qKUVOrNEw/6ac999c8c06680a55ed4cd59.md",
+    "pixel_position_endpoint": "https://serpapi.com/searches/sNFr_gZ-7bVEzQ3BnleWrNAcdqhCqJtgR3qKUVOrNEw/6ac999c8c06680a55ed4cd59.json_with_pixel_position",
+    "created_at": "2026-10-10 01:50:00 UTC",
+    "processed_at": "2026-10-10 01:50:00 UTC",
+    "google_url": "https://www.google.co.in/search?q=site%3Asbicard.com+%22Launches+FD-Backed%22&oq=site%3Asbicard.com+%22Launches+FD-Backed%22&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/sNFr_gZ-7bVEzQ3BnleWrNAcdqhCqJtgR3qKUVOrNEw/6ac999c8c06680a55ed4cd59.html",
+    "total_time_taken": 0.63
+  },
+  "search_parameters": {
+    "device": "desktop",
+    "engine": "google",
+    "gl": "in",
+    "google_domain": "google.co.in",
+    "hl": "en",
+    "q": "site:sbicard.com \"Launches FD-Backed\""
+  },
+  "search_information": {
+    "query_displayed": "site:sbicard.com \"Launches FD-Backed\"",
+    "total_results": 1410,
+    "time_taken_displayed": 0.18,
+    "organic_results_state": "Results for exact spelling"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "SBI Card Launches FD-Backed Credit Cards on YONO",
+      "link": "https://www.linkedin.com/posts/moneycontrol_sbi-card-launches-fd-backed-credit-card-applications-activity-7508485281956937729-NWh1",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESvgEB6zswFZ5L-JTt_tmc-AOvkObGXeFDVrnjgZOuX7Qqv2W4KGYDiYkSzlzsDhmk-GrsChQMOj-6zjpPdSkUsokKk_cKC6zqkpMjCqikmzmKkSdDItsu13gUQW8Z4SXyK_ZRTRDbvKJL3eQQdB3CZeLF2oXF_bZ_rjrSm1ny7fzXexm2ZM84t6vFW2pfE28UlbyvrWW-sa0S1dZlge_v7Kmj0hjRTiMnsctNkDacoJQKdBBBO_ISCRDhT6fBXNCw&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECBgQAQ&uoh=1",
+      "displayed_link": "20+ reactions · 2 weeks ago",
+      "favicon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp",
+      "snippet": "#MCPersonalFinance | SBI Card launches FD-backed credit card applications on YONO ahead of festive season - SBI Card launches digital ...",
+      "snippet_highlighted_words": [
+        "launches FD-backed"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "#MCPersonalFinance | SBI Card launches FD-backed credit card applications on YONO ahead of festive season - SBI Card launches digital ...",
+          "source_info_link": "https://www.linkedin.com/posts/moneycontrol_sbi-card-launches-fd-backed-credit-card-applications-activity-7508485281956937729-NWh1",
+          "icon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4CL2dvdG8_dXJsPUNBRVN2Z0VCNnpzd0ZaNUwtSlR0X3RtYy1BT3ZrT2JHWGVGRFZybmpnWk91WDdRcXYyVzRLR1lEaVlrU3psenNEaG1rLUdyc0NoUU1Pai02empwUGRTa1Vzb2tLa19jS0M2enFrcE1qQ3Fpa216bUtrU2RESXRzdTEzZ1VRVzhaNFNYeUtfWlJUUkRidktKTDNlUVFkQjNDWmVMRjJvWEZfYlpfcmpyU20xbnk3ZnpYZXhtMlpNODR0NnZGVzJwZkUyOFVsYnl2cldXLXNhMFMxZFpsZ2VfdjdLbWowaGpSVGlNbnNjdE5rRGFjb0pRS2RCQkJPX0lTQ1JEaFQ2ZkJYTkN3EgQaAggAGrkEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQJUECAAQABgAIAAqDwoIbGF1bmNoZXMVVBSWQCoJCgJmZBUZMZRAKg0KBmJhY2tlZBX0fplAMo4CL2dvdG8_dXJsPUNBRVN2Z0VCNnpzd0ZaNUwtSlR0X3RtYy1BT3ZrT2JHWGVGRFZybmpnWk91WDdRcXYyVzRLR1lEaVlrU3psenNEaG1rLUdyc0NoUU1Pai02empwUGRTa1Vzb2tLa19jS0M2enFrcE1qQ3Fpa216bUtrU2RESXRzdTEzZ1VRVzhaNFNYeUtfWlJUUkRidktKTDNlUVFkQjNDWmVMRjJvWEZfYlpfcmpyU20xbnk3ZnpYZXhtMlpNODR0NnZGVzJwZkUyOFVsYnl2cldXLXNhMFMxZFpsZ2VfdjdLbWowaGpSVGlNbnNjdE5rRGFjb0pRS2RCQkJPX0lTQ1JEaFQ2ZkJYTkN3OjdTQkkgQ2FyZCA8Yj5MYXVuY2hlcyBGRC1CYWNrZWQ8L2I-IENyZWRpdCBDYXJkcyBvbiBZT05PQpUBI01DUGVyc29uYWxGaW5hbmNlIHwgU0JJIENhcmQgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBjcmVkaXQgY2FyZCBhcHBsaWNhdGlvbnMgb24gWU9OTyBhaGVhZCBvZiBmZXN0aXZlIHNlYXNvbiAtIFNCSSBDYXJkIGxhdW5jaGVzIGRpZ2l0YWwmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4CL2dvdG8_dXJsPUNBRVN2Z0VCNnpzd0ZaNUwtSlR0X3RtYy1BT3ZrT2JHWGVGRFZybmpnWk91WDdRcXYyVzRLR1lEaVlrU3psenNEaG1rLUdyc0NoUU1Pai02empwUGRTa1Vzb2tLa19jS0M2enFrcE1qQ3Fpa216bUtrU2RESXRzdTEzZ1VRVzhaNFNYeUtfWlJUUkRidktKTDNlUVFkQjNDWmVMRjJvWEZfYlpfcmpyU20xbnk3ZnpYZXhtMlpNODR0NnZGVzJwZkUyOFVsYnl2cldXLXNhMFMxZFpsZ2VfdjdLbWowaGpSVGlNbnNjdE5rRGFjb0pRS2RCQkJPX0lTQ1JEaFQ2ZkJYTkN3EgQaAggAGrkEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQJUECAAQABgAIAAqDwoIbGF1bmNoZXMVVBSWQCoJCgJmZBUZMZRAKg0KBmJhY2tlZBX0fplAMo4CL2dvdG8_dXJsPUNBRVN2Z0VCNnpzd0ZaNUwtSlR0X3RtYy1BT3ZrT2JHWGVGRFZybmpnWk91WDdRcXYyVzRLR1lEaVlrU3psenNEaG1rLUdyc0NoUU1Pai02empwUGRTa1Vzb2tLa19jS0M2enFrcE1qQ3Fpa216bUtrU2RESXRzdTEzZ1VRVzhaNFNYeUtfWlJUUkRidktKTDNlUVFkQjNDWmVMRjJvWEZfYlpfcmpyU20xbnk3ZnpYZXhtMlpNODR0NnZGVzJwZkUyOFVsYnl2cldXLXNhMFMxZFpsZ2VfdjdLbWowaGpSVGlNbnNjdE5rRGFjb0pRS2RCQkJPX0lTQ1JEaFQ2ZkJYTkN3OjdTQkkgQ2FyZCA8Yj5MYXVuY2hlcyBGRC1CYWNrZWQ8L2I-IENyZWRpdCBDYXJkcyBvbiBZT05PQpUBI01DUGVyc29uYWxGaW5hbmNlIHwgU0JJIENhcmQgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBjcmVkaXQgY2FyZCBhcHBsaWNhdGlvbnMgb24gWU9OTyBhaGVhZCBvZiBmZXN0aXZlIHNlYXNvbiAtIFNCSSBDYXJkIGxhdW5jaGVzIGRpZ2l0YWwmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "LinkedIn · moneycontrol.com",
+      "read_more_link": "https://www.linkedin.com/posts/moneycontrol_sbi-card-launches-fd-backed-credit-card-applications-activity-7508485281956937729-NWh1#:~:text=%23MCPersonalFinance%20%7C%20SBI%20Card%20launches,digital%20application%20for%20FD%2Dbacked%20cards."
+    },
+    {
+      "position": 2,
+      "title": "ET NOW on X: \"#StockinNews | SBI Cards",
+      "link": "https://x.com/ETNOWlive/status/2102712179350974628",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESbQHrOzAVpYr-oryYsesZqpqVXuC78eo28DV6z6XnsmPHjZ6IFqfoxQzpGjtO6E54JovRvv9bu4qkEQlAmYvxbD_2C1sgusnXmfz20_GuT5VVMGy2XphwbZXgINxLq6wFZPhl3REIflOqM6YxFb4&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECA8QAQ&uoh=1",
+      "displayed_link": "2 weeks ago",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png",
+      "snippet": "#StockinNews | SBI Cards: Launches FD-Backed Secured Advantage SBI Card, Offers Secured Credit Card Via SBI YONO. 3:50 AM · Sep 23, 2026·.",
+      "snippet_highlighted_words": [
+        "Launches FD-Backed"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "#StockinNews | SBI Cards: Launches FD-Backed Secured Advantage SBI Card, Offers Secured Credit Card Via SBI YONO. 3:50 AM · Sep 23, 2026·.",
+          "source_info_link": "https://x.com/ETNOWlive/status/2102712179350974628",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqEBL2dvdG8_dXJsPUNBRVNiUUhyT3pBVnBZci1vcnlZc2VzWnFwcVZYdUM3OGVvMjhEVjZ6Nlhuc21QSGpaNklGcWZveFF6cEdqdE82RTU0Sm92UnZ2OWJ1NHFrRVFsQW1ZdnhiRF8yQzFzZ3VzblhtZnoyMF9HdVQ1VlZNR3kyWHBod2JaWGdJTnhMcTZ3RlpQaGwzUkVJZmxPcU02WXhGYjQSBBoCCAAawAMSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCaAwgAEAAYACAAKg8KCGxhdW5jaGVzFRb8eUAqCQoCZmQVFvx5QCoNCgZiYWNrZWQVFvx5QDKhAS9nb3RvP3VybD1DQUVTYlFIck96QVZwWXItb3J5WXNlc1pxcHFWWHVDNzhlbzI4RFY2ejZYbnNtUEhqWjZJRnFmb3hRenBHanRPNkU1NEpvdlJ2djlidTRxa0VRbEFtWXZ4YkRfMkMxc2d1c25YbWZ6MjBfR3VUNVZWTUd5MlhwaHdiWlhnSU54THE2d0ZaUGhsM1JFSWZsT3FNNll4RmI0OitFVCBOT1cgb24gWDogJnF1b3Q7I1N0b2NraW5OZXdzIHwgU0JJIENhcmRzQpMBI1N0b2NraW5OZXdzIHwgU0JJIENhcmRzOiA8Yj5MYXVuY2hlcyBGRC1CYWNrZWQ8L2I-IFNlY3VyZWQgQWR2YW50YWdlIFNCSSBDYXJkLCBPZmZlcnMgU2VjdXJlZCBDcmVkaXQgQ2FyZCBWaWEgU0JJIFlPTk8uIDM6NTAgQU0gwrcgU2VwIDIzLCAyMDI2wrcuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqEBL2dvdG8_dXJsPUNBRVNiUUhyT3pBVnBZci1vcnlZc2VzWnFwcVZYdUM3OGVvMjhEVjZ6Nlhuc21QSGpaNklGcWZveFF6cEdqdE82RTU0Sm92UnZ2OWJ1NHFrRVFsQW1ZdnhiRF8yQzFzZ3VzblhtZnoyMF9HdVQ1VlZNR3kyWHBod2JaWGdJTnhMcTZ3RlpQaGwzUkVJZmxPcU02WXhGYjQSBBoCCAAawAMSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCaAwgAEAAYACAAKg8KCGxhdW5jaGVzFRb8eUAqCQoCZmQVFvx5QCoNCgZiYWNrZWQVFvx5QDKhAS9nb3RvP3VybD1DQUVTYlFIck96QVZwWXItb3J5WXNlc1pxcHFWWHVDNzhlbzI4RFY2ejZYbnNtUEhqWjZJRnFmb3hRenBHanRPNkU1NEpvdlJ2djlidTRxa0VRbEFtWXZ4YkRfMkMxc2d1c25YbWZ6MjBfR3VUNVZWTUd5MlhwaHdiWlhnSU54THE2d0ZaUGhsM1JFSWZsT3FNNll4RmI0OitFVCBOT1cgb24gWDogJnF1b3Q7I1N0b2NraW5OZXdzIHwgU0JJIENhcmRzQpMBI1N0b2NraW5OZXdzIHwgU0JJIENhcmRzOiA8Yj5MYXVuY2hlcyBGRC1CYWNrZWQ8L2I-IFNlY3VyZWQgQWR2YW50YWdlIFNCSSBDYXJkLCBPZmZlcnMgU2VjdXJlZCBDcmVkaXQgQ2FyZCBWaWEgU0JJIFlPTk8uIDM6NTAgQU0gwrcgU2VwIDIzLCAyMDI2wrcuIgIQAUgAWABoAA",
+      "source": "X · ETNOWlive",
+      "read_more_link": "https://x.com/ETNOWlive/status/2102712179350974628#:~:text=%23StockinNews%20%7C%20SBI%20Cards%3A%20Launches,AM%20%C2%B7%20Sep%2023%2C%202026%C2%B7"
+    },
+    {
+      "position": 3,
+      "title": "SBI Card Launches FD-Backed Secured Card On YONO",
+      "link": "https://www.sarkaritel.com/sbi-card-advantage-secured-credit-card-yono/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESggEB6zswFZVnDNgkdsCj6uUgwwJ_Aj4_pAxLoEnD2aYpzr2uxW9LCCVqu4TdTXp9t2-YZtV9SRxDhvWBzMYnE1gXOzjB4cMBwp8aPfLvE4AHQD1EdDhxkr0EumIE5XoOZ0EQd3EOvErIQjGLwBGOoacOJsdPhYotn5JZj9IFNdsnIeZ3&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECBkQAQ&uoh=1",
+      "displayed_link": "https://www.sarkaritel.com › Public Sector News",
+      "favicon": "https://serpapi.com/images/i/UklGRtYBAABXRUJQVlA4IMoBAADQCACdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHtOgrwG2wmlxGghAOTfzmvQW_c9Dkp6q7LAlyR-Mw_uqcKwKjJBtWJFS5kmstQur7QAAP738CGb5ePllta3Loi4RcQq-UA4su_5R8nd3Qr7kaYxoOTdzmgvLm4N6ORh_mGvXY0fx9qNsd9T-UzbD0evZ_ojp2gE59CmXrEjjQhzLx_xHCHkkMF7Ib5SHlB5ZyLS6KoDjg5uQmpcHZoVgYXcFqPTwbl7Gk01cTtg2bla5NguSs0eDtBEQOzdebyFZnvsOUJ1CNm_ZTqjm35hfNSzgotFYNwvIj-JnsYlDJbuNkJfI_AmfHZDUZ3PADVndI0y3pjOtQx0zyzBcN1mrJXHbmryo38xslZBWd7vBUsM2FVqohQYAz9IuVdr526eoP-Z3b2g3zSQjvFo4D44fLrEbUdrvu4Rim5z0mlgAN6HsN1dMPyjyBbSecHa1uiNgoGf55GjIzJH99FuG5RJ_Ey4VsMVdBhf_VU2ZY1F6LCeP4faXbRU3S8Xl1Kc17eseLHljZOT6seUp-TgL4vHwj19dxKZCB0_f1Xohdg2Om-OV84Na0HYPO6oswAAAA.webp",
+      "date": "23 Sept 2026",
+      "snippet": "SBI Card launches FD-backed Advantage SBI Card on YONO, offering a 100% digital application for four secured credit card variants.",
+      "snippet_highlighted_words": [
+        "launches FD-backed"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "SBI Card launches FD-backed Advantage SBI Card on YONO, offering a 100% digital application for four secured credit card variants.",
+          "source_info_link": "https://www.sarkaritel.com/sbi-card-advantage-secured-credit-card-yono/",
+          "icon": "https://serpapi.com/images/i/UklGRtYBAABXRUJQVlA4IMoBAADQCACdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHtOgrwG2wmlxGghAOTfzmvQW_c9Dkp6q7LAlyR-Mw_uqcKwKjJBtWJFS5kmstQur7QAAP738CGb5ePllta3Loi4RcQq-UA4su_5R8nd3Qr7kaYxoOTdzmgvLm4N6ORh_mGvXY0fx9qNsd9T-UzbD0evZ_ojp2gE59CmXrEjjQhzLx_xHCHkkMF7Ib5SHlB5ZyLS6KoDjg5uQmpcHZoVgYXcFqPTwbl7Gk01cTtg2bla5NguSs0eDtBEQOzdebyFZnvsOUJ1CNm_ZTqjm35hfNSzgotFYNwvIj-JnsYlDJbuNkJfI_AmfHZDUZ3PADVndI0y3pjOtQx0zyzBcN1mrJXHbmryo38xslZBWd7vBUsM2FVqohQYAz9IuVdr526eoP-Z3b2g3zSQjvFo4D44fLrEbUdrvu4Rim5z0mlgAN6HsN1dMPyjyBbSecHa1uiNgoGf55GjIzJH99FuG5RJ_Ey4VsMVdBhf_VU2ZY1F6LCeP4faXbRU3S8Xl1Kc17eseLHljZOT6seUp-TgL4vHwj19dxKZCB0_f1Xohdg2Om-OV84Na0HYPO6oswAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZaVm5ETmdrZHNDajZ1VWd3d0pfQWo0X3BBeExvRW5EMmFZcHpyMnV4VzlMQ0NWcXU0VGRUWHA5dDItWVp0VjlTUnhEaHZXQnpNWW5FMWdYT3pqQjRjTUJ3cDhhUGZMdkU0QUhRRDFFZERoeGtyMEV1bUlFNVhvT1owRVFkM0VPdkVySVFqR0x3QkdPb2FjT0pzZFBoWW90bjVKWmo5SUZOZHNuSWVaMxIEGgIIABrdAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkC5AwgAEAAYACAAKg8KCGxhdW5jaGVzFYIthkAqCQoCZmQV4bR6QCoNCgZiYWNrZWQV1eeLQDK-AS9nb3RvP3VybD1DQUVTZ2dFQjZ6c3dGWlZuRE5na2RzQ2o2dVVnd3dKX0FqNF9wQXhMb0VuRDJhWXB6cjJ1eFc5TENDVnF1NFRkVFhwOXQyLVladFY5U1J4RGh2V0J6TVluRTFnWE96akI0Y01Cd3A4YVBmTHZFNEFIUUQxRWREaHhrcjBFdW1JRTVYb09aMEVRZDNFT3ZFcklRakdMd0JHT29hY09Kc2RQaFlvdG41SlpqOUlGTmRzbkllWjM6N1NCSSBDYXJkIDxiPkxhdW5jaGVzIEZELUJhY2tlZDwvYj4gU2VjdXJlZCBDYXJkIE9uIFlPTk9CiQFTQkkgQ2FyZCA8Yj5sYXVuY2hlcyBGRC1iYWNrZWQ8L2I-IEFkdmFudGFnZSBTQkkgQ2FyZCBvbiBZT05PLCBvZmZlcmluZyBhIDEwMCUgZGlnaXRhbCBhcHBsaWNhdGlvbiBmb3IgZm91ciBzZWN1cmVkIGNyZWRpdCBjYXJkIHZhcmlhbnRzLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZaVm5ETmdrZHNDajZ1VWd3d0pfQWo0X3BBeExvRW5EMmFZcHpyMnV4VzlMQ0NWcXU0VGRUWHA5dDItWVp0VjlTUnhEaHZXQnpNWW5FMWdYT3pqQjRjTUJ3cDhhUGZMdkU0QUhRRDFFZERoeGtyMEV1bUlFNVhvT1owRVFkM0VPdkVySVFqR0x3QkdPb2FjT0pzZFBoWW90bjVKWmo5SUZOZHNuSWVaMxIEGgIIABrdAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkC5AwgAEAAYACAAKg8KCGxhdW5jaGVzFYIthkAqCQoCZmQV4bR6QCoNCgZiYWNrZWQV1eeLQDK-AS9nb3RvP3VybD1DQUVTZ2dFQjZ6c3dGWlZuRE5na2RzQ2o2dVVnd3dKX0FqNF9wQXhMb0VuRDJhWXB6cjJ1eFc5TENDVnF1NFRkVFhwOXQyLVladFY5U1J4RGh2V0J6TVluRTFnWE96akI0Y01Cd3A4YVBmTHZFNEFIUUQxRWREaHhrcjBFdW1JRTVYb09aMEVRZDNFT3ZFcklRakdMd0JHT29hY09Kc2RQaFlvdG41SlpqOUlGTmRzbkllWjM6N1NCSSBDYXJkIDxiPkxhdW5jaGVzIEZELUJhY2tlZDwvYj4gU2VjdXJlZCBDYXJkIE9uIFlPTk9CiQFTQkkgQ2FyZCA8Yj5sYXVuY2hlcyBGRC1iYWNrZWQ8L2I-IEFkdmFudGFnZSBTQkkgQ2FyZCBvbiBZT05PLCBvZmZlcmluZyBhIDEwMCUgZGlnaXRhbCBhcHBsaWNhdGlvbiBmb3IgZm91ciBzZWN1cmVkIGNyZWRpdCBjYXJkIHZhcmlhbnRzLiICEAFIAFgAaAA",
+      "source": "Sarkaritel.com"
+    },
+    {
+      "position": 4,
+      "title": "MCPersonalFinance | SBI Card launches FD-backed credit ...",
+      "link": "https://x.com/moneycontrolcom/status/2102719495303565515",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEScwHrOzAVTOfzYd8qGsKVSIAWkjljZ5hx-P08uZKUAeaz4S_wqs-Ixzo10MOay4E3rEwJPbWWXb2ns0gyFU0aDyzi-hmWOaMSyU_TehEpluzvsh2ZmI4ZdHS1nIAdIQFXNaY4POYbpxQJw4wbvM3RUwae_54&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECBEQAQ&uoh=1",
+      "displayed_link": "2 likes · 2 weeks ago",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png",
+      "snippet": "SBI Card launches FD-backed credit card applications on YONO ahead of festive season- Moneycontro... From moneycontrol.com · 4:19 AM · Sep 23 ...",
+      "snippet_highlighted_words": [
+        "launches FD-backed"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "SBI Card launches FD-backed credit card applications on YONO ahead of festive season- Moneycontro... From moneycontrol.com · 4:19 AM · Sep 23 ...",
+          "source_info_link": "https://x.com/moneycontrolcom/status/2102719495303565515",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqkBL2dvdG8_dXJsPUNBRVNjd0hyT3pBVlRPZnpZZDhxR3NLVlNJQVdramxqWjVoeC1QMDh1WktVQWVhejRTX3dxcy1JeHpvMTBNT2F5NEUzckV3SlBiV1dYYjJuczBneUZVMGFEeXppLWhtV09hTVN5VV9UZWhFcGx1enZzaDJabUk0WmRIUzFuSUFkSVFGWE5hWTRQT1licHhRSnc0d2J2TTNSVXdhZV81NBIEGgIIABrcAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkC4AwgAEAAYACAAKg8KCGxhdW5jaGVzFVm7mkAqCQoCZmQVWbuaQCoNCgZiYWNrZWQVWbuaQDKpAS9nb3RvP3VybD1DQUVTY3dIck96QVZUT2Z6WWQ4cUdzS1ZTSUFXa2psalo1aHgtUDA4dVpLVUFlYXo0U193cXMtSXh6bzEwTU9heTRFM3JFd0pQYldXWGIybnMwZ3lGVTBhRHl6aS1obVdPYU1TeVVfVGVoRXBsdXp2c2gyWm1JNFpkSFMxbklBZElRRlhOYVk0UE9ZYnB4UUp3NHdidk0zUlV3YWVfNTQ6L01vbmV5Y29udHJvbCBvbiBYOiAmcXVvdDsjTUNQZXJzb25hbEZpbmFuY2UgLSBYQqUBU0JJIENhcmQgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBjcmVkaXQgY2FyZCBhcHBsaWNhdGlvbnMgb24gWU9OTyBhaGVhZCBvZiBmZXN0aXZlIHNlYXNvbi0gTW9uZXljb250cm8uLi4gRnJvbSBtb25leWNvbnRyb2wuY29tICZtaWRkb3Q7IDQ6MTkgQU0gwrcgU2VwIDIzJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqkBL2dvdG8_dXJsPUNBRVNjd0hyT3pBVlRPZnpZZDhxR3NLVlNJQVdramxqWjVoeC1QMDh1WktVQWVhejRTX3dxcy1JeHpvMTBNT2F5NEUzckV3SlBiV1dYYjJuczBneUZVMGFEeXppLWhtV09hTVN5VV9UZWhFcGx1enZzaDJabUk0WmRIUzFuSUFkSVFGWE5hWTRQT1licHhRSnc0d2J2TTNSVXdhZV81NBIEGgIIABrcAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkC4AwgAEAAYACAAKg8KCGxhdW5jaGVzFVm7mkAqCQoCZmQVWbuaQCoNCgZiYWNrZWQVWbuaQDKpAS9nb3RvP3VybD1DQUVTY3dIck96QVZUT2Z6WWQ4cUdzS1ZTSUFXa2psalo1aHgtUDA4dVpLVUFlYXo0U193cXMtSXh6bzEwTU9heTRFM3JFd0pQYldXWGIybnMwZ3lGVTBhRHl6aS1obVdPYU1TeVVfVGVoRXBsdXp2c2gyWm1JNFpkSFMxbklBZElRRlhOYVk0UE9ZYnB4UUp3NHdidk0zUlV3YWVfNTQ6L01vbmV5Y29udHJvbCBvbiBYOiAmcXVvdDsjTUNQZXJzb25hbEZpbmFuY2UgLSBYQqUBU0JJIENhcmQgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBjcmVkaXQgY2FyZCBhcHBsaWNhdGlvbnMgb24gWU9OTyBhaGVhZCBvZiBmZXN0aXZlIHNlYXNvbi0gTW9uZXljb250cm8uLi4gRnJvbSBtb25leWNvbnRyb2wuY29tICZtaWRkb3Q7IDQ6MTkgQU0gwrcgU2VwIDIzJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "X · moneycontrolcom",
+      "read_more_link": "https://x.com/moneycontrolcom/status/2102719495303565515#:~:text=From%20moneycontrol.com,AM%20%C2%B7%20Sep%2023%2C%202026%C2%B7"
+    },
+    {
+      "position": 5,
+      "title": "ZET launches FD backed credit cards for MFDs' clients",
+      "link": "https://cafemutual.com/news/industry/36137-zet-launches-fd-backed-credit-cards-for-mfds-clients",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESmgEB6zswFZ6fECIlEaw_w7HTXBKeqnsEp5tJFFc0ZLDvYBBb-5bq7yXdPmo_RWjTcSpCUJwwpN65erUP0GFqvDs1TwW6fkVuOjtOnjRv_MkH4uI9GmqDk-Dwvil8o__dCRr14uY7-VHBfXXPOygJcwPgUHt83uF5JKzG-semxUYo6iVRnLC6eJv-roBZej1txWmU4ySD5nXu1ggs&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECBYQAQ&uoh=1",
+      "displayed_link": "https://cafemutual.com › news › industry › 36137-zet-l...",
+      "favicon": "https://serpapi.com/images/i/UklGRqAAAABXRUJQVlA4IJQAAAAwBQCdASocABwAPtEytFooIigoGAEAGglsAMovkD-qwAByOkvwHBRE0b47pbVixKZoAAD-9gevJFh3pu6YoK_f08nZI2NunhUfQiKGNuXMOLsmdlLWJyb4tTwSKXlaCmwGXzXMXb_BiXLAIi1_scrNyP4wajSWH3b8PCsHA-RfE23fDYuHqdZ-IEPjNda75dLSPIAA.webp",
+      "date": "30 Oct 2025",
+      "snippet": "ZET launches FD backed credit cards for MFDs' clients. ZET introduces an FD backed credit card through which MFDs can earn up to Rs.1000 per ...",
+      "snippet_highlighted_words": [
+        "launches FD backed"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "ZET launches FD backed credit cards for MFDs' clients. ZET introduces an FD backed credit card through which MFDs can earn up to Rs.1000 per ...",
+          "source_info_link": "https://cafemutual.com/news/industry/36137-zet-launches-fd-backed-credit-cards-for-mfds-clients",
+          "icon": "https://serpapi.com/images/i/UklGRqAAAABXRUJQVlA4IJQAAAAwBQCdASocABwAPtEytFooIigoGAEAGglsAMovkD-qwAByOkvwHBRE0b47pbVixKZoAAD-9gevJFh3pu6YoK_f08nZI2NunhUfQiKGNuXMOLsmdlLWJyb4tTwSKXlaCmwGXzXMXb_BiXLAIi1_scrNyP4wajSWH3b8PCsHA-RfE23fDYuHqdZ-IEPjNda75dLSPIAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Ct4BL2dvdG8_dXJsPUNBRVNtZ0VCNnpzd0ZaNmZFQ0lsRWF3X3c3SFRYQktlcW5zRXA1dEpGRmMwWkxEdllCQmItNWJxN3lYZFBtb19SV2pUY1NwQ1VKd3dwTjY1ZXJVUDBHRnF2RHMxVHdXNmZrVnVPanRPbmpSdl9Na0g0dUk5R21xRGstRHd2aWw4b19fZENScjE0dVk3LVZIQmZYWFBPeWdKY3dQZ1VIdDgzdUY1Skt6Ry1zZW14VVlvNmlWUm5MQzZlSnYtcm9CWmVqMXR4V21VNHlTRDVuWHUxZ2dzEgQaAggAGp0EEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPkDCAAQABgAIAAqDwoIbGF1bmNoZXMVssKPQCoJCgJmZBUys6ZAKg0KBmJhY2tlZBW8y59AMt4BL2dvdG8_dXJsPUNBRVNtZ0VCNnpzd0ZaNmZFQ0lsRWF3X3c3SFRYQktlcW5zRXA1dEpGRmMwWkxEdllCQmItNWJxN3lYZFBtb19SV2pUY1NwQ1VKd3dwTjY1ZXJVUDBHRnF2RHMxVHdXNmZrVnVPanRPbmpSdl9Na0g0dUk5R21xRGstRHd2aWw4b19fZENScjE0dVk3LVZIQmZYWFBPeWdKY3dQZ1VIdDgzdUY1Skt6Ry1zZW14VVlvNmlWUm5MQzZlSnYtcm9CWmVqMXR4V21VNHlTRDVuWHUxZ2dzOkBaRVQgPGI-bGF1bmNoZXMgRkQgYmFja2VkPC9iPiBjcmVkaXQgY2FyZHMgZm9yIE1GRHMmIzM5OyBjbGllbnRzQqABWkVUIDxiPmxhdW5jaGVzIEZEIGJhY2tlZDwvYj4gY3JlZGl0IGNhcmRzIGZvciBNRkRzJiMzOTsgY2xpZW50cy4gWkVUIGludHJvZHVjZXMgYW4gRkQgYmFja2VkIGNyZWRpdCBjYXJkIHRocm91Z2ggd2hpY2ggTUZEcyBjYW4gZWFybiB1cCB0byBScy4xMDAwIHBlciZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Ct4BL2dvdG8_dXJsPUNBRVNtZ0VCNnpzd0ZaNmZFQ0lsRWF3X3c3SFRYQktlcW5zRXA1dEpGRmMwWkxEdllCQmItNWJxN3lYZFBtb19SV2pUY1NwQ1VKd3dwTjY1ZXJVUDBHRnF2RHMxVHdXNmZrVnVPanRPbmpSdl9Na0g0dUk5R21xRGstRHd2aWw4b19fZENScjE0dVk3LVZIQmZYWFBPeWdKY3dQZ1VIdDgzdUY1Skt6Ry1zZW14VVlvNmlWUm5MQzZlSnYtcm9CWmVqMXR4V21VNHlTRDVuWHUxZ2dzEgQaAggAGp0EEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPkDCAAQABgAIAAqDwoIbGF1bmNoZXMVssKPQCoJCgJmZBUys6ZAKg0KBmJhY2tlZBW8y59AMt4BL2dvdG8_dXJsPUNBRVNtZ0VCNnpzd0ZaNmZFQ0lsRWF3X3c3SFRYQktlcW5zRXA1dEpGRmMwWkxEdllCQmItNWJxN3lYZFBtb19SV2pUY1NwQ1VKd3dwTjY1ZXJVUDBHRnF2RHMxVHdXNmZrVnVPanRPbmpSdl9Na0g0dUk5R21xRGstRHd2aWw4b19fZENScjE0dVk3LVZIQmZYWFBPeWdKY3dQZ1VIdDgzdUY1Skt6Ry1zZW14VVlvNmlWUm5MQzZlSnYtcm9CWmVqMXR4V21VNHlTRDVuWHUxZ2dzOkBaRVQgPGI-bGF1bmNoZXMgRkQgYmFja2VkPC9iPiBjcmVkaXQgY2FyZHMgZm9yIE1GRHMmIzM5OyBjbGllbnRzQqABWkVUIDxiPmxhdW5jaGVzIEZEIGJhY2tlZDwvYj4gY3JlZGl0IGNhcmRzIGZvciBNRkRzJiMzOTsgY2xpZW50cy4gWkVUIGludHJvZHVjZXMgYW4gRkQgYmFja2VkIGNyZWRpdCBjYXJkIHRocm91Z2ggd2hpY2ggTUZEcyBjYW4gZWFybiB1cCB0byBScy4xMDAwIHBlciZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Cafemutual",
+      "read_more_link": "https://cafemutual.com/news/industry/36137-zet-launches-fd-backed-credit-cards-for-mfds-clients#:~:text=ZET%20launches%20FD%20backed%20credit,to%20Rs.1000%20per%20card%20activation."
+    },
+    {
+      "position": 6,
+      "title": "IDFC FIRST Bank launches FD-backed Hello Cashback ...",
+      "link": "https://bankingfrontiers.com/idfc-first-bank-launches-fd-backed-hello-cashback-credit-card/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESlgEB6zswFU_6S7obDa4gexcmtzKhs-qKP9QNLFSfuflcFJwnCGuHt3_ThgfVf9en9U9p91FNtGsfUTnzhJStc_iqApo5X3c5B5zJPXuQvwoZqTLeQi1U5nr27Jq0icaEdRjv2Q1ZL-Ng7W8avpjNmTBdyWF12cROuyC5CVTCePXiQbAlnhAaXDo2nmcUYU47G7u6as5xuic&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECBcQAQ&uoh=1",
+      "displayed_link": "https://bankingfrontiers.com › Latest News",
+      "favicon": "https://serpapi.com/images/i/UklGRmYBAABXRUJQVlA4IFoBAAAQCACdASocABwAPtEwtFooIigoGAEAGglsAJ0yhH0ewAZzrsSfAG7A55TNeqB_q31L_1y9gAdWtm0w2_s_hHai08e9ShEjE-IAAP7YmaOX0L6VbJALBQF_QJFF7ZruUAEKs-amT2oztPIvpL8jW8EjJgcZ-xG2qSFvThr9P_xurA5fMwdOS2PCmkRVEzOsebCPSaST_4K1GE6Hpp4y_m2JQsnqo2VUtih4NNwftfDLLPq7ttVyFnEy1RiwyKWihwFLXNQm9EmN0kcOxQbWyns-i4XhxJ0uvALcotxrcWbF-dPoTuDXlee8DIHfRuxA0qdSuTvD525Yl6oJzqZ60RiMvygJzUmLef8oi-VTn8j1n0APs-uP2qNj0Xfb_dhwfskiuNFOgr7yk42j1Xx_eCBfk98_Nxf7eR26bdg_lWlFKl5Ok3lspD0VmC5Twnnmr5HGZR2pe4pIAAAA.webp",
+      "date": "20 Feb 2026",
+      "snippet": "IDFC FIRST Bank launches FD-backed Hello Cashback Credit Card. Published. February 20, 2026. Flipboard. Reddit. Pinterest. Whatsapp · Email.",
+      "snippet_highlighted_words": [
+        "launches FD-backed"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "IDFC FIRST Bank launches FD-backed Hello Cashback Credit Card. Published. February 20, 2026. Flipboard. Reddit. Pinterest. Whatsapp · Email.",
+          "source_info_link": "https://bankingfrontiers.com/idfc-first-bank-launches-fd-backed-hello-cashback-credit-card/",
+          "icon": "https://serpapi.com/images/i/UklGRmYBAABXRUJQVlA4IFoBAAAQCACdASocABwAPtEwtFooIigoGAEAGglsAJ0yhH0ewAZzrsSfAG7A55TNeqB_q31L_1y9gAdWtm0w2_s_hHai08e9ShEjE-IAAP7YmaOX0L6VbJALBQF_QJFF7ZruUAEKs-amT2oztPIvpL8jW8EjJgcZ-xG2qSFvThr9P_xurA5fMwdOS2PCmkRVEzOsebCPSaST_4K1GE6Hpp4y_m2JQsnqo2VUtih4NNwftfDLLPq7ttVyFnEy1RiwyKWihwFLXNQm9EmN0kcOxQbWyns-i4XhxJ0uvALcotxrcWbF-dPoTuDXlee8DIHfRuxA0qdSuTvD525Yl6oJzqZ60RiMvygJzUmLef8oi-VTn8j1n0APs-uP2qNj0Xfb_dhwfskiuNFOgr7yk42j1Xx_eCBfk98_Nxf7eR26bdg_lWlFKl5Ok3lspD0VmC5Twnnmr5HGZR2pe4pIAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtkBL2dvdG8_dXJsPUNBRVNsZ0VCNnpzd0ZVXzZTN29iRGE0Z2V4Y210ektocy1xS1A5UU5MRlNmdWZsY0ZKd25DR3VIdDNfVGhnZlZmOWVuOVU5cDkxRk50R3NmVVRuemhKU3RjX2lxQXBvNVgzYzVCNXpKUFh1UXZ3b1pxVExlUWkxVTVucjI3SnEwaWNhRWRSanYyUTFaTC1OZzdXOGF2cGpObVRCZHlXRjEyY1JPdXlDNUNWVENlUFhpUWJBbG5oQWFYRG8ybm1jVVlVNDdHN3U2YXM1eHVpYxIEGgIIABqVBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDxAwgAEAAYACAAKg8KCGxhdW5jaGVzFdJOg0AqCQoCZmQVcF-KQCoNCgZiYWNrZWQVLX6LQDLZAS9nb3RvP3VybD1DQUVTbGdFQjZ6c3dGVV82UzdvYkRhNGdleGNtdHpLaHMtcUtQOVFOTEZTZnVmbGNGSnduQ0d1SHQzX1RoZ2ZWZjllbjlVOXA5MUZOdEdzZlVUbnpoSlN0Y19pcUFwbzVYM2M1QjV6SlBYdVF2d29acVRMZVFpMVU1bnIyN0pxMGljYUVkUmp2MlExWkwtTmc3VzhhdnBqTm1UQmR5V0YxMmNST3V5QzVDVlRDZVBYaVFiQWxuaEFhWERvMm5tY1VZVTQ3Rzd1NmFzNXh1aWM6Q0lERkMgRklSU1QgQmFuayA8Yj5sYXVuY2hlcyBGRC1iYWNrZWQ8L2I-IEhlbGxvIENhc2hiYWNrIENyZWRpdCAuLi5CmgFJREZDIEZJUlNUIEJhbmsgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBIZWxsbyBDYXNoYmFjayBDcmVkaXQgQ2FyZC4gUHVibGlzaGVkLiBGZWJydWFyeSAyMCwgMjAyNi4gRmxpcGJvYXJkLiBSZWRkaXQuIFBpbnRlcmVzdC4gV2hhdHNhcHAgJm1pZGRvdDsgRW1haWwuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtkBL2dvdG8_dXJsPUNBRVNsZ0VCNnpzd0ZVXzZTN29iRGE0Z2V4Y210ektocy1xS1A5UU5MRlNmdWZsY0ZKd25DR3VIdDNfVGhnZlZmOWVuOVU5cDkxRk50R3NmVVRuemhKU3RjX2lxQXBvNVgzYzVCNXpKUFh1UXZ3b1pxVExlUWkxVTVucjI3SnEwaWNhRWRSanYyUTFaTC1OZzdXOGF2cGpObVRCZHlXRjEyY1JPdXlDNUNWVENlUFhpUWJBbG5oQWFYRG8ybm1jVVlVNDdHN3U2YXM1eHVpYxIEGgIIABqVBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDxAwgAEAAYACAAKg8KCGxhdW5jaGVzFdJOg0AqCQoCZmQVcF-KQCoNCgZiYWNrZWQVLX6LQDLZAS9nb3RvP3VybD1DQUVTbGdFQjZ6c3dGVV82UzdvYkRhNGdleGNtdHpLaHMtcUtQOVFOTEZTZnVmbGNGSnduQ0d1SHQzX1RoZ2ZWZjllbjlVOXA5MUZOdEdzZlVUbnpoSlN0Y19pcUFwbzVYM2M1QjV6SlBYdVF2d29acVRMZVFpMVU1bnIyN0pxMGljYUVkUmp2MlExWkwtTmc3VzhhdnBqTm1UQmR5V0YxMmNST3V5QzVDVlRDZVBYaVFiQWxuaEFhWERvMm5tY1VZVTQ3Rzd1NmFzNXh1aWM6Q0lERkMgRklSU1QgQmFuayA8Yj5sYXVuY2hlcyBGRC1iYWNrZWQ8L2I-IEhlbGxvIENhc2hiYWNrIENyZWRpdCAuLi5CmgFJREZDIEZJUlNUIEJhbmsgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBIZWxsbyBDYXNoYmFjayBDcmVkaXQgQ2FyZC4gUHVibGlzaGVkLiBGZWJydWFyeSAyMCwgMjAyNi4gRmxpcGJvYXJkLiBSZWRkaXQuIFBpbnRlcmVzdC4gV2hhdHNhcHAgJm1pZGRvdDsgRW1haWwuIgIQAUgAWABoAA",
+      "source": "Banking Frontiers",
+      "read_more_link": "https://bankingfrontiers.com/idfc-first-bank-launches-fd-backed-hello-cashback-credit-card/#:~:text=IDFC%20FIRST%20Bank%20launches%20FD%2Dbacked,February%2020%2C%202026"
+    },
+    {
+      "position": 7,
+      "title": "IDFC FIRST Bank Hello Cashback Credit Card is an FD ...",
+      "link": "https://www.livemintmoney.com/personal-finance/credit-cards/idfc-first-bank-launches-fd-backed-hello-cashback-credit-card-for-young-users-281771322247763.html",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAES2gEB6zswFf6YafUAsDJfCvc1kumSbFdBWm6vOfy8N9vrSjUWWWTlpU-jsqxnLj-ajPjc6s76YAuuOF_dCaMrre2sdc1Julk0uKd81k1l-Z_o_nuqj_MB1nSfu5XQhWYqYnARN3bBDK-K2cxn62hMnEpVLetMt17mQfvpAO8nPKMcy2I-piu6uGDqxznfH9EuugsEu-3zJHd_K1auCklhRA3IyFBKtQ05wzCL0kVayXFeSzgNHEjvE3c6PZ16aGxOVEU9gWKhILIgZr6bLOeIc8jrIZQc5kMR2Evgww&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECBMQAQ&uoh=1",
+      "displayed_link": "https://www.livemintmoney.com › ... › Credit Cards",
+      "favicon": "https://serpapi.com/images/i/UklGRjYBAABXRUJQVlA4ICoBAADQBgCdASocABwAPtE-tFooIigoFAEAGglqAJ0ygfYD0AXYBvN6_A0gXubY9kK_gji5edlN-5jbEzUjuQ6IAAAA_orA5d2N3jlcsQedBHeer1VafUtpAyKM91zkvxtG7zEnLT1FQOX_8Wh-ZYGXKxyGzqkoAR33grhY3_V3gkx-pdexkOQ-rct7SUO6xSBZmBb1B2GHCeDbK9yg7v-VJJRZ8AHbOV7cbgJpKjNgeDmIkwz0ilWFKGl4GZXnle0hfNvto4eb_Uazfb03051t2TXNVXo8l7hHRhBOux3BB85Iok5c6E4CqHp15L3Apst1-NHDvpwJSGma8r1SmCeyjN4o2QSlnzaAwPmpTtqNQqdCDPZpE05buEQzQGNPxNSV7IobrRvM0kQxJFwA.webp",
+      "date": "17 Feb 2026",
+      "snippet": "IDFC FIRST Bank launches FD-backed Hello Cashback Credit Card for young users. Published Feb 17, 2026, 02:48 AM IST Shivam Shukla. Summary ...",
+      "snippet_highlighted_words": [
+        "launches FD-backed"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "IDFC FIRST Bank launches FD-backed Hello Cashback Credit Card for young users. Published Feb 17, 2026, 02:48 AM IST Shivam Shukla. Summary ...",
+          "source_info_link": "https://www.livemintmoney.com/personal-finance/credit-cards/idfc-first-bank-launches-fd-backed-hello-cashback-credit-card-for-young-users-281771322247763.html",
+          "icon": "https://serpapi.com/images/i/UklGRjYBAABXRUJQVlA4ICoBAADQBgCdASocABwAPtE-tFooIigoFAEAGglqAJ0ygfYD0AXYBvN6_A0gXubY9kK_gji5edlN-5jbEzUjuQ6IAAAA_orA5d2N3jlcsQedBHeer1VafUtpAyKM91zkvxtG7zEnLT1FQOX_8Wh-ZYGXKxyGzqkoAR33grhY3_V3gkx-pdexkOQ-rct7SUO6xSBZmBb1B2GHCeDbK9yg7v-VJJRZ8AHbOV7cbgJpKjNgeDmIkwz0ilWFKGl4GZXnle0hfNvto4eb_Uazfb03051t2TXNVXo8l7hHRhBOux3BB85Iok5c6E4CqHp15L3Apst1-NHDvpwJSGma8r1SmCeyjN4o2QSlnzaAwPmpTtqNQqdCDPZpE05buEQzQGNPxNSV7IobrRvM0kQxJFwA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrQCL2dvdG8_dXJsPUNBRVMyZ0VCNnpzd0ZmNllhZlVBc0RKZkN2YzFrdW1TYkZkQldtNnZPZnk4Tjl2clNqVVdXV1RscFUtanNxeG5Mai1halBqYzZzNzZZQXV1T0ZfZENhTXJyZTJzZGMxSnVsazB1S2Q4MWsxbC1aX29fbnVxal9NQjFuU2Z1NVhRaFdZcVluQVJOM2JCREstSzJjeG42MmhNbkVwVkxldE10MTdtUWZ2cEFPOG5QS01jeTJJLXBpdTZ1R0RxeHpuZkg5RXV1Z3NFdS0zekpIZF9LMWF1Q2tsaFJBM0l5RkJLdFEwNXd6Q0wwa1ZheVhGZVN6Z05IRWp2RTNjNlBaMTZhR3hPVkVVOWdXS2hJTElnWnI2YkxPZUljOGpySVpRYzVrTVIyRXZnd3cSBBoCCAAa8AQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAzAQIABAAGAAgACoPCghsYXVuY2hlcxXtqIhAKgkKAmZkFWaom0AqDQoGYmFja2VkFXj7mUAytAIvZ290bz91cmw9Q0FFUzJnRUI2enN3RmY2WWFmVUFzREpmQ3ZjMWt1bVNiRmRCV202dk9meThOOXZyU2pVV1dXVGxwVS1qc3F4bkxqLWFqUGpjNnM3NllBdXVPRl9kQ2FNcnJlMnNkYzFKdWxrMHVLZDgxazFsLVpfb19udXFqX01CMW5TZnU1WFFoV1lxWW5BUk4zYkJESy1LMmN4bjYyaE1uRXBWTGV0TXQxN21RZnZwQU84blBLTWN5MkktcGl1NnVHRHF4em5mSDlFdXVnc0V1LTN6SkhkX0sxYXVDa2xoUkEzSXlGQkt0UTA1d3pDTDBrVmF5WEZlU3pnTkhFanZFM2M2UFoxNmFHeE9WRVU5Z1dLaElMSWdacjZiTE9lSWM4anJJWlFjNWtNUjJFdmd3dzpDSURGQyBGSVJTVCBCYW5rIDxiPmxhdW5jaGVzIEZELWJhY2tlZDwvYj4gSGVsbG8gQ2FzaGJhY2sgQ3JlZGl0IC4uLkKaAUlERkMgRklSU1QgQmFuayA8Yj5sYXVuY2hlcyBGRC1iYWNrZWQ8L2I-IEhlbGxvIENhc2hiYWNrIENyZWRpdCBDYXJkIGZvciB5b3VuZyB1c2Vycy4gUHVibGlzaGVkIEZlYiAxNywgMjAyNiwgMDI6NDggQU0gSVNUIFNoaXZhbSBTaHVrbGEuIFN1bW1hcnkmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrQCL2dvdG8_dXJsPUNBRVMyZ0VCNnpzd0ZmNllhZlVBc0RKZkN2YzFrdW1TYkZkQldtNnZPZnk4Tjl2clNqVVdXV1RscFUtanNxeG5Mai1halBqYzZzNzZZQXV1T0ZfZENhTXJyZTJzZGMxSnVsazB1S2Q4MWsxbC1aX29fbnVxal9NQjFuU2Z1NVhRaFdZcVluQVJOM2JCREstSzJjeG42MmhNbkVwVkxldE10MTdtUWZ2cEFPOG5QS01jeTJJLXBpdTZ1R0RxeHpuZkg5RXV1Z3NFdS0zekpIZF9LMWF1Q2tsaFJBM0l5RkJLdFEwNXd6Q0wwa1ZheVhGZVN6Z05IRWp2RTNjNlBaMTZhR3hPVkVVOWdXS2hJTElnWnI2YkxPZUljOGpySVpRYzVrTVIyRXZnd3cSBBoCCAAa8AQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAzAQIABAAGAAgACoPCghsYXVuY2hlcxXtqIhAKgkKAmZkFWaom0AqDQoGYmFja2VkFXj7mUAytAIvZ290bz91cmw9Q0FFUzJnRUI2enN3RmY2WWFmVUFzREpmQ3ZjMWt1bVNiRmRCV202dk9meThOOXZyU2pVV1dXVGxwVS1qc3F4bkxqLWFqUGpjNnM3NllBdXVPRl9kQ2FNcnJlMnNkYzFKdWxrMHVLZDgxazFsLVpfb19udXFqX01CMW5TZnU1WFFoV1lxWW5BUk4zYkJESy1LMmN4bjYyaE1uRXBWTGV0TXQxN21RZnZwQU84blBLTWN5MkktcGl1NnVHRHF4em5mSDlFdXVnc0V1LTN6SkhkX0sxYXVDa2xoUkEzSXlGQkt0UTA1d3pDTDBrVmF5WEZlU3pnTkhFanZFM2M2UFoxNmFHeE9WRVU5Z1dLaElMSWdacjZiTE9lSWM4anJJWlFjNWtNUjJFdmd3dzpDSURGQyBGSVJTVCBCYW5rIDxiPmxhdW5jaGVzIEZELWJhY2tlZDwvYj4gSGVsbG8gQ2FzaGJhY2sgQ3JlZGl0IC4uLkKaAUlERkMgRklSU1QgQmFuayA8Yj5sYXVuY2hlcyBGRC1iYWNrZWQ8L2I-IEhlbGxvIENhc2hiYWNrIENyZWRpdCBDYXJkIGZvciB5b3VuZyB1c2Vycy4gUHVibGlzaGVkIEZlYiAxNywgMjAyNiwgMDI6NDggQU0gSVNUIFNoaXZhbSBTaHVrbGEuIFN1bW1hcnkmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Livemint Money",
+      "read_more_link": "https://www.livemintmoney.com/personal-finance/credit-cards/idfc-first-bank-launches-fd-backed-hello-cashback-credit-card-for-young-users-281771322247763.html#:~:text=IDFC%20FIRST%20Bank%20launches%20FD%2Dbacked,Summary"
+    },
+    {
+      "position": 8,
+      "title": "Cafemutual",
+      "link": "https://x.com/cafemutual/status/1984144594322518290",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESbgHrOzAVILAJF5LgY7pqIejcotb6yuVcuDrZTOwGHP9kVF7CUMmXehTS6Zvgtybz-ChJxEV8ToxhoRawqwdsC84ZRTmw1BAlz6wdbIPFuxTouJxwX6X6yXpX7jMO6vz7oJFJOi-nAZ6f0x8OcSLC&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECBQQAQ&uoh=1",
+      "displayed_link": "11 months ago",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png",
+      "snippet": "ZET launches FD backed credit cards for MFDs' clients Read more: tinyurl.com/yyvku7v3 · 11:25 PM · Oct 30, 2025·.",
+      "snippet_highlighted_words": [
+        "launches FD backed"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "ZET launches FD backed credit cards for MFDs' clients Read more: tinyurl.com/yyvku7v3 · 11:25 PM · Oct 30, 2025·.",
+          "source_info_link": "https://x.com/cafemutual/status/1984144594322518290",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqIBL2dvdG8_dXJsPUNBRVNiZ0hyT3pBVklMQUpGNUxnWTdwcUllamNvdGI2eXVWY3VEclpUT3dHSFA5a1ZGN0NVTW1YZWhUUzZadmd0eWJ6LUNoSnhFVjhUb3hob1Jhd3F3ZHNDODRaUlRtdzFCQWx6NndkYklQRnV4VG91Snh3WDZYNnlYcFg3ak1PNnZ6N29KRkpPaS1uQVo2ZjB4OE9jU0xDEgQaAggAGs8DEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKsDCAAQABgAIAAqDwoIbGF1bmNoZXMVkxR7QCoJCgJmZBWTFHtAKg0KBmJhY2tlZBWTFHtAMqIBL2dvdG8_dXJsPUNBRVNiZ0hyT3pBVklMQUpGNUxnWTdwcUllamNvdGI2eXVWY3VEclpUT3dHSFA5a1ZGN0NVTW1YZWhUUzZadmd0eWJ6LUNoSnhFVjhUb3hob1Jhd3F3ZHNDODRaUlRtdzFCQWx6NndkYklQRnV4VG91Snh3WDZYNnlYcFg3ak1PNnZ6N29KRkpPaS1uQVo2ZjB4OE9jU0xDOklDYWZlbXV0dWFsIG9uIFg6ICZxdW90O1pFVCA8Yj5sYXVuY2hlcyBGRCBiYWNrZWQ8L2I-IGNyZWRpdCBjYXJkcyBmb3IgLi4uQoUBWkVUIDxiPmxhdW5jaGVzIEZEIGJhY2tlZDwvYj4gY3JlZGl0IGNhcmRzIGZvciBNRkRzJiMzOTsgY2xpZW50cyBSZWFkIG1vcmU6IHRpbnl1cmwuY29tL3l5dmt1N3YzICZtaWRkb3Q7IDExOjI1IFBNIMK3IE9jdCAzMCwgMjAyNcK3LiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqIBL2dvdG8_dXJsPUNBRVNiZ0hyT3pBVklMQUpGNUxnWTdwcUllamNvdGI2eXVWY3VEclpUT3dHSFA5a1ZGN0NVTW1YZWhUUzZadmd0eWJ6LUNoSnhFVjhUb3hob1Jhd3F3ZHNDODRaUlRtdzFCQWx6NndkYklQRnV4VG91Snh3WDZYNnlYcFg3ak1PNnZ6N29KRkpPaS1uQVo2ZjB4OE9jU0xDEgQaAggAGs8DEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKsDCAAQABgAIAAqDwoIbGF1bmNoZXMVkxR7QCoJCgJmZBWTFHtAKg0KBmJhY2tlZBWTFHtAMqIBL2dvdG8_dXJsPUNBRVNiZ0hyT3pBVklMQUpGNUxnWTdwcUllamNvdGI2eXVWY3VEclpUT3dHSFA5a1ZGN0NVTW1YZWhUUzZadmd0eWJ6LUNoSnhFVjhUb3hob1Jhd3F3ZHNDODRaUlRtdzFCQWx6NndkYklQRnV4VG91Snh3WDZYNnlYcFg3ak1PNnZ6N29KRkpPaS1uQVo2ZjB4OE9jU0xDOklDYWZlbXV0dWFsIG9uIFg6ICZxdW90O1pFVCA8Yj5sYXVuY2hlcyBGRCBiYWNrZWQ8L2I-IGNyZWRpdCBjYXJkcyBmb3IgLi4uQoUBWkVUIDxiPmxhdW5jaGVzIEZEIGJhY2tlZDwvYj4gY3JlZGl0IGNhcmRzIGZvciBNRkRzJiMzOTsgY2xpZW50cyBSZWFkIG1vcmU6IHRpbnl1cmwuY29tL3l5dmt1N3YzICZtaWRkb3Q7IDExOjI1IFBNIMK3IE9jdCAzMCwgMjAyNcK3LiICEAFIAFgAaAA",
+      "source": "X · cafemutual",
+      "read_more_link": "https://x.com/cafemutual/status/1984144594322518290#:~:text=ZET%20launches%20FD%20backed%20credit,PM%20%C2%B7%20Oct%2030%2C%202025%C2%B7"
+    },
+    {
+      "position": 9,
+      "title": "Suryoday Small Finance Bank launches FD-backed credit ...",
+      "link": "https://www.thehindubusinessline.com/money-and-banking/suryoday-small-finance-bank-launches-fd-backed-credit-cards/article70003210.ece",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESwgEB6zswFSp0GjUwYx39b9UUyvOeKLU1S-XQVKyYVU4ZVHX83U59NYiVoGU53lA0rC4ev1PXL4rnRj8YXeyBVlbT9-n1UQyCTI9aMAsVTJWYKwcCgqzC8Ini3tSwAcmRPavp6Ezz6AjTSzTCj-keT1l-WfJCImbYMaOy5vMdrm_PEbkuUz7ubaGic4nXOAPtuXiC2rd3kikKUfLesEF9-XIws9xwsWtPZKB6mukEgLtcFq1nkUy5KK2NOnxXRQN-gsiEhw&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECBUQAQ&uoh=1",
+      "displayed_link": "https://www.thehindubusinessline.com › article70003210",
+      "favicon": "https://serpapi.com/images/i/UklGRsgAAABXRUJQVlA4ILwAAADQBACdASocABwAPtE-tFooIigoFAEAGgljAMzRjIw2QBXUUks6G2pVLGQMX6amAAD-_SrnVoxNHlzp-DEOO_g_jpMEuRR_XId1vgKIdUe__4mOm9s65U1KOBbLQxVqZ-HR2QIfG2a04v9wFTmvAn9_byajRAr9lCcjZu2IpW07oRkrHATEhHle60BbEn_h8Ils_QCS0W8NpU-8icvVbzj8aM2dD94ZPApiQw2Eh_KDHP-RIDkuk42xEEgAAA.webp",
+      "date": "2 Sept 2025",
+      "snippet": "Suryoday Small Finance Bank launches FD-backed credit cards. Key features include lifetime free status with no hidden charges, cashback ...",
+      "snippet_highlighted_words": [
+        "launches FD-backed"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Suryoday Small Finance Bank launches FD-backed credit cards. Key features include lifetime free status with no hidden charges, cashback ...",
+          "source_info_link": "https://www.thehindubusinessline.com/money-and-banking/suryoday-small-finance-bank-launches-fd-backed-credit-cards/article70003210.ece",
+          "icon": "https://serpapi.com/images/i/UklGRsgAAABXRUJQVlA4ILwAAADQBACdASocABwAPtE-tFooIigoFAEAGgljAMzRjIw2QBXUUks6G2pVLGQMX6amAAD-_SrnVoxNHlzp-DEOO_g_jpMEuRR_XId1vgKIdUe__4mOm9s65U1KOBbLQxVqZ-HR2QIfG2a04v9wFTmvAn9_byajRAr9lCcjZu2IpW07oRkrHATEhHle60BbEn_h8Ils_QCS0W8NpU-8icvVbzj8aM2dD94ZPApiQw2Eh_KDHP-RIDkuk42xEEgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpQCL2dvdG8_dXJsPUNBRVN3Z0VCNnpzd0ZTcDBHalV3WXgzOWI5VVV5dk9lS0xVMVMtWFFWS3lZVlU0WlZIWDgzVTU5TllpVm9HVTUzbEEwckM0ZXYxUFhMNHJuUmo4WVhleUJWbGJUOS1uMVVReUNUSTlhTUFzVlRKV1lLd2NDZ3F6QzhJbmkzdFN3QWNtUlBhdnA2RXp6NkFqVFN6VENqLWtlVDFsLVdmSkNJbWJZTWFPeTV2TWRybV9QRWJrdVV6N3ViYUdpYzRuWE9BUHR1WGlDMnJkM2tpa0tVZkxlc0VGOS1YSXdzOXh3c1d0UFpLQjZtdWtFZ0x0Y0ZxMW5rVXk1S0syTk9ueFhSUU4tZ3NpRWh3EgQaAggAGswEEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQKgECAAQABgAIAAqDwoIbGF1bmNoZXMV9pyFQCoJCgJmZBV0woVAKg0KBmJhY2tlZBWCroZAMpQCL2dvdG8_dXJsPUNBRVN3Z0VCNnpzd0ZTcDBHalV3WXgzOWI5VVV5dk9lS0xVMVMtWFFWS3lZVlU0WlZIWDgzVTU5TllpVm9HVTUzbEEwckM0ZXYxUFhMNHJuUmo4WVhleUJWbGJUOS1uMVVReUNUSTlhTUFzVlRKV1lLd2NDZ3F6QzhJbmkzdFN3QWNtUlBhdnA2RXp6NkFqVFN6VENqLWtlVDFsLVdmSkNJbWJZTWFPeTV2TWRybV9QRWJrdVV6N3ViYUdpYzRuWE9BUHR1WGlDMnJkM2tpa0tVZkxlc0VGOS1YSXdzOXh3c1d0UFpLQjZtdWtFZ0x0Y0ZxMW5rVXk1S0syTk9ueFhSUU4tZ3NpRWh3OkJTdXJ5b2RheSBTbWFsbCBGaW5hbmNlIEJhbmsgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBjcmVkaXQgY2FyZHNClwFTdXJ5b2RheSBTbWFsbCBGaW5hbmNlIEJhbmsgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBjcmVkaXQgY2FyZHMuIEtleSBmZWF0dXJlcyBpbmNsdWRlIGxpZmV0aW1lIGZyZWUgc3RhdHVzIHdpdGggbm8gaGlkZGVuIGNoYXJnZXMsIGNhc2hiYWNrJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpQCL2dvdG8_dXJsPUNBRVN3Z0VCNnpzd0ZTcDBHalV3WXgzOWI5VVV5dk9lS0xVMVMtWFFWS3lZVlU0WlZIWDgzVTU5TllpVm9HVTUzbEEwckM0ZXYxUFhMNHJuUmo4WVhleUJWbGJUOS1uMVVReUNUSTlhTUFzVlRKV1lLd2NDZ3F6QzhJbmkzdFN3QWNtUlBhdnA2RXp6NkFqVFN6VENqLWtlVDFsLVdmSkNJbWJZTWFPeTV2TWRybV9QRWJrdVV6N3ViYUdpYzRuWE9BUHR1WGlDMnJkM2tpa0tVZkxlc0VGOS1YSXdzOXh3c1d0UFpLQjZtdWtFZ0x0Y0ZxMW5rVXk1S0syTk9ueFhSUU4tZ3NpRWh3EgQaAggAGswEEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQKgECAAQABgAIAAqDwoIbGF1bmNoZXMV9pyFQCoJCgJmZBV0woVAKg0KBmJhY2tlZBWCroZAMpQCL2dvdG8_dXJsPUNBRVN3Z0VCNnpzd0ZTcDBHalV3WXgzOWI5VVV5dk9lS0xVMVMtWFFWS3lZVlU0WlZIWDgzVTU5TllpVm9HVTUzbEEwckM0ZXYxUFhMNHJuUmo4WVhleUJWbGJUOS1uMVVReUNUSTlhTUFzVlRKV1lLd2NDZ3F6QzhJbmkzdFN3QWNtUlBhdnA2RXp6NkFqVFN6VENqLWtlVDFsLVdmSkNJbWJZTWFPeTV2TWRybV9QRWJrdVV6N3ViYUdpYzRuWE9BUHR1WGlDMnJkM2tpa0tVZkxlc0VGOS1YSXdzOXh3c1d0UFpLQjZtdWtFZ0x0Y0ZxMW5rVXk1S0syTk9ueFhSUU4tZ3NpRWh3OkJTdXJ5b2RheSBTbWFsbCBGaW5hbmNlIEJhbmsgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBjcmVkaXQgY2FyZHNClwFTdXJ5b2RheSBTbWFsbCBGaW5hbmNlIEJhbmsgPGI-bGF1bmNoZXMgRkQtYmFja2VkPC9iPiBjcmVkaXQgY2FyZHMuIEtleSBmZWF0dXJlcyBpbmNsdWRlIGxpZmV0aW1lIGZyZWUgc3RhdHVzIHdpdGggbm8gaGlkZGVuIGNoYXJnZXMsIGNhc2hiYWNrJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "BusinessLine",
+      "read_more_link": "https://www.thehindubusinessline.com/money-and-banking/suryoday-small-finance-bank-launches-fd-backed-credit-cards/article70003210.ece#:~:text=Suryoday%20Small%20Finance%20Bank%20launches,RuPay%20offers%20across%20lifestyle%20categories"
+    },
+    {
+      "position": 10,
+      "title": "Arbaaz Siddiqui - Hsbc",
+      "link": "https://in.linkedin.com/in/arbaaz-siddiqui-09a334243",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESbwHrOzAVEGJzYKfPVSo_OEqYCvrsjckctbqMz5-sbuklvJEUi1BoArUHkUYrHsWUVM68mSRf18lZFqdkNH8JTskx0reXP1ay5RT3jYd4aDYjOFoqWQ_VSklC2bRMmRzUHY8g4-GsYOAOrgPwoQ_7Uw&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQFnoECA4QAQ&uoh=1",
+      "displayed_link": "1.2K+ followers",
+      "favicon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp",
+      "snippet": "Experience · HSBC. 4 years 2 months. Fraud Officer. HSBC. Aug 2024 - Present 2 years 2 months. Hyderabad, Telangana, India. Customer Service Representative. Hsbc.",
+      "about_this_result": {
+        "source": {
+          "description": "Experience · HSBC. 4 years 2 months. Fraud Officer. HSBC. Aug 2024 - Present 2 years 2 months. Hyderabad, Telangana, India. Customer Service Representative. Hsbc.",
+          "source_info_link": "https://in.linkedin.com/in/arbaaz-siddiqui-09a334243",
+          "icon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVkVHSnpZS2ZQVlNvX09FcVlDdnJzamNrY3RicU16NS1zYnVrbHZKRVVpMUJvQXJVSGtVWXJIc1dVVk02OG1TUmYxOGxaRnFka05IOEpUc2t4MHJlWFAxYXk1UlQzallkNGFEWWpPRm9xV1FfVlNrbEMyYlJNbVJ6VUhZOGc0LUdzWU9BT3JnUHdvUV83VXcSBBoCCAAazQMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAqQMIABAAGAAgACoPCghsYXVuY2hlcxW9wIM_KgkKAmZkFVSwUz8qDQoGYmFja2VkFVSwUz8ypAEvZ290bz91cmw9Q0FFU2J3SHJPekFWRUdKellLZlBWU29fT0VxWUN2cnNqY2tjdGJxTXo1LXNidWtsdkpFVWkxQm9BclVIa1VZckhzV1VWTTY4bVNSZjE4bFpGcWRrTkg4SlRza3gwcmVYUDFheTVSVDNqWWQ0YURZak9Gb3FXUV9WU2tsQzJiUk1tUnpVSFk4ZzQtR3NZT0FPcmdQd29RXzdVdzohQXJiYWF6IFNpZGRpcXVpIC0gSHNiYyAtIExpbmtlZEluQqkBRXhwZXJpZW5jZSAmbWlkZG90OyBIU0JDLiA0IHllYXJzIDIgbW9udGhzLiBGcmF1ZCBPZmZpY2VyLiBIU0JDLiBBdWcgMjAyNCAtIFByZXNlbnQgMiB5ZWFycyAyIG1vbnRocy4gSHlkZXJhYmFkLCBUZWxhbmdhbmEsIEluZGlhLiBDdXN0b21lciBTZXJ2aWNlIFJlcHJlc2VudGF0aXZlLiBIc2JjLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVkVHSnpZS2ZQVlNvX09FcVlDdnJzamNrY3RicU16NS1zYnVrbHZKRVVpMUJvQXJVSGtVWXJIc1dVVk02OG1TUmYxOGxaRnFka05IOEpUc2t4MHJlWFAxYXk1UlQzallkNGFEWWpPRm9xV1FfVlNrbEMyYlJNbVJ6VUhZOGc0LUdzWU9BT3JnUHdvUV83VXcSBBoCCAAazQMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAqQMIABAAGAAgACoPCghsYXVuY2hlcxW9wIM_KgkKAmZkFVSwUz8qDQoGYmFja2VkFVSwUz8ypAEvZ290bz91cmw9Q0FFU2J3SHJPekFWRUdKellLZlBWU29fT0VxWUN2cnNqY2tjdGJxTXo1LXNidWtsdkpFVWkxQm9BclVIa1VZckhzV1VWTTY4bVNSZjE4bFpGcWRrTkg4SlRza3gwcmVYUDFheTVSVDNqWWQ0YURZak9Gb3FXUV9WU2tsQzJiUk1tUnpVSFk4ZzQtR3NZT0FPcmdQd29RXzdVdzohQXJiYWF6IFNpZGRpcXVpIC0gSHNiYyAtIExpbmtlZEluQqkBRXhwZXJpZW5jZSAmbWlkZG90OyBIU0JDLiA0IHllYXJzIDIgbW9udGhzLiBGcmF1ZCBPZmZpY2VyLiBIU0JDLiBBdWcgMjAyNCAtIFByZXNlbnQgMiB5ZWFycyAyIG1vbnRocy4gSHlkZXJhYmFkLCBUZWxhbmdhbmEsIEluZGlhLiBDdXN0b21lciBTZXJ2aWNlIFJlcHJlc2VudGF0aXZlLiBIc2JjLiICEAFIAFgAaAA",
+      "source": "LinkedIn · Arbaaz Siddiqui",
+      "read_more_link": "https://in.linkedin.com/in/arbaaz-siddiqui-09a334243#:~:text=Experience&text=HSBC,Customer%20Service%20Representative"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.co.in/search?q=site:sbicard.com+%22Launches+FD-Backed%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnuLCodxjDfGv20tvwXoBHyUN6hKng:1791597000469&ei=yJnJav-WHJCJkPIPj4vwiQo&start=10&sa=N&sstk=AS6-VmKLgFnTNAksLeub1vWKV7eZRhJVlINTtxB2tX63vgW5fzoKAWKNy59LhsJ6P9C034vrp92VuxdGoUc-ygKbkWT9WDZI7GQPSQ&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQ8NMDegQIQRAG",
+    "other_pages": {
+      "2": "https://www.google.co.in/search?q=site:sbicard.com+%22Launches+FD-Backed%22&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnuLCodxjDfGv20tvwXoBHyUN6hKng:1791597000469&ei=yJnJav-WHJCJkPIPj4vwiQo&start=10&sa=N&sstk=AS6-VmKLgFnTNAksLeub1vWKV7eZRhJVlINTtxB2tX63vgW5fzoKAWKNy59LhsJ6P9C034vrp92VuxdGoUc-ygKbkWT9WDZI7GQPSQ&ved=2ahUKEwj_mqz2qq6XAxWQBEQIHY8FPKEQ8tMDegQIQRAE"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22Launches+FD-Backed%22&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22Launches+FD-Backed%22&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22Launches+FD-Backed%22&start=10"
+    }
+  }
+}

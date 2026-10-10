@@ -163,6 +163,11 @@ def record(engine_name: str, params: dict, data: dict) -> Path:
     """Save a live response as a replay fixture. Responses never contain the key
     (SerpApi echoes search_parameters without it), but strip it defensively."""
     path = fixture_path(engine_name, params)
+    if path.exists():
+        # Queries without a date in their parameters (e.g. "when:30d") hash to the same file
+        # every day; keep the committed recording that replay and tests rely on, and file
+        # the newer response under a dated folder instead.
+        path = settings.fixtures_dir / f"serp_live_{now().date().isoformat()}" / f"{engine_name}_{path.name}"
     path.parent.mkdir(parents=True, exist_ok=True)
     data = {**data, "search_parameters": _canonical(data.get("search_parameters", {}))}
     body = {"_recorded": {"engine": engine_name, "params": _canonical(params), "at": now().isoformat()}, **data}

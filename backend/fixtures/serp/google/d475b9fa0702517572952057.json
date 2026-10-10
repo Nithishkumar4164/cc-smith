@@ -1,0 +1,326 @@
+{
+  "_recorded": {
+    "engine": "google",
+    "params": {
+      "gl": "in",
+      "google_domain": "google.co.in",
+      "hl": "en",
+      "q": "site:sbicard.com \"SBI Credit Cards\" terms filetype:pdf"
+    },
+    "at": "2026-10-10T01:50:08.399371+00:00"
+  },
+  "search_metadata": {
+    "id": "6ac999cec20348f3bd12b1ad",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/r9OLwM8TcHJ7fUnYso7YK5ACaiH48HswD0u9zpRwZTQ/6ac999cec20348f3bd12b1ad.json",
+    "markdown_endpoint": "https://serpapi.com/searches/r9OLwM8TcHJ7fUnYso7YK5ACaiH48HswD0u9zpRwZTQ/6ac999cec20348f3bd12b1ad.md",
+    "pixel_position_endpoint": "https://serpapi.com/searches/r9OLwM8TcHJ7fUnYso7YK5ACaiH48HswD0u9zpRwZTQ/6ac999cec20348f3bd12b1ad.json_with_pixel_position",
+    "created_at": "2026-10-10 01:50:06 UTC",
+    "processed_at": "2026-10-10 01:50:06 UTC",
+    "google_url": "https://www.google.co.in/search?q=site%3Asbicard.com+%22SBI+Credit+Cards%22+terms+filetype%3Apdf&oq=site%3Asbicard.com+%22SBI+Credit+Cards%22+terms+filetype%3Apdf&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/r9OLwM8TcHJ7fUnYso7YK5ACaiH48HswD0u9zpRwZTQ/6ac999cec20348f3bd12b1ad.html",
+    "total_time_taken": 1.32
+  },
+  "search_parameters": {
+    "device": "desktop",
+    "engine": "google",
+    "gl": "in",
+    "google_domain": "google.co.in",
+    "hl": "en",
+    "q": "site:sbicard.com \"SBI Credit Cards\" terms filetype:pdf"
+  },
+  "search_information": {
+    "query_displayed": "site:sbicard.com \"SBI Credit Cards\" terms filetype:pdf",
+    "total_results": 51,
+    "time_taken_displayed": 0.17,
+    "organic_results_state": "Results for exact spelling"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "What are the pros and cons of SBI credit cards?",
+      "link": "https://www.quora.com/What-are-the-pros-and-cons-of-SBI-credit-cards",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESfwHrOzAVpmBFWDBGqJWmcmoJZnZrD1XTvms_T_EH9Pe1TMsrsUJjQxlENkPhc_WZzyBeBXcuit1RKSMgy2wv7rGSOU_sNUCtfP6VqamsjsXBRUirbVHC1QEzq9JHvvV-4147RkK-Sc0R0SZNXnDTI4SoFfLK8Hgfnh7SS6wOhRc&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECBoQAQ&uoh=1",
+      "displayed_link": "40+ answers · 3 years ago",
+      "favicon": "https://serpapi.com/images/i/UklGRhIBAABXRUJQVlA4IAYBAABQBgCdASocABwAPtFAtFooIqgoFAEAGglsAKwvbT-f9FJVdngA428vxQCq0R4c9f62YZeYiGEtoRRDAAD-9gm4RWs70tP3biIu3O7VV8QI7DMqIqprw_f2Aoh6P3X8JbZDl7t0lZ2r6sObHH1Z7IUn40739orMTtT8A6LquGEbxI0kN0_5vH8j2m4-9vzIZ7iPm8NCoINzGw-u1pvZrAWdy6w2UivRxEpBBRxPG1gI6mTZO_XhJ5jNP3dnQY2e8_2lJT8rFkj6fqGXPywcyH8ho_i77YxvVXtwoQ8aPdayuatAHFSeE-0i7UxCTuYeJzk11WsfnFWKYNSX_T-HQ3TWKwo4rAAA.webp",
+      "snippet": "What are the pros and cons of SBI credit cards?",
+      "about_this_result": {
+        "source": {
+          "description": "What are the pros and cons of SBI credit cards? · SBI Credit Card come with annual fee ranging from 500 plus GST onwards with annual charge ...",
+          "source_info_link": "https://www.quora.com/What-are-the-pros-and-cons-of-SBI-credit-cards",
+          "icon": "https://serpapi.com/images/i/UklGRhIBAABXRUJQVlA4IAYBAABQBgCdASocABwAPtFAtFooIqgoFAEAGglsAKwvbT-f9FJVdngA428vxQCq0R4c9f62YZeYiGEtoRRDAAD-9gm4RWs70tP3biIu3O7VV8QI7DMqIqprw_f2Aoh6P3X8JbZDl7t0lZ2r6sObHH1Z7IUn40739orMTtT8A6LquGEbxI0kN0_5vH8j2m4-9vzIZ7iPm8NCoINzGw-u1pvZrAWdy6w2UivRxEpBBRxPG1gI6mTZO_XhJ5jNP3dnQY2e8_2lJT8rFkj6fqGXPywcyH8ho_i77YxvVXtwoQ8aPdayuatAHFSeE-0i7UxCTuYeJzk11WsfnFWKYNSX_T-HQ3TWKwo4rAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrkBL2dvdG8_dXJsPUNBRVNmd0hyT3pBVnBtQkZXREJHcUpXbWNtb0pablpyRDFYVHZtc19UX0VIOVBlMVRNc3JzVUpqUXhsRU5rUGhjX1daenlCZUJYY3VpdDFSS1NNZ3kyd3Y3ckdTT1Vfc05VQ3RmUDZWcWFtc2pzWEJSVWlyYlZIQzFRRXpxOUpIdnZWLTQxNDdSa0stU2MwUjBTWk5YbkRUSTRTb0ZmTEs4SGdmbmg3U1M2d09oUmMSBBoCCAAalwQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA8wMIABAAGAAgACoKCgNzYmkVf8-AQCoNCgZjcmVkaXQV_J6AQCoMCgVjYXJkcxUDNYJAKh8KBXRlcm1zFc0IOD4aBHRlcm0aC3Rlcm1pbm9sb2d5MrkBL2dvdG8_dXJsPUNBRVNmd0hyT3pBVnBtQkZXREJHcUpXbWNtb0pablpyRDFYVHZtc19UX0VIOVBlMVRNc3JzVUpqUXhsRU5rUGhjX1daenlCZUJYY3VpdDFSS1NNZ3kyd3Y3ckdTT1Vfc05VQ3RmUDZWcWFtc2pzWEJSVWlyYlZIQzFRRXpxOUpIdnZWLTQxNDdSa0stU2MwUjBTWk5YbkRUSTRTb0ZmTEs4SGdmbmg3U1M2d09oUmM6PldoYXQgYXJlIHRoZSBwcm9zIGFuZCBjb25zIG9mIDxiPlNCSSBjcmVkaXQgY2FyZHM8L2I-PyAtIFF1b3JhQqIBV2hhdCBhcmUgdGhlIHByb3MgYW5kIGNvbnMgb2YgPGI-U0JJIGNyZWRpdCBjYXJkczwvYj4_ICZtaWRkb3Q7IFNCSSBDcmVkaXQgQ2FyZCBjb21lIHdpdGggYW5udWFsIGZlZSByYW5naW5nIGZyb20gNTAwIHBsdXMgR1NUIG9ud2FyZHMgd2l0aCBhbm51YWwgY2hhcmdlJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrkBL2dvdG8_dXJsPUNBRVNmd0hyT3pBVnBtQkZXREJHcUpXbWNtb0pablpyRDFYVHZtc19UX0VIOVBlMVRNc3JzVUpqUXhsRU5rUGhjX1daenlCZUJYY3VpdDFSS1NNZ3kyd3Y3ckdTT1Vfc05VQ3RmUDZWcWFtc2pzWEJSVWlyYlZIQzFRRXpxOUpIdnZWLTQxNDdSa0stU2MwUjBTWk5YbkRUSTRTb0ZmTEs4SGdmbmg3U1M2d09oUmMSBBoCCAAalwQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA8wMIABAAGAAgACoKCgNzYmkVf8-AQCoNCgZjcmVkaXQV_J6AQCoMCgVjYXJkcxUDNYJAKh8KBXRlcm1zFc0IOD4aBHRlcm0aC3Rlcm1pbm9sb2d5MrkBL2dvdG8_dXJsPUNBRVNmd0hyT3pBVnBtQkZXREJHcUpXbWNtb0pablpyRDFYVHZtc19UX0VIOVBlMVRNc3JzVUpqUXhsRU5rUGhjX1daenlCZUJYY3VpdDFSS1NNZ3kyd3Y3ckdTT1Vfc05VQ3RmUDZWcWFtc2pzWEJSVWlyYlZIQzFRRXpxOUpIdnZWLTQxNDdSa0stU2MwUjBTWk5YbkRUSTRTb0ZmTEs4SGdmbmg3U1M2d09oUmM6PldoYXQgYXJlIHRoZSBwcm9zIGFuZCBjb25zIG9mIDxiPlNCSSBjcmVkaXQgY2FyZHM8L2I-PyAtIFF1b3JhQqIBV2hhdCBhcmUgdGhlIHByb3MgYW5kIGNvbnMgb2YgPGI-U0JJIGNyZWRpdCBjYXJkczwvYj4_ICZtaWRkb3Q7IFNCSSBDcmVkaXQgQ2FyZCBjb21lIHdpdGggYW5udWFsIGZlZSByYW5naW5nIGZyb20gNTAwIHBsdXMgR1NUIG9ud2FyZHMgd2l0aCBhbm51YWwgY2hhcmdlJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "Quora"
+    },
+    {
+      "position": 2,
+      "title": "Everything You Need To Know About SBI Bank Credit Cards",
+      "link": "https://blog.bankbazaar.com/everything-you-need-to-know-about-sbi-bank-credit-cards/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESjwEB6zswFcJF2lGQWNNwtka2lvKIjM8xdUiGyGS4zEn3_KSOg9cAWg_x5Lmaugw_BzUFPSmIpHk1BN2JHN7vhZoNTbI_9rNTTTJCsRlibahyTGHy10fWlx2Z7nlU_jpHQkTTHTv6zGuVwhgCZJT-oYhThIeHcBo8LoQQ1sV-I6ivczwnJxiWB7op8gtn4KCTvQ&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECBYQAQ&uoh=1",
+      "displayed_link": "https://blog.bankbazaar.com › everything-you-need-to-...",
+      "favicon": "https://serpapi.com/images/i/UklGRoIBAABXRUJQVlA4IHYBAACwCACdASobABwAPtE-tFooIigoFAEAGglsAJ0vbfpvCGcAmPUIDbAc9VpkG8qI0EIBybOd8ce9P_cSfBAhP9Afj5XaJiPluRtjLXw-UoAA_vYJ0msq9XvRBEjr5NlXq9JwT6PnTNnZMjD4KAgLz1bjTlAPe4wQqb66jVKJgYVs_u8ppJNeQWk2eCcz-NVW3mFVdPuGc93Lxrk4bMMQfSgP9exVzcwuv1hSicRvbsSTIcvE_-HqHHmV9Y9BLuazhZc3YOf_P6GmGKHgCHzCD16VZKuPxPWgg93OG298dxr-tan7_w94_Ztwjibcaw4Ob-QOYTzfcMqXLe0fewN1ATOUIdVheOh6-ko8z-aVoVyt8cEDPNaX2nFgsjO2jrxcnqftNMbzCzX_HhBbaLkkepmih357kbJ5bz4hQqzvIThy1eSj2cY22OOrGbR9wHYviHDIQCtRLL7nZa3fDBNxlFR9duNp4GMWU1LO1E1nLo3xDY6_bAAAAA.webp",
+      "date": "25 Jul 2018",
+      "snippet": "Look no further! SBI Credit Cards offers all this and more. Read on ... Terms Notice to customer. Copyright © 2026 BankBazaar.com. Privacy Policy.",
+      "snippet_highlighted_words": [
+        "SBI Credit Cards",
+        "Terms"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Look no further! SBI Credit Cards offers all this and more. Read on ... Terms Notice to customer. Copyright © 2026 BankBazaar.com. Privacy Policy.",
+          "source_info_link": "https://blog.bankbazaar.com/everything-you-need-to-know-about-sbi-bank-credit-cards/",
+          "icon": "https://serpapi.com/images/i/UklGRoIBAABXRUJQVlA4IHYBAACwCACdASobABwAPtE-tFooIigoFAEAGglsAJ0vbfpvCGcAmPUIDbAc9VpkG8qI0EIBybOd8ce9P_cSfBAhP9Afj5XaJiPluRtjLXw-UoAA_vYJ0msq9XvRBEjr5NlXq9JwT6PnTNnZMjD4KAgLz1bjTlAPe4wQqb66jVKJgYVs_u8ppJNeQWk2eCcz-NVW3mFVdPuGc93Lxrk4bMMQfSgP9exVzcwuv1hSicRvbsSTIcvE_-HqHHmV9Y9BLuazhZc3YOf_P6GmGKHgCHzCD16VZKuPxPWgg93OG298dxr-tan7_w94_Ztwjibcaw4Ob-QOYTzfcMqXLe0fewN1ATOUIdVheOh6-ko8z-aVoVyt8cEDPNaX2nFgsjO2jrxcnqftNMbzCzX_HhBbaLkkepmih357kbJ5bz4hQqzvIThy1eSj2cY22OOrGbR9wHYviHDIQCtRLL7nZa3fDBNxlFR9duNp4GMWU1LO1E1nLo3xDY6_bAAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtABL2dvdG8_dXJsPUNBRVNqd0VCNnpzd0ZjSkYybEdRV05Od3RrYTJsdktJak04eGRVaUd5R1M0ekVuM19LU09nOWNBV2dfeDVMbWF1Z3dfQnpVRlBTbUlwSGsxQk4ySkhON3ZoWm9OVGJJXzlyTlRUVEpDc1JsaWJhaHlUR0h5MTBmV2x4Mlo3bmxVX2pwSFFrVFRIVHY2ekd1VndoZ0NaSlQtb1loVGhJZUhjQm84TG9RUTFzVi1JNml2Y3p3bkp4aVdCN29wOGd0bjRLQ1R2URIEGgIIABqmBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCCBAgAEAAYACAAKgoKA3NiaRUcLqVAKg0KBmNyZWRpdBX6O7VAKgwKBWNhcmRzFbGArkAqHwoFdGVybXMV0EeSOhoEdGVybRoLdGVybWlub2xvZ3ky0AEvZ290bz91cmw9Q0FFU2p3RUI2enN3RmNKRjJsR1FXTk53dGthMmx2S0lqTTh4ZFVpR3lHUzR6RW4zX0tTT2c5Y0FXZ194NUxtYXVnd19CelVGUFNtSXBIazFCTjJKSE43dmhab05UYklfOXJOVFRUSkNzUmxpYmFoeVRHSHkxMGZXbHgyWjdubFVfanBIUWtUVEhUdjZ6R3VWd2hnQ1pKVC1vWWhUaEllSGNCbzhMb1FRMXNWLUk2aXZjenduSnhpV0I3b3A4Z3RuNEtDVHZROjdFdmVyeXRoaW5nIFlvdSBOZWVkIFRvIEtub3cgQWJvdXQgU0JJIEJhbmsgQ3JlZGl0IENhcmRzQqEBTG9vayBubyBmdXJ0aGVyISA8Yj5TQkkgQ3JlZGl0IENhcmRzPC9iPiBvZmZlcnMgYWxsIHRoaXMgYW5kIG1vcmUuIFJlYWQgb24gLi4uIDxiPlRlcm1zPC9iPiBOb3RpY2UgdG8gY3VzdG9tZXIuIENvcHlyaWdodCDCqSAyMDI2IEJhbmtCYXphYXIuY29tLiBQcml2YWN5IFBvbGljeS4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtABL2dvdG8_dXJsPUNBRVNqd0VCNnpzd0ZjSkYybEdRV05Od3RrYTJsdktJak04eGRVaUd5R1M0ekVuM19LU09nOWNBV2dfeDVMbWF1Z3dfQnpVRlBTbUlwSGsxQk4ySkhON3ZoWm9OVGJJXzlyTlRUVEpDc1JsaWJhaHlUR0h5MTBmV2x4Mlo3bmxVX2pwSFFrVFRIVHY2ekd1VndoZ0NaSlQtb1loVGhJZUhjQm84TG9RUTFzVi1JNml2Y3p3bkp4aVdCN29wOGd0bjRLQ1R2URIEGgIIABqmBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCCBAgAEAAYACAAKgoKA3NiaRUcLqVAKg0KBmNyZWRpdBX6O7VAKgwKBWNhcmRzFbGArkAqHwoFdGVybXMV0EeSOhoEdGVybRoLdGVybWlub2xvZ3ky0AEvZ290bz91cmw9Q0FFU2p3RUI2enN3RmNKRjJsR1FXTk53dGthMmx2S0lqTTh4ZFVpR3lHUzR6RW4zX0tTT2c5Y0FXZ194NUxtYXVnd19CelVGUFNtSXBIazFCTjJKSE43dmhab05UYklfOXJOVFRUSkNzUmxpYmFoeVRHSHkxMGZXbHgyWjdubFVfanBIUWtUVEhUdjZ6R3VWd2hnQ1pKVC1vWWhUaEllSGNCbzhMb1FRMXNWLUk2aXZjenduSnhpV0I3b3A4Z3RuNEtDVHZROjdFdmVyeXRoaW5nIFlvdSBOZWVkIFRvIEtub3cgQWJvdXQgU0JJIEJhbmsgQ3JlZGl0IENhcmRzQqEBTG9vayBubyBmdXJ0aGVyISA8Yj5TQkkgQ3JlZGl0IENhcmRzPC9iPiBvZmZlcnMgYWxsIHRoaXMgYW5kIG1vcmUuIFJlYWQgb24gLi4uIDxiPlRlcm1zPC9iPiBOb3RpY2UgdG8gY3VzdG9tZXIuIENvcHlyaWdodCDCqSAyMDI2IEJhbmtCYXphYXIuY29tLiBQcml2YWN5IFBvbGljeS4iAhABSABYAGgA",
+      "source": "BankBazaar",
+      "read_more_link": "https://blog.bankbazaar.com/everything-you-need-to-know-about-sbi-bank-credit-cards/#:~:text=About%20Careers%20Contact%20Us%20Blog,%C2%A9%202026%20BankBazaar.com.%20Privacy%20Policy"
+    },
+    {
+      "position": 3,
+      "title": "SBI Card Credit Cards 2026 — Compare All 7 | PerkPilot",
+      "link": "https://www.perkpilot.in/banks/sbi-card",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESYgHrOzAVlt5PfK-PONodmWRfHKoq9l36qLL7rm1pXQcXLcNp9ET9WW8jIbs5LMtWBPOo2dltzaXWePuSbtvwSB4Z6BdeO3PwL_7VB-LNGh4XB5UtDXPwGABfcBgYEV3fHldl&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECBEQAQ&uoh=1",
+      "displayed_link": "https://www.perkpilot.in › banks › sbi-card",
+      "favicon": "https://serpapi.com/images/i/UklGRkABAABXRUJQVlA4IDQBAADQBgCdASocABwAPtE-tFooIigoFAEAGglpAA5wMGXzSvQHsEfqHvjH6zJa1poV0aGzuIlt3yCAJzP_VWhkGAAA_v0qj_DUSCRkYqsvb5P9_vub7U5eq3Xv0HFnq1wX8DveZkuox87v-ANfqGrzU130yE2GfwLiNb1jaTeym79wXOtcpdpkfubi5Ft1rrUp9IXu8bGfkWyrTq87besylSnyVXx4RaHx-g_Bx-Wvv29sLkX_nYTeHKB7m_OG28s5m2gfV_lEm_lgW7rR-z1g6IA_wP_LGZ5_9YCBv_DUTX2MkpwPC8pRmpFuqZHSylg4b2OFekNevzNmMn0ORiPeZV68Iz7L6PrpFrKQePmL9mV_8ACID_CgrVKMb52P97VA5j37tvfj2nUvzyieaofLULKf10wAAA.webp",
+      "snippet": "CARDS TRACKED 7 ANNUAL FEE RANGE ₹0 – ₹4,999. SBI Cashback Credit Card FEE ₹0 REWARD 1.9% ACCESS ALONGSIDE A FLAT 2× ON INTERNATIONAL SPENDS. SBI Card Aurum ...",
+      "about_this_result": {
+        "source": {
+          "description": "CARDS TRACKED 7 ANNUAL FEE RANGE ₹0 – ₹4,999. SBI Cashback Credit Card FEE ₹0 REWARD 1.9% ACCESS ALONGSIDE A FLAT 2× ON INTERNATIONAL SPENDS. SBI Card Aurum ...",
+          "source_info_link": "https://www.perkpilot.in/banks/sbi-card",
+          "icon": "https://serpapi.com/images/i/UklGRkABAABXRUJQVlA4IDQBAADQBgCdASocABwAPtE-tFooIigoFAEAGglpAA5wMGXzSvQHsEfqHvjH6zJa1poV0aGzuIlt3yCAJzP_VWhkGAAA_v0qj_DUSCRkYqsvb5P9_vub7U5eq3Xv0HFnq1wX8DveZkuox87v-ANfqGrzU130yE2GfwLiNb1jaTeym79wXOtcpdpkfubi5Ft1rrUp9IXu8bGfkWyrTq87besylSnyVXx4RaHx-g_Bx-Wvv29sLkX_nYTeHKB7m_OG28s5m2gfV_lEm_lgW7rR-z1g6IA_wP_LGZ5_9YCBv_DUTX2MkpwPC8pRmpFuqZHSylg4b2OFekNevzNmMn0ORiPeZV68Iz7L6PrpFrKQePmL9mV_8ACID_CgrVKMb52P97VA5j37tvfj2nUvzyieaofLULKf10wAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpIBL2dvdG8_dXJsPUNBRVNZZ0hyT3pBVmx0NVBmSy1QT05vZG1XUmZIS29xOWwzNnFMTDdybTFwWFFjWExjTnA5RVQ5V1c4akliczVMTXRXQlBPbzJkbHR6YVhXZVB1U2J0dndTQjRaNkJkZU8zUHdMXzdWQi1MTkdoNFhCNVV0RFhQd0dBQmZjQmdZRVYzZkhsZGwSBBoCCAAa9gMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA0gMIABAAGAAgACoKCgNzYmkVUhvTQCoNCgZjcmVkaXQVhaSfQCoMCgVjYXJkcxU6iaBAKh8KBXRlcm1zFbGMBD4aBHRlcm0aC3Rlcm1pbm9sb2d5MpIBL2dvdG8_dXJsPUNBRVNZZ0hyT3pBVmx0NVBmSy1QT05vZG1XUmZIS29xOWwzNnFMTDdybTFwWFFjWExjTnA5RVQ5V1c4akliczVMTXRXQlBPbzJkbHR6YVhXZVB1U2J0dndTQjRaNkJkZU8zUHdMXzdWQi1MTkdoNFhCNVV0RFhQd0dBQmZjQmdZRVYzZkhsZGw6OFNCSSBDYXJkIENyZWRpdCBDYXJkcyAyMDI2IOKAlCBDb21wYXJlIEFsbCA3IHwgUGVya1BpbG90Qq4BQ0FSRFMgVFJBQ0tFRCA3IEFOTlVBTCBGRUUgUkFOR0Ug4oK5MCDigJMg4oK5NCw5OTkuIFNCSSBDYXNoYmFjayBDcmVkaXQgQ2FyZCBGRUUg4oK5MCBSRVdBUkQgMS45JSBBQ0NFU1MgQUxPTkdTSURFIEEgRkxBVCAyw5cgT04gSU5URVJOQVRJT05BTCBTUEVORFMuIFNCSSBDYXJkIEF1cnVtJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpIBL2dvdG8_dXJsPUNBRVNZZ0hyT3pBVmx0NVBmSy1QT05vZG1XUmZIS29xOWwzNnFMTDdybTFwWFFjWExjTnA5RVQ5V1c4akliczVMTXRXQlBPbzJkbHR6YVhXZVB1U2J0dndTQjRaNkJkZU8zUHdMXzdWQi1MTkdoNFhCNVV0RFhQd0dBQmZjQmdZRVYzZkhsZGwSBBoCCAAa9gMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA0gMIABAAGAAgACoKCgNzYmkVUhvTQCoNCgZjcmVkaXQVhaSfQCoMCgVjYXJkcxU6iaBAKh8KBXRlcm1zFbGMBD4aBHRlcm0aC3Rlcm1pbm9sb2d5MpIBL2dvdG8_dXJsPUNBRVNZZ0hyT3pBVmx0NVBmSy1QT05vZG1XUmZIS29xOWwzNnFMTDdybTFwWFFjWExjTnA5RVQ5V1c4akliczVMTXRXQlBPbzJkbHR6YVhXZVB1U2J0dndTQjRaNkJkZU8zUHdMXzdWQi1MTkdoNFhCNVV0RFhQd0dBQmZjQmdZRVYzZkhsZGw6OFNCSSBDYXJkIENyZWRpdCBDYXJkcyAyMDI2IOKAlCBDb21wYXJlIEFsbCA3IHwgUGVya1BpbG90Qq4BQ0FSRFMgVFJBQ0tFRCA3IEFOTlVBTCBGRUUgUkFOR0Ug4oK5MCDigJMg4oK5NCw5OTkuIFNCSSBDYXNoYmFjayBDcmVkaXQgQ2FyZCBGRUUg4oK5MCBSRVdBUkQgMS45JSBBQ0NFU1MgQUxPTkdTSURFIEEgRkxBVCAyw5cgT04gSU5URVJOQVRJT05BTCBTUEVORFMuIFNCSSBDYXJkIEF1cnVtJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "perkpilot.in"
+    },
+    {
+      "position": 4,
+      "title": "SBI Credit Card Key Fact Statement | PDF | Payments",
+      "link": "https://fr.scribd.com/document/599397487/key-fact-statement",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESdgHrOzAVOOkkjzRvNpMzKmOB9Cl9joHEV6acZ71mrr2Wo47HpFxxGo46nWOS-biN5BcDEGmQDcSlvJrr1RPM8B70maY0CNBbRJXkTr4F8wHoErn43GOJZTe35fbYO1ZcUEWNhnr_aK4WaH7cnnIw0xcFHudIFRM&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECBkQAQ&uoh=1",
+      "displayed_link": "https://fr.scribd.com › document",
+      "favicon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp",
+      "snippet": "Interest rates for retail purchases range from 2.75-3.5% per month depending on the card type. Cash advances. Other fees include charges for payments",
+      "about_this_result": {
+        "source": {
+          "description": "Interest rates for retail purchases range from 2.75-3.5% per month depending on the card type. Cash advances. Other fees include charges for payments",
+          "source_info_link": "https://fr.scribd.com/document/599397487/key-fact-statement",
+          "icon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cq0BL2dvdG8_dXJsPUNBRVNkZ0hyT3pBVk9Pa2tqelJ2TnBNekttT0I5Q2w5am9IRVY2YWNaNzFtcnIyV280N0hwRnh4R280Nm5XT1MtYmlONUJjREVHbVFEY1NsdkpycjFSUE04QjcwbWFZMENOQmJSSlhrVHI0Rjh3SG9Fcm40M0dPSlpUZTM1ZmJZTzFaY1VFV05obnJfYUs0V2FIN2Nubkl3MHhjRkh1ZElGUk0SBBoCCAAa_AMSABoAIgAqADIGCAMSAmluOgBCBAgCEABKAFoAcgB6AIJA2AMIABAAGAAgACoKCgNzYmkVajZAQCoNCgZjcmVkaXQVldNmQCoMCgVjYXJkcxVHW4o_Kh8KBXRlcm1zFbkJLz8aBHRlcm0aC3Rlcm1pbm9sb2d5Mq0BL2dvdG8_dXJsPUNBRVNkZ0hyT3pBVk9Pa2tqelJ2TnBNekttT0I5Q2w5am9IRVY2YWNaNzFtcnIyV280N0hwRnh4R280Nm5XT1MtYmlONUJjREVHbVFEY1NsdkpycjFSUE04QjcwbWFZMENOQmJSSlhrVHI0Rjh3SG9Fcm40M0dPSlpUZTM1ZmJZTzFaY1VFV05obnJfYUs0V2FIN2Nubkl3MHhjRkh1ZElGUk06PFNCSSBDcmVkaXQgQ2FyZCBLZXkgRmFjdCBTdGF0ZW1lbnQgfCBQREYgfCBQYXltZW50cyAtIFNjcmliZEKVAUludGVyZXN0IHJhdGVzIGZvciByZXRhaWwgcHVyY2hhc2VzIHJhbmdlIGZyb20gMi43NS0zLjUlIHBlciBtb250aCBkZXBlbmRpbmcgb24gdGhlIGNhcmQgdHlwZS4gQ2FzaCBhZHZhbmNlcy4gT3RoZXIgZmVlcyBpbmNsdWRlIGNoYXJnZXMgZm9yIHBheW1lbnRzIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cq0BL2dvdG8_dXJsPUNBRVNkZ0hyT3pBVk9Pa2tqelJ2TnBNekttT0I5Q2w5am9IRVY2YWNaNzFtcnIyV280N0hwRnh4R280Nm5XT1MtYmlONUJjREVHbVFEY1NsdkpycjFSUE04QjcwbWFZMENOQmJSSlhrVHI0Rjh3SG9Fcm40M0dPSlpUZTM1ZmJZTzFaY1VFV05obnJfYUs0V2FIN2Nubkl3MHhjRkh1ZElGUk0SBBoCCAAa_AMSABoAIgAqADIGCAMSAmluOgBCBAgCEABKAFoAcgB6AIJA2AMIABAAGAAgACoKCgNzYmkVajZAQCoNCgZjcmVkaXQVldNmQCoMCgVjYXJkcxVHW4o_Kh8KBXRlcm1zFbkJLz8aBHRlcm0aC3Rlcm1pbm9sb2d5Mq0BL2dvdG8_dXJsPUNBRVNkZ0hyT3pBVk9Pa2tqelJ2TnBNekttT0I5Q2w5am9IRVY2YWNaNzFtcnIyV280N0hwRnh4R280Nm5XT1MtYmlONUJjREVHbVFEY1NsdkpycjFSUE04QjcwbWFZMENOQmJSSlhrVHI0Rjh3SG9Fcm40M0dPSlpUZTM1ZmJZTzFaY1VFV05obnJfYUs0V2FIN2Nubkl3MHhjRkh1ZElGUk06PFNCSSBDcmVkaXQgQ2FyZCBLZXkgRmFjdCBTdGF0ZW1lbnQgfCBQREYgfCBQYXltZW50cyAtIFNjcmliZEKVAUludGVyZXN0IHJhdGVzIGZvciByZXRhaWwgcHVyY2hhc2VzIHJhbmdlIGZyb20gMi43NS0zLjUlIHBlciBtb250aCBkZXBlbmRpbmcgb24gdGhlIGNhcmQgdHlwZS4gQ2FzaCBhZHZhbmNlcy4gT3RoZXIgZmVlcyBpbmNsdWRlIGNoYXJnZXMgZm9yIHBheW1lbnRzIgIQAUgAWABoAA",
+      "source": "Scribd"
+    },
+    {
+      "position": 5,
+      "title": "Full list of SBI Card fees and charges changing from ...",
+      "link": "https://www.cnbctv18.com/photos/personal-finance/sbi-credit-card-changes-fees-new-charges-november-1-rules-19724188.htm",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESsgEB6zswFSuF05-wyXV2ZRgTn60sLyDAo_oKQ3KyJK9BqiFa9NvNAy6dRwapDS6K17NpzO92raXCLfsJFESQAqcqDbcz8-gaj2ZdTiT6cJ2jyPDWq4pnuQexQwBArGvzXJTxNi8Zyp8S-5ys7Vo-kdKiIrDIm8dwcjOw6QUYUG4-wwiyCkALzTYeTeRYr7SDWeO0uXqqiFhvVNXgwwWREyomrBjVcBTy_eJHvWsLfkeeJ8D7&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECA4QAQ&uoh=1",
+      "displayed_link": "https://www.cnbctv18.com › photos › personal finance",
+      "favicon": "https://serpapi.com/images/i/UklGRq4BAABXRUJQVlA4IKIBAABQCACdASogACAAPtEutFooIagoGAEAGglsALEUq7Iz_UDLAP0AgyvJvDQeAGkCmg-R9BrYFbh-3ySBNr6VBwsLWNYJ2Nlgvq5hCYAA_vYF3PFiWApvcxK61NQuGO8viHTlgMRbxBnrpjUetGn2XWt0JCaToBZY_BEYYrez_WjzOTxkOObwWLoePz3nqc890RE1Ud4jgHzrav9PcaejBcsexaxmAN0qnyvcCweccL24pP7CSzpB5vLfr35jgBoIZhV0BZLDxrSohe1yFGg58DQwUE1d411aYASGFaPb1eQ-JToLHhnYvmbNoJ8rsMTS55-0Z62IuQ6R5fz_vtqs4WAgm013TptCdhOFrVbPHjvG8K4bse6gRQ91Ni0gfvHX64xw7X-o5uQvTjn-0ia1_j_mYDQ_zMv5VaeDLWljmAx34pugZ_p3LJf0db7u6rhRSZ8cDxaeRz7q7LAxNaNj-kvTtP0Z93bKRQr9FOultP0z_5j5rLZ8bfGbP8H54GNjbaAOotRASuXrsLGezaOf-3Ls9MptigdW-prMVG_nDOEw6YAA.webp",
+      "date": "23 Oct 2025",
+      "snippet": "SBI Card will revise several of its service charges and fee structures, effective November 1. The changes cover select transactions, ...",
+      "about_this_result": {
+        "source": {
+          "description": "SBI Card will revise several of its service charges and fee structures, effective November 1. The changes cover select transactions, ...",
+          "source_info_link": "https://www.cnbctv18.com/photos/personal-finance/sbi-credit-card-changes-fees-new-charges-november-1-rules-19724188.htm",
+          "icon": "https://serpapi.com/images/i/UklGRq4BAABXRUJQVlA4IKIBAABQCACdASogACAAPtEutFooIagoGAEAGglsALEUq7Iz_UDLAP0AgyvJvDQeAGkCmg-R9BrYFbh-3ySBNr6VBwsLWNYJ2Nlgvq5hCYAA_vYF3PFiWApvcxK61NQuGO8viHTlgMRbxBnrpjUetGn2XWt0JCaToBZY_BEYYrez_WjzOTxkOObwWLoePz3nqc890RE1Ud4jgHzrav9PcaejBcsexaxmAN0qnyvcCweccL24pP7CSzpB5vLfr35jgBoIZhV0BZLDxrSohe1yFGg58DQwUE1d411aYASGFaPb1eQ-JToLHhnYvmbNoJ8rsMTS55-0Z62IuQ6R5fz_vtqs4WAgm013TptCdhOFrVbPHjvG8K4bse6gRQ91Ni0gfvHX64xw7X-o5uQvTjn-0ia1_j_mYDQ_zMv5VaeDLWljmAx34pugZ_p3LJf0db7u6rhRSZ8cDxaeRz7q7LAxNaNj-kvTtP0Z93bKRQr9FOultP0z_5j5rLZ8bfGbP8H54GNjbaAOotRASuXrsLGezaOf-3Ls9MptigdW-prMVG_nDOEw6YAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cv4BL2dvdG8_dXJsPUNBRVNzZ0VCNnpzd0ZTdUYwNS13eVhWMlpSZ1RuNjBzTHlEQW9fb0tRM0t5Sks5QnFpRmE5TnZOQXk2ZFJ3YXBEUzZLMTdOcHpPOTJyYVhDTGZzSkZFU1FBcWNxRGJjejgtZ2FqMlpkVGlUNmNKMmp5UERXcTRwbnVRZXhRd0JBckd2elhKVHhOaThaeXA4Uy01eXM3Vm8ta2RLaUlyREltOGR3Y2pPdzZRVVlVRzQtd3dpeUNrQUx6VFllVGVSWXI3U0RXZU8wdVhxcWlGaHZWTlhnd3dXUkV5b21yQmpWY0JUeV9lSkh2V3NMZmtlZUo4RDcSBBoCCAAayAQSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJApAQIABAAGAAgACoKCgNzYmkVqfAkQCoNCgZjcmVkaXQVEKSCPyoMCgVjYXJkcxWnCB0_Kh8KBXRlcm1zFYHdHT4aBHRlcm0aC3Rlcm1pbm9sb2d5Mv4BL2dvdG8_dXJsPUNBRVNzZ0VCNnpzd0ZTdUYwNS13eVhWMlpSZ1RuNjBzTHlEQW9fb0tRM0t5Sks5QnFpRmE5TnZOQXk2ZFJ3YXBEUzZLMTdOcHpPOTJyYVhDTGZzSkZFU1FBcWNxRGJjejgtZ2FqMlpkVGlUNmNKMmp5UERXcTRwbnVRZXhRd0JBckd2elhKVHhOaThaeXA4Uy01eXM3Vm8ta2RLaUlyREltOGR3Y2pPdzZRVVlVRzQtd3dpeUNrQUx6VFllVGVSWXI3U0RXZU8wdVhxcWlGaHZWTlhnd3dXUkV5b21yQmpWY0JUeV9lSkh2V3NMZmtlZUo4RDc6P0Z1bGwgbGlzdCBvZiBTQkkgQ2FyZCBmZWVzIGFuZCBjaGFyZ2VzIGNoYW5naW5nIC4uLiAtIENOQkMgVFYxOEKNAVNCSSBDYXJkIHdpbGwgcmV2aXNlIHNldmVyYWwgb2YgaXRzIHNlcnZpY2UgY2hhcmdlcyBhbmQgZmVlIHN0cnVjdHVyZXMsIGVmZmVjdGl2ZSBOb3ZlbWJlciAxLiBUaGUgY2hhbmdlcyBjb3ZlciBzZWxlY3QgdHJhbnNhY3Rpb25zLCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cv4BL2dvdG8_dXJsPUNBRVNzZ0VCNnpzd0ZTdUYwNS13eVhWMlpSZ1RuNjBzTHlEQW9fb0tRM0t5Sks5QnFpRmE5TnZOQXk2ZFJ3YXBEUzZLMTdOcHpPOTJyYVhDTGZzSkZFU1FBcWNxRGJjejgtZ2FqMlpkVGlUNmNKMmp5UERXcTRwbnVRZXhRd0JBckd2elhKVHhOaThaeXA4Uy01eXM3Vm8ta2RLaUlyREltOGR3Y2pPdzZRVVlVRzQtd3dpeUNrQUx6VFllVGVSWXI3U0RXZU8wdVhxcWlGaHZWTlhnd3dXUkV5b21yQmpWY0JUeV9lSkh2V3NMZmtlZUo4RDcSBBoCCAAayAQSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJApAQIABAAGAAgACoKCgNzYmkVqfAkQCoNCgZjcmVkaXQVEKSCPyoMCgVjYXJkcxWnCB0_Kh8KBXRlcm1zFYHdHT4aBHRlcm0aC3Rlcm1pbm9sb2d5Mv4BL2dvdG8_dXJsPUNBRVNzZ0VCNnpzd0ZTdUYwNS13eVhWMlpSZ1RuNjBzTHlEQW9fb0tRM0t5Sks5QnFpRmE5TnZOQXk2ZFJ3YXBEUzZLMTdOcHpPOTJyYVhDTGZzSkZFU1FBcWNxRGJjejgtZ2FqMlpkVGlUNmNKMmp5UERXcTRwbnVRZXhRd0JBckd2elhKVHhOaThaeXA4Uy01eXM3Vm8ta2RLaUlyREltOGR3Y2pPdzZRVVlVRzQtd3dpeUNrQUx6VFllVGVSWXI3U0RXZU8wdVhxcWlGaHZWTlhnd3dXUkV5b21yQmpWY0JUeV9lSkh2V3NMZmtlZUo4RDc6P0Z1bGwgbGlzdCBvZiBTQkkgQ2FyZCBmZWVzIGFuZCBjaGFyZ2VzIGNoYW5naW5nIC4uLiAtIENOQkMgVFYxOEKNAVNCSSBDYXJkIHdpbGwgcmV2aXNlIHNldmVyYWwgb2YgaXRzIHNlcnZpY2UgY2hhcmdlcyBhbmQgZmVlIHN0cnVjdHVyZXMsIGVmZmVjdGl2ZSBOb3ZlbWJlciAxLiBUaGUgY2hhbmdlcyBjb3ZlciBzZWxlY3QgdHJhbnNhY3Rpb25zLCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "CNBC TV18"
+    },
+    {
+      "position": 6,
+      "title": "SBI Platinum Corporate Card",
+      "link": "https://www.sbicard.com/en/corporate/credit-cards/travel-entertainment-cards/sbi-platinum-corporate-card.page",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESqAEB6zswFVRdlgceE_cizF2b3AmVqmV7g1ICw_xvCsvr08GP3TPTbdWjBjweLodBWoY-mpk_1rV1fCJ1uyTWnbp2HBhPY55n8hVhEfWRZYUuh5rp_zWmWYDKp83DY_vhpOWNTDkzRK9NjZww3AyW07QXnV65DVAqrwxoNdVDVHGe2C5vm6bCZ0Da-ySYXAw2Q-dVsBygoV894626T4D0eLNYbHGiD03hJB4&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECBAQAQ&uoh=1",
+      "displayed_link": "https://www.sbicard.com › travel-entertainment-cards",
+      "favicon": "https://serpapi.com/images/i/UklGRjIBAABXRUJQVlA4ICYBAAAQBwCdASocABwAPtEutFooIagoGAEAGglsALsZoDbAXZXvJx7AEel-wfsAbpWOrX4pDQqSC9OvoDhvLlnitulwAAD-9gJZAHCD2dg40GwVckRmUWd3kjaAspRXxE_MsjvS7xCXlTmBv-oFIvi87T4a_FMmCQC2pwShRSeZlZFagJR73_y3uOP_xn-7d2Ji8QmF_502Hfh-B5KTuf2_wdPsuulP05qlqwNqcdv7neWcSj_Dy4q-nUPJRAueuEGL_5FMCK8Qj1mf4fz1PLLNKQe2ia5bvCm1JRqXvJAiZ7XjJGo8xlHsf--4KORS5HhC57zZ130r6zCqzmWWmzNkqKVDPwGxN-EyYcXr9EnETbyOMC_ThllXkHNFCgsHH3EFsWi1NGAuAAA.webp",
+      "about_this_result": {
+        "source": {
+          "source_info_link": "https://www.sbicard.com/en/corporate/credit-cards/travel-entertainment-cards/sbi-platinum-corporate-card.page",
+          "icon": "https://serpapi.com/images/i/UklGRjIBAABXRUJQVlA4ICYBAAAQBwCdASocABwAPtEutFooIagoGAEAGglsALsZoDbAXZXvJx7AEel-wfsAbpWOrX4pDQqSC9OvoDhvLlnitulwAAD-9gJZAHCD2dg40GwVckRmUWd3kjaAspRXxE_MsjvS7xCXlTmBv-oFIvi87T4a_FMmCQC2pwShRSeZlZFagJR73_y3uOP_xn-7d2Ji8QmF_502Hfh-B5KTuf2_wdPsuulP05qlqwNqcdv7neWcSj_Dy4q-nUPJRAueuEGL_5FMCK8Qj1mf4fz1PLLNKQe2ia5bvCm1JRqXvJAiZ7XjJGo8xlHsf--4KORS5HhC57zZ130r6zCqzmWWmzNkqKVDPwGxN-EyYcXr9EnETbyOMC_ThllXkHNFCgsHH3EFsWi1NGAuAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CvEBL2dvdG8_dXJsPUNBRVNxQUVCNnpzd0ZWUmRsZ2NlRV9jaXpGMmIzQW1WcW1WN2cxSUN3X3h2Q3N2cjA4R1AzVFBUYmRXakJqd2VMb2RCV29ZLW1wa18xclYxZkNKMXV5VFduYnAySEJoUFk1NW44aFZoRWZXUlpZVXVoNXJwX3pXbVdZREtwODNEWV92aHBPV05URGt6Uks5Tmpad3czQXlXMDdRWG5WNjVEVkFxcnd4b05kVkRWSEdlMkM1dm02YkNaMERhLXlTWVhBdzJRLWRWc0J5Z29WODk0NjI2VDREMGVMTlliSEdpRDAzaEpCNBIEGgIIABqjAxICCAAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaDwgBEgtzYmljYXJkLmNvbXIAegCCQO4CCAAQABgAIAAqCgoDc2JpFQAAAD8qDQoGY3JlZGl0FQAAAD8qDAoFY2FyZHMVAAAAPyofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTLxAS9nb3RvP3VybD1DQUVTcUFFQjZ6c3dGVlJkbGdjZUVfY2l6RjJiM0FtVnFtVjdnMUlDd194dkNzdnIwOEdQM1RQVGJkV2pCandlTG9kQldvWS1tcGtfMXJWMWZDSjF1eVRXbmJwMkhCaFBZNTVuOGhWaEVmV1JaWVV1aDVycF96V21XWURLcDgzRFlfdmhwT1dOVERrelJLOU5qWnd3M0F5VzA3UVhuVjY1RFZBcXJ3eG9OZFZEVkhHZTJDNXZtNmJDWjBEYS15U1lYQXcyUS1kVnNCeWdvVjg5NDYyNlQ0RDBlTE5ZYkhHaUQwM2hKQjQ6JlNCSSBQbGF0aW51bSBDb3Jwb3JhdGUgQ2FyZCAtIFNCSSBDYXJkIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CvEBL2dvdG8_dXJsPUNBRVNxQUVCNnpzd0ZWUmRsZ2NlRV9jaXpGMmIzQW1WcW1WN2cxSUN3X3h2Q3N2cjA4R1AzVFBUYmRXakJqd2VMb2RCV29ZLW1wa18xclYxZkNKMXV5VFduYnAySEJoUFk1NW44aFZoRWZXUlpZVXVoNXJwX3pXbVdZREtwODNEWV92aHBPV05URGt6Uks5Tmpad3czQXlXMDdRWG5WNjVEVkFxcnd4b05kVkRWSEdlMkM1dm02YkNaMERhLXlTWVhBdzJRLWRWc0J5Z29WODk0NjI2VDREMGVMTlliSEdpRDAzaEpCNBIEGgIIABqjAxICCAAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaDwgBEgtzYmljYXJkLmNvbXIAegCCQO4CCAAQABgAIAAqCgoDc2JpFQAAAD8qDQoGY3JlZGl0FQAAAD8qDAoFY2FyZHMVAAAAPyofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTLxAS9nb3RvP3VybD1DQUVTcUFFQjZ6c3dGVlJkbGdjZUVfY2l6RjJiM0FtVnFtVjdnMUlDd194dkNzdnIwOEdQM1RQVGJkV2pCandlTG9kQldvWS1tcGtfMXJWMWZDSjF1eVRXbmJwMkhCaFBZNTVuOGhWaEVmV1JaWVV1aDVycF96V21XWURLcDgzRFlfdmhwT1dOVERrelJLOU5qWnd3M0F5VzA3UVhuVjY1RFZBcXJ3eG9OZFZEVkhHZTJDNXZtNmJDWjBEYS15U1lYQXcyUS1kVnNCeWdvVjg5NDYyNlQ0RDBlTE5ZYkhHaUQwM2hKQjQ6JlNCSSBQbGF0aW51bSBDb3Jwb3JhdGUgQ2FyZCAtIFNCSSBDYXJkIgIQAUgAWABoAA",
+      "source": "SBI Card"
+    },
+    {
+      "position": 7,
+      "title": "https://home.sbi.bank.in/hi/web/yono/credit-card.html",
+      "link": "https://home.sbi.bank.in/hi/web/yono/credit-card.html",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEScAHrOzAV-3jJHksl7XqvTxTSNgvuIAyAg3eVOlYaI42JFc7s2CZjmaieu0SVv_l_zEKi6g48xahhcWIph6Bmdf_2bVbdz-2PsGelKyCaEaGyYFfMbVIHUtrVy987Cv3G_Jg5ou60scn3h7q7xR1N_GI&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECBQQAQ&uoh=1",
+      "displayed_link": "https://home.sbi.bank.in › web › yono › credit-card",
+      "snippet": "No information is available for this page.",
+      "about_this_result": {
+        "source": {
+          "source_info_link": "https://home.sbi.bank.in/hi/web/yono/credit-card.html"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqUBL2dvdG8_dXJsPUNBRVNjQUhyT3pBVi0zakpIa3NsN1hxdlR4VFNOZ3Z1SUF5QWczZVZPbFlhSTQySkZjN3MyQ1pqbWFpZXUwU1Z2X2xfekVLaTZnNDh4YWhoY1dJcGg2Qm1kZl8yYlZiZHotMlBzR2VsS3lDYUVhR3lZRmZNYlZJSFV0clZ5OTg3Q3YzR19KZzVvdTYwc2NuM2g3cTd4UjFOX0dJEgQaAggAGq8CEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaDwgBEgtzYmkuYmFuay5pbnIAegCCQPwBCAAQABgAIAAqCgoDc2JpFQAAgEAqDQoGY3JlZGl0FQAAAD8qDAoFY2FyZHMVAAAAACofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTKlAS9nb3RvP3VybD1DQUVTY0FIck96QVYtM2pKSGtzbDdYcXZUeFRTTmd2dUlBeUFnM2VWT2xZYUk0MkpGYzdzMkNaam1haWV1MFNWdl9sX3pFS2k2ZzQ4eGFoaGNXSXBoNkJtZGZfMmJWYmR6LTJQc0dlbEt5Q2FFYUd5WUZmTWJWSUhVdHJWeTk4N0N2M0dfSmc1b3U2MHNjbjNoN3E3eFIxTl9HSToAIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqUBL2dvdG8_dXJsPUNBRVNjQUhyT3pBVi0zakpIa3NsN1hxdlR4VFNOZ3Z1SUF5QWczZVZPbFlhSTQySkZjN3MyQ1pqbWFpZXUwU1Z2X2xfekVLaTZnNDh4YWhoY1dJcGg2Qm1kZl8yYlZiZHotMlBzR2VsS3lDYUVhR3lZRmZNYlZJSFV0clZ5OTg3Q3YzR19KZzVvdTYwc2NuM2g3cTd4UjFOX0dJEgQaAggAGq8CEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaDwgBEgtzYmkuYmFuay5pbnIAegCCQPwBCAAQABgAIAAqCgoDc2JpFQAAgEAqDQoGY3JlZGl0FQAAAD8qDAoFY2FyZHMVAAAAACofCgV0ZXJtcxUAAAAAGgR0ZXJtGgt0ZXJtaW5vbG9neTKlAS9nb3RvP3VybD1DQUVTY0FIck96QVYtM2pKSGtzbDdYcXZUeFRTTmd2dUlBeUFnM2VWT2xZYUk0MkpGYzdzMkNaam1haWV1MFNWdl9sX3pFS2k2ZzQ4eGFoaGNXSXBoNkJtZGZfMmJWYmR6LTJQc0dlbEt5Q2FFYUd5WUZmTWJWSUhVdHJWeTk4N0N2M0dfSmc1b3U2MHNjbjNoN3E3eFIxTl9HSToAIgIQAUgAWABoAA",
+      "source": "sbi.bank.in"
+    },
+    {
+      "position": 8,
+      "title": "SBI Credit Card: Benefits, Popular Cards, and Customer ...",
+      "link": "https://www.facebook.com/fb-answers/sbi-credit-card/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESbwHrOzAVFja3CZ8PvX8EtQGjRJqfhL3GDu0NUaZzrMynRFrb24S-f8vEddA7tLX0mGkGtH_nuQJ1CW1M9COyX8fnS752DFWYCCjEIlQG8cqj2bkQEFnAz14t-woatmnS_bZQyuHgFVtDcdMDP2GbpA&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECBUQAQ&uoh=1",
+      "displayed_link": "https://www.facebook.com › fb-answers › sbi-credit-card",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "SBI Credit Cards from State Bank of India offer rewards, cashback, and travel benefits across cards like SBI Card ELITE, PRIME, and SimplySAVE.",
+      "snippet_highlighted_words": [
+        "SBI Credit Cards"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "SBI Credit Cards from State Bank of India offer rewards, cashback, and travel benefits across cards like SBI Card ELITE, PRIME, and SimplySAVE.",
+          "source_info_link": "https://www.facebook.com/fb-answers/sbi-credit-card/",
+          "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVkZqYTNDWjhQdlg4RXRRR2pSSnFmaEwzR0R1ME5VYVp6ck15blJGcmIyNFMtZjh2RWRkQTd0TFgwbUdrR3RIX251UUoxQ1cxTTlDT3lYOGZuUzc1MkRGV1lDQ2pFSWxRRzhjcWoyYmtRRUZuQXoxNHQtd29hdG1uU19iWlF5dUhnRlZ0RGNkTURQMkdicEESBBoCCAAa8gMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAzgMIABAAGAAgACoKCgNzYmkVDgKuQCoNCgZjcmVkaXQVtLmoQCoMCgVjYXJkcxVSe4NAKh8KBXRlcm1zFYXxrj0aBHRlcm0aC3Rlcm1pbm9sb2d5MqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVkZqYTNDWjhQdlg4RXRRR2pSSnFmaEwzR0R1ME5VYVp6ck15blJGcmIyNFMtZjh2RWRkQTd0TFgwbUdrR3RIX251UUoxQ1cxTTlDT3lYOGZuUzc1MkRGV1lDQ2pFSWxRRzhjcWoyYmtRRUZuQXoxNHQtd29hdG1uU19iWlF5dUhnRlZ0RGNkTURQMkdicEE6OlNCSSBDcmVkaXQgQ2FyZDogQmVuZWZpdHMsIFBvcHVsYXIgQ2FyZHMsIGFuZCBDdXN0b21lciAuLi5ClgE8Yj5TQkkgQ3JlZGl0IENhcmRzPC9iPiBmcm9tIFN0YXRlIEJhbmsgb2YgSW5kaWEgb2ZmZXIgcmV3YXJkcywgY2FzaGJhY2ssIGFuZCB0cmF2ZWwgYmVuZWZpdHMgYWNyb3NzIGNhcmRzIGxpa2UgU0JJIENhcmQgRUxJVEUsIFBSSU1FLCBhbmQgU2ltcGx5U0FWRS4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVkZqYTNDWjhQdlg4RXRRR2pSSnFmaEwzR0R1ME5VYVp6ck15blJGcmIyNFMtZjh2RWRkQTd0TFgwbUdrR3RIX251UUoxQ1cxTTlDT3lYOGZuUzc1MkRGV1lDQ2pFSWxRRzhjcWoyYmtRRUZuQXoxNHQtd29hdG1uU19iWlF5dUhnRlZ0RGNkTURQMkdicEESBBoCCAAa8gMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAzgMIABAAGAAgACoKCgNzYmkVDgKuQCoNCgZjcmVkaXQVtLmoQCoMCgVjYXJkcxVSe4NAKh8KBXRlcm1zFYXxrj0aBHRlcm0aC3Rlcm1pbm9sb2d5MqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVkZqYTNDWjhQdlg4RXRRR2pSSnFmaEwzR0R1ME5VYVp6ck15blJGcmIyNFMtZjh2RWRkQTd0TFgwbUdrR3RIX251UUoxQ1cxTTlDT3lYOGZuUzc1MkRGV1lDQ2pFSWxRRzhjcWoyYmtRRUZuQXoxNHQtd29hdG1uU19iWlF5dUhnRlZ0RGNkTURQMkdicEE6OlNCSSBDcmVkaXQgQ2FyZDogQmVuZWZpdHMsIFBvcHVsYXIgQ2FyZHMsIGFuZCBDdXN0b21lciAuLi5ClgE8Yj5TQkkgQ3JlZGl0IENhcmRzPC9iPiBmcm9tIFN0YXRlIEJhbmsgb2YgSW5kaWEgb2ZmZXIgcmV3YXJkcywgY2FzaGJhY2ssIGFuZCB0cmF2ZWwgYmVuZWZpdHMgYWNyb3NzIGNhcmRzIGxpa2UgU0JJIENhcmQgRUxJVEUsIFBSSU1FLCBhbmQgU2ltcGx5U0FWRS4iAhABSABYAGgA",
+      "source": "Facebook",
+      "read_more_link": "https://www.facebook.com/fb-answers/sbi-credit-card/#:~:text=SBI%20Credit%20Cards%20from%20State,Card%20ELITE%2C%20PRIME%2C%20and%20SimplySAVE."
+    },
+    {
+      "position": 9,
+      "title": "SBI credit cards: How many types are there and which one ...",
+      "link": "https://www.livemint.com/money/personal-finance/sbi-credit-cards-how-many-types-are-there-and-which-one-is-right-for-you-11750140388931.html",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESyAEB6zswFcZSmWI_-tTb4aUJdqPko7qzr-MI-QJrrJkCm_H3nOPXefJQMYmB-VxyMhaiUWSESKDllynTh5vXPuWsjVr44wWieC5r1BNzqxLItDDzQHudUEnfl8QI8yX7flNw919ue0M2fza7xxoAsT5N0kAAEBh9_7zgx1ZLErUyZnIZ2jLxHvB7c4FLKFoBg9VPkZy3ApP-vylVZbTqD7TtzgT5T-VzYbdedOfadtnYKDl-31roaRseze7wRl2MbRDv9IAh6gdyXw&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECA8QAQ&uoh=1",
+      "displayed_link": "https://www.livemint.com › Money › Personal Finance",
+      "favicon": "https://serpapi.com/images/i/UklGRvwAAABXRUJQVlA4IPAAAADwBQCdASocABwAPtEutFooIagoGAEAGglsAJ0vd_nN6GxAt_8B6IEr5Sa3OnZh3gObpTQY9ojIUAD-kqv0KFfJdZC2Z-5KaKLQeVwl0qFmm66U2or_4tCYT2WQHIIm_CMv-G0m-zrnNQQuvrPn68PyAvSiX9BUhBh6eMFt0wPCpHtTtrrr3Y8tYwWsdLOz_By74Fp_uf-Pvr3_g3J6gcEvN9VaQPkp_rnp53JmtE1Cxef4RuhJ1IDkC4MivffCdKl3y1kKmten5wTgtvpuP7pNh87u0Uv4O1c21B-8tb98gUOXFGjg1UBb7rFkuMpYAAA.webp",
+      "date": "17 Jun 2025",
+      "snippet": "SBI credit cards: How many types are there and which one is right for you? · 1. Shopping credit cards · 2. Travel & lifestyle credit cards · 3.",
+      "snippet_highlighted_words": [
+        "SBI credit cards"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "SBI credit cards: How many types are there and which one is right for you? · 1. Shopping credit cards · 2. Travel & lifestyle credit cards · 3.",
+          "source_info_link": "https://www.livemint.com/money/personal-finance/sbi-credit-cards-how-many-types-are-there-and-which-one-is-right-for-you-11750140388931.html",
+          "icon": "https://serpapi.com/images/i/UklGRvwAAABXRUJQVlA4IPAAAADwBQCdASocABwAPtEutFooIagoGAEAGglsAJ0vd_nN6GxAt_8B6IEr5Sa3OnZh3gObpTQY9ojIUAD-kqv0KFfJdZC2Z-5KaKLQeVwl0qFmm66U2or_4tCYT2WQHIIm_CMv-G0m-zrnNQQuvrPn68PyAvSiX9BUhBh6eMFt0wPCpHtTtrrr3Y8tYwWsdLOz_By74Fp_uf-Pvr3_g3J6gcEvN9VaQPkp_rnp53JmtE1Cxef4RuhJ1IDkC4MivffCdKl3y1kKmten5wTgtvpuP7pNh87u0Uv4O1c21B-8tb98gUOXFGjg1UBb7rFkuMpYAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpwCL2dvdG8_dXJsPUNBRVN5QUVCNnpzd0ZjWlNtV0lfLXRUYjRhVUpkcVBrbzdxenItTUktUUpyckprQ21fSDNuT1BYZWZKUU1ZbUItVnh5TWhhaVVXU0VTS0RsbHluVGg1dlhQdVdzalZyNDR3V2llQzVyMUJOenF4TEl0RER6UUh1ZFVFbmZsOFFJOHlYN2ZsTnc5MTl1ZTBNMmZ6YTd4eG9Bc1Q1TjBrQUFFQmg5Xzd6Z3gxWkxFclV5Wm5JWjJqTHhIdkI3YzRGTEtGb0JnOVZQa1p5M0FwUC12eWxWWmJUcUQ3VHR6Z1Q1VC1WelliZGVkT2ZhZHRuWUtEbC0zMXJvYVJzZXplN3dSbDJNYlJEdjlJQWg2Z2R5WHcSBBoCCAAajwUSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA6wQIABAAGAAgACoKCgNzYmkV8GjBQCoNCgZjcmVkaXQVwvi-QCoMCgVjYXJkcxXYO7JAKh8KBXRlcm1zFY5L2jwaBHRlcm0aC3Rlcm1pbm9sb2d5MpwCL2dvdG8_dXJsPUNBRVN5QUVCNnpzd0ZjWlNtV0lfLXRUYjRhVUpkcVBrbzdxenItTUktUUpyckprQ21fSDNuT1BYZWZKUU1ZbUItVnh5TWhhaVVXU0VTS0RsbHluVGg1dlhQdVdzalZyNDR3V2llQzVyMUJOenF4TEl0RER6UUh1ZFVFbmZsOFFJOHlYN2ZsTnc5MTl1ZTBNMmZ6YTd4eG9Bc1Q1TjBrQUFFQmg5Xzd6Z3gxWkxFclV5Wm5JWjJqTHhIdkI3YzRGTEtGb0JnOVZQa1p5M0FwUC12eWxWWmJUcUQ3VHR6Z1Q1VC1WelliZGVkT2ZhZHRuWUtEbC0zMXJvYVJzZXplN3dSbDJNYlJEdjlJQWg2Z2R5WHc6RjxiPlNCSSBjcmVkaXQgY2FyZHM8L2I-OiBIb3cgbWFueSB0eXBlcyBhcmUgdGhlcmUgYW5kIHdoaWNoIG9uZSBpcyAuLi5CrwE8Yj5TQkkgY3JlZGl0IGNhcmRzPC9iPjogSG93IG1hbnkgdHlwZXMgYXJlIHRoZXJlIGFuZCB3aGljaCBvbmUgaXMgcmlnaHQgZm9yIHlvdT8gJm1pZGRvdDsgMS4gU2hvcHBpbmcgY3JlZGl0IGNhcmRzICZtaWRkb3Q7IDIuIFRyYXZlbCAmYW1wOyBsaWZlc3R5bGUgY3JlZGl0IGNhcmRzICZtaWRkb3Q7IDMuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpwCL2dvdG8_dXJsPUNBRVN5QUVCNnpzd0ZjWlNtV0lfLXRUYjRhVUpkcVBrbzdxenItTUktUUpyckprQ21fSDNuT1BYZWZKUU1ZbUItVnh5TWhhaVVXU0VTS0RsbHluVGg1dlhQdVdzalZyNDR3V2llQzVyMUJOenF4TEl0RER6UUh1ZFVFbmZsOFFJOHlYN2ZsTnc5MTl1ZTBNMmZ6YTd4eG9Bc1Q1TjBrQUFFQmg5Xzd6Z3gxWkxFclV5Wm5JWjJqTHhIdkI3YzRGTEtGb0JnOVZQa1p5M0FwUC12eWxWWmJUcUQ3VHR6Z1Q1VC1WelliZGVkT2ZhZHRuWUtEbC0zMXJvYVJzZXplN3dSbDJNYlJEdjlJQWg2Z2R5WHcSBBoCCAAajwUSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA6wQIABAAGAAgACoKCgNzYmkV8GjBQCoNCgZjcmVkaXQVwvi-QCoMCgVjYXJkcxXYO7JAKh8KBXRlcm1zFY5L2jwaBHRlcm0aC3Rlcm1pbm9sb2d5MpwCL2dvdG8_dXJsPUNBRVN5QUVCNnpzd0ZjWlNtV0lfLXRUYjRhVUpkcVBrbzdxenItTUktUUpyckprQ21fSDNuT1BYZWZKUU1ZbUItVnh5TWhhaVVXU0VTS0RsbHluVGg1dlhQdVdzalZyNDR3V2llQzVyMUJOenF4TEl0RER6UUh1ZFVFbmZsOFFJOHlYN2ZsTnc5MTl1ZTBNMmZ6YTd4eG9Bc1Q1TjBrQUFFQmg5Xzd6Z3gxWkxFclV5Wm5JWjJqTHhIdkI3YzRGTEtGb0JnOVZQa1p5M0FwUC12eWxWWmJUcUQ3VHR6Z1Q1VC1WelliZGVkT2ZhZHRuWUtEbC0zMXJvYVJzZXplN3dSbDJNYlJEdjlJQWg2Z2R5WHc6RjxiPlNCSSBjcmVkaXQgY2FyZHM8L2I-OiBIb3cgbWFueSB0eXBlcyBhcmUgdGhlcmUgYW5kIHdoaWNoIG9uZSBpcyAuLi5CrwE8Yj5TQkkgY3JlZGl0IGNhcmRzPC9iPjogSG93IG1hbnkgdHlwZXMgYXJlIHRoZXJlIGFuZCB3aGljaCBvbmUgaXMgcmlnaHQgZm9yIHlvdT8gJm1pZGRvdDsgMS4gU2hvcHBpbmcgY3JlZGl0IGNhcmRzICZtaWRkb3Q7IDIuIFRyYXZlbCAmYW1wOyBsaWZlc3R5bGUgY3JlZGl0IGNhcmRzICZtaWRkb3Q7IDMuIgIQAUgAWABoAA",
+      "source": "Livemint",
+      "read_more_link": "https://www.livemint.com/money/personal-finance/sbi-credit-cards-how-many-types-are-there-and-which-one-is-right-for-you-11750140388931.html#:~:text=SBI%20credit%20cards%3A%20How%20many,one%20is%20right%20for%20you%3F&text=1.%20Shopping%20credit%20cards&text=2.%20Travel%20%26%20lifestyle%20credit,cards&text=3.%20Reward%20credit%20cards"
+    },
+    {
+      "position": 10,
+      "title": "SBI Credit Card Options and Benefits | PDF",
+      "link": "https://www.scribd.com/document/985901572/Intern-Training",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESdAHrOzAVy76aYz-rFS7H-RHSx1aEDOM7aZK9QSQjRmuOEnlB6k-zvbrf0qW6KMctEChfUGdKdO0ZWczCAJhmQks0hczgdLibW22uEU3GpGIrFi0IbWMwHfwsi49y7PH2wZJlFSWyCB1CZoXMlxBJ6gi4lmIC&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQFnoECBIQAQ&uoh=1",
+      "displayed_link": "https://www.scribd.com › document › Intern-Training",
+      "favicon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp",
+      "snippet": "The document outlines three types of SBI credit cards: Simply Save, Simply Click, and Pulse, with annual fees and spending requirements for fee waivers.",
+      "snippet_highlighted_words": [
+        "SBI credit cards"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "The document outlines three types of SBI credit cards: Simply Save, Simply Click, and Pulse, with annual fees and spending requirements for fee waivers.",
+          "source_info_link": "https://www.scribd.com/document/985901572/Intern-Training",
+          "icon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqoBL2dvdG8_dXJsPUNBRVNkQUhyT3pBVnk3NmFZei1yRlM3SC1SSFN4MWFFRE9NN2FaSzlRU1FqUm11T0VubEI2ay16dmJyZjBxVzZLTWN0RUNoZlVHZEtkTzBaV2N6Q0FKaG1Ra3MwaGN6Z2RMaWJXMjJ1RVUzR3BHSXJGaTBJYldNd0hmd3NpNDl5N1BIMndaSmxGU1d5Q0IxQ1pvWE1seEJKNmdpNGxtSUMSBBoCCAAa-gMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA1gMIABAAGAAgACoKCgNzYmkVDKSaQCoNCgZjcmVkaXQVVAmZQCoMCgVjYXJkcxX6Fbs_Kh8KBXRlcm1zFWlfSj4aBHRlcm0aC3Rlcm1pbm9sb2d5MqoBL2dvdG8_dXJsPUNBRVNkQUhyT3pBVnk3NmFZei1yRlM3SC1SSFN4MWFFRE9NN2FaSzlRU1FqUm11T0VubEI2ay16dmJyZjBxVzZLTWN0RUNoZlVHZEtkTzBaV2N6Q0FKaG1Ra3MwaGN6Z2RMaWJXMjJ1RVUzR3BHSXJGaTBJYldNd0hmd3NpNDl5N1BIMndaSmxGU1d5Q0IxQ1pvWE1seEJKNmdpNGxtSUM6M1NCSSBDcmVkaXQgQ2FyZCBPcHRpb25zIGFuZCBCZW5lZml0cyB8IFBERiAtIFNjcmliZEKfAVRoZSBkb2N1bWVudCBvdXRsaW5lcyB0aHJlZSB0eXBlcyBvZiA8Yj5TQkkgY3JlZGl0IGNhcmRzPC9iPjogU2ltcGx5IFNhdmUsIFNpbXBseSBDbGljaywgYW5kIFB1bHNlLCB3aXRoIGFubnVhbCBmZWVzIGFuZCBzcGVuZGluZyByZXF1aXJlbWVudHMgZm9yIGZlZSB3YWl2ZXJzLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqoBL2dvdG8_dXJsPUNBRVNkQUhyT3pBVnk3NmFZei1yRlM3SC1SSFN4MWFFRE9NN2FaSzlRU1FqUm11T0VubEI2ay16dmJyZjBxVzZLTWN0RUNoZlVHZEtkTzBaV2N6Q0FKaG1Ra3MwaGN6Z2RMaWJXMjJ1RVUzR3BHSXJGaTBJYldNd0hmd3NpNDl5N1BIMndaSmxGU1d5Q0IxQ1pvWE1seEJKNmdpNGxtSUMSBBoCCAAa-gMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA1gMIABAAGAAgACoKCgNzYmkVDKSaQCoNCgZjcmVkaXQVVAmZQCoMCgVjYXJkcxX6Fbs_Kh8KBXRlcm1zFWlfSj4aBHRlcm0aC3Rlcm1pbm9sb2d5MqoBL2dvdG8_dXJsPUNBRVNkQUhyT3pBVnk3NmFZei1yRlM3SC1SSFN4MWFFRE9NN2FaSzlRU1FqUm11T0VubEI2ay16dmJyZjBxVzZLTWN0RUNoZlVHZEtkTzBaV2N6Q0FKaG1Ra3MwaGN6Z2RMaWJXMjJ1RVUzR3BHSXJGaTBJYldNd0hmd3NpNDl5N1BIMndaSmxGU1d5Q0IxQ1pvWE1seEJKNmdpNGxtSUM6M1NCSSBDcmVkaXQgQ2FyZCBPcHRpb25zIGFuZCBCZW5lZml0cyB8IFBERiAtIFNjcmliZEKfAVRoZSBkb2N1bWVudCBvdXRsaW5lcyB0aHJlZSB0eXBlcyBvZiA8Yj5TQkkgY3JlZGl0IGNhcmRzPC9iPjogU2ltcGx5IFNhdmUsIFNpbXBseSBDbGljaywgYW5kIFB1bHNlLCB3aXRoIGFubnVhbCBmZWVzIGFuZCBzcGVuZGluZyByZXF1aXJlbWVudHMgZm9yIGZlZSB3YWl2ZXJzLiICEAFIAFgAaAA",
+      "source": "Scribd",
+      "read_more_link": "https://www.scribd.com/document/985901572/Intern-Training#:~:text=The%20document%20outlines%20three%20types,spending%20requirements%20for%20fee%20waivers."
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.co.in/search?q=site:sbicard.com+%22SBI+Credit+Cards%22+terms+filetype:pdf&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsbm4UEHfOv4h6Vsecw7MfKWNnMqQ:1791597007678&ei=z5nJat73KMXg2roP4IW92Aw&start=10&sa=N&sstk=AS6-VmLzy-NEIsD_F0TowB6iG9eMXRtZKLjkjOWchBbcjfjkMFQ1itvRMBTBFqFUdAU2K2l1elj68KPLlPacYX_rfE52s6jUa0lWBw&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQ8NMDegQIQBAM",
+    "other_pages": {
+      "2": "https://www.google.co.in/search?q=site:sbicard.com+%22SBI+Credit+Cards%22+terms+filetype:pdf&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsbm4UEHfOv4h6Vsecw7MfKWNnMqQ:1791597007678&ei=z5nJat73KMXg2roP4IW92Aw&start=10&sa=N&sstk=AS6-VmLzy-NEIsD_F0TowB6iG9eMXRtZKLjkjOWchBbcjfjkMFQ1itvRMBTBFqFUdAU2K2l1elj68KPLlPacYX_rfE52s6jUa0lWBw&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQ8tMDegQIQBAE",
+      "3": "https://www.google.co.in/search?q=site:sbicard.com+%22SBI+Credit+Cards%22+terms+filetype:pdf&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsbm4UEHfOv4h6Vsecw7MfKWNnMqQ:1791597007678&ei=z5nJat73KMXg2roP4IW92Aw&start=20&sa=N&sstk=AS6-VmLzy-NEIsD_F0TowB6iG9eMXRtZKLjkjOWchBbcjfjkMFQ1itvRMBTBFqFUdAU2K2l1elj68KPLlPacYX_rfE52s6jUa0lWBw&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQ8tMDegQIQBAG",
+      "4": "https://www.google.co.in/search?q=site:sbicard.com+%22SBI+Credit+Cards%22+terms+filetype:pdf&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsbm4UEHfOv4h6Vsecw7MfKWNnMqQ:1791597007678&ei=z5nJat73KMXg2roP4IW92Aw&start=30&sa=N&sstk=AS6-VmLzy-NEIsD_F0TowB6iG9eMXRtZKLjkjOWchBbcjfjkMFQ1itvRMBTBFqFUdAU2K2l1elj68KPLlPacYX_rfE52s6jUa0lWBw&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQ8tMDegQIQBAI",
+      "5": "https://www.google.co.in/search?q=site:sbicard.com+%22SBI+Credit+Cards%22+terms+filetype:pdf&sca_esv=f63cda19340afddb&hl=en&gl=in&sxsrf=APpeQnsbm4UEHfOv4h6Vsecw7MfKWNnMqQ:1791597007678&ei=z5nJat73KMXg2roP4IW92Aw&start=40&sa=N&sstk=AS6-VmLzy-NEIsD_F0TowB6iG9eMXRtZKLjkjOWchBbcjfjkMFQ1itvRMBTBFqFUdAU2K2l1elj68KPLlPacYX_rfE52s6jUa0lWBw&ved=2ahUKEwiem-T5qq6XAxVFsFYBHeBCD8sQ8tMDegQIQBAK"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SBI+Credit+Cards%22+terms+filetype%3Apdf&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SBI+Credit+Cards%22+terms+filetype%3Apdf&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SBI+Credit+Cards%22+terms+filetype%3Apdf&start=10",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SBI+Credit+Cards%22+terms+filetype%3Apdf&start=20",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SBI+Credit+Cards%22+terms+filetype%3Apdf&start=30",
+      "5": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Asbicard.com+%22SBI+Credit+Cards%22+terms+filetype%3Apdf&start=40"
+    }
+  }
+}

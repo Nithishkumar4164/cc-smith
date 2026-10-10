@@ -1,0 +1,257 @@
+{
+  "_recorded": {
+    "engine": "google",
+    "params": {
+      "gl": "in",
+      "google_domain": "google.co.in",
+      "hl": "en",
+      "q": "site:indusind.bank.in \"OD CC Corporate\""
+    },
+    "at": "2026-10-10T01:50:05.690764+00:00"
+  },
+  "search_metadata": {
+    "id": "6ac999cda3f7300e2fc4d025",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/H4eM6SKLIltR_9FobyOuHWzICcA4QUAK3SvBnou-rcI/6ac999cda3f7300e2fc4d025.json",
+    "markdown_endpoint": "https://serpapi.com/searches/H4eM6SKLIltR_9FobyOuHWzICcA4QUAK3SvBnou-rcI/6ac999cda3f7300e2fc4d025.md",
+    "pixel_position_endpoint": "https://serpapi.com/searches/H4eM6SKLIltR_9FobyOuHWzICcA4QUAK3SvBnou-rcI/6ac999cda3f7300e2fc4d025.json_with_pixel_position",
+    "created_at": "2026-10-10 01:50:05 UTC",
+    "processed_at": "2026-10-10 01:50:05 UTC",
+    "google_url": "https://www.google.co.in/search?q=site%3Aindusind.bank.in+%22OD+CC+Corporate%22&oq=site%3Aindusind.bank.in+%22OD+CC+Corporate%22&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/H4eM6SKLIltR_9FobyOuHWzICcA4QUAK3SvBnou-rcI/6ac999cda3f7300e2fc4d025.html",
+    "total_time_taken": 0.28
+  },
+  "search_parameters": {
+    "device": "desktop",
+    "engine": "google",
+    "gl": "in",
+    "google_domain": "google.co.in",
+    "hl": "en",
+    "q": "site:indusind.bank.in \"OD CC Corporate\""
+  },
+  "search_information": {
+    "query_displayed": "site:indusind.bank.in \"OD CC Corporate\"",
+    "total_results": 7,
+    "time_taken_displayed": 0.15,
+    "organic_results_state": "Results for exact spelling"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "IndusInd Bank OD CC Corporate Credit Card Launch 2026",
+      "link": "https://www.kalkine.co.in/article/announcements/indusind-bank-nseindusindbk-what-is-the-new-odcc-linked-corporate-credit-card",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESuAEB6zswFQ9u1AnC9DkKkACHO1I7yhAuQfb6Oko-TxPmQ_eny0pOXtaA7Ppd0HMZbUvoV9ktbeLcvkIepAGFq3-zK1eLqCEY1ePSP4Kxxd8_Lg6nNBeVu2X35veB7alfoOZhzJejnqmBVSFS54kvibsODTeABSC4cxFiEwsvkKib1Cw292fQvdn_M-eqRjiIYKQfbYiv8UXXzQzTjoe0W6zIvPQpM2rTWCCvd_q3X7830IYZEOZlThXx&ved=2ahUKEwje1tP4qq6XAxU4MVkFHS5uMTkQFnoECB8QAQ&uoh=1",
+      "displayed_link": "https://www.kalkine.co.in › Announcements",
+      "favicon": "https://serpapi.com/images/i/UklGRlABAABXRUJQVlA4IEQBAACQBwCdASogACAAPtEutFooIagoGAEAGglsAJ0yhH-HoFuHaCDAbannzLKAAycZpHJnzfAm3oCCVZobzz8i0XgHxg2wQwAA_vYRF7sQVQd0YLE8lU9gco3g4_c49WH50U4CJxy8MXwRGILZTQFoDVl_UrHFp3NChQnbIArPQkKL-4NvmG8tE4wlWk881PckD8PufMnmiISi7G373ZfnNkVbD1ioH5cLNmPnXfSXnXHEMRNwo9eHZNe4AEaP_qMxsvicU2nsxf7v-soqm3tCcHVSfFR5HfpEpUmHhXTdsPraSZcrIpyU-wtqhs6lREEa9wNoB0MN0WCcSIen0DbNcwYiKE-4N0mfIdC7KCxLQXkOQOUX4Hpu8Y5OechcRyJJkI3__W68S65cnu_TqHwZII7QGFOuJ-e8MdjdJSmJ3mjV6SWEAAA.webp",
+      "date": "11 Sept 2026",
+      "snippet": "The card operates directly on a customer's existing Overdraft or Cash Credit account, removing the need for a separate credit limit or billing ...",
+      "about_this_result": {
+        "source": {
+          "description": "The card operates directly on a customer's existing Overdraft or Cash Credit account, removing the need for a separate credit limit or billing ...",
+          "source_info_link": "https://www.kalkine.co.in/article/announcements/indusind-bank-nseindusindbk-what-is-the-new-odcc-linked-corporate-credit-card",
+          "icon": "https://serpapi.com/images/i/UklGRlABAABXRUJQVlA4IEQBAACQBwCdASogACAAPtEutFooIagoGAEAGglsAJ0yhH-HoFuHaCDAbannzLKAAycZpHJnzfAm3oCCVZobzz8i0XgHxg2wQwAA_vYRF7sQVQd0YLE8lU9gco3g4_c49WH50U4CJxy8MXwRGILZTQFoDVl_UrHFp3NChQnbIArPQkKL-4NvmG8tE4wlWk881PckD8PufMnmiISi7G373ZfnNkVbD1ioH5cLNmPnXfSXnXHEMRNwo9eHZNe4AEaP_qMxsvicU2nsxf7v-soqm3tCcHVSfFR5HfpEpUmHhXTdsPraSZcrIpyU-wtqhs6lREEa9wNoB0MN0WCcSIen0DbNcwYiKE-4N0mfIdC7KCxLQXkOQOUX4Hpu8Y5OechcRyJJkI3__W68S65cnu_TqHwZII7QGFOuJ-e8MdjdJSmJ3mjV6SWEAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CoYCL2dvdG8_dXJsPUNBRVN1QUVCNnpzd0ZROXUxQW5DOURrS2tBQ0hPMUk3eWhBdVFmYjZPa28tVHhQbVFfZW55MHBPWHRhQTdQcGQwSE1aYlV2b1Y5a3RiZUxjdmtJZXBBR0ZxMy16SzFlTHFDRVkxZVBTUDRLeHhkOF9MZzZuTkJlVnUyWDM1dmVCN2FsZm9PWmh6SmVqbnFtQlZTRlM1NGt2aWJzT0RUZUFCU0M0Y3hGaUV3c3ZrS2liMUN3MjkyZlF2ZG5fTS1lcVJqaUlZS1FmYllpdjhVWFh6UXpUam9lMFc2ekl2UFFwTTJyVFdDQ3ZkX3EzWDc4MzBJWVpFT1psVGhYeBIEGgIIABq5BBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCVBAgAEAAYACAAKgkKAm9kFcOgbkAqCQoCY2MVw6BuQCoQCgljb3Jwb3JhdGUVjOaKQDKGAi9nb3RvP3VybD1DQUVTdUFFQjZ6c3dGUTl1MUFuQzlEa0trQUNITzFJN3loQXVRZmI2T2tvLVR4UG1RX2VueTBwT1h0YUE3UHBkMEhNWmJVdm9WOWt0YmVMY3ZrSWVwQUdGcTMteksxZUxxQ0VZMWVQU1A0S3h4ZDhfTGc2bk5CZVZ1MlgzNXZlQjdhbGZvT1poekplam5xbUJWU0ZTNTRrdmlic09EVGVBQlNDNGN4RmlFd3N2a0tpYjFDdzI5MmZRdmRuX00tZXFSamlJWUtRZmJZaXY4VVhYelF6VGpvZTBXNnpJdlBRcE0yclRXQ0N2ZF9xM1g3ODMwSVlaRU9abFRoWHg6PEluZHVzSW5kIEJhbmsgPGI-T0QgQ0MgQ29ycG9yYXRlPC9iPiBDcmVkaXQgQ2FyZCBMYXVuY2ggMjAyNkKbAVRoZSBjYXJkIG9wZXJhdGVzIGRpcmVjdGx5IG9uIGEgY3VzdG9tZXImIzM5O3MgZXhpc3RpbmcgT3ZlcmRyYWZ0IG9yIENhc2ggQ3JlZGl0IGFjY291bnQsIHJlbW92aW5nIHRoZSBuZWVkIGZvciBhIHNlcGFyYXRlIGNyZWRpdCBsaW1pdCBvciBiaWxsaW5nJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CoYCL2dvdG8_dXJsPUNBRVN1QUVCNnpzd0ZROXUxQW5DOURrS2tBQ0hPMUk3eWhBdVFmYjZPa28tVHhQbVFfZW55MHBPWHRhQTdQcGQwSE1aYlV2b1Y5a3RiZUxjdmtJZXBBR0ZxMy16SzFlTHFDRVkxZVBTUDRLeHhkOF9MZzZuTkJlVnUyWDM1dmVCN2FsZm9PWmh6SmVqbnFtQlZTRlM1NGt2aWJzT0RUZUFCU0M0Y3hGaUV3c3ZrS2liMUN3MjkyZlF2ZG5fTS1lcVJqaUlZS1FmYllpdjhVWFh6UXpUam9lMFc2ekl2UFFwTTJyVFdDQ3ZkX3EzWDc4MzBJWVpFT1psVGhYeBIEGgIIABq5BBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCVBAgAEAAYACAAKgkKAm9kFcOgbkAqCQoCY2MVw6BuQCoQCgljb3Jwb3JhdGUVjOaKQDKGAi9nb3RvP3VybD1DQUVTdUFFQjZ6c3dGUTl1MUFuQzlEa0trQUNITzFJN3loQXVRZmI2T2tvLVR4UG1RX2VueTBwT1h0YUE3UHBkMEhNWmJVdm9WOWt0YmVMY3ZrSWVwQUdGcTMteksxZUxxQ0VZMWVQU1A0S3h4ZDhfTGc2bk5CZVZ1MlgzNXZlQjdhbGZvT1poekplam5xbUJWU0ZTNTRrdmlic09EVGVBQlNDNGN4RmlFd3N2a0tpYjFDdzI5MmZRdmRuX00tZXFSamlJWUtRZmJZaXY4VVhYelF6VGpvZTBXNnpJdlBRcE0yclRXQ0N2ZF9xM1g3ODMwSVlaRU9abFRoWHg6PEluZHVzSW5kIEJhbmsgPGI-T0QgQ0MgQ29ycG9yYXRlPC9iPiBDcmVkaXQgQ2FyZCBMYXVuY2ggMjAyNkKbAVRoZSBjYXJkIG9wZXJhdGVzIGRpcmVjdGx5IG9uIGEgY3VzdG9tZXImIzM5O3MgZXhpc3RpbmcgT3ZlcmRyYWZ0IG9yIENhc2ggQ3JlZGl0IGFjY291bnQsIHJlbW92aW5nIHRoZSBuZWVkIGZvciBhIHNlcGFyYXRlIGNyZWRpdCBsaW1pdCBvciBiaWxsaW5nJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "Kalkine India",
+      "read_more_link": "https://www.kalkine.co.in/article/announcements/indusind-bank-nseindusindbk-what-is-the-new-odcc-linked-corporate-credit-card#:~:text=The%20card%20operates%20directly%20on,credit%20limit%20or%20billing%20cycle."
+    },
+    {
+      "position": 2,
+      "title": "Finacle User Guide: Key Functions | PDF",
+      "link": "https://www.scribd.com/document/525694289/Kupdf-net-Finacle-User-Guide-Idbi",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEShgEB6zswFdWPoxZDOUeCNheQXjww5iv738sDdjhe9daRZ1gaxV1I1T39ozGJ70Ufw2Nj5OAmCXNZZadu519H-TPlFDDmDpzppSQwB0uyQp8svpwPaqAKH8c8n9FxSgdIv3o1Y_j2Xil4R3B1lwNr8pHUxelgP_OreJZPCVPNsqgiWE-xfG-EMg&ved=2ahUKEwje1tP4qq6XAxU4MVkFHS5uMTkQFnoECCIQAQ&uoh=1",
+      "displayed_link": "https://www.scribd.com › document › Kupdf-net-Finacl...",
+      "favicon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp",
+      "snippet": "OD / CC ( CORPORATE) 65500 OD AGAINST FD-CORP CLODT ODA 65510 CASH CREDIT-CORP CLCCA CCA 65730 IBPC-WITH RISK CORP CICWR CCA 65740 IBPC-WITHOUT RISK CORP ...",
+      "snippet_highlighted_words": [
+        "OD / CC ( CORPORATE"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "OD / CC ( CORPORATE) 65500 OD AGAINST FD-CORP CLODT ODA 65510 CASH CREDIT-CORP CLCCA CCA 65730 IBPC-WITH RISK CORP CICWR CCA 65740 IBPC-WITHOUT RISK CORP ...",
+          "source_info_link": "https://www.scribd.com/document/525694289/Kupdf-net-Finacle-User-Guide-Idbi",
+          "icon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsQBL2dvdG8_dXJsPUNBRVNoZ0VCNnpzd0ZkV1BveFpET1VlQ05oZVFYand3NWl2NzM4c0RkamhlOWRhUloxZ2F4VjFJMVQzOW96R0o3MFVmdzJOajVPQW1DWE5aWmFkdTUxOUgtVFBsRkREbURwenBwU1F3QjB1eVFwOHN2cHdQYXFBS0g4YzhuOUZ4U2dkSXYzbzFZX2oyWGlsNFIzQjFsd05yOHBIVXhlbGdQX09yZUpaUENWUE5zcWdpV0UteGZHLUVNZxIEGgIIABr7AxICCAAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQNUDCAAQABgAIAAqCQoCb2QVK3vqPioJCgJjYxW2T1k-KhAKCWNvcnBvcmF0ZRXXkrY-MsQBL2dvdG8_dXJsPUNBRVNoZ0VCNnpzd0ZkV1BveFpET1VlQ05oZVFYand3NWl2NzM4c0RkamhlOWRhUloxZ2F4VjFJMVQzOW96R0o3MFVmdzJOajVPQW1DWE5aWmFkdTUxOUgtVFBsRkREbURwenBwU1F3QjB1eVFwOHN2cHdQYXFBS0g4YzhuOUZ4U2dkSXYzbzFZX2oyWGlsNFIzQjFsd05yOHBIVXhlbGdQX09yZUpaUENWUE5zcWdpV0UteGZHLUVNZzowRmluYWNsZSBVc2VyIEd1aWRlOiBLZXkgRnVuY3Rpb25zIHwgUERGIC0gU2NyaWJkQqkBPGI-T0QgLyBDQyAoIENPUlBPUkFURTwvYj4pIDY1NTAwIE9EIEFHQUlOU1QgRkQtQ09SUCBDTE9EVCBPREEgNjU1MTAgQ0FTSCBDUkVESVQtQ09SUCBDTENDQSBDQ0EgNjU3MzAgSUJQQy1XSVRIIFJJU0sgQ09SUCBDSUNXUiBDQ0EgNjU3NDAgSUJQQy1XSVRIT1VUIFJJU0sgQ09SUCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsQBL2dvdG8_dXJsPUNBRVNoZ0VCNnpzd0ZkV1BveFpET1VlQ05oZVFYand3NWl2NzM4c0RkamhlOWRhUloxZ2F4VjFJMVQzOW96R0o3MFVmdzJOajVPQW1DWE5aWmFkdTUxOUgtVFBsRkREbURwenBwU1F3QjB1eVFwOHN2cHdQYXFBS0g4YzhuOUZ4U2dkSXYzbzFZX2oyWGlsNFIzQjFsd05yOHBIVXhlbGdQX09yZUpaUENWUE5zcWdpV0UteGZHLUVNZxIEGgIIABr7AxICCAAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQNUDCAAQABgAIAAqCQoCb2QVK3vqPioJCgJjYxW2T1k-KhAKCWNvcnBvcmF0ZRXXkrY-MsQBL2dvdG8_dXJsPUNBRVNoZ0VCNnpzd0ZkV1BveFpET1VlQ05oZVFYand3NWl2NzM4c0RkamhlOWRhUloxZ2F4VjFJMVQzOW96R0o3MFVmdzJOajVPQW1DWE5aWmFkdTUxOUgtVFBsRkREbURwenBwU1F3QjB1eVFwOHN2cHdQYXFBS0g4YzhuOUZ4U2dkSXYzbzFZX2oyWGlsNFIzQjFsd05yOHBIVXhlbGdQX09yZUpaUENWUE5zcWdpV0UteGZHLUVNZzowRmluYWNsZSBVc2VyIEd1aWRlOiBLZXkgRnVuY3Rpb25zIHwgUERGIC0gU2NyaWJkQqkBPGI-T0QgLyBDQyAoIENPUlBPUkFURTwvYj4pIDY1NTAwIE9EIEFHQUlOU1QgRkQtQ09SUCBDTE9EVCBPREEgNjU1MTAgQ0FTSCBDUkVESVQtQ09SUCBDTENDQSBDQ0EgNjU3MzAgSUJQQy1XSVRIIFJJU0sgQ09SUCBDSUNXUiBDQ0EgNjU3NDAgSUJQQy1XSVRIT1VUIFJJU0sgQ09SUCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Scribd",
+      "read_more_link": "https://www.scribd.com/document/525694289/Kupdf-net-Finacle-User-Guide-Idbi#:~:text=OD%20%2F%20CC%20(%20CORPORATE),IBPC%2DWITHOUT%20RISK%20CORP%20CICOR%20CCA"
+    },
+    {
+      "position": 3,
+      "title": "Finacle User Guide: Key Functions & Menus | PDF",
+      "link": "https://www.scribd.com/document/329985534/Finacle-User-Guide-IDBI",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESfAHrOzAVaSVJ5xXvns2iEubjDBVWJmzMkEeF_blOpVcAPIzsAdHYeXCPOhyPn41cB1futtw-WtoKHpRep4bmpebIGfJg5mXbtMikaaAfBjrTQFtJPH-x3q6ws4_kKGFBwi8qja5R7KnY7RzOwext9HmiBHVeAwwZtlJ4NBo&ved=2ahUKEwje1tP4qq6XAxU4MVkFHS5uMTkQFnoECCgQAQ&uoh=1",
+      "displayed_link": "https://www.scribd.com › document › Finacle-User-Gui...",
+      "favicon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp",
+      "snippet": "OD / CC ( CORPORATE) OD AGAINST FD-CORP CASH CREDIT-CORP IBPC-WITH RISK CORP IBPC-WITHOUT RISK CORP CUSTOMER SHARE LOANS-CORP OD AGAINST OTHER SECURITIES",
+      "snippet_highlighted_words": [
+        "OD / CC ( CORPORATE"
+      ],
+      "rich_snippet": {
+        "top": {
+          "detected_extensions": {
+            "rating": 5.0,
+            "reviews": 4
+          },
+          "extensions": [
+            "5.0(4)"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "OD / CC ( CORPORATE) OD AGAINST FD-CORP CASH CREDIT-CORP IBPC-WITH RISK CORP IBPC-WITHOUT RISK CORP CUSTOMER SHARE LOANS-CORP OD AGAINST OTHER SECURITIES",
+          "source_info_link": "https://www.scribd.com/document/329985534/Finacle-User-Guide-IDBI",
+          "icon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrUBL2dvdG8_dXJsPUNBRVNmQUhyT3pBVmFTVko1eFh2bnMyaUV1YmpEQlZXSm16TWtFZUZfYmxPcFZjQVBJenNBZEhZZVhDUE9oeVBuNDFjQjFmdXR0dy1XdG9LSHBSZXA0Ym1wZWJJR2ZKZzVtWGJ0TWlrYWFBZkJqclRRRnRKUEgteDNxNndzNF9rS0dGQndpOHFqYTVSN0tuWTdSek93ZXh0OUhtaUJIVmVBd3dadGxKNE5CbxIEGgIIABrvAxICCAAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQMkDCAAQABgAIAAqCQoCb2QVeVfpPioJCgJjYxUxcks-KhAKCWNvcnBvcmF0ZRWmeJ0-MrUBL2dvdG8_dXJsPUNBRVNmQUhyT3pBVmFTVko1eFh2bnMyaUV1YmpEQlZXSm16TWtFZUZfYmxPcFZjQVBJenNBZEhZZVhDUE9oeVBuNDFjQjFmdXR0dy1XdG9LSHBSZXA0Ym1wZWJJR2ZKZzVtWGJ0TWlrYWFBZkJqclRRRnRKUEgteDNxNndzNF9rS0dGQndpOHFqYTVSN0tuWTdSek93ZXh0OUhtaUJIVmVBd3dadGxKNE5Cbzo8RmluYWNsZSBVc2VyIEd1aWRlOiBLZXkgRnVuY3Rpb25zICZhbXA7IE1lbnVzIHwgUERGIC0gU2NyaWJkQqABPGI-T0QgLyBDQyAoIENPUlBPUkFURTwvYj4pIE9EIEFHQUlOU1QgRkQtQ09SUCBDQVNIIENSRURJVC1DT1JQIElCUEMtV0lUSCBSSVNLIENPUlAgSUJQQy1XSVRIT1VUIFJJU0sgQ09SUCBDVVNUT01FUiBTSEFSRSBMT0FOUy1DT1JQIE9EIEFHQUlOU1QgT1RIRVIgU0VDVVJJVElFUyICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrUBL2dvdG8_dXJsPUNBRVNmQUhyT3pBVmFTVko1eFh2bnMyaUV1YmpEQlZXSm16TWtFZUZfYmxPcFZjQVBJenNBZEhZZVhDUE9oeVBuNDFjQjFmdXR0dy1XdG9LSHBSZXA0Ym1wZWJJR2ZKZzVtWGJ0TWlrYWFBZkJqclRRRnRKUEgteDNxNndzNF9rS0dGQndpOHFqYTVSN0tuWTdSek93ZXh0OUhtaUJIVmVBd3dadGxKNE5CbxIEGgIIABrvAxICCAAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQMkDCAAQABgAIAAqCQoCb2QVeVfpPioJCgJjYxUxcks-KhAKCWNvcnBvcmF0ZRWmeJ0-MrUBL2dvdG8_dXJsPUNBRVNmQUhyT3pBVmFTVko1eFh2bnMyaUV1YmpEQlZXSm16TWtFZUZfYmxPcFZjQVBJenNBZEhZZVhDUE9oeVBuNDFjQjFmdXR0dy1XdG9LSHBSZXA0Ym1wZWJJR2ZKZzVtWGJ0TWlrYWFBZkJqclRRRnRKUEgteDNxNndzNF9rS0dGQndpOHFqYTVSN0tuWTdSek93ZXh0OUhtaUJIVmVBd3dadGxKNE5Cbzo8RmluYWNsZSBVc2VyIEd1aWRlOiBLZXkgRnVuY3Rpb25zICZhbXA7IE1lbnVzIHwgUERGIC0gU2NyaWJkQqABPGI-T0QgLyBDQyAoIENPUlBPUkFURTwvYj4pIE9EIEFHQUlOU1QgRkQtQ09SUCBDQVNIIENSRURJVC1DT1JQIElCUEMtV0lUSCBSSVNLIENPUlAgSUJQQy1XSVRIT1VUIFJJU0sgQ09SUCBDVVNUT01FUiBTSEFSRSBMT0FOUy1DT1JQIE9EIEFHQUlOU1QgT1RIRVIgU0VDVVJJVElFUyICEAFIAFgAaAA",
+      "source": "Scribd",
+      "read_more_link": "https://www.scribd.com/document/329985534/Finacle-User-Guide-IDBI#:~:text=OD%20%2F%20CC%20(%20CORPORATE),OD%20AGAINST%20OTHER%20SECURITIES"
+    },
+    {
+      "position": 4,
+      "title": "Tushar Vivek - Key Account Manager at HDFC Bank",
+      "link": "https://in.linkedin.com/in/tusharvivek",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESYQHrOzAVZeu9inhwctNUaEhUSBgqlmAVHyJE1Q449xAVy-IYPx7ir5rTWObLn2v4jEZcyHCcI3s9QFXeVxzrEh2zOTllahirYI9c5BoUPXxXbQfupxm3JEflFqrBosyJqNw&ved=2ahUKEwje1tP4qq6XAxU4MVkFHS5uMTkQFnoECCUQAQ&uoh=1",
+      "displayed_link": "230+ followers",
+      "favicon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp",
+      "snippet": "* Promote and sell a comprehensive range of banking products and services, including current accounts, loans, OD/CC, corporate credit card, payment solutions, ...",
+      "snippet_highlighted_words": [
+        "OD/CC, corporate"
+      ],
+      "rich_snippet": {
+        "top": {
+          "extensions": [
+            "Noida, Uttar Pradesh, India",
+            "Key Account Manager",
+            "HDFC Bank"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "* Promote and sell a comprehensive range of banking products and services, including current accounts, loans, OD/CC, corporate credit card, payment solutions, ...",
+          "source_info_link": "https://in.linkedin.com/in/tusharvivek",
+          "icon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpEBL2dvdG8_dXJsPUNBRVNZUUhyT3pBVlpldTlpbmh3Y3ROVWFFaFVTQmdxbG1BVkh5SkUxUTQ0OXhBVnktSVlQeDdpcjVyVFdPYkxuMnY0akVaY3lIQ2NJM3M5UUZYZVZ4enJFaDJ6T1RsbGFoaXJZSTljNUJvVVBYeFhiUWZ1cHhtM0pFZmxGcXJCb3N5SnFOdxIEGgIIABrVAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCxAwgAEAAYACAAKgkKAm9kFX2HPj0qCQoCY2MVfYc-PSoQCgljb3Jwb3JhdGUVfYc-PTKRAS9nb3RvP3VybD1DQUVTWVFIck96QVZaZXU5aW5od2N0TlVhRWhVU0JncWxtQVZIeUpFMVE0NDl4QVZ5LUlZUHg3aXI1clRXT2JMbjJ2NGpFWmN5SENjSTNzOVFGWGVWeHpyRWgyek9UbGxhaGlyWUk5YzVCb1VQWHhYYlFmdXB4bTNKRWZsRnFyQm9zeUpxTnc6OlR1c2hhciBWaXZlayAtIEtleSBBY2NvdW50IE1hbmFnZXIgYXQgSERGQyBCYW5rIC0gTGlua2VkSW5CrgEqIFByb21vdGUgYW5kIHNlbGwgYSBjb21wcmVoZW5zaXZlIHJhbmdlIG9mIGJhbmtpbmcgcHJvZHVjdHMgYW5kIHNlcnZpY2VzLCBpbmNsdWRpbmcgY3VycmVudCBhY2NvdW50cywgbG9hbnMsIDxiPk9EL0NDLCBjb3Jwb3JhdGU8L2I-IGNyZWRpdCBjYXJkLCBwYXltZW50IHNvbHV0aW9ucywmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpEBL2dvdG8_dXJsPUNBRVNZUUhyT3pBVlpldTlpbmh3Y3ROVWFFaFVTQmdxbG1BVkh5SkUxUTQ0OXhBVnktSVlQeDdpcjVyVFdPYkxuMnY0akVaY3lIQ2NJM3M5UUZYZVZ4enJFaDJ6T1RsbGFoaXJZSTljNUJvVVBYeFhiUWZ1cHhtM0pFZmxGcXJCb3N5SnFOdxIEGgIIABrVAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCxAwgAEAAYACAAKgkKAm9kFX2HPj0qCQoCY2MVfYc-PSoQCgljb3Jwb3JhdGUVfYc-PTKRAS9nb3RvP3VybD1DQUVTWVFIck96QVZaZXU5aW5od2N0TlVhRWhVU0JncWxtQVZIeUpFMVE0NDl4QVZ5LUlZUHg3aXI1clRXT2JMbjJ2NGpFWmN5SENjSTNzOVFGWGVWeHpyRWgyek9UbGxhaGlyWUk5YzVCb1VQWHhYYlFmdXB4bTNKRWZsRnFyQm9zeUpxTnc6OlR1c2hhciBWaXZlayAtIEtleSBBY2NvdW50IE1hbmFnZXIgYXQgSERGQyBCYW5rIC0gTGlua2VkSW5CrgEqIFByb21vdGUgYW5kIHNlbGwgYSBjb21wcmVoZW5zaXZlIHJhbmdlIG9mIGJhbmtpbmcgcHJvZHVjdHMgYW5kIHNlcnZpY2VzLCBpbmNsdWRpbmcgY3VycmVudCBhY2NvdW50cywgbG9hbnMsIDxiPk9EL0NDLCBjb3Jwb3JhdGU8L2I-IGNyZWRpdCBjYXJkLCBwYXltZW50IHNvbHV0aW9ucywmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "LinkedIn · Tushar Vivek",
+      "read_more_link": "https://in.linkedin.com/in/tusharvivek#:~:text=Deputy%20Manager"
+    },
+    {
+      "position": 5,
+      "title": "Gold Metal Loan Interest Rates Explained | PDF",
+      "link": "https://www.scribd.com/document/923210124/Gold-Metal-Loan-as-a-Working",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESgQEB6zswFctgFEjvuT98gs6g0y-_Frn7eik8vgy8e9gJydpFHJHrLk7_ZhgLIVgVz_DZoBqFOuJt0zR8SVvMQ-xwggfH7TsjjBoCx0AqXP4WuQdoLAcsinHpuYLHn5ITh8P0wFhnC5NH0k0OLAfAhusSlhYY-BjQq0Afhs-CnKDXpn8&ved=2ahUKEwje1tP4qq6XAxU4MVkFHS5uMTkQFnoECCAQAQ&uoh=1",
+      "displayed_link": "https://www.scribd.com › Gold-Metal-Loan-as-a-Working",
+      "favicon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp",
+      "snippet": "OD/CC/corporate loans. the Bank as a security for the gold loan availed. ¾ Hedging mechanisms : The GML acts as a hedging ¾ The Custom duty is collected on ...",
+      "snippet_highlighted_words": [
+        "OD/CC/corporate"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "OD/CC/corporate loans. the Bank as a security for the gold loan availed. ¾ Hedging mechanisms : The GML acts as a hedging ¾ The Custom duty is collected on ...",
+          "source_info_link": "https://www.scribd.com/document/923210124/Gold-Metal-Loan-as-a-Working",
+          "icon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cr0BL2dvdG8_dXJsPUNBRVNnUUVCNnpzd0ZjdGdGRWp2dVQ5OGdzNmcweS1fRnJuN2Vpazh2Z3k4ZTlnSnlkcEZISkhyTGs3X1poZ0xJVmdWel9EWm9CcUZPdUp0MHpSOFNWdk1RLXh3Z2dmSDdUc2pqQm9DeDBBcVhQNFd1UWRvTEFjc2luSHB1WUxIbjVJVGg4UDB3RmhuQzVOSDBrME9MQWZBaHVzU2xoWVktQmpRcTBBZmhzLUNuS0RYcG44EgQaAggAGv0DEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQNkDCAAQABgAIAAqCQoCb2QVg6QcPioJCgJjYxWDpBw-KhAKCWNvcnBvcmF0ZRWDpBw-Mr0BL2dvdG8_dXJsPUNBRVNnUUVCNnpzd0ZjdGdGRWp2dVQ5OGdzNmcweS1fRnJuN2Vpazh2Z3k4ZTlnSnlkcEZISkhyTGs3X1poZ0xJVmdWel9EWm9CcUZPdUp0MHpSOFNWdk1RLXh3Z2dmSDdUc2pqQm9DeDBBcVhQNFd1UWRvTEFjc2luSHB1WUxIbjVJVGg4UDB3RmhuQzVOSDBrME9MQWZBaHVzU2xoWVktQmpRcTBBZmhzLUNuS0RYcG44OjdHb2xkIE1ldGFsIExvYW4gSW50ZXJlc3QgUmF0ZXMgRXhwbGFpbmVkIHwgUERGIC0gU2NyaWJkQq0BPGI-T0QvQ0MvY29ycG9yYXRlPC9iPiBsb2Fucy4gdGhlIEJhbmsgYXMgYSBzZWN1cml0eSBmb3IgdGhlIGdvbGQgbG9hbiBhdmFpbGVkLiDCviBIZWRnaW5nIG1lY2hhbmlzbXMgOiBUaGUgR01MIGFjdHMgYXMgYSBoZWRnaW5nIMK-IFRoZSBDdXN0b20gZHV0eSBpcyBjb2xsZWN0ZWQgb24mbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cr0BL2dvdG8_dXJsPUNBRVNnUUVCNnpzd0ZjdGdGRWp2dVQ5OGdzNmcweS1fRnJuN2Vpazh2Z3k4ZTlnSnlkcEZISkhyTGs3X1poZ0xJVmdWel9EWm9CcUZPdUp0MHpSOFNWdk1RLXh3Z2dmSDdUc2pqQm9DeDBBcVhQNFd1UWRvTEFjc2luSHB1WUxIbjVJVGg4UDB3RmhuQzVOSDBrME9MQWZBaHVzU2xoWVktQmpRcTBBZmhzLUNuS0RYcG44EgQaAggAGv0DEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQNkDCAAQABgAIAAqCQoCb2QVg6QcPioJCgJjYxWDpBw-KhAKCWNvcnBvcmF0ZRWDpBw-Mr0BL2dvdG8_dXJsPUNBRVNnUUVCNnpzd0ZjdGdGRWp2dVQ5OGdzNmcweS1fRnJuN2Vpazh2Z3k4ZTlnSnlkcEZISkhyTGs3X1poZ0xJVmdWel9EWm9CcUZPdUp0MHpSOFNWdk1RLXh3Z2dmSDdUc2pqQm9DeDBBcVhQNFd1UWRvTEFjc2luSHB1WUxIbjVJVGg4UDB3RmhuQzVOSDBrME9MQWZBaHVzU2xoWVktQmpRcTBBZmhzLUNuS0RYcG44OjdHb2xkIE1ldGFsIExvYW4gSW50ZXJlc3QgUmF0ZXMgRXhwbGFpbmVkIHwgUERGIC0gU2NyaWJkQq0BPGI-T0QvQ0MvY29ycG9yYXRlPC9iPiBsb2Fucy4gdGhlIEJhbmsgYXMgYSBzZWN1cml0eSBmb3IgdGhlIGdvbGQgbG9hbiBhdmFpbGVkLiDCviBIZWRnaW5nIG1lY2hhbmlzbXMgOiBUaGUgR01MIGFjdHMgYXMgYSBoZWRnaW5nIMK-IFRoZSBDdXN0b20gZHV0eSBpcyBjb2xsZWN0ZWQgb24mbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Scribd",
+      "read_more_link": "https://www.scribd.com/document/923210124/Gold-Metal-Loan-as-a-Working#:~:text=OD%2FCC%2Fcorporate%20loans.%20the%20Bank%20as,collected%20on%20actuals%20paid%20for"
+    },
+    {
+      "position": 6,
+      "title": "Platí LCC? : r/Aupairs",
+      "link": "https://www.reddit.com/r/Aupairs/comments/1iy166p/lcc_pay/?tl=cs",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESewHrOzAVuoTAQkLr-xS2gpZ73M8bbz8IOa63NnSCpcITGOlhdniuXfvpPY-dtQgVrMIIbaixnGN4mwV-K6m5170xnyrcbnC7t8OG-FM6UxxGuvi6TiDhZOOjZbCZ5RTXCeqYGA2oJ2x2oXmkWpDyYvy09vjuBXzuNUfaMw&ved=2ahUKEwje1tP4qq6XAxU4MVkFHS5uMTkQFnoECCsQAQ&uoh=1",
+      "displayed_link": "10+ comments · 1 year ago",
+      "favicon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp",
+      "snippet": "Naše LCC je k ničemu. Víme to. Naše au pairky zjistily to samé a radši chodí na akce jiných místních LCC. Nikdy jsme se s naší LCC ...",
+      "about_this_result": {
+        "source": {
+          "description": "Měl bys dostávat průzkumy od CC corporate a ty se rozhodně sledují full time zaměstnanci CC, kteří jsou přímí manažeři LCCs. MyDogIsCute1234.",
+          "source_info_link": "https://www.reddit.com/r/Aupairs/comments/1iy166p/lcc_pay/?tl=cs",
+          "icon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrQBL2dvdG8_dXJsPUNBRVNld0hyT3pBVnVvVEFRa0xyLXhTMmdwWjczTThiYno4SU9hNjNOblNDcGNJVEdPbGhkbml1WGZ2cFBZLWR0UWdWck1JSWJhaXhuR040bXdWLUs2bTUxNzB4bnlyY2JuQzd0OE9HLUZNNlV4eEd1dmk2VGlEaFpPT2paYkNaNVJUWENlcVlHQTJvSjJ4Mm9YbWtXcER5WXZ5MDl2anVCWHp1TlVmYU13EgQaAggAGtMDEgIIABoAIgAqADIGCAISAmluOgBCBAgCEABKAFoAcgB6AIJArQMIABAAGAAgACoJCgJvZBWbJSs_KgkKAmNjFQ0CPj8qEAoJY29ycG9yYXRlFTwynD4ytAEvZ290bz91cmw9Q0FFU2V3SHJPekFWdW9UQVFrTHIteFMyZ3BaNzNNOGJiejhJT2E2M05uU0NwY0lUR09saGRuaXVYZnZwUFktZHRRZ1ZyTUlJYmFpeG5HTjRtd1YtSzZtNTE3MHhueXJjYm5DN3Q4T0ctRk02VXh4R3V2aTZUaURoWk9PalpiQ1o1UlRYQ2VxWUdBMm9KMngyb1hta1dwRHlZdnkwOXZqdUJYenVOVWZhTXc6IFBsYXTDrSBMQ0M_IDogci9BdXBhaXJzIC0gUmVkZGl0QqEBTcSbbCBieXMgZG9zdMOhdmF0IHByxa96a3VteSA8Yj5vZCBDQyBjb3Jwb3JhdGU8L2I-IGEgdHkgc2Ugcm96aG9kbsSbIHNsZWR1asOtIGZ1bGwgdGltZSB6YW3Em3N0bmFuY2kgQ0MsIGt0ZcWZw60ganNvdSBwxZnDrW3DrSBtYW5hxb5lxZlpIExDQ3MuIE15RG9nSXNDdXRlMTIzNC4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrQBL2dvdG8_dXJsPUNBRVNld0hyT3pBVnVvVEFRa0xyLXhTMmdwWjczTThiYno4SU9hNjNOblNDcGNJVEdPbGhkbml1WGZ2cFBZLWR0UWdWck1JSWJhaXhuR040bXdWLUs2bTUxNzB4bnlyY2JuQzd0OE9HLUZNNlV4eEd1dmk2VGlEaFpPT2paYkNaNVJUWENlcVlHQTJvSjJ4Mm9YbWtXcER5WXZ5MDl2anVCWHp1TlVmYU13EgQaAggAGtMDEgIIABoAIgAqADIGCAISAmluOgBCBAgCEABKAFoAcgB6AIJArQMIABAAGAAgACoJCgJvZBWbJSs_KgkKAmNjFQ0CPj8qEAoJY29ycG9yYXRlFTwynD4ytAEvZ290bz91cmw9Q0FFU2V3SHJPekFWdW9UQVFrTHIteFMyZ3BaNzNNOGJiejhJT2E2M05uU0NwY0lUR09saGRuaXVYZnZwUFktZHRRZ1ZyTUlJYmFpeG5HTjRtd1YtSzZtNTE3MHhueXJjYm5DN3Q4T0ctRk02VXh4R3V2aTZUaURoWk9PalpiQ1o1UlRYQ2VxWUdBMm9KMngyb1hta1dwRHlZdnkwOXZqdUJYenVOVWZhTXc6IFBsYXTDrSBMQ0M_IDogci9BdXBhaXJzIC0gUmVkZGl0QqEBTcSbbCBieXMgZG9zdMOhdmF0IHByxa96a3VteSA8Yj5vZCBDQyBjb3Jwb3JhdGU8L2I-IGEgdHkgc2Ugcm96aG9kbsSbIHNsZWR1asOtIGZ1bGwgdGltZSB6YW3Em3N0bmFuY2kgQ0MsIGt0ZcWZw60ganNvdSBwxZnDrW3DrSBtYW5hxb5lxZlpIExDQ3MuIE15RG9nSXNDdXRlMTIzNC4iAhABSABYAGgA",
+      "source": "Reddit · r/Aupairs"
+    },
+    {
+      "position": 7,
+      "title": "Finacle User Guide Idbi",
+      "link": "https://pdfcoffee.com/finacle-user-guide-idbi-2-pdf-free.html",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESeAHrOzAVsYqURM-Mf7InWFcgbfG7EFYlCYigC6J6X5pMrl5dXGE9di3YuWu9_tSEcH4ybWJj8t3yEFr7DASbtjKwD7QkpzxmvO_P7KQnT_1MiO24XFWG_wNIUE4n2IaVbnRc0CGGPfm0VFlsbNtwnFtrlrhnWNzomw&ved=2ahUKEwje1tP4qq6XAxU4MVkFHS5uMTkQFnoECCMQAQ&uoh=1",
+      "displayed_link": "https://pdfcoffee.com › finacle-user-guide-idbi-2-pdf-free",
+      "favicon": "https://serpapi.com/images/i/UklGRn4BAABXRUJQVlA4IHIBAACwBwCdASocABwAPtEutFooIagoGAEAGglsAJ0y434nBDwFuA3is7AawLfXVTqlULsVHCB14ihb8xiwMR3adGj3NJLJXQAAAP72EjPk4eevYVtJ43FkVtMmwkNy-fyz84LojLdyul8NVL2tgV4D_s_fihyrLr5sb861L-Vymb3vtABTZhTwjyHQiSTkUGNR3Db6pecJjjfdg7xotqgKitR_9d_vC2H1h90HG8WyNFDp3yJwA5s7pdq7cEA-WSjQoWz3lWu9dXy4RZzNjM5HfjPxfz1NK12u4ulRZHmDlpuL5-VQdyPYlx_AdjyBHce7IlhPBs9DWx1iQVXjhXGcDi5n-i4jIPR46ZAHZhr_Hd-00m2NaSp51QnD1cZdCs5yI7OAsja6Cp1510WQyJpwKSdZ5hRU1sNvVb8q43Qb9ejPND458xlkXBs3L17EhhV721o-v_Ugvx-mS_gWnIeI8sCXqL8iU_Ja_UH_J8YzSjGpfgAA.webp",
+      "snippet": "OD / CC ( CORPORATE) OD AGAINST FD-CORP CASH CREDIT-CORP IBPC-WITH RISK CORP IBPC-WITHOUT RISK CORP CUSTOMER SHARE LOANS-CORP OD AGAINST OTHER SECURITIES ...",
+      "snippet_highlighted_words": [
+        "OD / CC ( CORPORATE"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "OD / CC ( CORPORATE) OD AGAINST FD-CORP CASH CREDIT-CORP IBPC-WITH RISK CORP IBPC-WITHOUT RISK CORP CUSTOMER SHARE LOANS-CORP OD AGAINST OTHER SECURITIES ...",
+          "source_info_link": "https://pdfcoffee.com/finacle-user-guide-idbi-2-pdf-free.html",
+          "icon": "https://serpapi.com/images/i/UklGRn4BAABXRUJQVlA4IHIBAACwBwCdASocABwAPtEutFooIagoGAEAGglsAJ0y434nBDwFuA3is7AawLfXVTqlULsVHCB14ihb8xiwMR3adGj3NJLJXQAAAP72EjPk4eevYVtJ43FkVtMmwkNy-fyz84LojLdyul8NVL2tgV4D_s_fihyrLr5sb861L-Vymb3vtABTZhTwjyHQiSTkUGNR3Db6pecJjjfdg7xotqgKitR_9d_vC2H1h90HG8WyNFDp3yJwA5s7pdq7cEA-WSjQoWz3lWu9dXy4RZzNjM5HfjPxfz1NK12u4ulRZHmDlpuL5-VQdyPYlx_AdjyBHce7IlhPBs9DWx1iQVXjhXGcDi5n-i4jIPR46ZAHZhr_Hd-00m2NaSp51QnD1cZdCs5yI7OAsja6Cp1510WQyJpwKSdZ5hRU1sNvVb8q43Qb9ejPND458xlkXBs3L17EhhV721o-v_Ugvx-mS_gWnIeI8sCXqL8iU_Ja_UH_J8YzSjGpfgAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrABL2dvdG8_dXJsPUNBRVNlQUhyT3pBVnNZcVVSTS1NZjdJbldGY2diZkc3RUZZbENZaWdDNko2WDVwTXJsNWRYR0U5ZGkzWXVXdTlfdFNFY0g0eWJXSmo4dDN5RUZyN0RBU2J0akt3RDdRa3B6eG12T19QN0tRblRfMU1pTzI0WEZXR193TklVRTRuMklhVmJuUmMwQ0dHUGZtMFZGbHNiTnR3bkZ0cmxyaG5XTnpvbXcSBBoCCAAa3AMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAuAMIABAAGAAgACoJCgJvZBWmULw-KgkKAmNjFeWRCD4qEAoJY29ycG9yYXRlFR15BD8ysAEvZ290bz91cmw9Q0FFU2VBSHJPekFWc1lxVVJNLU1mN0luV0ZjZ2JmRzdFRllsQ1lpZ0M2SjZYNXBNcmw1ZFhHRTlkaTNZdVd1OV90U0VjSDR5YldKajh0M3lFRnI3REFTYnRqS3dEN1FrcHp4bXZPX1A3S1FuVF8xTWlPMjRYRldHX3dOSVVFNG4ySWFWYm5SYzBDR0dQZm0wVkZsc2JOdHduRnRybHJobldOem9tdzonRmluYWNsZSBVc2VyIEd1aWRlIElkYmkgLSBQREZDT0ZGRUUuQ09NQqkBPGI-T0QgLyBDQyAoIENPUlBPUkFURTwvYj4pIE9EIEFHQUlOU1QgRkQtQ09SUCBDQVNIIENSRURJVC1DT1JQIElCUEMtV0lUSCBSSVNLIENPUlAgSUJQQy1XSVRIT1VUIFJJU0sgQ09SUCBDVVNUT01FUiBTSEFSRSBMT0FOUy1DT1JQIE9EIEFHQUlOU1QgT1RIRVIgU0VDVVJJVElFUyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrABL2dvdG8_dXJsPUNBRVNlQUhyT3pBVnNZcVVSTS1NZjdJbldGY2diZkc3RUZZbENZaWdDNko2WDVwTXJsNWRYR0U5ZGkzWXVXdTlfdFNFY0g0eWJXSmo4dDN5RUZyN0RBU2J0akt3RDdRa3B6eG12T19QN0tRblRfMU1pTzI0WEZXR193TklVRTRuMklhVmJuUmMwQ0dHUGZtMFZGbHNiTnR3bkZ0cmxyaG5XTnpvbXcSBBoCCAAa3AMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAuAMIABAAGAAgACoJCgJvZBWmULw-KgkKAmNjFeWRCD4qEAoJY29ycG9yYXRlFR15BD8ysAEvZ290bz91cmw9Q0FFU2VBSHJPekFWc1lxVVJNLU1mN0luV0ZjZ2JmRzdFRllsQ1lpZ0M2SjZYNXBNcmw1ZFhHRTlkaTNZdVd1OV90U0VjSDR5YldKajh0M3lFRnI3REFTYnRqS3dEN1FrcHp4bXZPX1A3S1FuVF8xTWlPMjRYRldHX3dOSVVFNG4ySWFWYm5SYzBDR0dQZm0wVkZsc2JOdHduRnRybHJobldOem9tdzonRmluYWNsZSBVc2VyIEd1aWRlIElkYmkgLSBQREZDT0ZGRUUuQ09NQqkBPGI-T0QgLyBDQyAoIENPUlBPUkFURTwvYj4pIE9EIEFHQUlOU1QgRkQtQ09SUCBDQVNIIENSRURJVC1DT1JQIElCUEMtV0lUSCBSSVNLIENPUlAgSUJQQy1XSVRIT1VUIFJJU0sgQ09SUCBDVVNUT01FUiBTSEFSRSBMT0FOUy1DT1JQIE9EIEFHQUlOU1QgT1RIRVIgU0VDVVJJVElFUyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "pdfcoffee.com",
+      "read_more_link": "https://pdfcoffee.com/finacle-user-guide-idbi-2-pdf-free.html#:~:text=OD%20%2F%20CC%20(%20CORPORATE),SECURITIES%20WORKING%20CAPITAL%20DEAMND%20LOAN%2DCORP."
+    }
+  ]
+}
