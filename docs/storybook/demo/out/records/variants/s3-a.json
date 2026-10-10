@@ -65,7 +65,7 @@
    "f": "radar",
    "to": "gw",
    "l": "google_news: launches new credit card India",
-   "what": "One query a day, India and English. Results older than 30 days are dropped.",
+   "what": "One query per weekly sweep (Monday 08:00 IST), India and English. Results older than 30 days are dropped.",
    "code": "engine=google_news  q=\"launches new credit card India when:30d\"  gl=in  hl=en",
    "t": "NEW",
    "hl": "news"

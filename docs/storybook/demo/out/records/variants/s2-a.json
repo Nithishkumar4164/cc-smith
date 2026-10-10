@@ -25,8 +25,8 @@
      "items": [
       {
        "label": "Pay with",
-       "value": "HSBC Live+ · ₹120",
-       "sub": "₹60 more than Millennia",
+       "value": "HDFC Millennia · ₹60",
+       "sub": "keep SBI Cashback free for later",
        "tone": "lav"
       }
      ],
@@ -36,16 +36,16 @@
      "t": "rows",
      "items": [
       {
-       "no": "HSBC Live+",
-       "meta": "10% on dining",
-       "amt": "₹120",
+       "no": "HDFC Millennia",
+       "meta": "5% on Swiggy",
+       "amt": "₹60",
        "st": "ok",
        "stl": "best",
        "cb": "none"
       },
       {
-       "no": "HDFC Millennia",
-       "meta": "5% on Swiggy",
+       "no": "Cashback SBI Card",
+       "meta": "5% online, covers more of your month",
        "amt": "₹60",
        "st": "grey",
        "stl": "",
@@ -90,7 +90,7 @@
    "f": "api",
    "to": "eng",
    "l": "reward for every card",
-   "what": "Rules, caps and the rest of the month. All sums are plain Python, no model.",
+   "what": "Rules, caps and the **rest of the month**: both cards earn ₹60 here, but SBI Cashback's 5% online covers more of the budget, so using Millennia now leaves more for later. All sums are plain Python, no model.",
    "t": "OLD"
   },
   {
@@ -106,15 +106,15 @@
    "f": "api",
    "to": "llm",
    "l": "choose between engine figures",
-   "what": "Haiku 4.5 picks and phrases the reason; if it is slow (2.5 s), the rules decide.",
+   "what": "Haiku 4.5 picks and phrases the reason when cards differ; on a tie like this one the rules decide (decided_by: rules). If the model is slow (2.5 s), the rules decide too.",
    "t": "OLD"
   },
   {
    "id": "m6",
    "f": "api",
    "to": "app",
-   "l": "HSBC Live+ ₹120",
-   "what": "No SerpApi on this path. The card facts were gathered from bank pages before the demo.",
+   "l": "HDFC Millennia ₹60",
+   "what": "\"Cashback SBI Card earns the same now; its 5% on online payments covers more of your spending, so keep it free for later.\" No SerpApi on this path.",
    "res": true,
    "hl": "best"
   }

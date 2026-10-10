@@ -53,14 +53,14 @@
      "items": [
       {
        "label": "Your cards today",
-       "value": "₹32,800/yr net",
+       "value": "≈ ₹26,400/yr net",
        "sub": "rewards + milestones − fees",
        "tone": "lav"
       },
       {
        "label": "Best move",
-       "value": "+₹5,912/yr",
-       "sub": "add Swiggy BLCK",
+       "value": "+₹10,725/yr",
+       "sub": "add Swiggy BLCK + HSBC Live+",
        "tone": "lime",
        "vt": "good"
       }

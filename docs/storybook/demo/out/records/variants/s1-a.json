@@ -12,67 +12,114 @@
     },
     {
      "t": "input",
-     "text": "Mobile number  +91 98765 43210",
+     "text": "Mobile number  +91 98765 04569",
      "filled": true
     },
     {
      "t": "text",
-     "text": "Code sent to +91 9876543210. Filled in automatically from the SMS."
-    },
-    {
-     "t": "input",
-     "text": "One-time code  123456",
-     "filled": true
+     "text": "Code sent to +91 9876504569. Filled in automatically from the SMS."
     },
     {
      "t": "btn",
      "text": "Verify and find my cards",
-     "kind": "primary",
-     "hl": "otp"
+     "hl": "otp",
+     "kind": "primary"
     }
    ]
   },
   {
-   "cap": "What you spend each month",
+   "cap": "Your cards (from the bureau)",
+   "blocks": [
+    {
+     "t": "title",
+     "text": "Your cards"
+    },
+    {
+     "t": "cards",
+     "items": [
+      {
+       "label": "CIBIL score",
+       "sub": "Report of 10 Oct 2026",
+       "tone": "lav",
+       "value": "762"
+      }
+     ]
+    },
+    {
+     "t": "rows",
+     "hl": "cards",
+     "items": [
+      {
+       "amt": "₹80,000",
+       "cb": "none",
+       "meta": "HDFC Bank ••4270 · since Aug 2021 · ₹1,180/yr fee",
+       "no": "HDFC Bank Millennia Credit Card",
+       "st": "grey",
+       "stl": "limit"
+      },
+      {
+       "amt": "₹2,15,000",
+       "cb": "none",
+       "meta": "SBI Card ••8286 · since Apr 2020 · ₹1,178/yr fee",
+       "no": "Cashback SBI Card",
+       "st": "grey",
+       "stl": "limit"
+      }
+     ]
+    },
+    {
+     "t": "btn",
+     "hl": "add",
+     "kind": "primary",
+     "text": "Add these cards"
+    },
+    {
+     "t": "muted",
+     "text": "Fee per card: Standard (bank's fee), LTF, FYF or Custom, editable later"
+    }
+   ]
+  },
+  {
    "blocks": [
     {
      "t": "title",
      "text": "What you spend each month"
     },
     {
-     "t": "btn",
-     "text": "Read my SMS & email",
+     "hl": "sms",
      "kind": "primary",
-     "hl": "sms"
+     "t": "btn",
+     "text": "Read my SMS & email"
     },
     {
      "t": "text",
-     "text": "Read 40 card transactions from last month's SMS and email."
+     "text": "Read 42 card transactions from last month's SMS and email."
     },
     {
-     "t": "kv",
+     "hl": "budget",
      "rows": [
       {
-       "k": "Dining",
-       "v": "₹9,000"
+       "k": "Dining and food delivery",
+       "v": "≈ ₹11,100"
       },
       {
        "k": "Groceries",
-       "v": "₹12,000"
+       "v": "≈ ₹10,200"
       },
       {
-       "k": "Shopping",
-       "v": "₹15,000"
+       "k": "Online shopping",
+       "v": "≈ ₹10,100"
       },
       {
        "k": "Total",
-       "v": "₹59,000 / month",
-       "total": true
+       "total": true,
+       "v": "≈ ₹48,000 / month"
       }
      ],
-     "hl": "budget"
+     "t": "kv"
     }
-   ]
+   ],
+   "cap": "What you spend each month"
   }
  ],
  "lanes": [
@@ -86,7 +133,7 @@
    "f": "u",
    "to": "app",
    "l": "enters phone, consents",
-   "what": "The bureau step. **Simulated** for the demo: say it in the voiceover, not on screen.",
+   "what": "The bureau step. **Simulated** for the demo: say it in the voiceover, not on screen. Phone 98765 04569 brings up HDFC Millennia and SBI Cashback.",
    "t": "NEW"
   },
   {
@@ -95,7 +142,7 @@
    "to": "api",
    "l": "POST /me/discovery/bureau/start",
    "what": "Starts a fetch and returns a request id. The app fills the code in, as SMS autofill would.",
-   "code": "{\"phone\":\"9876543210\",\"consent\":true}",
+   "code": "{\"phone\":\"9876504569\",\"consent\":true}",
    "t": "NEW",
    "hl": "otp"
   },
@@ -104,27 +151,39 @@
    "f": "app",
    "to": "api",
    "l": "POST /me/discovery/bureau/verify",
-   "what": "Returns the card accounts and limits; the user confirms which catalogue card each one is.",
-   "t": "NEW"
+   "what": "The feed names each **exact card**, when it was opened, its limit and balance. The fee shown comes from our card catalogue. No \"Which card is this?\" step.",
+   "t": "NEW",
+   "code": "{\"card_id\":\"hdfc_millennia\",\"card_name\":\"HDFC Bank Millennia Credit Card\",\n \"opened\":\"2021-08-26\",\"credit_limit_paise\":8000000,\"current_balance_paise\":2050000}",
+   "hl": "cards"
   },
   {
    "id": "m4",
    "f": "app",
    "to": "api",
-   "l": "POST /me/budget/import-demo",
-   "what": "Reads last month's transactions (simulated SMS and email) and fills the budget from them.",
-   "code": "{\"sources\":[\"sms\",\"email\"]}",
-   "t": "NEW",
-   "hl": "sms"
+   "l": "PUT /me/holdings",
+   "what": "Add these cards: limit, balance, and the fee month from the open date. Each card's fee can later be set to Standard, LTF, FYF or Custom; Finder and Notices use a custom amount.",
+   "code": "[{\"card_id\":\"hdfc_millennia\",\"renewal_month\":8,\"fee_status\":\"standard\",...}]",
+   "t": "MOD",
+   "hl": "add"
   },
   {
    "id": "m5",
+   "f": "app",
+   "to": "api",
+   "l": "POST /me/budget/import-demo",
+   "what": "Reads last month's transactions (simulated SMS and email) and fills the budget from them. Totals vary a little per account.",
+   "hl": "sms",
+   "code": "{\"sources\":[\"sms\",\"email\"]}",
+   "t": "NEW"
+  },
+  {
    "f": "api",
-   "to": "app",
+   "hl": "budget",
+   "id": "m6",
    "l": "budget, editable and self-adapting",
-   "what": "Unpinned lines follow last month's actuals each new month; edited lines stay.",
    "res": true,
-   "hl": "budget"
+   "to": "app",
+   "what": "Unpinned lines follow last month's actuals each new month; edited lines stay. Reward type and fee limit are not asked here: Card Finder asks them on its first visit."
   }
  ]
 }

@@ -104,7 +104,7 @@
    ]
   },
   "context": {
-   "digest": "cc-smith: Indian credit-card app. Checkout Advisor (which card), Card Finder (which to get), Notices (only about your own cards, plus a launch notice when a new card would earn >= Rs 2,000/yr and >= 15% of its fee incl GST), Market (Offers for you, New launches, What changed). Facts only from verbatim quotes on official bank pages; non-official = 'Reported'. SerpApi use (verified in code, backend/src/cc_smith/signals/sources.py, knowledge/discover.py, ops/serp.py): Launch Radar daily: google_news q='launches new credit card India when:30d'; google_ads_transparency_center for sbicard.com, hdfcbank.com, icicibank.com, axisbank.com region 2356 last 30 days, new = first shown in 14 days; ..._ad_details for up to 2 creatives per bank, image read by Haiku vision; google search site:<bank domain> to find official page/PDF. Gateway: rejects personal data, cache per flow (launch_radar 7 days), budgets per flow (card_profile 70, launch_radar 45, cap_watch 25, checkout_merchant 15, commerce_offers 10, dev 35; 50 demo reserve), ledger. Today: 26 live, 67 cached, all launch_radar; 224 left this month. Checkout/Finder do not call SerpApi. Today's 6 leads are all 'Reported' (none confirmed); launch notice shown only in test data. Bureau fetch and SMS/email budget import are simulated; the voiceover says so, the screens do not. Demo figures: Swiggy Rs 1,200 -> HSBC Live+ Rs 120, Rs 60 more than Millennia; Finder Rs 32,800/yr today, best move +Rs 5,912 add Swiggy BLCK. Deadline 2026-10-10 18:00 IST, video under 3 minutes."
+   "digest": "cc-smith: Indian credit-card app. Checkout Advisor (which card), Card Finder (which to get), Notices (only about your own cards, plus a launch notice when a new card would earn >= Rs 2,000/yr and >= 15% of its fee incl GST), Market (Offers for you, New launches, What changed). Facts only from verbatim quotes on official bank pages; non-official = 'Reported'. SerpApi use (verified in code, backend/src/cc_smith/signals/sources.py, knowledge/discover.py, ops/serp.py): Launch Radar daily: google_news q='launches new credit card India when:30d'; google_ads_transparency_center for sbicard.com, hdfcbank.com, icicibank.com, axisbank.com region 2356 last 30 days, new = first shown in 14 days; ..._ad_details for up to 2 creatives per bank, image read by Haiku vision; google search site:<bank domain> to find official page/PDF. Gateway: rejects personal data, cache per flow (launch_radar 7 days), budgets per flow (card_profile 70, launch_radar 45, cap_watch 25, checkout_merchant 15, commerce_offers 10, dev 35; 50 demo reserve), ledger. Today: 26 live, 67 cached, all launch_radar; 224 left this month. Checkout/Finder do not call SerpApi. Today's 6 leads are all 'Reported' (none confirmed); launch notice shown only in test data. Bureau fetch and SMS/email budget import are simulated; the voiceover says so, the screens do not. The bureau feed names each exact catalogue card with open date, limit and balance; Add sets the fee month. Each held card's fee: Standard (catalogue), LTF, FYF or Custom amount (used by Finder and Notices). Onboarding is cards + spends only; reward type and fee limit are asked on Card Finder's first visit. Demo phone 98765 04569 -> HDFC Millennia ••4270 + SBI Cashback ••8286, CIBIL 762; import reads 42 transactions, budget about Rs 48,000/month (varies slightly per account). Demo figures: Swiggy Rs 1,200 -> both cards Rs 60, pay with Millennia and keep SBI Cashback for later (rules decide on a tie); Finder (Cashback, up to Rs 1,000) about Rs 26,400/yr today, best move +Rs 10,725/yr add Swiggy BLCK + HSBC Live+. Committed as 16b8bd6. Deadline 2026-10-10 18:00 IST, video under 3 minutes."
   }
  },
  "scenes": {
@@ -112,7 +112,7 @@
    "n": 1,
    "short": "0:00 Set up",
    "title": "0:00–0:20 · Set up in two taps",
-   "lede": "Voiceover: “Indians hold 3 to 4 cards and still guess at checkout. cc-smith answers in rupees, from the bank's own words. Setup: we find your cards from the credit bureau with a one-time code, and build your budget from last month's card SMS and email — both simulated for this demo.”",
+   "lede": "Voiceover: “Indians hold 3 to 4 cards and still guess at checkout. cc-smith answers in rupees, from the bank's own words. Setup: with a one-time code we fetch your cards from the credit bureau, each named exactly with its fee, and build your budget from last month's card SMS and email — both simulated for this demo.”",
    "also": [
     4
    ]
@@ -121,7 +121,7 @@
    "n": 2,
    "short": "0:20 Pay",
    "title": "0:20–0:45 · Which card at Swiggy?",
-   "lede": "Voiceover: “₹1,200 at Swiggy. HSBC Live+ earns ₹120, ₹60 more than Millennia. The maths is plain code; a small model only picks between the engine's figures. Every rate links to a quote on the bank's page.” No SerpApi call here: say so if asked.",
+   "lede": "Voiceover: “₹1,200 at Swiggy. Both cards earn ₹60, so cc-smith looks at the rest of your month: SBI Cashback's 5% covers more of your other spending, so pay with Millennia and keep SBI free. The maths is plain code; a small model only picks between the engine's figures when they differ. Every rate links to a quote on the bank's page.” No SerpApi call here: say so if asked.",
    "also": [
     2
    ]
@@ -154,7 +154,7 @@
    "n": 6,
    "short": "2:20 Gateway",
    "title": "2:20–2:45 · One gateway for every SerpApi call",
-   "lede": "Voiceover: “Every SerpApi call goes through one gateway: it refuses anything that looks like personal data, caches results, and holds a monthly budget per feature. Today: 26 live searches and 67 answered from cache.”",
+   "lede": "Voiceover: “Every SerpApi call goes through one gateway: it refuses anything that looks like personal data, caches results, and holds a monthly budget per feature. The same gateway serves the nightly card refresh, which re-checks three cards a night on their bank's own site, so facts follow the bank's current page. Today: 26 live searches and 67 answered from cache.”",
    "also": [
     3
    ]
@@ -181,67 +181,114 @@
       },
       {
        "t": "input",
-       "text": "Mobile number  +91 98765 43210",
+       "text": "Mobile number  +91 98765 04569",
        "filled": true
       },
       {
        "t": "text",
-       "text": "Code sent to +91 9876543210. Filled in automatically from the SMS."
-      },
-      {
-       "t": "input",
-       "text": "One-time code  123456",
-       "filled": true
+       "text": "Code sent to +91 9876504569. Filled in automatically from the SMS."
       },
       {
        "t": "btn",
        "text": "Verify and find my cards",
-       "kind": "primary",
-       "hl": "otp"
+       "hl": "otp",
+       "kind": "primary"
       }
      ]
     },
     {
-     "cap": "What you spend each month",
+     "cap": "Your cards (from the bureau)",
+     "blocks": [
+      {
+       "t": "title",
+       "text": "Your cards"
+      },
+      {
+       "t": "cards",
+       "items": [
+        {
+         "label": "CIBIL score",
+         "sub": "Report of 10 Oct 2026",
+         "tone": "lav",
+         "value": "762"
+        }
+       ]
+      },
+      {
+       "t": "rows",
+       "hl": "cards",
+       "items": [
+        {
+         "amt": "₹80,000",
+         "cb": "none",
+         "meta": "HDFC Bank ••4270 · since Aug 2021 · ₹1,180/yr fee",
+         "no": "HDFC Bank Millennia Credit Card",
+         "st": "grey",
+         "stl": "limit"
+        },
+        {
+         "amt": "₹2,15,000",
+         "cb": "none",
+         "meta": "SBI Card ••8286 · since Apr 2020 · ₹1,178/yr fee",
+         "no": "Cashback SBI Card",
+         "st": "grey",
+         "stl": "limit"
+        }
+       ]
+      },
+      {
+       "t": "btn",
+       "hl": "add",
+       "kind": "primary",
+       "text": "Add these cards"
+      },
+      {
+       "t": "muted",
+       "text": "Fee per card: Standard (bank's fee), LTF, FYF or Custom, editable later"
+      }
+     ]
+    },
+    {
      "blocks": [
       {
        "t": "title",
        "text": "What you spend each month"
       },
       {
-       "t": "btn",
-       "text": "Read my SMS & email",
+       "hl": "sms",
        "kind": "primary",
-       "hl": "sms"
+       "t": "btn",
+       "text": "Read my SMS & email"
       },
       {
        "t": "text",
-       "text": "Read 40 card transactions from last month's SMS and email."
+       "text": "Read 42 card transactions from last month's SMS and email."
       },
       {
-       "t": "kv",
+       "hl": "budget",
        "rows": [
         {
-         "k": "Dining",
-         "v": "₹9,000"
+         "k": "Dining and food delivery",
+         "v": "≈ ₹11,100"
         },
         {
          "k": "Groceries",
-         "v": "₹12,000"
+         "v": "≈ ₹10,200"
         },
         {
-         "k": "Shopping",
-         "v": "₹15,000"
+         "k": "Online shopping",
+         "v": "≈ ₹10,100"
         },
         {
          "k": "Total",
-         "v": "₹59,000 / month",
-         "total": true
+         "total": true,
+         "v": "≈ ₹48,000 / month"
         }
        ],
-       "hl": "budget"
+       "t": "kv"
       }
-     ]
+     ],
+     "cap": "What you spend each month"
     }
    ],
    "lanes": [
@@ -255,7 +302,7 @@
      "f": "u",
      "to": "app",
      "l": "enters phone, consents",
-     "what": "The bureau step. **Simulated** for the demo: say it in the voiceover, not on screen.",
+     "what": "The bureau step. **Simulated** for the demo: say it in the voiceover, not on screen. Phone 98765 04569 brings up HDFC Millennia and SBI Cashback.",
      "t": "NEW"
     },
     {
@@ -264,7 +311,7 @@
      "to": "api",
      "l": "POST /me/discovery/bureau/start",
      "what": "Starts a fetch and returns a request id. The app fills the code in, as SMS autofill would.",
-     "code": "{\"phone\":\"9876543210\",\"consent\":true}",
+     "code": "{\"phone\":\"9876504569\",\"consent\":true}",
      "t": "NEW",
      "hl": "otp"
     },
@@ -273,27 +320,39 @@
      "f": "app",
      "to": "api",
      "l": "POST /me/discovery/bureau/verify",
-     "what": "Returns the card accounts and limits; the user confirms which catalogue card each one is.",
-     "t": "NEW"
+     "what": "The feed names each **exact card**, when it was opened, its limit and balance. The fee shown comes from our card catalogue. No \"Which card is this?\" step.",
+     "t": "NEW",
+     "code": "{\"card_id\":\"hdfc_millennia\",\"card_name\":\"HDFC Bank Millennia Credit Card\",\n \"opened\":\"2021-08-26\",\"credit_limit_paise\":8000000,\"current_balance_paise\":2050000}",
+     "hl": "cards"
     },
     {
      "id": "m4",
      "f": "app",
      "to": "api",
-     "l": "POST /me/budget/import-demo",
-     "what": "Reads last month's transactions (simulated SMS and email) and fills the budget from them.",
-     "code": "{\"sources\":[\"sms\",\"email\"]}",
-     "t": "NEW",
-     "hl": "sms"
+     "l": "PUT /me/holdings",
+     "what": "Add these cards: limit, balance, and the fee month from the open date. Each card's fee can later be set to Standard, LTF, FYF or Custom; Finder and Notices use a custom amount.",
+     "code": "[{\"card_id\":\"hdfc_millennia\",\"renewal_month\":8,\"fee_status\":\"standard\",...}]",
+     "t": "MOD",
+     "hl": "add"
     },
     {
      "id": "m5",
+     "f": "app",
+     "to": "api",
+     "l": "POST /me/budget/import-demo",
+     "what": "Reads last month's transactions (simulated SMS and email) and fills the budget from them. Totals vary a little per account.",
+     "hl": "sms",
+     "code": "{\"sources\":[\"sms\",\"email\"]}",
+     "t": "NEW"
+    },
+    {
      "f": "api",
-     "to": "app",
+     "hl": "budget",
+     "id": "m6",
      "l": "budget, editable and self-adapting",
-     "what": "Unpinned lines follow last month's actuals each new month; edited lines stay.",
      "res": true,
-     "hl": "budget"
+     "to": "app",
+     "what": "Unpinned lines follow last month's actuals each new month; edited lines stay. Reward type and fee limit are not asked here: Card Finder asks them on its first visit."
     }
    ]
   },
@@ -324,8 +383,8 @@
        "items": [
         {
          "label": "Pay with",
-         "value": "HSBC Live+ · ₹120",
-         "sub": "₹60 more than Millennia",
+         "value": "HDFC Millennia · ₹60",
+         "sub": "keep SBI Cashback free for later",
          "tone": "lav"
         }
        ],
@@ -335,16 +394,16 @@
        "t": "rows",
        "items": [
         {
-         "no": "HSBC Live+",
-         "meta": "10% on dining",
-         "amt": "₹120",
+         "no": "HDFC Millennia",
+         "meta": "5% on Swiggy",
+         "amt": "₹60",
          "st": "ok",
          "stl": "best",
          "cb": "none"
         },
         {
-         "no": "HDFC Millennia",
-         "meta": "5% on Swiggy",
+         "no": "Cashback SBI Card",
+         "meta": "5% online, covers more of your month",
          "amt": "₹60",
          "st": "grey",
          "stl": "",
@@ -389,7 +448,7 @@
      "f": "api",
      "to": "eng",
      "l": "reward for every card",
-     "what": "Rules, caps and the rest of the month. All sums are plain Python, no model.",
+     "what": "Rules, caps and the **rest of the month**: both cards earn ₹60 here, but SBI Cashback's 5% online covers more of the budget, so using Millennia now leaves more for later. All sums are plain Python, no model.",
      "t": "OLD"
     },
     {
@@ -405,15 +464,15 @@
      "f": "api",
      "to": "llm",
      "l": "choose between engine figures",
-     "what": "Haiku 4.5 picks and phrases the reason; if it is slow (2.5 s), the rules decide.",
+     "what": "Haiku 4.5 picks and phrases the reason when cards differ; on a tie like this one the rules decide (decided_by: rules). If the model is slow (2.5 s), the rules decide too.",
      "t": "OLD"
     },
     {
      "id": "m6",
      "f": "api",
      "to": "app",
-     "l": "HSBC Live+ ₹120",
-     "what": "No SerpApi on this path. The card facts were gathered from bank pages before the demo.",
+     "l": "HDFC Millennia ₹60",
+     "what": "\"Cashback SBI Card earns the same now; its 5% on online payments covers more of your spending, so keep it free for later.\" No SerpApi on this path.",
      "res": true,
      "hl": "best"
     }
@@ -916,14 +975,14 @@
        "items": [
         {
          "label": "Your cards today",
-         "value": "₹32,800/yr net",
+         "value": "≈ ₹26,400/yr net",
          "sub": "rewards + milestones − fees",
          "tone": "lav"
         },
         {
          "label": "Best move",
-         "value": "+₹5,912/yr",
-         "sub": "add Swiggy BLCK",
+         "value": "+₹10,725/yr",
+         "sub": "add Swiggy BLCK + HSBC Live+",
          "tone": "lime",
          "vt": "good"
         }
@@ -1143,10 +1202,12 @@
   "g3": {
    "order": 3,
    "n": 3,
-   "where": "Step 6",
-   "title": "Four budget envelopes have no job running yet",
+   "where": "Step 6 · now built",
+   "title": "Nightly card refresh through SerpApi: built, not run live",
    "paras": [
-    "card_profile, cap_watch, checkout_merchant and commerce_offers have budgets and cache times in the gateway, but no scheduled job calls them. Call them budgeted, not running."
+    "**Built.** A nightly job (03:00 IST, 3 cards a night, about a week for all 22) runs a SerpApi Google Search limited to each bank's domain, fetches the pages and reruns the quote and range checks. Unchanged values only bump their date; changed values show in Market › What changed.",
+    "It has not run live: the scheduler only starts with the server when SCHEDULER_ENABLED=true (off by default). Manual run: `uv run cc-smith refresh [card_id]`. Say it is built and scheduled, not that it has run today.",
+    "cap_watch, checkout_merchant and commerce_offers still have budgets but no job."
    ]
   },
   "g4": {
@@ -1240,7 +1301,7 @@
   "r2": {
    "order": 2,
    "title": "0:00–0:45",
-   "text": "Onboarding (Find my cards → code → Add these cards → Read my SMS & email → Next), then Pay: Swiggy ₹1,200."
+   "text": "Onboarding: Find my cards → phone 98765 04569 → Verify → Add these cards → Back → Next → Read my SMS & email → Next. Then Pay: Swiggy ₹1,200."
   },
   "r3": {
    "order": 3,

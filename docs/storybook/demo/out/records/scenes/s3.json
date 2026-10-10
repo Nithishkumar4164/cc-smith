@@ -2,7 +2,7 @@
  "n": 3,
  "short": "0:45 Radar",
  "title": "0:45–1:25 · SerpApi finds new cards before we know their names",
- "lede": "Voiceover: “The Market tab is fed by SerpApi. Every day Launch Radar runs Google News for card launches in India, and the Google Ads Transparency Center for new ads by SBI, HDFC, ICICI and Axis. Ad text arrives as images, so we pull the creative with SerpApi's ad-details engine and read it.”",
+ "lede": "Voiceover: “The Market tab is fed by SerpApi. Every Monday morning Launch Radar runs Google News for card launches in India, and the Google Ads Transparency Center for new ads by SBI, HDFC, ICICI and Axis. Ad text arrives as images, so we pull the creative with SerpApi's ad-details engine and read it.”",
  "also": [
   5
  ]

@@ -2,7 +2,7 @@
  "n": 6,
  "short": "2:20 Gateway",
  "title": "2:20–2:45 · One gateway for every SerpApi call",
- "lede": "Voiceover: “Every SerpApi call goes through one gateway: it refuses anything that looks like personal data, caches results, and holds a monthly budget per feature. Today: 26 live searches and 67 answered from cache.”",
+ "lede": "Voiceover: “Every SerpApi call goes through one gateway: it refuses anything that looks like personal data, caches results, and holds a monthly budget per feature. The same gateway serves the nightly card refresh, which re-checks three cards a night on their bank's own site, so facts follow the bank's current page. Today: 26 live searches and 67 answered from cache.”",
  "also": [
   3
  ]

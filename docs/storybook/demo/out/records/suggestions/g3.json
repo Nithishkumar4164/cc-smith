@@ -1,9 +1,11 @@
 {
  "order": 3,
  "n": 3,
- "where": "Step 6",
- "title": "Four budget envelopes have no job running yet",
+ "where": "Step 6 · now built",
+ "title": "Nightly card refresh through SerpApi: built, not run live",
  "paras": [
-  "card_profile, cap_watch, checkout_merchant and commerce_offers have budgets and cache times in the gateway, but no scheduled job calls them. Call them budgeted, not running."
+  "**Built.** A nightly job (03:00 IST, 3 cards a night, about a week for all 22) runs a SerpApi Google Search limited to each bank's domain, fetches the pages and reruns the quote and range checks. Unchanged values only bump their date; changed values show in Market › What changed.",
+  "It has not run live: the scheduler only starts with the server when SCHEDULER_ENABLED=true (off by default). Manual run: `uv run cc-smith refresh [card_id]`. Say it is built and scheduled, not that it has run today.",
+  "cap_watch, checkout_merchant and commerce_offers still have budgets but no job."
  ]
 }
