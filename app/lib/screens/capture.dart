@@ -1,6 +1,7 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../api.dart';
 import '../capture.dart';
@@ -421,9 +422,133 @@ String _feeText(CardSummary? c) {
   return f == 0 ? 'no annual fee' : '${rupees(f * 118 ~/ 100)}/yr fee';
 }
 
+/// CRED-style card addition: the full number (checked on the phone: valid, ends in the
+/// bureau's last 4), then a ₹1 check. Only the first 6 and last 4 digits go to the server.
+class AddCardScreen extends StatefulWidget {
+  final String lender, last4;
+  const AddCardScreen({super.key, required this.lender, required this.last4});
+  @override
+  State<AddCardScreen> createState() => _AddCardScreenState();
+}
+
+class _AddCardScreenState extends State<AddCardScreen> {
+  final _number = TextEditingController();
+  String? _error;
+  bool _busy = false;
+  ({String id, String name})? _done;
+
+  @override
+  void dispose() {
+    _number.dispose();
+    super.dispose();
+  }
+
+  static bool _luhn(String n) {
+    var sum = 0;
+    for (var i = 0; i < n.length; i++) {
+      var d = int.parse(n[n.length - 1 - i]) * (i.isOdd ? 2 : 1);
+      sum += d > 9 ? d - 9 : d;
+    }
+    return sum % 10 == 0;
+  }
+
+  Future<void> _verify() async {
+    final n = _number.text.replaceAll(RegExp(r'\D'), '');
+    final err = n.length < 15 || n.length > 16
+        ? 'Enter the full card number.'
+        : !n.endsWith(widget.last4)
+            ? 'This number doesn\'t end in ${widget.last4}.'
+            : !_luhn(n)
+                ? 'Check the number: it isn\'t a valid card number.'
+                : null;
+    setState(() => _error = err);
+    if (err != null) return;
+    setState(() => _busy = true);
+    try {
+      final r = await AppScope.read(context).api.cardCheck(widget.lender, widget.last4, n.substring(0, 6));
+      // The ₹1 deposit takes a moment at a real bank.
+      await Future<void>.delayed(const Duration(milliseconds: 1200));
+      if (mounted) setState(() => _done = (id: '${r['card_id']}', name: '${r['card_name']}'));
+    } catch (e) {
+      if (mounted) setState(() => _error = e is ApiException ? e.message : '$e');
+    } finally {
+      if (mounted) setState(() => _busy = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final s = t.colorScheme;
+    final done = _done;
+    return Scaffold(
+      appBar: AppBar(title: Text(RegExp(r'card$', caseSensitive: false).hasMatch(widget.lender) ? 'Add your ${widget.lender}' : 'Add your ${widget.lender} card')),
+      body: ListView(padding: const EdgeInsets.all(16), children: [
+        if (done == null) ...[
+          Text('Enter the full number on your card ending ${widget.last4}. We never ask for the CVV or PIN.', style: t.textTheme.bodyMedium),
+          const SizedBox(height: 16),
+          TextField(
+            controller: _number,
+            enabled: !_busy,
+            keyboardType: TextInputType.number,
+            inputFormatters: [FilteringTextInputFormatter.digitsOnly, LengthLimitingTextInputFormatter(16), _CardNumberFormatter()],
+            decoration: InputDecoration(
+              labelText: 'Card number',
+              hintText: 'XXXX XXXX XXXX ${widget.last4}',
+              errorText: _error,
+              prefixIcon: const Icon(Icons.credit_card),
+            ),
+          ),
+          const SizedBox(height: 16),
+          if (_busy)
+            Row(children: [
+              const SizedBox.square(dimension: 18, child: CircularProgressIndicator(strokeWidth: 2)),
+              const SizedBox(width: 12),
+              Expanded(child: Text('Verifying with ₹1…', style: t.textTheme.bodyMedium)),
+            ])
+          else
+            FilledButton(onPressed: _verify, child: const Text('Verify card')),
+        ] else ...[
+          const SizedBox(height: 24),
+          Icon(Icons.verified, size: 56, color: s.primary),
+          const SizedBox(height: 12),
+          Text(done.name, style: t.textTheme.titleLarge, textAlign: TextAlign.center),
+          const SizedBox(height: 6),
+          Text('Verified. We sent ₹1 to your card ending ${widget.last4} to confirm it\'s yours.',
+              style: t.textTheme.bodyMedium, textAlign: TextAlign.center),
+          const SizedBox(height: 24),
+          FilledButton(onPressed: () => Navigator.pop(context, done), child: const Text('Done')),
+        ],
+      ]),
+    );
+  }
+}
+
+/// Groups digits in fours as the user types.
+class _CardNumberFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+    final d = newValue.text.replaceAll(' ', '');
+    final b = StringBuffer();
+    for (var i = 0; i < d.length; i++) {
+      if (i > 0 && i % 4 == 0) b.write(' ');
+      b.write(d[i]);
+    }
+    final text = b.toString();
+    return TextEditingValue(text: text, selection: TextSelection.collapsed(offset: text.length));
+  }
+}
+
 class _CreditReportResultScreenState extends State<CreditReportResultScreen> {
-  /// account index -> chosen catalogue card (for accounts not yet in "your cards").
-  final _choice = <int, String>{};
+  /// account index -> the card its number identified (for accounts not yet in "your cards").
+  final _verified = <int, ({String id, String name})>{};
+
+  Future<void> _addCard(int i, ReportAccount a) async {
+    final r = await Navigator.of(context).push<({String id, String name})>(
+      MaterialPageRoute(builder: (_) => AddCardScreen(lender: a.lender ?? '', last4: a.last4 ?? '')),
+    );
+    if (r != null) setState(() => _verified[i] = r);
+  }
   bool _busy = false;
 
   Future<void> _save({required bool addCards}) async {
@@ -431,7 +556,7 @@ class _CreditReportResultScreenState extends State<CreditReportResultScreen> {
     final held = {for (final h in app.me?.holdings ?? const <Holding>[]) h.cardId: h};
     var changed = 0;
     for (final (i, a) in widget.result.accounts.indexed) {
-      final id = a.heldCardId ?? (addCards && a.isOpen ? (a.cardId ?? _choice[i]) : null);
+      final id = a.heldCardId ?? (addCards && a.isOpen ? (a.cardId ?? _verified[i]?.id) : null);
       if (id == null) continue;
       final h = held[id];
       if (h == null) {
@@ -450,7 +575,7 @@ class _CreditReportResultScreenState extends State<CreditReportResultScreen> {
       }
     }
     if (changed == 0) {
-      showInfo(context, addCards ? 'Pick which card each account is first.' : 'Your limits already match the report.');
+      showInfo(context, addCards ? 'Add each card with its number first.' : 'Your limits already match the report.');
       return;
     }
     setState(() => _busy = true);
@@ -513,22 +638,24 @@ class _CreditReportResultScreenState extends State<CreditReportResultScreen> {
                       children: [
                         Expanded(
                           child: Text(
-                            a.cardName ?? '${a.lender ?? 'Lender'} · ${a.accountType ?? 'Card'}${a.last4 != null ? ' ••${a.last4}' : ''}',
+                            _verified[i]?.name ?? a.cardName ?? '${a.lender ?? 'Lender'} ••${a.last4 ?? '••••'}',
                             style: t.textTheme.titleSmall,
                           ),
                         ),
                         if (!a.isOpen) Pill('Closed', color: s.surfaceContainerHighest, onColor: s.onSurfaceVariant),
                       ],
                     ),
-                    if (a.cardName != null)
-                      Text(
-                        [
-                          '${a.lender ?? 'Card'}${a.last4 != null ? ' ••${a.last4}' : ''}',
-                          if (a.opened != null) 'since ${monthYear(a.opened!)}',
-                          _feeText(app.cardsById[a.cardId]),
-                        ].join(' · '),
-                        style: t.textTheme.bodySmall,
-                      ),
+                    Text(
+                      [
+                        if (_verified[i] != null || a.cardName != null)
+                          '${a.lender ?? 'Card'} ••${a.last4 ?? '••••'}'
+                        else
+                          a.accountType ?? 'Credit card',
+                        if (a.opened != null) 'since ${monthYear(a.opened!)}',
+                        if (_verified[i] != null || a.cardId != null) _feeText(app.cardsById[_verified[i]?.id ?? a.cardId]),
+                      ].join(' · '),
+                      style: t.textTheme.bodySmall,
+                    ),
                     Text(
                       [
                         if (a.creditLimitPaise != null) 'Limit ${rupees(a.creditLimitPaise!)}',
@@ -540,19 +667,13 @@ class _CreditReportResultScreenState extends State<CreditReportResultScreen> {
                     const SizedBox(height: 6),
                     if (a.heldCardId != null && heldIds.contains(a.heldCardId))
                       Pill('In your cards: ${app.cardName(a.heldCardId!)}', icon: Icons.check)
+                    else if (_verified[i] != null)
+                      Pill('Verified with ₹1', icon: Icons.verified)
                     else if (a.isOpen && a.cardId == null)
-                      DropdownButtonFormField<String>(
-                        isExpanded: true,
-                        initialValue: _choice[i],
-                        decoration: const InputDecoration(labelText: 'Which card is this?', isDense: true),
-                        items: [
-                          for (final c in cardsFromIssuer(a.issuerHint, a.lender, app.cards ?? const []))
-                            DropdownMenuItem(
-                              value: c.id,
-                              child: Text(c.name, overflow: TextOverflow.ellipsis),
-                            ),
-                        ],
-                        onChanged: (v) => setState(() => v == null ? _choice.remove(i) : _choice[i] = v),
+                      FilledButton.tonalIcon(
+                        onPressed: () => _addCard(i, a),
+                        icon: const Icon(Icons.add_card, size: 18),
+                        label: const Text('Add card'),
                       ),
                   ],
                 ),

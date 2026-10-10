@@ -6,6 +6,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from cc_smith.api.main import app
+from cc_smith.capture import demo
 from cc_smith.knowledge.pipeline import profile_card
 
 R = 100
@@ -39,22 +40,31 @@ def test_demo_bureau_fetch_needs_consent_and_the_code(client, user):
     assert [a["lender"] for a in out2["report"]["accounts"]] == [a["lender"] for a in report["accounts"]]
 
 
-def test_bureau_names_the_exact_card_with_open_date_and_marks_it_held_once_added(client, user):
-    start = client.post("/me/discovery/bureau/start", json={"phone": "9876543210", "consent": True}, headers=user).json()
+def test_bureau_shows_bank_and_masked_number_and_the_card_number_names_the_product(client, user):
+    start = client.post("/me/discovery/bureau/start", json={"phone": "9876504569", "consent": True}, headers=user).json()
     out = client.post("/me/discovery/bureau/verify", json={"request_id": start["request_id"], "otp": start["demo_otp"]}, headers=user).json()
     accts = out["report"]["accounts"]
-    names = {c["id"]: c for c in client.get("/cards").json()}
-    assert all(a["card_id"] in names and a["card_name"] == names[a["card_id"]]["name"] for a in accts)
-    assert all(a["opened"] < out["report"]["report_date"] for a in accts)
-    assert len({a["lender"] for a in accts}) == len(accts)  # one card per bank
-    assert all(a["held_card_id"] is None for a in accts)
-    # Added with the bureau's limit: a second fetch recognises them as held by product, not by guess.
-    client.put("/me/holdings", json=[{"card_id": a["card_id"], "credit_limit_paise": a["credit_limit_paise"], "balance_paise": 0}
-                                     for a in accts], headers=user)
-    again = client.post("/me/discovery/bureau/start", json={"phone": "9876543210", "consent": True}, headers=user).json()
+    # Like a real report: bank, masked number, open date, limit; not the product.
+    assert all(a["card_id"] is None and a["card_name"] is None and len(a["last4"]) == 4 and a["opened"] for a in accts)
+    assert len({a["lender"] for a in accts}) == len(accts)
+    ids = {c["id"] for c in client.get("/cards").json() if c["status"] == "active"}  # same set the server uses
+    hdfc = next(a for a in accts if a["lender"] == "HDFC Bank")
+    number = demo.demo_card_number("hdfc_millennia", ids, hdfc["last4"])
+    assert len(number) == 16 and number.endswith(hdfc["last4"])
+    # The app sends only the first 6 digits and the last 4.
+    body = {"lender": hdfc["lender"], "last4": hdfc["last4"], "bin": number[:6]}
+    got = client.post("/me/discovery/card", json=body, headers=user).json()
+    assert got == {"card_id": "hdfc_millennia", "card_name": "HDFC Bank Millennia Credit Card", "last4": hdfc["last4"],
+                   "verified": True, "deposit_paise": 100, "mock": True}
+    # Another bank's prefix, or a full number, is refused.
+    sbi = demo.demo_card_number("sbi_cashback", ids, "8286")
+    assert client.post("/me/discovery/card", json={**body, "bin": sbi[:6]}, headers=user).status_code == 422
+    assert client.post("/me/discovery/card", json={**body, "bin": number}, headers=user).status_code == 422
+    # Once added with its last4, a second fetch marks the account as held.
+    client.put("/me/holdings", json=[{"card_id": "hdfc_millennia", "last4": hdfc["last4"], "credit_limit_paise": hdfc["credit_limit_paise"]}], headers=user)
+    again = client.post("/me/discovery/bureau/start", json={"phone": "9876504569", "consent": True}, headers=user).json()
     out2 = client.post("/me/discovery/bureau/verify", json={"request_id": again["request_id"], "otp": again["demo_otp"]}, headers=user).json()
-    assert [a["held_card_id"] for a in out2["report"]["accounts"]] == [a["card_id"] for a in accts]
-
+    assert next(a for a in out2["report"]["accounts"] if a["lender"] == "HDFC Bank")["held_card_id"] == "hdfc_millennia"
 
 def test_demo_import_fills_the_budget_and_is_not_money_owed(client, user):
     client.put("/me/holdings", json=[{"card_id": "hdfc_millennia", "credit_limit_paise": 100_000 * R, "balance_paise": 0}], headers=user)

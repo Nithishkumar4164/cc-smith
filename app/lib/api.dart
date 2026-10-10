@@ -157,6 +157,10 @@ class Api {
       _map(await _send('POST', '/me/discovery/bureau/start', {'phone': phone, 'consent': true}));
   Future<Json> bureauVerify(String requestId, String otp) async =>
       _map(await _send('POST', '/me/discovery/bureau/verify', {'request_id': requestId, 'otp': otp}));
+  /// Names the product from the card number's first 6 digits and runs the ₹1 check. The full
+  /// number never leaves the phone: only the first 6 and the last 4 are sent.
+  Future<Json> cardCheck(String lender, String last4, String bin) async =>
+      _map(await _send('POST', '/me/discovery/card', {'lender': lender, 'last4': last4, 'bin': bin}));
   Future<Budget> budget() async => Budget.fromJson(_map(await _send('GET', '/me/budget')));
   Future<(int, Budget)> importBudgetDemo() async {
     final j = _map(await _send('POST', '/me/budget/import-demo', {'sources': ['sms', 'email']}));

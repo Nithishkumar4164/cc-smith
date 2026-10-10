@@ -48,6 +48,7 @@ void main() {
           ('GET', '/me/market/offers') => fx('contract/market_offers'),
           ('POST', '/me/discovery/bureau/start') => fx('contract/bureau_start'),
           ('POST', '/me/discovery/bureau/verify') => fx('contract/bureau_verify'),
+          ('POST', '/me/discovery/card') => fx('contract/card_check'),
           ('GET', '/me/budget') => budgetFixture,
           ('POST', '/me/budget/import-demo') => () {
               budgetFixture = fx('contract/budget');
@@ -443,7 +444,9 @@ void main() {
     expect(find.text('782'), findsOneWidget);
     expect(find.text('CIBIL SCORE'), findsOneWidget);
     expect(find.text('In your cards: HDFC Bank Millennia Credit Card'), findsOneWidget);
-    expect(find.text('Which card is this?'), findsWidgets);
+    // Uploaded reports use the same Add card flow (card number, then the ₹1 check).
+    expect(find.text('Which card is this?'), findsNothing);
+    expect(find.text('Add card'), findsWidgets);
     expect(find.text('Add these cards'), findsOneWidget);
     expect(find.text('Use these limits'), findsOneWidget);
   });
@@ -481,18 +484,37 @@ void main() {
     expect(find.text('Your cards'), findsOneWidget);
     expect(find.textContaining(RegExp('demo|simulated', caseSensitive: false)), findsNothing);
     expect(find.text('782'), findsOneWidget);
-    // The bureau names each product, when it was opened and the catalogue's fee: nothing to pick.
+    // Like CRED: the report shows bank and masked number; the card number names the product.
     expect(find.text('Which card is this?'), findsNothing);
+    expect(find.text('HDFC BANK ••4321'), findsOneWidget);
+    expect(find.text('Credit Card · since Mar 2019'), findsOneWidget);
+    await tapIn(tester, find.text('Add card').first);
+    expect(find.text('Add your HDFC BANK card'), findsOneWidget);
+    await tester.enterText(find.widgetWithText(TextField, 'Card number'), '4107071234500000');
+    await tester.tap(find.text('Verify card'));
+    await tester.pumpAndSettle();
+    expect(find.text("This number doesn't end in 4321."), findsOneWidget);
+    expect(calls, isNot(contains('POST /me/discovery/card')));
+    await tester.enterText(find.widgetWithText(TextField, 'Card number'), '4107071234564321');
+    expect(find.text('4107 0712 3456 4321'), findsOneWidget);
+    await tester.tap(find.text('Verify card'));
+    await tester.pumpAndSettle();
+    // Only the first 6 and the last 4 digits leave the phone.
+    expect(sent['POST /me/discovery/card'], {'lender': 'HDFC BANK', 'last4': '4321', 'bin': '410707'});
+    expect(find.text('HDFC Bank Millennia Credit Card'), findsOneWidget);
+    expect(find.textContaining('We sent ₹1 to your card ending 4321'), findsOneWidget);
+    await tester.tap(find.text('Done'));
+    await tester.pumpAndSettle();
     expect(find.text('HDFC Bank Millennia Credit Card'), findsOneWidget);
     expect(find.text('HDFC BANK ••4321 · since Mar 2019 · ₹1,180/yr fee'), findsOneWidget);
-    expect(find.text('ICICI BANK ••8765 · since Jul 2021 · no annual fee'), findsOneWidget);
+    expect(find.text('Verified with ₹1'), findsOneWidget);
     await tapIn(tester, find.text('Add these cards'));
     final put = (sent['PUT /me/holdings'] as List).cast<Map>();
-    // The closed SBI account is not added; the fee month follows the open date.
-    expect(put.map((h) => h['card_id']), ['hdfc_millennia', 'icici_amazon_pay']);
-    expect(put.map((h) => h['renewal_month']), [3, 7]);
-    expect(put.map((h) => h['fee_status']), ['standard', 'standard']);
-    expect(put.map((h) => h['balance_paise']), [3678600, 1200000]);
+    // Only the verified card is added; the fee month follows the open date.
+    expect(put.map((h) => h['card_id']), ['hdfc_millennia']);
+    expect(put.single['renewal_month'], 3);
+    expect(put.single['last4'], '4321');
+    expect(put.single['balance_paise'], 3678600);
   });
 
   testWidgets('budget: demo import fills it, edit pins a line, reset unpins', (tester) async {

@@ -35,6 +35,12 @@ class BureauVerifyIn(BaseModel):
     otp: str = Field(pattern=r"^\d{6}$")
 
 
+class CardCheckIn(BaseModel):
+    lender: str = Field(min_length=1, max_length=80)
+    last4: str = Field(pattern=r"^\d{4}$")
+    bin: str = Field(pattern=r"^\d{6}$")  # first 6 digits; the full number stays on the phone
+
+
 class ImportIn(BaseModel):
     sources: list[str] = ["sms", "email"]
 
@@ -78,3 +84,15 @@ def put_budget(body: dict[str, int | None], uid: str = Depends(user_id), c=Depen
         return budget.edit(c, uid, body)
     except ValueError as e:
         raise HTTPException(422, str(e)) from e
+
+
+@router.post("/me/discovery/card")
+def card_check(body: CardCheckIn, uid: str = Depends(user_id), c=Depends(conn)):
+    from cc_smith.api.main import catalogue  # late import: main includes this router
+
+    scored = {cid for cid, (_p, _m, st) in catalogue(c).items() if st == "active"}
+    out = demo.card_check(c, body.lender, body.last4, body.bin, scored)
+    if out is None:
+        raise HTTPException(422, "this card number doesn't match a card from that bank")
+    return out
+

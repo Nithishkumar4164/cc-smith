@@ -1,0 +1,370 @@
+{
+  "_recorded": {
+    "engine": "google",
+    "params": {
+      "gl": "in",
+      "google_domain": "google.co.in",
+      "hl": "en",
+      "q": "site:idfcfirst.bank.in \"Zero Forex Markup\""
+    },
+    "at": "2026-10-10T11:53:57.599656+00:00"
+  },
+  "search_metadata": {
+    "id": "6aca27540a91563392b4c16d",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/49DFqO2TwREkTGyTqsxtGjW8r7tgv3H5zimW8qI_I1s/6aca27540a91563392b4c16d.json",
+    "markdown_endpoint": "https://serpapi.com/searches/49DFqO2TwREkTGyTqsxtGjW8r7tgv3H5zimW8qI_I1s/6aca27540a91563392b4c16d.md",
+    "pixel_position_endpoint": "https://serpapi.com/searches/49DFqO2TwREkTGyTqsxtGjW8r7tgv3H5zimW8qI_I1s/6aca27540a91563392b4c16d.json_with_pixel_position",
+    "created_at": "2026-10-10 11:53:56 UTC",
+    "processed_at": "2026-10-10 11:53:56 UTC",
+    "google_url": "https://www.google.co.in/search?q=site%3Aidfcfirst.bank.in+%22Zero+Forex+Markup%22&oq=site%3Aidfcfirst.bank.in+%22Zero+Forex+Markup%22&hl=en&gl=in&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/49DFqO2TwREkTGyTqsxtGjW8r7tgv3H5zimW8qI_I1s/6aca27540a91563392b4c16d.html",
+    "total_time_taken": 0.74
+  },
+  "search_parameters": {
+    "device": "desktop",
+    "engine": "google",
+    "gl": "in",
+    "google_domain": "google.co.in",
+    "hl": "en",
+    "q": "site:idfcfirst.bank.in \"Zero Forex Markup\""
+  },
+  "search_information": {
+    "query_displayed": "site:idfcfirst.bank.in \"Zero Forex Markup\"",
+    "total_results": 34,
+    "time_taken_displayed": 0.2,
+    "organic_results_state": "Results for exact spelling"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Zero Forex Markup fees debit card : r/CreditCardsIndia",
+      "link": "https://www.reddit.com/r/CreditCardsIndia/comments/1tmblaa/zero_forex_markup_fees_debit_card/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESmAEB6zswFQPzaeMol9O_GEDVjE6fg7PNAO5KXjVwDSuhPhSu4i0PDhxy7Rh2t1uP7jz7OGSQNUwEdeaNnevRwcilatTINrG3o0v0hPa9HBaRTEq_2poPF28TZ4-XflTjlJuasvWPHBvE2d7_pcQXs7vXf60lZQMVZ93ycaW8EKTKwfMGDSb9CiZ8omGHOYiGj5jpIrQH_PTQyg&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQFnoECBcQAQ&uoh=1",
+      "displayed_link": "1 comment · 4 months ago",
+      "favicon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp",
+      "snippet": "Hello, Currently i am using IDFC First Wow black credit card which have zero forex markup fees but i am looking for debit card with same feature ...",
+      "snippet_highlighted_words": [
+        "zero forex markup"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Hello, Currently i am using IDFC First Wow black credit card which have zero forex markup fees but i am looking for debit card with same feature ...",
+          "source_info_link": "https://www.reddit.com/r/CreditCardsIndia/comments/1tmblaa/zero_forex_markup_fees_debit_card/",
+          "icon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtwBL2dvdG8_dXJsPUNBRVNtQUVCNnpzd0ZRUHphZU1vbDlPX0dFRFZqRTZmZzdQTkFPNUtYalZ3RFN1aFBoU3U0aTBQRGh4eTdSaDJ0MXVQN2p6N09HU1FOVXdFZGVhTm5ldlJ3Y2lsYXRUSU5yRzNvMHYwaFBhOUhCYVJURXFfMnBvUEYyOFRaNC1YZmxUamxKdWFzdldQSEJ2RTJkN19wY1FYczd2WGY2MGxaUU1WWjkzeWNhVzhFS1RLd2ZNR0RTYjlDaVo4b21HSE9ZaUdqNWpwSXJRSF9QVFF5ZxIEGgIIABqgBBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkD8AwgAEAAYACAAKgsKBHplcm8V_rSpQCoMCgVmb3JleBUEXrxAKg0KBm1hcmt1cBUUtJ5AMtwBL2dvdG8_dXJsPUNBRVNtQUVCNnpzd0ZRUHphZU1vbDlPX0dFRFZqRTZmZzdQTkFPNUtYalZ3RFN1aFBoU3U0aTBQRGh4eTdSaDJ0MXVQN2p6N09HU1FOVXdFZGVhTm5ldlJ3Y2lsYXRUSU5yRzNvMHYwaFBhOUhCYVJURXFfMnBvUEYyOFRaNC1YZmxUamxKdWFzdldQSEJ2RTJkN19wY1FYczd2WGY2MGxaUU1WWjkzeWNhVzhFS1RLd2ZNR0RTYjlDaVo4b21HSE9ZaUdqNWpwSXJRSF9QVFF5ZzpGPGI-WmVybyBGb3JleCBNYXJrdXA8L2I-IGZlZXMgZGViaXQgY2FyZCA6IHIvQ3JlZGl0Q2FyZHNJbmRpYSAtIFJlZGRpdEKgAUhlbGxvLCBDdXJyZW50bHkgaSBhbSB1c2luZyBJREZDIEZpcnN0IFdvdyBibGFjayBjcmVkaXQgY2FyZCB3aGljaCBoYXZlIDxiPnplcm8gZm9yZXggbWFya3VwPC9iPiBmZWVzIGJ1dCBpIGFtIGxvb2tpbmcgZm9yIGRlYml0IGNhcmQgd2l0aCBzYW1lIGZlYXR1cmUmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtwBL2dvdG8_dXJsPUNBRVNtQUVCNnpzd0ZRUHphZU1vbDlPX0dFRFZqRTZmZzdQTkFPNUtYalZ3RFN1aFBoU3U0aTBQRGh4eTdSaDJ0MXVQN2p6N09HU1FOVXdFZGVhTm5ldlJ3Y2lsYXRUSU5yRzNvMHYwaFBhOUhCYVJURXFfMnBvUEYyOFRaNC1YZmxUamxKdWFzdldQSEJ2RTJkN19wY1FYczd2WGY2MGxaUU1WWjkzeWNhVzhFS1RLd2ZNR0RTYjlDaVo4b21HSE9ZaUdqNWpwSXJRSF9QVFF5ZxIEGgIIABqgBBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkD8AwgAEAAYACAAKgsKBHplcm8V_rSpQCoMCgVmb3JleBUEXrxAKg0KBm1hcmt1cBUUtJ5AMtwBL2dvdG8_dXJsPUNBRVNtQUVCNnpzd0ZRUHphZU1vbDlPX0dFRFZqRTZmZzdQTkFPNUtYalZ3RFN1aFBoU3U0aTBQRGh4eTdSaDJ0MXVQN2p6N09HU1FOVXdFZGVhTm5ldlJ3Y2lsYXRUSU5yRzNvMHYwaFBhOUhCYVJURXFfMnBvUEYyOFRaNC1YZmxUamxKdWFzdldQSEJ2RTJkN19wY1FYczd2WGY2MGxaUU1WWjkzeWNhVzhFS1RLd2ZNR0RTYjlDaVo4b21HSE9ZaUdqNWpwSXJRSF9QVFF5ZzpGPGI-WmVybyBGb3JleCBNYXJrdXA8L2I-IGZlZXMgZGViaXQgY2FyZCA6IHIvQ3JlZGl0Q2FyZHNJbmRpYSAtIFJlZGRpdEKgAUhlbGxvLCBDdXJyZW50bHkgaSBhbSB1c2luZyBJREZDIEZpcnN0IFdvdyBibGFjayBjcmVkaXQgY2FyZCB3aGljaCBoYXZlIDxiPnplcm8gZm9yZXggbWFya3VwPC9iPiBmZWVzIGJ1dCBpIGFtIGxvb2tpbmcgZm9yIGRlYml0IGNhcmQgd2l0aCBzYW1lIGZlYXR1cmUmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Reddit · r/CreditCardsIndia"
+    },
+    {
+      "position": 2,
+      "title": "Zero Forex Markup Cards Exchange Rate",
+      "link": "https://www.reddit.com/r/CreditCardsIndia/comments/19afoxu/zero_forex_markup_cards_exchange_rate/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESnAEB6zswFRf1KGUmOm6mli9LqRU-n9XWbOpoYk8nuR0RhHjdeLJ-o0P5TUvtfH210JuIATqr4yYdDv9TzFumkSZpQiOuPpCUlvYzOf70J4LqIvM83TBbemleqXyQ-gpVZIvYkAmL527NXOYy9V4_WDhW-6tbkgB4-SYaLls8O6O_RjhFLuFeXCmM6URusYKO3TWV1jhVPrtsKJVk4I8&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQFnoECBoQAQ&uoh=1",
+      "displayed_link": "6 comments · 2 years ago",
+      "favicon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp",
+      "snippet": "IDFC Best offer to all IDFC credit card holders \"ZERO FOREX MARKUP\" ... r/CreditCardsIndia - Best Debit Card with Zero Forex Markup Fee. 5 ...",
+      "snippet_highlighted_words": [
+        "ZERO FOREX MARKUP",
+        "Zero Forex Markup"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "IDFC Best offer to all IDFC credit card holders \"ZERO FOREX MARKUP\" ... r/CreditCardsIndia - Best Debit Card with Zero Forex Markup Fee. 5 ...",
+          "source_info_link": "https://www.reddit.com/r/CreditCardsIndia/comments/19afoxu/zero_forex_markup_cards_exchange_rate/",
+          "icon": "https://serpapi.com/images/i/UklGRsgBAABXRUJQVlA4ILwBAABwCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHmfjXFVOG9mcZ4QDxYP1m7Cm8NegB0qRXs-2xc_4RyNjKICSZ0GQliSROqR1wWiqSCHqbbO0wAA_vfwH4_riQbrKqktUHZQIXSB7cgfDG2XxRU1t3H2qzarEsy1mUvxybokwYpSVKzHnZ-izG5PYwBHsc1GtRcEZoZGf_6u28fsi_cWb4W-9i2bp_kRTmnuqM-BBD2L8-VOJcPOsfd1DB1l8_s_3IvanbQ3-krp22uWGcFAQ0Qx0IVfaFDbMfkeuTg04P8lvHyLNiFX4K-OPAt_D6D2n53jjz9MP6rCcImkST0rmUe510C8p7V5A03Xqh32Q8S4mUzVbW_5VoXr0-sfR4z_zJaQkvouwq_D_r7Egp_FPrFkVJXi7GPrP-f_IsNcCBvRKHMAM5dgcrzXOCJypnNnfv_oVmPx-9Y2rFO8yR1NQl_md3OtZBDsOZKkRFnfCN7_-XVBD4_74J8CFdRTTBZ4SXohYcnVS4zEUUs-SViDs_npDYUK3i7eDykmgeM2Y6cC5MAMXkzfFaXcRuCDi0lv5PSzrZbCDAqNAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CuEBL2dvdG8_dXJsPUNBRVNuQUVCNnpzd0ZSZjFLR1VtT202bWxpOUxxUlUtbjlYV2JPcG9ZazhudVIwUmhIamRlTEotbzBQNVRVdnRmSDIxMEp1SUFUcXI0eVlkRHY5VHpGdW1rU1pwUWlPdVBwQ1Vsdll6T2Y3MEo0THFJdk04M1RCYmVtbGVxWHlRLWdwVlpJdllrQW1MNTI3TlhPWXk5VjRfV0RoVy02dGJrZ0I0LVNZYUxsczhPNk9fUmpoRkx1RmVYQ21NNlVSdXNZS08zVFdWMWpoVlBydHNLSlZrNEk4EgQaAggAGqsEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQIcECAAQABgAIAAqCwoEemVybxURUbJAKgwKBWZvcmV4FRi-vUAqDQoGbWFya3VwFVXKnUAy4QEvZ290bz91cmw9Q0FFU25BRUI2enN3RlJmMUtHVW1PbTZtbGk5THFSVS1uOVhXYk9wb1lrOG51UjBSaEhqZGVMSi1vMFA1VFV2dGZIMjEwSnVJQVRxcjR5WWREdjlUekZ1bWtTWnBRaU91UHBDVWx2WXpPZjcwSjRMcUl2TTgzVEJiZW1sZXFYeVEtZ3BWWkl2WWtBbUw1MjdOWE9ZeTlWNF9XRGhXLTZ0YmtnQjQtU1lhTGxzOE82T19SamhGTHVGZVhDbU02VVJ1c1lLTzNUV1YxamhWUHJ0c0tKVms0STg6QTxiPlplcm8gRm9yZXggTWFya3VwPC9iPiBDYXJkcyBFeGNoYW5nZSBSYXRlIDogci9DcmVkaXRDYXJkc0luZGlhQqsBSURGQyBCZXN0IG9mZmVyIHRvIGFsbCBJREZDIGNyZWRpdCBjYXJkIGhvbGRlcnMgJnF1b3Q7PGI-WkVSTyBGT1JFWCBNQVJLVVA8L2I-JnF1b3Q7IC4uLiByL0NyZWRpdENhcmRzSW5kaWEgLSBCZXN0IERlYml0IENhcmQgd2l0aCA8Yj5aZXJvIEZvcmV4IE1hcmt1cDwvYj4gRmVlLiA1Jm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CuEBL2dvdG8_dXJsPUNBRVNuQUVCNnpzd0ZSZjFLR1VtT202bWxpOUxxUlUtbjlYV2JPcG9ZazhudVIwUmhIamRlTEotbzBQNVRVdnRmSDIxMEp1SUFUcXI0eVlkRHY5VHpGdW1rU1pwUWlPdVBwQ1Vsdll6T2Y3MEo0THFJdk04M1RCYmVtbGVxWHlRLWdwVlpJdllrQW1MNTI3TlhPWXk5VjRfV0RoVy02dGJrZ0I0LVNZYUxsczhPNk9fUmpoRkx1RmVYQ21NNlVSdXNZS08zVFdWMWpoVlBydHNLSlZrNEk4EgQaAggAGqsEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQIcECAAQABgAIAAqCwoEemVybxURUbJAKgwKBWZvcmV4FRi-vUAqDQoGbWFya3VwFVXKnUAy4QEvZ290bz91cmw9Q0FFU25BRUI2enN3RlJmMUtHVW1PbTZtbGk5THFSVS1uOVhXYk9wb1lrOG51UjBSaEhqZGVMSi1vMFA1VFV2dGZIMjEwSnVJQVRxcjR5WWREdjlUekZ1bWtTWnBRaU91UHBDVWx2WXpPZjcwSjRMcUl2TTgzVEJiZW1sZXFYeVEtZ3BWWkl2WWtBbUw1MjdOWE9ZeTlWNF9XRGhXLTZ0YmtnQjQtU1lhTGxzOE82T19SamhGTHVGZVhDbU02VVJ1c1lLTzNUV1YxamhWUHJ0c0tKVms0STg6QTxiPlplcm8gRm9yZXggTWFya3VwPC9iPiBDYXJkcyBFeGNoYW5nZSBSYXRlIDogci9DcmVkaXRDYXJkc0luZGlhQqsBSURGQyBCZXN0IG9mZmVyIHRvIGFsbCBJREZDIGNyZWRpdCBjYXJkIGhvbGRlcnMgJnF1b3Q7PGI-WkVSTyBGT1JFWCBNQVJLVVA8L2I-JnF1b3Q7IC4uLiByL0NyZWRpdENhcmRzSW5kaWEgLSBCZXN0IERlYml0IENhcmQgd2l0aCA8Yj5aZXJvIEZvcmV4IE1hcmt1cDwvYj4gRmVlLiA1Jm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "Reddit · r/CreditCardsIndia",
+      "read_more_link": "https://www.reddit.com/r/CreditCardsIndia/comments/19afoxu/zero_forex_markup_cards_exchange_rate/#:~:text=IDFC%20Best%20offer%20to%20all,card%20holders%20%22ZERO%20FOREX%20MARKUP%22&text=5"
+    },
+    {
+      "position": 3,
+      "title": "Best Credit Card With Zero Forex Markup Fee",
+      "link": "https://www.youtube.com/watch?v=AC2ON-UspI0",
+      "displayed_link": "630+ views · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6aca27540a91563392b4c16d/images/MiqiZZ-RKdDZjqQjjoFsFh-qIqWJv9GKamNKYYZ9jt4.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAwBACdASoQABAAAsBMJbACdGsAYQB-gGWAbwASnnx4vADfdr4sQbHuTIgA_vQMxuNgMMWMsmouF7hbZvT51iCqgStGXinCzpYfdY0TLuw8u1p8i-R75HEyG3C9BMJ_SyeGe2BtG_fAxY-0nDUOWQ1YBl__mcybueh2sm_8KPzrhGf-yuX3HjbKaeK8Q3AcwAA.webp",
+      "snippet": "Best Credit Card With Zero Forex Markup Fee | Credit Cards for Forex Spends. @financialraj4 likes630 views2 years ago",
+      "duration": "7:24",
+      "about_this_result": {
+        "source": {
+          "description": "Best Credit Card With Zero Forex Markup Fee | Credit Cards for Forex Spends. @financialraj4 likes630 views2 years ago",
+          "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAwBACdASoQABAAAsBMJbACdGsAYQB-gGWAbwASnnx4vADfdr4sQbHuTIgA_vQMxuNgMMWMsmouF7hbZvT51iCqgStGXinCzpYfdY0TLuw8u1p8i-R75HEyG3C9BMJ_SyeGe2BtG_fAxY-0nDUOWQ1YBl__mcybueh2sm_8KPzrhGf-yuX3HjbKaeK8Q3AcwAA.webp"
+        }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVlhGZmJjZmlISU5FLU9EdEhyYkRDR3hVaXpmZ0NLUHVDU25qN2JpVFRuTnBvZXl1dzM4WEVmMGpyTzV2cFZsOE0za21OcjU2M2JkSTQzMmthTlJMSDBXTUg2RFFQZkVkM1kySEdRYVI1Ym5rbkVCLVNTbmJKQ3E5SF8ybmFtck9wQXcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVlhGZmJjZmlISU5FLU9EdEhyYkRDR3hVaXpmZ0NLUHVDU25qN2JpVFRuTnBvZXl1dzM4WEVmMGpyTzV2cFZsOE0za21OcjU2M2JkSTQzMmthTlJMSDBXTUg2RFFQZkVkM1kySEdRYVI1Ym5rbkVCLVNTbmJKQ3E5SF8ybmFtck9wQXcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "source": "YouTube · Financial Raj"
+    },
+    {
+      "position": 4,
+      "title": "Best Zero Forex Credit Cards in India – 2024",
+      "link": "https://creditcardz.in/zero-forex-credit-cards-in-india/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEScwHrOzAV5bUBAFLXCQc4F6kxf4QkwPsZs63qt6cxFTaxm3tdZdOZPc53rd4y_VD50h529SDWHqlIcwyTSq189ddq6Cu6ZxCvzCpHZ48HSlG5XzYo5kTFEOjYyUsEmaDcfAVoIMzUDniaXOQLknRQjrqnk_A&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQFnoECBAQAQ&uoh=1",
+      "displayed_link": "https://creditcardz.in › Card Review",
+      "favicon": "https://serpapi.com/images/i/UklGRvQAAABXRUJQVlA4IOgAAAAQBQCdASocABwAPtE-tFooIigoFAEAGglpAAPi6Qr_LRvmOVW_Un61t86cfs5uVbAAAP72Alts-jIpyXTa-teBH6u_UpjcPdWIna64FrseEFlEPHvc1e3uhO2Hn4qXLOx02i6-Cc67kL4UTpS55_7hemxhMR-S7LlCPLXi1rc_4YRYVL_91OU81ZZQL4rYqWXzJLwCKRcftiyp-4Xk8JN-X31P3x9N0XWRFWdPp_R2HzP_-f9hor04jNP5Ya3-IvX3kzfkfJandffOJk_jsQYAOQU_bMLw_eMvR7HHXUDUeF_0SpPwAAAA.webp",
+      "date": "15 Aug 2023",
+      "snippet": "Debit Cards with 0% forex markup. A few debit cards also offer zero forex markup. I suggest that you keep one such debit card with you as you ...",
+      "snippet_highlighted_words": [
+        "zero forex markup"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Debit Cards with 0% forex markup. A few debit cards also offer zero forex markup. I suggest that you keep one such debit card with you as you ...",
+          "source_info_link": "https://creditcardz.in/zero-forex-credit-cards-in-india/",
+          "icon": "https://serpapi.com/images/i/UklGRvQAAABXRUJQVlA4IOgAAAAQBQCdASocABwAPtE-tFooIigoFAEAGglpAAPi6Qr_LRvmOVW_Un61t86cfs5uVbAAAP72Alts-jIpyXTa-teBH6u_UpjcPdWIna64FrseEFlEPHvc1e3uhO2Hn4qXLOx02i6-Cc67kL4UTpS55_7hemxhMR-S7LlCPLXi1rc_4YRYVL_91OU81ZZQL4rYqWXzJLwCKRcftiyp-4Xk8JN-X31P3x9N0XWRFWdPp_R2HzP_-f9hor04jNP5Ya3-IvX3kzfkfJandffOJk_jsQYAOQU_bMLw_eMvR7HHXUDUeF_0SpPwAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqkBL2dvdG8_dXJsPUNBRVNjd0hyT3pBVjViVUJBRkxYQ1FjNEY2a3hmNFFrd1BzWnM2M3F0NmN4RlRheG0zdGRaZE9aUGM1M3JkNHlfVkQ1MGg1MjlTRFdIcWxJY3d5VFNxMTg5ZGRxNkN1Nlp4Q3Z6Q3BIWjQ4SFNsRzVYellvNWtURkVPall5VXNFbWFEY2ZBVm9JTXpVRG5pYVhPUUxrblJRanJxbmtfQRIEGgIIABrSAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCuAwgAEAAYACAAKgsKBHplcm8V83yVQCoMCgVmb3JleBXKJbFAKg0KBm1hcmt1cBU-VR5AMqkBL2dvdG8_dXJsPUNBRVNjd0hyT3pBVjViVUJBRkxYQ1FjNEY2a3hmNFFrd1BzWnM2M3F0NmN4RlRheG0zdGRaZE9aUGM1M3JkNHlfVkQ1MGg1MjlTRFdIcWxJY3d5VFNxMTg5ZGRxNkN1Nlp4Q3Z6Q3BIWjQ4SFNsRzVYellvNWtURkVPall5VXNFbWFEY2ZBVm9JTXpVRG5pYVhPUUxrblJRanJxbmtfQTouQmVzdCBaZXJvIEZvcmV4IENyZWRpdCBDYXJkcyBpbiBJbmRpYSDigJMgMjAyNEKdAURlYml0IENhcmRzIHdpdGggMCUgZm9yZXggbWFya3VwLiBBIGZldyBkZWJpdCBjYXJkcyBhbHNvIG9mZmVyIDxiPnplcm8gZm9yZXggbWFya3VwPC9iPi4gSSBzdWdnZXN0IHRoYXQgeW91IGtlZXAgb25lIHN1Y2ggZGViaXQgY2FyZCB3aXRoIHlvdSBhcyB5b3UmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqkBL2dvdG8_dXJsPUNBRVNjd0hyT3pBVjViVUJBRkxYQ1FjNEY2a3hmNFFrd1BzWnM2M3F0NmN4RlRheG0zdGRaZE9aUGM1M3JkNHlfVkQ1MGg1MjlTRFdIcWxJY3d5VFNxMTg5ZGRxNkN1Nlp4Q3Z6Q3BIWjQ4SFNsRzVYellvNWtURkVPall5VXNFbWFEY2ZBVm9JTXpVRG5pYVhPUUxrblJRanJxbmtfQRIEGgIIABrSAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCuAwgAEAAYACAAKgsKBHplcm8V83yVQCoMCgVmb3JleBXKJbFAKg0KBm1hcmt1cBU-VR5AMqkBL2dvdG8_dXJsPUNBRVNjd0hyT3pBVjViVUJBRkxYQ1FjNEY2a3hmNFFrd1BzWnM2M3F0NmN4RlRheG0zdGRaZE9aUGM1M3JkNHlfVkQ1MGg1MjlTRFdIcWxJY3d5VFNxMTg5ZGRxNkN1Nlp4Q3Z6Q3BIWjQ4SFNsRzVYellvNWtURkVPall5VXNFbWFEY2ZBVm9JTXpVRG5pYVhPUUxrblJRanJxbmtfQTouQmVzdCBaZXJvIEZvcmV4IENyZWRpdCBDYXJkcyBpbiBJbmRpYSDigJMgMjAyNEKdAURlYml0IENhcmRzIHdpdGggMCUgZm9yZXggbWFya3VwLiBBIGZldyBkZWJpdCBjYXJkcyBhbHNvIG9mZmVyIDxiPnplcm8gZm9yZXggbWFya3VwPC9iPi4gSSBzdWdnZXN0IHRoYXQgeW91IGtlZXAgb25lIHN1Y2ggZGViaXQgY2FyZCB3aXRoIHlvdSBhcyB5b3UmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Credit Cardz",
+      "read_more_link": "https://creditcardz.in/zero-forex-credit-cards-in-india/#:~:text=Debit%20Cards%20with%200%25%20forex,on%20you%20when%20you%20travel."
+    },
+    {
+      "position": 5,
+      "title": "Zero Forex Markup Card: A Way to Simplify your foreign ...",
+      "link": "https://fly.finance/blog/money-transfer/zero-forex-markup-card/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESegHrOzAVgtr-eCDC4G-WQOdcDXaUQc_QNpaCTGk7H0OHknFArNudnXuRvRsCAy5JUPukr8OiI5TIhyk6EsSmazIUFkpQY5PgxjNKxiqvjQn8AIOSvT4kv8ueDW16Y_7STRllhbEeF5XZcGK4J4_yZ3AUfpWpjxM0A_rg&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQFnoECBYQAQ&uoh=1",
+      "displayed_link": "https://fly.finance › ... › International Money Transfer",
+      "favicon": "https://serpapi.com/images/i/UklGRswAAABXRUJQVlA4IMAAAAAQBQCdASogAB8APrkurlcnIacnG_DgFwlpAAPkD2r-BOoa5VSlf4vKItYzkeULxZ8AAP7-wQ_ejv_uOuf6j_infAH7Hu9RCkYvJycfi_-y5Wk2K-_Zy39WOl87rOc4DpworpOHoOu7Secye2FnPsINIGj4bmqw8PozBxMvWrSJIv2cjXMCYNLMU5rhkVOCT7WZpMjXADIkdBkGP4w9sWzt2GlUBnag5PZ4Gezd75g4EeHPRDOcnqbHP_78RDAAAAA.webp",
+      "date": "22 Aug 2023",
+      "snippet": "A Zero Forex Markup Card is a type of payment card—often a credit or debit card—that eliminates the usual foreign exchange markup fees when you ...",
+      "snippet_highlighted_words": [
+        "Zero Forex Markup"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "A Zero Forex Markup Card is a type of payment card—often a credit or debit card—that eliminates the usual foreign exchange markup fees when you ...",
+          "source_info_link": "https://fly.finance/blog/money-transfer/zero-forex-markup-card/",
+          "icon": "https://serpapi.com/images/i/UklGRswAAABXRUJQVlA4IMAAAAAQBQCdASogAB8APrkurlcnIacnG_DgFwlpAAPkD2r-BOoa5VSlf4vKItYzkeULxZ8AAP7-wQ_ejv_uOuf6j_infAH7Hu9RCkYvJycfi_-y5Wk2K-_Zy39WOl87rOc4DpworpOHoOu7Secye2FnPsINIGj4bmqw8PozBxMvWrSJIv2cjXMCYNLMU5rhkVOCT7WZpMjXADIkdBkGP4w9sWzt2GlUBnag5PZ4Gezd75g4EeHPRDOcnqbHP_78RDAAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVmd0ci1lQ0RDNEctV1FPZGNEWGFVUWNfUU5wYUNUR2s3SDBPSGtuRkFyTnVkblh1UnZSc0NBeTVKVVB1a3I4T2lJNVRJaHlrNkVzU21heklVRmtwUVk1UGd4ak5LeGlxdmpRbjhBSU9TdlQ0a3Y4dWVEVzE2WV83U1RSbGxoYkVlRjVYWmNHSzRKNF95WjNBVWZwV3BqeE0wQV9yZxIEGgIIABr0AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDQAwgAEAAYACAAKgsKBHplcm8Vzgq9QCoMCgVmb3JleBUo7cdAKg0KBm1hcmt1cBU-EcZAMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVmd0ci1lQ0RDNEctV1FPZGNEWGFVUWNfUU5wYUNUR2s3SDBPSGtuRkFyTnVkblh1UnZSc0NBeTVKVVB1a3I4T2lJNVRJaHlrNkVzU21heklVRmtwUVk1UGd4ak5LeGlxdmpRbjhBSU9TdlQ0a3Y4dWVEVzE2WV83U1RSbGxoYkVlRjVYWmNHSzRKNF95WjNBVWZwV3BqeE0wQV9yZzpBPGI-WmVybyBGb3JleCBNYXJrdXA8L2I-IENhcmQ6IEEgV2F5IHRvIFNpbXBsaWZ5IHlvdXIgZm9yZWlnbiAuLi5CowFBIDxiPlplcm8gRm9yZXggTWFya3VwPC9iPiBDYXJkIGlzIGEgdHlwZSBvZiBwYXltZW50IGNhcmTigJRvZnRlbiBhIGNyZWRpdCBvciBkZWJpdCBjYXJk4oCUdGhhdCBlbGltaW5hdGVzIHRoZSB1c3VhbCBmb3JlaWduIGV4Y2hhbmdlIG1hcmt1cCBmZWVzIHdoZW4geW91Jm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVmd0ci1lQ0RDNEctV1FPZGNEWGFVUWNfUU5wYUNUR2s3SDBPSGtuRkFyTnVkblh1UnZSc0NBeTVKVVB1a3I4T2lJNVRJaHlrNkVzU21heklVRmtwUVk1UGd4ak5LeGlxdmpRbjhBSU9TdlQ0a3Y4dWVEVzE2WV83U1RSbGxoYkVlRjVYWmNHSzRKNF95WjNBVWZwV3BqeE0wQV9yZxIEGgIIABr0AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDQAwgAEAAYACAAKgsKBHplcm8Vzgq9QCoMCgVmb3JleBUo7cdAKg0KBm1hcmt1cBU-EcZAMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVmd0ci1lQ0RDNEctV1FPZGNEWGFVUWNfUU5wYUNUR2s3SDBPSGtuRkFyTnVkblh1UnZSc0NBeTVKVVB1a3I4T2lJNVRJaHlrNkVzU21heklVRmtwUVk1UGd4ak5LeGlxdmpRbjhBSU9TdlQ0a3Y4dWVEVzE2WV83U1RSbGxoYkVlRjVYWmNHSzRKNF95WjNBVWZwV3BqeE0wQV9yZzpBPGI-WmVybyBGb3JleCBNYXJrdXA8L2I-IENhcmQ6IEEgV2F5IHRvIFNpbXBsaWZ5IHlvdXIgZm9yZWlnbiAuLi5CowFBIDxiPlplcm8gRm9yZXggTWFya3VwPC9iPiBDYXJkIGlzIGEgdHlwZSBvZiBwYXltZW50IGNhcmTigJRvZnRlbiBhIGNyZWRpdCBvciBkZWJpdCBjYXJk4oCUdGhhdCBlbGltaW5hdGVzIHRoZSB1c3VhbCBmb3JlaWduIGV4Y2hhbmdlIG1hcmt1cCBmZWVzIHdoZW4geW91Jm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "Fly Finance",
+      "read_more_link": "https://fly.finance/blog/money-transfer/zero-forex-markup-card/#:~:text=A%20Zero%20Forex%20Markup%20Card,currency%20other%20than%20your%20own."
+    },
+    {
+      "position": 6,
+      "title": "3 Zero-Forex Credit Cards To Make Your Next Foreign Trip ...",
+      "link": "https://www.news18.com/business/3-zero-forex-credit-cards-to-make-your-next-foreign-trip-hassle-free-9041152.html",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESrAEB6zswFXZKSIkBYJQGoeSuGRrGODXJ4wii0Fq5zaAuay3VyvEB7dneCxRzttbmSaCfRagqknuQ85DQEF5cLiWMYebMxiNfUuCL1mcC6t1JC4ziHPKaMuT7kfMMrMKJtmjYSGLsv0JVYsQrlTmwixzuDgki-o91-4hYtkjx9gOzl9uqoa8jIC7ICpJPtm_3OiXdw6-iIWjQb7LUC-zKZYddWwpajsrLf4zt8S0n&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQFnoECBIQAQ&uoh=1",
+      "displayed_link": "https://www.news18.com › business",
+      "favicon": "https://serpapi.com/images/i/UklGRmIBAABXRUJQVlA4IFYBAADQBgCdASocABwAPtE-tFooIigoFAEAGglsAJ0yhHA3oHCD5AbYCwAOlKJVV5DSFXKV4aflvdUHOtK2n1Z8S3AA_m5znBN9ma7JsTKoeTr2NS4rPfN1vgxQkhDWPlAULdTZRrjTTtAxkiP_GjZ_0t19S3YHy9CgcMq-9MrE06btgJb_4kQgZ8jBgkxQt7nr4atQ7W-dLSY0wNfXo6wvHqexnCBms9doUr3F_qCQb1SyK5i4aufFpame4gr0Y6l9JNycnVAWvVRQs6aIOdXT05lfr7kfid_NxUYpdAHilH_17f6IIYrd_zgB4nmpnX6HZgHekfLLlOjJ_sCWH8QZ4L9mFP2L9YDglxaTOnnRcr7WWT9z92PPxv_vXz7__KxJVVK21Mh-0K9ok6Cgz7yWtOzVlpMQKsscc6mJ0iP44tDK93luXndU-wn9v-0o_-etFTr8Ss0AAAA.webp",
+      "date": "30 Sept 2024",
+      "snippet": "Card companies impose foreign transaction fees or forex markup fees on all debit or credit card transactions made in foreign currencies.",
+      "rich_snippet": {
+        "top": {
+          "detected_extensions": {
+            "rating": 4.3,
+            "reviews": 44000
+          },
+          "extensions": [
+            "4.3(44,000)",
+            "Free",
+            "Android",
+            "Multimedia"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "Card companies impose foreign transaction fees or forex markup fees on all debit or credit card transactions made in foreign currencies.",
+          "source_info_link": "https://www.news18.com/business/3-zero-forex-credit-cards-to-make-your-next-foreign-trip-hassle-free-9041152.html",
+          "icon": "https://serpapi.com/images/i/UklGRmIBAABXRUJQVlA4IFYBAADQBgCdASocABwAPtE-tFooIigoFAEAGglsAJ0yhHA3oHCD5AbYCwAOlKJVV5DSFXKV4aflvdUHOtK2n1Z8S3AA_m5znBN9ma7JsTKoeTr2NS4rPfN1vgxQkhDWPlAULdTZRrjTTtAxkiP_GjZ_0t19S3YHy9CgcMq-9MrE06btgJb_4kQgZ8jBgkxQt7nr4atQ7W-dLSY0wNfXo6wvHqexnCBms9doUr3F_qCQb1SyK5i4aufFpame4gr0Y6l9JNycnVAWvVRQs6aIOdXT05lfr7kfid_NxUYpdAHilH_17f6IIYrd_zgB4nmpnX6HZgHekfLLlOjJ_sCWH8QZ4L9mFP2L9YDglxaTOnnRcr7WWT9z92PPxv_vXz7__KxJVVK21Mh-0K9ok6Cgz7yWtOzVlpMQKsscc6mJ0iP44tDK93luXndU-wn9v-0o_-etFTr8Ss0AAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CvYBL2dvdG8_dXJsPUNBRVNyQUVCNnpzd0ZYWktTSWtCWUpRR29lU3VHUnJHT0RYSjR3aWkwRnE1emFBdWF5M1Z5dkVCN2RuZUN4Unp0dGJtU2FDZlJhZ3FrbnVRODVEUUVGNWNMaVdNWWViTXhpTmZVdUNMMW1jQzZ0MUpDNHppSFBLYU11VDdrZk1Nck1LSnRtallTR0xzdjBKVllzUXJsVG13aXh6dURna2ktbzkxLTRoWXRrang5Z096bDl1cW9hOGpJQzdJQ3BKUHRtXzNPaVhkdzYtaUlXalFiN0xVQy16S1pZZGRXd3BhanNyTGY0enQ4UzBuEgQaAggAGpgEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQPQDCAAQABgAIAAqCwoEemVybxWBfU9AKgwKBWZvcmV4Fd7-Z0AqDQoGbWFya3VwFVrUbT8y9gEvZ290bz91cmw9Q0FFU3JBRUI2enN3RlhaS1NJa0JZSlFHb2VTdUdSckdPRFhKNHdpaTBGcTV6YUF1YXkzVnl2RUI3ZG5lQ3hSenR0Ym1TYUNmUmFncWtudVE4NURRRUY1Y0xpV01ZZWJNeGlOZlV1Q0wxbWNDNnQxSkM0emlIUEthTXVUN2tmTU1yTUtKdG1qWVNHTHN2MEpWWXNRcmxUbXdpeHp1RGdraS1vOTEtNGhZdGtqeDlnT3psOXVxb2E4aklDN0lDcEpQdG1fM09pWGR3Ni1pSVdqUWI3TFVDLXpLWllkZFd3cGFqc3JMZjR6dDhTMG46PDMgWmVyby1Gb3JleCBDcmVkaXQgQ2FyZHMgVG8gTWFrZSBZb3VyIE5leHQgRm9yZWlnbiBUcmlwIC4uLkKIAUNhcmQgY29tcGFuaWVzIGltcG9zZSBmb3JlaWduIHRyYW5zYWN0aW9uIGZlZXMgb3IgZm9yZXggbWFya3VwIGZlZXMgb24gYWxsIGRlYml0IG9yIGNyZWRpdCBjYXJkIHRyYW5zYWN0aW9ucyBtYWRlIGluIGZvcmVpZ24gY3VycmVuY2llcy4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CvYBL2dvdG8_dXJsPUNBRVNyQUVCNnpzd0ZYWktTSWtCWUpRR29lU3VHUnJHT0RYSjR3aWkwRnE1emFBdWF5M1Z5dkVCN2RuZUN4Unp0dGJtU2FDZlJhZ3FrbnVRODVEUUVGNWNMaVdNWWViTXhpTmZVdUNMMW1jQzZ0MUpDNHppSFBLYU11VDdrZk1Nck1LSnRtallTR0xzdjBKVllzUXJsVG13aXh6dURna2ktbzkxLTRoWXRrang5Z096bDl1cW9hOGpJQzdJQ3BKUHRtXzNPaVhkdzYtaUlXalFiN0xVQy16S1pZZGRXd3BhanNyTGY0enQ4UzBuEgQaAggAGpgEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQPQDCAAQABgAIAAqCwoEemVybxWBfU9AKgwKBWZvcmV4Fd7-Z0AqDQoGbWFya3VwFVrUbT8y9gEvZ290bz91cmw9Q0FFU3JBRUI2enN3RlhaS1NJa0JZSlFHb2VTdUdSckdPRFhKNHdpaTBGcTV6YUF1YXkzVnl2RUI3ZG5lQ3hSenR0Ym1TYUNmUmFncWtudVE4NURRRUY1Y0xpV01ZZWJNeGlOZlV1Q0wxbWNDNnQxSkM0emlIUEthTXVUN2tmTU1yTUtKdG1qWVNHTHN2MEpWWXNRcmxUbXdpeHp1RGdraS1vOTEtNGhZdGtqeDlnT3psOXVxb2E4aklDN0lDcEpQdG1fM09pWGR3Ni1pSVdqUWI3TFVDLXpLWllkZFd3cGFqc3JMZjR6dDhTMG46PDMgWmVyby1Gb3JleCBDcmVkaXQgQ2FyZHMgVG8gTWFrZSBZb3VyIE5leHQgRm9yZWlnbiBUcmlwIC4uLkKIAUNhcmQgY29tcGFuaWVzIGltcG9zZSBmb3JlaWduIHRyYW5zYWN0aW9uIGZlZXMgb3IgZm9yZXggbWFya3VwIGZlZXMgb24gYWxsIGRlYml0IG9yIGNyZWRpdCBjYXJkIHRyYW5zYWN0aW9ucyBtYWRlIGluIGZvcmVpZ24gY3VycmVuY2llcy4iAhABSABYAGgA",
+      "source": "News18",
+      "read_more_link": "https://www.news18.com/business/3-zero-forex-credit-cards-to-make-your-next-foreign-trip-hassle-free-9041152.html#:~:text=Card%20companies%20impose%20foreign%20transaction,transactions%20made%20in%20foreign%20currencies."
+    },
+    {
+      "position": 7,
+      "title": "Want the best credit card with 0 forex markup fees. | Page 2",
+      "link": "https://technofino.in/community/threads/want-the-best-credit-card-with-0-forex-markup-fees.11619/page-2",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESogEB6zswFeHw-5kk6n_5-eXAZvOke4V0C1T4OvMPOxOXzGsUezQn3p1aPkbixSUsipgajCprJLPN2Br0KfqpGPtxvGk9m0d3qrUHlM4EE6JRksbEXdIxWTVSYlTAZbYiPHQwiHBezhPDlSo29DT6hBOY2-i_9QX0YhSp9jERgxyLGfC5A4mS-V5uCigkD-qwBe_ikWmm1NEQopgcZoMvmDxja7s&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQFnoECBMQAQ&uoh=1",
+      "displayed_link": "https://technofino.in › ... › Suggest me a Credit Card",
+      "favicon": "https://serpapi.com/images/i/UklGRvgBAABXRUJQVlA4IOwBAADQCQCdASogACAAPtEutFooIagoGAEAGglpABRgfE3wB79iLv8xXaywNJHMO8ZX0L_0fcK_MLrzejh-xyo0_88e92bZHkxxPv_a-oTOZkmWPBRkayjztAAA_v7DmqHWeIcssmEXHu-LPAITfsPxgwiw0edX_dBe6tkEanYy5J9tg1vf8JZtVvfiW2Aj_tGofaOYL2rnV3EGh3I-pJj8Jr77rs8JKvng7GRfOjn_aCF_4O5f7NJz4Z6jkXTn_lKDyjAfC08wMNzIE8UMk2me6RUPWT63u2s94Pio2ZUdrzbk7_EpCLNt56_ojcz8EbIHuUozgFRoZjwsh9fYA8ZsOGMipiVpX2sRJffNk86XvM3PvKG_w7bZ20mVbHQdcOXuTYTN88d_31C1fBgpzQVbCeUq7oHevqvd25_3T5Mg4rSL3_y71kirTxpjCX4EoSzH8EmHEvbTaCrGVE90xoXBqzB0deWwA8kz2_nlty0VC7hX0cHYTZv8q6TQNuTKqhA4WbWkCiE03txe2FStw34hmZ3qFuTr-1iPRgxNC-E5KNbKQFffAijo54lAwm9sYsvw09OfDevnO-6UP487fPtZao9nIhSAC_Wdc8SH4Ez6aMVeVPwjFF2pKIJeN5F5eTlE7bJx99LR9zs8DmEAAAA.webp",
+      "date": "1 May 2023",
+      "snippet": "IndusInd exclusive/ pioneer debit card gives you 0 Forex markup and you earn reward points too. Have used pioneer debit in a lot of countries ...",
+      "about_this_result": {
+        "source": {
+          "description": "IndusInd exclusive/ pioneer debit card gives you 0 Forex markup and you earn reward points too. Have used pioneer debit in a lot of countries ...",
+          "source_info_link": "https://technofino.in/community/threads/want-the-best-credit-card-with-0-forex-markup-fees.11619/page-2",
+          "icon": "https://serpapi.com/images/i/UklGRvgBAABXRUJQVlA4IOwBAADQCQCdASogACAAPtEutFooIagoGAEAGglpABRgfE3wB79iLv8xXaywNJHMO8ZX0L_0fcK_MLrzejh-xyo0_88e92bZHkxxPv_a-oTOZkmWPBRkayjztAAA_v7DmqHWeIcssmEXHu-LPAITfsPxgwiw0edX_dBe6tkEanYy5J9tg1vf8JZtVvfiW2Aj_tGofaOYL2rnV3EGh3I-pJj8Jr77rs8JKvng7GRfOjn_aCF_4O5f7NJz4Z6jkXTn_lKDyjAfC08wMNzIE8UMk2me6RUPWT63u2s94Pio2ZUdrzbk7_EpCLNt56_ojcz8EbIHuUozgFRoZjwsh9fYA8ZsOGMipiVpX2sRJffNk86XvM3PvKG_w7bZ20mVbHQdcOXuTYTN88d_31C1fBgpzQVbCeUq7oHevqvd25_3T5Mg4rSL3_y71kirTxpjCX4EoSzH8EmHEvbTaCrGVE90xoXBqzB0deWwA8kz2_nlty0VC7hX0cHYTZv8q6TQNuTKqhA4WbWkCiE03txe2FStw34hmZ3qFuTr-1iPRgxNC-E5KNbKQFffAijo54lAwm9sYsvw09OfDevnO-6UP487fPtZao9nIhSAC_Wdc8SH4Ez6aMVeVPwjFF2pKIJeN5F5eTlE7bJx99LR9zs8DmEAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CukBL2dvdG8_dXJsPUNBRVNvZ0VCNnpzd0ZlSHctNWtrNm5fNS1lWEFadk9rZTRWMEMxVDRPdk1QT3hPWHpHc1VlelFuM3AxYVBrYml4U1VzaXBnYWpDcHJKTFBOMkJyMEtmcXBHUHR4dkdrOW0wZDNxclVIbE00RUU2SlJrc2JFWGRJeFdUVlNZbFRBWmJZaVBIUXdpSEJlemhQRGxTbzI5RFQ2aEJPWTItaV85UVgwWWhTcDlqRVJneHlMR2ZDNUE0bVMtVjV1Q2lna0QtcXdCZV9pa1dtbTFORVFvcGdjWm9Ndm1EeGphN3MSBBoCCAAanQQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA-QMIABAAGAAgACoLCgR6ZXJvFcva8T4qDAoFZm9yZXgV1jp_QCoNCgZtYXJrdXAVMO5sQDLpAS9nb3RvP3VybD1DQUVTb2dFQjZ6c3dGZUh3LTVrazZuXzUtZVhBWnZPa2U0VjBDMVQ0T3ZNUE94T1h6R3NVZXpRbjNwMWFQa2JpeFNVc2lwZ2FqQ3BySkxQTjJCcjBLZnFwR1B0eHZHazltMGQzcXJVSGxNNEVFNkpSa3NiRVhkSXhXVFZTWWxUQVpiWWlQSFF3aUhCZXpoUERsU28yOURUNmhCT1kyLWlfOVFYMFloU3A5akVSZ3h5TEdmQzVBNG1TLVY1dUNpZ2tELXF3QmVfaWtXbW0xTkVRb3BnY1pvTXZtRHhqYTdzOkBXYW50IHRoZSBiZXN0IGNyZWRpdCBjYXJkIHdpdGggMCBmb3JleCBtYXJrdXAgZmVlcy4gLSBUZWNobm9GaW5vQpYBSW5kdXNJbmQgZXhjbHVzaXZlLyBwaW9uZWVyIGRlYml0IGNhcmQgZ2l2ZXMgeW91IDAgRm9yZXggbWFya3VwIGFuZCB5b3UgZWFybiByZXdhcmQgcG9pbnRzIHRvby4gSGF2ZSB1c2VkIHBpb25lZXIgZGViaXQgaW4gYSBsb3Qgb2YgY291bnRyaWVzJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CukBL2dvdG8_dXJsPUNBRVNvZ0VCNnpzd0ZlSHctNWtrNm5fNS1lWEFadk9rZTRWMEMxVDRPdk1QT3hPWHpHc1VlelFuM3AxYVBrYml4U1VzaXBnYWpDcHJKTFBOMkJyMEtmcXBHUHR4dkdrOW0wZDNxclVIbE00RUU2SlJrc2JFWGRJeFdUVlNZbFRBWmJZaVBIUXdpSEJlemhQRGxTbzI5RFQ2aEJPWTItaV85UVgwWWhTcDlqRVJneHlMR2ZDNUE0bVMtVjV1Q2lna0QtcXdCZV9pa1dtbTFORVFvcGdjWm9Ndm1EeGphN3MSBBoCCAAanQQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA-QMIABAAGAAgACoLCgR6ZXJvFcva8T4qDAoFZm9yZXgV1jp_QCoNCgZtYXJrdXAVMO5sQDLpAS9nb3RvP3VybD1DQUVTb2dFQjZ6c3dGZUh3LTVrazZuXzUtZVhBWnZPa2U0VjBDMVQ0T3ZNUE94T1h6R3NVZXpRbjNwMWFQa2JpeFNVc2lwZ2FqQ3BySkxQTjJCcjBLZnFwR1B0eHZHazltMGQzcXJVSGxNNEVFNkpSa3NiRVhkSXhXVFZTWWxUQVpiWWlQSFF3aUhCZXpoUERsU28yOURUNmhCT1kyLWlfOVFYMFloU3A5akVSZ3h5TEdmQzVBNG1TLVY1dUNpZ2tELXF3QmVfaWtXbW0xTkVRb3BnY1pvTXZtRHhqYTdzOkBXYW50IHRoZSBiZXN0IGNyZWRpdCBjYXJkIHdpdGggMCBmb3JleCBtYXJrdXAgZmVlcy4gLSBUZWNobm9GaW5vQpYBSW5kdXNJbmQgZXhjbHVzaXZlLyBwaW9uZWVyIGRlYml0IGNhcmQgZ2l2ZXMgeW91IDAgRm9yZXggbWFya3VwIGFuZCB5b3UgZWFybiByZXdhcmQgcG9pbnRzIHRvby4gSGF2ZSB1c2VkIHBpb25lZXIgZGViaXQgaW4gYSBsb3Qgb2YgY291bnRyaWVzJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "TechnoFino",
+      "read_more_link": "https://technofino.in/community/threads/want-the-best-credit-card-with-0-forex-markup-fees.11619/page-2#:~:text=IndusInd%20exclusive%2F%20pioneer%20debit%20card,of%20countries%20without%20any%20issue."
+    },
+    {
+      "position": 8,
+      "title": "Best Credit Cards in India with No Foreign Transaction Fee",
+      "link": "https://www.mybankingtips.com/blogs/best-credit-cards-in-india-with-no-foreign-transaction-fee-223",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESnQEB6zswFbthPhg97NGrcVthgkWKVHP9BEXXyeI4nDpfPHdnjsXo70f9QA_dSaotTYPnPdbY0J5czJuFn3tgPb9LQrd_JTNsAXvFQiRS3cR_xz32dm8GFqmEaCnzw19B0PKVhiC2xbhETz8FI2MxKxnhWznIVliY2CUE9JJb40ZUnxzU83U8oqK2CA2mfnvtgwVW1rYsGBOk8j3dFVB4&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQFnoECBUQAQ&uoh=1",
+      "displayed_link": "https://www.mybankingtips.com › blogs › best-credit-c...",
+      "favicon": "https://serpapi.com/images/i/UklGRn4BAABXRUJQVlA4IHIBAAAwBwCdASocABwAPtE-tFooIigoFAEAGglsAJ0v1YyBJga04N9MZ8jeaqGgiepkoMW1J5oqL5CnyL-3xEztkIDbFAAA_vYRXSyxknYVwvHGEkEF2YlEh5S3ptJxV6RvZsV3dPUveIeCHH5ub7AA-0sVBwFG63smb0URYWmue1lPpsegyuRUdtPwum-Jf8vJgQsPAN4gNry0-kN5B-m8e88CirdfRJW8dfJ97-CH8lOYw76knbrA91urinQWKsWeqzNuRk6xs_rU6gBDT9QqvXsua6d3LzzZKluP2PESOBdNNeD42edtM52y5YNcTslyLkp1azv3y904uuN_oLnsNtbVTvRB72x3PxA9_LiyK7Vi7ubZ12kcmurGgZ2Scj3jCs4UxWxONkLD5vOr_xavV_5aMh_QYvERLn-c7xhQwky4Xqlf3_j0a--ydAbUiMOqLP7iAkmLLsNS-uqcL1oOvPHClZDF7i8bZI31EnL5suQN0AAA.webp",
+      "date": "13 Apr 2026",
+      "snippet": "According to Jupiter, the Niyo SBM Bank Credit Card has zero forex markup. Also offers international features like lounge access (depending on ...",
+      "snippet_highlighted_words": [
+        "zero forex markup"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "According to Jupiter, the Niyo SBM Bank Credit Card has zero forex markup. Also offers international features like lounge access (depending on ...",
+          "source_info_link": "https://www.mybankingtips.com/blogs/best-credit-cards-in-india-with-no-foreign-transaction-fee-223",
+          "icon": "https://serpapi.com/images/i/UklGRn4BAABXRUJQVlA4IHIBAAAwBwCdASocABwAPtE-tFooIigoFAEAGglsAJ0v1YyBJga04N9MZ8jeaqGgiepkoMW1J5oqL5CnyL-3xEztkIDbFAAA_vYRXSyxknYVwvHGEkEF2YlEh5S3ptJxV6RvZsV3dPUveIeCHH5ub7AA-0sVBwFG63smb0URYWmue1lPpsegyuRUdtPwum-Jf8vJgQsPAN4gNry0-kN5B-m8e88CirdfRJW8dfJ97-CH8lOYw76knbrA91urinQWKsWeqzNuRk6xs_rU6gBDT9QqvXsua6d3LzzZKluP2PESOBdNNeD42edtM52y5YNcTslyLkp1azv3y904uuN_oLnsNtbVTvRB72x3PxA9_LiyK7Vi7ubZ12kcmurGgZ2Scj3jCs4UxWxONkLD5vOr_xavV_5aMh_QYvERLn-c7xhQwky4Xqlf3_j0a--ydAbUiMOqLP7iAkmLLsNS-uqcL1oOvPHClZDF7i8bZI31EnL5suQN0AAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CuIBL2dvdG8_dXJsPUNBRVNuUUVCNnpzd0ZidGhQaGc5N05HcmNWdGhna1dLVkhQOUJFWFh5ZUk0bkRwZlBIZG5qc1hvNzBmOVFBX2RTYW90VFlQblBkYlkwSjVjekp1Rm4zdGdQYjlMUXJkX0pUTnNBWHZGUWlSUzNjUl94ejMyZG04R0ZxbUVhQ256dzE5QjBQS1ZoaUMyeGJoRVR6OEZJMk14S3huaFd6bklWbGlZMkNVRTlKSmI0MFpVbnh6VTgzVThvcUsyQ0EybWZudnRnd1ZXMXJZc0dCT2s4ajNkRlZCNBIEGgIIABqYBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkD0AwgAEAAYACAAKgsKBHplcm8VJ8MBQCoMCgVmb3JleBXwDzJAKg0KBm1hcmt1cBU9YhlAMuIBL2dvdG8_dXJsPUNBRVNuUUVCNnpzd0ZidGhQaGc5N05HcmNWdGhna1dLVkhQOUJFWFh5ZUk0bkRwZlBIZG5qc1hvNzBmOVFBX2RTYW90VFlQblBkYlkwSjVjekp1Rm4zdGdQYjlMUXJkX0pUTnNBWHZGUWlSUzNjUl94ejMyZG04R0ZxbUVhQ256dzE5QjBQS1ZoaUMyeGJoRVR6OEZJMk14S3huaFd6bklWbGlZMkNVRTlKSmI0MFpVbnh6VTgzVThvcUsyQ0EybWZudnRnd1ZXMXJZc0dCT2s4ajNkRlZCNDo6QmVzdCBDcmVkaXQgQ2FyZHMgaW4gSW5kaWEgd2l0aCBObyBGb3JlaWduIFRyYW5zYWN0aW9uIEZlZUKeAUFjY29yZGluZyB0byBKdXBpdGVyLCB0aGUgTml5byBTQk0gQmFuayBDcmVkaXQgQ2FyZCBoYXMgPGI-emVybyBmb3JleCBtYXJrdXA8L2I-LiBBbHNvIG9mZmVycyBpbnRlcm5hdGlvbmFsIGZlYXR1cmVzIGxpa2UgbG91bmdlIGFjY2VzcyAoZGVwZW5kaW5nIG9uJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CuIBL2dvdG8_dXJsPUNBRVNuUUVCNnpzd0ZidGhQaGc5N05HcmNWdGhna1dLVkhQOUJFWFh5ZUk0bkRwZlBIZG5qc1hvNzBmOVFBX2RTYW90VFlQblBkYlkwSjVjekp1Rm4zdGdQYjlMUXJkX0pUTnNBWHZGUWlSUzNjUl94ejMyZG04R0ZxbUVhQ256dzE5QjBQS1ZoaUMyeGJoRVR6OEZJMk14S3huaFd6bklWbGlZMkNVRTlKSmI0MFpVbnh6VTgzVThvcUsyQ0EybWZudnRnd1ZXMXJZc0dCT2s4ajNkRlZCNBIEGgIIABqYBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkD0AwgAEAAYACAAKgsKBHplcm8VJ8MBQCoMCgVmb3JleBXwDzJAKg0KBm1hcmt1cBU9YhlAMuIBL2dvdG8_dXJsPUNBRVNuUUVCNnpzd0ZidGhQaGc5N05HcmNWdGhna1dLVkhQOUJFWFh5ZUk0bkRwZlBIZG5qc1hvNzBmOVFBX2RTYW90VFlQblBkYlkwSjVjekp1Rm4zdGdQYjlMUXJkX0pUTnNBWHZGUWlSUzNjUl94ejMyZG04R0ZxbUVhQ256dzE5QjBQS1ZoaUMyeGJoRVR6OEZJMk14S3huaFd6bklWbGlZMkNVRTlKSmI0MFpVbnh6VTgzVThvcUsyQ0EybWZudnRnd1ZXMXJZc0dCT2s4ajNkRlZCNDo6QmVzdCBDcmVkaXQgQ2FyZHMgaW4gSW5kaWEgd2l0aCBObyBGb3JlaWduIFRyYW5zYWN0aW9uIEZlZUKeAUFjY29yZGluZyB0byBKdXBpdGVyLCB0aGUgTml5byBTQk0gQmFuayBDcmVkaXQgQ2FyZCBoYXMgPGI-emVybyBmb3JleCBtYXJrdXA8L2I-LiBBbHNvIG9mZmVycyBpbnRlcm5hdGlvbmFsIGZlYXR1cmVzIGxpa2UgbG91bmdlIGFjY2VzcyAoZGVwZW5kaW5nIG9uJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "MyBankingTips",
+      "read_more_link": "https://www.mybankingtips.com/blogs/best-credit-cards-in-india-with-no-foreign-transaction-fee-223#:~:text=According%20to%20Jupiter%2C%20the%20Niyo,lounge%20access%20(depending%20on%20spend)."
+    },
+    {
+      "position": 9,
+      "title": "Forex Cards With Zero Markup",
+      "link": "https://www.instagram.com/popular/forex-cards-with-zero-markup/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESegHrOzAVH9VCYUFDi7bZFWd9s-cuObiAXcli6rCphBoO4MZ2OY0BqMDwdvxbYkzPN1ikrPWHFjqa4ETNG7y8ER9RnHHNR7M_J7oe4QyRTfWVCeluqlRH1ahTpRIRPNNYou1LhgX4WKM5RWUB0Ub4wn47jA032HX9d-nC&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQFnoECBEQAQ&uoh=1",
+      "displayed_link": "https://www.instagram.com › popular › forex-cards-wit...",
+      "favicon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp",
+      "snippet": "... Zero forex markup on international spends 🛋️ Unlimited global lounge access for you + add‑on members Premium hotel perks like complimentary third night ...",
+      "snippet_highlighted_words": [
+        "Zero forex markup"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "... Zero forex markup on international spends 🛋️ Unlimited global lounge access for you + add‑on members Premium hotel perks like complimentary third night ...",
+          "source_info_link": "https://www.instagram.com/popular/forex-cards-with-zero-markup/",
+          "icon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkg5VkNZVUZEaTdiWkZXZDlzLWN1T2JpQVhjbGk2ckNwaEJvTzRNWjJPWTBCcU1Ed2R2eGJZa3pQTjFpa3JQV0hGanFhNEVUTkc3eThFUjlSbkhITlI3TV9KN29lNFF5UlRmV1ZDZWx1cWxSSDFhaFRwUklSUE5OWW91MUxoZ1g0V0tNNVJXVUIwVWI0d240N2pBMDMySFg5ZC1uQxIEGgIIABrqAxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDGAwgAEAAYACAAKgsKBHplcm8V_nyTQCoMCgVmb3JleBWTPa9AKg0KBm1hcmt1cBV4m5hAMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkg5VkNZVUZEaTdiWkZXZDlzLWN1T2JpQVhjbGk2ckNwaEJvTzRNWjJPWTBCcU1Ed2R2eGJZa3pQTjFpa3JQV0hGanFhNEVUTkc3eThFUjlSbkhITlI3TV9KN29lNFF5UlRmV1ZDZWx1cWxSSDFhaFRwUklSUE5OWW91MUxoZ1g0V0tNNVJXVUIwVWI0d240N2pBMDMySFg5ZC1uQzooRm9yZXggQ2FyZHMgV2l0aCBaZXJvIE1hcmt1cCAtIEluc3RhZ3JhbUKyAS4uLiA8Yj5aZXJvIGZvcmV4IG1hcmt1cDwvYj4gb24gaW50ZXJuYXRpb25hbCBzcGVuZHMg8J-bi--4jyBVbmxpbWl0ZWQgZ2xvYmFsIGxvdW5nZSBhY2Nlc3MgZm9yIHlvdSArIGFkZOKAkW9uIG1lbWJlcnMgUHJlbWl1bSBob3RlbCBwZXJrcyBsaWtlIGNvbXBsaW1lbnRhcnkgdGhpcmQgbmlnaHQmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkg5VkNZVUZEaTdiWkZXZDlzLWN1T2JpQVhjbGk2ckNwaEJvTzRNWjJPWTBCcU1Ed2R2eGJZa3pQTjFpa3JQV0hGanFhNEVUTkc3eThFUjlSbkhITlI3TV9KN29lNFF5UlRmV1ZDZWx1cWxSSDFhaFRwUklSUE5OWW91MUxoZ1g0V0tNNVJXVUIwVWI0d240N2pBMDMySFg5ZC1uQxIEGgIIABrqAxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDGAwgAEAAYACAAKgsKBHplcm8V_nyTQCoMCgVmb3JleBWTPa9AKg0KBm1hcmt1cBV4m5hAMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkg5VkNZVUZEaTdiWkZXZDlzLWN1T2JpQVhjbGk2ckNwaEJvTzRNWjJPWTBCcU1Ed2R2eGJZa3pQTjFpa3JQV0hGanFhNEVUTkc3eThFUjlSbkhITlI3TV9KN29lNFF5UlRmV1ZDZWx1cWxSSDFhaFRwUklSUE5OWW91MUxoZ1g0V0tNNVJXVUIwVWI0d240N2pBMDMySFg5ZC1uQzooRm9yZXggQ2FyZHMgV2l0aCBaZXJvIE1hcmt1cCAtIEluc3RhZ3JhbUKyAS4uLiA8Yj5aZXJvIGZvcmV4IG1hcmt1cDwvYj4gb24gaW50ZXJuYXRpb25hbCBzcGVuZHMg8J-bi--4jyBVbmxpbWl0ZWQgZ2xvYmFsIGxvdW5nZSBhY2Nlc3MgZm9yIHlvdSArIGFkZOKAkW9uIG1lbWJlcnMgUHJlbWl1bSBob3RlbCBwZXJrcyBsaWtlIGNvbXBsaW1lbnRhcnkgdGhpcmQgbmlnaHQmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Instagram"
+    },
+    {
+      "position": 10,
+      "title": "Best Zero Forex Markup Credit Cards in India (2026) - CardsXP",
+      "link": "https://www.cardsxp.com/best-zero-forex-markup-credit-cards-india-2026/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESggEB6zswFU_tfLJNhKtUGieWIO4cv8IG4MbxghMOV29-2ynG6ypo6fdUOZOJ4ct8vXIqCt-tLzy2HzUhKxj8KBVMNMPhKUcqHicA9RC9CQXrL9JH7ZrhlyZrtP0OUwy0VUzsWlDqhg4FnhCo7ZrhaMwam_8ZN_uz7K9gNy1escNI37Bg&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQFnoECBQQAQ&uoh=1",
+      "displayed_link": "https://www.cardsxp.com › best-zero-forex-markup-cre...",
+      "favicon": "https://serpapi.com/images/i/UklGRhABAABXRUJQVlA4IAQBAADQBQCdASocABwAPtEutFooIagoGAEAGglsALsgq3oAU9XoAfqUndB0D9RQFedA-yPMRJHDSuYAAP7-wj4Uu35r4J5v_F9yd8ouT_BrJXdLfinUiWeIc7uN0vyLHAlztogegf4fHX8F_8Dd_Rr_9B7P_i0_cL3Fj3V7Idl_CZeX7zX7hhoy6tTHp-Ag4OYnfqZGSrIv7Ds0sYaCQhBnZpdLrqpC5Q16AVxe1LXhivfpbS_MuXmRxZfjcKfaAAE6plXr2SHBDcNoZWjopYtiZzgs3EoC3KI3s3r4oVhBWGfyFeAAbwOlv8QeSjovo3b4kaY5yqhUjXLcAImy1-6WFCr1FgAAAA.webp",
+      "snippet": "Compare zero forex markup credit cards in India in 2026: IDFC FIRST, Scapia, ixigo AU, Niyo and RBL World Safari. Check current fees and terms.",
+      "snippet_highlighted_words": [
+        "zero forex markup"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Compare zero forex markup credit cards in India in 2026: IDFC FIRST, Scapia, ixigo AU, Niyo and RBL World Safari. Check current fees and terms.",
+          "source_info_link": "https://www.cardsxp.com/best-zero-forex-markup-credit-cards-india-2026/",
+          "icon": "https://serpapi.com/images/i/UklGRhABAABXRUJQVlA4IAQBAADQBQCdASocABwAPtEutFooIagoGAEAGglsALsgq3oAU9XoAfqUndB0D9RQFedA-yPMRJHDSuYAAP7-wj4Uu35r4J5v_F9yd8ouT_BrJXdLfinUiWeIc7uN0vyLHAlztogegf4fHX8F_8Dd_Rr_9B7P_i0_cL3Fj3V7Idl_CZeX7zX7hhoy6tTHp-Ag4OYnfqZGSrIv7Ds0sYaCQhBnZpdLrqpC5Q16AVxe1LXhivfpbS_MuXmRxZfjcKfaAAE6plXr2SHBDcNoZWjopYtiZzgs3EoC3KI3s3r4oVhBWGfyFeAAbwOlv8QeSjovo3b4kaY5yqhUjXLcAImy1-6WFCr1FgAAAA.webp"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "IN"
+        ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZVX3RmTEpOaEt0VUdpZVdJTzRjdjhJRzRNYnhnaE1PVjI5LTJ5bkc2eXBvNmZkVU9aT0o0Y3Q4dlhJcUN0LXRMenkySHpVaEt4ajhLQlZNTk1QaEtVY3FIaWNBOVJDOUNRWHJMOUpIN1pyaGx5WnJ0UDBPVXd5MFZVenNXbERxaGc0Rm5oQ283WnJoYU13YW1fOFpOX3V6N0s5Z055MWVzY05JMzdCZxIEGgIIABr2AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDSAwgAEAAYACAAKgsKBHplcm8VCru4QCoMCgVmb3JleBVSCrtAKg0KBm1hcmt1cBXY2rFAMr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZVX3RmTEpOaEt0VUdpZVdJTzRjdjhJRzRNYnhnaE1PVjI5LTJ5bkc2eXBvNmZkVU9aT0o0Y3Q4dlhJcUN0LXRMenkySHpVaEt4ajhLQlZNTk1QaEtVY3FIaWNBOVJDOUNRWHJMOUpIN1pyaGx5WnJ0UDBPVXd5MFZVenNXbERxaGc0Rm5oQ283WnJoYU13YW1fOFpOX3V6N0s5Z055MWVzY05JMzdCZzpEQmVzdCA8Yj5aZXJvIEZvcmV4IE1hcmt1cDwvYj4gQ3JlZGl0IENhcmRzIGluIEluZGlhICgyMDI2KSAtIENhcmRzWFBClgFDb21wYXJlIDxiPnplcm8gZm9yZXggbWFya3VwPC9iPiBjcmVkaXQgY2FyZHMgaW4gSW5kaWEgaW4gMjAyNjogSURGQyBGSVJTVCwgU2NhcGlhLCBpeGlnbyBBVSwgTml5byBhbmQgUkJMIFdvcmxkIFNhZmFyaS4gQ2hlY2sgY3VycmVudCBmZWVzIGFuZCB0ZXJtcy4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZVX3RmTEpOaEt0VUdpZVdJTzRjdjhJRzRNYnhnaE1PVjI5LTJ5bkc2eXBvNmZkVU9aT0o0Y3Q4dlhJcUN0LXRMenkySHpVaEt4ajhLQlZNTk1QaEtVY3FIaWNBOVJDOUNRWHJMOUpIN1pyaGx5WnJ0UDBPVXd5MFZVenNXbERxaGc0Rm5oQ283WnJoYU13YW1fOFpOX3V6N0s5Z055MWVzY05JMzdCZxIEGgIIABr2AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDSAwgAEAAYACAAKgsKBHplcm8VCru4QCoMCgVmb3JleBVSCrtAKg0KBm1hcmt1cBXY2rFAMr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZVX3RmTEpOaEt0VUdpZVdJTzRjdjhJRzRNYnhnaE1PVjI5LTJ5bkc2eXBvNmZkVU9aT0o0Y3Q4dlhJcUN0LXRMenkySHpVaEt4ajhLQlZNTk1QaEtVY3FIaWNBOVJDOUNRWHJMOUpIN1pyaGx5WnJ0UDBPVXd5MFZVenNXbERxaGc0Rm5oQ283WnJoYU13YW1fOFpOX3V6N0s5Z055MWVzY05JMzdCZzpEQmVzdCA8Yj5aZXJvIEZvcmV4IE1hcmt1cDwvYj4gQ3JlZGl0IENhcmRzIGluIEluZGlhICgyMDI2KSAtIENhcmRzWFBClgFDb21wYXJlIDxiPnplcm8gZm9yZXggbWFya3VwPC9iPiBjcmVkaXQgY2FyZHMgaW4gSW5kaWEgaW4gMjAyNjogSURGQyBGSVJTVCwgU2NhcGlhLCBpeGlnbyBBVSwgTml5byBhbmQgUkJMIFdvcmxkIFNhZmFyaS4gQ2hlY2sgY3VycmVudCBmZWVzIGFuZCB0ZXJtcy4iAhABSABYAGgA",
+      "source": "cardsxp.com"
+    }
+  ],
+  "related_searches": [
+    {
+      "block_position": 1,
+      "query": "Zero forex markup reddit",
+      "link": "https://www.google.co.in/search?sca_esv=bbdd3f23f9715b33&gl=in&hl=en&sxsrf=APpeQnsW7L77f78NYfq6W8sh-BvtfugWEQ:1791633236933&q=Zero+forex+markup+reddit&sa=X&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQ1QJ6BAgJEAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Zero+forex+markup+reddit"
+    },
+    {
+      "block_position": 1,
+      "query": "Zero forex markup limit",
+      "link": "https://www.google.co.in/search?sca_esv=bbdd3f23f9715b33&gl=in&hl=en&sxsrf=APpeQnsW7L77f78NYfq6W8sh-BvtfugWEQ:1791633236933&q=Zero+forex+markup+limit&sa=X&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQ1QJ6BAgNEAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Zero+forex+markup+limit"
+    },
+    {
+      "block_position": 1,
+      "query": "Zero forex markup hdfc",
+      "link": "https://www.google.co.in/search?sca_esv=bbdd3f23f9715b33&gl=in&hl=en&sxsrf=APpeQnsW7L77f78NYfq6W8sh-BvtfugWEQ:1791633236933&q=Zero+forex+markup+hdfc&sa=X&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQ1QJ6BAgLEAE",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=Zero+forex+markup+hdfc"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.co.in/search?q=site:idfcfirst.bank.in+%22Zero+Forex+Markup%22&sca_esv=bbdd3f23f9715b33&gl=in&hl=en&sxsrf=APpeQnsW7L77f78NYfq6W8sh-BvtfugWEQ:1791633236933&ei=VCfKaqDIOOixur8PmpHzoQo&start=10&sa=N&sstk=AS6-VmKkh8f8NEcOUp-cuHLW_vkJIytrT-219Y8ANibJgRluZrqHqeQq4-ujNjENMHrYrurXeYvJKr42ACBCrVDLScTOQuBYtObasg&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQ8NMDegQIQhAK",
+    "other_pages": {
+      "2": "https://www.google.co.in/search?q=site:idfcfirst.bank.in+%22Zero+Forex+Markup%22&sca_esv=bbdd3f23f9715b33&gl=in&hl=en&sxsrf=APpeQnsW7L77f78NYfq6W8sh-BvtfugWEQ:1791633236933&ei=VCfKaqDIOOixur8PmpHzoQo&start=10&sa=N&sstk=AS6-VmKkh8f8NEcOUp-cuHLW_vkJIytrT-219Y8ANibJgRluZrqHqeQq4-ujNjENMHrYrurXeYvJKr42ACBCrVDLScTOQuBYtObasg&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQ8tMDegQIQhAE",
+      "3": "https://www.google.co.in/search?q=site:idfcfirst.bank.in+%22Zero+Forex+Markup%22&sca_esv=bbdd3f23f9715b33&gl=in&hl=en&sxsrf=APpeQnsW7L77f78NYfq6W8sh-BvtfugWEQ:1791633236933&ei=VCfKaqDIOOixur8PmpHzoQo&start=20&sa=N&sstk=AS6-VmKkh8f8NEcOUp-cuHLW_vkJIytrT-219Y8ANibJgRluZrqHqeQq4-ujNjENMHrYrurXeYvJKr42ACBCrVDLScTOQuBYtObasg&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQ8tMDegQIQhAG",
+      "4": "https://www.google.co.in/search?q=site:idfcfirst.bank.in+%22Zero+Forex+Markup%22&sca_esv=bbdd3f23f9715b33&gl=in&hl=en&sxsrf=APpeQnsW7L77f78NYfq6W8sh-BvtfugWEQ:1791633236933&ei=VCfKaqDIOOixur8PmpHzoQo&start=30&sa=N&sstk=AS6-VmKkh8f8NEcOUp-cuHLW_vkJIytrT-219Y8ANibJgRluZrqHqeQq4-ujNjENMHrYrurXeYvJKr42ACBCrVDLScTOQuBYtObasg&ved=2ahUKEwigwp71sa-XAxXomO4BHZrIPKQQ8tMDegQIQhAI"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aidfcfirst.bank.in+%22Zero+Forex+Markup%22&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aidfcfirst.bank.in+%22Zero+Forex+Markup%22&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aidfcfirst.bank.in+%22Zero+Forex+Markup%22&start=10",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aidfcfirst.bank.in+%22Zero+Forex+Markup%22&start=20",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=google&gl=in&google_domain=google.co.in&hl=en&q=site%3Aidfcfirst.bank.in+%22Zero+Forex+Markup%22&start=30"
+    }
+  }
+}

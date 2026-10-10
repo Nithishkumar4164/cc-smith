@@ -34,6 +34,42 @@ _ENQUIRY_LENDERS = ["HDFC Bank", "SBI Card", "Axis Bank", "ICICI Bank", "HSBC", 
 _pending: dict[str, dict] = {}
 
 
+def demo_bins(card_ids) -> dict[str, str]:
+    """Made-up 6-digit card prefixes (BINs) for the catalogue cards, so a typed card number
+    names the product as a BIN lookup would. Not real issuer BINs."""
+    return {f"41{i:02d}07": cid for i, cid in enumerate(sorted(card_ids))}
+
+
+def _luhn_ok(number: str) -> bool:
+    total = 0
+    for i, ch in enumerate(reversed(number)):
+        d = int(ch) * (2 if i % 2 else 1)
+        total += d - 9 if d > 9 else d
+    return total % 10 == 0
+
+
+def demo_card_number(card_id: str, card_ids, last4: str) -> str:
+    """The 16-digit number a demo account's card carries: its demo BIN, six digits, last4,
+    with one middle digit chosen so the Luhn check passes."""
+    bin6 = next(b for b, c in demo_bins(card_ids).items() if c == card_id)
+    mid = f"{_rng('pan' + card_id + last4).randint(0, 99_999):05d}"
+    return next(n for d in "0123456789" if _luhn_ok(n := bin6 + mid + d + last4))
+
+
+def card_check(conn: Connection, lender: str, last4: str, bin6: str, card_ids) -> dict | None:
+    """Name the product from the first 6 digits (the app never sends the full number) and
+    simulate the ₹1 ownership check. None when the prefix is unknown or another bank's."""
+    cid = demo_bins(card_ids).get(bin6)
+    if cid is None:
+        return None
+    row = conn.execute(select(card.c.name, card.c.issuer).where(card.c.id == cid)).first()
+    bank = (lender or "").lower().split(" (")[0]
+    if row is None or not bank or bank.split()[0] not in row.issuer.lower():
+        return None
+    return {"card_id": cid, "card_name": row.name, "last4": last4, "verified": True,
+            "deposit_paise": 100, "mock": True}
+
+
 def _rng(seed: str) -> random.Random:
     return random.Random(int(hashlib.sha256(seed.encode()).hexdigest()[:16], 16))
 
@@ -53,7 +89,8 @@ def _issuer_hint(issuer: str) -> str | None:
 
 def bureau_report(phone: str, cards: list[tuple[str, str, str]], today: date | None = None) -> CreditReport:
     """`cards` is (id, name, issuer) for the scored catalogue. Picks 2-3 cards from different
-    banks, so the feed names the exact product, its open date and limit."""
+    banks. Like a real report it gives bank, masked number, open date, limit and balance but
+    not the product: the user's card number names that (card_check)."""
     rng = _rng("bureau" + phone)
     today = today or datetime.now(UTC).date()
     by_bank: dict[str, list[tuple[str, str, str]]] = {}
@@ -62,7 +99,7 @@ def bureau_report(phone: str, cards: list[tuple[str, str, str]], today: date | N
     banks = sorted(by_bank)
     accounts = []
     for bank in rng.sample(banks, k=min(len(banks), rng.randint(2, 3))):
-        cid, name, issuer = rng.choice(by_bank[bank])
+        _cid, _name, issuer = rng.choice(by_bank[bank])
         limit = rng.randrange(75_000, 4_00_000, 5_000)
         balance = rng.randrange(0, limit // 3, 100)
         opened = today - timedelta(days=rng.randint(200, 2_500))
@@ -70,7 +107,6 @@ def bureau_report(phone: str, cards: list[tuple[str, str, str]], today: date | N
             lender=bank, issuer_hint=_issuer_hint(issuer), account_type="Credit Card", last4=f"{rng.randint(0, 9999):04d}",
             credit_limit_paise=limit * R, current_balance_paise=balance * R, overdue_paise=0,
             dpd="000 000 000 000 000 000", max_dpd_days=0, opened=opened.isoformat(), status="Active",
-            card_id=cid, card_name=name,
         ))
     enquiries = [Enquiry((today - timedelta(days=rng.randint(10, 170))).isoformat(), rng.choice(_ENQUIRY_LENDERS), "Credit Card")
                  for _ in range(rng.randint(0, 2))]
